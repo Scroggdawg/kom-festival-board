@@ -13,16 +13,19 @@ from datetime import date
 SITE = "."
 RESEARCH = "../research-2026-08-25.json"
 
-# --- load curated targets from index.html via node ---
-node_script = r"""
-const fs = require('fs');
-const html = fs.readFileSync('index.html','utf8');
-const m = html.match(/const FESTIVALS = (\[[\s\S]*?\n\]);/);
-if (!m) { console.error('FESTIVALS array not found'); process.exit(1); }
-const FESTIVALS = eval(m[1]);
-console.log(JSON.stringify(FESTIVALS));
-"""
-targets_raw = json.loads(subprocess.run(["node", "-e", node_script], capture_output=True, text=True, check=True, cwd=SITE).stdout)
+# --- self-hosting: existing data.json is the base for targets (index.html holds no data) ---
+import os
+if not os.path.exists("data.json"):
+    sys.exit("data.json missing — this generator now regenerates/enriches an existing file")
+_existing = json.load(open("data.json"))
+targets_raw = [
+    {"_id": f["id"], "name": f["name"], "loc": f.get("loc",""), "cat": f.get("cat",""), "tier": f.get("tier","strong"),
+     "edition": f.get("edition",""), "open": f.get("open",""), "close": f.get("close",""),
+     "estimated": f.get("estimated", False), "fees": f.get("feesText",""), "path": f.get("path",""),
+     "why": f.get("why",""), "festDate": f.get("festDate",""),
+     "_links": f.get("links", {}), "_events": f.get("events", []), "_notes": f.get("notes", [])}
+    for f in _existing["festivals"] if f.get("disposition") == "target"
+]
 
 research = json.load(open(RESEARCH))["festivals"]
 
@@ -183,18 +186,39 @@ for t in targets_raw:
     recs = alias_sources.get(t["name"], [])
     src = first_source(recs[0]) if recs else ""
     targets.append({
-        "id": slug(t["name"]), "name": t["name"], "loc": t["loc"], "cat": t["cat"],
+        "id": t.get("_id") or slug(t["name"]), "name": t["name"], "loc": t["loc"], "cat": t["cat"],
         "tier": t["tier"], "disposition": "target",
         "edition": t["edition"], "open": t["open"], "close": t["close"],
         "estimated": t["estimated"], "feesText": t["fees"], "tiers": [],
         "path": t["path"], "why": t["why"], "festDate": t.get("festDate",""),
-        "links": {"site": "", "filmfreeway": ""},
+        "links": t.get("_links") or {"site": "", "filmfreeway": ""},
         "source": src, "lastChecked": "2026-08-25",
-        "events": [], "notes": [],
+        "events": t.get("_events", []), "notes": t.get("_notes", []),
     })
 
-# S16 as target 47
-if s16:
+def enrich_links(rec, research_recs):
+    """Fill empty links from research sources: filmfreeway URL + first other https URL."""
+    links = rec.get("links") or {"site": "", "filmfreeway": ""}
+    urls = []
+    for r in research_recs: urls += (r.get("sources") or [])
+    if not links.get("filmfreeway"):
+        ff = next((u for u in urls if "filmfreeway.com" in u and u.startswith("http")), "")
+        links["filmfreeway"] = ff
+    if not links.get("site"):
+        site = next((u for u in urls if "filmfreeway.com" not in u and u.startswith("https")), "")
+        links["site"] = site
+    rec["links"] = links
+
+for rec in targets:
+    board_name = rec["name"]
+    # match back through aliases by rebuilt slug
+    recs = []
+    for bname, found in alias_sources.items():
+        if slug(bname) == rec["id"] or slug(bname) == slug(rec["name"]): recs = found; break
+    if recs: enrich_links(rec, recs)
+
+# S16 as target (only if not already present from the base file)
+if s16 and not any(t["name"].lower().startswith("s16") for t in targets):
     r = s16[0]
     targets.append({
         "id": "s16-2027", "name": "S16 Film Festival 2027", "loc": "Lagos, Nigeria",
@@ -203,7 +227,7 @@ if s16:
         "estimated": True, "feesText": "$15–25", "tiers": [],
         "path": "AFP Critics Prize", "festDate": "2027-12-09",
         "why": "Run by the Surreal16 collective (C.J. Obasi, Abba Makama, Michael Omonua) — the exact lineage of chiaroscuro Yoruba-spiritual cinema. The 2026 window closed before the campaign started; 2027 is the play. Nigerian premiere required — sequence after AFRIFF decisions, not before.",
-        "links": {"site": "", "filmfreeway": ""},
+        "links": {"site": "", "filmfreeway": next((u for u in (r.get("sources") or []) if "filmfreeway.com" in u), "")},
         "source": first_source(r), "lastChecked": "2026-08-25",
         "events": [], "notes": [],
     })
@@ -211,7 +235,7 @@ if s16:
 festivals = targets + bench_recs + out_recs
 ids = [f["id"] for f in festivals]
 dups = {i for i in ids if ids.count(i) > 1}
-if dups: report.append(f"DUPLICATE IDS: {dups}")
+if dups: sys.exit(f"FATAL: duplicate ids, refusing to write: {dups}")
 
 data = {
     "schema": 2,
@@ -238,6 +262,7 @@ with open("data.json", "w") as f:
     json.dump(data, f, indent=1, ensure_ascii=False)
 
 t, b, o = len(targets), len(bench_recs), len(out_recs)
-print(f"targets={t} bench={b} out={o} total={t+b+o} (research raw={len(research)})")
+tot = t + b + o
+print(f"targets={t} bench={b} out={o} total={tot} (research raw={len(research)}; dedupe delta={len(research)-(b+o)-(len(alias_sources))-{True:1,False:0}[bool(s16)]} name-variant records consumed into targets)")
 for line in report: print(line)
 print("rev:", data["rev"])
