@@ -1,0 +1,641 @@
+<meta charset="utf-8">
+<title>KOM Festival Campaign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --ink: #171310;
+    --panel: #201a14;
+    --panel-2: #262019;
+    --hairline: #362b1e;
+    --text: #ede4d3;
+    --text-2: #a79b85;
+    --muted: #7a705d;
+    --accent: #e5a44c;          /* brand ink only — never a data series */
+    --tier-dream: #3987e5;      /* validated categorical trio, all-pairs, dark surface */
+    --tier-strong: #d95926;
+    --tier-worthy: #199e70;
+    --status-closing: #d96a55;
+    --status-open: #6fae86;
+    --display: 'Fraunces', Georgia, serif;
+    --body: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--ink);
+    color: var(--text);
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 40px 28px 80px; }
+
+  header { border-bottom: 1px solid var(--hairline); padding-bottom: 28px; margin-bottom: 8px; }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--text-2); margin-bottom: 10px; }
+  h1 { font-family: var(--display); font-weight: 600; font-size: clamp(30px, 4.5vw, 44px); line-height: 1.08; text-wrap: balance; }
+  .sub { color: var(--text-2); margin-top: 12px; max-width: 74ch; }
+  .provenance { font-size: 12px; color: var(--muted); margin-top: 14px; max-width: 100ch; }
+  .provenance strong { color: var(--text-2); font-weight: 500; }
+
+  h2 { font-family: var(--display); font-weight: 600; font-size: 26px; margin: 0 0 6px; }
+  h3 { font-size: 15px; font-weight: 700; margin: 0 0 8px; }
+  section { margin-top: 44px; }
+  .section-note { color: var(--text-2); font-size: 13.5px; max-width: 82ch; margin-bottom: 18px; }
+
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 26px; }
+  @media (max-width: 820px) { .kpis { grid-template-columns: repeat(2, 1fr); } }
+  .kpi { background: var(--panel); border: 1px solid var(--hairline); border-radius: 6px; padding: 14px 16px; }
+  .kpi .v { font-size: 30px; font-weight: 600; line-height: 1.1; }
+  .kpi .l { font-size: 12px; color: var(--text-2); margin-top: 4px; }
+  .kpi .d { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .kpi.zero .v { color: var(--muted); }
+
+  .kdates { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  @media (max-width: 640px) { .kdates { grid-template-columns: 1fr; } }
+  .kdate { background: var(--panel); border: 1px solid var(--hairline); border-radius: 6px; padding: 16px 18px; }
+  .kdate .v { font-size: 44px; font-weight: 600; line-height: 1.05; color: var(--accent); }
+  .kdate .v small { font-size: 20px; font-weight: 600; }
+  .kdate .l { font-size: 13px; color: var(--text-2); margin-top: 6px; }
+  .kdate .d { font-size: 12px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+
+  .asks { display: grid; gap: 10px; margin-top: 18px; }
+  .ask { background: var(--panel); border: 1px solid var(--hairline); border-left: 3px solid var(--accent); border-radius: 4px; padding: 12px 16px; font-size: 14px; }
+  .ask b { color: var(--accent); font-weight: 600; }
+  .ask .why { color: var(--text-2); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; font-size: 12.5px; color: var(--text-2); margin-bottom: 14px; }
+  .legend .chip { display: inline-flex; align-items: center; gap: 7px; }
+  .swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--hairline); border-radius: 6px; background: var(--panel); }
+  th { text-align: left; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: 12px 14px 8px; border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .festname { font-weight: 600; color: var(--text); }
+  .festloc { color: var(--muted); font-size: 12px; }
+  .tiermark { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 8px; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 3px; border: 1px solid var(--hairline); color: var(--text-2); white-space: nowrap; }
+  .badge.oscar { border-color: var(--accent); color: var(--accent); }
+  .deadline-chip { font-size: 12px; white-space: nowrap; }
+  .deadline-chip.closing { color: var(--status-closing); font-weight: 600; }
+  .deadline-chip.open { color: var(--status-open); }
+
+  .gantt { background: var(--panel); border: 1px solid var(--hairline); border-radius: 6px; padding: 18px 0 8px; overflow-x: auto; }
+  .gantt-inner { min-width: 940px; padding: 0 18px; }
+  .g-head { display: grid; grid-template-columns: 250px 1fr; margin-bottom: 6px; }
+  .g-months { position: relative; height: 22px; }
+  .g-month { position: absolute; top: 0; font-size: 10.5px; color: var(--muted); letter-spacing: .04em; border-left: 1px solid var(--hairline); padding-left: 5px; height: 100%; }
+  .g-row { display: grid; grid-template-columns: 250px 1fr; align-items: center; min-height: 34px; }
+  .g-row:hover { background: rgba(229, 164, 76, 0.04); }
+  .g-label { font-size: 12.5px; padding-right: 14px; line-height: 1.25; }
+  .g-label .cat { display: block; color: var(--muted); font-size: 10.5px; }
+  .g-track { position: relative; height: 34px; }
+  .g-grid { position: absolute; inset: 0; }
+  .g-gridline { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--hairline); }
+  .g-bar { position: absolute; top: 50%; transform: translateY(-50%); height: 12px; border-radius: 4px; min-width: 4px; cursor: default; }
+  .g-bar.estimated { opacity: .5; }
+  .g-fest-marker { position: absolute; top: 50%; width: 8px; height: 8px; transform: translate(-50%, -50%) rotate(45deg); background: var(--text-2); }
+  .g-deadline-label { position: absolute; top: 50%; transform: translateY(-50%); font-size: 10.5px; color: var(--text-2); white-space: nowrap; padding-left: 7px; font-variant-numeric: tabular-nums; }
+  .g-today { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--accent); }
+  .g-today-label { position: absolute; top: -20px; transform: translateX(-50%); font-size: 10px; color: var(--accent); letter-spacing: .06em; }
+
+  .tip { position: fixed; z-index: 10; background: var(--panel-2); border: 1px solid var(--hairline); border-radius: 5px; padding: 10px 12px; font-size: 12.5px; max-width: 320px; pointer-events: none; display: none; box-shadow: 0 6px 24px rgba(0,0,0,.5); }
+  .tip b { display: block; margin-bottom: 3px; }
+  .tip .row { color: var(--text-2); }
+
+  .heat { overflow-x: auto; background: var(--panel); border: 1px solid var(--hairline); border-radius: 6px; padding: 16px; }
+  .heat table { min-width: 700px; }
+  .heat th { border-bottom: none; padding: 6px 8px; }
+  .heat td { border-bottom: none; padding: 3px; }
+  .heat .cell { height: 30px; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: rgba(0,0,0,0); font-variant-numeric: tabular-nums; }
+  .heat.show-values .cell { color: var(--vc); }
+  .heat .rowlabel { font-size: 12.5px; white-space: nowrap; padding-right: 12px; }
+  .heat-controls { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 12px; font-size: 12.5px; color: var(--text-2); }
+  .toggle { background: var(--panel-2); color: var(--text-2); border: 1px solid var(--hairline); border-radius: 4px; padding: 5px 12px; font-size: 12px; font-family: var(--body); cursor: pointer; }
+  .toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .toggle.on { color: var(--text); border-color: var(--accent); }
+  .heat-scale { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+  .heat-scale .step { width: 16px; height: 10px; border-radius: 2px; }
+
+  .cardgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--hairline); border-radius: 6px; padding: 18px; }
+  .card p { font-size: 13.5px; color: var(--text-2); margin-bottom: 8px; }
+  .card p:last-child { margin-bottom: 0; }
+  .card b { color: var(--text); font-weight: 600; }
+  ul.flat { list-style: none; }
+  ul.flat li { font-size: 13.5px; color: var(--text-2); padding: 7px 0; border-bottom: 1px solid var(--hairline); }
+  ul.flat li:last-child { border-bottom: none; }
+  ul.flat b { color: var(--text); }
+
+  footer { margin-top: 60px; border-top: 1px solid var(--hairline); padding-top: 16px; font-size: 12px; color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Killer of Men · 13 min · AFI thesis · picture-locked Jan 2026</div>
+    <h1>Festival Campaign Board</h1>
+    <p class="sub">The 2026–27 campaign for a chiaroscuro period short: Sundance-first premiere strategy, the full A-list entered on the school-film completion argument, the Oscar-qualifying circuit through the 100th Academy Awards window, and the Black &amp; African diaspora lane.</p>
+    <p class="provenance">Researched <strong>Aug 25, 2026</strong> — 17-agent sweep over 117 festivals; the top 30 records verified against official festival sites and FilmFreeway. Day counts on this page update live; the research itself is as of the date above. <strong>~</strong> marks a window estimated from the prior cycle. Confirm any deadline on the festival's own page before paying a fee.</p>
+    <div class="kpis" id="kpis"></div>
+  </header>
+
+  <section id="keydates">
+    <h2>Key Dates</h2>
+    <div class="kdates" id="kdates"></div>
+    <div class="asks" id="asks"></div>
+  </section>
+
+  <section id="dreamlist">
+    <h2>The Dream List</h2>
+    <p class="section-note" id="dreamnote"></p>
+    <div class="legend">
+      <span class="chip"><span class="swatch" style="background:var(--tier-dream)"></span>Dream — highest-value targets</span>
+      <span class="chip"><span class="swatch" style="background:var(--tier-strong)"></span>Strong — core circuit</span>
+      <span class="chip"><span class="swatch" style="background:var(--tier-worthy)"></span>Worthy — depth &amp; regional</span>
+    </div>
+    <div class="tablewrap">
+      <table id="dreamtable">
+        <thead>
+          <tr><th>Festival</th><th>Where</th><th>Festival dates</th><th>Submission window</th><th>Final deadline</th><th>Fees</th><th>Path</th><th>Why it matters for KOM</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2>Submission Windows</h2>
+    <p class="section-note">Each bar runs from the day submissions open to the final deadline (earlier tiers are cheaper — check the table). The diamond marks the festival itself. Faded bars carry deadlines estimated from the prior cycle. Sorted by final deadline: read top to bottom as the order the doors close.</p>
+    <div class="legend">
+      <span class="chip"><span class="swatch" style="background:var(--tier-dream)"></span>Dream</span>
+      <span class="chip"><span class="swatch" style="background:var(--tier-strong)"></span>Strong</span>
+      <span class="chip"><span class="swatch" style="background:var(--tier-worthy)"></span>Worthy</span>
+      <span class="chip"><span style="width:8px;height:8px;transform:rotate(45deg);background:var(--text-2);display:inline-block"></span>Festival dates</span>
+      <span class="chip"><span style="width:2px;height:14px;background:var(--accent);display:inline-block"></span>Today</span>
+    </div>
+    <div class="gantt"><div class="gantt-inner" id="gantt"></div></div>
+  </section>
+
+  <section id="heatmap">
+    <h2>Fit Heat Map</h2>
+    <p class="section-note">Assessed fit of the seventeen highest-value targets across five dimensions, 0–10. Each row wears its tier's hue — blue dream, orange strong, green worthy — with brightness carrying the score. Judgments derived from the research record; assessed, not measured.</p>
+    <div class="heat-controls">
+      <button class="toggle on" id="valtoggle" type="button">Hide values</button>
+      <span class="heat-scale">low <span class="step" style="background:#3a4a66"></span><span class="step" style="background:#3573b4"></span><span class="step" style="background:#63a2f2"></span> high</span>
+      <span class="heat-scale">low <span class="step" style="background:#63402b"></span><span class="step" style="background:#a15328"></span><span class="step" style="background:#e37b42"></span> high</span>
+      <span class="heat-scale">low <span class="step" style="background:#2e4f3e"></span><span class="step" style="background:#207d59"></span><span class="step" style="background:#45c493"></span> high</span>
+    </div>
+    <div class="heat show-values" id="heat"></div>
+  </section>
+
+  <section id="playbook">
+    <h2>The Playbook</h2>
+    <p class="section-note">Premiere law, the Oscar math, publicists, money, and the chess moves specific to this film.</p>
+    <div class="cardgrid" id="cards"></div>
+  </section>
+
+  <section id="skiplist">
+    <h2>Ruled Out</h2>
+    <p class="section-note">Researched and closed, so nobody re-litigates them later.</p>
+    <div class="tablewrap"><table id="skiptable"><thead><tr><th>Door</th><th>Verdict</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section id="nextactions">
+    <h2>Next Actions</h2>
+    <ul class="flat" id="actions"></ul>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<div class="tip" id="tip"></div>
+
+<script>
+/* ============ DATA — verified research, Aug 25 2026 ============ */
+const TODAY = new Date(); TODAY.setHours(0, 0, 0, 0);
+const RANGE = { start: new Date(2026, 7, 15), end: new Date(2027, 9, 1) };
+
+/* Campaign ledger — update these arrays as submissions go out and decisions land */
+const RESEARCHED = 117;
+const RULED_OUT = 14;
+const CAMPAIGN = { applied: [], accepted: [], rejected: [] };
+
+/* estimated:true = final deadline is a pattern-estimate (unannounced cycle) */
+const FESTIVALS = [
+  { name: "Sundance 2027", loc: "Boulder, USA", cat: "A-list · Oscar-qualifying", tier: "dream", edition: "Jan 21–31, 2027",
+    open: "2026-04-01", close: "2026-08-31", estimated: false, fees: "$95 (late tier)", path: "Oscar-qualifying",
+    why: "No premiere requirement, and the eligibility rule — completed after Dec 31, 2025 — makes a Jan 2026 film the exact intended cohort. AFI theses land here regularly. The single most urgent submission on this board.",
+    festDate: "2027-01-21" },
+  { name: "PAFF 2027", loc: "Los Angeles, USA", cat: "Black cinema · Oscar-qualifying", tier: "dream", edition: "Feb 15–21, 2027",
+    open: "2026-05-14", close: "2026-08-31", estimated: true, fees: "~$25–60 (unverified)", path: "Oscar-qualifying",
+    why: "Largest Black film festival in the US; 'films by and/or about people of African descent' is the thesis statement. Deadline ladder could NOT be verified — may close ~Aug 31. Caution: an LA screening here spends the LA premiere that ABFF and HollyShorts require.",
+    festDate: "2027-02-15" },
+  { name: "Tampere 57th", loc: "Tampere, Finland", cat: "International shorts · Oscar-qualifying", tier: "strong", edition: "Mar 10–14, 2027",
+    open: "2026-07-01", close: "2026-11-03", estimated: false, fees: "€16 by Sep 1 · €20 final", path: "Oscar-qualifying",
+    why: "European big-three shorts festival, qualifying on Grand Prix and Best Fiction, no premiere requirement, nearly free. Early bird Sep 1.",
+    festDate: "2027-03-10" },
+  { name: "Atlanta FF 51st", loc: "Atlanta, USA", cat: "Southern · Oscar-qualifying", tier: "strong", edition: "Apr 22–May 2, 2027",
+    open: "2026-05-03", close: "2026-11-06", estimated: false, fees: "$55 student by Sep 11 · $85 final", path: "Oscar-qualifying",
+    why: "Major Southern festival with a deep Black film community; jury award confers Oscar qualification; no premiere requirement. Keep the film out of greater Atlanta until it screens here.",
+    festDate: "2027-04-22" },
+  { name: "Flickerfest 36th", loc: "Sydney, Australia", cat: "International shorts · Oscar-qualifying", tier: "worthy", edition: "Jan 22–31, 2027",
+    open: "2026-06-01", close: "2026-10-14", estimated: false, fees: "$40 by Sep 14 · $45 late", path: "Oscar-qualifying",
+    why: "Qualifying via Best International Short plus a 40-city Australian tour. Requires an Australian premiere (intact) and the film off the open internet.",
+    festDate: "2027-01-22" },
+  { name: "SXSW 2027", loc: "Austin, USA", cat: "A-list · Oscar-qualifying", tier: "strong", edition: "Mar 15–21, 2027",
+    open: "2026-06-01", close: "2026-10-01", estimated: false, fees: "$70 by Sep 15 · $90 final", path: "Oscar-qualifying",
+    why: "The fight-ring engine and ancestral visions give it a genre hook; premiere status is a preference, not a rule, so it layers cleanly behind Sundance.",
+    festDate: "2027-03-15" },
+  { name: "Carthage JCC 37th", loc: "Tunis, Tunisia", cat: "African / Arab canon", tier: "worthy", edition: "Dec 12–19, 2026",
+    open: "2026-08-01", close: "2026-09-15", estimated: false, fees: "unpublished", path: "—",
+    why: "Oldest African/Arab festival; Tanit shorts competition historically reserved for African and Arab films. Eligibility of a US-produced film by a Nigerian director needs a one-line email to the festival before entering.",
+    festDate: "2026-12-12" },
+  { name: "SBIFF 42nd", loc: "Santa Barbara, USA", cat: "Awards-season · Oscar-qualifying", tier: "strong", edition: "Feb 3–13, 2027",
+    open: "2026-07-01", close: "2026-12-02", estimated: false, fees: "$60 by Sep 18 · $80 final", path: "Oscar-qualifying",
+    why: "Qualifying in all three shorts categories with an awards-season industry crowd; notification Jan 8 lands after Sundance's decision, so it slots into either outcome.",
+    festDate: "2027-02-03" },
+  { name: "FESPACO 30th", loc: "Ouagadougou, Burkina Faso", cat: "Pan-African canon", tier: "dream", edition: "Feb 27–Mar 6, 2027",
+    open: "2026-02-24", close: "2026-09-20", estimated: false, fees: "€50", path: "—",
+    why: "The most prestigious pan-African festival, biennial — miss it and the next door is 2029. Open to diaspora directors; the 2027 theme is cultural self-reclamation. Oscar-qualifying only for documentary shorts, so this is canon prestige, not an Academy path.",
+    festDate: "2027-02-27" },
+  { name: "Clermont-Ferrand 49th", loc: "Clermont-Ferrand, France", cat: "World's biggest shorts market · Oscar-qualifying", tier: "dream", edition: "Jan 29–Feb 6, 2027",
+    open: "2026-06-01", close: "2026-09-24", estimated: false, fees: "~€13 flat", path: "Oscar-qualifying",
+    why: "The world's largest shorts stage; no premiere requirement; every submitted film enters the Marché catalogue browsed by 5,000 industry pros. One chess note: a Clermont screening is a French screening — it closes the Cannes doors (see the France lock).",
+    festDate: "2027-01-29" },
+  { name: "Aspen Shortsfest 36th", loc: "Aspen, USA", cat: "Top US shorts fest · Oscar-qualifying", tier: "dream", edition: "Apr 6–10, 2027",
+    open: "2026-07-01", close: "2026-11-13", estimated: false, fees: "$80 by Sep 25 · $95 final", path: "Oscar-qualifying",
+    why: "One of the two most prestigious US shorts-only festivals; Best Drama is the exact qualifying lane. Cannot have premiered before Apr 2026 (fine) and must stay off the US internet.",
+    festDate: "2027-04-06" },
+  { name: "Cleveland CIFF51", loc: "Cleveland, USA", cat: "Qualifying circuit", tier: "worthy", edition: "Apr 2027",
+    open: "2026-07-01", close: "2026-12-15", estimated: false, fees: "$65 by Sep 30 · $100 late", path: "Oscar-qualifying",
+    why: "Qualifies in all three shorts categories; huge civic audience. Requires only a Cleveland premiere.",
+    festDate: "2027-04-07" },
+  { name: "Florida FF 36th", loc: "Orlando, USA", cat: "Qualifying circuit", tier: "worthy", edition: "Apr 9–18, 2027",
+    open: "2026-08-17", close: "2026-12-09", estimated: false, fees: "$35 by Sep 30 · $90 final", path: "Oscar-qualifying",
+    why: "Cheapest earlybird on the board ($35) with Grand Jury qualification for majority-US-funded narrative shorts. Florida premiere needed for competition.",
+    festDate: "2027-04-09" },
+  { name: "College Television Awards 46th", loc: "Los Angeles, USA", cat: "Student — the 'student Emmy'", tier: "strong", edition: "Ceremony spring 2027",
+    open: "2026-09-22", close: "2026-10-09", estimated: true, fees: "$25 (waivers exist)", path: "Student Emmy",
+    why: "The 46th window should cover work completed Aug 2025–Jul 2026 — a Jan 2026 finish fits — with submissions estimated late Sep–early Oct 2026. Verify at televisionacademy.com now; the window is weeks long.",
+    festDate: "" },
+  { name: "Joburg FF 9th", loc: "Johannesburg, South Africa", cat: "African / diaspora-only entry", tier: "worthy", edition: "~Mar 2027",
+    open: "2026-08-29", close: "2026-10-31", estimated: true, fees: "unpublished", path: "—",
+    why: "Only African and African-diaspora filmmakers may submit — a curated-for-you audience with MultiChoice pan-African reach. The call likely opens within days.",
+    festDate: "2027-03-03" },
+  { name: "Toronto Black FF", loc: "Toronto, Canada", cat: "Black cinema", tier: "worthy", edition: "Feb 10–15, 2027",
+    open: "2026-08-01", close: "2026-11-01", estimated: false, fees: "~$20–45", path: "—",
+    why: "Canada's flagship Black film festival; international diaspora programming. Registration deadline Nov 1 per the festival's own site.",
+    festDate: "2027-02-10" },
+  { name: "REGARD 31st", loc: "Saguenay, Canada", cat: "International shorts · Oscar-qualifying", tier: "strong", edition: "Mar 17–21, 2027",
+    open: "2026-08-01", close: "2026-11-01", estimated: false, fees: "CAD $40 by Sep 15 · $55 late", path: "Oscar-qualifying",
+    why: "Qualifying on both its Grand Prizes, and it explicitly prioritizes premiere-intact films not free online — which this is. The Grand Prize (the Oscar path) is limited to World/North American/Canadian premieres, so submit before spending the NA premiere.",
+    festDate: "2027-03-17" },
+  { name: "Berlinale Shorts 77th", loc: "Berlin, Germany", cat: "A-list · Oscar-qualifying", tier: "dream", edition: "Feb 10–21, 2027",
+    open: "2026-09-01", close: "2026-11-04", estimated: false, fees: "€75", path: "Oscar-qualifying",
+    why: "The most politically engaged A-list shorts competition — a slave-revolt film reclaiming Yoruba faith is squarely its taste, and the Golden Bear qualifies. US-only screenings preserve the international-premiere status it requires, so Sundance-first keeps it alive. The 12-month completion window nominally cuts ~Feb 2026 — enter with the final-deliverables date (see Playbook). Submit blind Nov 4, before Sundance notifies.",
+    festDate: "2027-02-10" },
+  { name: "Krakow FF 67th", loc: "Krakow, Poland", cat: "International shorts · Oscar-qualifying", tier: "strong", edition: "~May 31–Jun 7, 2027",
+    open: "2026-10-01", close: "2026-11-30", estimated: true, fees: "unpublished", path: "Oscar-qualifying",
+    why: "Triple-qualifying (Oscar, EFA, BAFTA). Timing trap: films completed before Oct 31, 2026 must enter by the FIRST phase (~Nov 30, 2026) — the later January deadline is not for this film.",
+    festDate: "2027-05-31" },
+  { name: "Luxor African FF 16th", loc: "Luxor, Egypt", cat: "African cinema — African directors only", tier: "worthy", edition: "Mar 28–Apr 3, 2027",
+    open: "2026-08-21", close: "2026-12-15", estimated: false, fees: "free (historically)", path: "—",
+    why: "Shorts competition restricted to African directors — the Nigerian director qualifies, and diaspora heritage stories are staple programming. Open now, free.",
+    festDate: "2027-03-28" },
+  { name: "Seattle SIFF 2027", loc: "Seattle, USA", cat: "Qualifying circuit", tier: "worthy", edition: "May 13–23, 2027",
+    open: "2026-08-01", close: "2027-01-07", estimated: false, fees: "$60 by Oct 1 · $100 late", path: "Oscar-qualifying",
+    why: "Top-5 US audience festival, qualifying in all three shorts categories. Only a Western Washington premiere required.",
+    festDate: "2027-05-13" },
+  { name: "Vienna Shorts 2027", loc: "Vienna, Austria", cat: "International shorts · Oscar-qualifying", tier: "worthy", edition: "~Jun 2027",
+    open: "2026-10-01", close: "2027-01-31", estimated: true, fees: "modest", path: "Oscar-qualifying",
+    why: "Quadruple-qualifying (Oscar, EFA, BAFTA, Austrian FA); Fiction & Documentary competition is a legitimate home. Arthouse taste — a coin-flip fit.",
+    festDate: "2027-06-01" },
+  { name: "ABFF — HBO Short Film Award", loc: "Los Angeles, USA", cat: "Black cinema · Oscar-qualifying · $10k", tier: "dream", edition: "May 20–23, 2027",
+    open: "2026-10-01", close: "2027-01-24", estimated: true, fees: "TBA (~$25–40 prior)", path: "Oscar-qualifying (100th)",
+    why: "30th year of the award; five finalists screen for a jury in front of HBO/WBD and streamer scouts; $10,000 grand prize and the winner qualifies for the 100th Academy Awards. Requires LA-premiere status at screening and no US online release before May 23, 2027 — this is the door the LA premiere should be saved for.",
+    festDate: "2027-05-20" },
+  { name: "Tribeca 2027", loc: "New York, USA", cat: "A-list · Oscar-qualifying", tier: "strong", edition: "~Jun 2027",
+    open: "2026-09-25", close: "2027-02-13", estimated: true, fees: "$35 student tier", path: "Oscar-qualifying",
+    why: "Large narrative shorts slate, deep diaspora programming, NYC industry. Catch: award (Oscar) eligibility historically needs a US premiere — a Sundance screening removes the award path, leaving exposure only. Decide after Sundance notifies.",
+    festDate: "2027-06-09" },
+  { name: "Cannes — La Cinef 2027", loc: "Cannes, France", cat: "Student selection at Cannes", tier: "dream", edition: "May 11–22, 2027",
+    open: "2026-10-01", close: "2027-02-15", estimated: false, fees: "free", path: "€15k/11k/7.5k prizes",
+    why: "Purpose-built door for conservatory thesis films; the 18-month window covers a Jan 2026 lock. Decided: the campaign doesn't wait for it — it enters by Feb 15 only if Sundance and Clermont both pass, since any non-US festival screening voids eligibility. Free, with cash prizes and Cannes support on the winner's first feature.",
+    festDate: "2027-05-11" },
+  { name: "Cannes — Short Films in Competition 2027", loc: "Cannes, France", cat: "A-list · Short Film Palme d'Or", tier: "dream", edition: "May 11–22, 2027",
+    open: "2026-12-01", close: "2027-03-01", estimated: true, fees: "free", path: "Oscar-qualifying",
+    why: "At 13 minutes the film clears the hard 15-minute cap. Home-country screenings are allowed — Sundance does NOT void it; internet release or any non-US festival screening does (a Clermont screening would — see the France lock). The 12-month rule wants a mid-2026 completion date: enter with final deliverables. Free.",
+    festDate: "2027-05-11" },
+  { name: "Durban IFF 48th", loc: "Durban, South Africa", cat: "African · Oscar-qualifying", tier: "dream", edition: "~late Jul 2027",
+    open: "2026-11-01", close: "2027-02-27", estimated: true, fees: "unpublished", path: "Oscar-qualifying",
+    why: "Africa's premier Oscar-qualifying door for live-action shorts (Best Short Film). Open to all countries. Age-rule is borderline for a Jan 2026 film — submit early and confirm with the festival.",
+    festDate: "2027-07-23" },
+  { name: "Indy Shorts 2027", loc: "Indianapolis, USA", cat: "Qualifying circuit · $5k prize", tier: "strong", edition: "Jul 20–25, 2027",
+    open: "2026-08-11", close: "2027-03-21", estimated: false, fees: "$36 student by Nov 29 · $95 late", path: "Oscar-qualifying",
+    why: "Largest Midwest shorts festival; $5,000 Narrative Grand Prize; premiere status explicitly irrelevant; humanity-forward programming matches the redemption arc.",
+    festDate: "2027-07-20" },
+  { name: "BlackStar 2027", loc: "Philadelphia, USA", cat: "Black cinema · Oscar + BAFTA-qualifying", tier: "dream", edition: "~early Aug 2027",
+    open: "2027-01-07", close: "2027-04-01", estimated: true, fees: "$0 with student waiver", path: "Oscar + BAFTA-qualifying",
+    why: "The single best-fit festival in the lane: visionary Black/Brown/Indigenous cinema, diaspora spirituality, formally bold craft. Student fee waived; premiere preferred, not required. Requires burned-in open captions on the final print — a deliverable to plan.",
+    festDate: "2027-08-05" },
+  { name: "DGA Student Awards 2027", loc: "Los Angeles, USA", cat: "Student — underrepresented directors", tier: "strong", edition: "Awards 2027",
+    open: "2026-11-01", close: "2027-04-01", estimated: true, fees: "free", path: "$2,500 + DGA screening",
+    why: "The 2027 window should cover films made Sept 2025–Dec 2026 — containing a Jan 2026 completion. Director must be from a marginalized community and within a year of graduation at a US school. Verify the window when rules post ~Nov 1.",
+    festDate: "" },
+  { name: "Student Academy Awards 54th", loc: "Los Angeles, USA", cat: "Student — Oscar-eligibility lane", tier: "strong", edition: "Awards fall 2027",
+    open: "2027-03-01", close: "2027-05-15", estimated: true, fees: "free (verify)", path: "Medal → Oscar-eligible",
+    why: "Going for the 54th (2027) cycle: medal winners become Oscar-eligible without needing a festival win. Published windows key on completion-for-credit dates — the same school-film date argument applies. Verify the 54th rules the day they post (~spring 2027) and confirm what AFI certifies.",
+    festDate: "" },
+  { name: "BronzeLens 18th", loc: "Atlanta, USA", cat: "Black cinema · Oscar-qualifying", tier: "strong", edition: "~late Aug 2027",
+    open: "2026-10-15", close: "2027-04-06", estimated: true, fees: "$30–50 student", path: "Oscar-qualifying",
+    why: "Atlanta's premier Black film festival, qualifying via Best Short; realistic odds and low fees. Sequence with Atlanta FF (April) — ATLFF first, BronzeLens accepts non-premieres.",
+    festDate: "2027-08-25" },
+  { name: "Curtas Vila do Conde 35th", loc: "Vila do Conde, Portugal", cat: "European shorts · Oscar-qualifying · free", tier: "strong", edition: "Jul 9–18, 2027",
+    open: "2026-07-27", close: "2027-04-30", estimated: false, fees: "free", path: "Oscar-qualifying",
+    why: "Premier European competitive shorts festival, free to enter, qualifying via its Grand Prix, and only a Portuguese premiere required — slots cleanly after any US premiere.",
+    festDate: "2027-07-09" },
+  { name: "TIFF Short Cuts 2027", loc: "Toronto, Canada", cat: "A-list · Oscar-qualifying", tier: "strong", edition: "~Sep 9–19, 2027",
+    open: "2027-02-27", close: "2027-05-07", estimated: true, fees: "~CAD $75–95", path: "Oscar-qualifying",
+    why: "By TIFF's own definitions, US-only screenings leave a US film at 'International Premiere' — Sundance-first stays compatible. The completion cutoff (~Sep 2026 by pattern) is the hardest date argument on the board: enter with the final-deliverables date and let programming decide. Keep it off the internet viewable in North America.",
+    festDate: "2027-09-09" },
+  { name: "Venice — Orizzonti Corti 2027", loc: "Venice, Italy", cat: "A-list · world premiere only", tier: "worthy", edition: "~Sep 2027",
+    open: "2027-03-01", close: "2027-05-27", estimated: true, fees: "modest", path: "Oscar-qualifying",
+    why: "On the board at Luke's call, constraint stated plainly: Orizzonti takes world premieres only — no public screening anywhere, ever — and no completion-date argument changes that rule. Viable only in the branch where the film is still unscreened by May 2027.",
+    festDate: "2027-09-01" },
+  { name: "Aesthetica 17th", loc: "York, UK", cat: "Craft · BAFTA + BIFA-qualifying", tier: "strong", edition: "~Nov 2027",
+    open: "2026-12-01", close: "2027-05-31", estimated: false, fees: "£28 regular", path: "BAFTA-qualifying",
+    why: "One of the few qualifying festivals where craft is a headline award — a named Best Cinematography prize — plus BAFTA and BIFA qualification and no premiere demands.",
+    festDate: "2027-11-02" },
+  { name: "New Orleans FF 2027", loc: "New Orleans, USA", cat: "Southern · Oscar-qualifying", tier: "strong", edition: "~late Oct 2027",
+    open: "2026-12-01", close: "2027-05-29", estimated: true, fees: "$41–75", path: "Oscar-qualifying",
+    why: "Best regional-culture fit on the circuit: Deep South audience, Black Southern storytelling focus, qualifying jury award, no premiere requirement — and NOFF pays screening fees for selected shorts.",
+    festDate: "2027-10-21" },
+  { name: "HollyShorts 23rd", loc: "Los Angeles, USA", cat: "Industry LA · Oscar-qualifying ×4", tier: "strong", edition: "Aug 12–22, 2027",
+    open: "2026-08-24", close: "2027-06-01", estimated: false, fees: "$50 student early", path: "Oscar-qualifying",
+    why: "Qualifies in four categories with a dedicated cinematography strand — but now requires an LA premiere, so it is mutually exclusive with ABFF and PAFF. Only one LA door gets the film; the Playbook recommends ABFF.",
+    festDate: "2027-08-12" },
+  { name: "AMAA 2027", loc: "Lagos, Nigeria", cat: "African industry awards", tier: "strong", edition: "Ceremony ~Oct/Nov 2027",
+    open: "2026-12-01", close: "2027-05-31", estimated: true, fees: "$15–20", path: "AMAA Best Short / Diaspora Short",
+    why: "Africa's biggest film-award body; films that already screened or won elsewhere are explicitly eligible, so it costs nothing strategically. The strongest Nigerian-industry prestige credential available to a short.",
+    festDate: "2027-10-31" },
+  { name: "AFI FEST 2027 + Conservatory Showcase", loc: "Los Angeles, USA", cat: "Home turf · Oscar-qualifying", tier: "strong", edition: "~late Oct 2027",
+    open: "2027-01-20", close: "2027-05-31", estimated: true, fees: "free (Showcase) / TBD (open call)", path: "Oscar-qualifying (open call)",
+    why: "KOM is NOT in the announced 2026 Showcase lineup (verified against all 23 titles), so the home-turf path is the 2027 cycle — internal AFI selection, plus the open call. A Showcase screening is a public exhibition: sequence it after the premiere plays out.",
+    festDate: "2027-10-20" },
+  { name: "Chicago Intl 63rd", loc: "Chicago, USA", cat: "Qualifying circuit", tier: "worthy", edition: "~mid-Oct 2027",
+    open: "2027-01-12", close: "2027-06-30", estimated: true, fees: "$20–50 student", path: "Oscar-qualifying",
+    why: "Gold Hugo qualifies, and the long-running Black Perspectives program makes this a natural submission. No premiere required.",
+    festDate: "2027-10-14" },
+  { name: "ADIFF NY 2027", loc: "New York (+3 cities)", cat: "Diaspora — free entry", tier: "worthy", edition: "~Nov/Dec 2027",
+    open: "2027-01-01", close: "2027-06-30", estimated: true, fees: "free", path: "—",
+    why: "A 30-year Harlem institution whose audience reads Yoruba cosmology fluently; free entry, four-city reach. Requires at least a NY premiere — sequence against Urbanworld.",
+    festDate: "2027-11-26" },
+  { name: "Winterthur 31st", loc: "Winterthur, Switzerland", cat: "Swiss shorts · Oscar-qualifying", tier: "worthy", edition: "~early Nov 2027",
+    open: "2027-03-01", close: "2027-07-12", estimated: true, fees: "~free–$11", path: "Oscar-qualifying",
+    why: "Switzerland's largest shorts festival, triple-qualifying with CHF 57,000 in prizes, nearly free to enter. Swiss premiere required — easy to preserve.",
+    festDate: "2027-11-02" },
+  { name: "Urbanworld 2027", loc: "New York, USA", cat: "Black cinema · Oscar-qualifying", tier: "strong", edition: "~mid-Oct 2027",
+    open: "2027-01-05", close: "2027-08-06", estimated: true, fees: "$55–105", path: "Oscar-qualifying",
+    why: "NYC's flagship multicultural festival with studio/streamer presence; Best Narrative Short (U.S.) qualifies. Requires World/USA/East-Coast/NY premiere status — this is the door the NY premiere should be saved for.",
+    festDate: "2027-10-13" },
+  { name: "AFRIFF 2027", loc: "Lagos, Nigeria", cat: "Nigeria's flagship", tier: "strong", edition: "~Nov 2027",
+    open: "2027-05-06", close: "2027-08-26", estimated: true, fees: "$10–20", path: "AFRIFF Globe Awards",
+    why: "The director's home industry: Yoruba subject matter by a Nigerian director is core AFRIFF programming, with Nollywood market visibility. The 2026 edition was deliberately passed to protect the premiere; 2027 is the play.",
+    festDate: "2027-11-01" },
+  { name: "Palm Springs ShortFest 2027", loc: "Palm Springs, USA", cat: "Biggest NA shorts market · Oscar-qualifying ×5", tier: "dream", edition: "Jun 22–28, 2027",
+    open: "2026-09-01", close: "2027-02-07", estimated: false, fees: "$45 student by Nov 1 · $70 final", path: "Oscar-qualifying",
+    why: "The biggest shorts-only festival/market in North America and the standard AFI-thesis launchpad. Five qualifying awards including Best Live-Action Short ≤15 Minutes — the film's exact bucket. No premiere requirement; already-online films eligible.",
+    festDate: "2027-06-22" },
+];
+
+/* rows shown in the heat map, keyed by name (must match FESTIVALS names) */
+const HEAT = {
+  "Sundance 2027":                           { prestige: 10, craft: 7,  story: 8,  oscar: 9, access: 2 },
+  "Cannes — Short Films in Competition 2027": { prestige: 10, craft: 7,  story: 7,  oscar: 6, access: 2 },
+  "Cannes — La Cinef 2027":                  { prestige: 10, craft: 7,  story: 7,  oscar: 3, access: 3 },
+  "Berlinale Shorts 77th":                   { prestige: 9,  craft: 7,  story: 9,  oscar: 8, access: 3 },
+  "TIFF Short Cuts 2027":                    { prestige: 9,  craft: 7,  story: 8,  oscar: 8, access: 4 },
+  "Clermont-Ferrand 49th":                   { prestige: 9,  craft: 8,  story: 8,  oscar: 8, access: 6 },
+  "Aspen Shortsfest 36th":                   { prestige: 8,  craft: 8,  story: 7,  oscar: 8, access: 5 },
+  "Palm Springs ShortFest 2027":             { prestige: 8,  craft: 8,  story: 7,  oscar: 9, access: 7 },
+  "BlackStar 2027":                          { prestige: 8,  craft: 8,  story: 10, oscar: 8, access: 9 },
+  "ABFF — HBO Short Film Award":             { prestige: 8,  craft: 6,  story: 10, oscar: 9, access: 6 },
+  "PAFF 2027":                               { prestige: 7,  craft: 6,  story: 10, oscar: 8, access: 7 },
+  "FESPACO 30th":                            { prestige: 8,  craft: 6,  story: 10, oscar: 2, access: 6 },
+  "Durban IFF 48th":                         { prestige: 7,  craft: 6,  story: 9,  oscar: 8, access: 6 },
+  "AFRIFF 2027":                             { prestige: 6,  craft: 6,  story: 10, oscar: 2, access: 9 },
+  "SXSW 2027":                               { prestige: 8,  craft: 7,  story: 6,  oscar: 8, access: 4 },
+  "Atlanta FF 51st":                         { prestige: 6,  craft: 6,  story: 9,  oscar: 8, access: 8 },
+  "AFI FEST 2027 + Conservatory Showcase":   { prestige: 7,  craft: 7,  story: 7,  oscar: 7, access: 8 },
+};
+
+const ASKS = [
+  "<b>Submit Sundance by Aug 31</b> — $95, no premiere risk, the film is the exact eligibility cohort. <span class='why'>Everything else on this board survives a week's delay; this doesn't.</span>",
+  "<b>Email AFI's festival office this week</b> — (1) clearance procedure and who formally submits (AFI is likely producer of record); (2) was KOM entered in the ASC Heritage 2026 cycle (closed Jun 4) or the 2026 Student Academy Awards; (3) will AFI enter it for Camerimage Etudes 2027 and an ASC 2027 slot; (4) what completion date AFI will certify — the A-list windows ride on it. <span class='why'>The school-gated entries and the date argument both route through AFI.</span>",
+  "<b>Confirm the premiere assumption</b> — this plan assumes no public (ticketed/advertised) screening has happened yet. If an AFI screening was public, the world-premiere card is already spent (US premiere survives). <span class='why'>Changes Venice/Berlinale math only; the US circuit doesn't care.</span>",
+];
+
+const CARDS = [
+  { title: "Premiere status — the actual law", html: `
+    <p><b>A 'premiere' dies only at a PUBLIC screening</b> — advertised and/or ticketed. Cast-and-crew, friends-and-family, NDA'd and compulsory-curricular screenings break nothing anywhere. Trailers and password-protected screeners are safe everywhere.</p>
+    <p><b>Who actually requires premieres for shorts:</b> Cannes/Berlinale/Venice (world or international), TIFF (≥ North American). <b>Who doesn't:</b> Sundance, Clermont, SXSW, Tribeca, Palm Springs, Aspen, BlackStar, HollyShorts — they merely prefer them.</p>
+    <p><b>The completion-window angle — don't lose hope.</b> The European A-list wants completion within ~12 months of the festival, and the graded master says Jan 2026. But a school film's 'completion' has honest later dates — final mix, DCP, delivery for credit. Cannes, Berlinale and TIFF are on this board on exactly that argument: enter with the final-deliverables date and let programmers decide. The one rule no date fixes is Venice — world premieres only.</p>
+    <p><b>The one thing to protect is the ONLINE release.</b> Keep the full film off the public internet until the run ends; that is the eligibility that actually burns.</p>` },
+  { title: "The Oscar math", html: `
+    <p><b>Route:</b> win a <i>designated</i> qualifying award (not mere selection) at a listed festival between <b>Oct 1, 2026 and Sep 30, 2027</b> → submit that fall → 100th Academy Awards, March 5, 2028. Prior online release does NOT block the festival route.</p>
+    <p><b>Student films cannot use the theatrical route</b> — festival wins (or a Student Academy medal) are the only doors.</p>
+    <p><b>Student Academy Awards: entering the 54th (2027) cycle.</b> A medal is its own Oscar-eligibility path, no festival win needed. The window rules key on completion-for-credit dates — the same date argument applies. Verify the rules the day they post, and ask AFI whether the 53rd was entered.</p>
+    <p><b>Qualifying doors on this board:</b> Sundance, Cannes official, Berlinale, TIFF, SXSW, Clermont, Aspen, Palm Springs (Best LA Short ≤15 min — the exact bucket), BlackStar, ABFF-HBO, PAFF, Atlanta, BronzeLens, Urbanworld, Durban, Tribeca, HollyShorts, AFI FEST, Indy Shorts, SBIFF, Cleveland, Florida, Seattle, Chicago, New Orleans, Tampere, REGARD, Krakow, Curtas, Winterthur, Flickerfest, Vienna, Venice.</p>` },
+  { title: "Publicists — when money helps", html: `
+    <p><b>Hire after an acceptance, never before.</b> Festival publicity is flat-fee: <b>$3–7k regional / $7–12k major</b>, engaged 1–2 months before the screening. Every festival's own press office pitches selected films at no cost — use it in every case, hired publicist or not.</p>
+    <p><b>If Sundance/SXSW/Tribeca says yes:</b> the Sundance publicist list tags eleven firms that take shorts — The 2050 Group, See-Through Films (Kathleen McInnis — the shorts/emerging specialist), Obscured Pictures, Cinetic, DMAG, dominion3 among them. For a later awards push: London Flair PR (Catherine Lyn Scott) dominates shorts Oscar campaigns.</p>
+    <p><b>Do now, free:</b> build the full EPK before decisions land (stills, 3 synopsis lengths, director statement, bios, 2.39:1 specs). The best emerging-director press (Filmmaker's 25 New Faces) is explicitly not publicist-accessible — it's earned by festival visibility.</p>` },
+  { title: "Money — fees, waivers, grants", html: `
+    <p><b>Free elite entries:</b> Cannes official ($0), La Cinef ($0), Clermont (~€13), Curtas Vila do Conde ($0), Luxor ($0), ADIFF ($0), ZIFF ($0), Winterthur (~$0–11).</p>
+    <p><b>Waivers that apply to this film:</b> BlackStar waives fees with a student ID; most Black film festivals grant waivers on a direct email; student tiers at Palm Springs/Atlanta/Tribeca/Indy; FilmFreeway's Connecting Cultures (Tarkovski) grant gives underrepresented filmmakers $500+ in waived fees across 20+ festivals — the director plausibly qualifies.</p>
+    <p><b>Grants:</b> Black Film Space Emerging Filmmaker Grant ($3,000, explicitly usable for festival submissions; $25 app, free for members). Firelight Media is documentary-only — skip. AFI's 501(c)(3) donation portal per thesis film is the clean fundraising channel.</p>` },
+  { title: "Premiere chess — the city locks", html: `
+    <p><b>LA: four doors, one premiere.</b> ABFF-HBO (May), HollyShorts (Aug) and effectively PAFF (Feb) each want the LA premiere; AFI FEST doesn't. <b>Recommendation: save LA for ABFF-HBO</b> ($10k + 100th-Oscars qualification + HBO room), skip PAFF 2027 unless its premiere rule checks out looser, accept that HollyShorts 2027 dies, and let AFI FEST 2027 screen it after.</p>
+    <p><b>France:</b> Cannes official and La Cinef both bar screenings at festivals outside the film's home country — a Clermont screening (Jan 29–Feb 6, 2027) voids both, and voids Berlinale's premiere status too. If Cannes 2027 is a serious target, a Clermont acceptance in December forces the choice.</p>
+    <p><b>NY: one real door.</b> If Sundance premieres the film, Tribeca's award path (needs US premiere) is gone anyway — so hold NY for <b>Urbanworld</b> (Oct 2027, Oscar-qualifying, needs ≥NY premiere), then ADIFF after.</p>
+    <p><b>Atlanta:</b> Atlanta FF (April) first — it asks that the film hasn't screened in greater Atlanta — then BronzeLens (Aug), which accepts non-premieres.</p>
+    <p><b>End of run:</b> the online premiere (Vimeo Staff Pick / Short of the Week / Omeleto) is the career payoff and the eligibility killer — it goes LAST. Staff Pick Premieres accept films within 24 months of an Oscar-qualifying competition screening; that clock defines when to stop submitting.</p>` },
+];
+
+const SKIPS = [
+  ["AFRIFF 2026 / S16 2026", "2026 editions passed — AFRIFF by choice (premiere protection), S16's window closed Jul 3. Both are 2027 targets on the list above."],
+  ["IFFR Rotterdam Ammodo Tiger", "Dates collide head-on with Sundance (Jan 28–Feb 7) and shorts must commit world/international/European premiere status; no longer Oscar-qualifying. The one winter major deliberately let go."],
+  ["BFI London FF open call", "UK and Irish films only — a US-produced AFI thesis cannot submit."],
+  ["Africa in Motion (Scotland)", "Defunct — ran 2006–2022; domain dead."],
+  ["NBCUniversal Short Film Fest · New Voices in Black Cinema · Smithsonian NMAAHC festival", "All dormant or unreachable — no confirmed editions; re-check only if news breaks."],
+  ["BAFTA Student Awards", "Likely defunct since 2023 after BAFTA restructured its North America programs."],
+  ["Middleburg · BSC shorts award · Princess Grace", "No open shorts lane / UK-linked eligibility / nomination window passed."],
+  ["Morehouse Human Rights FF", "Thematic bullseye but its Oscar-qualifying status has lapsed (not on the 99th list) — worth a community submission in 2027, not an awards play."],
+  ["Indie Memphis · RiverRun · Sidewalk", "Good Southern rooms, but no live-action qualifying path — candidates for the winnable-circuit next ring rather than this list."],
+];
+
+const ACTIONS = [
+  "<b>This week:</b> Sundance ($95, by Aug 31) · email AFI's festival office (clearance, completion-date certification, the SAA-53rd question, and the Camerimage/ASC school entries) · check PAFF 2027's real deadline on FilmFreeway · verify College Television Awards 46th window at televisionacademy.com.",
+  "<b>September:</b> Tampere early bird Sep 1 (€16) · Atlanta student tier Sep 11 ($55) · Flickerfest Sep 14 ($40) · SXSW 2nd tier Sep 15 ($70) · SBIFF Sep 18 ($60) · FESPACO Sep 20 (€50) · Clermont Sep 24 (~€13) · Aspen Sep 25 ($80) · Florida earlybird + Cleveland Sep 30 · email Carthage about eligibility.",
+  "<b>October–December:</b> Palm Springs earlybird Nov 1 ($45 student) · REGARD by Nov 1 · Toronto Black FF by Nov 1 · Joburg by ~Oct 31 · <b>Berlinale Shorts Nov 4 (€75, submit blind — decisions land before Clermont screens)</b> · Krakow phase 1 by ~Nov 30 · SBIFF final Dec 2 · Florida final Dec 9 · Luxor by Dec 15 (free) · watch for DGA Student rules ~Nov 1 · build the EPK before Sundance notification (mid-Dec).",
+  "<b>January–April 2027 (post-Sundance decision):</b> Vienna Shorts Jan 31 · ABFF-HBO by Jan 24 (watch category opening) · Palm Springs final Feb 7 · La Cinef by Feb 15 (only if Sundance and Clermont both passed) · Durban ~Feb 27 · Cannes official shorts ~Mar 1 (free) · Indy Shorts Mar 21 · BlackStar ~Apr 1 (free, captions ready) · DGA Student ~Apr 1 · BronzeLens ~Apr 6 · Curtas by Apr 30 (free).",
+  "<b>May–August 2027:</b> Student Academy Awards ~May (verify rules first) · TIFF ~May 7 · Venice ~May 27 (only if still unscreened) · Aesthetica May 31 · AMAA ~May 31 · AFI FEST open call ~May 31 · New Orleans ~May 29 · Chicago ~Jun 30 · Winterthur ~Jul 12 · Urbanworld by ~Aug 6 · AFRIFF + S16 2027.",
+  "<b>End of run (late 2027+):</b> once qualifying wins are in or the circuit is exhausted — online premiere pitch to Vimeo Staff Pick / Short of the Week / Omeleto, within 24 months of the last qualifying screening.",
+];
+
+/* ============ RENDER ============ */
+const $ = (s) => document.querySelector(s);
+const fmtD = (d) => d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+const fmtDY = (d) => d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "2-digit" });
+const parseD = (s) => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d || 1); };
+const tierColor = { dream: "var(--tier-dream)", strong: "var(--tier-strong)", worthy: "var(--tier-worthy)" };
+const tierTint = { dream: "rgba(57,135,229,0.08)", strong: "rgba(217,89,38,0.08)", worthy: "rgba(25,158,112,0.08)" };
+const daysTo = (d) => Math.round((d - TODAY) / 86400000);
+
+/* Counters — 4 research + 4 campaign, always a full even grid */
+(function counters() {
+  const yes = FESTIVALS.length;
+  const maybe = RESEARCHED - yes - RULED_OUT;
+  const pend = CAMPAIGN.applied.length - CAMPAIGN.accepted.length - CAMPAIGN.rejected.length;
+  const cells = [
+    { v: RESEARCHED, l: "festivals researched", d: "to date" },
+    { v: yes, l: "yeses — on the board", d: "the dream list below" },
+    { v: maybe, l: "maybes — benched", d: "candidates for the next ring" },
+    { v: RULED_OUT, l: "noes — ruled out", d: "closed at the bottom" },
+    { v: CAMPAIGN.applied.length, l: "applied to date", d: "wave 1 starts this week" },
+    { v: CAMPAIGN.accepted.length, l: "accepted", d: "" },
+    { v: CAMPAIGN.rejected.length, l: "rejected", d: "" },
+    { v: pend, l: "pending decisions", d: "" },
+  ];
+  $("#kpis").innerHTML = cells.map(c =>
+    `<div class="kpi${c.v === 0 ? " zero" : ""}"><div class="v">${c.v}</div><div class="l">${c.l}</div>${c.d ? `<div class="d">${c.d}</div>` : ""}</div>`).join("");
+})();
+
+/* Key dates */
+(function keydates() {
+  const sundance = parseD("2026-08-31");
+  const windowOpen = parseD("2026-10-01");
+  const windowClose = parseD("2027-09-30");
+  const dS = daysTo(sundance);
+  const sundanceCard = dS >= 0
+    ? { v: `${dS}<small> days</small>`, l: "until the Sundance final deadline", d: "Aug 31, 2026 · $95" }
+    : { v: "closed", l: "Sundance 2027 final deadline", d: "Aug 31, 2026" };
+  let oscarCard;
+  if (TODAY < windowOpen) {
+    oscarCard = { v: `${daysTo(windowOpen)}<small> days</small>`, l: "until the 100th-Oscars qualifying window opens", d: "" };
+  } else if (TODAY <= windowClose) {
+    oscarCard = { v: `open<small> · ${daysTo(windowClose)} days left</small>`, l: "100th-Oscars qualifying window", d: "" };
+  } else {
+    oscarCard = { v: "closed", l: "100th-Oscars qualifying window", d: "" };
+  }
+  $("#kdates").innerHTML = [sundanceCard, oscarCard].map(c =>
+    `<div class="kdate"><div class="v">${c.v}</div><div class="l">${c.l}</div>${c.d ? `<div class="d">${c.d}</div>` : ""}</div>`).join("");
+})();
+
+$("#asks").innerHTML = ASKS.map(a => `<div class="ask">${a}</div>`).join("");
+
+const tierRank = { dream: 0, strong: 1, worthy: 2 };
+const sorted = [...FESTIVALS].sort((a, b) => tierRank[a.tier] - tierRank[b.tier] || parseD(a.close) - parseD(b.close));
+$("#dreamtable tbody").innerHTML = sorted.map(f => {
+  const close = parseD(f.close);
+  const days = daysTo(close);
+  const closing = days >= 0 && days <= 30;
+  const dl = `${f.estimated ? "~" : ""}${fmtDY(close)}` + (days >= 0 ? ` <span class="deadline-chip ${closing ? "closing" : "open"}">${closing ? "⚠ " : ""}${days}d</span>` : ` <span class="deadline-chip">closed</span>`);
+  return `<tr style="background:${tierTint[f.tier]}">
+    <td style="min-width:190px"><span class="tiermark" style="background:${tierColor[f.tier]}"></span><span class="festname">${f.name}</span><br><span class="festloc">${f.cat}</span></td>
+    <td class="festloc" style="min-width:110px">${f.loc}</td>
+    <td class="num">${f.edition}</td>
+    <td class="num">${f.estimated ? "~" : ""}${fmtD(parseD(f.open))} → ${fmtD(close)}</td>
+    <td class="num">${dl}</td>
+    <td class="num">${f.fees}</td>
+    <td>${f.path === "—" ? "—" : `<span class="badge${/oscar/i.test(f.path) ? " oscar" : ""}">${f.path}</span>`}</td>
+    <td style="min-width:300px;color:var(--text-2)">${f.why}</td>
+  </tr>`;
+}).join("");
+$("#dreamnote").textContent = `${FESTIVALS.length} targets in three tiers — the first ring of a campaign headed for ~150. Dream = the premiere and prestige crown. Strong = the qualifying and cultural core. Worthy = depth, regional resonance, low-cost reach. Next ring to research: winnable festivals with their own followings, beyond the Oscar/BAFTA path.`;
+
+(function gantt() {
+  const el = $("#gantt");
+  const span = RANGE.end - RANGE.start;
+  const pct = (d) => Math.max(0, Math.min(100, ((d - RANGE.start) / span) * 100));
+  const months = [];
+  for (let d = new Date(2026, 8, 1); d < RANGE.end; d.setMonth(d.getMonth() + 1)) months.push(new Date(d));
+  const monthMarks = months.map(m =>
+    `<div class="g-month" style="left:${pct(m)}%">${m.toLocaleDateString("en-US", { month: "short" })}${m.getMonth() === 0 ? " ’" + String(m.getFullYear()).slice(2) : ""}</div>`).join("");
+  const gridlines = months.map(m => `<div class="g-gridline" style="left:${pct(m)}%"></div>`).join("");
+  const showToday = TODAY >= RANGE.start && TODAY <= RANGE.end;
+  const rows = [...FESTIVALS].sort((a, b) => parseD(a.close) - parseD(b.close)).map((f) => {
+    const o = parseD(f.open), c = parseD(f.close);
+    const left = pct(o), width = Math.max(0.5, pct(c) - left);
+    const fd = f.festDate ? parseD(f.festDate) : null;
+    const fest = fd && fd < RANGE.end ? `<div class="g-fest-marker" style="left:${pct(fd)}%"></div>` : "";
+    const labelLeft = pct(c) + 0.3;
+    return `<div class="g-row">
+      <div class="g-label">${f.name}<span class="cat">${f.cat}</span></div>
+      <div class="g-track">
+        <div class="g-grid">${gridlines}${showToday ? `<div class="g-today" style="left:${pct(TODAY)}%"></div>` : ""}</div>
+        <div class="g-bar${f.estimated ? " estimated" : ""}" data-i="${FESTIVALS.indexOf(f)}" style="left:${left}%;width:${width}%;background:${tierColor[f.tier]}"></div>
+        ${fest}
+        <div class="g-deadline-label" style="left:${labelLeft}%">${f.estimated ? "~" : ""}${fmtD(c)}</div>
+      </div>
+    </div>`;
+  }).join("");
+  el.innerHTML = `<div class="g-head"><div></div><div class="g-months" style="position:relative">${monthMarks}${showToday ? `<div class="g-today-label" style="left:${pct(TODAY)}%;position:absolute">TODAY</div>` : ""}</div></div>${rows}`;
+})();
+
+const tip = $("#tip");
+document.addEventListener("mousemove", (e) => {
+  const bar = e.target.closest(".g-bar");
+  if (!bar) { tip.style.display = "none"; return; }
+  const f = FESTIVALS[+bar.dataset.i];
+  tip.innerHTML = `<b>${f.name}</b>
+    <div class="row">${f.loc} · ${f.edition}</div>
+    <div class="row">Window: ${f.estimated ? "~" : ""}${fmtDY(parseD(f.open))} → ${fmtDY(parseD(f.close))}</div>
+    <div class="row">Fees: ${f.fees}</div>
+    <div class="row">${f.path}</div>`;
+  tip.style.display = "block";
+  const x = Math.min(e.clientX + 14, window.innerWidth - 340);
+  tip.style.left = x + "px";
+  tip.style.top = (e.clientY + 14) + "px";
+});
+
+(function heat() {
+  const dims = [
+    { k: "prestige", l: "Prestige" }, { k: "craft", l: "Craft focus" },
+    { k: "story", l: "Story fit" }, { k: "oscar", l: "Oscar path" }, { k: "access", l: "Access / odds" },
+  ];
+  /* per-tier sequential ramps, validator-passed on the dark surface */
+  const RAMPS = {
+    dream:  ["#3a4a66", "#386092", "#3573b4", "#3a85d5", "#63a2f2"],
+    strong: ["#63402b", "#82492a", "#a15328", "#c05e26", "#e37b42"],
+    worthy: ["#2e4f3e", "#27654b", "#207d59", "#199e70", "#45c493"],
+  };
+  const tierOf = (name) => (FESTIVALS.find(f => f.name === name) || { tier: "strong" }).tier;
+  const rows = Object.keys(HEAT).map(name => {
+    const h = HEAT[name];
+    const tier = tierOf(name);
+    const ramp = RAMPS[tier];
+    return `<tr><td class="rowlabel"><span class="tiermark" style="background:${tierColor[tier]}"></span>${name}</td>${dims.map(d => {
+      const idx = Math.min(4, Math.floor(h[d.k] / 2.01));
+      const vc = idx >= 3 ? "#171310" : "var(--text)";
+      return `<td><div class="cell" style="background:${ramp[idx]};--vc:${vc}" title="${name} — ${d.l}: ${h[d.k]}/10">${h[d.k]}</div></td>`;
+    }).join("")}</tr>`;
+  }).join("");
+  $("#heat").innerHTML = `<table><thead><tr><th></th>${dims.map(d => `<th>${d.l}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table>`;
+})();
+$("#valtoggle").addEventListener("click", () => {
+  $("#heat").classList.toggle("show-values");
+  $("#valtoggle").classList.toggle("on");
+  $("#valtoggle").textContent = $("#heat").classList.contains("show-values") ? "Hide values" : "Show values";
+});
+
+$("#cards").innerHTML = CARDS.map(c => `<div class="card"><h3>${c.title}</h3>${c.html}</div>`).join("");
+$("#skiptable tbody").innerHTML = SKIPS.map(s => `<tr><td style="min-width:200px" class="festname">${s[0]}</td><td style="color:var(--text-2)">${s[1]}</td></tr>`).join("");
+$("#actions").innerHTML = ACTIONS.map(a => `<li>${a}</li>`).join("");
+$("#foot").innerHTML = `Research Aug 25, 2026: 17-agent sweep (117 festivals, 3 strategy lanes) with the top 30 records verified against official festival sites and FilmFreeway. Fit scores are assessed, not measured. ~ = pattern-estimate from the prior cycle. Day counts compute from your device's date; deadlines change — confirm on the festival's own page before paying any fee.`;
+</script>
