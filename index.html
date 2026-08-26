@@ -53,8 +53,8 @@
   .kpi.gold .v   { color: #e5a44c; }
   .kpi.green  { background: rgba(76,175,110,.14); border-color: rgba(76,175,110,.45); }
   .kpi.green .v  { color: #5fc287; }
-  .kpi.yellow { background: rgba(232,210,50,.12); border-color: rgba(232,210,50,.40); }
-  .kpi.yellow .v { color: #e6d24a; }
+  .kpi.purple { background: rgba(144,133,233,.15); border-color: rgba(144,133,233,.45); }
+  .kpi.purple .v { color: #b6aaf7; }
   .kpi.red    { background: rgba(217,79,67,.14); border-color: rgba(217,79,67,.45); }
   .kpi.red .v    { color: #e06a5e; }
 
@@ -511,14 +511,14 @@ const daysTo = (d) => Math.round((d - TODAY) / 86400000);
   const pend = CAMPAIGN.applied.length - CAMPAIGN.accepted.length - CAMPAIGN.rejected.length;
   /* bottom-row tiles sit red at zero; they take their live color once numbers land */
   const cells = [
-    { v: RESEARCHED, l: "festivals researched", d: "to date", c: "gold" },
+    { v: RESEARCHED, l: "festivals researched", d: "to date", c: "purple" },
     { v: yes, l: "yeses — on the board", d: "the dream list below", c: "green" },
-    { v: maybe, l: "maybes — benched", d: "candidates for the next ring", c: "yellow" },
+    { v: maybe, l: "maybes — benched", d: "candidates for the next ring", c: "gold" },
     { v: RULED_OUT, l: "noes — ruled out", d: "closed at the bottom", c: "red" },
     { v: CAMPAIGN.applied.length, l: "applied to date", d: "wave 1 starts this week", c: CAMPAIGN.applied.length ? "gold" : "red" },
     { v: CAMPAIGN.accepted.length, l: "accepted", d: "", c: CAMPAIGN.accepted.length ? "green" : "red" },
     { v: CAMPAIGN.rejected.length, l: "rejected", d: "", c: "red" },
-    { v: pend, l: "pending decisions", d: "", c: pend ? "yellow" : "red" },
+    { v: pend, l: "pending decisions", d: "", c: pend ? "gold" : "red" },
   ];
   $("#kpis").innerHTML = cells.map(c =>
     `<div class="kpi ${c.c}"><div class="v">${c.v}</div><div class="l">${c.l}</div>${c.d ? `<div class="d">${c.d}</div>` : ""}</div>`).join("");
