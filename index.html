@@ -2685,7 +2685,7 @@ function validate(data) {
           else if (eids.has(e.eid)) errs.push(`duplicate event id ${e.eid}`); else eids.add(e.eid);
           if (e.date != null && e.date !== "" && !realDate(e.date)) errs.push(`festival ${f.id} event bad date "${e.date}"`);
           if ((e.type === "won" || e.type === "nominated") && (!e.award || typeof e.award !== "string")) errs.push(`festival ${f.id} ${e.type} missing award name`);
-          if (e.fee != null && (!Number.isFinite(Number(e.fee)) || Number(e.fee) < 0)) errs.push(`festival ${f.id} bad fee`);
+          if (e.fee != null && (typeof e.fee !== "number" || !Number.isFinite(e.fee) || e.fee < 0 || Math.abs(e.fee * 100 - Math.round(e.fee * 100)) > 1e-6)) errs.push(`festival ${f.id} bad fee (number, ≥0, cent precision)`);
           if (e.currency != null && !CURRENCIES.includes(e.currency)) errs.push(`festival ${f.id} unknown currency ${e.currency}`);
         });
       });
@@ -2704,6 +2704,7 @@ function validate(data) {
       if (!p.id || typeof p.id !== "string") errs.push(`premiere[${i}] missing id`);
       if (!p.label || typeof p.label !== "string") errs.push(`premiere ${p.id || i} missing label`);
       if (!["available", "reserved", "spent"].includes(p.state)) errs.push(`premiere ${p.id || i} bad state`);
+      if (p.date != null && p.date !== "" && !realDate(p.date)) errs.push(`premiere ${p.id || i} bad date`);
     });
     return errs;
   } catch (e) {
@@ -2966,15 +2967,15 @@ function banner(msg, retry) {
   if (retry) $("#retrybtn").addEventListener("click", () => location.reload());
 }
 function feeTotals(fests) {
-  const tot = {};
+  const cents = {};   // aggregate in integer cents — float summation drifts
   fests.forEach(f => (f.events || []).forEach(e => {
-    if (e.type === "submitted" && e.fee != null && e.fee !== "" && Number.isFinite(Number(e.fee))) {
+    if (e.type === "submitted" && typeof e.fee === "number" && Number.isFinite(e.fee)) {
       const c = e.currency || "USD";
-      tot[c] = (tot[c] || 0) + Number(e.fee);
+      cents[c] = (cents[c] || 0) + Math.round(e.fee * 100);
     }
   }));
-  const fmt = (v) => Number.isInteger(v) ? String(v) : v.toFixed(2);
-  return Object.entries(tot).map(([c, v]) => `${c === "USD" ? "$" : c === "EUR" ? "€" : c + " "}${fmt(v)}`).join(" + ");
+  const fmt = (v) => (v % 100 === 0) ? String(v / 100) : (v / 100).toFixed(2);
+  return Object.entries(cents).map(([c, v]) => `${c === "USD" ? "$" : c === "EUR" ? "€" : c + " "}${fmt(v)}`).join(" + ");
 }
 /* recognition implies selection for counting/awards, even if the selected event was never recorded */
 const effectivelySelected = (lc) => lc.state === "selected" || lc.wins.length > 0 || lc.noms.length > 0 || lc.screened;
@@ -3291,7 +3292,7 @@ function quickSheet(fid) {
         if (fee !== "") {
           const n = Number(fee);
           if (!Number.isFinite(n) || n < 0) { $("#everr").textContent = "Fee must be zero or more (0 = waiver)."; $("#everr").classList.add("show"); return; }
-          event.fee = n; event.currency = $("#evcur").value;
+          event.fee = Math.round(n * 100) / 100; event.currency = $("#evcur").value;
         }
         const conf = ($("#evconf").value || "").trim(); if (conf) event.confirmation = conf;
       }
