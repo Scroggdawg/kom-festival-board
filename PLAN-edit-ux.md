@@ -92,3 +92,19 @@ segmented next-step pair, two link buttons, then grouped panes — Campaign
 motion: bottom-sheet spring on phone, 200ms scale-fade on desktop, single
 250ms cross-fade on status change, reduced-motion fallbacks. This sheet
 supersedes the expandable-row detail from section 3 of the spine.
+
+## Verification outcome (2026-08-26 night)
+
+Codex verdict on the build: SHIP-WITH-FIXES, zero injection findings. Applied:
+row context buttons open the prefilled action directly; saving closes the sheet
+(4-tap flow restored); all "Stage" wording became "Save"/"unpublished changes";
+screened can spend a premiere this festival reserved; premiere concurrency
+snapshots carry dates; the selected hero uses real screened events; More
+actions are state-gated; applied vs pending tiles filter distinctly; dirty
+checks compare against defaults and guard the close button; external links
+open new tabs; withdrawn gets strike-through; bench shows "Unresearched"
+instead of a fake Verified stamp; desktop gets scale-in motion.
+Deliberate deviations kept: meter uses reachable-union math (label says so);
+the ≤30-day red deadline chip predates the color law and Luke knows it; the
+desktop pill is not sticky; selection does not inline award fields (the seg
+pair is one tap away after saving). Restore-from-ruled-out remains backlog.

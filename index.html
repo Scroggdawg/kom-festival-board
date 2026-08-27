@@ -115,7 +115,7 @@
   .stchip.submitted { border-color: rgba(229,164,76,.5); color: var(--gold); }
   .stchip.selected  { border-color: rgba(76,175,110,.5); color: var(--green); }
   .stchip.not_selected { border-color: rgba(217,79,67,.5); color: var(--red); }
-  .stchip.withdrawn { color: var(--muted); }
+  .stchip.withdrawn { color: var(--muted); text-decoration: line-through; }
   .stchip.won { background: rgba(229,164,76,.16); border-color: var(--accent); color: var(--accent); }
   a.ext { color: var(--accent); text-decoration: none; font-size: 12.5px; }
   a.ext:hover { text-decoration: underline; }
@@ -237,7 +237,9 @@
   /* ---------- the festival sheet ---------- */
   .fsheet { max-width: 520px; margin: 0 auto; background: var(--panel); border: 1px solid var(--hairline); border-radius: 18px; overflow: hidden; position: relative; animation: sheetUp .22s ease-out; }
   @keyframes sheetUp { from { transform: translateY(26px); opacity: 0; } to { transform: none; opacity: 1; } }
-  @media (prefers-reduced-motion: reduce) { .fsheet { animation: none; } }
+  @media (min-width: 721px) { .fsheet { animation: sheetScale .2s ease-out; } }
+  @keyframes sheetScale { from { transform: scale(.97); opacity: 0; } to { transform: none; opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .fsheet { animation: none !important; } }
   .sh-close { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; border-radius: 50%; background: var(--panel-2); border: 1px solid var(--hairline); color: var(--text-2); font-size: 15px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; }
   .sh-head { position: relative; padding: 20px 22px 18px; transition: background .25s ease-out; }
   .sh-head.washgold { background: linear-gradient(180deg, rgba(229,164,76,.16), rgba(229,164,76,0) 82%); }
@@ -472,7 +474,7 @@
 
 <!-- edit-mode chrome -->
 <div id="draftbar">
-  <span class="count" id="draftcount">0 staged changes</span>
+  <span class="count" id="draftcount">0 unpublished changes</span>
   <button class="btn small" id="reviewbtn" type="button">Review</button>
   <button class="btn small primary" id="publishbtn" type="button">Publish</button>
   <button class="btn small" id="tokenbtn" type="button">Token…</button>
@@ -2902,8 +2904,9 @@ function statusMeta(f) {
     m.actions = [{ kind: "won", label: "★ Add another award" }, { kind: "screened", label: "Mark screened" }];
   } else if (lc.state === "selected") {
     m.rail = "sel"; m.wash = "washgreen"; m.heroCls = "green";
-    m.hero = fd ? `Screens ${fmtD(fd)}` : "Official Selection";
-    m.under = lc.screened ? "screened" : (fd ? "get deliverables and travel moving" : "");
+    const scr = (f.events || []).filter(e => e.type === "screened" && e.date).pop();
+    m.hero = scr ? `Screened ${fmtD(parseD(scr.date))}` : (fd ? `Screens ${fmtD(fd)}` : "Official Selection");
+    m.under = scr ? "" : (fd ? "get deliverables and travel moving" : "");
     m.actions = [{ kind: "won", label: "★ Record an award" }, { kind: "screened", label: "Mark screened" }];
   } else if (lc.state === "submitted") {
     m.rail = "sub"; m.wash = "washgold"; m.heroCls = "gold";
@@ -3067,9 +3070,9 @@ function applyOps(base, ops) {
       case "setPremiere": {
         const p = data.premieres.find(v => v.id === op.pid);
         if (!p) { conflicts.push({ op, reason: "premiere missing" }); break; }
-        const now = { state: p.state, byFestivalId: p.byFestivalId ?? null, note: p.note ?? "" };
-        const prev = { state: op.prev.state, byFestivalId: op.prev.byFestivalId ?? null, note: op.prev.note ?? "" };
-        const val = { state: op.value.state, byFestivalId: op.value.byFestivalId ?? null, note: op.value.note ?? "" };
+        const now = { state: p.state, byFestivalId: p.byFestivalId ?? null, note: p.note ?? "", date: p.date ?? null };
+        const prev = { state: op.prev.state, byFestivalId: op.prev.byFestivalId ?? null, note: op.prev.note ?? "", date: op.prev.date ?? null };
+        const val = { state: op.value.state, byFestivalId: op.value.byFestivalId ?? null, note: op.value.note ?? "", date: op.value.date ?? null };
         if (!scalarEq(now, prev) && !scalarEq(now, val)) { conflicts.push({ op, reason: `changed elsewhere (now ${p.state})`, upstream: now }); break; }
         Object.assign(p, op.value);
         break;
@@ -3094,7 +3097,7 @@ function applyOps(base, ops) {
   return { data, conflicts };
 }
 function stage(op) {
-  if (publishing) { const st = $("#pubstatus"); if (st) st.textContent = "Publishing — hold on a moment before staging more."; return; }
+  if (publishing) { const st = $("#pubstatus"); if (st) st.textContent = "Publishing — one moment before more changes."; return; }
   op.opid = uuid();
   OPS.push(op);
   saveDraft();
@@ -3184,7 +3187,7 @@ function renderCounters() {
   ];
   /* tiles are controls: tap → filter or jump */
   const tileActs = [null, { chip: "all", jump: "dreamlist" }, { fold: "benchsec" }, { fold: "skiplist" },
-                    { chip: "submitted", jump: "dreamlist" }, { chip: "selected", jump: "dreamlist" },
+                    { chip: "applied", jump: "dreamlist" }, { chip: "selected", jump: "dreamlist" },
                     { chip: "notsel", jump: "dreamlist" }, { chip: "submitted", jump: "dreamlist" }];
   $("#kpis").innerHTML = cells.map((c, i) =>
     `<div class="kpi ${c.c}${tileActs[i] ? " tap" : ""}"${tileActs[i] ? ` data-tile="${i}" role="button" tabindex="0"` : ""}><div class="v">${esc(c.v)}</div><div class="l">${esc(c.l)}</div>${c.d ? `<div class="d">${esc(c.d)}</div>` : ""}</div>`).join("");
@@ -3268,6 +3271,7 @@ function filteredTargets() {
     case "next": ts = ts.filter(openNotSub); break;
     case "closing": ts = ts.filter(f => { const c = parseD(f.close); const n = c ? daysTo(c) : -1; return n >= 0 && n <= 30; }); break;
     case "submitted": ts = ts.filter(f => lifecycle(f).state === "submitted"); break;
+    case "applied": ts = ts.filter(f => (f.events || []).some(e => e.type === "submitted")); break;
     case "selected": ts = ts.filter(f => lifecycle(f).state === "selected"); break;
     case "notsel": ts = ts.filter(f => lifecycle(f).state === "not_selected"); break;
   }
@@ -3290,8 +3294,8 @@ function linkButtons(f) {
   /* render-time protocol filter — belt AND braces: even hostile data.json content never becomes a javascript: href */
   const L = f.links || {};
   const siteUrl = safeUrl(L.site), ffUrl = safeUrl(L.filmfreeway);
-  const site = siteUrl ? `<a class="linkbtn" href="${esc(siteUrl)}" rel="noopener">Official site ↗</a>` : `<span class="linkbtn off">no site link</span>`;
-  const ff = ffUrl ? `<a class="linkbtn" href="${esc(ffUrl)}" rel="noopener">FilmFreeway ↗</a>` : `<span class="linkbtn off">no FilmFreeway</span>`;
+  const site = siteUrl ? `<a class="linkbtn" href="${esc(siteUrl)}" target="_blank" rel="noopener">Official site ↗</a>` : `<span class="linkbtn off">no site link</span>`;
+  const ff = ffUrl ? `<a class="linkbtn" href="${esc(ffUrl)}" target="_blank" rel="noopener">FilmFreeway ↗</a>` : `<span class="linkbtn off">no FilmFreeway</span>`;
   return site + ff;
 }
 function renderRows() {
@@ -3301,7 +3305,7 @@ function renderRows() {
     const m = statusMeta(f);
     const close = parseD(f.close);
     const action = edit && m.actions.length && m.actions[0].primary
-      ? `<div class="rowaction"><button class="btn" data-open="${esc(f.id)}" type="button">${esc(m.actions[0].label)}</button></div>` : "";
+      ? `<div class="rowaction"><button class="btn" data-act-open="${esc(f.id)}" data-act-kind="${esc(m.actions[0].kind)}" type="button">${esc(m.actions[0].label)}</button></div>` : "";
     return `<div class="frow${m.decided ? " receded" : ""}" data-open="${esc(f.id)}" style="background:${tierTint[f.tier] || ""}">
       <div class="rail ${m.rail}"></div>
       <div>${chipFor(f)}${action}</div>
@@ -3330,8 +3334,14 @@ function renderRows() {
       <div class="view"><span>View details</span><span>›</span></div>
     </div>`;
   }).join("");
+  document.querySelectorAll("[data-act-open]").forEach(b => b.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (!document.body.classList.contains("edit")) enterEdit();
+    festivalSheet(b.dataset.actOpen);
+    showEventForm(b.dataset.actOpen, b.dataset.actKind);
+  }));
   document.querySelectorAll("[data-open]").forEach(el => el.addEventListener("click", (e) => {
-    if (e.target.closest("a")) return;   // link buttons navigate, never open the sheet
+    if (e.target.closest("a") || e.target.closest("[data-act-open]")) return;
     e.stopPropagation();
     festivalSheet(el.dataset.open);
   }));
@@ -3447,7 +3457,7 @@ function refresh() {
   $("#chips").querySelectorAll(".fchip").forEach(b => b.classList.toggle("on", b.dataset.chip === FILTER.chip));
   const ep = $("#editpill"); if (ep) ep.textContent = document.body.classList.contains("edit") ? "● Editing" : "✎ Edit campaign";
   $("#sorttoggle").textContent = "Sort: " + FILTER.sort;
-  $("#draftcount").textContent = `${OPS.length} staged change${OPS.length === 1 ? "" : "s"}`;
+  $("#draftcount").textContent = `${OPS.length} unpublished change${OPS.length === 1 ? "" : "s"}`;
   $("#publishbtn").disabled = OPS.length === 0;
 }
 
@@ -3455,8 +3465,12 @@ function refresh() {
 function openSheet(html, cls) { const b = $("#sheetbody"); b.className = cls || "sheet"; b.innerHTML = html; $("#modal").classList.add("show"); }
 function closeSheet() { $("#modal").classList.remove("show"); }
 function sheetDirty() {
-  return [...document.querySelectorAll("#sheetbody input[type=text], #sheetbody input[type=url], #sheetbody input[type=number], #sheetbody input[type=search], #sheetbody textarea")]
-    .some(el => (el.value || "").trim() !== "");
+  return [...document.querySelectorAll("#sheetbody input[type=text], #sheetbody input[type=url], #sheetbody input[type=number], #sheetbody input[type=date], #sheetbody textarea")]
+    .some(el => (el.value || "") !== (el.defaultValue || ""));
+}
+function guardedClose(fallback) {
+  if (sheetDirty() && !confirm("Discard what you typed?")) return;
+  (fallback || closeSheet)();
 }
 $("#modal").addEventListener("click", (e) => {
   if (e.target.id !== "modal") return;
@@ -3516,7 +3530,7 @@ function festivalSheet(fid) {
     </div>
     <div class="glabel">Research record</div>
     <div class="group">
-      <div class="lockbar">🔒 Locked facts <span class="verified">Verified ${esc(f.lastChecked ? fmtDY(parseD(f.lastChecked)) : "—")}</span></div>
+      <div class="lockbar">🔒 Locked facts ${f.lastChecked ? `<span class="verified">Verified ${esc(fmtDY(parseD(f.lastChecked)))}</span>` : `<span class="verified" style="color:var(--purple);border-color:rgba(144,133,233,.4)">Unresearched</span>`}</div>
       ${f.edition ? `<div class="grow2"><span class="k">Festival dates</span><span class="v">${esc(f.edition)}</span></div>` : ""}
       ${f.open || f.close ? `<div class="grow2"><span class="k">Window</span><span class="v">${f.estimated ? '<span class="est">~</span>' : ""}${esc(fmtD(parseD(f.open)))} → ${esc(fmtD(close))}</span></div>` : ""}
       ${f.feesText ? `<div class="grow2"><span class="k">Fees</span><span class="v">${esc(f.feesText)}</span></div>` : ""}
@@ -3524,9 +3538,9 @@ function festivalSheet(fid) {
       ${f.why || f.benchNote ? `<div class="whyblock">${esc(f.why || f.benchNote)}</div>` : ""}
       <div class="fixrow" data-shact="correct">Something changed at the festival? Suggest a correction</div>
     </div>
-    <div class="sh-foot"><span>${src ? `<a href="${esc(src)}" rel="noopener">Source ↗</a>` : "Source: —"}</span><span>Checked ${esc(f.lastChecked || "—")}</span></div>
+    <div class="sh-foot"><span>${src ? `<a href="${esc(src)}" target="_blank" rel="noopener">Source ↗</a>` : "Source: —"}</span><span>Checked ${esc(f.lastChecked || "—")}</span></div>
   `, "fsheet");
-  $("#sx").addEventListener("click", closeSheet);
+  $("#sx").addEventListener("click", () => guardedClose());
   document.querySelectorAll("[data-shact]").forEach(b => b.addEventListener("click", (e) => {
     e.stopPropagation();
     const act = b.dataset.shact;
@@ -3544,7 +3558,7 @@ function showEventForm(fid, type) {
   const needAward = type === "won" || type === "nominated";
   const isSub = type === "submitted";
   const premAware = type === "selected" || type === "screened";
-  const avail = premAware ? DATA.premieres.filter(p => p.state === "available") : [];
+  const avail = premAware ? DATA.premieres.filter(p => p.state === "available" || (type === "screened" && p.state === "reserved" && p.byFestivalId === fid)) : [];
   const feeGuess = ((f.feesText || "").match(/[\d.]+/) || [""])[0];
   $("#shform").innerHTML = `
     <label>Date</label><input type="date" id="evdate" value="${todayISO()}">
@@ -3555,7 +3569,7 @@ function showEventForm(fid, type) {
       <div class="premchecks">${avail.map(p => `<label><input type="checkbox" data-prem="${esc(p.id)}"> ${esc(p.label)}${p.note ? ` <span style="color:var(--muted)">· ${esc(p.note)}</span>` : ""}</label>`).join("")}</div>` : ""}
     <label>Note (optional)</label><input type="text" id="evnote">
     <div class="err" id="everr"></div>
-    <div class="actions"><button class="btn primary" id="stagebtn" type="button">Stage change</button><button class="btn ghost" id="cancelform" type="button">Cancel</button></div>`;
+    <div class="actions"><button class="btn primary" id="stagebtn" type="button">Save</button><button class="btn ghost" id="cancelform" type="button">Cancel</button></div>`;
   $("#cancelform").addEventListener("click", () => { $("#shform").innerHTML = ""; });
   $("#stagebtn").addEventListener("click", () => {
     const date = $("#evdate").value;
@@ -3584,19 +3598,19 @@ function showEventForm(fid, type) {
     document.querySelectorAll('#shform [data-prem]').forEach(cb => {
       if (!cb.checked) return;
       const p = DATA.premieres.find(v => v.id === cb.dataset.prem);
-      if (p) stage({ kind: "setPremiere", pid: p.id, prev: { state: p.state, byFestivalId: p.byFestivalId ?? null, note: p.note ?? "" },
+      if (p) stage({ kind: "setPremiere", pid: p.id, prev: { state: p.state, byFestivalId: p.byFestivalId ?? null, note: p.note ?? "", date: p.date ?? null },
                      value: { state: type === "screened" ? "spent" : "reserved", byFestivalId: fid, note: p.note ?? "", date } });
     });
-    festivalSheet(fid);   // stay in the sheet — the new state renders immediately
+    closeSheet();   // back to the board — the draft bar now shows the unpublished change
   });
 }
 function moreSheet(fid) {
   const f = DATA.festivals.find(v => v.id === fid);
   openSheet(`<button class="close" id="sx" type="button">×</button><h3>${esc(f.name)} — more</h3>
     <div class="morelist">
-      <button class="pick" data-m="withdrawn" type="button">Withdraw the submission</button>
-      <button class="pick" data-m="nominated" type="button">Record a nomination</button>
-      <button class="pick" data-m="tier" type="button">Change tier <span class="sub">now: ${esc(f.tier || "—")}</span></button>
+      ${lifecycle(f).state === "submitted" ? `<button class="pick" data-m="withdrawn" type="button">Withdraw the submission</button>` : ""}
+      ${["submitted", "selected"].includes(lifecycle(f).state) || lifecycle(f).wins.length ? `<button class="pick" data-m="nominated" type="button">Record a nomination</button>` : ""}
+      ${f.disposition === "target" ? `<button class="pick" data-m="tier" type="button">Change tier <span class="sub">now: ${esc(f.tier || "—")}</span></button>` : ""}
       <button class="pick" data-m="ruleout" type="button" style="color:var(--red)">Rule out of the campaign</button>
     </div>`);
   $("#sx").addEventListener("click", () => festivalSheet(fid));
@@ -3612,7 +3626,7 @@ function tierSheet(fid) {
   const f = DATA.festivals.find(v => v.id === fid);
   openSheet(`<button class="close" id="sx" type="button">×</button><h3>Tier — ${esc(f.name)}</h3>
     <label>Tier</label><select id="tsel"><option${f.tier === "dream" ? " selected" : ""}>dream</option><option${f.tier === "strong" ? " selected" : ""}>strong</option><option${f.tier === "worthy" ? " selected" : ""}>worthy</option></select>
-    <div class="actions"><button class="btn primary" id="tgo" type="button">Stage</button></div>`);
+    <div class="actions"><button class="btn primary" id="tgo" type="button">Save</button></div>`);
   $("#sx").addEventListener("click", () => festivalSheet(fid));
   $("#tgo").addEventListener("click", () => {
     const v = $("#tsel").value;
@@ -3635,7 +3649,7 @@ function correctionSheet(fid) {
     ${fields.map(([k, l, v, t]) => `<label>${l}</label><input type="${t === "date" ? "text" : t}" id="cx-${k}" value="${esc(v)}">`).join("")}
     <label>Where you saw it (required — https link)</label><input type="url" id="cx-src" placeholder="https://…">
     <div class="err" id="cxerr"></div>
-    <div class="actions"><button class="btn primary" id="cxgo" type="button">Stage the correction</button></div>`);
+    <div class="actions"><button class="btn primary" id="cxgo" type="button">Save correction</button></div>`);
   $("#sx").addEventListener("click", () => festivalSheet(fid));
   $("#cxgo").addEventListener("click", () => {
     const srcv = safeUrl(($("#cx-src").value || "").trim());
@@ -3685,7 +3699,7 @@ function noteSheet(fid) {
   openSheet(`<button class="close" id="sx" type="button">×</button><h3>Note — ${esc(f.name)}</h3>
     <p style="color:var(--text-2);font-size:13px;margin-top:6px">This board is public — keep notes public-safe. Programmer contacts and sensitive email belong elsewhere.</p>
     <label>Note</label><textarea id="ntext" rows="3"></textarea>
-    <div class="actions"><button class="btn primary" id="stagen" type="button">Stage note</button></div>`);
+    <div class="actions"><button class="btn primary" id="stagen" type="button">Save note</button></div>`);
   $("#sx").addEventListener("click", () => festivalSheet(fid));
   $("#stagen").addEventListener("click", () => {
     const t = ($("#ntext").value || "").trim();
@@ -3728,7 +3742,7 @@ function leadSheet() {
     <label>Link (https only)</label><input type="url" id="llink" placeholder="https://…">
     <label>Recommended by / why</label><input type="text" id="lwhy">
     <div class="err" id="lerr"></div>
-    <div class="actions"><button class="btn primary" id="lgo" type="button">Stage</button><button class="btn" id="lfull" type="button">Full add-festival form…</button></div>`);
+    <div class="actions"><button class="btn primary" id="lgo" type="button">Save</button><button class="btn" id="lfull" type="button">Full add-festival form…</button></div>`);
   $("#sx").addEventListener("click", closeSheet);
   $("#lfull").addEventListener("click", addFestivalSheet);
   $("#lgo").addEventListener("click", () => {
@@ -3754,7 +3768,7 @@ function addFestivalSheet() {
     <label>Tier</label><select id="af-tier"><option>dream</option><option selected>strong</option><option>worthy</option></select>
     ${F.map(([k, l, t]) => `<label>${l}</label><input type="${t === "date" ? "text" : t}" id="af-${k}">`).join("")}
     <div class="err" id="aferr"></div>
-    <div class="actions"><button class="btn primary" id="afgo" type="button">Stage as target</button></div>`);
+    <div class="actions"><button class="btn primary" id="afgo" type="button">Save as target</button></div>`);
   $("#sx").addEventListener("click", closeSheet);
   $("#afgo").addEventListener("click", () => {
     const v = Object.fromEntries(F.map(([k]) => [k, ($(`#af-${k}`).value || "").trim()]));
@@ -3807,7 +3821,7 @@ function premiereSheet(pid) {
     <div class="actions"><button class="btn primary" id="pgo2" type="button">Stage</button></div>`);
   $("#sx").addEventListener("click", closeSheet);
   $("#pgo2").addEventListener("click", () => {
-    stage({ kind: "setPremiere", pid, prev: { state: p.state, byFestivalId: p.byFestivalId ?? null, note: p.note ?? "" },
+    stage({ kind: "setPremiere", pid, prev: { state: p.state, byFestivalId: p.byFestivalId ?? null, note: p.note ?? "", date: p.date ?? null },
             value: { state: $("#pst").value, byFestivalId: $("#pby").value || null, note: ($("#pnote").value || "").trim(), date: todayISO() } });
     closeSheet();
   });
@@ -3815,12 +3829,12 @@ function premiereSheet(pid) {
 
 /* ---------- review & publish ---------- */
 function reviewSheet() {
-  openSheet(`<button class="close" id="sx" type="button">×</button><h3>Staged changes</h3>
-    <div class="oplist">${OPS.map(op => `<div class="op"><span class="desc">${esc(describeOp(op))}</span><button class="btn small danger" data-del="${esc(op.opid)}" type="button">Discard</button></div>`).join("") || '<div class="op"><span class="desc">Nothing staged.</span></div>'}</div>
+  openSheet(`<button class="close" id="sx" type="button">×</button><h3>Unpublished changes</h3>
+    <div class="oplist">${OPS.map(op => `<div class="op"><span class="desc">${esc(describeOp(op))}</span><button class="btn small danger" data-del="${esc(op.opid)}" type="button">Discard</button></div>`).join("") || '<div class="op"><span class="desc">Nothing waiting to publish.</span></div>'}</div>
     <div class="actions"><button class="btn danger" id="delall" type="button">Discard all</button><button class="btn primary" id="pub2" type="button">Publish</button></div>`);
   $("#sx").addEventListener("click", closeSheet);
   document.querySelectorAll("[data-del]").forEach(b => b.addEventListener("click", () => { OPS = OPS.filter(o => o.opid !== b.dataset.del); saveDraft(); refresh(); reviewSheet(); }));
-  $("#delall").addEventListener("click", () => { if (!confirm(`Discard all ${OPS.length} staged changes?`)) return; OPS = []; saveDraft(); refresh(); closeSheet(); });
+  $("#delall").addEventListener("click", () => { if (!confirm(`Discard all ${OPS.length} unpublished changes?`)) return; OPS = []; saveDraft(); refresh(); closeSheet(); });
   $("#pub2").addEventListener("click", () => { closeSheet(); publish(); });
 }
 function getToken() { try { return sessionStorage.getItem(TOK_S) || localStorage.getItem(TOK_S); } catch (e) { return null; } }
@@ -3990,7 +4004,7 @@ function boot() {
   renderChrome();
   $("#editpill").addEventListener("click", () => {
     if (!document.body.classList.contains("edit")) return enterEdit();
-    if (OPS.length && !confirm(`You have ${OPS.length} staged change${OPS.length === 1 ? "" : "s"} not yet published — leave edit mode anyway? (The draft stays saved in this browser.)`)) return;
+    if (OPS.length && !confirm(`You have ${OPS.length} unpublished change${OPS.length === 1 ? "" : "s"} not yet published — leave edit mode anyway? (The draft stays saved in this browser.)`)) return;
     exitEdit();
   });
   $("#q").addEventListener("input", (e) => { FILTER.q = e.target.value; refresh(); });
@@ -4006,7 +4020,7 @@ function boot() {
   $("#publishbtn").addEventListener("click", () => publish());
   $("#tokenbtn").addEventListener("click", () => tokenSheet(null));
   $("#exitedit").addEventListener("click", () => {
-    if (OPS.length && !confirm(`You have ${OPS.length} staged change${OPS.length === 1 ? "" : "s"} not yet published — leave edit mode anyway? (The draft stays saved in this browser.)`)) return;
+    if (OPS.length && !confirm(`You have ${OPS.length} unpublished change${OPS.length === 1 ? "" : "s"} not yet published — leave edit mode anyway? (The draft stays saved in this browser.)`)) return;
     exitEdit();
   });
   const tip = $("#tip");
