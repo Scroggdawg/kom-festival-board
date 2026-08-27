@@ -190,6 +190,128 @@
   .benchrow .bd { color: var(--muted); font-size: 12.5px; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .benchwrap { background: var(--panel); border: 1px solid var(--hairline); border-radius: 8px; padding: 8px 18px; }
 
+  /* ---------- edit entry ---------- */
+  .headtop { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+  #editpill { flex: none; background: rgba(229,164,76,.14); border: 1.5px solid var(--accent); color: var(--accent); font-weight: 700; font-size: 15px; border-radius: 999px; padding: 12px 22px; cursor: pointer; font-family: var(--body); margin-top: 6px; }
+  body.edit #editpill { background: var(--accent); color: #171310; }
+  #editpill:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  @media (max-width: 720px) {
+    #editpill { position: fixed; right: 14px; bottom: 14px; z-index: 30; box-shadow: 0 8px 28px rgba(0,0,0,.5); padding: 14px 24px; margin: 0; }
+    body.edit #editpill { display: none; }
+  }
+
+  /* ---------- progress meter ---------- */
+  .meter { margin-top: 14px; max-width: 620px; }
+  .meter .track { height: 8px; background: var(--panel-2); border: 1px solid var(--hairline); border-radius: 99px; overflow: hidden; }
+  .meter .fill { height: 100%; background: var(--gold); border-radius: 99px; transition: width .25s ease-out; }
+  .meter .lab { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--text-2); margin-top: 6px; font-variant-numeric: tabular-nums; }
+  @media (prefers-reduced-motion: reduce) { .meter .fill { transition: none; } }
+  .kpi.tap { cursor: pointer; }
+  .kpi.tap:active { transform: scale(.985); }
+
+  /* ---------- status-first rows ---------- */
+  .rowlist { display: grid; gap: 10px; }
+  .frow { position: relative; display: grid; grid-template-columns: 6px 175px 1fr 155px 235px 40px; gap: 0 16px; align-items: center; background: var(--panel-2); border: 1px solid var(--hairline); border-radius: 8px; padding: 15px 12px 15px 0; min-height: 82px; cursor: pointer; }
+  .frow:hover { border-color: rgba(229,164,76,.35); }
+  .frow .rail { height: 100%; border-radius: 8px 0 0 8px; align-self: stretch; }
+  .rail.none { background: var(--hairline); } .rail.sub { background: var(--gold); } .rail.sel { background: var(--green); } .rail.no { background: var(--red); } .rail.mut { background: var(--hairline); }
+  .frow .fname { font-size: 17px; font-weight: 600; }
+  .frow .fmeta { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .frow .cd .big { font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .frow .cd .sm { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .lnx { display: flex; gap: 8px; }
+  .linkbtn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: var(--panel); border: 1px solid rgba(229,164,76,.5); color: var(--accent); font-weight: 600; font-size: 13px; border-radius: 9px; padding: 11px 12px; text-decoration: none; white-space: nowrap; }
+  .linkbtn:hover { text-decoration: none; background: rgba(229,164,76,.1); }
+  .linkbtn.off { border-color: var(--hairline); color: var(--muted); pointer-events: none; }
+  .chev { color: var(--muted); font-size: 20px; text-align: center; }
+  .frow.receded { opacity: .55; filter: saturate(.5); }
+  .rowaction { margin-top: 8px; }
+  .rowaction .btn { border-color: var(--accent); color: var(--accent); font-weight: 600; padding: 7px 13px; font-size: 13px; }
+  @media (max-width: 720px) { .rowlist { display: none; } }
+
+  /* ---------- status pill states ---------- */
+  .stchip.none { color: var(--muted); }
+  .stchip.won { background: rgba(95,194,135,.14); border-color: var(--green); color: var(--green); }
+  .stchip.won .star { color: var(--gold); }
+
+  /* ---------- the festival sheet ---------- */
+  .fsheet { max-width: 520px; margin: 0 auto; background: var(--panel); border: 1px solid var(--hairline); border-radius: 18px; overflow: hidden; position: relative; animation: sheetUp .22s ease-out; }
+  @keyframes sheetUp { from { transform: translateY(26px); opacity: 0; } to { transform: none; opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .fsheet { animation: none; } }
+  .sh-close { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; border-radius: 50%; background: var(--panel-2); border: 1px solid var(--hairline); color: var(--text-2); font-size: 15px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; }
+  .sh-head { position: relative; padding: 20px 22px 18px; transition: background .25s ease-out; }
+  .sh-head.washgold { background: linear-gradient(180deg, rgba(229,164,76,.16), rgba(229,164,76,0) 82%); }
+  .sh-head.washgreen { background: linear-gradient(180deg, rgba(95,194,135,.17), rgba(95,194,135,0) 82%); }
+  .sh-tierline { font-size: 11.5px; color: var(--text-2); letter-spacing: .06em; text-transform: uppercase; display: flex; align-items: center; gap: 7px; margin-bottom: 6px; }
+  .sh-name { font-family: var(--display); font-size: 27px; font-weight: 600; line-height: 1.1; padding-right: 40px; text-wrap: balance; }
+  .sh-sub { font-size: 13.5px; color: var(--text-2); margin-top: 5px; }
+  .sh-head .stchip { margin-top: 12px; }
+  .sh-hero { padding: 4px 22px 18px; }
+  .sh-hero .big { font-size: 42px; font-weight: 600; line-height: 1.04; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+  .sh-hero .big small { font-size: 21px; font-weight: 600; color: var(--text-2); }
+  .sh-hero.gold .big { color: var(--gold); } .sh-hero.green .big { color: var(--green); } .sh-hero.mut .big { color: var(--text-2); }
+  .sh-hero .under { font-size: 13.5px; color: var(--text-2); margin-top: 5px; }
+  .sh-actions { padding: 0 22px 6px; display: grid; gap: 10px; }
+  .sh-primary { display: block; width: 100%; text-align: center; background: var(--accent); color: #171310; font-weight: 700; font-size: 16px; border: none; border-radius: 11px; padding: 14px; cursor: pointer; font-family: var(--body); }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; background: var(--panel-2); border: 1px solid var(--hairline); border-radius: 11px; overflow: hidden; }
+  .seg button { background: none; border: none; color: var(--text); font-family: var(--body); font-size: 15px; font-weight: 600; padding: 13px; cursor: pointer; }
+  .seg button + button { border-left: 1px solid var(--hairline); }
+  .seg .yes { color: var(--green); } .seg .no { color: var(--red); }
+  .sh-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 8px 22px 2px; }
+  .sh-links .linkbtn { padding: 12px; font-size: 14px; }
+  .glabel { font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding: 18px 26px 7px; }
+  .group { background: var(--panel-2); border: 1px solid var(--hairline); border-radius: 13px; margin: 0 16px; }
+  .grow2 { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 9px 16px; border-bottom: 1px solid var(--hairline); font-size: 14px; }
+  .grow2:last-child { border-bottom: none; }
+  .grow2 .k { color: var(--text-2); flex: none; width: 112px; font-size: 12.5px; }
+  .grow2 .v { flex: 1; text-align: right; font-variant-numeric: tabular-nums; }
+  .lockbar { display: flex; align-items: center; gap: 9px; padding: 10px 16px; font-size: 12px; color: var(--muted); border-bottom: 1px solid var(--hairline); }
+  .verified { font-size: 11px; color: var(--green); border: 1px solid rgba(95,194,135,.4); border-radius: 4px; padding: 1px 7px; }
+  .fixrow { padding: 9px 16px; font-size: 12.5px; color: var(--accent); text-align: center; cursor: pointer; border-top: 1px solid var(--hairline); }
+  .whyblock { padding: 11px 16px; font-size: 13.5px; color: var(--text-2); line-height: 1.55; border-bottom: 1px solid var(--hairline); }
+  .hwrap { padding: 4px 16px 8px; }
+  .hitem { position: relative; display: flex; gap: 13px; padding: 9px 0 9px 4px; }
+  .hitem:before { content: ""; position: absolute; left: 9px; top: 25px; bottom: -6px; width: 2px; background: var(--hairline); }
+  .hitem:last-child:before { display: none; }
+  .hdot { flex: none; width: 12px; height: 12px; border-radius: 50%; margin-top: 5px; border: 2px solid var(--panel-2); }
+  .hdot.g { background: var(--gold); } .hdot.gr { background: var(--green); } .hdot.r { background: var(--red); } .hdot.mut { background: var(--muted); }
+  .hbody { flex: 1; } .hbody .t { font-size: 14px; font-weight: 600; } .hbody .s { font-size: 12.5px; color: var(--muted); margin-top: 1px; }
+  .hdate { flex: none; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: 3px; }
+  .emptyc { padding: 20px 16px; text-align: center; }
+  .emptyc .e1 { font-size: 14px; color: var(--text-2); } .emptyc .e2 { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .addnote2 { display: flex; align-items: center; gap: 10px; color: var(--accent); font-size: 13.5px; font-weight: 600; padding: 11px 16px; border-top: 1px solid var(--hairline); cursor: pointer; }
+  .morelist { padding: 2px 0; }
+  .sh-foot { padding: 14px 22px 18px; font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+  .sh-form { padding: 0 22px 14px; }
+  .premchecks { margin-top: 10px; display: grid; gap: 6px; }
+  .premchecks label { display: flex; align-items: center; gap: 9px; font-size: 13.5px; color: var(--text-2); }
+  .premchecks input { width: auto; }
+
+  /* mobile card v2 */
+  .mcard2 { background: var(--panel-2); border: 1px solid var(--hairline); border-radius: 12px; overflow: hidden; cursor: pointer; }
+  .mcard2 .banner { padding: 8px 16px; font-size: 12.5px; font-weight: 700; letter-spacing: .05em; }
+  .banner.none { background: var(--panel); color: var(--muted); }
+  .banner.sub { background: rgba(229,164,76,.2); color: var(--gold); }
+  .banner.sel { background: rgba(95,194,135,.18); color: var(--green); }
+  .banner.no { background: rgba(217,79,67,.16); color: var(--red); }
+  .mcard2 .body { padding: 13px 16px 14px; }
+  .mcard2 .mname { font-size: 18.5px; font-weight: 600; line-height: 1.2; }
+  .mcard2 .hero { margin-top: 8px; }
+  .mcard2 .hero .d { font-size: 25px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .mcard2 .hero .s { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .mcard2 .lrow { display: flex; gap: 8px; margin-top: 12px; }
+  .mcard2 .lrow .linkbtn { flex: 1; }
+  .mcard2 .view { border-top: 1px solid var(--hairline); padding: 10px 16px; font-size: 13px; color: var(--text-2); display: flex; justify-content: space-between; }
+  @media (min-width: 721px) { .cardlist { display: none; } }
+  @media (max-width: 720px) { .cardlist { display: grid; gap: 10px; } }
+
+  /* gantt campaign markers */
+  .mk { position: absolute; top: 50%; z-index: 2; }
+  .mk.dot { width: 11px; height: 11px; border-radius: 50%; background: var(--gold); border: 2px solid var(--ink); transform: translate(-50%, -50%); }
+  .mk.dia { width: 11px; height: 11px; background: var(--green); border: 2px solid var(--ink); transform: translate(-50%, -50%) rotate(45deg); }
+  .mk.x { color: var(--red); font-weight: 700; font-size: 14px; transform: translate(-50%, -54%); }
+  .g-bar.decided { opacity: .35; filter: saturate(.5); }
+
   details.fold > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; }
   details.fold > summary::-webkit-details-marker { display: none; }
   details.fold > summary::before { content: "▸"; color: var(--accent); font-size: 20px; transition: transform .15s ease-out; }
@@ -248,10 +370,16 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Killer of Men · 13 min · AFI thesis · picture-locked Jan 2026</div>
-    <h1>Festival Campaign Board</h1>
+    <div class="headtop">
+      <div>
+        <div class="eyebrow">Killer of Men · 13 min · AFI thesis · picture-locked Jan 2026</div>
+        <h1>Festival Campaign Board</h1>
+      </div>
+      <button id="editpill" type="button">✎ Edit campaign</button>
+    </div>
     <div id="banner"></div>
     <div class="kpis" id="kpis"></div>
+    <div class="meter" id="meter"></div>
   </header>
 
   <section id="keydates">
@@ -277,14 +405,7 @@
       <button class="btn small editonly" id="quickbtn" type="button">✎ Update</button>
       <button class="btn small editonly" id="leadbtn" type="button">+ Quick add</button>
     </div>
-    <div class="tablewrap dream">
-      <table id="dreamtable">
-        <thead>
-          <tr><th>Festival</th><th>Status</th><th>Where</th><th>Festival dates</th><th>Submission window</th><th>Final deadline</th><th>Fees</th><th>Path</th><th>Why it matters for KOM</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
+    <div class="rowlist" id="rowlist"></div>
     <div class="cardlist" id="cardlist"></div>
   </section>
 
@@ -2751,14 +2872,65 @@ function lifecycle(f) {
 }
 function chipFor(f) {
   const lc = lifecycle(f);
-  if (lc.wins.length) return `<span class="stchip won">Winner — ${esc(lc.wins.map(w => w.award).join(", "))}</span>`;
+  if (lc.wins.length) return `<span class="stchip won"><span class="star">★</span> Winner — ${esc(lc.wins.map(w => w.award).join(", "))}</span>`;
   switch (lc.state) {
     case "selected": return `<span class="stchip selected">Official Selection${lc.screened ? " · Screened" : ""}${lc.noms.length ? " · Nominee" : ""}</span>`;
-    case "submitted": return `<span class="stchip submitted">Submitted${lc.submittedEv && lc.submittedEv.date ? " " + esc(fmtD(parseD(lc.submittedEv.date))) : ""}</span>`;
+    case "submitted": return `<span class="stchip submitted">Submitted${lc.submittedEv && lc.submittedEv.date ? " · " + esc(fmtD(parseD(lc.submittedEv.date))) : ""}</span>`;
     case "not_selected": return `<span class="stchip not_selected">Not selected</span>`;
     case "withdrawn": return `<span class="stchip withdrawn">Withdrawn</span>`;
-    default: return `<span class="stchip">—</span>`;
+    default: return `<span class="stchip none">Not submitted</span>`;
   }
+}
+/* Everything the state-adaptive UI needs about one festival, in one place. */
+function statusMeta(f) {
+  const lc = lifecycle(f);
+  const close = parseD(f.close);
+  const days = close ? daysTo(close) : null;
+  const windowOpen = close && days >= 0;
+  const fd = f.festDate ? parseD(f.festDate) : null;
+  const m = { lc, rail: "none", wash: "", heroCls: "", hero: "", under: "", actions: [], decided: false };
+  if (f.disposition === "bench") {
+    m.rail = "mut"; m.hero = "Not yet vetted"; m.heroCls = "mut";
+    m.under = (f.fit != null ? `assessed fit ${f.fit}/10` : "from the research sweep") + (close ? ` · likely deadline ${(f.estimated ? "~" : "") + fmtDY(close)}` : "");
+    m.actions = [{ kind: "promote", label: "Promote to target" }];
+    return m;
+  }
+  if (lc.wins.length) {
+    m.rail = "sel"; m.wash = "washgreen"; m.heroCls = "green"; m.decided = true;
+    m.hero = `★ ${esc(lc.wins[0].award)}`;
+    m.under = /oscar/i.test(f.path || "") ? "a qualifying win — the Oscar door is open" : "recorded win";
+    m.actions = [{ kind: "won", label: "★ Add another award" }, { kind: "screened", label: "Mark screened" }];
+  } else if (lc.state === "selected") {
+    m.rail = "sel"; m.wash = "washgreen"; m.heroCls = "green";
+    m.hero = fd ? `Screens ${fmtD(fd)}` : "Official Selection";
+    m.under = lc.screened ? "screened" : (fd ? "get deliverables and travel moving" : "");
+    m.actions = [{ kind: "won", label: "★ Record an award" }, { kind: "screened", label: "Mark screened" }];
+  } else if (lc.state === "submitted") {
+    m.rail = "sub"; m.wash = "washgold"; m.heroCls = "gold";
+    m.hero = "Awaiting decision";
+    const se = lc.submittedEv;
+    m.under = se ? `submitted ${se.date ? fmtDY(parseD(se.date)) : ""}${se.fee != null ? ` · ${se.currency === "EUR" ? "€" : se.currency === "USD" ? "$" : (se.currency || "") + " "}${se.fee}` : ""}` : "";
+    m.actions = [{ kind: "selected", label: "Official Selection", cls: "yes" }, { kind: "not_selected", label: "Not selected", cls: "no" }];
+  } else if (lc.state === "not_selected") {
+    m.rail = "no"; m.heroCls = "mut"; m.decided = true;
+    const de = lc.decisionEv;
+    m.hero = "Not selected";
+    m.under = de && de.date ? `decided ${fmtDY(parseD(de.date))} — the history stays` : "";
+    m.actions = [];
+  } else if (lc.state === "withdrawn") {
+    m.rail = "mut"; m.heroCls = "mut"; m.decided = true;
+    m.hero = "Withdrawn"; m.actions = [];
+  } else if (windowOpen) {
+    m.hero = `${days}<small> days to submit</small>`;
+    m.under = `window closes ${(f.estimated ? "~" : "") + fmtDY(close)}${f.feesText ? " · " + f.feesText : ""}`;
+    m.actions = [{ kind: "submitted", label: "Mark submitted", primary: true }];
+  } else {
+    m.heroCls = "mut"; m.decided = true;
+    m.hero = close ? `Closed ${fmtD(close)}` : "No deadline on record";
+    m.under = close ? "this edition's window has passed" : "";
+    m.actions = [];
+  }
+  return m;
 }
 
 /* ---------- content chrome (strategy prose — not editable data) ---------- */
@@ -3010,8 +3182,26 @@ function renderCounters() {
     { v: rejected, l: "rejected", d: "", c: "red" },
     { v: pending, l: "pending decisions", d: "", c: pending ? "gold" : "red" },
   ];
-  $("#kpis").innerHTML = cells.map(c =>
-    `<div class="kpi ${c.c}"><div class="v">${esc(c.v)}</div><div class="l">${esc(c.l)}</div>${c.d ? `<div class="d">${esc(c.d)}</div>` : ""}</div>`).join("");
+  /* tiles are controls: tap → filter or jump */
+  const tileActs = [null, { chip: "all", jump: "dreamlist" }, { fold: "benchsec" }, { fold: "skiplist" },
+                    { chip: "submitted", jump: "dreamlist" }, { chip: "selected", jump: "dreamlist" },
+                    { chip: "notsel", jump: "dreamlist" }, { chip: "submitted", jump: "dreamlist" }];
+  $("#kpis").innerHTML = cells.map((c, i) =>
+    `<div class="kpi ${c.c}${tileActs[i] ? " tap" : ""}"${tileActs[i] ? ` data-tile="${i}" role="button" tabindex="0"` : ""}><div class="v">${esc(c.v)}</div><div class="l">${esc(c.l)}</div>${c.d ? `<div class="d">${esc(c.d)}</div>` : ""}</div>`).join("");
+  document.querySelectorAll("[data-tile]").forEach(el => el.addEventListener("click", () => {
+    const a = tileActs[+el.dataset.tile];
+    if (!a) return;
+    if (a.fold) { const s = document.getElementById(a.fold); const d = s && s.querySelector("details.fold"); if (d) d.open = true; if (s) s.scrollIntoView({ behavior: "smooth" }); return; }
+    if (a.chip) { FILTER.chip = a.chip; refresh(); const s = document.getElementById(a.jump); if (s) s.scrollIntoView({ behavior: "smooth" }); }
+  }));
+  /* the campaign's one trend line */
+  const openTargets = targets.filter(f => { const c = parseD(f.close); return c && c >= TODAY; });
+  const openSubmitted = openTargets.filter(f => (f.events || []).some(e => e.type === "submitted")).length;
+  const doneEver = applied;
+  const denom = openTargets.length + doneEver - openSubmitted;
+  const pctv = denom ? Math.round((doneEver / denom) * 100) : 0;
+  $("#meter").innerHTML = `<div class="track"><div class="fill" style="width:${pctv}%"></div></div>
+    <div class="lab"><span>${doneEver} of ${denom} reachable targets submitted</span><span>${pctv}%</span></div>`;
 }
 function renderKeyDates() {
   const out = DATA.keyDates.map(k => {
@@ -3096,43 +3286,57 @@ function deadlineCell(f) {
   const closing = days >= 0 && days <= 30;
   return `${f.estimated ? "~" : ""}${esc(fmtDY(close))}` + (days >= 0 ? ` <span class="deadline-chip ${closing ? "closing" : "open"}">${closing ? "⚠ " : ""}${days}d</span>` : ` <span class="deadline-chip">closed</span>`);
 }
-function linksCell(f) {
+function linkButtons(f) {
+  /* render-time protocol filter — belt AND braces: even hostile data.json content never becomes a javascript: href */
   const L = f.links || {};
-  const parts = [];
-  if (L.site) parts.push(`<a class="ext" href="${esc(L.site)}" rel="noopener">site</a>`);
-  if (L.filmfreeway) parts.push(`<a class="ext" href="${esc(L.filmfreeway)}" rel="noopener">FilmFreeway</a>`);
-  return parts.length ? "<br>" + parts.join(" · ") : "";
+  const siteUrl = safeUrl(L.site), ffUrl = safeUrl(L.filmfreeway);
+  const site = siteUrl ? `<a class="linkbtn" href="${esc(siteUrl)}" rel="noopener">Official site ↗</a>` : `<span class="linkbtn off">no site link</span>`;
+  const ff = ffUrl ? `<a class="linkbtn" href="${esc(ffUrl)}" rel="noopener">FilmFreeway ↗</a>` : `<span class="linkbtn off">no FilmFreeway</span>`;
+  return site + ff;
 }
-function renderTable() {
+function renderRows() {
   const ts = filteredTargets();
-  $("#dreamtable tbody").innerHTML = ts.map(f => {
+  const edit = document.body.classList.contains("edit");
+  $("#rowlist").innerHTML = ts.map(f => {
+    const m = statusMeta(f);
     const close = parseD(f.close);
-    const closed = close && close < TODAY;
-    return `<tr${closed ? ' class="closed"' : ""} style="background:${tierTint[f.tier] || ""}">
-      <td style="min-width:190px"><span class="tiermark" style="background:${tierColor[f.tier] || "var(--muted)"}"></span><span class="festname">${esc(f.name)}</span><br><span class="festloc">${esc(f.cat || "")}</span>${linksCell(f)}</td>
-      <td>${chipFor(f)}${document.body.classList.contains("edit") ? ` <button class="btn small" data-qu="${esc(f.id)}" type="button">✎</button>` : ""}</td>
-      <td class="festloc" style="min-width:110px">${esc(f.loc || "")}</td>
-      <td class="num">${esc(f.edition || "")}</td>
-      <td class="num">${f.estimated ? "~" : ""}${esc(fmtD(parseD(f.open)))} → ${esc(fmtD(close))}</td>
-      <td class="num">${deadlineCell(f)}</td>
-      <td class="num">${esc(f.feesText || "")}</td>
-      <td>${f.path && f.path !== "—" ? `<span class="badge${/oscar/i.test(f.path) ? " oscar" : ""}">${esc(f.path)}</span>` : "—"}</td>
-      <td style="min-width:300px;color:var(--text-2)">${esc(f.why || "")}</td>
-    </tr>`;
-  }).join("");
-  $("#cardlist").innerHTML = ts.map(f => {
-    const close = parseD(f.close);
-    return `<div class="fcard" style="border-left:3px solid ${tierColor[f.tier] || "var(--muted)"}">
-      <div class="top"><span class="festname">${esc(f.name)}</span><span class="num" style="font-size:13px;color:var(--text-2)">${deadlineCell(f)}</span></div>
-      <div class="meta">${chipFor(f)}<span>${esc(f.loc || "")}</span><span>${esc(f.feesText || "")}</span>${document.body.classList.contains("edit") ? `<button class="btn small" data-qu="${esc(f.id)}" type="button">✎ Update</button>` : ""}</div>
-      <button class="more" type="button">details</button>
-      <div class="why">${esc(f.why || "")}${f.edition ? `<br><span style="color:var(--muted)">Runs ${esc(f.edition)}</span>` : ""}</div>
+    const action = edit && m.actions.length && m.actions[0].primary
+      ? `<div class="rowaction"><button class="btn" data-open="${esc(f.id)}" type="button">${esc(m.actions[0].label)}</button></div>` : "";
+    return `<div class="frow${m.decided ? " receded" : ""}" data-open="${esc(f.id)}" style="background:${tierTint[f.tier] || ""}">
+      <div class="rail ${m.rail}"></div>
+      <div>${chipFor(f)}${action}</div>
+      <div><span class="fname">${esc(f.name)}</span><div class="fmeta"><span class="tiermark" style="background:${tierColor[f.tier] || "var(--muted)"}"></span>${esc((f.tier || "").replace(/^./, c => c.toUpperCase()))} · ${esc(f.loc || "")}${f.cat ? " · " + esc(f.cat) : ""}</div></div>
+      <div class="cd"><div class="big">${m.hero}</div><div class="sm">${esc(m.under)}</div></div>
+      <div class="lnx">${linkButtons(f)}</div>
+      <div class="chev">›</div>
     </div>`;
   }).join("");
-  document.querySelectorAll(".fcard .more").forEach(b => b.addEventListener("click", () => b.parentElement.classList.toggle("openwhy")));
-  document.querySelectorAll("[data-qu]").forEach(b => b.addEventListener("click", () => quickSheet(b.dataset.qu)));
+  $("#cardlist").innerHTML = ts.map(f => {
+    const m = statusMeta(f);
+    const bannerCls = { none: "none", mut: "none", sub: "sub", sel: "sel", no: "no" }[m.rail] || "none";
+    const lc = m.lc;
+    const bannerText = lc.wins.length ? `★ WINNER — ${lc.wins[0].award.toUpperCase()}`
+      : lc.state === "selected" ? "OFFICIAL SELECTION"
+      : lc.state === "submitted" ? `SUBMITTED${lc.submittedEv && lc.submittedEv.date ? " · " + fmtD(parseD(lc.submittedEv.date)).toUpperCase() : ""}`
+      : lc.state === "not_selected" ? "NOT SELECTED"
+      : lc.state === "withdrawn" ? "WITHDRAWN" : "NOT SUBMITTED";
+    return `<div class="mcard2${m.decided ? " receded" : ""}" data-open="${esc(f.id)}">
+      <div class="banner ${bannerCls}">${esc(bannerText)}</div>
+      <div class="body">
+        <div class="mname">${esc(f.name)}</div>
+        <div class="hero"><div class="d">${m.hero}</div><div class="s">${esc(m.under)}</div></div>
+        <div class="lrow">${linkButtons(f)}</div>
+      </div>
+      <div class="view"><span>View details</span><span>›</span></div>
+    </div>`;
+  }).join("");
+  document.querySelectorAll("[data-open]").forEach(el => el.addEventListener("click", (e) => {
+    if (e.target.closest("a")) return;   // link buttons navigate, never open the sheet
+    e.stopPropagation();
+    festivalSheet(el.dataset.open);
+  }));
   const targets = DATA.festivals.filter(f => f.disposition === "target");
-  $("#dreamnote").textContent = `${targets.length} targets in three tiers — the first ring of a campaign headed for ~150. Dream = the premiere and prestige crown. Strong = the qualifying and cultural core. Worthy = depth, regional resonance, low-cost reach.`;
+  $("#dreamnote").textContent = `${targets.length} targets in three tiers — tap any festival for its full sheet. Dream = the premiere and prestige crown. Strong = the qualifying and cultural core. Worthy = depth, regional resonance, low-cost reach.`;
 }
 function renderBench() {
   const q = FILTER.q;
@@ -3140,15 +3344,16 @@ function renderBench() {
     .sort((a, b) => (b.fit || 0) - (a.fit || 0));
   $("#benchnote").textContent = `${DATA.festivals.filter(f => f.disposition === "bench").length} festivals researched but not yet vetted for the board — the pool the next ring gets drawn from, ranked by assessed fit. Search works here too.`;
   $("#benchlist").innerHTML = bench.map(f => `
-    <div class="benchrow">
+    <div class="benchrow" data-bopen="${esc(f.id)}" style="cursor:pointer">
       <span class="bn">${esc(f.name)}</span>
       <span class="bl">${esc(f.loc || "")}${f.fit != null ? ` · fit ${esc(f.fit)}` : ""}</span>
       <span class="bwhy">${esc(f.benchNote || "")}</span>
       <span class="bd">${f.close ? (f.estimated ? "~" : "") + esc(fmtDY(parseD(f.close))) : ""}</span>
       <span class="editonly"><button class="btn small" data-promote="${esc(f.id)}" type="button">Promote</button><button class="btn small danger" data-out="${esc(f.id)}" type="button">Rule out</button></span>
     </div>`).join("") || `<div class="benchrow"><span class="bwhy">No bench candidates match.</span></div>`;
-  document.querySelectorAll("[data-promote]").forEach(b => b.addEventListener("click", () => promoteSheet(b.dataset.promote)));
-  document.querySelectorAll("[data-out]").forEach(b => b.addEventListener("click", () => ruleOutSheet(b.dataset.out)));
+  document.querySelectorAll("[data-bopen]").forEach(el => el.addEventListener("click", (e) => { if (e.target.closest("button")) return; festivalSheet(el.dataset.bopen); }));
+  document.querySelectorAll("[data-promote]").forEach(b => b.addEventListener("click", (e) => { e.stopPropagation(); promoteSheet(b.dataset.promote); }));
+  document.querySelectorAll("[data-out]").forEach(b => b.addEventListener("click", (e) => { e.stopPropagation(); ruleOutSheet(b.dataset.out); }));
 }
 function renderGantt() {
   const el = $("#gantt");
@@ -3166,12 +3371,24 @@ function renderGantt() {
     const left = pct(o), width = Math.max(0.5, pct(c) - left);
     const fd = f.festDate ? parseD(f.festDate) : null;
     const fest = fd && fd < RANGE.end ? `<div class="g-fest-marker" style="left:${pct(fd)}%"></div>` : "";
+    /* campaign event markers on the bar */
+    const lc = lifecycle(f);
+    let marks = "";
+    (f.events || []).forEach(e => {
+      if (!e.date) return;
+      const d = parseD(e.date);
+      if (d < RANGE.start || d > RANGE.end) return;
+      if (e.type === "submitted") marks += `<div class="mk dot" style="left:${pct(d)}%" title="Submitted ${esc(e.date)}"></div>`;
+      else if (e.type === "selected") marks += `<div class="mk dia" style="left:${pct(d)}%" title="Official Selection ${esc(e.date)}"></div>`;
+      else if (e.type === "not_selected") marks += `<div class="mk x" style="left:${pct(d)}%" title="Not selected ${esc(e.date)}">✕</div>`;
+    });
+    const decided = lc.state === "not_selected" || lc.state === "withdrawn";
     return `<div class="g-row">
       <div class="g-label">${esc(f.name)}<span class="cat">${esc(f.cat || "")}</span></div>
       <div class="g-track">
         <div class="g-grid">${gridlines}${showToday ? `<div class="g-today" style="left:${pct(TODAY)}%"></div>` : ""}</div>
-        <div class="g-bar${f.estimated ? " estimated" : ""}${c < TODAY ? " closed" : ""}" data-gid="${esc(f.id)}" style="left:${left}%;width:${width}%;background:${tierColor[f.tier] || "var(--muted)"}"></div>
-        ${fest}
+        <div class="g-bar${f.estimated ? " estimated" : ""}${c < TODAY ? " closed" : ""}${decided ? " decided" : ""}" data-gid="${esc(f.id)}" style="left:${left}%;width:${width}%;background:${tierColor[f.tier] || "var(--muted)"}"></div>
+        ${fest}${marks}
         <div class="g-deadline-label" style="left:${pct(c) + 0.3}%">${f.estimated ? "~" : ""}${esc(fmtD(c))}</div>
       </div>
     </div>`;
@@ -3226,15 +3443,16 @@ function refresh() {
   const applied = applyOps(BASE, OPS);
   DATA = applied.data;
   renderCounters(); renderKeyDates(); renderAwards(); renderPremieres(); renderActivity();
-  renderTable(); renderBench(); renderGantt(); renderHeat(); renderSkips();
+  renderRows(); renderBench(); renderGantt(); renderHeat(); renderSkips();
   $("#chips").querySelectorAll(".fchip").forEach(b => b.classList.toggle("on", b.dataset.chip === FILTER.chip));
+  const ep = $("#editpill"); if (ep) ep.textContent = document.body.classList.contains("edit") ? "● Editing" : "✎ Edit campaign";
   $("#sorttoggle").textContent = "Sort: " + FILTER.sort;
   $("#draftcount").textContent = `${OPS.length} staged change${OPS.length === 1 ? "" : "s"}`;
   $("#publishbtn").disabled = OPS.length === 0;
 }
 
 /* ---------- modal helpers ---------- */
-function openSheet(html) { $("#sheetbody").innerHTML = html; $("#modal").classList.add("show"); }
+function openSheet(html, cls) { const b = $("#sheetbody"); b.className = cls || "sheet"; b.innerHTML = html; $("#modal").classList.add("show"); }
 function closeSheet() { $("#modal").classList.remove("show"); }
 function sheetDirty() {
   return [...document.querySelectorAll("#sheetbody input[type=text], #sheetbody input[type=url], #sheetbody input[type=number], #sheetbody input[type=search], #sheetbody textarea")]
@@ -3246,9 +3464,204 @@ $("#modal").addEventListener("click", (e) => {
   closeSheet();
 });
 
-/* ---------- quick update sheet ---------- */
+/* ============ THE FESTIVAL SHEET (approved markup v2) ============ */
+function festivalSheet(fid) {
+  const f = DATA.festivals.find(v => v.id === fid);
+  if (!f) return;
+  const m = statusMeta(f);
+  const lc = m.lc;
+  const isBench = f.disposition === "bench";
+  const close = parseD(f.close);
+  /* campaign timeline: events + notes, newest first */
+  const evLabel = { submitted: "Submitted", withdrawn: "Withdrawn", selected: "Official Selection", not_selected: "Not selected", screened: "Screened", nominated: "Nominee", won: "Winner" };
+  const evDot = { submitted: "g", selected: "gr", screened: "gr", won: "gr", nominated: "gr", not_selected: "r", withdrawn: "mut" };
+  const stream = [
+    ...(f.events || []).map(e => ({ date: e.date || "", dot: evDot[e.type] || "mut",
+      t: (e.type === "won" ? "★ Winner — " + (e.award || "") : e.type === "nominated" ? "Nominee — " + (e.award || "") : evLabel[e.type] || e.type),
+      s: [e.fee != null ? `${e.currency === "EUR" ? "€" : e.currency === "USD" ? "$" : (e.currency || "") + " "}${e.fee}` : "", e.confirmation ? "confirmation " + e.confirmation : "", e.note || ""].filter(Boolean).join(" · ") })),
+    ...(f.notes || []).map(n => ({ date: n.date || "", dot: "mut", t: "Note", s: n.text || "" })),
+  ].sort((a, b) => b.date.localeCompare(a.date));
+  const campaign = stream.length
+    ? `<div class="hwrap">${stream.map(x => `<div class="hitem"><span class="hdot ${x.dot}"></span><div class="hbody"><div class="t">${esc(x.t)}</div>${x.s ? `<div class="s">${esc(x.s)}</div>` : ""}</div><span class="hdate">${x.date ? esc(fmtD(parseD(x.date))) : ""}</span></div>`).join("")}</div>`
+    : `<div class="emptyc"><div class="e1">Nothing recorded yet.</div><div class="e2">Submissions, decisions and wins will build a timeline here.</div></div>`;
+  /* actions */
+  let actionsHtml = "";
+  if (isBench) {
+    actionsHtml = `<button class="sh-primary" data-shact="promote" type="button">Promote to target</button>`;
+  } else if (m.actions.length === 1 && m.actions[0].primary) {
+    actionsHtml = `<button class="sh-primary" data-shact="${m.actions[0].kind}" type="button">${esc(m.actions[0].label)}</button>`;
+  } else if (m.actions.length === 2) {
+    actionsHtml = `<div class="seg"><button class="${m.actions[0].cls || ""}" data-shact="${m.actions[0].kind}" type="button">${esc(m.actions[0].label)}</button><button class="${m.actions[1].cls || ""}" data-shact="${m.actions[1].kind}" type="button">${esc(m.actions[1].label)}</button></div>`;
+  } else if (m.actions.length === 1) {
+    actionsHtml = `<button class="sh-primary" data-shact="${m.actions[0].kind}" type="button">${esc(m.actions[0].label)}</button>`;
+  }
+  const src = safeUrl(f.source || "");
+  openSheet(`
+    <button class="sh-close" id="sx" type="button" aria-label="Close">✕</button>
+    <div class="sh-head ${m.wash}">
+      <div class="sh-tierline"><span class="tiermark" style="background:${isBench ? "var(--purple)" : (tierColor[f.tier] || "var(--muted)")};margin:0"></span>${esc(isBench ? "Researched · not yet vetted" : `${f.tier || ""}${f.cat ? " · " + f.cat : ""}`)}</div>
+      <div class="sh-name">${esc(f.name)}</div>
+      <div class="sh-sub">${esc(f.loc || "")}${f.edition ? ` · runs ${esc(f.edition)}` : ""}</div>
+      ${isBench ? `<span class="stchip" style="border-color:rgba(144,133,233,.55);color:var(--purple)">Needs research</span>` : chipFor(f)}
+    </div>
+    <div class="sh-hero ${m.heroCls}"><div class="big">${m.hero}</div>${m.under ? `<div class="under">${esc(m.under)}</div>` : ""}</div>
+    <div class="sh-actions" id="shacts">${actionsHtml}</div>
+    <div class="sh-form" id="shform"></div>
+    <div class="sh-links">${linkButtons(f)}</div>
+    <div class="glabel">Campaign</div>
+    <div class="group">
+      ${campaign}
+      <div class="addnote2" data-shact="note">＋ Add a note</div>
+      <div class="addnote2" data-shact="more" style="color:var(--text-2)">More actions ›</div>
+    </div>
+    <div class="glabel">Research record</div>
+    <div class="group">
+      <div class="lockbar">🔒 Locked facts <span class="verified">Verified ${esc(f.lastChecked ? fmtDY(parseD(f.lastChecked)) : "—")}</span></div>
+      ${f.edition ? `<div class="grow2"><span class="k">Festival dates</span><span class="v">${esc(f.edition)}</span></div>` : ""}
+      ${f.open || f.close ? `<div class="grow2"><span class="k">Window</span><span class="v">${f.estimated ? '<span class="est">~</span>' : ""}${esc(fmtD(parseD(f.open)))} → ${esc(fmtD(close))}</span></div>` : ""}
+      ${f.feesText ? `<div class="grow2"><span class="k">Fees</span><span class="v">${esc(f.feesText)}</span></div>` : ""}
+      ${f.path ? `<div class="grow2"><span class="k">Path</span><span class="v">${esc(f.path)}</span></div>` : ""}
+      ${f.why || f.benchNote ? `<div class="whyblock">${esc(f.why || f.benchNote)}</div>` : ""}
+      <div class="fixrow" data-shact="correct">Something changed at the festival? Suggest a correction</div>
+    </div>
+    <div class="sh-foot"><span>${src ? `<a href="${esc(src)}" rel="noopener">Source ↗</a>` : "Source: —"}</span><span>Checked ${esc(f.lastChecked || "—")}</span></div>
+  `, "fsheet");
+  $("#sx").addEventListener("click", closeSheet);
+  document.querySelectorAll("[data-shact]").forEach(b => b.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const act = b.dataset.shact;
+    if (!document.body.classList.contains("edit")) enterEdit();   // acting implies editing
+    if (act === "note") return noteSheet(fid);
+    if (act === "more") return moreSheet(fid);
+    if (act === "correct") return correctionSheet(fid);
+    if (act === "promote") return promoteSheet(fid);
+    showEventForm(fid, act);
+  }));
+}
+/* inline event form inside the sheet — no modal cascade; selection/screening carry premiere checkboxes */
+function showEventForm(fid, type) {
+  const f = DATA.festivals.find(v => v.id === fid);
+  const needAward = type === "won" || type === "nominated";
+  const isSub = type === "submitted";
+  const premAware = type === "selected" || type === "screened";
+  const avail = premAware ? DATA.premieres.filter(p => p.state === "available") : [];
+  const feeGuess = ((f.feesText || "").match(/[\d.]+/) || [""])[0];
+  $("#shform").innerHTML = `
+    <label>Date</label><input type="date" id="evdate" value="${todayISO()}">
+    ${needAward ? `<label>Award name (required)</label><input type="text" id="evaward" placeholder="e.g. Best Drama">` : ""}
+    ${isSub ? `<div class="row2"><div><label>Fee paid ${f.feesText ? `<span style="color:var(--muted)">(listed: ${esc(f.feesText)})</span>` : ""}</label><input type="number" id="evfee" step="0.01" min="0" placeholder="${esc(feeGuess || "0 = waiver")}"></div><div><label>Currency</label><select id="evcur"><option>USD</option><option>EUR</option><option>GBP</option><option>CAD</option><option>AUD</option></select></div></div>
+      <label>Confirmation # / link (optional)</label><input type="text" id="evconf">` : ""}
+    ${premAware && avail.length ? `<label>${type === "screened" ? "This screening SPENDS premieres — tick any that apply" : "Does this reserve a premiere? Tick any that apply"}</label>
+      <div class="premchecks">${avail.map(p => `<label><input type="checkbox" data-prem="${esc(p.id)}"> ${esc(p.label)}${p.note ? ` <span style="color:var(--muted)">· ${esc(p.note)}</span>` : ""}</label>`).join("")}</div>` : ""}
+    <label>Note (optional)</label><input type="text" id="evnote">
+    <div class="err" id="everr"></div>
+    <div class="actions"><button class="btn primary" id="stagebtn" type="button">Stage change</button><button class="btn ghost" id="cancelform" type="button">Cancel</button></div>`;
+  $("#cancelform").addEventListener("click", () => { $("#shform").innerHTML = ""; });
+  $("#stagebtn").addEventListener("click", () => {
+    const date = $("#evdate").value;
+    if (!realDate(date)) { $("#everr").textContent = "Pick a real date."; $("#everr").classList.add("show"); return; }
+    const event = { eid: uuid(), type, date };
+    if (needAward) {
+      const aw = ($("#evaward").value || "").trim();
+      if (!aw) { $("#everr").textContent = "Award name is required for this one."; $("#everr").classList.add("show"); return; }
+      event.award = aw;
+    }
+    if (isSub) {
+      const fee = $("#evfee").value;
+      if (fee !== "") {
+        const n = Number(fee);
+        if (!Number.isFinite(n) || n < 0) { $("#everr").textContent = "Fee must be zero or more (0 = waiver)."; $("#everr").classList.add("show"); return; }
+        event.fee = Math.round(n * 100) / 100; event.currency = $("#evcur").value;
+      }
+      const conf = ($("#evconf").value || "").trim(); if (conf) event.confirmation = conf;
+    }
+    const note = ($("#evnote").value || "").trim(); if (note) event.note = note;
+    const lcNow = lifecycle(DATA.festivals.find(v => v.id === fid));
+    if (["screened", "nominated", "won"].includes(type) && !effectivelySelected(lcNow)) {
+      stage({ kind: "addEvent", fid, event: { eid: uuid(), type: "selected", date, note: "implied by " + type } });
+    }
+    stage({ kind: "addEvent", fid, event });
+    document.querySelectorAll('#shform [data-prem]').forEach(cb => {
+      if (!cb.checked) return;
+      const p = DATA.premieres.find(v => v.id === cb.dataset.prem);
+      if (p) stage({ kind: "setPremiere", pid: p.id, prev: { state: p.state, byFestivalId: p.byFestivalId ?? null, note: p.note ?? "" },
+                     value: { state: type === "screened" ? "spent" : "reserved", byFestivalId: fid, note: p.note ?? "", date } });
+    });
+    festivalSheet(fid);   // stay in the sheet — the new state renders immediately
+  });
+}
+function moreSheet(fid) {
+  const f = DATA.festivals.find(v => v.id === fid);
+  openSheet(`<button class="close" id="sx" type="button">×</button><h3>${esc(f.name)} — more</h3>
+    <div class="morelist">
+      <button class="pick" data-m="withdrawn" type="button">Withdraw the submission</button>
+      <button class="pick" data-m="nominated" type="button">Record a nomination</button>
+      <button class="pick" data-m="tier" type="button">Change tier <span class="sub">now: ${esc(f.tier || "—")}</span></button>
+      <button class="pick" data-m="ruleout" type="button" style="color:var(--red)">Rule out of the campaign</button>
+    </div>`);
+  $("#sx").addEventListener("click", () => festivalSheet(fid));
+  document.querySelectorAll("[data-m]").forEach(b => b.addEventListener("click", () => {
+    const k = b.dataset.m;
+    if (k === "tier") return tierSheet(fid);
+    if (k === "ruleout") return ruleOutSheet(fid);
+    festivalSheet(fid);
+    showEventForm(fid, k);
+  }));
+}
+function tierSheet(fid) {
+  const f = DATA.festivals.find(v => v.id === fid);
+  openSheet(`<button class="close" id="sx" type="button">×</button><h3>Tier — ${esc(f.name)}</h3>
+    <label>Tier</label><select id="tsel"><option${f.tier === "dream" ? " selected" : ""}>dream</option><option${f.tier === "strong" ? " selected" : ""}>strong</option><option${f.tier === "worthy" ? " selected" : ""}>worthy</option></select>
+    <div class="actions"><button class="btn primary" id="tgo" type="button">Stage</button></div>`);
+  $("#sx").addEventListener("click", () => festivalSheet(fid));
+  $("#tgo").addEventListener("click", () => {
+    const v = $("#tsel").value;
+    if (v !== f.tier) stage({ kind: "setField", fid, field: "tier", prev: f.tier ?? "", value: v });
+    festivalSheet(fid);
+  });
+}
+/* the ONLY door into research facts — a correction that demands its source */
+function correctionSheet(fid) {
+  const f = DATA.festivals.find(v => v.id === fid);
+  const fields = [
+    ["close", "Final deadline (YYYY-MM-DD)", f.close || "", "date"],
+    ["open", "Window opens (YYYY-MM-DD)", f.open || "", "date"],
+    ["feesText", "Fees (display text)", f.feesText || "", "text"],
+    ["edition", "Festival dates (display)", f.edition || "", "text"],
+    ["festDate", "Festival start (YYYY-MM-DD)", f.festDate || "", "date"],
+  ];
+  openSheet(`<button class="close" id="sx" type="button">×</button><h3>Correct the research — ${esc(f.name)}</h3>
+    <p style="color:var(--text-2);font-size:13.5px;margin-top:6px">These are verified facts. Change them only because the festival itself announced a change — and paste where you saw it.</p>
+    ${fields.map(([k, l, v, t]) => `<label>${l}</label><input type="${t === "date" ? "text" : t}" id="cx-${k}" value="${esc(v)}">`).join("")}
+    <label>Where you saw it (required — https link)</label><input type="url" id="cx-src" placeholder="https://…">
+    <div class="err" id="cxerr"></div>
+    <div class="actions"><button class="btn primary" id="cxgo" type="button">Stage the correction</button></div>`);
+  $("#sx").addEventListener("click", () => festivalSheet(fid));
+  $("#cxgo").addEventListener("click", () => {
+    const srcv = safeUrl(($("#cx-src").value || "").trim());
+    const pending = [];
+    for (const [k, , v, t] of fields) {
+      const nv = $(`#cx-${k}`).value.trim();
+      if (nv === String(v)) continue;
+      if (t === "date" && nv !== "" && !realDate(nv)) { $("#cxerr").textContent = `${k}: use a real YYYY-MM-DD date.`; $("#cxerr").classList.add("show"); return; }
+      pending.push({ kind: "setField", fid, field: k, prev: f[k] ?? "", value: nv });
+    }
+    if (!pending.length) { $("#cxerr").textContent = "Nothing changed."; $("#cxerr").classList.add("show"); return; }
+    if (!srcv) { $("#cxerr").textContent = "A correction needs its source — paste the https link."; $("#cxerr").classList.add("show"); return; }
+    if (f.estimated && pending.some(p => p.field === "close" && realDate(p.value))) {
+      pending.push({ kind: "setField", fid, field: "estimated", prev: true, value: false });
+    }
+    pending.push({ kind: "setField", fid, field: "source", prev: f.source ?? "", value: srcv });
+    pending.push({ kind: "setField", fid, field: "lastChecked", prev: f.lastChecked ?? "", value: todayISO() });
+    pending.forEach(stage);
+    festivalSheet(fid);
+  });
+}
+
+/* ---------- search sheet (the Update button) ---------- */
 function quickSheet(fid) {
-  if (!fid) {
+  if (fid) return festivalSheet(fid);
+  {
     openSheet(`<button class="close" type="button" onclick="void 0" id="sx">×</button><h3>Update a festival</h3>
       <label>Search targets</label><input type="search" id="qs" autocomplete="off">
       <div id="qres"></div>`);
@@ -3265,114 +3678,7 @@ function quickSheet(fid) {
     renderList("");
     $("#qs").addEventListener("input", (e) => renderList(e.target.value));
     $("#qs").focus();
-    return;
   }
-  const f = DATA.festivals.find(v => v.id === fid);
-  const lc = lifecycle(f);
-  const acts = [
-    ["submitted", "Submitted"], ["selected", "Official Selection"], ["not_selected", "Not selected"],
-    ["withdrawn", "Withdrawn"], ["screened", "Screened"], ["nominated", "Nominee…"], ["won", "Winner…"],
-  ];
-  openSheet(`<button class="close" id="sx" type="button">×</button><h3>${esc(f.name)}</h3>
-    <p style="color:var(--text-2);font-size:14px;margin-top:6px">${chipFor(f)} · closes ${f.close ? esc(fmtDY(parseD(f.close))) : "TBA"}</p>
-    <div class="actgrid">${acts.map(([t, l]) => `<button class="btn" data-act="${t}" type="button">${l}</button>`).join("")}</div>
-    <div id="actform"></div>
-    <div class="actions"><button class="btn" id="editfields" type="button">Edit details…</button><button class="btn" id="addnote" type="button">Add note…</button></div>`);
-  $("#sx").addEventListener("click", closeSheet);
-  $("#editfields").addEventListener("click", () => fieldSheet(fid));
-  $("#addnote").addEventListener("click", () => noteSheet(fid));
-  document.querySelectorAll("[data-act]").forEach(b => b.addEventListener("click", () => {
-    const type = b.dataset.act;
-    const needAward = type === "won" || type === "nominated";
-    const isSub = type === "submitted";
-    $("#actform").innerHTML = `
-      <label>Date</label><input type="date" id="evdate" value="${todayISO()}">
-      ${needAward ? `<label>Award name (required)</label><input type="text" id="evaward" placeholder="e.g. Best Drama">` : ""}
-      ${isSub ? `<div class="row2"><div><label>Fee paid ${f.feesText ? `<span style="color:var(--muted)">(listed: ${esc(f.feesText)})</span>` : ""}</label><input type="number" id="evfee" step="0.01" min="0" placeholder="${esc((f.feesText || "").match(/[\\d.]+/) ? (f.feesText.match(/[\\d.]+/) || [""])[0] : "0 = waiver")}"></div><div><label>Currency</label><select id="evcur"><option>USD</option><option>EUR</option><option>GBP</option><option>CAD</option><option>AUD</option></select></div></div>
-        <label>Confirmation # / link (optional)</label><input type="text" id="evconf">` : ""}
-      <label>Note (optional)</label><input type="text" id="evnote">
-      <div class="err" id="everr"></div>
-      <div class="actions"><button class="btn primary" id="stagebtn" type="button">Stage change</button></div>`;
-    $("#stagebtn").addEventListener("click", () => {
-      const date = $("#evdate").value;
-      if (!realDate(date)) { $("#everr").textContent = "Pick a real date."; $("#everr").classList.add("show"); return; }
-      const event = { eid: uuid(), type, date };
-      if (needAward) {
-        const aw = ($("#evaward").value || "").trim();
-        if (!aw) { $("#everr").textContent = "Award name is required for this one."; $("#everr").classList.add("show"); return; }
-        event.award = aw;
-      }
-      if (isSub) {
-        const fee = $("#evfee").value;
-        if (fee !== "") {
-          const n = Number(fee);
-          if (!Number.isFinite(n) || n < 0) { $("#everr").textContent = "Fee must be zero or more (0 = waiver)."; $("#everr").classList.add("show"); return; }
-          event.fee = Math.round(n * 100) / 100; event.currency = $("#evcur").value;
-        }
-        const conf = ($("#evconf").value || "").trim(); if (conf) event.confirmation = conf;
-      }
-      const note = ($("#evnote").value || "").trim(); if (note) event.note = note;
-      /* recognition without a recorded selection: stage the implied selection too, visibly */
-      const lcNow = lifecycle(DATA.festivals.find(v => v.id === fid));
-      if (["screened", "nominated", "won"].includes(type) && !effectivelySelected(lcNow)) {
-        stage({ kind: "addEvent", fid, event: { eid: uuid(), type: "selected", date, note: "implied by " + type } });
-      }
-      stage({ kind: "addEvent", fid, event });
-      closeSheet();
-      if (type === "selected" || type === "screened") premiereNudge(fid, type, date);
-    });
-  }));
-}
-function premiereNudge(fid, type, evDate) {
-  const f = DATA.festivals.find(v => v.id === fid);
-  const avail = DATA.premieres.filter(p => p.state === "available");
-  if (!avail.length) return;
-  openSheet(`<button class="close" id="sx" type="button">×</button><h3>Premiere consequences?</h3>
-    <p style="color:var(--text-2);font-size:14.5px;margin-top:8px">${esc(f.name)} — ${type === "screened" ? "a public screening SPENDS premieres" : "a selection usually RESERVES one"}. Tap any that apply, or close if none.</p>
-    ${avail.map(p => `<button class="pick" data-prem="${esc(p.id)}" type="button">${esc(p.label)}<span class="sub">${esc(p.note || "")}</span></button>`).join("")}`);
-  $("#sx").addEventListener("click", closeSheet);
-  document.querySelectorAll("[data-prem]").forEach(b => b.addEventListener("click", () => {
-    const p = DATA.premieres.find(v => v.id === b.dataset.prem);
-    stage({ kind: "setPremiere", pid: p.id, prev: { state: p.state, byFestivalId: p.byFestivalId ?? null, note: p.note ?? "" },
-            value: { state: type === "screened" ? "spent" : "reserved", byFestivalId: fid, note: p.note ?? "", date: evDate || todayISO() } });
-    b.disabled = true; b.style.opacity = .5;
-  }));
-}
-function fieldSheet(fid) {
-  const f = DATA.festivals.find(v => v.id === fid);
-  const fields = [
-    ["close", "Final deadline (YYYY-MM-DD)", f.close || "", "date"],
-    ["open", "Window opens (YYYY-MM-DD)", f.open || "", "date"],
-    ["feesText", "Fees (display text)", f.feesText || "", "text"],
-    ["edition", "Festival dates (display)", f.edition || "", "text"],
-    ["festDate", "Festival start (YYYY-MM-DD)", f.festDate || "", "date"],
-    ["tier", "Tier", f.tier || "strong", "tier"],
-    ["lastChecked", "Last verified (YYYY-MM-DD)", f.lastChecked || "", "date"],
-    ["source", "Source URL", f.source || "", "url"],
-  ];
-  openSheet(`<button class="close" id="sx" type="button">×</button><h3>${esc(f.name)} — details</h3>
-    ${fields.map(([k, l, v, t]) => t === "tier"
-      ? `<label>${l}</label><select id="fld-${k}"><option${v === "dream" ? " selected" : ""}>dream</option><option${v === "strong" ? " selected" : ""}>strong</option><option${v === "worthy" ? " selected" : ""}>worthy</option></select>`
-      : `<label>${l}</label><input type="${t === "date" ? "text" : t}" id="fld-${k}" value="${esc(v)}">`).join("")}
-    <div class="err" id="flderr"></div>
-    <div class="actions"><button class="btn primary" id="stagef" type="button">Stage changes</button></div>`);
-  $("#sx").addEventListener("click", closeSheet);
-  $("#stagef").addEventListener("click", () => {
-    /* validate everything first — staging is all-or-nothing */
-    const pending = [];
-    for (const [k, , v, t] of fields) {
-      const nv = $(`#fld-${k}`).value.trim();
-      if (nv === String(v)) continue;
-      if (t === "date" && nv !== "" && !realDate(nv)) { $("#flderr").textContent = `${k}: use a real YYYY-MM-DD date.`; $("#flderr").classList.add("show"); return; }
-      if (t === "url" && nv !== "" && !safeUrl(nv)) { $("#flderr").textContent = `${k}: https:// links only.`; $("#flderr").classList.add("show"); return; }
-      pending.push({ kind: "setField", fid, field: k, prev: f[k] ?? "", value: nv });
-    }
-    if (f.estimated && pending.some(p => p.field === "close" && realDate(p.value))) {
-      pending.push({ kind: "setField", fid, field: "estimated", prev: true, value: false });
-    }
-    pending.forEach(stage);
-    closeSheet();
-  });
 }
 function noteSheet(fid) {
   const f = DATA.festivals.find(v => v.id === fid);
@@ -3380,12 +3686,12 @@ function noteSheet(fid) {
     <p style="color:var(--text-2);font-size:13px;margin-top:6px">This board is public — keep notes public-safe. Programmer contacts and sensitive email belong elsewhere.</p>
     <label>Note</label><textarea id="ntext" rows="3"></textarea>
     <div class="actions"><button class="btn primary" id="stagen" type="button">Stage note</button></div>`);
-  $("#sx").addEventListener("click", closeSheet);
+  $("#sx").addEventListener("click", () => festivalSheet(fid));
   $("#stagen").addEventListener("click", () => {
     const t = ($("#ntext").value || "").trim();
     if (!t) return;
     stage({ kind: "appendNote", fid, note: { nid: uuid(), date: todayISO(), text: t } });
-    closeSheet();
+    festivalSheet(fid);
   });
 }
 function ruleOutSheet(fid) {
@@ -3407,8 +3713,8 @@ function promoteSheet(fid) {
   openSheet(`<button class="close" id="sx" type="button">×</button><h3>Promote ${esc(f.name)}</h3>
     <label>Tier</label><select id="ptier"><option>worthy</option><option selected>strong</option><option>dream</option></select>
     <div class="actions"><button class="btn primary" id="pgo" type="button">Promote to target</button></div>`);
-  $("#sx").addEventListener("click", closeSheet);
-  $("#pgo").addEventListener("click", () => { stage({ kind: "promote", fid, prev: "bench", tier: $("#ptier").value }); closeSheet(); });
+  $("#sx").addEventListener("click", () => festivalSheet(fid));
+  $("#pgo").addEventListener("click", () => { stage({ kind: "promote", fid, prev: "bench", tier: $("#ptier").value }); festivalSheet(fid); });
 }
 function mkId(name) {
   let id = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || uuid();
@@ -3672,10 +3978,21 @@ function pollLive(rev, st, link) {
 /* ---------- edit mode wiring ---------- */
 function enterEdit() {
   document.body.classList.add("edit");
+  $("#editpill").textContent = "● Editing";
+  refresh();
+}
+function exitEdit() {
+  document.body.classList.remove("edit");
+  $("#editpill").textContent = "✎ Edit campaign";
   refresh();
 }
 function boot() {
   renderChrome();
+  $("#editpill").addEventListener("click", () => {
+    if (!document.body.classList.contains("edit")) return enterEdit();
+    if (OPS.length && !confirm(`You have ${OPS.length} staged change${OPS.length === 1 ? "" : "s"} not yet published — leave edit mode anyway? (The draft stays saved in this browser.)`)) return;
+    exitEdit();
+  });
   $("#q").addEventListener("input", (e) => { FILTER.q = e.target.value; refresh(); });
   $("#sorttoggle").addEventListener("click", () => { FILTER.sort = FILTER.sort === "tier" ? "deadline" : "tier"; refresh(); });
   $("#valtoggle").addEventListener("click", () => {
@@ -3690,7 +4007,7 @@ function boot() {
   $("#tokenbtn").addEventListener("click", () => tokenSheet(null));
   $("#exitedit").addEventListener("click", () => {
     if (OPS.length && !confirm(`You have ${OPS.length} staged change${OPS.length === 1 ? "" : "s"} not yet published — leave edit mode anyway? (The draft stays saved in this browser.)`)) return;
-    document.body.classList.remove("edit"); refresh();
+    exitEdit();
   });
   const tip = $("#tip");
   document.addEventListener("mousemove", (e) => {
@@ -3720,7 +4037,7 @@ function boot() {
   else if (source === "snapshot") banner(`Showing the built-in snapshot from ${note || "an earlier build"} — the live file couldn't be fetched.`, true);
   else if (source === "toonew") banner(`The live board uses a newer format than this page understands — reload for the new version.`, true);
   loadDraft();
-  if (new URLSearchParams(location.search).has("edit")) document.body.classList.add("edit");
+  if (new URLSearchParams(location.search).has("edit")) { document.body.classList.add("edit"); $("#editpill").textContent = "● Editing"; }
   refresh();
   /* test hooks (harmless in production) */
   window.__kom = { validate, applyOps, lifecycle, b64utf8, stage, get ops() { return OPS; }, set ops(v) { OPS = v; }, get data() { return DATA; }, get base() { return BASE; }, refresh };
