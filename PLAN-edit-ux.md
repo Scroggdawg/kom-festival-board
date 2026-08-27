@@ -79,3 +79,16 @@ covers undo) · pending-corrections queue UI beyond the source-URL requirement.
 2. On his notes: implement rows/cards/edit entry/locked-fields (1 session).
 3. Timeline markers + tile-filters + meter (half session).
 4. Codex verification pass, fix, ship.
+
+## Addendum — the festival sheet, v2 (2026-08-26 evening)
+
+Luke graded the first detail view 10–20%: "the important screen — think macOS."
+Redesigned as a state-adaptive sheet, marked up at /mockup-detail.html:
+header wears the status (wash + pill), hero states the one current fact
+(countdown / awaiting / screening date / award), ONE primary action or a
+segmented next-step pair, two link buttons, then grouped panes — Campaign
+(timeline of events + notes, designed empty state) and Research record
+(locked, Verified stamp, correction-with-source). Six header states specced;
+motion: bottom-sheet spring on phone, 200ms scale-fade on desktop, single
+250ms cross-fade on status change, reduced-motion fallbacks. This sheet
+supersedes the expandable-row detail from section 3 of the spine.

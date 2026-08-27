@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KOM Board — Festival Sheet Markup</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --ink:#171310; --panel:#201a14; --panel-2:#262019; --panel-3:#2d251c; --hairline:#362b1e;
+    --text:#ede4d3; --text-2:#a79b85; --muted:#7a705d; --accent:#e5a44c;
+    --tier-dream:#3987e5; --tier-strong:#d95926; --tier-worthy:#199e70;
+    --gold:#e5a44c; --green:#5fc287; --red:#e06a5e; --purple:#b6aaf7;
+    --display:'Fraunces',Georgia,serif; --body:'Archivo','Helvetica Neue',Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1240px;margin:0 auto;padding:48px 28px 90px}
+  .eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-2);margin-bottom:10px}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(30px,4.5vw,46px);line-height:1.08}
+  .warn{display:inline-block;margin-top:14px;font-size:13px;color:var(--red);border:1px solid rgba(217,79,67,.5);border-radius:5px;padding:5px 12px}
+  .note{color:var(--text-2);font-size:15px;max-width:80ch;margin-top:16px}
+  h2{font-family:var(--display);font-weight:600;font-size:26px;margin:56px 0 6px}
+  .keys{margin-top:18px;font-size:13.5px;color:var(--text-2);max-width:420px}
+  .keys div{padding:5px 0;display:flex;align-items:baseline}
+  .n{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#171310;font-size:12px;font-weight:700;margin-right:9px;flex:none}
+  .frames{display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start;margin-top:24px}
+  .frameset{flex:1 1 380px;max-width:440px}
+  .framelabel{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);margin-bottom:12px}
+
+  /* ============ THE SHEET ============ */
+  .sheet{background:var(--panel);border:1px solid var(--hairline);border-radius:18px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.55)}
+  .grab{width:40px;height:5px;border-radius:99px;background:var(--hairline);margin:10px auto 0}
+  .sh-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:var(--panel-2);border:1px solid var(--hairline);color:var(--text-2);font-size:15px;display:flex;align-items:center;justify-content:center;cursor:default}
+  .sh-head{position:relative;padding:18px 22px 20px}
+  .sh-head.washgold{background:linear-gradient(180deg, rgba(229,164,76,.16), rgba(229,164,76,0) 82%)}
+  .sh-head.washgreen{background:linear-gradient(180deg, rgba(95,194,135,.17), rgba(95,194,135,0) 82%)}
+  .sh-tierline{font-size:12px;color:var(--text-2);letter-spacing:.05em;display:flex;align-items:center;gap:7px;margin-bottom:6px}
+  .tdot{width:8px;height:8px;border-radius:2px;display:inline-block}
+  .sh-name{font-family:var(--display);font-size:29px;font-weight:600;line-height:1.1;padding-right:40px;text-wrap:balance}
+  .sh-sub{font-size:13.5px;color:var(--text-2);margin-top:5px}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;border:1.5px solid var(--hairline);color:var(--muted);white-space:nowrap;margin-top:12px}
+  .pill.sub{border-color:rgba(229,164,76,.6);color:var(--gold)}
+  .pill.win{background:rgba(95,194,135,.14);border-color:var(--green);color:var(--green)}
+  .pill.win .star{color:var(--gold)}
+
+  .hero{padding:6px 22px 20px}
+  .hero .big{font-size:46px;font-weight:600;line-height:1.02;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+  .hero .big small{font-size:22px;font-weight:600;color:var(--text-2)}
+  .hero .under{font-size:13.5px;color:var(--text-2);margin-top:6px}
+  .hero.gold .big{color:var(--gold)} .hero.green .big{color:var(--green)}
+
+  .actions{padding:0 22px 8px;display:grid;gap:10px}
+  .primary{display:block;width:100%;text-align:center;background:var(--accent);color:#171310;font-weight:700;font-size:16px;border:none;border-radius:11px;padding:15px;cursor:default;font-family:var(--body)}
+  .seg{display:grid;grid-template-columns:1fr 1fr;background:var(--panel-2);border:1px solid var(--hairline);border-radius:11px;overflow:hidden}
+  .seg button{background:none;border:none;color:var(--text);font-family:var(--body);font-size:15px;font-weight:600;padding:14px;cursor:default}
+  .seg button + button{border-left:1px solid var(--hairline)}
+  .seg .yes{color:var(--green)} .seg .no{color:var(--red)}
+  .linkrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:8px 22px 4px}
+  .linkbtn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--panel-2);border:1px solid rgba(229,164,76,.5);color:var(--accent);font-weight:600;font-size:14px;border-radius:11px;padding:13px;cursor:default}
+
+  .glabel{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:20px 26px 7px}
+  .group{background:var(--panel-2);border:1px solid var(--hairline);border-radius:13px;margin:0 16px}
+  .grow{display:flex;align-items:center;gap:12px;min-height:46px;padding:10px 16px;border-bottom:1px solid var(--hairline);font-size:14.5px}
+  .grow:last-child{border-bottom:none}
+  .grow .k{color:var(--text-2);flex:none;width:118px;font-size:13px}
+  .grow .v{flex:1;text-align:right;font-variant-numeric:tabular-nums}
+  .grow .v .est{color:var(--muted)}
+  .grow.tap{cursor:default}
+  .grow .chv{color:var(--muted);flex:none;margin-left:6px}
+  .grow .glyph{flex:none;width:20px;text-align:center;color:var(--muted);font-size:13px}
+  .quote{padding:12px 16px;font-size:14px;color:var(--text-2);line-height:1.55}
+  .lockbar{display:flex;align-items:center;gap:9px;padding:10px 16px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--hairline)}
+  .verified{font-size:11px;color:var(--green);border:1px solid rgba(95,194,135,.4);border-radius:4px;padding:1px 7px}
+  .fixrow{padding:9px 16px;font-size:12.5px;color:var(--muted);text-align:center}
+
+  /* history */
+  .hwrap{padding:4px 16px 10px}
+  .hitem{position:relative;display:flex;gap:14px;padding:9px 0 9px 4px}
+  .hitem:before{content:"";position:absolute;left:9px;top:26px;bottom:-6px;width:2px;background:var(--hairline)}
+  .hitem:last-child:before{display:none}
+  .hdot{flex:none;width:12px;height:12px;border-radius:50%;margin-top:5px;border:2px solid var(--panel-2)}
+  .hdot.g{background:var(--gold)} .hdot.gr{background:var(--green)} .hdot.r{background:var(--red)} .hdot.mut{background:var(--muted)}
+  .hbody{flex:1}
+  .hbody .t{font-size:14.5px;font-weight:600}
+  .hbody .s{font-size:12.5px;color:var(--muted);margin-top:1px}
+  .hdate{flex:none;font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:3px}
+  .empty{padding:22px 16px;text-align:center}
+  .empty .e1{font-size:14.5px;color:var(--text-2)}
+  .empty .e2{font-size:12.5px;color:var(--muted);margin-top:4px}
+
+  .addnote{display:flex;align-items:center;gap:10px;color:var(--accent);font-size:14px;font-weight:600;padding:12px 16px}
+  .sh-foot{padding:14px 22px 20px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+  .motion{margin-top:44px;background:var(--panel);border:1px solid var(--hairline);border-radius:10px;padding:22px 26px;max-width:900px}
+  .motion h3{font-size:16px;font-weight:700;margin-bottom:10px}
+  .motion div{font-size:14px;color:var(--text-2);padding:4px 0}
+  .motion b{color:var(--text)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">KOM festival board · the festival sheet · markup v2 · Aug 26, 2026</div>
+  <h1>Tap a festival. This opens.</h1>
+  <div class="warn">Markup — fake data, prop buttons. This page exists to be judged.</div>
+  <p class="note">One sheet, every festival, state-adaptive: the header wears the status, the hero says the one thing that matters right now, and the single obvious button is always the next step. Grouped panes underneath, macOS-style — campaign first, locked research second. On the phone it slides up as a bottom sheet (grab bar); on desktop it opens centered. Left: the everyday case — a festival you haven't touched. Right: a festival with a story.</p>
+
+  <div class="frames">
+
+    <!-- ============ STATE 1: untouched ============ -->
+    <div class="frameset">
+      <div class="framelabel">State 1 · No updates yet — the screen you'll see 40 times</div>
+      <div class="sheet" style="position:relative">
+        <div class="grab"></div>
+        <div class="sh-close">✕</div>
+        <div class="sh-head">
+          <div class="sh-tierline"><span class="tdot" style="background:var(--tier-dream)"></span>DREAM · PAN-AFRICAN CANON</div>
+          <div class="sh-name">FESPACO 30th</div>
+          <div class="sh-sub">Ouagadougou, Burkina Faso · runs Feb 27 – Mar 6, 2027</div>
+          <span class="pill">Not submitted</span>
+        </div>
+        <div class="hero">
+          <div class="big">25<small> days to submit</small></div>
+          <div class="under">window closes Sep 20, 2026 · fee €50</div>
+        </div>
+        <div class="actions"><button class="primary">Mark submitted</button></div>
+        <div class="linkrow"><span class="linkbtn">Official site ↗</span><span class="linkbtn">FilmFreeway ↗</span></div>
+
+        <div class="glabel">Campaign</div>
+        <div class="group">
+          <div class="empty">
+            <div class="e1">Nothing recorded yet.</div>
+            <div class="e2">Submissions, decisions and wins will build a timeline here.</div>
+          </div>
+          <div class="addnote" style="border-top:1px solid var(--hairline)">＋ Add a note</div>
+        </div>
+
+        <div class="glabel">Research record</div>
+        <div class="group">
+          <div class="lockbar">🔒 Locked facts <span class="verified">Verified Aug 25, 2026</span></div>
+          <div class="grow"><span class="k">Festival dates</span><span class="v">Feb 27 – Mar 6, 2027</span></div>
+          <div class="grow"><span class="k">Window</span><span class="v">Feb 24 → Sep 20, 2026</span></div>
+          <div class="grow"><span class="k">Fees</span><span class="v">€50 flat</span></div>
+          <div class="grow"><span class="k">Path</span><span class="v">Pan-African canon — no Oscar lane</span></div>
+          <div class="grow tap"><span class="k">Why KOM</span><span class="v" style="text-align:right;color:var(--text-2);font-size:13px">The most prestigious pan-African festival, biennial…</span><span class="chv">›</span></div>
+          <div class="fixrow">Something changed at the festival? Suggest a correction — needs a source link.</div>
+        </div>
+
+        <div class="sh-foot"><span>Source: fespaco.bf ↗</span><span>Checked Aug 25, 2026</span></div>
+      </div>
+      <div class="keys">
+        <div><span class="n">1</span>The hero is the countdown — the only number that matters on an untouched festival. Past the deadline it flips to a muted "Window closed Sep 20."</div>
+        <div><span class="n">2</span>One gold button. On this state it can only mean one thing. Tap → date's already today, fee's already suggested → Stage.</div>
+        <div><span class="n">3</span>The empty campaign pane says what will grow here — an empty state, not a missing feature.</div>
+        <div><span class="n">4</span>Research is a locked, stamped pane. Reading, not editing. Corrections demand a source.</div>
+      </div>
+    </div>
+
+    <!-- ============ STATE 2: rich history ============ -->
+    <div class="frameset">
+      <div class="framelabel">State 2 · A festival with a story — submitted → selected</div>
+      <div class="sheet" style="position:relative">
+        <div class="grab"></div>
+        <div class="sh-close">✕</div>
+        <div class="sh-head washgreen">
+          <div class="sh-tierline"><span class="tdot" style="background:var(--tier-strong)"></span>STRONG · WORLD'S BIGGEST SHORTS MARKET</div>
+          <div class="sh-name">Clermont-Ferrand 49th</div>
+          <div class="sh-sub">Clermont-Ferrand, France · runs Jan 29 – Feb 6, 2027</div>
+          <span class="pill win">Official Selection</span>
+        </div>
+        <div class="hero green">
+          <div class="big">Screens Jan 29</div>
+          <div class="under">France premiere spent here · DCP due Jan 8 (note)</div>
+        </div>
+        <div class="actions">
+          <div class="seg"><button>★ Record an award</button><button>Mark screened</button></div>
+        </div>
+        <div class="linkrow"><span class="linkbtn">Official site ↗</span><span class="linkbtn">FilmFreeway ↗</span></div>
+
+        <div class="glabel">Campaign</div>
+        <div class="group">
+          <div class="hwrap">
+            <div class="hitem">
+              <span class="hdot gr"></span>
+              <div class="hbody"><div class="t">Official Selection</div><div class="s">49th International Competition · France premiere spent</div></div>
+              <span class="hdate">Dec 3</span>
+            </div>
+            <div class="hitem">
+              <span class="hdot g"></span>
+              <div class="hbody"><div class="t">Submitted</div><div class="s">€13 · confirmation CF-88412</div></div>
+              <span class="hdate">Sep 12</span>
+            </div>
+            <div class="hitem">
+              <span class="hdot mut"></span>
+              <div class="hbody"><div class="t">Note</div><div class="s">Marché catalogue listing live — send EPK link to sales contact.</div></div>
+              <span class="hdate">Sep 14</span>
+            </div>
+          </div>
+          <div class="addnote" style="border-top:1px solid var(--hairline)">＋ Add a note</div>
+        </div>
+
+        <div class="glabel">Research record</div>
+        <div class="group">
+          <div class="lockbar">🔒 Locked facts <span class="verified">Verified Aug 25, 2026</span></div>
+          <div class="grow"><span class="k">Festival dates</span><span class="v">Jan 29 – Feb 6, 2027</span></div>
+          <div class="grow"><span class="k">Window</span><span class="v">Jun 1 → Sep 24, 2026</span></div>
+          <div class="grow"><span class="k">Fees</span><span class="v">~€13 flat</span></div>
+          <div class="grow"><span class="k">Path</span><span class="v">Oscar-qualifying — Grand Prix</span></div>
+          <div class="grow tap"><span class="k">Why KOM</span><span class="v" style="text-align:right;color:var(--text-2);font-size:13px">The world's largest shorts stage; every entry joins the Marché…</span><span class="chv">›</span></div>
+          <div class="fixrow">Something changed at the festival? Suggest a correction — needs a source link.</div>
+        </div>
+
+        <div class="sh-foot"><span>Source: lecourt-clermont.org ↗</span><span>Checked Aug 25, 2026</span></div>
+      </div>
+      <div class="keys">
+        <div><span class="n">5</span>The header wears the state — a soft green wash for a selection (gold for submitted, nothing for untouched). You know before you read.</div>
+        <div><span class="n">6</span>The hero flips to the next real-world fact: the screening date, with the premiere consequence right under it.</div>
+        <div><span class="n">7</span>Actions become a segmented pair — the two things that can happen next, nothing else. Submitted festivals get [Selected | Not selected] here.</div>
+        <div><span class="n">8</span>The campaign pane is a timeline: newest on top, colored dots, fees and confirmations kept. Notes thread into the same stream.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- header variants strip -->
+  <h2>The header wears the state — all six</h2>
+  <p class="note" style="margin-top:6px">Same sheet, different weather. The wash + pill + hero adapt; everything below stays in the same place, so the hand always knows where things are.</p>
+  <div class="frames" style="gap:14px">
+    <div class="sheet" style="flex:1 1 300px;max-width:360px;position:relative"><div class="sh-head"><div class="sh-name" style="font-size:20px">Not submitted</div><div class="sh-sub">hero: countdown · button: Mark submitted</div><span class="pill">Not submitted</span></div></div>
+    <div class="sheet" style="flex:1 1 300px;max-width:360px;position:relative"><div class="sh-head washgold"><div class="sh-name" style="font-size:20px">Submitted</div><div class="sh-sub">hero: Awaiting decision · seg: Selected | Not selected</div><span class="pill sub">Submitted · Aug 27</span></div></div>
+    <div class="sheet" style="flex:1 1 300px;max-width:360px;position:relative"><div class="sh-head washgreen"><div class="sh-name" style="font-size:20px">Official Selection</div><div class="sh-sub">hero: screening date · seg: Award | Screened</div><span class="pill win">Official Selection</span></div></div>
+    <div class="sheet" style="flex:1 1 300px;max-width:360px;position:relative"><div class="sh-head washgreen"><div class="sh-name" style="font-size:20px">Winner</div><div class="sh-sub">hero: ★ Best Drama · button: Add another award</div><span class="pill win"><span class="star">★</span> Winner — Best Drama</span></div></div>
+    <div class="sheet" style="flex:1 1 300px;max-width:360px;position:relative;opacity:.7"><div class="sh-head"><div class="sh-name" style="font-size:20px">Not selected</div><div class="sh-sub">hero: muted "Not selected Dec 14" · button: none — history stays</div><span class="pill" style="border-color:rgba(217,79,67,.5);color:var(--red)">Not selected</span></div></div>
+    <div class="sheet" style="flex:1 1 300px;max-width:360px;position:relative;opacity:.7"><div class="sh-head"><div class="sh-name" style="font-size:20px">Window closed</div><div class="sh-sub">hero: "Closed Sep 20" · button: none for 2027 — note only</div><span class="pill">Not submitted</span></div></div>
+  </div>
+
+  <div class="motion">
+    <h3>How it moves (the smooth part)</h3>
+    <div><b>Open:</b> phone — slides up as a bottom sheet with a spring, grab-bar to drag down; desktop — scales in from 97% with a fade, 200ms ease-out, board dims behind.</div>
+    <div><b>Status change:</b> the header wash cross-fades to the new color and the new history dot drops in — one motion, 250ms, then still. Nothing pulses, ever.</div>
+    <div><b>Stage → publish:</b> staging closes the sheet and the draft bar counts up; the sheet never traps you in a second modal.</div>
+    <div><b>Reduced motion:</b> all of it swaps to plain cross-fades.</div>
+  </div>
+
+  <div style="margin-top:70px;border-top:1px solid var(--hairline);padding-top:16px;font-size:12.5px;color:var(--muted)">Markup only — fake data. Companion pages: <a href="mockup.html" style="color:var(--accent);text-decoration:none">mockup.html</a> (rows, cards, timeline) · the live board is unchanged until approved.</div>
+</div>
+</body>
+</html>
