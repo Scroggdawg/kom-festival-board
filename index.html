@@ -134,9 +134,9 @@
   .fcard.openwhy .why { display: block; }
   .fcard button.more { background: none; border: none; color: var(--accent); font-size: 12.5px; font-family: var(--body); cursor: pointer; padding: 6px 0 0; }
 
-  .gantt { background: var(--panel); border: 1px solid var(--hairline); border-radius: 8px; padding: 20px 0 10px; overflow-x: auto; }
+  .gantt { background: var(--panel); border: 1px solid var(--hairline); border-radius: 8px; padding: 0 0 10px; overflow: auto; max-height: 72vh; min-height: 320px; }
   .gantt-inner { min-width: 960px; padding: 0 20px; }
-  .g-head { display: grid; grid-template-columns: 260px 1fr; margin-bottom: 8px; }
+  .g-head { display: grid; grid-template-columns: 260px 1fr; margin-bottom: 8px; position: sticky; top: 0; z-index: 2; background: var(--panel); padding-top: 20px; }
   .g-months { position: relative; height: 24px; }
   .g-month { position: absolute; top: 0; font-size: 11px; color: var(--muted); letter-spacing: .04em; border-left: 1px solid var(--hairline); padding-left: 5px; height: 100%; }
   .g-row { display: grid; grid-template-columns: 260px 1fr; align-items: center; min-height: 38px; }
@@ -158,9 +158,10 @@
   .tip b { display: block; margin-bottom: 3px; }
   .tip .row { color: var(--text-2); }
 
-  .heat { overflow-x: auto; background: var(--panel); border: 1px solid var(--hairline); border-radius: 8px; padding: 18px; }
+  .heat { overflow: auto; max-height: 72vh; min-height: 320px; background: var(--panel); border: 1px solid var(--hairline); border-radius: 8px; padding: 0 18px 18px; }
   .heat table { min-width: 720px; }
-  .heat th { border-bottom: none; padding: 7px 8px; }
+  .heat th { border-bottom: none; padding: 7px 8px; position: sticky; top: 0; z-index: 2; background: var(--panel); }
+  .heat thead th:first-child { z-index: 3; }
   .heat td { border-bottom: none; padding: 3px; }
   .heat .cell { height: 33px; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 12.5px; font-weight: 600; color: rgba(0,0,0,0); font-variant-numeric: tabular-nums; }
   .heat.show-values .cell { color: var(--vc); }
@@ -438,7 +439,7 @@
 
   <section id="heatmap">
     <h2>Fit Heat Map</h2>
-    <p class="section-note">Assessed fit of the seventeen highest-value targets across five dimensions, 0–10. Each row wears its tier's hue — blue dream, orange strong, green worthy — with brightness carrying the score. Judgments derived from the research record; assessed, not measured.</p>
+    <p class="section-note">Assessed fit of all 97 targets across five dimensions, 0–10, ranked by tier then total score. ★ marks Joan's picks. Oscar path scores the 100th Awards specifically — a qualifying festival whose reachable edition falls outside the Oct 1, 2026–Sep 30, 2027 window scores low, because it cannot help this cycle. Each row wears its tier's hue — blue dream, orange strong, green worthy — with brightness carrying the score. Judgments derived from the research record; assessed, not measured.</p>
     <div class="heat-controls">
       <button class="toggle on" id="valtoggle" type="button">Hide values</button>
       <span class="heat-scale">low <span class="step" style="background:#3a4a66"></span><span class="step" style="background:#3573b4"></span><span class="step" style="background:#63a2f2"></span> high</span>
@@ -490,7 +491,7 @@
 
 <script id="snapshot" type="application/json">{
  "schema": 2,
- "rev": "f821ae3d-e43d-458d-a128-752b1f8e56c0",
+ "rev": "94e58fad-8bf9-454f-a689-c193eeb26eba",
  "updated": "2026-09-03",
  "keyDates": [
   {
@@ -590,14 +591,14 @@
    "feesText": "$95 (late tier)",
    "tiers": [],
    "path": "Oscar-qualifying",
-   "why": "No premiere requirement, and the eligibility rule — completed after Dec 31, 2025 — makes a Jan 2026 film the exact intended cohort. AFI theses land here regularly. The single most urgent submission on this board.",
+   "why": "No premiere requirement, and the eligibility rule — completed after Dec 31, 2025 — makes a Jan 2026 film the exact intended cohort. AFI theses land here regularly. The single most urgent submission on this board. Submission note: Confirmed: sundance.org submit page explicitly directs applicants to FilmFreeway (filmfreeway.com/Sundance) for the 2027 Festival; no separate proprietary portal used for festival entries.",
    "festDate": "2027-01-21",
    "links": {
     "site": "https://www.sundance.org/festivals/sundance-film-festival/submit/",
-    "filmfreeway": ""
+    "filmfreeway": "https://filmfreeway.com/Sundance"
    },
    "source": "https://www.sundance.org/festivals/sundance-film-festival/submit/",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
    "joanPick": true
@@ -646,10 +647,10 @@
    "festDate": "2027-03-10",
    "links": {
     "site": "https://tamperefilmfestival.fi/en/industry/competitions/regulations-international-competition-2027/",
-    "filmfreeway": ""
+    "filmfreeway": "https://filmfreeway.com/TampereFilmFestival"
    },
    "source": "https://tamperefilmfestival.fi/en/industry/competitions/regulations-international-competition-2027/",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
    "joanPick": true
@@ -720,14 +721,14 @@
    "feesText": "$70 by Sep 15 · $90 final",
    "tiers": [],
    "path": "Oscar-qualifying",
-   "why": "The fight-ring engine and ancestral visions give it a genre hook; premiere status is a preference, not a rule, so it layers cleanly behind Sundance.",
+   "why": "The fight-ring engine and ancestral visions give it a genre hook; premiere status is a preference, not a rule, so it layers cleanly behind Sundance. Submission note: own portal: cart.sxsw.com (SXSW Cart film application system, e.g. cart.sxsw.com/products/filmapp-short). No FilmFreeway page exists for the Austin flagship festival - only spinoff events (SXSW Sydney, SXSW London) use FilmFreeway.",
    "festDate": "2027-03-15",
    "links": {
     "site": "https://www.indieshortsmag.com/news/film-festival/2026/08/sxsw-2027-short-film-submissions-deadlines/",
     "filmfreeway": ""
    },
    "source": "https://www.indieshortsmag.com/news/film-festival/2026/08/sxsw-2027-short-film-submissions-deadlines/",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
    "joanPick": true
@@ -746,14 +747,14 @@
    "feesText": "unpublished",
    "tiers": [],
    "path": "—",
-   "why": "Oldest African/Arab festival; Tanit shorts competition historically reserved for African and Arab films. Eligibility of a US-produced film by a Nigerian director needs a one-line email to the festival before entering.",
+   "why": "Oldest African/Arab festival; Tanit shorts competition historically reserved for African and Arab films. Eligibility of a US-produced film by a Nigerian director needs a one-line email to the festival before entering. Submission note: own portal: inscription.jcc.tn (mirrored at inscription.jcctunisie.org). Confirmed jcc.tn is the current official site (37th edition, Dec 12-19 2026); jcctunisie.org domain had DNS resolution issues at check time.",
    "festDate": "2026-12-12",
    "links": {
     "site": "https://www.jct-mali.com/2026/08/05/tunisie-journees-cinematographiques-de-carthage-publie-lappel-a-films-pour-sa-37eme-edition/",
     "filmfreeway": ""
    },
    "source": "https://www.jct-mali.com/2026/08/05/tunisie-journees-cinematographiques-de-carthage-publie-lappel-a-films-pour-sa-37eme-edition/",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -797,14 +798,14 @@
    "feesText": "€50",
    "tiers": [],
    "path": "—",
-   "why": "The most prestigious pan-African festival, biennial — miss it and the next door is 2029. Open to diaspora directors; the 2027 theme is cultural self-reclamation. Oscar-qualifying only for documentary shorts, so this is canon prestige, not an Academy path.",
+   "why": "The most prestigious pan-African festival, biennial — miss it and the next door is 2029. Open to diaspora directors; the 2027 theme is cultural self-reclamation. Oscar-qualifying only for documentary shorts, so this is canon prestige, not an Academy path. Submission note: own portal: fespaco.bf itself hosts registration via the national 'Faso Arzeka' platform (ABCA). Registration open Feb 24-Sep 20, 2026 for the Feb-Mar 2027 30th edition.",
    "festDate": "2027-02-27",
    "links": {
     "site": "https://fespaco.bf/en/welcome-to-fespaco/",
     "filmfreeway": ""
    },
    "source": "https://fespaco.bf/en/welcome-to-fespaco/",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -822,14 +823,14 @@
    "feesText": "~€13 flat",
    "tiers": [],
    "path": "Oscar-qualifying",
-   "why": "The world's largest shorts stage; no premiere requirement; every submitted film enters the Marché catalogue browsed by 5,000 industry pros. One chess note: a Clermont screening is a French screening — it closes the Cannes doors (see the France lock).",
+   "why": "The world's largest shorts stage; no premiere requirement; every submitted film enters the Marché catalogue browsed by 5,000 industry pros. One chess note: a Clermont screening is a French screening — it closes the Cannes doors (see the France lock). Submission note: own/third-party portal: ShortFilmDepot (shortfilmdepot.com) - NOT FilmFreeway. Confirmed via official lecourt-clermont.org submit page; deadline for 49th edition (Jan 29-Feb 6 2027) was Sept 24, 2026.",
    "festDate": "2027-01-29",
    "links": {
     "site": "https://www.lecourt-clermont.org/en/pros/submit-a-film/",
     "filmfreeway": ""
    },
    "source": "https://www.lecourt-clermont.org/en/pros/submit-a-film/",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
    "joanPick": true
@@ -925,14 +926,14 @@
    "feesText": "$25 (waivers exist)",
    "tiers": [],
    "path": "Student Emmy",
-   "why": "The 46th window should cover work completed Aug 2025–Jul 2026 — a Jan 2026 finish fits — with submissions estimated late Sep–early Oct 2026. Verify at televisionacademy.com now; the window is weeks long.",
+   "why": "The 46th window should cover work completed Aug 2025–Jul 2026 — a Jan 2026 finish fits — with submissions estimated late Sep–early Oct 2026. Verify at televisionacademy.com now; the window is weeks long. Submission note: own portal: TelevisionAcademy.com/CTA/submit (Television Academy Foundation's own submission system). No FilmFreeway listing found despite specific search.",
    "festDate": "",
    "links": {
     "site": "https://www.televisionacademy.com/foundation/programs/cta/faq",
     "filmfreeway": ""
    },
    "source": "https://www.televisionacademy.com/foundation/programs/cta/faq",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1001,14 +1002,14 @@
    "feesText": "CAD $40 by Sep 15 · $55 late",
    "tiers": [],
    "path": "Oscar-qualifying",
-   "why": "Qualifying on both its Grand Prizes, and it explicitly prioritizes premiere-intact films not free online — which this is. The Grand Prize (the Oscar path) is limited to World/North American/Canadian premieres, so submit before spending the NA premiere.",
+   "why": "Qualifying on both its Grand Prizes, and it explicitly prioritizes premiere-intact films not free online — which this is. The Grand Prize (the Oscar path) is limited to World/North American/Canadian premieres, so submit before spending the NA premiere. Submission note: own portal: form.zonefestival.com (Zone Festival submission system, e.g. form.zonefestival.com/?k=regard_f8ls) - NOT FilmFreeway.",
    "festDate": "2027-03-17",
    "links": {
     "site": "https://festivalregard.com/en/call-for-entries",
     "filmfreeway": ""
    },
    "source": "https://festivalregard.com/en/call-for-entries",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
    "joanPick": true
@@ -1027,14 +1028,14 @@
    "feesText": "€75",
    "tiers": [],
    "path": "Oscar-qualifying",
-   "why": "The most politically engaged A-list shorts competition — a slave-revolt film reclaiming Yoruba faith is squarely its taste, and the Golden Bear qualifies. US-only screenings preserve the international-premiere status it requires, so Sundance-first keeps it alive. The 12-month completion window nominally cuts ~Feb 2026 — enter with the final-deliverables date (see Playbook). Submit blind Nov 4, before Sundance notifies.",
+   "why": "The most politically engaged A-list shorts competition — a slave-revolt film reclaiming Yoruba faith is squarely its taste, and the Golden Bear qualifies. US-only screenings preserve the international-premiere status it requires, so Sundance-first keeps it alive. The 12-month completion window nominally cuts ~Feb 2026 — enter with the final-deliverables date (see Playbook). Submit blind Nov 4, before Sundance notifies. Submission note: own portal: berlinale.de's own online Film Entry system (My Film Entry account). Confirmed via official Berlinale Shorts regulations page - no FilmFreeway involvement.",
    "festDate": "2027-02-10",
    "links": {
     "site": "https://www.berlinale.de/en/film-entry/guidelines/general-guidelines.html",
     "filmfreeway": ""
    },
    "source": "https://www.berlinale.de/en/film-entry/guidelines/general-guidelines.html",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1052,14 +1053,14 @@
    "feesText": "unpublished",
    "tiers": [],
    "path": "Oscar-qualifying",
-   "why": "Triple-qualifying (Oscar, EFA, BAFTA). Timing trap: films completed before Oct 31, 2026 must enter by the FIRST phase (~Nov 30, 2026) — the later January deadline is not for this film.",
+   "why": "Triple-qualifying (Oscar, EFA, BAFTA). Timing trap: films completed before Oct 31, 2026 must enter by the FIRST phase (~Nov 30, 2026) — the later January deadline is not for this film. Submission note: own portal: krakowfilmfestival.pl 'MyKFF' filmmaker account/login system. No FilmFreeway page exists for the main Krakow Film Festival (distinct from other Krakow-based fests like Mastercard OFF CAMERA or Krakow Mountain Festival, which do use FilmFreeway).",
    "festDate": "2027-05-31",
    "links": {
     "site": "https://www.krakowfilmfestival.pl/en/call-for-submissions-opens-for-the-66th-krakow-film-festival/",
     "filmfreeway": ""
    },
    "source": "https://www.krakowfilmfestival.pl/en/call-for-submissions-opens-for-the-66th-krakow-film-festival/",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1077,14 +1078,14 @@
    "feesText": "free (historically)",
    "tiers": [],
    "path": "—",
-   "why": "Shorts competition restricted to African directors — the Nigerian director qualifies, and diaspora heritage stories are staple programming. Open now, free.",
+   "why": "Shorts competition restricted to African directors — the Nigerian director qualifies, and diaspora heritage stories are staple programming. Open now, free. Submission note: own portal: Google Form at forms.gle/XHudKudvVQvUuBJe8, linked directly from the official site's Submit Your Film page. No FilmFreeway page found for this festival.",
    "festDate": "2027-03-28",
    "links": {
     "site": "https://cairoscene.com/Film/Luxor-African-Film-Festival-Opens-Submissions-for-2027-Edition",
     "filmfreeway": ""
    },
    "source": "https://cairoscene.com/Film/Luxor-African-Film-Festival-Opens-Submissions-for-2027-Edition",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1179,14 +1180,14 @@
    "feesText": "$35 student tier",
    "tiers": [],
    "path": "Oscar-qualifying",
-   "why": "Large narrative shorts slate, deep diaspora programming, NYC industry. Catch: award (Oscar) eligibility historically needs a US premiere — a Sundance screening removes the award path, leaving exposure only. Decide after Sundance notifies.",
+   "why": "Large narrative shorts slate, deep diaspora programming, NYC industry. Catch: award (Oscar) eligibility historically needs a US premiere — a Sundance screening removes the award path, leaving exposure only. Decide after Sundance notifies. Submission note: Confirmed: Tribeca accepts via both its own Extranet portal and FilmFreeway; note the reduced student short-film fee is Extranet-only.",
    "festDate": "2027-06-09",
    "links": {
     "site": "https://tribecafilm.com/festival/submissions",
-    "filmfreeway": ""
+    "filmfreeway": "https://filmfreeway.com/TribecaFestival"
    },
    "source": "https://tribecafilm.com/festival/submissions",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
    "joanPick": true
@@ -1205,14 +1206,14 @@
    "feesText": "free",
    "tiers": [],
    "path": "€15k/11k/7.5k prizes",
-   "why": "Purpose-built door for conservatory thesis films; the 18-month window covers a Jan 2026 lock. Decided: the campaign doesn't wait for it — it enters by Feb 15 only if Sundance and Clermont both pass, since any non-US festival screening voids eligibility. Free, with cash prizes and Cannes support on the winner's first feature.",
+   "why": "Purpose-built door for conservatory thesis films; the 18-month window covers a Jan 2026 lock. Decided: the campaign doesn't wait for it — it enters by Feb 15 only if Sundance and Clermont both pass, since any non-US festival screening voids eligibility. Free, with cash prizes and Cannes support on the winner's first feature. Submission note: own portal: 'My Account' at festival-cannes.com. Confirmed - film-school-only submission section of Cannes; no FilmFreeway. 2027 deadline Feb 15, 2027.",
    "festDate": "2027-05-11",
    "links": {
     "site": "https://www.festival-cannes.com/en/take-part/submit-a-film/la-cinef-rules-and-regulations/",
     "filmfreeway": ""
    },
    "source": "https://www.festival-cannes.com/en/take-part/submit-a-film/la-cinef-rules-and-regulations/",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
    "joanPick": true
@@ -1231,14 +1232,14 @@
    "feesText": "free",
    "tiers": [],
    "path": "Oscar-qualifying",
-   "why": "At 13 minutes the film clears the hard 15-minute cap. Home-country screenings are allowed — Sundance does NOT void it; internet release or any non-US festival screening does (a Clermont screening would — see the France lock). The 12-month rule wants a mid-2026 completion date: enter with final deliverables. Free.",
+   "why": "At 13 minutes the film clears the hard 15-minute cap. Home-country screenings are allowed — Sundance does NOT void it; internet release or any non-US festival screening does (a Clermont screening would — see the France lock). The 12-month rule wants a mid-2026 completion date: enter with final deliverables. Free. Submission note: own portal: 'My Account' at festival-cannes.com. Confirmed - same portal as all Cannes Official Selection sections; not FilmFreeway.",
    "festDate": "2027-05-11",
    "links": {
     "site": "https://www.festival-cannes.com/en/take-part/submit-a-film/regulations-for-short-films-in-competition/",
     "filmfreeway": ""
    },
    "source": "https://www.festival-cannes.com/en/take-part/submit-a-film/regulations-for-short-films-in-competition/",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1333,14 +1334,14 @@
    "feesText": "free",
    "tiers": [],
    "path": "$2,500 + DGA screening",
-   "why": "The 2027 window should cover films made Sept 2025–Dec 2026 — containing a Jan 2026 completion. Director must be from a marginalized community and within a year of graduation at a US school. Verify the window when rules post ~Nov 1.",
+   "why": "The 2027 window should cover films made Sept 2025–Dec 2026 — containing a Jan 2026 completion. Director must be from a marginalized community and within a year of graduation at a US school. Verify the window when rules post ~Nov 1. Submission note: own portal: dga.org's own online application (exact submission-form subdomain is only exposed during the open application window, roughly Nov-Apr). Confirmed no FilmFreeway page exists for DGA Student Film Awards after targeted search; contact students@dga.org for current cycle link.",
    "festDate": "",
    "links": {
     "site": "https://www.dga.org/awards/students/applicationrules",
     "filmfreeway": ""
    },
    "source": "https://www.dga.org/awards/students/applicationrules",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1362,10 +1363,10 @@
    "festDate": "",
    "links": {
     "site": "https://www.oscars.org/saa/apply",
-    "filmfreeway": ""
+    "filmfreeway": "https://filmfreeway.com/StudentAcademyAwards"
    },
    "source": "https://www.oscars.org/saa/apply",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1459,14 +1460,14 @@
    "feesText": "modest",
    "tiers": [],
    "path": "Oscar-qualifying",
-   "why": "On the board at Luke's call, constraint stated plainly: Orizzonti takes world premieres only — no public screening anywhere, ever — and no completion-date argument changes that rule. Viable only in the branch where the film is still unscreened by May 2027.",
+   "why": "On the board at Luke's call, constraint stated plainly: Orizzonti takes world premieres only — no public screening anywhere, ever — and no completion-date argument changes that rule. Viable only in the branch where the film is still unscreened by May 2027. Submission note: own portal: La Biennale's own registration system (web9.labiennale.org/selezione[year]/). Confirmed via official Biennale Cinema 'Submitting a film' pages for recent editions; not FilmFreeway. 2027 edition-specific subpage not yet published as of Sept 2026.",
    "festDate": "2027-09-01",
    "links": {
     "site": "https://www.labiennale.org/en/cinema/2026/dates-and-deadlines",
     "filmfreeway": ""
    },
    "source": "https://www.labiennale.org/en/cinema/2026/dates-and-deadlines",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1590,10 +1591,10 @@
    "festDate": "2027-10-20",
    "links": {
     "site": "https://www.afi.com/press/american-film-institute-announces-40th-afi-fest-presented-by-canva-to-take-place-october-21-25-2026/",
-    "filmfreeway": ""
+    "filmfreeway": "https://filmfreeway.com/AFIFEST"
    },
    "source": "https://www.afi.com/press/american-film-institute-announces-40th-afi-fest-presented-by-canva-to-take-place-october-21-25-2026/",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1641,10 +1642,10 @@
    "festDate": "2027-11-26",
    "links": {
     "site": "https://nyadiff.org/submit-film",
-    "filmfreeway": ""
+    "filmfreeway": "https://filmfreeway.com/AfricanDiasporaInternationalFilmFestival"
    },
    "source": "https://nyadiff.org/submit-film",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1666,10 +1667,10 @@
    "festDate": "2027-11-02",
    "links": {
     "site": "https://www.kurzfilmtage.ch/en/industry/film-submissions",
-    "filmfreeway": ""
+    "filmfreeway": "https://filmfreeway.com/InternationaleKurzfilmtageWinterthur"
    },
    "source": "https://www.kurzfilmtage.ch/en/industry/film-submissions",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -1765,14 +1766,14 @@
    "feesText": "$15–25",
    "tiers": [],
    "path": "AFP Critics Prize",
-   "why": "Run by the Surreal16 collective (C.J. Obasi, Abba Makama, Michael Omonua) — the exact lineage of chiaroscuro Yoruba-spiritual cinema. The 2026 window closed before the campaign started; 2027 is the play. Nigerian premiere required — sequence after AFRIFF decisions, not before.",
+   "why": "Run by the Surreal16 collective (C.J. Obasi, Abba Makama, Michael Omonua) — the exact lineage of chiaroscuro Yoruba-spiritual cinema. The 2026 window closed before the campaign started; 2027 is the play. Nigerian premiere required — sequence after AFRIFF decisions, not before. Submission note: No independent official festival domain could be verified (checked directly, plus linktr.ee/s16film which lists no separate website). Festival's only confirmed web presence beyond social media (@s16filmfestival on IG/X) is its FilmFreeway page; organized by the Surreal16 Collective (Lagos, Nigeria). Recommend treating the FilmFreeway page as the de facto official portal until/unless a dedicated domain surfaces.",
    "festDate": "2027-12-09",
    "links": {
     "site": "",
     "filmfreeway": "https://filmfreeway.com/S16FilmFestival"
    },
    "source": "",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-03",
    "events": [],
    "notes": []
   },
@@ -2031,13 +2032,16 @@
    "tier": "strong",
    "joanPick": true,
    "cat": "Midwest major · Oscar-qualifying ×4",
-   "edition": "Nov 5–15, 2026",
+   "edition": "Nov 2027 (next entrable)",
    "feesText": "$30",
-   "why": "Four qualifying awards give a narrative short two live routes, and November 2026 is one of the earliest qualifying swings inside the window. St. Louis-only premiere rule. Confirm the current deadline on FilmFreeway immediately.",
-   "festDate": "2026-11-05",
-   "open": "",
+   "why": "Cinema St. Louis's festival since 1992, qualifying with four awards — Best of Fest and Best Live Action both reach a narrative short. BUT the Nov 2026 edition closed Aug 1, 2026 and notifications went out Sep 1, so this cycle is gone; the Nov 2027 edition falls after the 100th-Awards window closes. Next-cycle value only unless we were already in.",
+   "festDate": "2027-11-04",
+   "open": "2026-12-05",
    "tiers": [],
-   "links": {}
+   "links": {
+    "filmfreeway": "https://filmfreeway.com/StLouisInternationalFilmFestival",
+    "site": "https://www.cinemastlouis.org"
+   }
   },
   {
    "id": "nashville-film-festival",
@@ -2209,8 +2213,8 @@
    "name": "deadCenter Film Festival",
    "loc": "Oklahoma City, USA",
    "disposition": "target",
-   "close": "2026-10-15",
-   "estimated": true,
+   "close": "2027-02-13",
+   "estimated": false,
    "path": "Oscar-qualifying — Best Live Action Short (winner only)",
    "source": "https://filmfreeway.com/deadCenter",
    "lastChecked": "2026-09-03",
@@ -2223,9 +2227,12 @@
    "feesText": "$30",
    "why": "Oklahoma's largest festival and its only Oscar qualifier — triple-qualifying, MovieMaker '20 Coolest,' strong hospitality. Possibly the best win-probability-to-qualification ratio on Joan's whole list, and June 2027 is inside the window.",
    "festDate": "2027-06-09",
-   "open": "",
+   "open": "2026-08-15",
    "tiers": [],
-   "links": {}
+   "links": {
+    "filmfreeway": "https://filmfreeway.com/deadCenter",
+    "site": "https://deadcenterfilm.org"
+   }
   },
   {
    "id": "salute-your-shorts-festival",
@@ -2276,9 +2283,12 @@
    "feesText": "$42 early (Dec 7) · rises to final Mar 8",
    "why": "No premiere policy for shorts at all, late deadlines that fit after the winter majors resolve, and June 2027 sits comfortably inside the qualifying window. UK industry exposure for a Black diaspora story.",
    "festDate": "2027-06-16",
-   "open": "",
+   "open": "2026-03-08",
    "tiers": [],
-   "links": {}
+   "links": {
+    "site": "https://raindance.org/festival/submit/films/",
+    "filmfreeway": "https://filmfreeway.com/Raindance"
+   }
   },
   {
    "id": "uppsala-short-film-festival",
@@ -2300,7 +2310,7 @@
    "name": "Interfilm — International Short Film Festival Berlin",
    "loc": "Berlin, Germany",
    "disposition": "target",
-   "close": "2027-05-28",
+   "close": "2027-05-29",
    "estimated": true,
    "path": "Oscar-qualifying — Best Live Action, International Competition",
    "source": "https://www.interfilm.de/en/service/submit-films-at-interfilm/",
@@ -2311,11 +2321,13 @@
    "joanPick": true,
    "cat": "Berlin shorts · Oscar-qualifying",
    "edition": "Nov 10–15, 2026 (next entrable: 2027)",
-   "why": "Berlin's accessible shorts festival since 1982, qualifying since 2018, no premiere requirement. The Nov 2026 edition closed May 29; the Nov 2027 edition falls outside the 100th-Awards window — a next-cycle play.",
+   "why": "Berlin's accessible shorts festival since 1982, qualifying since 2018, no premiere requirement. The Nov 2026 edition closed May 29; the Nov 2027 edition falls outside the 100th-Awards window — a next-cycle play. Submission note: Uses ShortFilmDepot portal, not FilmFreeway; INTERFILM 43 unannounced, +1yr pattern.",
    "festDate": "2026-11-10",
-   "open": "",
+   "open": "2027-01-26",
    "tiers": [],
-   "links": {},
+   "links": {
+    "site": "https://www.interfilm.de/en/service/submit-films-at-interfilm/"
+   },
    "feesText": ""
   },
   {
@@ -2352,9 +2364,12 @@
    "feesText": "$2.50 student (non-VA university)",
    "why": "A University of Virginia program running nearly 40 years, 20,000+ attendances. At $2.50 the cost-to-credibility ratio is unbeatable, and a slavery-era Southern story carries obvious weight for a Charlottesville audience.",
    "festDate": "2027-10-21",
-   "open": "",
+   "open": "2027-01-08",
    "tiers": [],
-   "links": {}
+   "links": {
+    "site": "https://virginiafilmfestival.org/submit-a-film/",
+    "filmfreeway": "https://filmfreeway.com/VirginiaFilmFestival"
+   }
   },
   {
    "id": "cork-international-film-festival",
@@ -2435,9 +2450,12 @@
    "feesText": "$63",
    "why": "Founded by Sundance rejects, now in LA; considers films regardless of premiere status, so nothing already spent costs anything here. Caveat: a February LA screening spends the LA premiere that HollyShorts and LA Shorts require.",
    "festDate": "2027-02-18",
-   "open": "",
+   "open": "2026-05-18",
    "tiers": [],
-   "links": {}
+   "links": {
+    "filmfreeway": "https://filmfreeway.com/SlamdanceFilmFestival",
+    "site": "https://slamdance.com"
+   }
   },
   {
    "id": "lights-camera-africa-film-festival",
@@ -2487,9 +2505,12 @@
    "edition": "Nov 20–27, 2026 (next entrable: 2027)",
    "why": "FIAPF-recognized since 1974; the Spanish-premiere rule binds Spanish productions only. The 2026 deadline passed Jul 1 and Nov 2027 falls outside the 100th window — next-cycle value with a real cash prize.",
    "festDate": "2026-11-20",
-   "open": "",
+   "open": "2027-04-06",
    "tiers": [],
-   "links": {},
+   "links": {
+    "filmfreeway": "https://filmfreeway.com/ZINEBI",
+    "site": "https://zinebi.eus/en/"
+   },
    "feesText": ""
   },
   {
@@ -2526,9 +2547,12 @@
    "feesText": "$27",
    "why": "Qualifying in all three shorts categories with no premiere requirement and a student category. 2026 closed Jul 15; the Oct 2027 edition lands after the 100th window — next-cycle value.",
    "festDate": "2027-10-15",
-   "open": "",
+   "open": "2027-01-01",
    "tiers": [],
-   "links": {}
+   "links": {
+    "site": "https://nhfilmfestival.com",
+    "filmfreeway": "https://filmfreeway.com/NewHampshireFilmFestival"
+   }
   },
   {
    "id": "scad-savannah-film-festival",
@@ -2566,7 +2590,7 @@
    "loc": "Oberhausen, Germany",
    "disposition": "target",
    "close": "2027-01-18",
-   "estimated": false,
+   "estimated": true,
    "path": "Oscar-qualifying — Grand Prize of the City of Oberhausen",
    "source": "https://www.kurzfilmtage.de/en/festival/regulations/",
    "lastChecked": "2026-09-03",
@@ -2577,11 +2601,13 @@
    "cat": "Oldest shorts fest on earth · Oscar-qualifying",
    "edition": "Apr 27–May 2, 2027",
    "feesText": "Free",
-   "why": "The world's oldest short film festival, free to enter, qualifying, German-premiere rule untouched by US screenings. Curation is avant-garde-first — frame the ritual and spiritual formal elements. Entering forecloses other German festivals first (collides with Hamburg).",
+   "why": "The world's oldest short film festival, free to enter, qualifying, German-premiere rule untouched by US screenings. Curation is avant-garde-first — frame the ritual and spiritual formal elements. Entering forecloses other German festivals first (collides with Hamburg). Submission note: Uses FilmChief portal, not FilmFreeway; deadline confirmed, open date unpublished.",
    "festDate": "2027-04-27",
-   "open": "",
+   "open": "2026-07-21",
    "tiers": [],
-   "links": {}
+   "links": {
+    "site": "https://www.kurzfilmtage.de/en/festival/regulations/"
+   }
   },
   {
    "id": "bendfilm-festival",
@@ -2673,19 +2699,21 @@
    "edition": "Jan 28–Feb 7, 2027",
    "feesText": "€85",
    "path": "Not Oscar-qualifying; EFA pipeline",
-   "why": "A genuine A-list slot — the Tiger Short Competition is among Europe's most prestigious. Requires at minimum a European premiere (a US-only history preserves it) and its dates collide with Sundance. A deliberate Europe-first pivot, not a default: deadline Sep 15.",
+   "why": "A genuine A-list slot — the Tiger Short Competition is among Europe's most prestigious. Requires at minimum a European premiere (a US-only history preserves it) and its dates collide with Sundance. A deliberate Europe-first pivot, not a default: deadline Sep 15. Submission note: Direct IFFR portal, not FilmFreeway; late-fee deadline confirmed.",
    "festDate": "2027-01-28",
-   "open": "",
+   "open": "2026-05-01",
    "tiers": [],
-   "links": {}
+   "links": {
+    "site": "https://iffr.com/en/iffr-pro-submissions/film-entry"
+   }
   },
   {
    "id": "riverrun-international-film-festival",
    "name": "RiverRun International Film Festival",
    "loc": "Winston-Salem / Greensboro, NC, USA",
    "disposition": "target",
-   "close": "2026-12-01",
-   "estimated": true,
+   "close": "2026-12-07",
+   "estimated": false,
    "source": "https://riverrunfilm.com/submit-a-film/",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -2698,9 +2726,12 @@
    "path": "Oscar-qualifying for animated + documentary shorts ONLY — no live-action path",
    "why": "Respected Winston-Salem festival 200 miles from where the story is set. The Academy list settles it: no live-action narrative award qualifies, so this is regional resonance and press, not an Oscar play. NC premiere required — intact.",
    "festDate": "2027-04-16",
-   "open": "",
+   "open": "2026-08-11",
    "tiers": [],
-   "links": {}
+   "links": {
+    "site": "https://riverrunfilm.com/submit-a-film/",
+    "filmfreeway": "https://filmfreeway.com/RiverRun"
+   }
   },
   {
    "id": "sidewalk-film-festival",
@@ -2708,7 +2739,7 @@
    "loc": "Birmingham, AL, USA",
    "disposition": "target",
    "close": "2027-04-30",
-   "estimated": true,
+   "estimated": false,
    "source": "https://www.animation-festivals.com/festivals/sidewalk-film-festival/",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -2721,9 +2752,12 @@
    "path": "No qualifying path",
    "why": "Birmingham's flagship since 1999 with a dedicated Black Lens program for Black filmmakers and $10k+ in cash awards. No Oscar path — reinstated on Joan's case: Deep South audience resonance and a winnable student category.",
    "festDate": "2027-08-24",
-   "open": "",
+   "open": "2026-10-01",
    "tiers": [],
-   "links": {}
+   "links": {
+    "site": "https://sidewalkfest.com",
+    "filmfreeway": "https://filmfreeway.com/sidewalkfilm"
+   }
   },
   {
    "id": "morehouse-college-human-rights-film-festival-mchrff",
@@ -2859,7 +2893,7 @@
    "tier": "strong",
    "disposition": "target",
    "edition": "Apr 22–May 2, 2027",
-   "open": "",
+   "open": "2026-08-05",
    "close": "2026-11-11",
    "estimated": false,
    "feesText": "$50",
@@ -2868,7 +2902,8 @@
    "why": "Founded 1957; blue-chip curatorial brand whose premiere bar is only Bay Area — prior screenings elsewhere cost nothing. Highly selective: a reach, not a banker.",
    "festDate": "2027-04-22",
    "links": {
-    "site": "https://sffilm.org"
+    "site": "https://sffilm.org",
+    "filmfreeway": "https://filmfreeway.com/SFFILMFestival"
    },
    "source": "https://sffilm.org",
    "lastChecked": "2026-09-03",
@@ -2884,15 +2919,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Jun 17–20, 2027",
-   "open": "",
-   "close": "2026-10-17",
-   "estimated": true,
+   "open": "2026-08-16",
+   "close": "2027-01-09",
+   "estimated": false,
    "feesText": "$22.50 student",
    "tiers": [],
    "path": "No qualifying path",
    "why": "Founded 1998 by publicist Ave Montague with a $200 budget; a beloved Juneteenth-tied community festival, now family-run. Diaspora audience-building at low cost.",
    "festDate": "2027-06-17",
-   "links": {},
+   "links": {
+    "site": "https://www.sfbff.org",
+    "filmfreeway": "https://filmfreeway.com/sfbff"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -2906,17 +2944,18 @@
    "cat": "LA institution · qualifies via Best of Fest only",
    "tier": "worthy",
    "disposition": "target",
-   "edition": "Jul 16–27, 2027",
-   "open": "",
-   "close": "2027-06-01",
-   "estimated": true,
+   "edition": "Mar 4–10, 2027",
+   "open": "2026-08-30",
+   "close": "2027-01-22",
+   "estimated": false,
    "feesText": "$49",
    "tiers": [],
    "path": "Oscar-qualifying awards: Best of Fest / Animation / Documentary / International — a US fiction short's only route is Best of Fest",
-   "why": "Longest-running shorts festival in LA (1997), 69 alumni Oscar nominations. Requires no prior LA County screening — mutually exclusive with a February LA play.",
-   "festDate": "2027-07-16",
+   "why": "Longest-running shorts festival in LA (1997), 69 alumni Oscar nominations. The 2027 edition MOVED to March 4–10 (it ran in July previously) — so it now sits weeks after PAFF and Slamdance in the LA calendar, tightening the one-LA-premiere problem rather than easing it. Requires no prior LA County screening. Submissions are open now, final deadline Jan 22, 2027.",
+   "festDate": "2027-03-04",
    "links": {
-    "site": "https://www.lashortsfest.com"
+    "site": "https://www.lashortsfest.com",
+    "filmfreeway": "https://filmfreeway.com/LAShortsFest"
    },
    "source": "https://www.lashortsfest.com/submit-film",
    "lastChecked": "2026-09-03",
@@ -2932,8 +2971,8 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Oct 22–25, 2027",
-   "open": "",
-   "close": "2027-06-30",
+   "open": "2026-12-10",
+   "close": "2027-07-01",
    "estimated": true,
    "feesText": "$35",
    "tiers": [],
@@ -2941,7 +2980,8 @@
    "why": "MovieMaker 'worth the entry fee' pick. A win here counts toward the 101st Oscars, not the 100th — second-year backstop.",
    "festDate": "2027-10-22",
    "links": {
-    "site": "https://sjsff.com"
+    "site": "https://sjsff.com",
+    "filmfreeway": "https://filmfreeway.com/sjsff"
    },
    "source": "https://sjsff.com/festival/",
    "lastChecked": "2026-09-03",
@@ -2957,16 +2997,17 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Apr 22–27, 2027",
-   "open": "",
-   "close": "2026-09-30",
-   "estimated": true,
+   "open": "2026-07-01",
+   "close": "2026-11-30",
+   "estimated": false,
    "feesText": "$30",
    "tiers": [],
    "path": "Oscar-qualifying for Best Documentary Short ONLY — no narrative path",
    "why": "Respected regional with $500 cash prizes in the George Sidney competition and no premiere requirement. Worth $30 as exposure and a possible cash prize; not an Oscar play for a fiction short.",
    "festDate": "2027-04-22",
    "links": {
-    "site": "https://www.slofilmfest.org"
+    "site": "https://www.slofilmfest.org",
+    "filmfreeway": "https://filmfreeway.com/slofilmfest"
    },
    "source": "https://www.slofilmfest.org/submissions/",
    "lastChecked": "2026-09-03",
@@ -2982,7 +3023,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Oct 2027",
-   "open": "",
+   "open": "2026-11-03",
    "close": "2027-07-09",
    "estimated": true,
    "feesText": "$36",
@@ -2990,7 +3031,10 @@
    "path": "Oscar-qualifying — Best Narrative Short (+$15,000 Panavision package + $500 cash); Oct 2027 lands after the 100th window",
    "why": "Newly qualifying since Oct 2024 in New Mexico's production hub, with softer competition than coastal qualifiers. The 2026 edition closed Jul 9 — this records the 2027 edition, which feeds the following cycle.",
    "festDate": "2027-10-14",
-   "links": {},
+   "links": {
+    "site": "https://santafe.film",
+    "filmfreeway": "https://filmfreeway.com/SantaFeInternationalFilmFestival"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3005,7 +3049,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Mar 23–28, 2027",
-   "open": "",
+   "open": "2026-07-01",
    "close": "2026-09-30",
    "estimated": false,
    "feesText": "$80 late tier",
@@ -3014,7 +3058,8 @@
    "why": "Founded 1963, ~$40,000 in awards, no premiere requirement. Curation is experimental-first — frame the film around its ritual and spiritual formal elements. Late deadline Sep 30, 2026 is still open.",
    "festDate": "2027-03-23",
    "links": {
-    "site": "https://www.aafilmfest.org"
+    "site": "https://www.aafilmfest.org",
+    "filmfreeway": "https://filmfreeway.com/AAFilmFest"
    },
    "source": "https://www.aafilmfest.org/call-for-entries",
    "lastChecked": "2026-09-03",
@@ -3030,16 +3075,17 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Apr 7–18, 2027",
-   "open": "",
-   "close": "2026-09-01",
-   "estimated": true,
+   "open": "2026-08-01",
+   "close": "2026-12-01",
+   "estimated": false,
    "feesText": "~$12 with student ID (50% off $24)",
    "tiers": [],
    "path": "No qualifying path (verified)",
-   "why": "Running since 1981, 200+ films for a big Twin Cities audience. With the student discount and a known fee-waiver email, likely the best cost-per-audience ratio on Joan's sheet.",
+   "why": "Running since 1981, 200+ films for a big Twin Cities audience. With the student discount and a known fee-waiver email, likely the best cost-per-audience ratio on Joan's sheet. Note: FilmFreeway lists this as the 46th edition, not the 45th — same Apr 2027 dates.",
    "festDate": "2027-04-07",
    "links": {
-    "site": "https://mspfilm.org"
+    "site": "https://mspfilm.org",
+    "filmfreeway": "https://filmfreeway.com/mspiff"
    },
    "source": "https://mspfilm.org/mspiff45/",
    "lastChecked": "2026-09-03",
@@ -3055,15 +3101,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Oct 2027",
-   "open": "",
-   "close": "2027-04-30",
+   "open": "2027-03-20",
+   "close": "2027-06-19",
    "estimated": true,
    "feesText": "$25 student",
    "tiers": [],
    "path": "No shorts qualifying path",
    "why": "Founded 2012 with the Colbert family as backers; trade press calls it an early Oscar proving ground for features. High-credibility NYC-adjacent exposure rare at this price. Joan ranked it #1 in New Jersey.",
    "festDate": "2027-10-16",
-   "links": {},
+   "links": {
+    "site": "https://www.montclairfilm.org",
+    "filmfreeway": "https://filmfreeway.com/MontclairFilm"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3078,15 +3127,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Nov 2027",
-   "open": "",
-   "close": "2027-06-13",
+   "open": "2027-02-02",
+   "close": "2027-08-24",
    "estimated": true,
    "feesText": "$20",
    "tiers": [],
    "path": "No qualifying path",
    "why": "Founded 2006, themed 'Activism: Making Change'; programs heavily around racial-justice history. A story of enslavement, faith and resistance is a near-perfect mission fit — position it as social-justice storytelling in the cover note.",
    "festDate": "2027-11-05",
-   "links": {},
+   "links": {
+    "site": "https://www.teaneckfilmfestival.org",
+    "filmfreeway": "https://filmfreeway.com/TeaneckInternationalFilmFestival"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3101,15 +3153,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Spring 2027",
-   "open": "",
-   "close": "2026-10-01",
-   "estimated": true,
+   "open": "2026-09-01",
+   "close": "2026-11-23",
+   "estimated": false,
    "feesText": "$35 ($10 student discount)",
    "tiers": [],
    "path": "No qualifying path (did not survive its financial crisis)",
    "why": "Historically a filmmaker-hospitality standout; a reorganized board eliminated the debt and is rebuilding at roughly half the former footprint. Southern-Oregon-only premiere bar. Price the laurel at post-crisis value.",
    "festDate": "2027-04-15",
-   "links": {},
+   "links": {
+    "site": "https://www.ashlandfilm.org",
+    "filmfreeway": "https://filmfreeway.com/ashlandfilm"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3124,7 +3179,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Aug 2027",
-   "open": "",
+   "open": "2027-03-01",
    "close": "2027-07-12",
    "estimated": true,
    "feesText": "Free",
@@ -3132,7 +3187,10 @@
    "path": "No qualifying path",
    "why": "Two-day showcase hosted by the Delaware Art Museum. Free to submit; stated priority is BIPOC filmmakers from DE/MD/NJ/PA/NY. Verify a 2026 edition actually ran before counting on 2027.",
    "festDate": "2027-08-09",
-   "links": {},
+   "links": {
+    "site": "https://delart.org/event/filmfestival/",
+    "filmfreeway": "https://filmfreeway.com/TheDirtyPopcornBlackFilmFestival"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3146,17 +3204,18 @@
    "cat": "City-backed Chicagoland Black fest",
    "tier": "worthy",
    "disposition": "target",
-   "edition": "Oct 15–18, 2026",
-   "open": "",
-   "close": "2026-09-21",
+   "edition": "Oct 15–18, 2026 (entry closed)",
+   "open": "2026-04-13",
+   "close": "2026-08-23",
    "estimated": false,
    "feesText": "$15",
    "tiers": [],
    "path": "No qualifying path",
-   "why": "Founded ~2010, 30 minutes from Chicago, backed by the mayor's office, with genuine Chicagoland Black audience reach. A plausible win on the mid-tier — and the 2026 deadline is Sep 21, two and a half weeks out.",
+   "why": "Founded ~2010, 30 minutes from Chicago, backed by the mayor's office, with genuine Chicagoland Black audience reach. CORRECTION: the extended ENTRY deadline was Aug 23, 2026 and has passed — the Sep 21 date is materials-in-hand for films already accepted. Target the 2027 edition, or email the festival.",
    "festDate": "2026-10-15",
    "links": {
-    "filmfreeway": "https://filmfreeway.com/GIBFF"
+    "filmfreeway": "https://filmfreeway.com/GIBFF",
+    "site": "https://www.garyblackfilmfest.org/"
    },
    "source": "https://gary.capitalbnews.org/gary-international-black-film-festival/",
    "lastChecked": "2026-09-03",
@@ -3172,7 +3231,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Sep 2027",
-   "open": "",
+   "open": "2026-12-01",
    "close": "2027-06-20",
    "estimated": true,
    "feesText": "$22.50 student",
@@ -3181,7 +3240,8 @@
    "why": "Founded ~2002 by Natalie Morrow; small (~1,000 attendees, 3 awards) but 24 years running. The official site is stale while FilmFreeway is active — one email before paying.",
    "festDate": "2027-09-24",
    "links": {
-    "filmfreeway": "https://filmfreeway.com/tcbff"
+    "filmfreeway": "https://filmfreeway.com/tcbff",
+    "site": "https://tcbff.org/"
    },
    "source": "https://filmfreeway.com/tcbff",
    "lastChecked": "2026-09-03",
@@ -3197,8 +3257,8 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Jul–Aug 2027",
-   "open": "",
-   "close": "2027-05-01",
+   "open": "2027-01-20",
+   "close": "2027-03-10",
    "estimated": true,
    "feesText": "TBC",
    "tiers": [],
@@ -3206,7 +3266,8 @@
    "why": "Run by The Newark Museum of Art annually since 1974; early platforms for Spike Lee, Barry Jenkins, Ava DuVernay. 'Official selection of America's oldest Black film festival' is a laurel with historical weight, and the museum setting suits a period drama about ancestral faith.",
    "festDate": "2027-07-08",
    "links": {
-    "site": "https://newarkblackfilmfestival.com"
+    "site": "https://newarkblackfilmfestival.com",
+    "filmfreeway": "https://filmfreeway.com/NBFF1"
    },
    "source": "https://newarkblackfilmfestival.com/",
    "lastChecked": "2026-09-03",
@@ -3222,15 +3283,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "May 2027",
-   "open": "",
-   "close": "2027-02-01",
+   "open": "2026-11-30",
+   "close": "2027-03-31",
    "estimated": true,
    "feesText": "TBC",
    "tiers": [],
    "path": "No qualifying path",
    "why": "Presented by Wilmington's Black Arts Alliance for 24 consecutive years, drawing entries from NC to Kenya. A South Carolina story plays close to home in a legacy production town.",
    "festDate": "2027-05-01",
-   "links": {},
+   "links": {
+    "site": "https://ncblackfilmfestival.eventive.org/welcome",
+    "filmfreeway": "https://filmfreeway.com/NCBlackFilmFestival"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3245,7 +3309,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Sep 2027",
-   "open": "",
+   "open": "2027-02-01",
    "close": "2027-05-31",
    "estimated": false,
    "feesText": "$25",
@@ -3254,7 +3318,8 @@
    "why": "Founded 2012; nine days in-person plus virtual means real audience exposure, not one slot. Submission window runs Feb 1–May 31 every year — calendar February.",
    "festDate": "2027-09-17",
    "links": {
-    "site": "https://www.gcuff.org"
+    "site": "https://www.gcuff.org",
+    "filmfreeway": "https://filmfreeway.com/GCUFF"
    },
    "source": "https://www.gcuff.org/filmmakers",
    "lastChecked": "2026-09-03",
@@ -3270,15 +3335,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Sep 2027",
-   "open": "",
-   "close": "2027-04-03",
+   "open": "2026-10-21",
+   "close": "2027-06-12",
    "estimated": true,
    "feesText": "TBC",
    "tiers": [],
    "path": "No qualifying path",
    "why": "Launched June 2021 — the Tulsa Race Massacre centennial — in the historic Greenwood district, with OSU-Tulsa as sponsor. A film about an enslaved man reclaiming ancestral faith, screening where Black self-determination was burned and rebuilt: unmatched narrative alignment.",
    "festDate": "2027-09-06",
-   "links": {},
+   "links": {
+    "site": "https://greenwoodfilmfestival.com/",
+    "filmfreeway": "https://filmfreeway.com/GreenwoodFilmFestival"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3293,8 +3361,8 @@
    "tier": "strong",
    "disposition": "target",
    "edition": "Oct 2027",
-   "open": "",
-   "close": "2027-02-09",
+   "open": "2026-12-08",
+   "close": "2027-05-04",
    "estimated": true,
    "feesText": "Free (Gordon Parks category)",
    "tiers": [],
@@ -3302,7 +3370,8 @@
    "why": "The award honors the pioneering Black photographer-director whose period craft mirrors this film's, backed by the Kansas African American Museum and the Wichita NAACP. Feature-level winners get $5,000 + $15,000 Panavision rental.",
    "festDate": "2027-10-15",
    "links": {
-    "site": "https://tallgrassfilm.org"
+    "site": "https://tallgrassfilm.org",
+    "filmfreeway": "https://filmfreeway.com/TallgrassFilmFestival"
    },
    "source": "https://tallgrassfilm.org/tallgrass-film-festival-announces-5000-gordon-parks-award-for-outstanding-black-filmmaker/",
    "lastChecked": "2026-09-03",
@@ -3318,15 +3387,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Late Apr 2027",
-   "open": "",
+   "open": "2026-08-15",
    "close": "2026-10-21",
-   "estimated": true,
+   "estimated": false,
    "feesText": "$35",
    "tiers": [],
    "path": "No qualifying path",
    "why": "Founded 2003 as the Langston Hughes African American Film Festival; renamed 2020 explicitly to embrace the whole Black diaspora — a Nigerian-directed Yoruba story is what the rebrand courts. Run by LANGSTON at the city-owned institute.",
    "festDate": "2027-04-22",
-   "links": {},
+   "links": {
+    "site": "https://www.langstonseattle.org",
+    "filmfreeway": "https://filmfreeway.com/SeattleBlackFilmFestival"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3341,16 +3413,17 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Late Jan 2027",
-   "open": "",
-   "close": "2026-10-15",
-   "estimated": true,
+   "open": "2026-06-01",
+   "close": "2026-11-04",
+   "estimated": false,
    "feesText": "$31.50 college category",
    "tiers": [],
    "path": "No qualifying path",
    "why": "Founded 2015, now a major regional draw — film, music, spoken word, tech expo. The college category means competing against student work in a big Southern Black market during Black History Month season.",
    "festDate": "2027-01-27",
    "links": {
-    "site": "https://dentonbff.com"
+    "site": "https://dentonbff.com",
+    "filmfreeway": "https://filmfreeway.com/DentonBlackFilmFestival"
    },
    "source": "https://dentonbff.com/about/",
    "lastChecked": "2026-09-03",
@@ -3366,8 +3439,8 @@
    "tier": "strong",
    "disposition": "target",
    "edition": "Jun–Jul 2027",
-   "open": "",
-   "close": "2027-01-17",
+   "open": "2026-11-01",
+   "close": "2027-03-07",
    "estimated": true,
    "feesText": "$25",
    "tiers": [],
@@ -3375,7 +3448,8 @@
    "why": "Running since ~1998; screens inside the Museum of Fine Arts Boston as an official partner — museum-grade curatorial validation for a high-craft period drama, in Boston's academic and Black arts community.",
    "festDate": "2027-06-18",
    "links": {
-    "site": "https://www.roxfilmfest.com"
+    "site": "https://www.roxfilmfest.com",
+    "filmfreeway": "https://filmfreeway.com/TheRoxburyInternationalFilmFestival"
    },
    "source": "https://www.roxfilmfest.com/ourstory",
    "lastChecked": "2026-09-03",
@@ -3391,15 +3465,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Feb–Mar 2027",
-   "open": "",
-   "close": "2026-08-31",
-   "estimated": true,
+   "open": "2026-06-11",
+   "close": "2026-09-21",
+   "estimated": false,
    "feesText": "$5",
    "tiers": [],
    "path": "No qualifying path",
-   "why": "Founded 1991 by Portland Community College faculty; 36 consecutive editions, always free to the public. A month-long run means genuine community audience for $5. Sheet deadline has likely passed — email to confirm.",
+   "why": "Founded 1991 by Portland Community College faculty; 36 consecutive editions, always free to the public. A month-long run means genuine community audience for $5. Confirmed OPEN for the 37th edition — deadline Sep 21, 2026 has not passed.",
    "festDate": "2027-02-05",
-   "links": {},
+   "links": {
+    "site": "https://www.africanfilmfestival.org/",
+    "filmfreeway": "https://filmfreeway.com/CascadeFestivalofAfricanFilms"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3414,15 +3491,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "May 2027",
-   "open": "",
+   "open": "2026-04-01",
    "close": "2027-01-31",
-   "estimated": true,
+   "estimated": false,
    "feesText": "$21",
    "tiers": [],
    "path": "No qualifying path",
    "why": "Founded 2005; 20th-anniversary Screen Daily profile. The UK beachhead — London's large Nigerian diaspora, with trade-press attention rare at this size. Mid-transition (new leadership, date move): some execution risk.",
    "festDate": "2027-05-03",
-   "links": {},
+   "links": {
+    "site": "https://britishurbanfilmfestival.co.uk/",
+    "filmfreeway": "https://filmfreeway.com/BritishUrbanFilmFestival"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3437,7 +3517,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Sep 2027",
-   "open": "",
+   "open": "2027-03-12",
    "close": "2027-06-01",
    "estimated": true,
    "feesText": "$12.49",
@@ -3445,7 +3525,9 @@
    "path": "No qualifying path",
    "why": "Founded ~2023 by Kenyan-Australian filmmakers with Screen NSW backing; 2026 ran at the Sydney Opera House. The shorts category is explicitly for filmmakers of African heritage — the director qualifies directly. $12.49 buys a third continent.",
    "festDate": "2027-09-03",
-   "links": {},
+   "links": {
+    "filmfreeway": "https://filmfreeway.com/AfricaFilmFestAustralia"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3460,7 +3542,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Aug–Sep 2027",
-   "open": "",
+   "open": "2026-11-20",
    "close": "2027-03-15",
    "estimated": true,
    "feesText": "$9.60",
@@ -3468,7 +3550,10 @@
    "path": "No qualifying path",
    "why": "Run by nonprofit Observatorio Sur (~14 editions) across three cities plus a tour. Essentially the only Latin American window for African-diaspora cinema; the Yoruba thread resonates with Afro-Latin religious traditions. Spanish subtitles likely required.",
    "festDate": "2027-08-01",
-   "links": {},
+   "links": {
+    "site": "https://observatoriosur.org/",
+    "filmfreeway": "https://filmfreeway.com/FestivaldecineAfricanoArgentina"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3483,7 +3568,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Jun 1–6, 2027",
-   "open": "",
+   "open": "2026-10-01",
    "close": "2027-01-31",
    "estimated": false,
    "feesText": "~€8",
@@ -3491,7 +3576,10 @@
    "path": "Not Oscar-qualifying (verified); BAFTA/BIFA-qualifying",
    "why": "Scrappy, respected, more narrative-friendly than Oberhausen. German-premiere rule for the international competition collides with Oberhausen — Germany goes to one of them. Tightest completion window of the group: production not older than Jan 2026.",
    "festDate": "2027-06-01",
-   "links": {},
+   "links": {
+    "site": "https://festival.shortfilm.com/en",
+    "filmfreeway": "https://filmfreeway.com/KurzfilmFestivalHamburg"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3506,7 +3594,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Oct 2027",
-   "open": "",
+   "open": "2027-04-01",
    "close": "2027-07-31",
    "estimated": true,
    "feesText": "~€28",
@@ -3514,7 +3602,10 @@
    "path": "Oscar-qualifying — Grand Prix + Best Live Action Short; Oct 2027 lands after the 100th window",
    "why": "FIAPF A-list with four qualifying shorts awards. The 2026 edition closed Jul 31 and Oct 2027 feeds the following cycle — recorded for the long campaign.",
    "festDate": "2027-10-09",
-   "links": {},
+   "links": {
+    "site": "https://www.wff.pl",
+    "filmfreeway": "https://filmfreeway.com/WarsawFilmFestival"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3529,7 +3620,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Jun 26–Jul 3, 2027",
-   "open": "",
+   "open": "2026-01-13",
    "close": "2026-10-01",
    "estimated": false,
    "feesText": "~$30",
@@ -3537,7 +3628,10 @@
    "path": "Oscar-qualifying — Best Short Fiction (main competition; the student track feeds the Student Academy Awards instead)",
    "why": "Qualifying since 2017 and cheap. Category trap: enter the MAIN fiction competition (or both) — the student category alone doesn't reach the Oscar award. Bulgarian premiere intact. Deadline Oct 1.",
    "festDate": "2027-06-26",
-   "links": {},
+   "links": {
+    "site": "https://inthepalace.com",
+    "filmfreeway": "https://filmfreeway.com/InThePalaceISFF"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3552,7 +3646,7 @@
    "tier": "strong",
    "disposition": "target",
    "edition": "Sep 7–13, 2027",
-   "open": "",
+   "open": "2027-01-15",
    "close": "2027-04-30",
    "estimated": true,
    "feesText": "~€9",
@@ -3560,7 +3654,10 @@
    "path": "Oscar-qualifying — Grand Prix, International Competition; BAFTA (new 2026) + EFA qualifying",
    "why": "Greece's leading shorts festival for nearly 50 years — early platform for Lanthimos and Villeneuve. Greek premiere preserved by a US-only history. Its Sep 2027 dates land days before the window closes: a win counts, with zero slack.",
    "festDate": "2027-09-07",
-   "links": {},
+   "links": {
+    "site": "https://www.dramafilmfestival.gr",
+    "filmfreeway": "https://filmfreeway.com/Dramafilmfestival"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3575,15 +3672,17 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Aug 2027",
-   "open": "",
+   "open": "2027-04-06",
    "close": "2027-05-20",
    "estimated": true,
    "feesText": "Free",
    "tiers": [],
    "path": "No qualifying path; no premiere requirement",
-   "why": "Romania's 'Danube Delta Sundance' (est. 2004), ~5,000 attendees. Free entry, and the festival covers accommodation for one team member if selected. A free bonus, not a pillar.",
+   "why": "Romania's 'Danube Delta Sundance' (est. 2004), ~5,000 attendees. Free entry, and the festival covers accommodation for one team member if selected. A free bonus, not a pillar. Submission note: No FilmFreeway; submit by email to festival@anonimul.ro with entry form.",
    "festDate": "2027-08-10",
-   "links": {},
+   "links": {
+    "site": "https://www.festival-anonimul.ro"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3598,15 +3697,17 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Apr 15–26, 2027",
-   "open": "",
+   "open": "2026-10-01",
    "close": "2026-12-18",
    "estimated": true,
    "feesText": "Free",
    "tiers": [],
    "path": "Not Oscar-qualifying; Argentine-premiere-only rule",
-   "why": "400+ titles for a huge cinephile audience since 1999. Free entry to genuine critical credibility without spending any premiere that matters. A long international run by April could soften selection odds.",
+   "why": "400+ titles for a huge cinephile audience since 1999. Free entry to genuine critical credibility without spending any premiere that matters. A long international run by April could soften selection odds. Submission note: Own portal at bafici.org, not FilmFreeway; 28th unannounced, shifted.",
    "festDate": "2027-04-15",
-   "links": {},
+   "links": {
+    "site": "https://www.bafici.org"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3621,7 +3722,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Oct 2027",
-   "open": "",
+   "open": "2027-01-21",
    "close": "2027-06-05",
    "estimated": true,
    "feesText": "$36",
@@ -3629,7 +3730,10 @@
    "path": "Not on the Academy qualifying list (verified against every Canadian entry)",
    "why": "One of North America's largest audience festivals. Joan's sheet marked it qualifying — it isn't, and both reachable editions miss the 100th window anyway. Recorded as exposure for the long campaign.",
    "festDate": "2027-10-01",
-   "links": {},
+   "links": {
+    "site": "https://viff.org",
+    "filmfreeway": "https://filmfreeway.com/VIFF"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3644,15 +3748,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Oct 2027",
-   "open": "",
-   "close": "2027-05-01",
+   "open": "2027-02-13",
+   "close": "2027-05-31",
    "estimated": true,
    "feesText": "$35",
    "tiers": [],
    "path": "Oscar-qualifying — Best Short Film, International Competition (Loup Argenté); Oct 2027 feeds the following cycle",
    "why": "Founded 1971; a prestigious auteur/avant-garde house whose taste for formally bold, culturally hybrid work could embrace the film's Yoruba spiritual dimension. Quebec premiere intact.",
    "festDate": "2027-10-07",
-   "links": {},
+   "links": {
+    "site": "https://nouveaucinema.ca",
+    "filmfreeway": "https://filmfreeway.com/NouveauCinema"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3667,15 +3774,18 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Oct 2027",
-   "open": "",
-   "close": "2027-04-01",
+   "open": "2027-01-31",
+   "close": "2027-07-01",
    "estimated": true,
    "feesText": "$15 (30% film-school bulk discount)",
    "tiers": [],
    "path": "Oscar-qualifying — Best International Film; Oct 2027 feeds the following cycle",
    "why": "New Zealand's leading shorts festival and its first Academy-accredited one — a warm nationwide tour. International films explicitly eligible for the qualifying award. A low-cost hedge for a campaign that extends.",
    "festDate": "2027-10-06",
-   "links": {},
+   "links": {
+    "site": "https://www.showmeshorts.co.nz",
+    "filmfreeway": "https://filmfreeway.com/ShowMeShortsFilmFestival"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3690,7 +3800,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Late Apr 2027",
-   "open": "",
+   "open": "2026-10-13",
    "close": "2027-01-05",
    "estimated": true,
    "feesText": "~$13",
@@ -3698,7 +3808,10 @@
    "path": "Oscar-qualifying — Grand Prix in International Competition (KRW 10,000,000; winner-take-all)",
    "why": "Korea's premier shorts festival at the Busan Cinema Center, also BAFTA/Goya-qualifying. Korean premiere required for international competition — intact. A cheap, genuine qualifying lottery ticket.",
    "festDate": "2027-04-23",
-   "links": {},
+   "links": {
+    "site": "https://www.bisff.org",
+    "filmfreeway": "https://filmfreeway.com/BISFF_submit"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3713,7 +3826,7 @@
    "tier": "strong",
    "disposition": "target",
    "edition": "May 31–Jun 9, 2027",
-   "open": "",
+   "open": "2026-08-01",
    "close": "2027-01-15",
    "estimated": false,
    "feesText": "$30",
@@ -3721,7 +3834,10 @@
    "path": "Oscar-qualifying — Best Short awards in International / Asia International / Japan / Animation / Non-Fiction",
    "why": "Founded 1999 by Tetsuya Bessho; George Lucas Award Grand Prix. Multiple qualifying categories beat single-award fests on odds. Japan premiere must hold until ~June 2027: no Japan screenings, no streaming with Japanese subtitles. US screenings fine.",
    "festDate": "2027-05-31",
-   "links": {},
+   "links": {
+    "site": "https://www.shortshorts.org",
+    "filmfreeway": "https://filmfreeway.com/ShortShortsFilmFestivalAsia"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3736,7 +3852,7 @@
    "tier": "worthy",
    "disposition": "target",
    "edition": "Dec 2027",
-   "open": "",
+   "open": "2027-04-01",
    "close": "2027-07-31",
    "estimated": true,
    "feesText": "Free",
@@ -3744,7 +3860,9 @@
    "path": "No qualifying path; student-enrollment eligibility — confirm post-graduation rules",
    "why": "Run by Osaka's Knowledge Capital: ~1,000 entries from 88 countries, six winners, and finalists get roundtrip flights plus accommodation. The 2026 window closed Jul 31 — this records 2027; confirm films made while enrolled still qualify.",
    "festDate": "2027-12-04",
-   "links": {},
+   "links": {
+    "site": "https://kc-i.jp/en/activity/award/isca/"
+   },
    "source": "",
    "lastChecked": "2026-09-03",
    "events": [],
@@ -3986,6 +4104,86 @@ const HEAT = {
   "sxsw-2027": { prestige: 8, craft: 7, story: 6, oscar: 8, access: 4 },
   "atlanta-ff-51st": { prestige: 6, craft: 6, story: 9, oscar: 8, access: 8 },
   "afi-fest-2027-conservatory-showcase": { prestige: 7, craft: 7, story: 7, oscar: 7, access: 8 },
+  "tampere-57th": { prestige: 8, craft: 7, story: 6, oscar: 8, access: 5 },
+  "flickerfest-36th": { prestige: 7, craft: 7, story: 5, oscar: 7, access: 5 },
+  "carthage-jcc-37th": { prestige: 6, craft: 5, story: 9, oscar: 2, access: 6 },
+  "sbiff-42nd": { prestige: 7, craft: 6, story: 5, oscar: 7, access: 4 },
+  "cleveland-ciff51": { prestige: 6, craft: 6, story: 5, oscar: 8, access: 6 },
+  "florida-ff-36th": { prestige: 6, craft: 6, story: 5, oscar: 7, access: 6 },
+  "college-television-awards-46th": { prestige: 6, craft: 6, story: 6, oscar: 1, access: 5 },
+  "joburg-ff-9th": { prestige: 5, craft: 5, story: 9, oscar: 1, access: 7 },
+  "toronto-black-ff": { prestige: 5, craft: 4, story: 9, oscar: 1, access: 8 },
+  "regard-31st": { prestige: 8, craft: 7, story: 6, oscar: 6, access: 5 },
+  "krakow-ff-67th": { prestige: 7, craft: 7, story: 6, oscar: 7, access: 5 },
+  "luxor-african-ff-16th": { prestige: 5, craft: 5, story: 10, oscar: 1, access: 7 },
+  "seattle-siff-2027": { prestige: 6, craft: 6, story: 5, oscar: 7, access: 5 },
+  "vienna-shorts-2027": { prestige: 7, craft: 7, story: 6, oscar: 8, access: 6 },
+  "tribeca-2027": { prestige: 9, craft: 7, story: 7, oscar: 8, access: 3 },
+  "indy-shorts-2027": { prestige: 6, craft: 6, story: 5, oscar: 8, access: 6 },
+  "dga-student-awards-2027": { prestige: 7, craft: 6, story: 7, oscar: 1, access: 5 },
+  "student-academy-awards-54th": { prestige: 8, craft: 7, story: 7, oscar: 9, access: 4 },
+  "bronzelens-18th": { prestige: 6, craft: 5, story: 10, oscar: 8, access: 7 },
+  "curtas-vila-do-conde-35th": { prestige: 7, craft: 7, story: 6, oscar: 7, access: 5 },
+  "venice-orizzonti-corti-2027": { prestige: 10, craft: 8, story: 6, oscar: 8, access: 2 },
+  "aesthetica-17th": { prestige: 6, craft: 8, story: 5, oscar: 2, access: 6 },
+  "new-orleans-ff-2027": { prestige: 6, craft: 6, story: 10, oscar: 3, access: 6 },
+  "hollyshorts-23rd": { prestige: 6, craft: 6, story: 5, oscar: 8, access: 5 },
+  "amaa-2027": { prestige: 6, craft: 5, story: 10, oscar: 1, access: 6 },
+  "chicago-intl-63rd": { prestige: 7, craft: 7, story: 6, oscar: 3, access: 4 },
+  "adiff-ny-2027": { prestige: 4, craft: 4, story: 10, oscar: 1, access: 8 },
+  "winterthur-31st": { prestige: 7, craft: 7, story: 5, oscar: 7, access: 5 },
+  "urbanworld-2027": { prestige: 7, craft: 5, story: 10, oscar: 3, access: 6 },
+  "s16-2027": { prestige: 5, craft: 8, story: 5, oscar: 1, access: 6 },
+  "st-louis-international-film-festival-sliff": { prestige: 6, craft: 6, story: 6, oscar: 2, access: 7 },
+  "deadcenter-film-festival": { prestige: 5, craft: 5, story: 5, oscar: 8, access: 8 },
+  "raindance-film-festival": { prestige: 6, craft: 6, story: 6, oscar: 8, access: 6 },
+  "interfilm-international-short-film-festival-berlin": { prestige: 6, craft: 6, story: 5, oscar: 2, access: 6 },
+  "virginia-film-festival": { prestige: 6, craft: 5, story: 8, oscar: 1, access: 7 },
+  "slamdance-film-festival": { prestige: 7, craft: 6, story: 5, oscar: 8, access: 5 },
+  "zinebi-international-festival-of-documentary-and-short-film-": { prestige: 6, craft: 6, story: 5, oscar: 2, access: 5 },
+  "new-hampshire-film-festival": { prestige: 5, craft: 5, story: 4, oscar: 2, access: 7 },
+  "international-short-film-festival-oberhausen": { prestige: 8, craft: 7, story: 5, oscar: 7, access: 3 },
+  "international-film-festival-rotterdam-ammodo-tiger-short-com": { prestige: 9, craft: 8, story: 6, oscar: 1, access: 3 },
+  "riverrun-international-film-festival": { prestige: 5, craft: 5, story: 8, oscar: 1, access: 6 },
+  "sidewalk-film-festival": { prestige: 5, craft: 5, story: 9, oscar: 1, access: 7 },
+  "sffilm-2027": { prestige: 8, craft: 7, story: 6, oscar: 8, access: 4 },
+  "sf-black-ff-2027": { prestige: 4, craft: 4, story: 9, oscar: 1, access: 8 },
+  "la-shorts-2027": { prestige: 5, craft: 5, story: 5, oscar: 4, access: 5 },
+  "san-jose-shorts-2027": { prestige: 4, craft: 4, story: 4, oscar: 2, access: 7 },
+  "slo-iff-2027": { prestige: 4, craft: 5, story: 5, oscar: 1, access: 7 },
+  "santa-fe-iff-2027": { prestige: 5, craft: 6, story: 5, oscar: 2, access: 6 },
+  "ann-arbor-65th": { prestige: 7, craft: 7, story: 4, oscar: 7, access: 4 },
+  "mspiff-45th": { prestige: 5, craft: 5, story: 5, oscar: 1, access: 7 },
+  "montclair-2027": { prestige: 6, craft: 5, story: 5, oscar: 1, access: 5 },
+  "teaneck-2027": { prestige: 3, craft: 3, story: 9, oscar: 1, access: 9 },
+  "ashland-26th": { prestige: 4, craft: 5, story: 5, oscar: 1, access: 7 },
+  "dirty-popcorn-2027": { prestige: 2, craft: 2, story: 8, oscar: 1, access: 8 },
+  "gary-black-ff-16th": { prestige: 3, craft: 3, story: 9, oscar: 1, access: 5 },
+  "twin-cities-black-2027": { prestige: 3, craft: 3, story: 8, oscar: 1, access: 6 },
+  "newark-black-ff-2027": { prestige: 6, craft: 4, story: 10, oscar: 1, access: 6 },
+  "nc-black-ff-25th": { prestige: 3, craft: 3, story: 9, oscar: 1, access: 8 },
+  "gcuff-16th": { prestige: 4, craft: 4, story: 9, oscar: 1, access: 8 },
+  "greenwood-2027": { prestige: 3, craft: 3, story: 10, oscar: 1, access: 8 },
+  "tallgrass-2027": { prestige: 5, craft: 6, story: 10, oscar: 1, access: 7 },
+  "seattle-black-ff-2027": { prestige: 4, craft: 4, story: 9, oscar: 1, access: 7 },
+  "denton-black-ff-13th": { prestige: 4, craft: 4, story: 9, oscar: 1, access: 8 },
+  "roxbury-2027": { prestige: 6, craft: 6, story: 10, oscar: 1, access: 7 },
+  "cascade-african-37th": { prestige: 4, craft: 4, story: 10, oscar: 1, access: 8 },
+  "buff-2027": { prestige: 5, craft: 4, story: 9, oscar: 1, access: 7 },
+  "affa-2027": { prestige: 3, craft: 3, story: 9, oscar: 1, access: 8 },
+  "ficaa-15th": { prestige: 3, craft: 3, story: 9, oscar: 1, access: 8 },
+  "hamburg-43rd": { prestige: 5, craft: 6, story: 5, oscar: 1, access: 6 },
+  "warsaw-2027": { prestige: 6, craft: 6, story: 5, oscar: 2, access: 5 },
+  "in-the-palace-24th": { prestige: 5, craft: 5, story: 5, oscar: 7, access: 6 },
+  "drama-disff-2027": { prestige: 7, craft: 7, story: 6, oscar: 6, access: 5 },
+  "anonimul-2027": { prestige: 4, craft: 4, story: 5, oscar: 1, access: 7 },
+  "bafici-2027": { prestige: 7, craft: 6, story: 6, oscar: 1, access: 5 },
+  "viff-2027": { prestige: 6, craft: 5, story: 5, oscar: 1, access: 5 },
+  "fnc-2027": { prestige: 7, craft: 7, story: 6, oscar: 2, access: 5 },
+  "show-me-shorts-2027": { prestige: 5, craft: 5, story: 5, oscar: 2, access: 6 },
+  "bisff-44th": { prestige: 6, craft: 6, story: 5, oscar: 6, access: 4 },
+  "short-shorts-2027": { prestige: 7, craft: 7, story: 6, oscar: 8, access: 5 },
+  "isc-osaka-2027": { prestige: 3, craft: 4, story: 4, oscar: 1, access: 6 },
 };
 const CARDS = [
   { title: "Premiere status — the actual law", html: `
@@ -4446,12 +4644,17 @@ function renderHeat() {
     strong: ["#63402b", "#82492a", "#a15328", "#c05e26", "#e37b42"],
     worthy: ["#2e4f3e", "#27654b", "#207d59", "#199e70", "#45c493"],
   };
-  const rows = Object.keys(HEAT).map(id => {
+  const tierRank = { dream: 0, strong: 1, worthy: 2 };
+  const scored = Object.keys(HEAT).map(id => {
     const f = DATA.festivals.find(v => v.id === id);
-    if (!f) return "";
+    if (!f || f.disposition !== "target") return null;
     const h = HEAT[id];
+    return { id, f, h, total: h.prestige + h.craft + h.story + h.oscar + h.access };
+  }).filter(Boolean).sort((a, b) =>
+    (tierRank[a.f.tier] ?? 3) - (tierRank[b.f.tier] ?? 3) || b.total - a.total || a.f.name.localeCompare(b.f.name));
+  const rows = scored.map(({ id, f, h }) => {
     const ramp = RAMPS[f.tier] || RAMPS.strong;
-    return `<tr><td class="rowlabel"><span class="tiermark" style="background:${tierColor[f.tier]}"></span>${esc(f.name)}</td>${dims.map(d => {
+    return `<tr><td class="rowlabel"><span class="tiermark" style="background:${tierColor[f.tier]}"></span>${esc(f.name)}${f.joanPick ? ` <span style="color:var(--gold)" title="Joan pick">★</span>` : ""}</td>${dims.map(d => {
       const idx = Math.min(4, Math.floor(h[d.k] / 2.01));
       const vc = idx >= 3 ? "#171310" : "var(--text)";
       return `<td><div class="cell" style="background:${ramp[idx]};--vc:${vc}" title="${esc(f.name)} — ${d.l}: ${h[d.k]}/10">${h[d.k]}</div></td>`;
