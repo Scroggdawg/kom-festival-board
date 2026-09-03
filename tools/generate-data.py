@@ -22,7 +22,7 @@ targets_raw = [
     {"_id": f["id"], "name": f["name"], "loc": f.get("loc",""), "cat": f.get("cat",""), "tier": f.get("tier","strong"),
      "edition": f.get("edition",""), "open": f.get("open",""), "close": f.get("close",""),
      "estimated": f.get("estimated", False), "fees": f.get("feesText",""), "path": f.get("path",""),
-     "why": f.get("why",""), "festDate": f.get("festDate",""),
+     "why": f.get("why",""), "festDate": f.get("festDate",""), "_joanPick": f.get("joanPick", False),
      "_links": f.get("links", {}), "_events": f.get("events", []), "_notes": f.get("notes", [])}
     for f in _existing["festivals"] if f.get("disposition") == "target"
 ]
@@ -194,6 +194,7 @@ for t in targets_raw:
         "links": t.get("_links") or {"site": "", "filmfreeway": ""},
         "source": src, "lastChecked": "2026-08-25",
         "events": t.get("_events", []), "notes": t.get("_notes", []),
+        **({"joanPick": True} if t.get("_joanPick") else {}),
     })
 
 def enrich_links(rec, research_recs):
