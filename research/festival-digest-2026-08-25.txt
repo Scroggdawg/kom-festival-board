@@ -1,0 +1,959 @@
+FESTIVALS: 117
+Counter({'strong': 43, 'worthy': 42, 'longshot': 17, 'dream': 15})
+Counter({'unverified': 87, 'corrected': 11, 'confirmed': 10, 'unannounced (pattern-estimate)': 7, 'could-not-verify': 2})
+saved /private/tmp/claude-501/-Users-scrogdawg-BMF-Headquarters-Previous-Years-2025---SEW-TO-GROW-25-01-KILLER-OF-MEN--THESIS-/67a48209-fef3-451a-9368-917fbea745f0/scratchpad/kom-research.json
+
+===== HIGH-FIT (79) =====
+
+--- BlackStar Film Festival  [dream, fit 10]  Philadelphia USA  verified=unannounced (pattern-estimate)
+  fest_dates: 2027 edition unannounced; 2026 edition ran Aug 6-9, 2026 (confirmed, official site) — early Aug 2027 estimated from 2026 pattern
+  submissions_open: Est. early Jan 2027 (2026 cycle opened Jan 7 — confirmed on official 2026 submissions page)
+  deadlines: Estimated from confirmed 2026 pattern: Early ~Feb 1, Regular ~Mar 1, Late ~Apr 1, 2027; notification ~May 8. Student fee waived with valid ID or enrollment letter (confirmed for 2026).
+  final_deadline: ~2027-04-01 (estimated from confirmed 2026 pattern; 2027 not announced)
+  fees_usd: $25/$35/$45 (2026 sweep figures — NOT verifiable on official site; FilmFreeway inaccessible); $0 with student waiver (waiver confirmed official)
+  oscar_qualifying: Yes — confirmed twice: official 2026 submissions page states juried Short Narrative and Short Documentary award recipients are Academy-eligible without theatrical run; BlackStar also on the 98th Academy qualifying list (Short Narrative Jury Award, Short Documentary Jury Award)
+  other_awards_path: BAFTA-qualifying (on BAFTA British Short Film qualifying festivals list)
+  premiere_requirement: Confirmed: none required; preference for Philadelphia/East Coast/US/North American/World premieres. Open captions burned into final print REQUIRED for all accepted films (confirmed, 2026 edition rules).
+  estimated: True
+  fit: The single best-fit festival in the Black-cinema lane: BlackStar exists precisely for visionary work by Black/Brown/Indigenous directors, and consistently programs diaspora spirituality, ancestral memory, and formally bold craft — a chiaroscuro Yoruba-faith period short by a Nigerian director is dead center. Oscar-qualifying (Short Narrative jury award, confirmed on the Academy's 98th and 99th lists) AND BAFTA-qualifying, with the theatrical-run requirement waived for winners. Premiere status is
+  CORRECTIONS: Sweep's 2026-cycle facts all check out against the official 2026 submissions page (fest Aug 6-9 2026, opened Jan 7, Early Feb 1 / Regular Mar 1 / Late Apr 1, notification May 8, student fee waiver with ID/enrollment letter, open captions required, premiere preference not requirement, Academy eligibility for juried Short Narrative + Short Doc without theatrical run — stated on the official page its
+
+--- EnergaCAMERIMAGE — Film and Art School Etudes Competition  [dream, fit 10]  Toruń Poland  verified=corrected
+  fest_dates: 34th edition: Nov 7-14, 2026, Torun (confirmed, official site; submissions closed). Target 35th edition ~Nov 2027 — unannounced, estimated from pattern
+  submissions_open: 2026 cycle opened ~March 2026; 2027 cycle est. ~March 2027 (pattern estimate)
+  deadlines: Etudes 2026 (confirmed): single deadline Jul 31, 2026, no fee, school-representative submission only. 2027 estimate: ~Jul 31, 2027. (The May 31 / Jun 30 fee tiers are other sections, not etudes.)
+  final_deadline: ~2027-07-31 (estimated from confirmed 2026 etudes deadline of Jul 31, 2026; sweep's ~Jun 30 estimate was wrong)
+  fees_usd: $0 — etudes entries are explicitly no-fee (confirmed, official 2026 submissions announcement)
+  oscar_qualifying: No (confirmed by absence — no Academy qualification claimed anywhere on official competition page)
+  premiere_requirement: None stated for etudes on official pages (confirmed by absence; full terms PDF not retrievable)
+  cinematography_or_craft_award: Laszlo Kovacs Student Award — The Golden Tadpole (best cinematography in a student etude); Silver and Bronze Tadpoles
+  estimated: True
+  fit: The world's cinematography festival. The etudes competition's top prize is literally a best-cinematography award (Laszlo Kovacs Student Award / Golden Tadpole, plus Silver and Bronze). A tenebrist, single-source firelight period piece is precisely the kind of image-driven work its ASC/BSC-heavy juries reward, and AFI etudes regularly screen there. Free-to-cheap entry. Critical mechanic: ONLY a school-designated representative can submit — the team must get AFI's festival office to enter it; indi
+  CORRECTIONS: FEE CORRECTION: the Etudes Competition is FREE — the official 2026 submissions-open page lists 'Film and Art School Etudes Competition deadline: July 31, 2026 (no fee)'. The 80 PLN (May 31) / 500 PLN (June 30) ladder the sweep attached to etudes belongs to OTHER sections (main competition etc.). Etudes had a single deadline, July 31, 2026 (also the preview-screener date on the etudes page), so the
+
+--- HBO Short Film Award at the American Black Film Festival (ABFF 2027)  [dream, fit 10]  Los Angeles (moved from Miami) USA  verified=confirmed
+  fest_dates: May 20-23, 2027, Los Angeles — 31st edition (confirmed, official site)
+  submissions_open: General ABFF 2027 categories open now (features/episodic/microdrama; Early Oct 1, 2026). HBO Short Film Award: 'will open at a later date' (confirmed TBA on official site); 2026 cycle opened ~Oct 2025 — est. ~Oct-Nov 2026
+  deadlines: HBO award 2027 deadline TBA. Prior cycle: Feb 10, 2026. General ABFF 2027 categories (not shorts): Early Oct 1, 2026; Final Jan 24, 2027 (confirmed, official site) — HBO deadline plausibly ~Jan-Feb 2027 given the May festival
+  final_deadline: TBA — est. ~2027-01/02 (from 2026 pattern, adjusted for earlier festival; official general-category final is Jan 24, 2027)
+  fees_usd: 2027 fee TBA; ~$25-40 historical (2026 PDF removed from site — unverifiable this session)
+  oscar_qualifying: Yes — confirmed on official site: recipients 'qualified for consideration in the Live Action Short Film category of the 100th Academy Awards'; ABFF Best Short Film Award also on the 98th Academy qualifying list
+  other_awards_path: $10,000 grand prize; $5,000 to each of 4 runner-up finalists; all-expenses-paid festival trip for all 5 finalists; HBO/WBD industry exposure
+  premiere_requirement: None stated for the HBO award (2027 rules not yet posted; prior cycle had none). Note: general ABFF feature categories say priority to LA premieres — that is a features rule, not a shorts rule.
+  estimated: True
+  fit: Dead-center fit: the award exists to spotlight filmmakers of African descent (Nigerian director qualifies), the film's Black-diaspora, Yoruba-spirituality subject is squarely the festival's mission, and it is an ACADEMY-QUALIFYING award — the grand prize winner qualifies for Live Action Short Oscar consideration. Mechanics: submit to the HBO Short Film Award via ABFF (dedicated submission, separate from general ABFF shorts); a jury selects 5 finalists who screen live at the festival with an all-
+  CORRECTIONS: Core claims confirmed on abff.com: 31st edition in Los Angeles, May 20-23, 2027; HBO Short Film Award in its 30th year; submissions for it 'open at a later date'; five finalists screen before a jury; max 20 minutes (13-min film qualifies); open to US and international entries; winner qualified for Live Action Short at the 100th Academy Awards (official site language — Oscar status is current, not 
+
+--- Pan African Film & Arts Festival (PAFF)  [dream, fit 9.5]  Los Angeles USA  verified=could-not-verify
+  fest_dates: Feb 15-21, 2027 (confirmed, paff.org — 2027 edition)
+  submissions_open: 2027 submissions live on FilmFreeway (confirmed via official site nav); open date unverified
+  deadlines: 2027 ladder UNVERIFIED (FilmFreeway inaccessible). Sweep claims May 14 / Jul 16 / Aug 16 / Sep 16, 2026; official prior cycle (2026 edition) was May 31 / Jul 31 / Aug 31 / Sep 30, 2025 with Extended features-only. If pattern held, shorts Late = Aug 31, 2026 — possibly still open. Verify on FilmFreeway immediately.
+  final_deadline: Unverified — either 2026-08-16 (sweep, passed) or ~2026-08-31 by official prior-year pattern (would still be open); Extended tier was features-only last cycle. Manual FilmFreeway check required now.
+  fees_usd: Shorts fees unverified (no amounts on official site); sweep's $25-60 est. unconfirmed
+  oscar_qualifying: Yes — confirmed on 98th Academy qualifying list: Best Short Narrative Film Award, Best Short Documentary Award, Best Animated Short. The 'must premiere at PAFF' condition is NOT confirmed by any source seen this session.
+  premiere_requirement: No premiere requirement found on official pages; the sweep's claim that Oscar qualification applies only to PAFF premieres is unverified — confirm in FilmFreeway rules before choosing premiere strategy
+  fit: The largest Black film festival in the US and explicitly Pan-African: 'films by and/or about people of African descent' — a Nigerian director telling a Yoruba-spirituality slavery story is the festival's thesis statement. Oscar-qualifying in all three short categories (narrative live action, documentary, animation — confirmed on the Academy's 98th list). Caveat: PAFF's Oscar designation applies to shorts that PREMIERE at PAFF, so it works best as the world/LA premiere, which competes with a Blac
+  CORRECTIONS: Festival dates CONFIRMED: Feb 15-21, 2027 on paff.org, and 2027 submissions are live via FilmFreeway (linked from official nav). But the sweep's specific 2027 deadline ladder (Early May 14 / Regular Jul 16 / Late Aug 16 / Extended Sep 16, 2026) could NOT be verified — FilmFreeway blocks automated access and paff.org posts no 2027 ladder. Red flag: the official 2026-cycle post used month-END deadli
+
+--- ASC Student Heritage Awards  [dream, fit 9.5]  Los Angeles USA  verified=could-not-verify
+  fest_dates: Not a festival; winners announced ~Oct annually (unverified this session — program structure from sweep/training knowledge)
+  submissions_open: ~Spring 2027 for 2027 cycle (unverified pattern estimate)
+  deadlines: Sweep: 2026 deadline Jun 4, 2026 (passed); 2027 ~early Jun 2027. UNVERIFIED — official site inaccessible to automated checking; confirm via AFI or theasc.com directly
+  final_deadline: ~2027-06 (unverified pattern estimate)
+  fees_usd: None known (school-submitted; unverified)
+  oscar_qualifying: No (award program, not a qualifying festival — consistent with all known records)
+  premiere_requirement: None — award program, does not affect festival premiere status (unverified but structurally certain)
+  cinematography_or_craft_award: ASC Student Heritage Award — Graduate category (entire award is for cinematography); categories: Undergraduate, Graduate, Documentary, plus new International (Henner Hofmann) award
+  estimated: True
+  fit: The single most valuable cinematography-career credential a student film can win in the US — judged by an ASC blue-ribbon panel purely on cinematographic skill, and AFI Fellows win it regularly. Chiaroscuro period work is classic ASC-jury material. Entry is by the school: AFI may submit up to 3 students per category, so the DP must lobby the AFI cinematography discipline to be one of AFI's Graduate-category designees. Also check immediately whether AFI already entered the film in the 2026 cycle 
+  CORRECTIONS: Nothing could be verified from official sources this session: theasc.com returns 403 to automated fetches on every path tried, FilmFreeway is likewise blocked, and no third-party coverage of the 2026 cycle was found (cinematography.world's latest Heritage coverage is 2024; SHOOTonline and postPerspective have none). The sweep's specifics — June 4, 2026 deadline (passed), up to 3 entries per school
+
+--- Sundance Film Festival 2027  [dream, fit 9]  Boulder USA  verified=confirmed
+  fest_dates: Jan 21-31, 2027, Boulder, Colorado — 2027 edition, first in Boulder (confirmed, official announcement)
+  submissions_open: Open since spring 2026 (2027-cycle tiers confirmed on official submit page)
+  deadlines: 2027 cycle (confirmed, official): Early Jul 13, 2026 $55 — passed; Official Aug 3, 2026 $75 — passed; Late Aug 31, 2026 $95 — OPEN, closes in 6 days
+  final_deadline: 2026-08-31 (confirmed, official — act now)
+  fees_usd: $95 late tier, only tier open (confirmed)
+  oscar_qualifying: Yes — confirmed on 98th Academy list: Short Film Grand Jury Prize, Jury Award US Fiction, Jury Award International Fiction (also Animation, Nonfiction)
+  premiere_requirement: Confirmed: shorts completed after Dec 31, 2025 eligible regardless of premiere status; anything made publicly available before Jan 1, 2026 ineligible. US Short Film category: at least half US financing. Premieres still favored in practice.
+  cinematography_or_craft_award: No standing cinematography prize; jury gives discretionary Short Film Special Jury Awards (directing, acting, craft) in some years
+  fit: Sundance shorts programming prizes exactly this profile: auteur voice, cultural specificity, Black diaspora history, and a strong craft calling card. AFI thesis films regularly land here (past AFI theses have premiered in the shorts program). Crucially, shorts completed after Dec 31, 2025 are eligible REGARDLESS of premiere status, so nothing is lost by submitting. The chiaroscuro period-piece look plus Yoruba spiritual framework is a distinctive package for a program that receives ~12,000 short
+  CORRECTIONS: Everything checks out against official sundance.org pages. Dates/location: Jan 21-31, 2027, Boulder CO — first edition in its new permanent home (official blog). Shorts deadlines: Early Jul 13 ($55, passed), Official Aug 3 ($75, passed), Late Aug 31 ($95) — the ONLY tier still open, 6 days from today. Eligibility rule confirmed verbatim: projects made publicly available before Jan 1, 2026 are inel
+
+--- AFI FEST (Conservatory Showcase 2026 + open call 2027)  [strong, fit 9]  Los Angeles (TCL Chinese Theatres, Hollywood) USA  verified=corrected
+  fest_dates: 40th AFI FEST: Oct 21-25, 2026, TCL Chinese Theatres, Hollywood — CONFIRMED via AFI press release. 41st edition 2027: not announced; late-Oct estimate from pattern is fair.
+  submissions_open: 2026 open call opened Jan 20, 2026 (now closed) — CONFIRMED via afi.com news. 2027 open call est. Jan 2027 from pattern (unannounced). Conservatory Showcase: internal AFI selection of shorts from the most recent graduating class — confirmed the showcase exists and draws from the newest grads; 'no public deadline' consistent with AFI's pages.
+  deadlines: 2026 open-call ladder CONFIRMED on afi.com: Early Mar 1, Official Apr 12, Final May 31, 2026; shorts 40 min and under, completed after Oct 1, 2025; submissions exclusively via FilmFreeway. Fees not published on afi.com — CONFIRMED absent. Fee-waiver-via-fest.programming@AFI.com claim: could not verify from official pages.
+  final_deadline: ~2027-05-31 (2027 open call, estimated from confirmed 2026 pattern — correctly labeled estimate; never announced)
+  fees_usd: Not published outside FilmFreeway (confirmed absent from afi.com); alumni fee-waiver claim unverified
+  oscar_qualifying: Yes — afi.com states AFI FEST qualifies for the Live Action, Animated and Documentary Short Film Academy Award categories (also BAFTA and BIFA British short categories). The specific award name 'Grand Jury Prize' could not be independently confirmed against the Academy list (oscars.org blocks fetches) but festival qualifying status is confirmed by AFI itself. Correct that a Showcase slot alone is 
+  premiere_requirement: 2026 open call: completion after Oct 1, 2025 confirmed; no premiere requirement published for shorts — confirmed nothing stated in the announcement. Showcase = internal selection from most recent graduating class — confirmed in substance.
+  estimated: True
+  fit: The special relationship is real and confirmed: AFI FEST runs an annual AFI Conservatory Showcase of ~15 thesis shorts from the most recent graduating class, selected internally by AFI (not via open FilmFreeway submission). As a Class-of-2026 thesis, KILLER OF MEN's route into AFI FEST 2026 (Oct 21-25) is that showcase - pursue it through the Conservatory, and note AFI thesis films have earned 10 Oscar nominations/2 wins historically. Caution for the 2027 open call: AFI FEST 2026 required comple
+  CORRECTIONS: Two fixes. (1) '~15 thesis shorts' is wrong or at least outdated: the official AFI FEST 2025 Conservatory Showcase page lists roughly 32 short films, so the showcase is about twice the claimed size. (2) The '10 Oscar nominations/2 wins' history claim could not be verified on official pages — treat as unverified. Everything else (dates, 2026 deadline ladder, completion-date rule, Oct 1 completion c
+
+--- Cannes - La Cinef 2027 (student film selection)  [strong, fit 9]  Cannes France  verified=confirmed
+  fest_dates: May 11-22, 2027, 80th Festival de Cannes — CONFIRMED in the official 2027 La Cinef regulations
+  submissions_open: Portal open per the published 2027 regulations; entry form + film upload both required by the deadline — CONFIRMED
+  deadlines: Single deadline Feb 15, 2027 — CONFIRMED, official language: entry form completed and film uploaded by 'February 15th, 2027 at the latest'. No entry fee appears anywhere in the regulations.
+  final_deadline: 2027-02-15 (confirmed, official regulations)
+  fees_usd: No fee mentioned in the official regulations (La Cinef has historically been free); the regs neither state a fee nor the word 'free' — effectively free, minor caveat on the explicit 'Free' label
+  oscar_qualifying: No — confirmed by absence: the official regulations claim no Academy qualification (Cannes' qualifying short award is the Short Film Palme d'Or in official competition, not La Cinef). Prize amounts confirmed: EUR 15,000 / 11,000 / 7,500, plus the Cannes-support credit on the winner's first feature.
+  other_awards_path: First/Second/Third La Cinef Prizes (EUR 15,000/11,000/7,500)
+  premiere_requirement: Film-school requirement CONFIRMED ('films from film schools, whether fiction or animation'); 18-month window CONFIRMED ('made during the 18 months preceding the Festival' — a Jan 2026 completion is inside the window for May 2027); prior-festival rule CONFIRMED ('have not been presented at major international festivals'). Note: the regulations say nothing about online availability — the sweep's 'ke
+  fit: Purpose-built door for conservatory thesis films at the most prestigious festival on earth - AFI theses have a history in La Cinef, and a visually rigorous, culturally specific period piece is exactly its taste. Eligibility check: films must be made in the 18 months preceding the May 2027 festival (roughly post-Nov 2025) - a Jan 2026 picture-lock/grade squeaks inside the window, but confirm AFI can certify the completion date. Free to enter, cash prizes (EUR 15,000/11,000/7,500), and winners get
+
+--- Palm Springs International ShortFest  [dream, fit 9]  Palm Springs USA  verified=confirmed
+  fest_dates: Jun 22-28, 2027 (ShortFest 2027) — CONFIRMED on the official FilmFreeway listing
+  submissions_open: Sep 1, 2026 opening date — CONFIRMED (window opens a week after today)
+  deadlines: All CONFIRMED on FilmFreeway: Earlybird Nov 1, 2026 ($50); Regular Dec 31, 2026 ($60); Late Feb 7, 2027 ($70); Student tiers $45/$55/$65; Notification May 14, 2027. Fees pulled directly from the listing's fee tables.
+  final_deadline: 2027-02-07 (confirmed)
+  fees_usd: $50-70 standard; $45-65 student — confirmed exactly
+  oscar_qualifying: Yes — CONFIRMED: Academy-qualifying awards (first place only) are Best of the Festival, Best Animated Short, Best Documentary Short, Best Live-Action Short Over 15 Minutes, and Best Live-Action Short 15 Minutes and Under (the 13-min film's bucket). BAFTA and Goya qualifying also confirmed in the official listing text. Student films eligible for all five qualifying awards.
+  other_awards_path: BAFTA-qualifying; Goya-qualifying
+  premiere_requirement: CONFIRMED none: official FAQ says a premiere 'is NOT required' and films already online are eligible; completion in 2026 or 2027 required (Jan 2026 lock qualifies); max 40:00 incl. credits; DCP if selected. Video Library participation does not affect premiere status.
+  fit: The biggest shorts-only market/festival in North America and the standard AFI-thesis launchpad; craft-forward programming rewards the chiaroscuro cinematography, and its 300+ film slate leaves room for period drama. No premiere requirement, so it slots into any sequencing.
+
+--- Atlanta Film Festival  [strong, fit 9]  Atlanta USA  verified=confirmed
+  fest_dates: Apr 22 - May 2, 2027 — CONFIRMED on the official FilmFreeway listing; 2026 was the 50th (per festival's own review replies), making 2027 the 51st
+  submissions_open: Opening date May 3, 2026 — CONFIRMED; window is open now
+  deadlines: All CONFIRMED with Narrative Short fees from the expanded fee table: Hella Early May 29, 2026 ($40, passed); Early Jun 25, 2026 ($50, passed); Regular Sep 11, 2026 ($60, student $55); Late Oct 16, 2026 ($70, student $65); Extended Nov 6, 2026 ($85, student $80); Notification Feb 12, 2027. Georgia films 50% discount CONFIRMED verbatim in the Narrative Short category text (code via GA@atlantafilmfes
+  final_deadline: 2026-11-06 (Extended Deadline — confirmed)
+  fees_usd: $60-85 remaining tiers for narrative short (student $55-80) — confirmed; 'student ~$5 less' claim accurate
+  oscar_qualifying: Yes — CONFIRMED verbatim: the Narrative Short Competition jury award winner 'becomes Oscar-Qualified for the Academy Award for Best Live-Action Short Film' ($750 cash); Documentary and Animated Short jury awards also qualify.
+  premiere_requirement: CONFIRMED: no world premiere required in any category; premiere status considered in final selection; Georgia premiere required only for feature competition. Added nuance from the rules: films should not have screened publicly in greater Atlanta before ATLFF, and shorts already released online are programmed case-by-case with preference for unreleased work — KILLER OF MEN should stay off public in
+  fit: Major Southern A-tier regional with a deep Black film community and history of championing diaspora stories - a Southern slavery-era Yoruba narrative lands squarely in its wheelhouse. No premiere requirement for shorts, cheap early fees, and the window is open right now.
+
+--- New Orleans Film Festival  [strong, fit 9]  New Orleans USA  verified=unannounced (pattern-estimate)
+  fest_dates: 2027 edition unannounced. 2026 edition Oct 22-27, 2026 — CONFIRMED on the official FilmFreeway listing, validating the sweep's pattern basis. Late-Oct 2027 estimate is sound.
+  submissions_open: 2026 cycle opened Dec 1, 2025 — CONFIRMED. ~Dec 2026 opening for the 2027 cycle is a reasonable pattern estimate (unannounced).
+  deadlines: 2026-cycle actuals all CONFIRMED, including exact narrative-short fees from the fee table: Early Bird Jan 9, 2026 ($41); Regular Mar 6, 2026 ($51); Late Apr 24, 2026 ($65); Extended May 29, 2026 ($75); Notification Aug 19, 2026. The sweep's 2027 estimates project these correctly and are properly labeled as estimates.
+  final_deadline: ~2027-05-29 (estimated from confirmed 2026 pattern; 2027 cycle not yet announced)
+  fees_usd: $41-75 narrative short, 2026 actuals — confirmed exactly (Gold Members $36-67)
+  oscar_qualifying: Yes — CONFIRMED: Narrative Short Jury Award, Documentary Short Jury Award, and Animated Short Jury Award winners are Academy-eligible without a theatrical run. Minor nit: the listing calls it simply 'Animated Short Jury Award,' not 'Helen Hill' (irrelevant to this film).
+  premiere_requirement: CONFIRMED none: official FAQ says 'NOFF does not require world premiere status'; films already online on Vimeo/YouTube and prior virtual-festival screenings are explicitly eligible. 2026-cycle completion window: on or after June 1, 2024 (2027 cycle will presumably roll forward — Jan 2026 lock safe either way). Bonus: NOFF pays screening fees (~$125 for shorts in 2024) if captions supplied.
+  estimated: True
+  fit: Arguably the best regional-culture fit on the circuit: Deep South audience, strong Black Southern storytelling focus, and slavery-history resonance in Louisiana. Oscar-qualifying narrative short jury award, no premiere requirement, low fees. 2027 window opens around December 2026.
+  CORRECTIONS: Nothing material wrong — the record correctly flagged itself as estimated, and every 2026 actual it leaned on checked out to the dollar and the day.
+
+--- American Black Film Festival — HBO Short Film Award  [dream, fit 9]  Los Angeles (relocating from Miami for 2027) USA  verified=corrected
+  fest_dates: May 20-23, 2027, Los Angeles (first LA edition, 31st ABFF) — CONFIRMED on abff.com, its FilmFreeway listing, and theGrio (venues: AMC The Grove, Academy Museum, SLS Beverly Hills). HBO Short Film Award 'now in its 30th year' — confirmed verbatim.
+  submissions_open: CORRECTED: general submissions opened Aug 18, 2026 on FilmFreeway (not 'fall 2026' as an estimate — they are open NOW for features/episodic/microdrama). However the HBO Short Film Award category is NOT yet open: abff.com states 'Submissions for the HBO Short Film Award will open at a later date, with additional details to be announced,' and the category is absent from the FilmFreeway listing today
+  deadlines: CORRECTED from estimate to announced: Early deadline Oct 1, 2026; Final deadline Jan 24, 2027; Notification Apr 9, 2027 — per the official FilmFreeway listing, and abff.com prints the same Early Oct 1 / Final Jan 24 dates on the HBO Short Film Award section itself (pending its delayed opening). Submissions now run through FilmFreeway, a change from the old ABFF portal.
+  final_deadline: 2027-01-24 (announced final deadline; the sweep's '~Jan-Feb 2027' estimate was in the right zone but is now a hard date)
+  fees_usd: Still not published for the HBO Short category (category not yet open on FilmFreeway) — sweep's 'not yet published' stands
+  oscar_qualifying: Yes — CONFIRMED verbatim on abff.com: 'The recipient of the HBO Short Film Award at ABFF 2027 will be eligible for consideration in the Live Action Short Film category at the 100th Academy Awards.' Five finalists screen before a jury — confirmed. Prize amounts ($10,000 winner / $5,000 finalists) were not restated in the 2027 rules — treat as unconfirmed for 2027 until the category opens.
+  other_awards_path: $10,000 grand prize; $5,000 per finalist; HBO/Warner exposure
+  premiere_requirement: SUBSTANTIALLY CORRECTED. New 2027 general eligibility: completed on or after Jan 1, 2026 (a Jan 2026 lock qualifies, barely); must 'maintain Los Angeles Premiere status at the time of screening'; must 'not have been publicly exhibited, broadcast, licensed, or distributed online in the United States prior to May 23, 2027'; DCP required if selected; max 20 min incl. credits. CRITICAL: the sweep said
+  fit: The most industry-visible Black shorts competition in America, entering its 30th year: five finalists screen for a jury, grand prize is $10,000 cash ($5,000 to each runner-up), and the winner qualifies for the Live Action Short category of the 100th Academy Awards. Open to US AND international filmmakers of African descent — the Nigerian director qualifies — and at 13 minutes the film sits comfortably under the 20-minute cap. ABFF's buyer/executive audience (HBO, Sony, Netflix scouts) is arguabl
+  CORRECTIONS: Three corrections beyond dates: (1) Eligibility basis changed — the 2027 rules do NOT require the filmmaker be of African descent for the HBO award; it is now open to US and international narrative shorts whose CONTENT authentically reflects/celebrates African-diaspora themes (KILLER OF MEN qualifies easily on content, so the fit holds, but the sweep's 'the Nigerian director qualifies' cites a sup
+
+--- AFRIFF — Africa International Film Festival  [strong, fit 9]  Lagos Nigeria  verified=confirmed
+  fest_dates: Nov 1–7, 2026 (2026 edition, confirmed on official FilmFreeway listing; venue Film House Cinema, Landmark Centre, Lagos)
+  submissions_open: May 6, 2026 (2026 edition Opening Date, FilmFreeway)
+  deadlines: 2026 edition: Regular Aug 6, 2026 (passed); Late Aug 26, 2026 (tomorrow — confirmed); Notification Oct 3, 2026. Exact fees now confirmed from the FilmFreeway listing: Shorts $15 regular / $20 late (Student $10/$15); Student Shorts $10 regular / $15 late (Gold $8/$12); Features/Docs/Doc Short $20 regular / $25 late.
+  final_deadline: 2026-08-26 (2026 edition Late Deadline — confirmed)
+  fees_usd: Shorts: $15 regular / $20 late; Student Shorts: $10 regular / $15 late (exact figures confirmed; sweep's '~$10–25, shorts unconfirmed' range was right, now pinned down)
+  oscar_qualifying: no — confirmed: no Academy badge on FilmFreeway and AFRIFF does not appear on the 98th Academy Awards shorts qualifying festival list
+  other_awards_path: Strong AMAA-circuit visibility; AFRIFF Globe Awards
+  premiere_requirement: No premiere requirement — confirmed. Eligibility: projects produced within the past calendar year (Jan 2026 lock qualifies); foreign-language work subtitled in English; concise press kit required.
+  fit: Nigeria's flagship international festival, in the director's home industry. Yoruba subject matter by a Nigerian director is squarely what AFRIFF champions; diaspora-made films about African heritage are core programming. Major Nollywood industry visibility (Globe Awards, market, press). URGENT: the 2026 late deadline is 2026-08-26 — tomorrow.
+
+--- S16 Film Festival  [strong, fit 9]  Lagos Nigeria  verified=corrected
+  fest_dates: Dec 9–12, 2026 (2026 edition, confirmed on FilmFreeway; Alliance Française de Lagos / Mike Adenuga Centre + 2 venues)
+  submissions_open: May 1, 2026 (2026 edition Opening Date, FilmFreeway) — now closed
+  deadlines: 2026 edition: Earlybird May 18, 2026 ($15); Regular June 8, 2026 ($20); Late July 3, 2026 ($25) — all passed. Notification Sept 11, 2026.
+  final_deadline: 2026-07-03 (2026 edition Late Deadline — PASSED; 2026 submissions closed. 2027 edition window not yet announced.)
+  fees_usd: $15 earlybird / $20 regular / $25 late (2026 edition, confirmed)
+  oscar_qualifying: no — confirmed (no Academy badge; not on the 98th qualifying list)
+  other_awards_path: AFP Critics Prize introduced 2025
+  premiere_requirement: CORRECTED: Nigerian premiere required — the film must not have screened publicly or been released in Nigeria before S16.
+  estimated: True
+  fit: Run by the Surreal16 collective (C.J. 'Fiery' Obasi, Abba Makama, Michael Omonua) — the exact lineage of chiaroscuro Yoruba-spiritual cinema ('Mami Wata'). A tenebrist Ogun/ancestral-vision film is the festival's aesthetic thesis. 2026 is the first year public submissions open via FilmFreeway (previously curated). Best Nigerian arthouse calling-card slot available.
+  CORRECTIONS: Three errors. (1) The 2026 deadlines WERE announced and have ALL PASSED: Earlybird May 18, Regular June 8, Late (final) July 3, 2026 — not '~Oct 2026 estimated'. As of 2026-08-25 the 2026 window is closed (notification Sept 11, 2026); next actionable window is the 2027 edition. (2) Premiere requirement DOES exist: 'All films MUST be a Nigerian premiere at least' — must not have screened publicly o
+
+--- FESPACO — Panafrican Film and Television Festival of Ouagadougou (30th edition)  [dream, fit 9]  Ouagadougou Burkina Faso  verified=corrected
+  fest_dates: Feb 27 – Mar 6, 2027 (30th edition, confirmed on official call for films)
+  submissions_open: Feb 24, 2026 (2027 edition, official call — open now via fespaco.bf/inscription-des-films-2027)
+  deadlines: 2027 edition: single window Feb 24 – Sept 20, 2026; fee 32,798 FCFA / €50 per film, non-refundable. No earlier tiers.
+  final_deadline: 2026-09-20 (2027 edition — confirmed on official call, 'La date limite des inscriptions est fixée au 20 septembre 2026')
+  fees_usd: ~$54–58 (32,798 FCFA / €50 per film, non-refundable) — CORRECTED from 'historically free'
+  oscar_qualifying: yes, documentary categories only (Golden Stallion doc feature / Golden Foal doc short per 98th Academy list) — confirmed: NO qualifying path for this live-action fiction short
+  other_awards_path: Poulain d'or short-film competition; pan-African canon prestige
+  premiere_requirement: No premiere requirement — confirmed from official eligibility criteria: only 'never shown at a previous FESPACO edition' and 'no commercial exploitation in Burkina Faso', plus the 2-years-old recency cap.
+  fit: The most prestigious pan-African festival, biennial, next edition 2027 as suspected. Competition is open to African and diaspora directors — a Nigerian director's US-made film about Yoruba faith and enslavement fits both the diaspora remit and the 2027 theme ('African Cinemas and Endogenous Development' — cultural self-reclamation). Poulain (short film) competition is a career-making African credential. Deadline Sept 20, 2026 — actionable now. Caveat: Oscar-qualifying only for DOCUMENTARY short 
+  CORRECTIONS: Two errors, one nuance. (1) FEE: entry is NOT free — the official 2027 call sets a non-refundable registration fee of 32,798 FCFA = 50 EUR (~$54–58 USD) per film. (2) PLATFORM: the official call says registration is via the ABCA and FESPACO official sites at fespaco.bf/inscription-des-films-2027 — no mention of a 'Faso Arzeka' platform. (3) ELIGIBILITY nuance: the actual rule is 'no more than two 
+
+--- DGA Student Spotlight Awards for Underrepresented Directors (2027)  [strong, fit 9]  Los Angeles USA  verified=unannounced (pattern-estimate)
+  fest_dates: Awards event date TBA (2027 cycle not yet posted as of 2026-08-25; dga.org still shows the closed 2026 cycle)
+  submissions_open: ~Nov 1, 2026 (estimated from 2026 cycle, which opened Nov 1, 2025 — 2027 cycle not yet announced)
+  deadlines: 2026 cycle confirmed on dga.org rules page: opened Nov 1, 2025, closed April 1, 2026; films made Sept 2024–Dec 2025; director enrolled or graduated within one year of a U.S. school and identifying as from a marginalized community; key crew (director, writer, producer, DP, editor) students or grads within two years; max 40 min; streaming URL submission (Vimeo/YouTube, password OK); $2,500 prize per
+  final_deadline: ~2027-04-01 (estimated from 2026 pattern; 2027 rules not yet published)
+  fees_usd: No fee listed on the DGA rules page (appears free) — confirmed for the 2026 cycle
+  oscar_qualifying: no — confirmed (not a festival; not on the Academy qualifying list)
+  other_awards_path: $2,500 DGA prize per category winner; DGA screening of winning films; alumni of the program are a who's-who of working directors
+  premiere_requirement: None stated — confirmed (submission is by streaming link, not public exhibition)
+  estimated: True
+  fit: Near-perfect fit and — unlike SAA — the timing works. 2026 rules required films made Sept 2024–Dec 2025; the 2027 cycle window should roll forward to ~Sept 2025–Dec 2026, which CONTAINS a Jan-2026 completion (verify exact window when the 2027 rules post ~Nov 1, 2026). Director must identify as from a marginalized community (Nigerian director qualifies squarely with the program's intent), be enrolled at or graduated within one year from a U.S. film school — a June-2026 AFI graduate applying by Ap
+
+--- ASC Student Heritage Awards (2027)  [strong, fit 9]  Los Angeles (ASC Clubhouse) USA  verified=unannounced (pattern-estimate)
+  fest_dates: Winners announced ~October 2027 (estimated; 2026 winners announced October 2026 — confirmed pattern)
+  submissions_open: ~Spring 2027 (estimated; 2026 entries opened ~May 2026, deadline June 4, 2026)
+  deadlines: 2026 cycle: deadline June 4, 2026 (passed), winners October 2026 — confirmed. 2027 cycle: not yet announced; estimate ~early June 2027 from 2026 pattern. Entry routed through the school (up to 3 students per category in 2026); submission package = 4-min excerpt reel + Vimeo link to complete film + faculty verification letter.
+  final_deadline: ~2027-06 (estimated from June 4, 2026 pattern; 2027 rules not posted)
+  fees_usd: Not stated in any 2026-cycle source — confirm with ASC (Sal@theasc.com per the listing)
+  oscar_qualifying: no — confirmed (not a festival)
+  other_awards_path: ASC member-jury recognition; categories historically named for legendary DPs (Gordon Willis graduate award, Haskell Wexler documentary, etc.); winners announced at ASC event — career-making for a DP
+  premiere_requirement: None — confirmed (not a festival; excerpt + private Vimeo link, no public exhibition)
+  cinematography_or_craft_award: The entire award IS the cinematography prize (ASC Student Heritage Award, graduate category)
+  estimated: True
+  fit: The single best craft-path award for this film's calling card: a chiaroscuro/tenebrist, single-source-lit period piece is exactly what ASC juries reward. Award goes to the cinematographer (sole-DP rule), entered by the SCHOOL — colleges may submit up to 3 students per category, so the DP must secure one of AFI's graduate-category slots. 2026 cycle (deadline June 4, 2026, winners Oct 2026) is closed — if AFI didn't submit it, the 2027 cycle still works: eligibility extends to students who graduat
+  CORRECTIONS: 2026-cycle facts check out (deadline June 4, 2026 — passed; winners announced October 2026; schools submit up to 3 qualified students per category; eligible = graduating in 2026 or graduated within the past year, i.e. 2025; new Henner Hofmann International category for non-US schools). Two cautions: (1) the FilmFreeway listing is STALE — it still shows the 2022/2023-cycle rules and a June 30 deadl
+
+--- AFI Conservatory Showcase at AFI FEST 2026 (+ AFI Thesis Showcase)  [strong, fit 9]  Los Angeles (Hollywood) USA  verified=confirmed
+  fest_dates: Oct 21–25, 2026, TCL Chinese Theatres, Hollywood (40th edition, presented by Canva — confirmed on AFI's official press release)
+  submissions_open: n/a — internal AFI Conservatory selection, no open call and no fee for thesis films (confirmed); AFI FEST's separate open shorts call opened Jan 20, 2026 and closed May 31, 2026
+  deadlines: n/a for Conservatory films — 2026 Showcase slate already announced (23 films; KILLER OF MEN not among them). Next window: AFI FEST 2027 cycle.
+  final_deadline: n/a — internal selection; 2026 lineup announced without KILLER OF MEN, next window is the 2027 cycle
+  fees_usd: Free (internal selection) — confirmed
+  oscar_qualifying: AFI FEST qualifies via its juried shorts Grand Jury Prizes (Live Action/Animated/Doc Short — confirmed on the 98th Academy list and AFI's press release); Conservatory Showcase titles screen outside that competition, so no Oscar path through the Showcase itself
+  other_awards_path: Industry exposure to AFI FEST's talent-scouting audience; AMC Networks presentation; AFI directing meet-and-greet industry screenings
+  premiere_requirement: n/a to enter, but confirmed strategic caveat stands: a public AFI FEST screening is a public exhibition and would consume world-premiere status at premiere-strict festivals — sequence deliberately
+  fit: The film's home-turf industry launch, and it costs nothing — but it is NOT an open submission. AFI internally selects thesis films for the 'AFI Conservatory Showcase presented by AMC Networks' at AFI FEST (40th edition: Oct 21–25, 2026, TCL Chinese Theatres; 23 Conservatory films in both 2025 and 2026). The 2026 lineup has ALREADY been announced — check immediately whether KILLER OF MEN is in it; if not, the path is AFI FEST 2027. AFI also runs the long-standing cross-disciplinary Thesis Showcas
+  CORRECTIONS: No errors — and the sweep's open question is now resolved: KILLER OF MEN is NOT among the 23 announced titles of the AFI Conservatory Showcase presented by AMC Networks at AFI FEST 2026 (checked against the full published lineup), so the home-turf path is the 2027 cycle. One source caution: an AwardsWatch summary rendered the dates as Oct 22–26 (that was 2025's dates); AFI's own press release and 
+
+--- EnergaCAMERIMAGE — Film and Art School Etudes Competition (2027)  [strong, fit 9]  Toruń Poland  verified=corrected
+  fest_dates: 2026 (34th) edition confirmed: November 7–14, 2026, Toruń (2026 Selection Terms, Art. 1). 2027 (35th) edition unannounced — ~mid-November 2027, estimated from 2025–2026 pattern.
+  submissions_open: 2027 opening unannounced. 2026 submissions were open by spring 2026 (main-competition regular deadline was May 31, 2026), so ~spring 2027 is a reasonable estimate from the 2026 pattern.
+  deadlines: 2026 actuals (Art. 4 of Selection Terms): Etudes Competition — single deadline July 31, 2026 for entry + all selection materials (passed); results by Oct 5, 2026. Other sections for reference: May 31, 2026 regular / June 30, 2026 late (Main, Polish Features, both Debuts), June 30 (docs), July 31 (TV series, music videos, etudes). 2027 etudes deadline ~July 31, 2027, estimated from 2026 pattern.
+  final_deadline: ~2027-07-31 (estimated from 2026 pattern; 2027 Terms not yet published)
+  fees_usd: $0 — no entry fee for the Film and Art School Etudes Competition (confirmed in 2026 Selection Terms; docs, TV series and music videos are also free; feature competitions charge 80 PLN/~$25 regular, 500 PLN/~$170 late).
+  oscar_qualifying: No — not on the 98th Academy Awards qualifying festival list (confirmed).
+  other_awards_path: Golden Tadpole (Laszlo Kovacs Student Award) for best cinematography; enormous DP-community visibility at the world's main cinematography festival
+  premiere_requirement: None stated in the 2026 Selection Terms for the Etudes Competition. General rule: works must be completed after Jan 1 of the prior year (2026 edition: after Jan 1, 2025). Confirm the 2027 Terms when posted.
+  cinematography_or_craft_award: Laszlo Kovacs Student Award — The Golden Tadpole (best cinematography, student etudes)
+  estimated: True
+  fit: The world's flagship student-cinematography prize — the Laszlo Kovacs Student Award (Golden Tadpole) goes to the best cinematography among film-school etudes, judged by working DPs. A tenebrist, single-source-lit 2.39:1 period film is precisely the aesthetic this competition celebrates; for the DP it ranks with the ASC Heritage Award as a career-maker. The 2026 edition (Toruń, Nov 7–14, 2026) closed its student-etudes materials deadline July 31, 2026 — already passed — so target the 2027 edition
+  CORRECTIONS: Two fixes. (1) Fees ARE stated, and the sweep said they weren't: the 2026 Selection Terms (Art. 3, Etudes item 7) say 'There are no entry fees for submitting student etudes' — entry is free. (2) Material omission: entries are accepted ONLY from officially designated film-school representatives — 'Audiovisual works submitted individually by students themselves will not be considered' — so AFI, not 
+
+--- Clermont-Ferrand International Short Film Festival (+ Marché du Film Court)  [dream, fit 9]  Clermont-Ferrand France  verified=confirmed
+  fest_dates: 49th edition: January 29 – February 6, 2027 (confirmed on official site); Short Film Market February 1–4, 2027 (confirmed).
+  submissions_open: Open now via ShortFilmDepot (confirmed).
+  deadlines: International Competition: Sept 24, 2026 for films completed in 2026 (confirmed; the July 9, 2026 deadline covered only films completed Oct 1–Dec 31, 2025). National (France): Oct 1, 2026. Notification: directors contacted end of Nov 2026; list published early Dec 2026 (official wording).
+  final_deadline: 2026-09-24 (confirmed, International Competition, films completed in 2026)
+  fees_usd: ~$15 (€13 + delivery charges = 1 ShortFilmDepot stamp; flat, no early-bird tiers — confirmed)
+  oscar_qualifying: Yes — Grand Prix (International) per the 98th Academy Awards list (Grand Prix National also qualifies); BAFTA, European Film Awards and César badges plus FIAPF accreditation shown on the official submissions page.
+  other_awards_path: BAFTA-qualifying; EFA; César
+  premiere_requirement: None — festival states it 'does not require exclusivity or a premiere'; previously screened/online films eligible. Completion window: film must be completed on/after Oct 1, 2025 (Jan-2026 lock qualifies).
+  fit: The world's biggest shorts stage and market. French programmers respond strongly to auteur craft and Black diaspora stories; the chiaroscuro single-source lighting is exactly the kind of calling-card cinematography Clermont selects. No premiere requirement, 13 min fits easily, and every submitted film (selected or not) is referenced in the Marché catalogue free — 5,000 industry pros browse it, so the submission doubles as market exposure.
+  CORRECTIONS: One soft spot: the sweep's exact notification date of Dec 3, 2026 could not be verified on the official site, which says selected directors are contacted 'at the end of November' and the selection list 'will be published at the beginning of December.' Treat Dec 3 as unconfirmed; the window is right. Everything else confirmed against lecourt-clermont.org: festival Jan 29–Feb 6, 2027; market Feb 1–4
+
+--- Aspen Shortsfest  [dream, fit 8.5]  Aspen USA  verified=confirmed
+  fest_dates: April 6–10, 2027 (36th Shortsfest) — confirmed on FilmFreeway and aspenfilm.org.
+  submissions_open: Opened July 1, 2026 (confirmed; open now).
+  deadlines: Confirmed on FilmFreeway: Earlybird July 31, 2026 ($65, passed); Regular Sept 25, 2026 ($80); Late Nov 13, 2026 ($95); Notification March 3, 2027. Gold members: $58/$72/$85.
+  final_deadline: 2026-11-13 (confirmed)
+  fees_usd: $65 earlybird (passed) / $80 regular / $95 late — confirmed
+  oscar_qualifying: Yes — confirmed on the 98th Academy Awards list in five categories: Best Animation, Best Comedy, Best Documentary, Best Drama, Best Short Short (under 10 min). Best Drama is the lane for this film. (BAFTA/Canadian Screen claims in the sweep were not checked today.)
+  other_awards_path: BAFTA Cymru-qualifying; Canadian Screen Award-qualifying
+  premiere_requirement: Cannot have premiered before April 2026 (unpremiered film fine) AND must not have been publicly broadcast or made available online in the U.S. Max 40 min; DCP-only festival; English open captions required if selected.
+  fit: One of the two most prestigious US shorts-only festivals; curatorially serious drama programming is a strong match for a 13-min period piece, and the Best Drama award is the exact qualifying lane. Earlybird already passed - regular deadline is Sep 25, 2026.
+  CORRECTIONS: All claims verified against the live FilmFreeway listing. One addition the sweep undersold: beyond the 'cannot have premiered before April 2026' rule, entries 'that have been publicly broadcast or made available online in the U.S. are ineligible' (restricted online-festival screenings excepted) — so keep the film off the open internet. Minor internal inconsistency on Aspen's own page: the sidebar 
+
+--- HollyShorts Film Festival  [strong, fit 8.5]  Los Angeles (Hollywood) USA  verified=confirmed
+  fest_dates: August 12–22, 2027 (23rd edition — the FilmFreeway rules refer to 'the 23rd HollyShorts') — confirmed.
+  submissions_open: Opened August 24, 2026 (confirmed on FilmFreeway — open now, opened the day before the check date).
+  deadlines: Confirmed on FilmFreeway: Early Bird Jan 29, 2027 ($55); Regular Apr 2, 2027 ($65); Late May 7, 2027 ($75); Extended Jun 1, 2027 ($85); Notification Jul 13, 2027.
+  final_deadline: 2027-06-01 (confirmed, extended deadline)
+  fees_usd: $55/$65/$75/$85 standard across the four deadlines; Student category $50/$60/$70/$80 — confirmed
+  oscar_qualifying: Yes — confirmed on the 98th Academy Awards list in four categories: Best Short Film Grand Prize, Best Live Action Short Film, Best Animation Short Film, Best Documentary Short Film. (BAFTA claim not checked today.)
+  other_awards_path: BAFTA-qualifying
+  premiere_requirement: Los Angeles premiere required — confirmed verbatim in the rules: 'Films selected for the 23rd HollyShorts must be an LA premiere, meaning HSFF will be the first LA screening for any selected films.' Conflicts with any earlier LA screening, as the sweep warned.
+  fit: Industry-facing LA shorts festival qualifying in FOUR categories including a dedicated Cinematography strand inside Live Action - ideal for a tenebrist calling-card film. Caution: now requires an LA premiere, so it conflicts with LA Shorts or any earlier LA screening.
+
+--- BronzeLens Film Festival  [strong, fit 8.5]  Atlanta USA  verified=unannounced (pattern-estimate)
+  fest_dates: ~late August 2027 (18th annual), estimated from 2026 pattern (2026 confirmed: Aug 21–30, 2026, Tara Atlanta).
+  submissions_open: ~mid-October 2026, estimated from 2026 pattern (2026 cycle opened Oct 15, 2025 — confirmed).
+  deadlines: Estimated from confirmed 2026 actuals: Earlybird ~Dec 31, 2026 ($40); Regular ~early Mar 2027 ($50); Late ~early Apr 2027 ($60); notification ~mid-Jul 2027 (2026 actual: Jul 17).
+  final_deadline: ~2027-04-06 (estimated from 2026 pattern — 2026 late deadline was Apr 6, 2026)
+  fees_usd: Shorts $40/$50/$60 standard; student $30/$40/$50 (2026 actuals, confirmed; Georgia productions $10 less)
+  oscar_qualifying: Yes — 'Best Short' per the 98th Academy Awards list; bronzelens.com banner confirms 'OSCAR-Qualifying Festival · Short Film Category.'
+  premiere_requirement: None required; festival 'encourages at least an Atlanta premiere' (confirmed verbatim). But no prior theatrical release, TV airplay, or internet broadcast allowed.
+  estimated: True
+  fit: Atlanta's premier Black film festival and an Academy qualifier via Best Short - core audience alignment (Black Southern history, diaspora faith) with realistic odds and low fees. Atlanta premiere only 'encouraged.' Pairs strategically with ATLFF (April) - sequence Atlanta screenings deliberately.
+  CORRECTIONS: No errors found. The 2027 cycle is not yet open — the FilmFreeway listing still shows the 2026 cycle, and every 2026 actual the sweep used checks out exactly: opened Oct 15, 2025; Earlybird Dec 31, 2025 ($40); Regular Mar 6, 2026 ($50); Late Apr 6, 2026 ($60); notification Jul 17, 2026; event Aug 21–30, 2026 (17th annual, two weekends Aug 21–24 and 27–30 at the Tara Atlanta, running now). Student 
+
+--- Urbanworld Film Festival  [strong, fit 8.5]  New York USA  verified=unannounced (pattern-estimate)
+  fest_dates: ~mid-October 2027, estimated from 2026 pattern (2026 edition confirmed: Oct 14–18, 2026, NYC — festival's 'Road to 30' run-up).
+  submissions_open: ~early January 2027, estimated from 2026 pattern (2026 cycle opened Jan 5, 2026 — confirmed).
+  deadlines: Estimated from confirmed 2026 actuals (narrative shorts): Earlybird ~Apr 6 ($55); Regular ~Jul 6 ($75); Late ~Jul 10 ($95); Extended Final ~Aug 6, 2027 ($105); notification ~late Aug (2026 actual: Aug 28).
+  final_deadline: ~2027-08-06 (estimated from 2026 pattern)
+  fees_usd: Narrative shorts $55/$75/$95/$105 across the four deadlines (2026 actuals, confirmed against the category fee table; Gold members $44–$84)
+  oscar_qualifying: Yes — 'Best Narrative Short (U.S.)' per the 98th Academy Awards list (confirmed).
+  premiere_requirement: Shorts: World, USA, East Coast, or New York premiere required, 'with periodic exceptions made' (confirmed verbatim in the U.S. & World Narrative Short Films category). Also: no prior NY-area theatrical/major-festival screening without leadership approval; no U.S. commercial distribution or broadcast.
+  estimated: True
+  fit: The flagship multicultural/Black film festival of NYC with studio and streamer presence; Best Narrative Short (U.S.) qualifies. Hard constraint: shorts REQUIRE World/USA/East Coast/NY premiere status (periodic exceptions) - so an early East Coast premiere elsewhere burns eligibility. 2026 closed Aug 6; target Oct 2027.
+  CORRECTIONS: No errors; two additions. The 2027 cycle is not open — FilmFreeway still shows the closed 2026 cycle, and every 2026 actual the sweep used is confirmed: opened Jan 5, 2026; Earlybird Apr 6 ($55); Regular Jul 6 ($75); Late Jul 10 ($95); Extended Final Aug 6, 2026 ($105); notification Aug 28, 2026; event Oct 14–18, 2026. The premiere requirement is confirmed verbatim in the shorts category descripti
+
+--- Durban International Film Festival (48th edition)  [dream, fit 8.5]  Durban South Africa  verified=corrected
+  fest_dates: 48th edition unannounced. 47th confirmed Jul 23 – Aug 2, 2026 (official site). Est. late July 2027 — estimated from 2026 pattern.
+  submissions_open: 48th unannounced. Est. ~Oct/Nov 2026 open (the 47th call preceded its Jan 9, 2026 early bird). NOT Oct 31, 2026-per-2024-pattern — that 2024 window was a different edition's.
+  deadlines: 48th unannounced. Estimated from verified 47th FilmFreeway ladder: early bird ~Jan 9, 2027; regular/final ~Feb 27, 2027; notification ~May 1, 2027. Fees not published while entries closed (FilmFreeway shows no fee table).
+  final_deadline: ~2027-02-27 (estimated from 47th-edition pattern: regular deadline Feb 27, 2026)
+  fees_usd: unknown — FilmFreeway listing shows 'Entries Closed' with no fee table; check when the 48th call opens
+  oscar_qualifying: yes — confirmed: Academy Award Qualifying badge on FilmFreeway; Best Short Film and Best Documentary winners qualify
+  premiere_requirement: Per 47th FilmFreeway rules: must not have been shown on South African television, internet streaming services, or released/screened in South African cinemas before DIFF; completed after Jan 1, 2025 (fixed cutoff, expected to roll to Jan 1, 2026 for the 48th — borderline for a Jan 2026 lock); DCP required for exhibition; English subtitles if non-English; films declined by the previous edition canno
+  estimated: True
+  fit: Africa's premier Oscar-qualifying festival for live-action shorts — DIFF's Best Short Film award qualifies for the Academy Awards (confirmed on 98th AA list and in DIFF's own 2026 materials). Shorts category open to all countries. Timing caution: the 47th edition (Jul 23–Aug 2, 2026) just closed, so target the 48th (est. late July 2027); DIFF's 18-months-max age rule makes a Jan 2026 picture lock borderline at ~18 months — submit early and confirm the rule with the festival.
+  CORRECTIONS: Two errors. (1) The sweep attributed the Oct 31, 2024 – Jan 31, 2025 submission window to the 47th edition; that comes from UKZN's stale generic submissions page and belongs to an earlier cycle. The 47th edition's actual FilmFreeway ladder was: Early Bird Jan 9, 2026; Regular/final Feb 27, 2026; Notification May 1, 2026. (2) The '18-months-max age rule' is only on UKZN's older generic page; the 47
+
+--- NollywoodWeek Film Festival (NOW), Paris (14th edition)  [strong, fit 8.5]  Paris France  verified=unannounced (pattern-estimate)
+  fest_dates: 14th edition unannounced. 13th confirmed May 6–10, 2026, Cinéma L'Arlequin, Paris (official site). Est. early May 2027 — estimated from 2026 pattern.
+  submissions_open: Unannounced. Via FilmFreeway when the 2027 call opens (currently 'Entries Closed'); est. autumn/winter 2026 — unverifiable estimate.
+  deadlines: Nothing published for 2027 and no prior deadline ladder visible on the closed FilmFreeway listing. ~Jan–Feb 2027 final is an unverified guess.
+  final_deadline: unknown — ~early 2027 (unverified estimate; monitor filmfreeway.com/NollywoodWeekNOW)
+  fees_usd: unknown — no fee table visible while entries closed
+  oscar_qualifying: no — confirmed: plain 'Film Festival' event type on FilmFreeway, no qualifying badge or claim
+  other_awards_path: Audience-award festival; Nigerian industry prestige in the European market
+  premiere_requirement: None — confirmed on FilmFreeway rules; only requirement is advance notification if the film is/will be on a streaming or online platform by festival time
+  estimated: True
+  fit: THE Nigerian-cinema showcase in Europe (L'Arlequin, Paris), explicitly branded the Nigerian and African diaspora film festival — a Nigerian director's Yoruba-faith period piece is the ideal marquee short. Strong crossover audience of French-African diaspora plus Nollywood industry figures who attend. 2026 edition passed (May 6–10); target the 14th in May 2027.
+  CORRECTIONS: Sweep data broadly right; refinements: (1) FilmFreeway listing (13 years running, Cinéma L'Arlequin, Paris) is 'Entries Closed' with NO dates/deadlines or fee history visible, so the '~Jan–Feb 2027 final' estimate could not be verified against any published prior ladder — treat as a guess, watch the FilmFreeway page. (2) Eligibility rules verified on FilmFreeway: shorts must be UNDER 30 MINUTES (1
+
+--- AMAA — Africa Movie Academy Awards (shorts categories)  [strong, fit 8.5]  Lagos (ceremony location varies) Nigeria  verified=corrected
+  fest_dates: 2026 ceremony: Oct 31, 2026, Balmoral Convention Center Ikeja, Lagos (FilmFreeway event date). 2027 ceremony TBA — Oct/Nov pattern holds.
+  submissions_open: 2027 cycle unannounced; est. Dec 1, 2026 (2026 cycle opened Dec 1, 2025 — verified on FilmFreeway)
+  deadlines: 2027 estimated from verified 2026 pattern: opens ~Dec 1, 2026; earlybird ~Mar 31, 2027; stated close ~May 31, 2027 with likely extension to ~Jul 1, 2027. Shorts fees $15 earlybird / $20 standard (2026 rates).
+  final_deadline: ~2027-05-31 stated close, with extension to ~2027-07-01 likely (estimated from 2026 pattern)
+  fees_usd: $15–20 for shorts (2026 cycle, verified: $15 earlybird / $20 standard; student and Gold Member discounts)
+  oscar_qualifying: no — confirmed: an awards body, not an Academy-qualifying festival
+  other_awards_path: AMAA Best Short Film / Best Diaspora Short — top-tier Nigerian and pan-African industry credential
+  premiere_requirement: None — confirmed: films previously entered, nominated, or awarded elsewhere are explicitly eligible. Eligibility window instead: produced or released from July 2025 'till date' (2026 cycle); expect it to roll forward for 2027 — confirm a Jan-2026-locked, not-yet-released film qualifies.
+  estimated: True
+  fit: Not a festival but Africa's biggest film-award body and the single strongest Nigerian-industry prestige credential for a short. Accepts films by African/Black filmmakers including diaspora collaborations, and — crucially — accepts films that have already screened or won elsewhere, so it costs nothing strategically. Categories include Best Short Film and a diaspora short category, both natural homes for this film. 2026 cycle closed May 31, 2026; enter the 2027 cycle.
+  CORRECTIONS: Three corrections. (1) '2026 cycle closed May 31, 2026' was superseded: the FilmFreeway rules text says closes May 31, 2026, but the live Dates & Deadlines sidebar shows Earlybird Mar 31, 2026 and an EXTENDED DEADLINE of Jul 1, 2026; the listing is now 'Waiver Codes Only' (effectively closed to general entry). (2) Ceremony now known: 2026 event date Oct 31, 2026, Balmoral Convention Center Ikeja, 
+
+--- Aesthetica Film Festival (ASFF)  [strong, fit 8.5]  York United Kingdom  verified=corrected
+  fest_dates: 16th edition: Nov 4–8, 2026, York (confirmed, official site + FilmFreeway). 17th edition: ~early Nov 2027 — estimated from pattern, not announced.
+  submissions_open: Dec 1, 2026 for the 2027 cycle (official site: 'open for submissions for 2027 on 1 December'; 2026 cycle opened Dec 1, 2025)
+  deadlines: 2027 cycle from official schedule + 2026 pattern: opens Dec 1, 2026; regular deadline May 31, 2027; late deadline ~Jun 7, 2027; notification ~Aug 31, 2027. Shorts £28 regular / £39 late.
+  final_deadline: 2027-05-31 regular / ~2027-06-07 late (regular date per official 2027 schedule; late date estimated from 2026 pattern)
+  fees_usd: ~$36 regular / ~$50 late (£28 / £39 for shorts, verified 2026-cycle rates; Gold Members £24 / £35)
+  oscar_qualifying: no — confirmed. BAFTA-qualifying AND BIFA-qualifying for short film (both verified).
+  other_awards_path: BAFTA-qualifying (British Short Film category route)
+  premiere_requirement: None — confirmed on official site: 'We will accept submissions of films that have previously screened elsewhere.' Shorts max 30 min; non-English films need burnt-in subtitles.
+  cinematography_or_craft_award: Best Cinematography (special award), plus Best Editing, Best Director, Best Screenplay, Best of Fest
+  estimated: True
+  fit: BAFTA-qualifying with a NAMED Best Cinematography special award (verified), alongside Best of Fest (£1,000), Best Director, Best Editing, Best Screenplay and category prizes — one of the few qualifying festivals where craft is a headline award. UK audiences and juries respond well to period drama and diaspora stories; no premiere demands, so it costs nothing strategically. Drama category, shorts ≤30 min — a 13-min film fits cleanly.
+  CORRECTIONS: Core claims confirmed; four tightenings. (1) ASFF is BAFTA AND BIFA-qualifying for shorts — the sweep listed only BAFTA. (2) June 7 was not an 'extension': the 2026 cycle had a scheduled Late Submission Deadline of Jun 7, 2026 after the May 31, 2026 regular deadline (verified on FilmFreeway sidebar). (3) Exact fees known (were 'roughly £20–£40'): shorts £28 regular / £24 Gold Members; £39 late / £
+
+--- Zsigmond Vilmos International Film Festival  [strong, fit 8.5]  Szeged Hungary  verified=corrected
+  fest_dates: 10th edition confirmed May 13–17, 2026 (official site). 11th edition: ~mid-May 2027 — estimated from pattern, not announced.
+  submissions_open: ~early Nov 2026 for the 2027 call (2026 call published Nov 3, 2025 — verified; 2027 not yet announced)
+  deadlines: 2027 estimated from verified 2026 pattern: call ~Nov 2026; deadline ~Jan 15, 2027 midnight CET; lineup ~early Feb 2027. Fee €10 per short. Generous completion window (2026 call: completed after Jan 1, 2023) makes a Jan 2026 finish safely eligible.
+  final_deadline: ~2027-01-15 midnight CET (estimated from 2026 pattern: Jan 15, 2026)
+  fees_usd: ~$11 (€10 registration fee for shorts, verified — not free)
+  oscar_qualifying: no — confirmed: no qualifying badge or claim anywhere
+  premiere_requirement: None stated — confirmed: official call has no premiere clause. Requirements are English subtitles, final-cut online screener, DCP if selected, and the cinematographer's consent declaration if they didn't submit.
+  cinematography_or_craft_award: Vilmos Zsigmond Award for Best Cinematography (festival's headline prize); also Szeged City Award, Critics' Choice, Student Jury, Audience awards
+  estimated: True
+  fit: A festival dedicated entirely to the art of cinematography, honoring Vilmos Zsigmond in his birthplace — the jury explicitly evaluates films 'primarily on the basis of innovative cinematography.' A chiaroscuro firelight short is a bullseye. Generous completion window (2026 edition took films completed after Jan 1, 2023, so a Jan 2026 finish is safely eligible for 2027), shorts up to 60 min, and the Vilmos Zsigmond Award for Best Cinematography is the top prize. Smaller international profile than
+  CORRECTIONS: All core dates CONFIRMED exactly against the official Call for Applications: 10th edition May 13–17, 2026, Szeged, Belvárosi Cinema; call published Nov 3, 2025; deadline Jan 15, 2026 midnight CET; competition programme announced Feb 3, 2026; films completed after Jan 1, 2023 eligible; shorts max 60 min. Two corrections: (1) Fee is NOT 'possibly free' — €10 registration fee per short film / music v
+
+--- TIFF Short Cuts 2027  [strong, fit 8]  Toronto Canada  verified=corrected
+  fest_dates: 52nd edition unannounced; ~Sep 9–19, 2027 estimated from pattern (51st confirmed Sep 10–20, 2026 on tiff.net)
+  submissions_open: 'Submissions will open for our 52nd Festival in 2027' (tiff.net, verbatim). Est. ~late Feb 2027 (2026 cycle opened Feb 27, 2026 — verified).
+  deadlines: 2027 estimated from verified 2026 ladder: opens ~late Feb 2027; early-bird ~late Mar 2027 (Intl Shorts CAD $75); standard/final ~early May 2027 11:59pm ET (Intl Shorts CAD $95, $80.75 for TIFF Industry Members at 15% off). All via FilmFreeway.
+  final_deadline: ~2027-05-07 (estimated from 2026 pattern: standard deadline May 8, 2026) — but likely moot: rolling completion-date rule probably excludes a Jan 2026 film from the 2027 festival
+  fees_usd: ~$55 early-bird / ~$69 standard (CAD $75 / $95, verified 2026 rates for International Shorts)
+  oscar_qualifying: yes — confirmed verbatim: winners of Short Cuts Award for Best Canadian Short Film and Best International Short Film become Oscar-eligible
+  premiere_requirement: HARD rule (2026, verified): minimum North American premiere status at submission (World/International/NA; Canadian-premiere status only at TIFF's discretion); never publicly screened in Canada pre-festival; not posted online viewable in North America (geoblocked outside NA is OK); no DVD/Blu-ray/VOD sale, no NA theatrical/TV/streaming; not previously submitted to TIFF; AND completed on or after Se
+  estimated: True
+  fit: Short Cuts has a strong record championing Black diaspora and African filmmakers, and doubly Oscar-qualifies (Best International Short + Best Canadian Short). A fall 2027 slot works as a premiere-or-second-wind berth either way. 2027 (52nd) submissions not yet open; the 2026 pattern (international shorts deadline May 8, CAD $95) is the planning basis.
+  CORRECTIONS: Biggest catch of the sweep: LIKELY INELIGIBLE ON COMPLETION DATE. TIFF's verified 2026 (51st) rules require films 'completed on or after September 4, 2025' — a rolling window that resets each year to roughly the previous festival's opening day. If the 52nd (2027) festival rolls this to ~Sept 2026 as the pattern dictates, a film picture-locked/graded January 2026 is DISQUALIFIED on age regardless o
+
+--- Indy Shorts International Film Festival (Heartland Film)  [strong, fit 8]  Indianapolis USA  verified=no
+  fest_dates: Jul 20-25, 2027
+  submissions_open: Aug 11, 2026 (open now)
+  deadlines: Early Bird Nov 29, 2026 ($45 / student $36); Regular Feb 14, 2027 ($60 / $48); Late Mar 7, 2027 ($75 / $60); Extended Mar 21, 2027 ($95 / $76). Notification Jun 2, 2027.
+  final_deadline: 2027-03-21
+  fees_usd: $45-95 (student $36-76)
+  oscar_qualifying: yes - Narrative Grand Prize ($5,000; also Documentary and Animated Grand Prizes)
+  premiere_requirement: None - premiere status does not affect eligibility
+  fit: Largest Midwest shorts festival, $5,000 Narrative Grand Prize plus Oscar qualification, filmmaker-friendly (premiere status irrelevant, student discount for a thesis film). Heartland's uplift-and-humanity programming brief matches Mace's ancestral-redemption arc well.
+
+--- American Black Film Festival (ABFF)  [strong, fit 8]  Los Angeles (2027; moved from Miami) USA  verified=no
+  fest_dates: May 20-23, 2027 (Los Angeles)
+  submissions_open: Open as of Aug 2026 for 2027 (short film competition window on abff.com - typically closes late fall/winter)
+  deadlines: Shorts competition deadlines not published on the main page; historically submissions run ~Sep-Dec via ABFF's own portal (not FilmFreeway) with fees ~$65-95 - confirm at abff.com
+  final_deadline: ~2026-12-15
+  fees_usd: ~$65-95 (pattern estimate; ABFF uses its own portal)
+  oscar_qualifying: yes - Best Short Film Award (per 98th AA list)
+  premiere_requirement: Not stated on main site; historically no strict premiere requirement for shorts - confirm rules at submission
+  estimated: True
+  fit: The biggest Black film industry event in the country - buyers, HBO, networks - and its Best Short Film Award is on the Academy list. The juried shorts competition takes only a handful of finalists, so odds are steep, but a win or even selection is a major industry calling card. 2027 submissions are open now (features/episodic listed; confirm the shorts window on abff.com).
+
+--- Martha's Vineyard African American Film Festival (Run & Shoot Filmworks)  [strong, fit 8]  Oak Bluffs, Martha's Vineyard, MA USA  verified=no
+  fest_dates: 25th annual, 2027 — dates not announced; 2026 ran Aug 7–15, so estimate early-mid August 2027
+  submissions_open: Est. winter 2026–27 (2026 cycle notified filmmakers by June 30, 2026, implying a spring final deadline)
+  deadlines: 2027 deadlines not published; estimated from 2026 pattern: final deadline ~April–May 2027, notification ~June 30, 2027. Fees paid via FilmFreeway, non-refundable; amounts not publicly indexed.
+  final_deadline: ~2027-05 (estimated from 2026 pattern; confirm on FilmFreeway)
+  fees_usd: Not confirmed; check filmfreeway.com/mvaaff
+  oscar_qualifying: Yes — 'Best of the Best Award' (Academy 98th list)
+  premiere_requirement: No premiere requirement found; 2026 required completion on/after Jan 1, 2026 — verify the 2027 completion window against the film's Jan 2026 picture-lock
+  estimated: True
+  fit: Quietly one of the most valuable rooms in Black film: an Oscar-qualifying festival (listed on the Academy's 98th list under 'Run & Shoot Filmworks – MVAAFF, Best of the Best Award') whose August audience is unusually dense with Black executives, financiers, and tastemakers summering on the Vineyard. A prestige period drama plays perfectly here. Two cautions: 2026 required films completed on or after Jan 1, 2026 — a Jan 2026 picture-lock fits that vintage, but verify the 2027 edition's completion
+
+--- Luxor African Film Festival (16th edition)  [strong, fit 8]  Luxor Egypt  verified=no
+  fest_dates: Mar 28 – Apr 3, 2027 (16th edition)
+  submissions_open: Aug 21, 2026 (2027 edition, via the festival's own website)
+  deadlines: Window: Aug 21 – Dec 15, 2026. Short Films Competition (narrative/doc/animation) restricted to African directors. Fee not published — historically free.
+  final_deadline: 2026-12-15
+  fees_usd: none published (historically free)
+  oscar_qualifying: no
+  premiere_requirement: Not published in sources — confirm on the festival's submission portal
+  fit: A festival devoted entirely to African cinema, whose Short Films Competition is open exclusively to African directors — the Nigerian director qualifies, and diaspora-made heritage stories are a programming staple. Submissions for the 2027 edition opened Aug 21, 2026 — open right now, generous window to Dec 15.
+
+--- International Cinematographers' Film Festival Manaki Brothers  [strong, fit 8]  Bitola North Macedonia  verified=no
+  fest_dates: 47th edition: Sept 19–25, 2026 (submissions closed). Target = 48th edition, ~late Sept 2027 (estimated from pattern)
+  submissions_open: ~Jan–Feb 2027 (2026 open calls announced early in the year — estimated from pattern)
+  deadlines: 2026 pattern (Camera 300): early bird Apr 15 ($30), regular May 5 ($35), late Jun 20 ($40). Shorts/student calls ran in parallel. 2027 estimated same shape ending ~Jun 20, 2027
+  final_deadline: ~2027-06-20 (estimated from 2026 pattern)
+  fees_usd: $30–$40 tiered (2026 Camera 300 pattern; shorts call fees may differ — verify on FilmFreeway)
+  oscar_qualifying: unclear (likely no)
+  premiere_requirement: None stated for shorts — verify current regulations
+  cinematography_or_craft_award: Golden / Silver / Bronze Camera 300 for cinematography (features); shorts and student sections carry their own cinematography-focused recognitions — verify 2027 shorts award names
+  estimated: True
+  fit: The world's oldest festival devoted to cinematographers (since 1979) — Camerimage's Balkan sibling. Its program includes a Short Films Competition and a Student Program alongside the feature Camera 300 competition, with IMAGO ties and heavyweight DP juries/honorees. Exactly the room where a tenebrist period short builds a DP's reputation. 2026 edition (Sept 19–25) closed submissions June 20, 2026 — target the 48th edition in 2027.
+
+--- NBCUniversal Short Film Festival (2027)  [strong, fit 8]  New York + Los Angeles (bicoastal) USA  verified=no
+  fest_dates: Semifinalist screenings ~Aug 2027 (NYC); awards finale ~Oct 2027 (DGA Theater, LA) — estimated from standing pattern
+  submissions_open: ~Early 2027 (estimated; entries run at NBCUshortsFEST.com)
+  deadlines: Single deadline, historically May 15; free entry
+  final_deadline: ~2027-05-15 (estimated from the festival's standing annual pattern)
+  fees_usd: Free
+  oscar_qualifying: no
+  other_awards_path: Universal Pictures development meeting; NBC Emerging Director Program final-round placement; $5,000 cash grants (Drama/Comedy/Director); $60,000 Panavision package; post-production services package
+  premiere_requirement: None stated. Must be 2–22 min narrative (no docs/animation/music videos); diverse production team, cast, or theme required
+  estimated: True
+  fit: Free-entry, industry-run diversity showcase that this film satisfies on every axis (diverse team, cast AND theme — only one is required). 2–22 min narrative only: 13 min fits. Prize package is career fuel rather than statuary: $5,000 cash grants, a Universal Pictures development meeting, final-round placement in NBC's Emerging Director Program, post package, and a $60,000 Panavision New Filmmaker camera rental package for Outstanding Director. Bicoastal: semifinalist screenings in NYC (August), 
+
+--- Encounters Film Festival (Bristol)  [strong, fit 8]  Bristol UK  verified=no
+  fest_dates: 2027 edition est. late Sept 2027 (2026 edition runs Sept 23–27, 2026)
+  submissions_open: Call for 2027 opens autumn 2026 (festival's own statement)
+  deadlines: 2026 pattern: final deadline May 18, 2026, regular fee £25 — expect similar tiers for 2027 (est. from 2026 pattern)
+  final_deadline: ~2027-05-18 (estimated from 2026 pattern)
+  fees_usd: ~$32 (£25 regular, 2026 rate)
+  oscar_qualifying: yes — Brief Encounters Grand Prix (Live Action); qualifying since 2010. Note: absent from some third-party qualifying lists — reconfirm on the Academy list when the 2027 call opens
+  other_awards_path: BAFTA-qualifying; BIFA; European Film Awards
+  premiere_requirement: No strict premiere requirement published for international entries; completion after Jan 1 of the prior year (2026 rule: completed after Jan 1, 2025)
+  estimated: True
+  fit: Triple gateway (Oscar + BAFTA + EFA) with genuinely narrative-friendly, craft-appreciative programming — a better taste match for a tenebrist period drama than the experimental-leaning European majors. UK audiences and juries have been receptive to Black diaspora historical work. 2026 edition is closed; this targets the 2027 call opening autumn 2026.
+
+--- Indie Memphis Film Festival  [strong, fit 8]  Memphis, TN USA  verified=no
+  fest_dates: 29th edition est. early Nov 2027 (2026 edition: Nov 5–8, 2026, downtown Memphis)
+  submissions_open: est. March 2027 (2026 cycle opened March 2026)
+  deadlines: 2026 pattern: Early May 1; Regular May 29; Late June 26 — estimated same shape for 2027
+  final_deadline: ~2027-06-25 (estimated from 2026 pattern)
+  fees_usd: ~$25–45 tiered (FilmFreeway; exact 2027 tiers TBA)
+  oscar_qualifying: no — not on current Academy shorts qualifying lists (verify at submission time; older blog claims of qualification are outdated)
+  premiere_requirement: None published for shorts
+  estimated: True
+  fit: The best curatorial fit in the South: Indie Memphis has a deep, deliberate Black filmmaking legacy (Black Creators Forum, national reputation for championing Black auteurs) and a story of enslaved resistance rooted in Yoruba spirituality lands squarely in its wheelhouse. Honest correction to common belief: it does NOT appear on the current Academy shorts qualifying lists, so treat it as prestige/community, not an Oscar path. 2026 closed (late deadline June 26) — target 2027.
+
+--- Santa Barbara International Film Festival (SBIFF)  [strong, fit 8]  Santa Barbara, California USA  verified=no
+  fest_dates: 42nd edition Feb 3–13, 2027 (confirmed on sbiff.org)
+  submissions_open: Jul 1, 2026 (confirmed — open now, via FilmFreeway)
+  deadlines: Shorts ladder (confirmed on sbiff.org): Earlybird Aug 7, 2026 $50 (passed); Official Sep 18, 2026 $60; Late Oct 30, 2026 $70; Final Dec 2, 2026 $80. Notification Jan 8, 2027.
+  final_deadline: 2026-12-02
+  fees_usd: $50–$80 shorts (next actionable: $60 by Sep 18, 2026)
+  oscar_qualifying: yes — Best Live Action Short Film (also Animated and Documentary Short) per 99th AA qualifying list
+  other_awards_path: BAFTA Qualifying badge on FilmFreeway
+  premiere_requirement: Prioritizes US and World premieres; films publicly broadcast in the US or publicly streaming online before the festival are ineligible; completed no earlier than Nov 2025 (Jan 2026 picture lock qualifies)
+  fit: Oscar-qualifying in ALL THREE short categories (Best Live Action Short confirmed on 99th AA list), awards-season industry stop, and ACTIONABLE RIGHT NOW: submissions opened Jul 1, 2026 for the Feb 2027 edition. Keeps the Academy path alive if the January 2027 majors pass. Rules prioritize US/World premieres, which suits a premiere-intact film; the Dec 2 final deadline lands before Sundance notifications, so submitting is compatible with a Sundance-first strategy (notification Jan 8, 2027).
+
+--- Hamptons International Film Festival (HIFF)  [strong, fit 8]  East Hampton, New York USA  verified=no
+  fest_dates: HIFF34 confirmed Oct 2–12, 2026; target HIFF35 est. early-mid Oct 2027
+  submissions_open: est. late Feb 2027 for HIFF35 (2026 cycle opened Feb 26, 2026)
+  deadlines: 2026 cycle ladder (confirmed on FilmFreeway, fees not displayed now that entries are closed): Opened Feb 26; Earlybird Mar 16; Regular Apr 2; Late Apr 23; Extended May 14, 2026. Notification Sep 10, 2026. Est. same rhythm Feb–mid-May 2027 for HIFF35.
+  final_deadline: ~2027-05-13 (estimated from 2026 pattern)
+  fees_usd: not listed while entries closed; expect an escalating ladder across Feb–May
+  oscar_qualifying: yes — Best Narrative Short and Best Documentary Short per 99th AA qualifying list
+  premiere_requirement: No prior US theatrical release or US TV; strongly prefers film not available online; prefers no prior Long Island screening; completed on/after Jan 1, 2025 (2026 cycle rule); previously submitted films ineligible — so submit the finished film once, to the 2027 cycle
+  estimated: True
+  fit: Oscar-qualifying Narrative Short Competition ($1,000 prize, winner 'qualifies for Academy Award consideration') with an unusually heavy awards-season industry and press crowd ('Telluride East'; films at the 2025 edition drew 43 Oscar nominations). HIFF34 (Oct 2–12, 2026) closed May 14, 2026 as the critic said — slot the 2027 edition (HIFF35) into the fall premiere sequence. Premiere rules are lenient (no prior US theatrical/TV; online strongly discouraged), so it works as a fall stop even after 
+
+--- Berlinale Shorts 2027  [dream, fit 7.5]  Berlin Germany  verified=no
+  fest_dates: Feb 10-21, 2027 (77th edition; announced, one day longer with new Audience Days)
+  submissions_open: Online film entry activates September 2026
+  deadlines: Shorts (up to 30 min): Nov 4, 2026. Fee EUR 75 (incl. 7% VAT). Features: Oct 21, 2026.
+  final_deadline: 2026-11-04
+  fees_usd: ~$82 (EUR 75)
+  oscar_qualifying: Yes - Golden Bear for Best Short Film qualifies for Live Action Short
+  other_awards_path: Berlin Short Film Candidate for the European Film Awards
+  premiere_requirement: World or international premiere required for Berlinale Shorts; max 30 min; must not be publicly available online
+  cinematography_or_craft_award: No craft-specific prize; Silver Bear Jury Prize (Short Film) is the second competitive award
+  fit: Berlinale Shorts is the most politically engaged of the A-list shorts competitions - a formally rigorous film about slavery, resistance, and reclaimed African spirituality by a Nigerian director is squarely in its wheelhouse. Requires world or INTERNATIONAL premiere: US-only screenings (Sundance, AFI showcase) before February keep it eligible as an international premiere. Deadline lands Nov 4, 2026 - between Sundance and Sundance notification, so submit blind.
+
+--- Tribeca Festival 2027 - Narrative Shorts  [strong, fit 7.5]  New York USA  verified=no
+  fest_dates: ~Jun 2027 (estimated from June pattern; 2026 edition ran early-mid June)
+  submissions_open: Est. late Sep 2026 (2026 cycle opened Sep 25, 2025)
+  deadlines: 2026 pattern for estimate: Early ~Oct 29 ($50), Official ~Dec 3 ($70), Extended ~Feb 13 ($85). Site's 2027 page currently lists shorts fees $50/$60/$75 with $35 student rate - confirm when dates post.
+  final_deadline: ~2027-02-13 (extended deadline, estimated from 2026 pattern)
+  fees_usd: $50-$85 by tier; $35 student/discount code via entries@tribecafilm.com
+  oscar_qualifying: Yes - Best Narrative Short qualifies for Live Action Short
+  premiere_requirement: 2027 shorts premiere rule not confirmed in sources checked; historically Tribeca asks at minimum a New York premiere for shorts - verify on the 2027 rules when posted
+  cinematography_or_craft_award: No shorts craft award (cinematography prizes are feature-only at Tribeca)
+  estimated: True
+  fit: Tribeca programs one of the largest premier narrative shorts slates in the US, has deep Black diaspora programming history, an NYC industry audience, and Oscar qualification via Best Narrative Short. Realistic odds are better than the European A-list competitions. Student/discount rate ($35 by emailing entries@tribecafilm.com) applies to a thesis film. 2027 deadlines not yet posted; submissions historically open late September, i.e., within weeks of today.
+
+--- LA Shorts International Film Festival  [worthy, fit 7.5]  Los Angeles USA  verified=no
+  fest_dates: ~late Jul-mid Aug 2027 (2026 ran Jul 30-Aug 12) - estimated from 2026 pattern
+  submissions_open: ~Oct-Nov 2026 (2027 listing not yet posted on FilmFreeway)
+  deadlines: Estimated from 2026 cycle: Early ~Feb 27 ($49); Regular ~Apr 3 ($59); Extended ~May 1 ($65); Late ~May 29 ($70); notification ~Jun 24, 2027
+  final_deadline: ~2027-05-29
+  fees_usd: $49-70 (2026 actuals)
+  oscar_qualifying: yes - Best of Fest (plus Best International, Best Animation, Best Documentary) per 98th AA list
+  other_awards_path: BAFTA-qualifying; Canadian Screen Award-qualifying; Goya-qualifying
+  premiere_requirement: None hard; prefers no prior LA County screening or online availability
+  estimated: True
+  fit: Longest-running LA shorts fest, quadruple-accredited (Oscar/BAFTA/CSA/Goya) with 68 alumni Oscar nominations; big industry eyeballs. US film's qualifying path is Best of Fest, which is a single-winner longshot. 2027 listing not yet live - dates below are the 2026 pattern.
+
+--- Cleveland International Film Festival  [worthy, fit 7.5]  Cleveland USA  verified=no
+  fest_dates: April 2027 (CIFF51; FilmFreeway lists event window Apr 1-30, 2027 including streaming)
+  submissions_open: Jul 1, 2026 (open now)
+  deadlines: Earlybird Jul 31, 2026 PASSED ($50); Regular Sep 30, 2026 ($65); Final Nov 30, 2026 ($80); Late Dec 15, 2026 ($100). Notification Mar 1, 2027.
+  final_deadline: 2026-12-15
+  fees_usd: $50-100 (shorts)
+  oscar_qualifying: yes - Best Live Action Short Film (also Best Animated Short Film, Best Documentary Short Film)
+  other_awards_path: Canadian Screen Award-qualifying
+  premiere_requirement: Cleveland premiere required (no prior in-person exhibition in Greater Cleveland)
+  fit: One of the few festivals worldwide qualifying in all three shorts categories, with a huge civic audience. Solid but not culturally specific fit; requires a Cleveland premiere (easy to preserve). Shorts fees moderate; regular deadline Sep 30, 2026.
+
+--- Chicago International Film Festival  [strong, fit 7.5]  Chicago USA  verified=no
+  fest_dates: ~mid-late Oct 2027 (63rd; 2026 edition: Oct 14-25) - estimated from 2026 pattern
+  submissions_open: ~Jan 2027 (2026 cycle opened Jan 12, 2026)
+  deadlines: Estimated from 2026 cycle (shorts): Earlybird ~Apr 7 ($45); Regular ~Jun 8 ($60); Late ~Jun 30, 2027 ($80). Student shorts $20/$30/$50.
+  final_deadline: ~2027-06-30
+  fees_usd: $45-80 (shorts, 2026 actuals)
+  oscar_qualifying: yes - Gold Hugo, Live Action Short Film Competition (also Gold Hugo Animated and Documentary Short)
+  other_awards_path: BAFTA-qualifying; Canadian Screen Award-qualifying
+  premiere_requirement: No premiere required; film must have premiered within ~12 months of the festival (2026 rule: after Oct 26, 2025); Chicago premiere preferred
+  estimated: True
+  fit: Oldest competitive US festival; Gold Hugo shorts prize qualifies, and its long-running Black Perspectives program makes a Black diaspora period film a natural submission. 2026 edition closed Jun 30 - target the Oct 2027 edition when submissions reopen in Jan 2027.
+
+--- Martha's Vineyard African American Film Festival (MVAAFF)  [worthy, fit 7.5]  Oak Bluffs, MA USA  verified=no
+  fest_dates: ~early-mid Aug 2027 (25th edition) - estimated from pattern (runs annually in August)
+  submissions_open: ~Dec 2026-Jan 2027 (2027 listing not yet live on FilmFreeway)
+  deadlines: Not yet posted for 2027; prior cycles ran roughly Dec-Apr/May with fees in the ~$35-65 range - confirm when the FilmFreeway listing reopens
+  final_deadline: ~2027-05-01
+  fees_usd: ~$35-65 (pattern estimate; not verified)
+  oscar_qualifying: yes - Best of the Best Award (per 98th AA list); festival bills itself Academy-accredited
+  premiere_requirement: None stated; premieres and original works prioritized in programming
+  estimated: True
+  fit: 'The Summer's Finest' - tastemaker Black cultural audience (industry, political, HBO presence) and Academy-accredited via the Best of the Best Award. Great networking value for a Nigerian-American director; single-award qualification path is narrow. 2026 (24th) just ran; 2027 window opens winter.
+
+--- Toronto Black Film Festival  [worthy, fit 7.5]  Toronto Canada  verified=no
+  fest_dates: Feb 10–15, 2027 (per torontoblackfilm.com submit page)
+  submissions_open: Open now (registration form + digital screener online)
+  deadlines: Deadline for registering films: November 1 (site's standing rule; applies to the Feb 2027 edition — confirm year on FilmFreeway). Entry fees not published; historically modest (~$20–45 CAD tiers).
+  final_deadline: 2026-11-01 (per festival submission guidelines for the Feb 2027 edition)
+  fees_usd: Not published; est. modest ($20–45 range on FilmFreeway)
+  oscar_qualifying: no
+  premiere_requirement: None found
+  fit: Canada's flagship Black film festival (Fabienne Colas Foundation), international programming with a strong African-diaspora identity — a Nigerian-directed slavery drama with Yoruba spirituality fits the program's core. THE most immediately actionable festival in this lane: the site lists a Nov 1 registration deadline for the Feb 10–15, 2027 edition. Not Oscar-qualifying and not a Canadian Screen Award pathway (no CSA link found), so its value is exposure and a winter 2027 international slot, not
+
+--- Zanzibar International Film Festival (ZIFF)  [worthy, fit 7.5]  Zanzibar City Tanzania  verified=no
+  fest_dates: Est. late June 2027 (third-party listings say Jun 23–27, 2027; official site confirmed 2026 edition Jun 24–28) — estimated
+  submissions_open: Est. ~February 2027 (2026 cycle window was Feb 11 – Mar 31, 2026)
+  deadlines: Estimated from 2026 pattern: ~Feb–Mar 2027 window, final ~Mar 31, 2027. No submission fees (per 2024 Festhome listing).
+  final_deadline: ~2027-03-31 (estimated from 2026 pattern)
+  fees_usd: $0 (no submission fees per recent cycles)
+  oscar_qualifying: no
+  other_awards_path: Golden Dhow awards
+  premiere_requirement: None stated — festival lists World/African/East-Africa premiere statuses but accepts films at various levels; recency rule (produced within ~2 years) applies
+  estimated: True
+  fit: East Africa's biggest festival, and its rules explicitly welcome 'all African films (including African Diaspora)' — a stated diaspora door this film walks through. No entry fees (per recent cycles). Golden Dhow awards. The 2026 edition (Jun 24–28) has passed; target 2027.
+
+--- Joburg Film Festival (9th edition)  [worthy, fit 7.5]  Johannesburg South Africa  verified=no
+  fest_dates: Est. early March 2027 (8th edition ran Mar 3–8, 2026; 7th Mar 11–16, 2025) — estimated
+  submissions_open: Est. ~late Aug/Sept 2026 (2026-edition call opened Aug 29, 2025)
+  deadlines: Estimated from 2026-edition pattern: opens ~Aug 29, closes ~Oct 31, 2026; notifications ~Dec 2026. Via FilmFreeway. Shorts 5–24 min (13-min film qualifies).
+  final_deadline: ~2026-10-31 (estimated from 2025 pattern)
+  fees_usd: unknown (FilmFreeway; not published in sources)
+  oscar_qualifying: no
+  premiere_requirement: No hard bar, but priority given to World and/or African premieres; completion recency rule (2026 edition required completion after Sept 2024)
+  estimated: True
+  fit: Explicitly invites 'South African and Africa in the Diaspora filmmakers' — only African and African-diaspora filmmakers may submit, which is a perfect eligibility fit and a curated-for-you audience. MultiChoice backing gives pan-African industry reach. Watch the window: the 2026-edition call ran Aug 29 – Oct 31, 2025, so the 2027 call likely opens within days of now.
+
+--- ADIFF — African Diaspora International Film Festival  [worthy, fit 7.5]  New York (plus Chicago, Washington DC, Paris editions) USA  verified=no
+  fest_dates: NY flagship: Nov/Dec annually (2026 NY edition Nov/Dec 2026; 2027 est. Nov/Dec 2027); satellite editions Chicago June, DC July, Paris September
+  submissions_open: Rolling; 2027-cycle window est. to open late 2026/early 2027
+  deadlines: Estimated from 2026 pattern: shorts ~June 30, 2027; features ~Aug 31, 2027. No entry fee. Early submission considered for all city editions.
+  final_deadline: ~2027-06-30 (estimated from 2026 pattern)
+  fees_usd: $0 (no entry fee)
+  oscar_qualifying: no
+  premiere_requirement: None hard; festival prioritizes films having their city premiere at ADIFF
+  estimated: True
+  fit: A festival built precisely for this film's identity — diaspora cinema centering people of color, with a slavery-era Yoruba-spirituality story landing dead center of its programming history. No entry fee. Four-city reach (NYC flagship Nov/Dec, plus Chicago, DC, Paris). The 2026 shorts deadline (June 30, 2026) has passed, so this is a 2027-cycle submission.
+
+--- New York African Film Festival (NYAFF, 34th edition)  [worthy, fit 7.5]  New York USA  verified=no
+  fest_dates: Est. May 2027 (34th edition; 33rd ran May 6–12, 2026 at Film at Lincoln Center) — estimated
+  submissions_open: Submissions open via FilmFreeway seasonally (33rd-edition call opened autumn 2025); 34th-edition call expected autumn 2026
+  deadlines: Not yet announced for the 34th edition; est. late 2026 deadline from prior cycles. Preference for films completed within the last two years having their New York premiere at NYAFF.
+  final_deadline: ~2026-12 (estimated — 34th edition window not announced)
+  fees_usd: unknown (FilmFreeway; not published in sources)
+  oscar_qualifying: no
+  premiere_requirement: Soft: preference given to films that will have their New York premiere at NYAFF
+  estimated: True
+  fit: Presented with Film at Lincoln Center — prestige diaspora platform since 1993 for films 'by or about people of African descent', any genre and length. A Lincoln Center screening is a meaningful US-industry credential for an African-diaspora short, and NYAFF has a long Nigerian-cinema relationship. 33rd edition ran May 2026; target the 34th in May 2027.
+
+--- REGARD — Saguenay International Short Film Festival  [strong, fit 7.5]  Saguenay, QC Canada  verified=no
+  fest_dates: 31st edition: March 17–21, 2027
+  submissions_open: Open now
+  deadlines: Early bird to Sept 15, 2026 ($40 CAD); Regular Sept 16–Oct 15 ($45 CAD); Last minute Oct 16–Nov 1, 2026 ($55 CAD). Notification by mid-Feb 2027.
+  final_deadline: 2026-11-01
+  fees_usd: ~$29–40 ($40–55 CAD tiered)
+  oscar_qualifying: yes — Grand Prize and Canadian Grand Prize (Live Action Short)
+  other_awards_path: FIPRESCI recognized
+  premiere_requirement: No hard bar to entry, but premiere-status and not-free-online films prioritized; Grand Prize restricted to World/North American/Canadian premieres
+  fit: Oscar-qualifying on BOTH its Grand Prize and Canadian Grand Prize, warm audience-driven narrative programming, and it explicitly prioritizes premiere-intact films not available free online — which this film is. One of North America's most important shorts festivals. Strategic note: the Grand Prize (the Oscar path) is limited to World/North American/Canadian premieres, so submit before burning the North American premiere elsewhere.
+
+--- Curtas Vila do Conde — International Film Festival  [strong, fit 7.5]  Vila do Conde Portugal  verified=no
+  fest_dates: 35th edition Jul 9–18, 2027 (confirmed on FilmFreeway listing)
+  submissions_open: Jul 27, 2026 (confirmed — open now via FilmFreeway; official site geo-blocks US requests)
+  deadlines: Early Oct 31, 2026; Regular Jan 31, 2027; Extended Apr 15, 2027; Final Apr 30, 2027. Notification Jun 7, 2027. All FREE.
+  final_deadline: 2027-04-30
+  fees_usd: $0 — free submission (all deadlines)
+  oscar_qualifying: yes — Grand Prix, International Competition (99th AA list; also Best Short Film Prize, Portuguese Competition)
+  other_awards_path: BAFTA Qualifying and European Film Award qualifying (EFA candidate prize) badges on FilmFreeway
+  premiere_requirement: Portuguese premiere required for International Competition; ≤60 min; produced 2026 or 2027
+  fit: Premier European competitive shorts festival, Oscar-qualifying (Grand Prix — International Competition), FREE to enter, and OPEN RIGHT NOW for the 35th edition (Jul 9–18, 2027) — submissions opened Jul 27, 2026 on FilmFreeway. Only a Portuguese premiere is required, so it slots cleanly after any US/winter premiere. Eligibility 'produced in 2026 or 2027' fits the Jan 2026 finish. With Winterthur it completes the continental shorts circuit alongside Clermont/Oberhausen/Tampere/Uppsala/Vienna. Free
+
+--- International Film Festival Rotterdam — Ammodo Tiger Short Competition  [dream, fit 7.5]  Rotterdam Netherlands  verified=no
+  fest_dates: IFFR 2027 Jan 28–Feb 7, 2027 (confirmed on iffr.com)
+  submissions_open: May 1, 2026 (confirmed — open now)
+  deadlines: Shorts (<64 min): Early €40 by Jun 15, 2026 (passed); Standard €55 by Aug 31, 2026 17:00 CEST; Late €70 by Sep 15, 2026 (final). All ex-VAT.
+  final_deadline: 2026-09-15
+  fees_usd: €40/€55/€70 ex-VAT (~$45/$60/$77); next actionable €55 by Aug 31, 2026
+  oscar_qualifying: no — not on the 99th AA shorts qualifying list (status has changed from earlier years; confirmed against two mirrors of the official list)
+  premiere_requirement: World, international, or European premiere required for shorts; completed after Jan 1, 2026; no Netherlands screenings; master-year student work eligible; screener must remain available through Feb 7, 2027
+  fit: The missing winter premiere-strategy major, and the MOST time-sensitive item on this list: IFFR 2027 (Jan 28–Feb 7, 2027) shorts submissions are open now with standard fee €55 until Aug 31, 2026 (six days away) and FINAL deadline Sep 15, 2026. Credible world-premiere alternative to Sundance for a formally bold, craft-forward short. Two cautions: (1) shorts must hold world/international/European premiere status — submitting commits the premiere; (2) answering the critic's question: IFFR is NOT on
+
+--- SXSW Film & TV Festival 2027 - Narrative Shorts  [strong, fit 7]  Austin USA  verified=no
+  fest_dates: Mar 15-21, 2027 (announced)
+  submissions_open: Open now (first deadline Aug 25, 2026)
+  deadlines: First: Aug 25, 2026 ($55) - TODAY. Second: Sep 15, 2026 ($70). Final: Oct 1, 2026 ($90). Notification by Feb 9, 2027.
+  final_deadline: 2026-10-01
+  fees_usd: $55 / $70 / $90 by tier
+  oscar_qualifying: Yes - Narrative Short Film Grand Jury Award qualifies for Live Action Short
+  premiere_requirement: Premiere status is 'an important factor' but not an absolute eligibility condition for shorts; must be completed 2025-2026 or early 2027; max 40 min incl. credits
+  fit: SXSW skews contemporary and genre-forward, but the film's brutal fight-ring engine plus ancestral-vision elements give it a genre hook, and SXSW loves a craft flex. Premiere status is a preference, not a hard rule for shorts - so it layers cleanly behind Sundance. Completion in 2026 satisfies eligibility. URGENT: the $55 first deadline is TODAY (Aug 25, 2026); the price only rises after.
+
+--- Semaine de la Critique 2027 (Cannes Critics' Week)  [strong, fit 7]  Cannes France  verified=no
+  fest_dates: ~May 12-20, 2027 (66th edition; estimated - runs parallel to Cannes, May 11-22, 2027)
+  submissions_open: Est. late Nov 2026 (2026 cycle: Nov 24, 2025 - Mar 13, 2026)
+  deadlines: Single window, est. late Nov 2026 - mid-Mar 2027 from the 2026 pattern (closed Mar 13, 2026). Fee EUR 35 before VAT.
+  final_deadline: ~2027-03-12 (estimated from 2026 pattern)
+  fees_usd: ~$38-46 (EUR 35 + VAT if applicable)
+  oscar_qualifying: No - not on the Academy shorts qualifying list (unlike the official-selection Palme d'Or route)
+  premiere_requirement: Foreign films: no festival screenings outside country of origin; no internet/TV/commercial release anywhere; shorts up to 59 min
+  cinematography_or_craft_award: Leitz Cine Discovery Prize for Short Film (Leica-sponsored best-short prize - a cinematography-culture flagship, though not a craft category per se); Canal+ Award for Short Film
+  estimated: True
+  fit: Discovery-mandated sidebar (first and second works) that loves formally bold, culturally rooted shorts - a tenebrist slave-revolt film with Yoruba cosmology is a genuine contender. Key advantage: non-French films may have played festivals INSIDE their country of origin, so Sundance/AFI screenings don't disqualify it - only keep it off the internet and out of non-US festivals until after selection. Cheap entry (EUR 35 + VAT).
+
+--- Locarno - Pardi di domani 2027 (Concorso Internazionale)  [worthy, fit 7]  Locarno Switzerland  verified=no
+  fest_dates: Aug 4-14, 2027 (80th edition; announced)
+  submissions_open: Est. Dec 2026-Jan 2027 (2026 cycle deadlines began Feb 19)
+  deadlines: 2026 pattern for estimate: three deadlines ~Feb 19 / Apr 9 / Apr 23 (2:00pm CET). Shorts fees CHF 35-75 by tier.
+  final_deadline: ~2027-04-22 (estimated from 2026 pattern)
+  fees_usd: ~$40-85 (CHF 35-75)
+  oscar_qualifying: Yes - Pardino d'Oro for Best International Short Film qualifies
+  premiere_requirement: Directors must not have made a feature; premiere expectations (world/international) per rules - verify exact 2027 wording; no prior internet availability
+  estimated: True
+  fit: Pardi di domani is reserved for directors who have not yet made a feature - exactly this director's position - and prizes formal daring and cinematic language, which the single-source tenebrist style delivers. Oscar-qualifying via the Pardino d'Oro for Best International Short. European premiere-status expectations mean the same chess as Berlinale/Cannes; the Aug 2027 slot works as a late-cycle European berth. 80th-edition dates are already announced (no July shift).
+
+--- Seattle International Film Festival (SIFF)  [worthy, fit 7]  Seattle USA  verified=no
+  fest_dates: May 13-23, 2027 (SIFF 2027)
+  submissions_open: Aug 1, 2026 (open now)
+  deadlines: Earlybird Oct 1, 2026 ($60); Regular Dec 17, 2026 ($80); Late Jan 7, 2027 ($100). Notification Apr 9, 2027.
+  final_deadline: 2027-01-07
+  fees_usd: $60-100 (shorts)
+  oscar_qualifying: yes - Grand Jury Prize for Live Action Short (also Animated and Documentary Short Grand Jury Prizes)
+  other_awards_path: Canadian Screen Award-qualifying
+  premiere_requirement: Western Washington State premiere only; film must have premiered on/after Jan 2026
+  fit: Top-5 US audience festival, Academy qualifier in all three shorts categories via Grand Jury Prizes. Big prestige, generalist programming; period drama competes with everything. Only a Western Washington premiere required, so sequencing is easy.
+
+--- St. Louis International Film Festival (SLIFF)  [worthy, fit 7]  St. Louis USA  verified=no
+  fest_dates: ~early-mid Nov 2027 (36th; 2026 edition: Nov 5-15) - estimated from 2026 pattern
+  submissions_open: ~Dec 2026 (2026 cycle opened Dec 5, 2025)
+  deadlines: Estimated from 2026 cycle (shorts): Earlybird ~Mar 16 ($35); Regular ~May 12 ($45); Late ~Jul 13 ($65); Extended ~Aug 1, 2027 ($80)
+  final_deadline: ~2027-08-01
+  fees_usd: $35-80 (shorts, 2026 actuals)
+  oscar_qualifying: yes - Best of Fest, Best Live Action (also Best Animated, Best Documentary)
+  premiere_requirement: St. Louis theatrical premiere required (no prior public ticketed screening in St. Louis)
+  estimated: True
+  fit: Quietly one of the most generous qualifiers - FOUR Academy-sanctioned shorts awards including Best of Fest and Best Live Action, with cheap entry fees. 2026 edition closed Aug 1; target the Nov 2027 edition. Requires a St. Louis premiere.
+
+--- Nashville Film Festival  [worthy, fit 7]  Nashville USA  verified=no
+  fest_dates: ~late Sep 2027 (58th; 2026 edition: Sep 24-30) - estimated from 2026 pattern
+  submissions_open: ~Jan 1, 2027 (2026 cycle opened Jan 1, 2026)
+  deadlines: Estimated from 2026 cycle (narrative shorts): Earlybird ~Mar 9 ($45); Regular ~May 11 ($55); Late ~Jun 1 ($70); Extended ~Jun 15, 2027 ($85)
+  final_deadline: ~2027-06-15
+  fees_usd: $45-85 (narrative shorts, 2026 actuals)
+  oscar_qualifying: yes - Narrative Shorts Competition Jury Prize (98th AA list: Best Narrative Short; Best Animated Short and Best Documentary Short also listed)
+  premiere_requirement: Tennessee premiere minimum; 2026 rule barred films that premiered publicly before Jan 1, 2025 (rolls forward)
+  estimated: True
+  fit: Long-running Southern qualifier; narrative shorts jury prize confers eligibility and Southern-set Black history plays well. 2026 closed Jun 15 - target Sep 2027 edition. Requires a Tennessee premiere and film must not have premiered before ~Jan of the prior year.
+
+--- Austin Film Festival  [worthy, fit 7]  Austin USA  verified=no
+  fest_dates: ~late Oct-early Nov 2027 (2026 edition: Oct 29-Nov 5) - estimated from 2026 pattern
+  submissions_open: ~Dec 2026 (2026 cycle opened Dec 8, 2025)
+  deadlines: Estimated from 2026 cycle (narrative shorts): Early Bird ~Mar 27 ($60); Regular ~May 20 ($70); Late ~Jun 19 ($80); Extended ~Jul 8, 2027 ($90)
+  final_deadline: ~2027-07-08
+  fees_usd: $60-90 (narrative shorts, 2026 actuals)
+  oscar_qualifying: yes - Narrative Short Jury Award (Animated and Documentary Short Jury Awards also qualify)
+  premiere_requirement: Shorts must be at least Austin premieres; Texas premieres preferred
+  estimated: True
+  fit: The writers' festival - a strong venue to spotlight Betine & Bratton-Lewis's script alongside the directing; Narrative Short Jury Award qualifies. 2026 closed Jul 8 - target Oct 2027. Shorts need only be Austin premieres.
+
+--- Florida Film Festival  [worthy, fit 7]  Maitland/Winter Park (Orlando) USA  verified=no
+  fest_dates: Apr 9-18, 2027 (36th edition)
+  submissions_open: Aug 17, 2026 (open now)
+  deadlines: Earlybird Sep 30, 2026 ($35); Regular Nov 6, 2026 ($50); Late Nov 20, 2026 ($70); Extended Dec 9, 2026 ($90). Notification Feb 26, 2027.
+  final_deadline: 2026-12-09
+  fees_usd: $35-90 (domestic shorts)
+  oscar_qualifying: yes - Grand Jury Award: Best Narrative Short (majority-US-funded films; Animated and Documentary Grand Jury Awards also qualify)
+  premiere_requirement: Florida premiere minimum for Grand Jury competition eligibility
+  fit: Oscar-accredited in all three shorts categories with the cheapest earlybird on this list ($35); domestic narrative short competition suits a US-funded AFI film. Requires a Florida premiere for competition. Window is open now with a fast ladder (final Dec 9, 2026).
+
+--- African Diaspora International Film Festival (ADIFF)  [worthy, fit 7]  New York (plus Chicago, Washington DC, Paris editions) USA  verified=no
+  fest_dates: New York edition runs Nov–Dec annually; 2027 NY edition est. late Nov–mid Dec 2027
+  submissions_open: Rolling — festival encourages submitting as early as possible for all ADIFF festivals and series
+  deadlines: 2027 cycle estimated from 2026 pattern: shorts ~June 30, 2027; features ~Aug 31, 2027. No entry fee.
+  final_deadline: ~2027-06-30 for shorts (estimated from 2026 pattern)
+  fees_usd: Free (no entry fee)
+  oscar_qualifying: no
+  premiere_requirement: Must be at least a New York premiere; priority to films making their city premiere at ADIFF
+  estimated: True
+  fit: A 30+ year Harlem institution devoted exactly to this film's subject matter — the African diaspora experience, with an audience that reads Yoruba cosmology fluently — and submission is FREE, so it costs nothing but strategy. It demands at least a New York premiere and prioritizes films premiering at ADIFF, which conflicts with Urbanworld/NY plans, so sequence deliberately. The 2026 shorts deadline (June 30, 2026) has passed; target the 2027 New York edition (Nov–Dec 2027) with a ~June 30, 2027 s
+
+--- Montreal International Black Film Festival (MIBFF)  [worthy, fit 7]  Montreal Canada  verified=no
+  fest_dates: 2026: Sept 23–27 (window closed); 2027 edition est. late September 2027
+  submissions_open: 2027 cycle est. opens ~Nov 1, 2026 (2026 cycle opened Nov 1, 2025)
+  deadlines: Estimated from 2026 pattern: Early Bird ~Jan 10, 2027 ($25); Regular ~May 1, 2027 ($35); Late ~May 25, 2027 ($50); notification ~mid-July 2027. Via FilmFreeway.
+  final_deadline: ~2027-05-25 (estimated from 2026 pattern)
+  fees_usd: $25 early / $35 regular / $50 late (2026 rates, standard tier)
+  oscar_qualifying: no
+  premiere_requirement: None found
+  estimated: True
+  fit: Canada's largest Black film festival (also Fabienne Colas Foundation), late-September slot with genuinely international diaspora programming; a Nigerian-directed period drama travels well here and it pairs naturally with a Toronto Black FF submission to the same organization. No Oscar/CSA qualifying path — value is international festival pedigree and Francophone-market exposure. The 2026 edition (Sept 23–27) is already locked; the 2027 window opens ~Nov 1, 2026 with cheap early-bird entry.
+
+--- Carthage Film Festival — JCC (37th edition)  [worthy, fit 7]  Tunis Tunisia  verified=no
+  fest_dates: Dec 12–19, 2026 (37th edition)
+  submissions_open: Open now (call published Aug 2026)
+  deadlines: Final: Sept 15, 2026 for all official competitions (feature fiction, feature doc, shorts, Carthage Ciné Promesse). Fees not published in sources.
+  final_deadline: 2026-09-15
+  fees_usd: unknown (not published in sources)
+  oscar_qualifying: no (not on Academy shorts qualifying list)
+  other_awards_path: Tanit d'or short film competition
+  premiere_requirement: Not published in sources; eligibility for a US-produced film by a Nigerian director is UNCLEAR — verify with contact@jcctunisie.org (official site was unreachable during research)
+  fit: The oldest African/Arab festival, with an official short film competition (Tanit awards) historically reserved for African and Arab films — the Nigerian director should confer eligibility, but production-country rules for a US-produced film need confirming with the festival before submitting. Deadline Sept 15, 2026 — actionable now. Sub-Saharan spiritual-heritage stories have a real track record at JCC.
+
+--- Cairo International Film Festival (48th edition)  [worthy, fit 7]  Cairo Egypt  verified=no
+  fest_dates: 47th: Nov 11–20, 2026 (submissions closed). 48th: est. mid-November 2027 — estimated from pattern
+  submissions_open: Est. ~April 2027 (47th window: Apr 15 – Aug 1, 2026; early bird May 22)
+  deadlines: Estimated from 47th pattern: open ~Apr 15, early bird ~May, final ~Aug 1, 2027. Shorts under 30 min, all genres. Recency rule tightens each cycle (47th: produced after Oct 1, 2025) — a Jan 2026 lock may or may not clear the 48th's cutoff.
+  final_deadline: ~2027-08-01 (estimated from 2026 pattern)
+  fees_usd: unknown (via festival's own portal; not published in sources)
+  oscar_qualifying: yes — Youssef Chahine Award for Best Short Film
+  premiere_requirement: Not published in sources for shorts; verify (CIFF typically expects regional premieres for competition)
+  estimated: True
+  fit: Africa's other Oscar-qualifying door for live-action shorts: the Youssef Chahine Award for Best Short Film qualifies for the Academy Awards (confirmed on the 98th AA list). A-list international festival. The 47th edition (Nov 11–20, 2026) closed submissions Aug 1, 2026 — missed for this year, so this is a 2027 play; by then the film may already be deep into its run, and CIFF's shorts recency rule (47th required production after Oct 1, 2025) may age it out for the 48th — verify before counting on
+
+--- Film Africa (Royal African Society)  [longshot, fit 7]  London United Kingdom  verified=no
+  fest_dates: Oct 23 – Nov 1, 2026 (Film Africa 2026, venues across London)
+  submissions_open: 2026 window closed (2024 pattern: deadline June 30, notifications July 30)
+  deadlines: 2026 deadline est. ~June 30, 2026 (from 2024 pattern) — passed. Next open call likely 2028 if the biennial rhythm holds.
+  final_deadline: ~2026-06-30 (estimated from 2024 pattern; passed)
+  fees_usd: unknown (FilmFreeway; not published in sources)
+  oscar_qualifying: no
+  other_awards_path: Baobab Award for Best Short Film (£1,000)
+  premiere_requirement: None stated; production-year recency rule applies (2024 cycle: produced 2022+)
+  estimated: True
+  fit: London's African-cinema showcase accepts submissions ONLY from African and African-diaspora filmmakers, with the Baobab Award for Best Short (£1,000) — an excellent audience and eligibility fit. The problem is timing: the 2026 edition runs Oct 23 – Nov 1, 2026, and the submission deadline followed the June 30 pattern, so it has almost certainly closed; the festival has been running biennially, pushing the next open call to ~2028. Longshot for this cycle unless a late-entry exception exists — wor
+
+--- Cine Gear Expo — The Film Series Competition  [worthy, fit 7]  Los Angeles (Universal Studios lot) USA  verified=no
+  fest_dates: 2026 expo: June 5–6, 2026 (passed). Target = 2027 expo, ~early June 2027 (estimated from pattern)
+  submissions_open: ~Dec 2026–Jan 2027 (estimated from prior cycles; via FilmFreeway)
+  deadlines: 2026 cycle: selected films' final DCP files were due May 1, 2026, implying a submission deadline ~March–April. 2027: ~spring 2027, estimated
+  final_deadline: ~2027-04-15 (estimated — exact 2027 deadline not yet published)
+  fees_usd: Modest FilmFreeway fees (exact 2027 amounts not published — verify)
+  oscar_qualifying: no
+  premiere_requirement: None
+  cinematography_or_craft_award: Jury Awards in Student Films / Independent Shorts / Music Videos with sponsor gear prize packages (~$16k in 2025 from Blackmagic, Tilta, DFI et al.)
+  estimated: True
+  fit: Craft-industry showcase judged on the Universal Studios lot in front of the camera/lighting industry — the exact crowd a cinematography calling card should reach. Student category fits: entrants may be recent graduates (within 2 years) if they were students when the film was made, and a film finished Jan 2026 while enrolled clears the 'completed within 6 months of graduation' rule. Jury winners took home ~$16,000 in camera/lighting gear from sponsors in 2025 — directly useful to a working DP. 20
+
+--- Flickerfest International Short Film Festival  [strong, fit 7]  Sydney (Bondi Beach) Australia  verified=no
+  fest_dates: 36th edition: Jan 22–31, 2027, Bondi Pavilion, then Australian tour
+  submissions_open: Open now (FilmFreeway)
+  deadlines: Early bird Aug 14, 2026 ($35 USD, passed); Regular Sept 14, 2026 ($40 USD); Late Oct 14, 2026 ($45 USD)
+  final_deadline: 2026-10-14
+  fees_usd: $40 regular / $45 late
+  oscar_qualifying: yes — 4 qualifying awards incl. Best International Short Film (Live Action path for this film)
+  other_awards_path: BAFTA-qualifying
+  premiere_requirement: Australian premiere required (limited exceptions for other Oscar-qualifying fests); no prior Australian broadcast or online posting; completed within 2 years of closing date
+  fit: Oscar-qualifying (Best International Short Film) and BAFTA-qualifying, with audience-facing narrative programming that rewards emotional, craft-forward drama — plus a 40+ city national tour. Requires an Australian premiere (intact) and the film must not be online. Regular deadline is Sept 14, 2026 — three weeks out (early bird Aug 14 already passed).
+
+--- College Television Awards, 46th (Television Academy Foundation)  [worthy, fit 7]  Los Angeles USA  verified=no
+  fest_dates: 46th CTA ceremony ~spring 2027 (45th nominations announced Nov 2025) — estimated
+  submissions_open: ~Late September 2026 (estimated from 45th: opened Sept 23, 2025)
+  deadlines: 45th: Sept 23–Oct 10, 2025, 5pm PT, $25/project (waivers available). 46th: estimated ~Sept 22–Oct 9, 2026 — verify at televisionacademy.com imminently
+  final_deadline: ~2026-10-09 (estimated from 45th pattern — URGENT, confirm now)
+  fees_usd: $25 per project (fee waivers available)
+  oscar_qualifying: no
+  other_awards_path: College Television Award (student Emmy); nominee professional-development program in LA with paid travel; Television Academy Foundation alumni network
+  premiere_requirement: None stated. Must have been produced for class credit while enrolled full-time at an accredited U.S. college, within the eligibility year; faculty verification required
+  estimated: True
+  fit: The 'student Emmy.' Timing actually works AND is urgent: the 45th cycle required projects produced and completed Aug 1, 2024–Jul 31, 2025 with submissions Sept 23–Oct 10, 2025; the 46th window should be Aug 1, 2025–Jul 31, 2026 — a Jan-2026 completion FITS — with submissions estimated late Sept–early Oct 2026, i.e., WEEKS from now. Directors/producers/writers may enter ($25 fee, waivers available); entrant must have been a full-time enrolled student producing for class credit (true of an AFI Fel
+
+--- Tampere Film Festival  [strong, fit 7]  Tampere Finland  verified=no
+  fest_dates: 57th edition: March 10–14, 2027
+  submissions_open: Open now (FilmFreeway or ShortFilmDepot)
+  deadlines: Early bird Sept 1, 2026 (€16); Regular Oct 1, 2026 (€18); Final Nov 3, 2026 (€20). Selections announced end of Jan 2027.
+  final_deadline: 2026-11-03
+  fees_usd: ~$17–22 (€16–20)
+  oscar_qualifying: yes — Grand Prix and Best Fiction, International Competition (no theatrical run needed)
+  premiere_requirement: None — 'premiere not required'; completed Jan 1, 2025 or later; max 30 min. Note: selected films stream geoblocked-to-Finland during the fest unless you restrict it
+  fit: One of Europe's big three shorts festivals, Oscar-qualifying on Grand Prix AND Best Fiction, no premiere requirement, cheap entry. Nordic taste skews social-realist/experimental so a US period drama is a harder sell than at Clermont, but the spiritual/ancestral dimension and formal rigor give it a real shot. Early bird deadline is Sept 1, 2026 — one week out.
+
+--- London Short Film Festival (LSFF)  [strong, fit 7]  London UK  verified=no
+  fest_dates: 24th edition: Jan 22–31, 2027
+  submissions_open: Opened Dec 19, 2025 (FilmFreeway)
+  deadlines: Early bird Mar 31, 2026 (£25); Regular Jun 2, 2026; Late Aug 18, 2026 (passed); Final Oct 22, 2026 (fees rise per tier — aggregator data, verify exact final-tier fee on FilmFreeway)
+  final_deadline: 2026-10-22
+  fees_usd: ~$32+ (£25 early bird; later tiers higher, unconfirmed)
+  oscar_qualifying: no
+  other_awards_path: BAFTA and BIFA-affiliated (accepted UK filmmakers can enter those awards; limited benefit for a US film)
+  premiere_requirement: None; completed after Jan 1, 2025; max 45 min
+  fit: The UK's tastemaker January shorts showcase (BFI Southbank, ICA) with a culturally attuned London audience — strong platform for a Black diaspora story, and a good press/industry launchpad. Honest caveat: NOT Oscar-qualifying, and its BAFTA/BIFA affiliation mainly benefits UK filmmakers, so this is prestige-exposure value rather than an awards path for a US film.
+
+--- Leeds International Film Festival  [strong, fit 7]  Leeds UK  verified=no
+  fest_dates: 41st edition est. late Oct – mid Nov 2027 (2026 edition: Oct 29 – Nov 15, 2026)
+  submissions_open: est. Dec 2026 (2026 cycle opened with a Dec 11 super-earlybird deadline)
+  deadlines: 2026 pattern: Super-earlybird Dec 11; Earlybird Mar 26; Regular Jun 25; Final Jul 30 — expect similar for 2027 (estimated from 2026 pattern)
+  final_deadline: ~2027-07-30 (estimated from 2026 pattern)
+  fees_usd: modest tiered fees via FilmFreeway (exact 2027 tiers TBA)
+  oscar_qualifying: yes — Louis le Prince Grand Prize (Live Action Short)
+  other_awards_path: BAFTA and BIFA-qualifying for British shorts
+  premiere_requirement: None published
+  estimated: True
+  fit: Oscar-qualifying via the Louis le Prince International Short Film Competition Grand Prize, narrative-friendly programming inside a major full-spectrum festival. The 2026 (40th) edition's final deadline (July 30, 2026) has passed, so this targets LIFF 2027 — submissions historically open in December for super-earlybird.
+
+--- RiverRun International Film Festival  [strong, fit 7]  Winston-Salem / Greensboro, NC USA  verified=no
+  fest_dates: 29th edition: April 16–24, 2027 (Winston-Salem and Greensboro + virtual)
+  submissions_open: Open now (FilmFreeway)
+  deadlines: Early bird Aug 31, 2026; Regular Sept 28, 2026; Late Nov 2, 2026; Final Dec 7, 2026
+  final_deadline: 2026-12-07
+  fees_usd: $33 shorts (tier not specified; higher at late/final)
+  oscar_qualifying: yes, but NOT for this film — qualifying only in Documentary Short and Animated Short; no live-action narrative award qualifies
+  premiere_requirement: None published; under 40 min; completed after Jan 1, 2025
+  fit: The Southeast's most substantial spring festival and a natural regional platform for a Carolinas-set story. Honest asterisk on the lane's framing: RiverRun's Oscar qualification covers ONLY Documentary Short and Animated Short — a live-action narrative gets no Oscar path here. Still worth it for regional prestige, press, and audience. Early bird is Aug 31, 2026 — six days out.
+
+--- Sidewalk Film Festival  [worthy, fit 7]  Birmingham, AL USA  verified=no
+  fest_dates: 29th edition est. late Aug 2027 (2026: Aug 24–30, Birmingham's Historic Theatre District)
+  submissions_open: est. late 2026 (2026 cycle's earlybird deadline was Dec 1, 2025)
+  deadlines: 2026 pattern: Earlybird Dec 1; Regular Feb 1; Late Mar 15; Extended Apr 30 — estimated same shape for 2027 cycle
+  final_deadline: ~2027-04-30 (estimated from 2026 pattern)
+  fees_usd: $30–70 tiered
+  oscar_qualifying: no
+  premiere_requirement: None published
+  estimated: True
+  fit: A genuinely beloved, well-run Southern festival (MovieMaker 'coolest' list regular) in the cradle of the civil rights movement — an audience with real appetite for Black Southern history told with craft. No awards-path value (not Oscar-qualifying), but among the regionals it's one of the few that actually moves the needle for reputation in the South. 2026 edition runs THIS WEEK (Aug 24–30); target 2027.
+
+--- Internationale Kurzfilmtage Winterthur  [strong, fit 7]  Winterthur Switzerland  verified=no
+  fest_dates: 30th edition Nov 3–8, 2026 (confirmed, closed); target 31st edition est. early Nov 2027
+  submissions_open: est. Mar 2027 (2026 call opened ~Mar 1, 2026, via FilmFreeway or ShortFilmDepot)
+  deadlines: 2026 pattern: single deadline ~Jul 12, 2026; notification Sep 30, 2026. Est. for 2027: deadline ~mid-Jul 2027. Fees: free early, then ~CHF 9.50 (third-party guide).
+  final_deadline: ~2027-07-12 (estimated from 2026 pattern)
+  fees_usd: free early / ~$11 late (CHF 9.50, guide estimate)
+  oscar_qualifying: yes — Grand Prize International Competition, Best Swiss Film, Promotional Award (99th AA list)
+  other_awards_path: BAFTA-qualifying; European Film Award candidacy; Swiss Film Award
+  premiere_requirement: Swiss premiere required; produced within the two years preceding the edition; ≤30 min; no re-submissions of previously rejected films
+  estimated: True
+  fit: Switzerland's largest short film festival; triple-qualifying (Oscar via Grand Prize International Competition, BAFTA, EFA candidacy) with CHF 57,000 total prizes, and nearly free to enter. As the critic predicted, the 30th edition (Nov 3–8, 2026) deadline has expired ('The Submission Deadline for the 30th Internationale Kurzfilmtage Winterthur has expired' — confirmed on kurzfilmtage.ch), so target the 31st (Nov 2027). Swiss premiere required, easy to preserve. Eligibility window (produced 2026–
+
+--- Morehouse College Human Rights Film Festival (MCHRFF)  [worthy, fit 7]  Atlanta, Georgia USA  verified=no
+  fest_dates: 8th edition confirmed Sep 22–26, 2026 (closed); target 9th edition est. late Sep 2027
+  submissions_open: est. Oct 2026 for the 2027 edition (2026 cycle opened Oct 6, 2025 on FilmFreeway)
+  deadlines: 2026 cycle (confirmed on FilmFreeway; fees hidden now): Early Bird Dec 31, 2025; Regular Feb 28, 2026; Late Mar 31, 2026; notification Jun 30, 2026. Est. same rhythm Oct 2026–Mar 2027 for the 9th edition.
+  final_deadline: ~2027-03-31 (estimated from 2026 pattern)
+  fees_usd: not listed while entries closed; expect modest indie-fest fees
+  oscar_qualifying: no — not on the current (99th) AA shorts qualifying list; earlier doc-short qualifying status appears lapsed — confirm directly with the festival before budgeting it as a qualifying play
+  premiere_requirement: None stated on FilmFreeway rules
+  estimated: True
+  fit: Thematic bullseye — enslavement, resistance, African spiritual retention, at the country's leading HBCU, pairing with the Atlanta cluster (Atlanta FF, BronzeLens). BUT the critic's qualifying premise does not hold today: MCHRFF is NOT on the 99th Academy Awards shorts qualifying list (checked two mirrors), and its FilmFreeway page carries no Academy-qualifying badge — the 2021 'first Oscar-qualifying HBCU festival' status appears to have lapsed. 2026 edition (8th, Sep 22–26) submissions closed M
+
+--- Black Harvest Film Festival (Gene Siskel Film Center / SAIC)  [worthy, fit 7]  Chicago, Illinois USA  verified=no
+  fest_dates: 32nd edition Nov 6–15, 2026 (confirmed, closed); target 33rd est. early-mid Nov 2027
+  submissions_open: est. mid-Feb 2027 (2026 cycle opened Feb 16, 2026 on FilmFreeway)
+  deadlines: 2026 cycle (confirmed): Deadline Jun 10, 2026; Late Jun 30, 2026; notification Aug 15, 2026. Est. same rhythm Feb–Jun 2027 for the 33rd. Fees hidden while closed.
+  final_deadline: ~2027-06-30 (estimated from 2026 pattern)
+  fees_usd: not listed while entries closed
+  oscar_qualifying: no
+  premiere_requirement: No prior public Chicago/suburban screenings; films publicly available online (YouTube/Vimeo/etc.) ineligible; shorts ≤45 min; completed 2025 or later (2026 rule)
+  estimated: True
+  fit: Midwest's longest-running Black film festival (co-founded by Sergio Mims, 1994) inside the Siskel Film Center's critical ecosystem — fills the Chicago Black-cinema gap the Chicago International entry doesn't. Sandor Family Prize: Best Short $1,000. The 32nd (Nov 6–15, 2026, confirmed) closed Jun 30, 2026, so target the 33rd (Nov 2027). Note its strict availability rules: films publicly available online are ineligible, and prior public Chicago screenings generally disqualify — sequence Chicago ac
+
+--- Krakow Film Festival  [strong, fit 7]  Krakow Poland  verified=no
+  fest_dates: 66th edition May 31–Jun 7, 2026 (confirmed, done); target 67th est. late May–early Jun 2027
+  submissions_open: est. early Oct 2026 (66th call opened Oct 1, 2025)
+  deadlines: 66th-cycle pattern: Nov 30 for films completed before Oct 31 (THIS FILM'S LANE — est. Nov 30, 2026); Jan 31 (international) / Feb 15 (Polish) for later completions. Fees not published in sources checked — entry via festival's own form.
+  final_deadline: ~2026-11-30 (estimated phase-1 deadline applicable to a Jan 2026-completed film)
+  fees_usd: not published in sources checked
+  oscar_qualifying: yes — Golden Dragon for Best Short Film; Silver Dragons for best fiction/animated/documentary short (99th AA list)
+  other_awards_path: European Film Awards qualifying (same categories); BAFTA-qualifying
+  premiere_requirement: All competing films make their Polish debut at the festival; shorts ≤30 min
+  estimated: True
+  fit: One of the oldest shorts/doc festivals in the world (since 1961), triple-qualifying: Oscar (Golden Dragon best short + Silver Dragon best fiction short), EFA and BAFTA. Fiction shorts up to 30 min welcome. KEY TIMING NUANCE for this film: submissions run in two phases, and a film completed before Oct 31, 2026 must enter by the FIRST phase (~Nov 30, 2026) — the later Jan 31 deadline is only for films completed after Oct 31. So this lands in the current window: call for the 67th edition opens ~Oct
+
+===== LOW-FIT (38) one-liners =====
+  6.5 | worthy | Directors' Fortnight 2027 (Quinzaine des Cineastes) | ~2027-03-01 (estimat | Auteur-first Cannes sidebar with a small, fiercely curated shorts slate; a director-driven vision piece with this much formal identity is th
+  6.5 | worthy | Flickers' Rhode Island International Film Festival | 2027-06-15 | Historic shorts powerhouse (98 alumni Oscar nominations) BUT its Academy badge is currently absent from FilmFreeway and it does not appear i
+  6.5 | worthy | deadCenter Film Festival | 2027-02-13 | Oklahoma's Academy qualifier - Best Live Action Short explicitly Oscar-qualified, cheap entry, welcoming regional audience. Moderate cultura
+  6.5 | worthy | Salute Your Shorts Festival | ~2027-06-04 | Scrappy, filmmaker-loved LA fest. Not on the Academy festival list - instead its top prize is an Academy-qualifying LA THEATRICAL RUN (any l
+  6.5 | worthy | S.O.U.L. Fest x ABFF London (We Are Parable / S.O.U.L. Film / The British Blacklist) | ~2027-04-13 (estimat | The UK's leading Black British film festival, now partnered with ABFF Global: London and expanding beyond London. Telling signal for fit: it
+  6.5 | worthy | Raindance Film Festival | 2027-03-08 | Major indie brand, Oscar-qualifying in three short categories and BAFTA-recognized, with confirmed 2027 shorts deadlines and — crucially — n
+  6.5 | strong | Vienna Shorts | 2027-01-31 | Quadruple-qualifying (Oscar, EFA, BAFTA, Austrian Film Award) and the Fiction & Documentary competition is a legitimate home for this film. 
+  6.5 | strong | Uppsala Short Film Festival | ~2027-05-31 (estimat | Scandinavia's premier shorts festival, Oscar-qualifying via the Uppsala Grand Prix, plus EFA and BAFTA recognition. Curatorial taste is arth
+  6.5 | worthy | Interfilm — International Short Film Festival Berlin | ~2027-05-28 (estimat | Oscar-qualifying (Best Live Action, International Competition) with genre-friendly, audience-forward programming, and its 20-minute cap is a
+  6.5 | worthy | Oxford Film Festival | 2026-11-01 | Mississippi's flagship indie festival with a track record of programming serious Southern narrative work — an antebellum Deep South story wi
+  6.5 | worthy | Virginia Film Festival | ~2027-07-14 (estimat | A curated, university-backed festival (UVA) in a town that has spent a decade publicly reckoning with slavery and its monuments — programmin
+  6.5 | worthy | Cork International Film Festival | ~2027-08-06 (estimat | Ireland's oldest and largest festival (71st edition), Oscar-qualifying via Grand Prix International Short plus BAFTA and EFA badges. The 202
+  6.5 | worthy | OFF — Odense International Film Festival | ~2027-03-18 (estimat | Denmark's Oscar-qualifying shorts festival (H.C. Andersen Award, International Competition — on the 99th AA list) and BAFTA-qualifying, with
+  6 | longshot | Cannes Short Films in Competition 2027 (Short Film Palme d'Or) | ~2027-03-01 (estimat | The prestige ceiling for any short, and at 13 minutes the film clears the hard 15-minute-including-credits cap. But the official competition
+  6 | longshot | Venice - Orizzonti Short Films 2027 (Orizzonti Corti) | ~2027-05-27 (late de | At 13 min the film clears the strict 20-minute Orizzonti Corti cap, and the section's mandate ('new aesthetic and expressive trends,' debut 
+  6 | worthy | Telluride Film Festival 2027 | ~2027-07-01 (estimat | Tastemaker prestige with only ~25 shorts selected, programmed alongside the fall-season features - a craft-first period short is the kind of
+  6 | worthy | Cinequest Film Festival | 2026-11-01 | Tech-forward Bay Area fest whose Best Narrative Short Drama winner qualifies; large audience but less curatorial identity for a period piece
+  6 | worthy | Slamdance Film Festival | 2026-10-06 | Oscar/BAFTA/CSA-qualifying with zero premiere restrictions and the earliest actionable deadline on this list (late: Sep 14). Fit caveat: Sla
+  6 | longshot | Lights, Camera, Africa! Film Festival | unknown (no active c | Beloved boutique Lagos festival (est. 2011, The Life House / Ugoma Adegoke) built around African-experience storytelling — thematically a fi
+  6 | worthy | Beaufort International Film Festival | 2026-10-31 | The only festival in the lane actually IN South Carolina's Lowcountry — Beaufort sits in Gullah-Geechee heritage country (St. Helena Island,
+  6 | longshot | Smithsonian NMAAHC — Smithsonian African American Film Festival (SAAFF) |  | Would be a top-shelf canonization platform for this film, but the festival appears DORMANT: inaugural edition Oct 24–27, 2018 (open submissi
+  6 | worthy | ZINEBI — International Festival of Documentary and Short Film of Bilbao | ~2027-07-01 (estimat | FIAPF-accredited doyen of Spanish shorts festivals (since 1959), Oscar-qualifying via the ZINEBI Grand Prize (International Short Film Compe
+  5.5 | worthy | New York Film Festival - Currents shorts 2027 (NYFF65) | ~2027-05-25 (estimat | Currents skews formally experimental and art-cinema; the film's vision sequences and painterly single-source lighting give it an angle, but 
+  5.5 | longshot | New Hampshire Film Festival | ~2027-07-15 | On the 98th Academy list via its Shorts Jury Award (Live Action) - a low-profile qualification path with modest fees. Generalist New England
+  5.5 | worthy | SCAD Savannah Film Festival | ~2027-06-30 (estimat | Awards-season showcase with real craft prizes for shorts — a named Best Cinematography award ($1,000, sponsored by ShotDeck) and a Jury Awar
+  5 | dream | Student Academy Awards (54th, 2027 cycle) — AMPAS | ~2027-04-25 (estimat | Profile fit is a 10 (graduate thesis narrative, exactly SAA jury material, all medal winners become Oscar-eligible) but eligibility has prob
+  5 | worthy | BAFTA Student Awards (2027) | ~2027-03-01 (rough e | Prestigious global student prize (Live Action category) that fits the film's ambition, but two frictions: (1) entry comes ONLY from AFI's au
+  5 | longshot | BFI London Film Festival — Short Film Competition (71st edition) | ~2027-06-01 (estimat | Major correction to the critic's flag: LFF's open submissions are for UK and Irish films ONLY (confirmed across the 68th, 69th and 70th edit
+  5 | longshot | BOGOSHORTS — Bogota Short Film Festival | ~2027-08-06 (estimat | Important correction to the critic's premise: on the current (99th) Academy list, Bogoshorts' qualifying awards are the Santa Lucia prizes o
+  4.5 | longshot | International Short Film Festival Oberhausen | 2027-01-18 | Immense historical prestige, but honest fit check: Oberhausen's International Competition skews hard toward experimental, essayistic and art
+  4 | longshot | BendFilm Festival | ~2027-05-22 | Charming indie fest but it does NOT appear on the 98th Academy qualifying list and its FilmFreeway page carries no Academy badge - its forme
+  4 | longshot | New Voices in Black Cinema (BAM / ActNow Foundation) |  | A once-excellent curated BAMcinématek showcase for emerging Black filmmakers, but it appears DORMANT: BAM's festival page now 404s, the ActN
+  3.5 | longshot | UFVF / KODAK Student Filmmaking and Cinematography Grants | ~2027-06-01 (stated  | The surviving Kodak student craft program (administered with the University Film & Video Foundation): schools nominate up to 2 filmmaking st
+  3.5 | longshot | Charleston Film Festival | ~2027 (unpublished;  | Honest verdict: noise. Despite Charleston being the most historically resonant city imaginable for this story (the largest slave port in Nor
+  2 | longshot | Africa in Motion (AiM) |  | DEFUNCT — remove from the target list. Wikipedia records the festival as running 2006–2022, and its old domain (africa-in-motion.org.uk) is 
+  1 | longshot | BSC Short Film Cinematography Awards |  | Researched and ruled out: the British Society of Cinematographers' short-film cinematography competition (BSC Club, Undergraduate, Postgradu
+  1 | longshot | Middleburg Film Festival |  | Researched and ruled out: Middleburg is a curated awards-season festival famous for honoring craftspeople (distinguished cinematographer/com
+  1 | longshot | Princess Grace Awards — Film (thesis honoraria) |  | Included only to close the student-awards checklist: Princess Grace film honoraria are school-nominated scholarships that fund UPCOMING thes

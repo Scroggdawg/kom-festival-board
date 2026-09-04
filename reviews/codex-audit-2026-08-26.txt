@@ -1,0 +1,158 @@
+The execution is not safe to publish from yet. The normal path contains a real draft-loss race; the forced-conflict path can overwrite newer work or silently drop operations; and editable URLs permit stored script execution with access to the PAT.
+
+I audited clean HEAD `b8cf110`, tracking `origin/main`. The embedded snapshot exactly matches `data.json`.
+
+## CRITICAL
+
+1. Publishing can erase newly staged changes—or commit discarded ones.
+
+`publish()` awaits the remote read, computes `merged` from the mutable global `OPS`, awaits the PUT, then clears all of `OPS`. Editing and discarding remain enabled throughout.
+
+Consequences:
+
+- An operation staged after `merged` is computed is not included in the commit, but is erased at success.
+- An operation discarded after `merged` is computed can still be committed.
+- The commit description can describe a different operation set than the JSON content.
+
+See [stage() at index.html:2834](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2834>), [merge at index.html:3382](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3382>), [PUT at index.html:3390](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3390>), and the unconditional clear at [index.html:3398](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3398>).
+
+Fix: snapshot operation IDs at publish start, disable mutation while publishing, and remove only the exact committed IDs after success.
+
+2. `publishForced()` is a lost-update/data-loss engine.
+
+The conflict UI marks selected operations `force`, but `publishForced()` bypasses `prev` checks for every `setField`, `setPremiere`, and `setKeyDate` operation—not just conflicts the user reviewed. If upstream changes again while the conflict sheet is open, those new changes are overwritten without another review.
+
+Worse:
+
+- Missing festival/premiere/key-date targets are silently skipped.
+- Other conflicting operations are applied twice identically, remain unapplied, and are then silently treated as success.
+- The complete draft is cleared after that “success.”
+- A 409 retries the same forced overwrite against a newer SHA without re-review.
+
+See [conflict mutation at index.html:3422](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3422>), [forced application at index.html:3438](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3438>), the ineffective double application at [index.html:3445](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3445>), and clear/retry at [index.html:3453](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3453>).
+
+Fix: remove `publishForced()`. Use one rebase loop that recomputes conflicts after every fetch/409. A “keep mine” decision must be bound to the exact upstream value and SHA the user reviewed.
+
+3. Editable links permit stored JavaScript execution and PAT compromise.
+
+HTML escaping is consistently present; I did not find an editable text string interpolated raw into `innerHTML`. But escaping is not URL sanitization.
+
+Quick Add accepts the URL without checking validity or protocol at [index.html:3292](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3292>). Once promoted, it becomes an escaped-but-unfiltered `href` at [index.html:3000](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3000>). A value such as `javascript:...` remains executable; the CSP explicitly permits inline script at [index.html:6](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:6>). Executed code can read the PAT stored under the same origin at [index.html:3345](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3345>). `connect-src` does not prevent exfiltration by top-level navigation.
+
+Fix: parse URLs with `new URL()`, allow only `https:`—optionally explicitly approved `http:`—and reject everything else during validation and staging.
+
+## MAJOR
+
+4. Operation semantics do not implement the frozen rebase contract.
+
+- `setField` compares objects and arrays with reference equality at [index.html:2794](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2794>). “Add note” constructs array-valued `prev`/`value` at [index.html:3266](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3266>), so it conflicts immediately even with an unchanged base.
+- `promote` and `ruleOut` completely ignore `prev`, allowing an upstream disposition change to be overwritten at [index.html:2805](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2805>).
+- Premiere conflicts inspect only `state`; concurrent changes to festival, date, or note are silently overwritten at [index.html:2813](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2813>).
+- `addLead`, `addFestival`, and `addKeyDate` silently discard a different record sharing the same ID.
+- `refresh()` discards the returned conflict list, so conflicts remain invisible until publish at [index.html:3121](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3121>).
+
+Use semantic operation kinds such as `appendNote`, deep/field-specific `prev` comparisons, and explicit collision conflicts.
+
+5. Validation allows renderer-breaking data—and sometimes throws itself.
+
+`validate()` checks only a small subset of the schema at [index.html:2631](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2631>). Confirmed examples:
+
+- `keyDates: [null]` and `premieres: [null]` pass, then crash their renderers at [index.html:2915](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2915>) and [index.html:2950](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2950>).
+- `events: {}` makes the validator itself throw at [index.html:2645](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2645>).
+- Invalid calendar dates such as `2026-99-99` pass.
+- Duplicate event IDs pass.
+- Malformed `open`, `festDate`, `notes`, links, tiers, fees, currency, premiere state, key-date fields, and target-required fields pass.
+- Non-string truthy names pass, then edit search can crash on `.toLowerCase()` at [index.html:3148](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3148>).
+
+Validation must be total—always returning errors, never throwing—and cover every renderer assumption.
+
+6. Recognition events can produce contradictory counters and UI.
+
+The frozen lifecycle precedence itself is implemented correctly for distinct dates. But validation permits `screened`, `won`, or `nominated` without a selection.
+
+A lone `won` event yields:
+
+- “Winner” chip because recognition overrides lifecycle at [index.html:2681](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2681>).
+- Zero accepted festivals, but “1 win” in the accepted tile at [index.html:2896](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2896>).
+- No row in the awards strip, because that requires lifecycle `selected` at [index.html:2938](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2938>).
+
+A lone `screened` event is nearly invisible outside Recent Activity. Enforce event prerequisites or define consistent recognition-only rendering.
+
+7. Fee accounting accepts bad values and destroys cents.
+
+The form’s `min="0"` is not checked in JavaScript; negative values are converted and staged at [index.html:3193](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3193>). Validation does not require a finite nonnegative fee or recognized currency. Totals then round each currency aggregate to whole units at [index.html:2889](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2889>), so `$95.50` is reported as `$96`.
+
+8. Date handling is locally consistent, but still has material defects.
+
+There is no UTC/local off-by-one between `parseD()` and `todayISO()`—both deliberately use local time. The problems are:
+
+- `TODAY` is captured once at page load, so a tab left open overnight has stale defaults and counters ([index.html:2602](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2602>)).
+- Regex validation checks formatting, not real calendar dates.
+- When recording a historical selection/screening, the premiere operation uses today instead of the chosen event date at [index.html:3217](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3217>).
+- Lifecycle “latest” is ambiguous for events sharing a date because no sequence/timestamp tie-breaker exists.
+
+9. Publish retry and polling are not honest enough.
+
+- All HTTP 422 responses are treated as concurrency and recursively retried forever, although 422 can represent a permanently invalid request ([index.html:3396](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3396>)).
+- `publishForced()` does not clear/re-prompt on 401.
+- The poll lasts 325 seconds, exceeding the frozen five-minute cap.
+- The PUT response is never parsed, so the promised commit link cannot be shown.
+- Multiple overlapping polls share the same status element. An older commit can report “Live ✓” while a newer commit is still propagating.
+
+See [pollLive() at index.html:3461](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3461>).
+
+10. Field validation can partially stage a form that visibly failed.
+
+The field loop calls `stage()` for each valid earlier field before discovering a later invalid field and returning at [index.html:3241](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3241>). The UI says the form failed, but some changes are already in the draft.
+
+Additionally:
+
+- Tapping the modal backdrop discards all un-staged form input without warning ([index.html:3135](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3135>)).
+- “Discard all” has no confirmation ([index.html:3342](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3342>)).
+- Rule-out uses `prompt()` and accepts an empty reason ([index.html:3051](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3051>)). This is especially brittle on iOS and provides no inline recovery.
+- Draft-storage failure is ignored; `store.set()` reports failure, but callers discard the result ([index.html:2609](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2609>)).
+
+11. Token containment is weaker than the copy suggests.
+
+Both local and session storage are origin-wide, not path-scoped. A sibling `scroggdawg.github.io` project opened by same-tab navigation can read the session token too—not only the remembered local token. The warning at [index.html:3350](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3350>) understates this.
+
+The CSP otherwise matches the app’s actual Google stylesheet/font and API loads. However, it permits inline scripts, has no effective frame-ancestor protection, and does not constrain top-level navigation. CSP is therefore not a token boundary.
+
+## MAJOR PLAN DIVERGENCES
+
+- The data generator is now non-runnable: it searches for `const FESTIVALS = [...]` at [generate-data.py:20](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/tools/generate-data.py:20>), but that declaration no longer exists anywhere in `index.html`.
+- The generator deliberately emits empty structured tiers and empty links for every target at [generate-data.py:189](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/tools/generate-data.py:189>). All 47 targets therefore lack tier data and links.
+- Cheapest-tier fee prefilling is absent; the form always starts blank at [index.html:3179](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3179>).
+- No full add-festival form exists. `addFestival` exists only as an operation-engine case.
+- Bench and Ruled Out filter chips are missing; the shipped chip list contains only six filters at [index.html:3117](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3117>).
+- Search does not filter the Ruled Out section.
+- `baseSha` is stored but never captured and never used; it remains null from [index.html:2760](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2760>).
+- Too-new schemas fall into the generic stale fallback instead of showing the promised “reload for the new version” notice ([index.html:2855](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2855>)).
+- The promised CSP/escaping explanatory copy and commit link are absent.
+- Duplicate IDs detected by the generator are merely reported; the invalid file is still written at [generate-data.py:213](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/tools/generate-data.py:213>) and [generate-data.py:237](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/tools/generate-data.py:237>).
+
+The truthful 113-record researched counter, schema-2 structure, snapshot equality, UTF-8 base64, explicit `main` branch, mobile cards, fallback chain, event IDs, currency-separated totals, awards strip, and recent activity do conform.
+
+## MINOR
+
+- Same-date lifecycle events rely on array/insertion order after sorting only by date.
+- The publish poll’s `waited` variable is unused.
+- The generator reports raw and output counts but does not explicitly report the four-record dedupe delta as promised.
+- The Google Fonts preconnect is not allowed by `connect-src`; the actual stylesheet/font loads remain allowed, so this is only a performance warning.
+- Exiting edit mode with drafts silently hides the publishing controls; the draft remains, but a phone user can easily forget it.
+
+## Required fixes before release
+
+1. Freeze publish batches and remove only committed operation IDs.
+2. Replace `publishForced()` with a single SHA-bound rebase/conflict loop.
+3. Make every operation idempotent and prev-checked according to the addendum.
+4. Add strict URL protocol validation.
+5. Expand validation to the complete schema, semantic dates, invariants, finite nonnegative fees, and renderer-required types.
+6. Fix recognition/counter consistency and premiere event dates.
+7. Repair the generator; populate structured tiers and real links.
+8. Implement the missing full-add form, fee prefilling, Bench/Out filters, schema-too-new notice, and real base-SHA handling.
+9. Make form staging atomic; warn on unsaved close, failed storage, and destructive discard.
+10. Correct 401/409/422 behavior, cancel superseded polls, enforce five minutes, and expose the commit URL.
+11. Reconsider PAT persistence on the shared GitHub Pages origin; at minimum make in-memory storage the default and accurately warn that session storage is shared too.
+
+VERDICT: DO-NOT-SHIP.

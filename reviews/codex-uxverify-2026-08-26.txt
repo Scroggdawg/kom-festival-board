@@ -1,0 +1,62 @@
+Audited shipped HEAD `91286e5`. Static syntax passes; no files changed. A live phone tap-through was unavailable, so phone findings are based on definite event/CSS paths.
+
+## 1. Plan conformance
+
+| Spine item | Status | Finding |
+|---|---|---|
+| Edit entry, desktop + phone | PARTIAL | Both entries exist, but desktop is not sticky and phone hides the required active “Editing” state. [index.html:195](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:195>) [index.html:200](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:200>) |
+| Editable vs locked; correction needs source | PARTIAL | Source-gated correction and most campaign edits exist. Restore is absent; corrections cover only five research fields, excluding name/location/category/path/links/why. [index.html:3597](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3597>) [index.html:3626](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3626>) |
+| Status-first desktop rows | PARTIAL | Rail, pill, festival context, hero and links adopted. Only untouched/open rows receive a context button, and that button merely opens details instead of the prefilled action. [index.html:3303](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3303>) |
+| Mobile banner + hero + links | PARTIAL | Structure adopted. Name/hero are below the specified 20/28px, link buttons are below the specified 48px, and the banner does not identify “Change status” in edit mode. [index.html:292](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:292>) [index.html:298](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:298>) |
+| Status color law | PARTIAL | Winner is green with a gold star. Withdrawn lacks strike-through; upcoming ≤30-day deadlines use red despite the “red only overdue” rule. [index.html:118](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:118>) [index.html:3286](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3286>) |
+| Timeline markers + receding | PARTIAL | All three markers adopted. “Decided” receding covers rejection/withdrawal only, not selection/winner. [index.html:3385](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3385>) |
+| Four-tap, no cascade | PARTIAL | Premiere choices are inline, but selection does not reveal award/screening fields. Staging reopens the sheet, hiding Publish and making the primary phone flows about six taps. [index.html:3544](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3544>) [index.html:3590](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3590>) |
+| Tiles as controls + meter | PARTIAL | Controls and meter exist. Applied and pending both invoke the current-submitted filter, although “applied” counts every historical submission; meter calculates historical submitted over a union, not open-submitted/open-total. [index.html:3186](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3186>) [index.html:3198](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3198>) |
+| Refuse list | PARTIAL | No kanban, mega-editor, hidden links, phone table, color-only status, review requirement, or recommendation auto-promotion. Raw “Stage/Staged” language remains throughout. [index.html:3558](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3558>) |
+
+## 2. Festival sheet vs addendum
+
+- Header wash — ADOPTED.
+- State-adaptive hero — PARTIAL. Selection says “Screens” using the festival’s start date, not a recorded screening date. [index.html:2889](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2889>) [index.html:2905](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2905>)
+- One primary or segmented pair — ADOPTED.
+- Campaign timeline + empty state — ADOPTED.
+- Locked research + Verified stamp — PARTIAL. Unresearched bench records display “Verified —”; full-add records get “Verified today” despite an empty source. [index.html:3519](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3519>) [index.html:3771](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3771>)
+- Footer provenance — ADOPTED.
+- Six states — ADOPTED.
+- Motion — PARTIAL. `sheetUp` and a reduced-motion disable exist, but the same translation runs on phone and desktop; there is no phone spring/grab bar, desktop scale-fade, or status-only transition. [index.html:238](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:238>) [index.html:242](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:242>)
+
+## 3. Correctness and security
+
+Security result: no new HTML-injection path found. All user/data strings in the named functions are escaped. `m.hero` contains deliberate markup only; winner awards are escaped before entering it, and mobile banner awards are escaped after composition. Link and source `href`s receive render-time `safeUrl` plus attribute escaping.
+
+Problems:
+
+1. `safeUrl` accepts plain HTTP although every form promises/requires HTTPS. [index.html:2774](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2774>)
+2. Screening only offers `available` premieres. A premiere previously reserved by that festival cannot be advanced to `spent`. [index.html:3547](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3547>)
+3. Premiere optimistic-concurrency snapshots omit `date`, even though the operation writes it; an upstream date-only change is silently overwritten. [index.html:3070](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3070>) [index.html:3587](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3587>)
+4. “More actions” is unconditional, allowing “Withdraw” on untouched, rejected, closed, or bench festivals. [index.html:3597](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3597>)
+5. External `↗` links navigate the current tab. An unfinished sheet form is lost. [index.html:3293](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3293>)
+
+Passes:
+
+- Implied-selection staging is correctly ordered before recognition.
+- Repeated `stage()` refreshes do not destroy the live sheet form.
+- Re-rendered rows/cards/tiles receive fresh listeners.
+- Tile indices align with the eight KPI cells; the problem is filter semantics, not array offset.
+- No live references remain to `renderTable`, `premiereNudge`, or `fieldSheet`. Only unused legacy CSS and `deadlineCell` remain.
+
+## 4. Phone UX traps
+
+- The successful event path keeps the modal open, so Publish remains inaccessible until an extra close.
+- Dirty protection only runs for backdrop taps, ignores checkboxes/selects, and treats untouched prefilled fields as dirty; the close button bypasses it entirely. [index.html:3457](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3457>) [index.html:3529](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3529>)
+- Any sheet action—including “More actions,” note, or correction—silently enters global edit mode. On phone the active Edit control then disappears. [index.html:3533](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3533>)
+- Ordinary page re-renders do not lose open forms; sheet replacement, close, and same-tab external navigation do.
+
+## VERDICT: SHIP-WITH-FIXES
+
+1. Restore four-tap flows: direct context action, complete selection fields, close after successful staging, replace “Stage” wording.
+2. Fix reserved→spent premiere handling and include `date` in concurrency snapshots.
+3. Use actual screening-event dates; add restore and state-gate More actions.
+4. Separate applied/pending tile filters and implement open-submitted/open-total meter math.
+5. Make form-discard handling consistent; open external links separately; keep phone “Editing” visible.
+6. Complete correction coverage/provenance and the specified responsive motion.

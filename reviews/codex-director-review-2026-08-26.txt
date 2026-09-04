@@ -1,0 +1,211 @@
+## Part 1 — Role-playing the director for 12 months
+
+### Month 1: Record a submission from a phone in under a minute
+
+**Plan flow:** Open the bookmarked `?edit` URL—or triple-tap the title—scroll the Dream List, find Sundance, choose “applied,” enter a date, then Publish.
+
+- **Delivers:** The submission appears publicly; applied and pending counts update.
+- **Friction:** Forty-plus rows inside a wide table make finding the festival slow on a phone. Triple-tap is undiscoverable and may select text. “Applied” still requires manual dating and a full publish flow.
+- **Missing:** Search, a “Submit festival” quick action, default-to-today, actual amount paid, currency/waiver, FilmFreeway confirmation number, and submission link.
+- **Needed experience:** Edit → search “Sundance” → Submit → today and advertised fee prefilled → confirm. Three taps plus typing.
+
+### Month 2: A festival moves its deadline
+
+**Plan flow:** Enter edit mode, find the row, click the deadline, replace it, Publish.
+
+- **Delivers:** The table and submission-window graphic can reflect the new date.
+- **Friction:** The director must remember every other place that mentions that deadline.
+- **Missing:** “Last verified,” source link, verification confidence, and a review-needed flag. The prose in Next Actions can remain stale after the row changes. Fee-tier deadlines are embedded in free text, so they cannot reliably move with the final deadline.
+
+### Month 2: Add a recommended festival
+
+**Plan flow:** Open “Add festival” and complete the full festival schema: tier, city, dates, fees, path, rationale, and other fields.
+
+- **Delivers:** A fully researched festival can join the Dream List.
+- **Friction:** A recommendation normally arrives as “Look at this festival” plus a link. Requiring research-grade detail on a phone discourages capturing it.
+- **Missing:** A quick inbox: festival name, link, who recommended it, one-line reason. It should enter the Maybe Bench, not automatically become a target.
+
+### Month 3: “Which open festivals close soon that we have not submitted to?”
+
+**Plan flow:** Read the deadline-sorted timeline, then cross-reference it against statuses in the Dream List.
+
+- **Delivers:** Open/closed styling and days remaining provide some raw information.
+- **Friction:** The table sorts by tier before deadline; the timeline does not show submission state. The director has to perform the join mentally.
+- **Missing:** A saved “Submit next” view: **open + not submitted**, sorted by deadline, with “next 7 days” and “next 30 days” chips. Unknown or estimated deadlines should appear separately.
+
+### Month 4: Record a rejection
+
+**Plan flow:** Find the festival, change “applied” to “rejected,” enter a date, Publish.
+
+- **Delivers:** Rejected and pending totals update.
+- **Friction:** The single date control becomes ambiguous: submission date or decision date? “Rejected” also feels harsher than the language festivals and filmmakers generally use.
+- **Missing:** Preserve “submitted Aug 31” while adding “not selected Dec 14.” Optional reason or short note; no required postmortem.
+
+### Month 5: Record an acceptance
+
+**Plan flow:** Change the festival to “accepted,” add a date, Publish.
+
+- **Delivers:** The acceptance count rises.
+- **Friction:** “Accepted” is only the beginning of the work, but the board treats it as the end.
+- **Missing:** “Official Selection,” screening date and venue, confirmation deadline, deliverables due, DCP/caption requirements, travel/accreditation, publicity tasks, and whether accepting reserves a premiere.
+
+### Month 6: “Which premieres have we spent?”
+
+**Plan flow:** Reread the Premiere Chess prose and infer the answer from accepted festivals.
+
+- **Delivers:** The strategy correctly calls attention to LA, New York, Atlanta, France, and international-premiere dependencies.
+- **Friction:** Static advice cannot describe what has actually happened. Selection alone does not spend a premiere; a public screening does.
+- **Missing:** A premiere ledger showing **Available / Reserved / Spent** for world, international, North American, US, country, region, and city rights. Every scheduled or completed public screening should update it. Private, cast-and-crew, and cancelled screenings should not.
+
+### Month 7: A festival screens the film
+
+**Plan flow:** No dedicated action exists. Leave it “accepted.”
+
+- **Delivers:** Nothing beyond the selection count.
+- **Friction:** The dashboard cannot distinguish a future selection from a completed screening.
+- **Missing:** “Screened” date, public/private designation, city/country, screening count, audience or press notes, and the resulting premiere consequences.
+
+### Month 8: The film wins an award
+
+**Plan flow:** No WIN control or award-name field exists. The row remains “accepted.”
+
+- **Delivers:** Nothing specific.
+- **Friction:** The campaign’s most valuable outcome is visually indistinguishable from an ordinary selection.
+- **Missing:** Winner/nominee recognition, exact award name, award date, cash prize, and whether that particular award qualifies the film for the Oscars or another body. The public board should gain a restrained Selections & Awards strip using official festival laurels where supplied.
+
+### Month 9: “How much have we spent?”
+
+**Plan flow:** Read fee strings such as “$55 student by Sep 11 · $85 final” and add them manually.
+
+- **Delivers:** Advertised prices help with planning.
+- **Friction:** Advertised fees are not amounts paid. They do not record waivers, refunds, currencies, or which tier was used.
+- **Missing:** Actual payment amount, currency, date, waiver/refund, and optional USD-equivalent entered at payment time. Show submission-fee total separately from travel, deliverables, and publicity costs.
+
+### Month 10: “What are the 57 maybes I can count but not see?”
+
+**Plan flow:** The KPI says 57; there is nowhere to open them.
+
+- **Delivers:** The research funnel has a count.
+- **Friction:** The number looks authoritative but is unauditable and unusable.
+- **Missing:** A searchable Maybe Bench with name, link, location, likely deadline, reason benched, recommender, and next-review date. Each item needs **Promote to target** and **Rule out** actions.
+
+---
+
+## Part 2 — The feature list I would build
+
+### MUST
+
+1. **Filmmaker-native vocabulary**
+
+   - Research disposition: **Maybe / Target / Ruled out**
+   - Submission: **Not submitted / Submitted / Withdrawn**
+   - Decision: **Official Selection / Not selected**
+   - Screening: **Scheduled / Screened / Cancelled**
+   - Recognition: **Nominee / Winner**, always with an award name
+   - “Pending” is a useful view, not something Luke manually sets.
+   - Keep open/closing/closed as deadline labels, not campaign statuses.
+
+2. **A phone-first quick-update sheet**
+
+   Search festival → choose action → default date to today → add only relevant fields → Publish. Do not edit inside the wide research table.
+
+3. **Search**
+
+   Search festival name, city, country, category, award path, and notes. It is essential with 46 targets plus 57 maybes.
+
+4. **Saved filters and useful sorting**
+
+   - Submit next: open, not submitted, closing soon
+   - Needs deadline verification
+   - Submitted, awaiting decision
+   - Official selections and upcoming screenings
+   - Not selected
+   - Free/waiver available
+   - Premiere-sensitive
+   - Maybe Bench
+
+   Default operational sorting should be deadline ascending. Tier and fit remain optional sorts.
+
+5. **Submission details**
+
+   Submission date, platform/link, confirmation ID, fee actually paid, currency, waiver/refund, screener version, and expected notification date.
+
+6. **Selections, screenings, and awards**
+
+   An Official Selection opens fields for screening dates, venue, deliverables, attendance, and press. Awards support multiple named nominations or wins per selection.
+
+7. **Premiere ledger**
+
+   Display world through city-level rights as **Available / Reserved / Spent**, with the screening responsible. Surface warnings before committing to a screening that conflicts with another target.
+
+8. **Visible Maybe Bench**
+
+   Make all 57 records inspectable. Allow quick capture of an incomplete recommendation and later promotion or dismissal.
+
+9. **Actual spending**
+
+   Keep researched fee tiers separate from actual payments. Show totals by currency and an optional manually recorded USD total. Start with submission fees; allow simple travel, deliverables, and publicity expenses without becoming accounting software.
+
+10. **Deadline provenance**
+
+    Store source link, last-checked date, confirmed/estimated state, and structured fee-tier dates. Flag stale deadlines for review.
+
+11. **A real Edit entry point**
+
+    A discreet “Edit board” link in the footer or menu, plus a bookmarkable edit URL. Keep edit controls invisible at rest. Skip triple-click as the primary door.
+
+12. **Month-three operations**
+
+    Track notification date, response deadline, deliverables due, screening date, captions/DCP status, travel decision, and “what do I owe this week?” These become urgent immediately after the first selection.
+
+### SHOULD
+
+1. **Selections & Awards presentation**
+
+   A restrained public strip near the top: festival, year, award name, and official laurel asset. Never generate imitation laurels. Distinguish “Official Selection” from “Winner” and highlight only genuinely qualifying awards.
+
+2. **Per-festival notes**
+
+   Provide one short strategy note and dated updates. Because the board is public, label notes “public-safe.” Programmer contacts, waiver conversations, and sensitive correspondence belong elsewhere.
+
+3. **Mobile cards**
+
+   On narrow screens, replace the horizontal table with compact cards showing deadline, campaign state, fee, and the next action. Expand for research detail.
+
+4. **Upcoming-work view**
+
+   Combine submission deadlines, notification dates, deliverables, screenings, and key dates into one chronological list.
+
+5. **Calendar export**
+
+   One-tap `.ics` export for deadlines, notifications, deliverables, and screenings. No full calendar product.
+
+6. **Festival and FilmFreeway links**
+
+   Put the official rules page and submission page directly on every record.
+
+7. **Recent activity and undo**
+
+   Show the last few meaningful changes—submitted, selected, screened, won—and allow a mistaken phone update to be reversed.
+
+8. **Edition handling**
+
+   Treat “Sundance 2027” as an edition of Sundance so next year’s dates do not overwrite this campaign’s record.
+
+9. **Simple export**
+
+   CSV/PDF export for AFI, producers, reimbursement, and campaign wrap-up.
+
+### SKIP
+
+- Multi-user roles, permissions, approvals, comments, and assignments.
+- A general CRM for programmers, press, or alumni.
+- Kanban drag-and-drop; it is awkward on phones and weak for dates.
+- Custom workflow builders or user-defined schemas.
+- Automatic web scraping and silent deadline changes.
+- Live currency conversion or bookkeeping integrations.
+- Receipt and media-file storage; store links if needed.
+- Push notifications until calendar export proves insufficient.
+- AI festival scoring or automatic submission recommendations.
+- Making every research paragraph editable inline.
+- A decorative campaign-history strip before submission, screening, award, fee, and premiere questions are solved.

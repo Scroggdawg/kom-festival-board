@@ -1,0 +1,33 @@
+C1 publish batch race — FIXED: frozen `opid` batch, staging lock, exact-batch removal.
+
+C2 `publishForced` removal — FIXED: single rebase loop; reviewed-upstream rebinding; dropped ops removed; 409/SHA-422 retry; other 422 messages surfaced; 401 clears and re-prompts.
+
+C3 URL guards — FIXED: guarded during lead/full-add/source staging and full-data validation.
+
+Majors:
+
+- Op semantics — FIXED
+- Total validation — PARTIALLY FIXED: total/non-throwing and covers the listed structures, dates, duplicate EIDs, currencies, and URLs; however, coercible non-number fees pass, and `premieres[].date` is not validated. [Fee validation](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2688>) · [premiere validation](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2702>)
+- `effectivelySelected` counters + awards — FIXED
+- Implied-selection staging — FIXED
+- Fee cents — NOT FIXED: fees remain floating-point numbers and are summed directly rather than as integer minor units. [Input storage](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:3294>) · [aggregation](</Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/index.html:2973>)
+- Premiere event dates — FIXED
+- Atomic field staging — FIXED
+- Modal/discard/exit-edit guards — FIXED
+- Rule-out sheet — FIXED
+- Poll generation counter and ≤300s — FIXED
+- Commit link — FIXED
+- TODAY rollover — FIXED
+- Schema-too-new notice — FIXED
+- Chip additions — FIXED
+- Generator ID preservation — FIXED
+- Generator hard duplicate-ID failure — FIXED
+- Generator link enrichment — FIXED
+- Fix-induced regressions — none found
+
+Required fixes:
+
+1. Store/aggregate paid fees in integer cents (or equivalent exact decimal representation).
+2. Require numeric, cent-precision fees and validate optional premiere dates.
+
+VERDICT: SHIP-WITH-FIXES

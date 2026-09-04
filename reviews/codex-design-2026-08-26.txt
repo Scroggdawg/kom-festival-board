@@ -1,0 +1,135 @@
+## 1. Edit model
+
+Replace the footer link with a persistent **Edit campaign** button:
+
+- Desktop: gold-filled, 48px-high button in the header’s upper-right corner; remains visible in a sticky 64px navigation bar.
+- Phone: fixed bottom-right button, **Edit campaign**, 52px high—not an icon-only FAB.
+- Once activated: label changes to **Editing**, every editable control becomes visible, and a sticky bottom bar shows **Changes · Publish · Exit**.
+
+Editable campaign information:
+
+- Add a festival recommendation.
+- Promote a recommendation to the active campaign.
+- Move a festival between Active, Recommended, and Ruled out; restore it later.
+- Change priority tier: Dream, Strong, Worthy.
+- Record Submitted, Selected, Not selected, Withdrawn, Screened, Nominated, or Won.
+- Record event date, actual fee/currency, confirmation number/link, award name, and public-safe notes.
+- Set the next action and personal reminder date.
+- Reserve or spend premiere rights and associate them with a festival.
+- Edit the director-owned “Why KOM” note.
+
+Locked research:
+
+- Festival name and edition.
+- Location/category.
+- Festival dates and submission windows.
+- Published fee schedule.
+- Eligibility and qualifying path.
+- Official site and FilmFreeway URLs.
+- Research assessment, source, estimated/verified flag, and last-checked date.
+
+Locked fields appear with a small lock and **Verified Aug 25**. They are never inputs in ordinary edit mode. A secondary **Suggest research correction** flow requires a replacement source URL and records a pending correction—it does not silently alter published facts.
+
+New festivals enter as purple **Needs research** recommendations with only three editable fields: name, webpage link, and “recommended by/why.” They cannot become active targets until promoted.
+
+## 2. The row and the card
+
+### Desktop row
+
+Replace the current nine-column table with an 88px status-first summary row:
+
+1. **6px status rail**
+2. **Status, 144px:** large pill plus event date
+3. **Festival, flexible:** 18px name; location/category beneath; tier shown only as an 8px dot and label
+4. **Next deadline, 150px:** 22px countdown over the exact date
+5. **Links, 230px:** two 44px-high buttons—**Official website ↗** and **FilmFreeway ↗**
+6. **Chevron, 44px target:** expands details
+
+The expanded row contains the locked research record, Why KOM, submission history, notes, and premiere implications. External-link buttons are never hidden inside that expansion.
+
+In edit mode:
+
+- The status pill becomes a 44px-high selector.
+- **Next action** and **Reminder** appear inline.
+- A 44px overflow button exposes priority, notes, move/rule-out, and premiere controls.
+- Locked research remains read-only.
+
+### Mobile card
+
+Use a full-width card with a minimum 156px resting height:
+
+- 32px status banner across the top.
+- Festival name at 20px, wrapping to two lines.
+- Deadline as the hero: **“6 days left”** at 28px, with **Aug 31 · $95** below.
+- Tier, location, and qualifying path as quiet metadata.
+- Two side-by-side 48px buttons: **Festival website** and **FilmFreeway**.
+- A clearly labeled 44px **View details** row at the bottom.
+
+Tapping the card body opens a bottom-sheet detail view; tapping a link opens only that link. In edit mode, the banner becomes **Change status**, and **Next action** appears above the links.
+
+## 3. Visual information delivery
+
+Status owns the strongest color and weight:
+
+- Muted gray: not submitted.
+- Gold: submitted / awaiting decision.
+- Green: selected / screened.
+- Red: not selected.
+- Purple: recommended / needs research.
+- Withdrawn: gray with strike treatment.
+- Winner: green status plus a gold star—not another competing status color.
+
+Tier hues become supporting information: small dot, slim timeline bar, or quiet label. They should not tint entire rows.
+
+Across the page:
+
+- Replace eight equally loud KPI tiles with a pipeline: **Targets → Submitted → Pending → Selected → Wins**, using the same status colors and counts.
+- Dream List rows and mobile cards always carry the status rail/banner.
+- Timeline submission windows recede to 35% tier color. Overlay event markers: gold submission dot, green selection/screening diamond, red rejection mark.
+- Selected and pending festivals retain full opacity; closed, ruled-out, and rejected records recede.
+- Deadline urgency earns large type, not a second red status system. Use gold under seven days; red only when overdue and still actionable.
+- Research prose, sources, and timestamps use muted text. Official links remain high-contrast gold-outlined controls.
+- Every color is paired with a label or icon.
+
+## 4. Interaction flows
+
+### Mark submitted — 4 phone taps
+
+1. **Edit campaign**
+2. Festival’s **Change status**
+3. **Submitted** — date defaults to today
+4. **Publish**
+
+A toast offers **Add fee/details** and **Undo** without blocking the fast path.
+
+### Record a decision — 4 phone taps
+
+1. **Edit campaign**
+2. Festival’s status control
+3. **Official selection** or **Not selected**
+4. **Publish**
+
+The decision date defaults to today. Selection reveals optional award, screening, and premiere-reservation fields in the same sheet; no second modal cascade.
+
+### Add a recommended festival — 4 action taps plus typing
+
+1. **Edit campaign**
+2. Sticky **+ Add festival**
+3. Enter name, webpage link, and recommendation note
+4. **Add to recommendations**, then **Publish** from the persistent bar
+
+It appears immediately in the purple Needs Research section, not among verified targets.
+
+## 5. What not to do
+
+- No footer-only edit entry or unexplained pencil icons.
+- No editable mega-form containing sourced research.
+- No tiny “site” text links or links hidden under “details.”
+- No horizontal nine-column table on phones.
+- No full-card link that conflicts with expanding or editing.
+- No tier-colored rows masquerading as campaign status.
+- No color-only status communication.
+- No raw labels such as `disposition`, `addLead`, or `stage`.
+- No automatic promotion of a recommendation into the active campaign.
+- No mandatory Review screen before every publish; review remains optional.
+- No chain of modals after recording a selection.
