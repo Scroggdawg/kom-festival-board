@@ -1,0 +1,623 @@
+{
+ "schema": 1,
+ "rev": 1,
+ "updated": "2026-09-06T19:36:26-07:00",
+ "updatedBy": "seed",
+ "title": "Killer of Men Festival Campaign",
+ "source": "meetings/2026-09-06-joan-call.md §D",
+ "statuses": [
+  "not_started",
+  "started",
+  "awaiting",
+  "complete"
+ ],
+ "statusLabels": {
+  "not_started": "not started",
+  "started": "started",
+  "awaiting": "awaiting response",
+  "complete": "complete"
+ },
+ "statusColors": {
+  "not_started": "#9aa3b8",
+  "started": "#5fb3e0",
+  "awaiting": "#e6a92a",
+  "complete": "#2bb673"
+ },
+ "sections": [
+  {
+   "id": "discount",
+   "name": "Discount emails",
+   "timing": "today",
+   "color": "#e8703a",
+   "items": [
+    {
+     "id": "D.1.1",
+     "title": "Email every shortlisted festival with a fee over ~$20, before paying — nine festivals, template in press/discount-email.md",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": "2026-09-09",
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.1.2",
+     "title": "Send from the AFI address · subject “Student discount?” · to the general inbox on FilmFreeway · “Hello team [Festival]”",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.1.3",
+     "title": "Body: who we are (roots in Nigeria, China, India, US), festivals already selected, recent AFI grads, ask for any discount",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.1.4",
+     "title": "Known responders: Aspen (~half off), Palm Springs, SFFILM",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.1.5",
+     "title": "Decide what happens if a festival has not replied by its deadline — Short Shorts Tokyo closes Sep 9",
+     "owner": "Luke · your call",
+     "waitingOn": null,
+     "due": "2026-09-09",
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "profile",
+   "name": "Profile page",
+   "timing": "this week · one approval pass from Jordan",
+   "color": "#d64f9e",
+   "items": [
+    {
+     "id": "D.2.1",
+     "title": "Send Jordan the draft of logline, bio and statement and the scope of page changes; he approves the direction once",
+     "owner": "Luke",
+     "waitingOn": "Jordan · MFA tense (E.2)",
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.2.2",
+     "title": "Remove “experimental” from the categories",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.2.3",
+     "title": "Credits from the end-credit roll: leads, recognisable names, composer, sound designer",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.2.4",
+     "title": "Remove the two ABFF/HBO forms; upload the student ID with the number redacted; EPK when it exists",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.2.5",
+     "title": "Fill screenings & awards: ABFF 2026, Martha’s Vineyard 2026, SCAD Savannah 2026",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.2.6",
+     "title": "Completion date: a 2026 date before Apr 24, 2026; then a fresh DCP and master export so metadata agrees",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.2.7",
+     "title": "First-time flag → Jordan; verify the Instagram target; decide on the website",
+     "owner": "Luke · Jordan",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.2.8",
+     "title": "Rework the stills once masters are reachable: surreal sequence, the opening, a colour frame from the ending",
+     "owner": "Luke",
+     "waitingOn": "master access",
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.2.9",
+     "title": "Read both signed ABFF/HBO documents for any exclusivity or rights terms",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "logins",
+   "name": "Logins and hosting",
+   "timing": "in parallel",
+   "color": "#a06ff0",
+   "items": [
+    {
+     "id": "D.3.1",
+     "title": "Get YouTube access from Jordan, or a screenshot of the visibility and download settings",
+     "owner": "Luke",
+     "waitingOn": "Jordan",
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.3.2",
+     "title": "The existing YouTube link stays; new Vimeo links go on new submissions only",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.3.3",
+     "title": "Campaign-owned Vimeo: Tier A · Tier B · Downloadable · Press/F&F · later, subtitled",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.3.4",
+     "title": "Campaign-owned MyAirBridge (or Dropbox); Yeo uploads DCP, clean master, trailer from China; test one small upload first",
+     "owner": "Luke",
+     "waitingOn": "Yeo",
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.3.5",
+     "title": "Luke owns and pays for the accounts; credentials never in the repo",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.3.6",
+     "title": "Regenerate the DCP and master exports after the completion date is set",
+     "owner": "Yeo",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "epk",
+   "name": "EPK and assets",
+   "timing": "",
+   "color": "#6f93f0",
+   "items": [
+    {
+     "id": "D.4.1",
+     "title": "Chase Jordan on the hard drives",
+     "owner": "Luke",
+     "waitingOn": "Jordan",
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.4.2",
+     "title": "Build the Drive skeleton before building the EPK",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.4.3",
+     "title": "Frame grabs in Resolve: the surreal sequence, the opening, the colour ending, plus the best twelve",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.4.4",
+     "title": "Collect BTS stills, headshots (KILLER_OF_MEN_First_Last_Role), the trailer, the full end credits",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.4.5",
+     "title": "Bios: each person writes their own; director’s from FilmFreeway; Luke’s producer bio gets the “why” test",
+     "owner": "team",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.4.6",
+     "title": "Text version of the EPK against press/epk-spec.md; Joan offered the layout; Canva acceptable",
+     "owner": "Luke · Joan",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.4.7",
+     "title": "Jordan records a 60-second introduction",
+     "owner": "Jordan",
+     "waitingOn": "Jordan",
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.4.8",
+     "title": "Laurels folder: ABFF, Martha’s Vineyard, SCAD",
+     "owner": "Luke",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ledger",
+   "name": "Ledger — the board",
+   "timing": "",
+   "color": "#f2b8a0",
+   "items": [
+    {
+     "id": "D.5.1",
+     "title": "Import FilmFreeway’s Export Submissions as the source of truth (30 submissions; deadlines incl. Short Shorts Sep 9)",
+     "owner": "Claude",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.5.2",
+     "title": "Fee paid per festival; running spend against $5,000",
+     "owner": "Claude",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.5.3",
+     "title": "Rejections stay visible, shaded darker",
+     "owner": "Claude",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.5.4",
+     "title": "Two deadline fields per festival — reduced-price cutoff and final",
+     "owner": "Claude",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.5.5",
+     "title": "Link register: which Vimeo upload went to which festival, view count at send",
+     "owner": "Claude",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.5.6",
+     "title": "Delivery register: which MyAirBridge folder and link, permission, sent when",
+     "owner": "Claude",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.5.7",
+     "title": "Reconcile the four lists (WhatsApp, spreadsheet, FilmFreeway list, this board) into one",
+     "owner": "Luke · Claude",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.5.8",
+     "title": "Search FilmFreeway by focus and subject; park HBCU First Look for 2027",
+     "owner": "Claude",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    },
+    {
+     "id": "D.5.9",
+     "title": "Premiere ledger: world, international, North American, US spent; LA still available",
+     "owner": "Claude",
+     "waitingOn": null,
+     "due": null,
+     "status": "not_started",
+     "history": [
+      {
+       "at": "2026-09-06T19:36:26-07:00",
+       "status": "not_started",
+       "by": "seed"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
