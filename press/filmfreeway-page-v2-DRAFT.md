@@ -66,6 +66,6 @@ Changes, itemised:
 | Stills | Remove one of the two similar bottom images and the group photo; add the surreal sequence, the opening, a colour frame from the ending; replace #6 |
 | Attachments | Remove the two ABFF/HBO forms; add the student ID (consider redacting the ID number) and, when built, the EPK |
 | Screenings & awards | ABFF 2026 · Martha's Vineyard African American FF 2026 · SCAD Savannah 2026 |
-| Completion date | Only after the three dates are pinned — see the digest §E.1 |
+| Completion date | Luke sets a 2026 date preceding Apr 24, 2026; DCP regenerated to match (digest §C.9) |
 | First-time filmmaker | Jordan's call; it contradicts the bio |
 | Website, Instagram | Verify the Instagram target; decide on the site |

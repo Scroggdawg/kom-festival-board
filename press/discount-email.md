@@ -8,7 +8,7 @@ Rule from the call: ask **before** paying; festivals do not refund. Send from th
 
 Hello team [Festival],
 
-We're recent AFI Conservatory graduates submitting our thesis short, KILLER OF MEN (13 min, 1830s South Carolina), to [Festival]. The film was selected by the American Black Film Festival and the Martha's Vineyard African American Film Festival this year, and has just been selected by SCAD Savannah.
+We're recent AFI Conservatory graduates — a team whose roots are in Nigeria, China, India and the United States — submitting our thesis short, KILLER OF MEN (13 min, 1830s South Carolina), to [Festival]. The film was selected by the American Black Film Festival and the Martha's Vineyard African American Film Festival this year, and has just been selected by SCAD Savannah.
 
 We're running the campaign on a student budget. Is there a student or alumni rate, or a fee-waiver code, we could use before we submit?
 
@@ -24,7 +24,8 @@ filmfreeway.com/projects/4011160
 Notes:
 - "Recent graduates" rather than "students" — the AFI address reads as alumni on receipt, and it avoids a claim some festivals define narrowly.
 - Confirm SCAD is public before citing it.
-- No identity joke. Add a personal line if a festival is a natural fit (an African-diaspora or historical focus) — one sentence, specific.
+- The team line is factual and stays factual — no joke (ruled Sep 6). Sent by Luke, as Luke.
+- Add a personal line if a festival is a natural fit (an African-diaspora or historical focus) — one sentence, specific.
 
 ---
 
