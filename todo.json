@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "rev": 17,
- "updated": "2026-09-06T21:52:06-07:00",
- "updatedBy": "phone",
+ "rev": 23,
+ "updated": "2026-09-06T21:54:51-07:00",
+ "updatedBy": "merge",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
  "statuses": [
@@ -112,6 +112,26 @@
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
+      },
+      {
+       "at": "2026-09-06T21:54:41-07:00",
+       "status": "started",
+       "by": "docket.html"
+      },
+      {
+       "at": "2026-09-06T21:54:42-07:00",
+       "status": "awaiting",
+       "by": "docket.html"
+      },
+      {
+       "at": "2026-09-06T21:54:43-07:00",
+       "status": "complete",
+       "by": "docket.html"
+      },
+      {
+       "at": "2026-09-06T21:54:44-07:00",
+       "status": "not_started",
+       "by": "docket.html"
       }
      ]
     },
@@ -121,12 +141,17 @@
      "owner": "Luke",
      "waitingOn": null,
      "due": null,
-     "status": "not_started",
+     "status": "complete",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
+      },
+      {
+       "at": "2026-09-06T21:54:45-07:00",
+       "status": "complete",
+       "by": "docket.html"
       }
      ]
     },
