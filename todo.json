@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "rev": 15,
- "updated": "2026-09-06T21:51:59-07:00",
- "updatedBy": "merge",
+ "rev": 16,
+ "updated": "2026-09-06T21:52:02-07:00",
+ "updatedBy": "phone",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
  "statuses": [
@@ -568,7 +568,7 @@
      "owner": "Claude",
      "waitingOn": null,
      "due": null,
-     "status": "started",
+     "status": "complete",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
@@ -578,6 +578,11 @@
       {
        "at": "2026-09-06T21:51:57-07:00",
        "status": "started",
+       "by": "phone"
+      },
+      {
+       "at": "2026-09-06T21:52:02-07:00",
+       "status": "complete",
        "by": "phone"
       }
      ]
