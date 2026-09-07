@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "rev": 11,
- "updated": "2026-09-06T21:47:12-07:00",
- "updatedBy": "merge",
+ "rev": 12,
+ "updated": "2026-09-06T21:47:29-07:00",
+ "updatedBy": "other-machine",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
  "statuses": [
@@ -174,7 +174,7 @@
      "owner": "Luke",
      "waitingOn": null,
      "due": null,
-     "status": "started",
+     "status": "complete",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
@@ -195,6 +195,11 @@
        "at": "2026-09-06T21:47:10-07:00",
        "status": "started",
        "by": "todo.py"
+      },
+      {
+       "at": "2026-09-06T21:47:29-07:00",
+       "status": "complete",
+       "by": "other-machine"
       }
      ]
     },
