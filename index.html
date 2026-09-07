@@ -196,6 +196,9 @@
   #editpill { flex: none; background: rgba(229,164,76,.14); border: 1.5px solid var(--accent); color: var(--accent); font-weight: 700; font-size: 15px; border-radius: 999px; padding: 12px 22px; cursor: pointer; font-family: var(--body); margin-top: 6px; }
   body.edit #editpill { background: var(--accent); color: #171310; }
   #editpill:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .headbtns { display: flex; gap: 10px; align-items: center; flex: none; }
+  .docketlink { border: 1.5px solid var(--hairline); color: var(--text-2); font-weight: 600; font-size: 14px; border-radius: 999px; padding: 11px 18px; text-decoration: none; font-family: var(--body); margin-top: 6px; }
+  .docketlink:hover { color: var(--text); border-color: var(--text-2); }
   @media (max-width: 720px) {
     #editpill { position: fixed; right: 14px; bottom: 14px; z-index: 30; box-shadow: 0 8px 28px rgba(0,0,0,.5); padding: 14px 24px; margin: 0; }
     body.edit #editpill { display: none; }
@@ -382,7 +385,7 @@
         <div class="eyebrow">Killer of Men · 13 min · AFI thesis · picture-locked Jan 2026</div>
         <h1>Festival Campaign Board</h1>
       </div>
-      <button id="editpill" type="button">✎ Edit campaign</button>
+      <div class="headbtns"><a class="docketlink" href="docket.html">☰ The Docket</a><button id="editpill" type="button">✎ Edit campaign</button></div>
     </div>
     <div id="banner"></div>
     <div class="kpis" id="kpis"></div>
