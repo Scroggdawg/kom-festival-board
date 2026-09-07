@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "rev": 23,
- "updated": "2026-09-06T21:54:51-07:00",
- "updatedBy": "merge",
+ "rev": 24,
+ "updated": "2026-09-06T21:55:47-07:00",
+ "updatedBy": "reset after write tests",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
  "statuses": [
@@ -42,26 +42,6 @@
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
-      },
-      {
-       "at": "2026-09-06T19:38:29-07:00",
-       "status": "started",
-       "by": "todo.py"
-      },
-      {
-       "at": "2026-09-06T19:38:39-07:00",
-       "status": "not_started",
-       "by": "todo.py"
-      },
-      {
-       "at": "2026-09-06T20:20:38-07:00",
-       "status": "started",
-       "by": "docket.html"
-      },
-      {
-       "at": "2026-09-06T21:13:26-07:00",
-       "status": "not_started",
-       "by": "docket.html"
       }
      ]
     },
@@ -77,26 +57,6 @@
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
-      },
-      {
-       "at": "2026-09-06T21:13:39-07:00",
-       "status": "started",
-       "by": "docket.html"
-      },
-      {
-       "at": "2026-09-06T21:13:40-07:00",
-       "status": "awaiting",
-       "by": "docket.html"
-      },
-      {
-       "at": "2026-09-06T21:13:41-07:00",
-       "status": "complete",
-       "by": "docket.html"
-      },
-      {
-       "at": "2026-09-06T21:13:42-07:00",
-       "status": "not_started",
-       "by": "docket.html"
       }
      ]
     },
@@ -112,26 +72,6 @@
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
-      },
-      {
-       "at": "2026-09-06T21:54:41-07:00",
-       "status": "started",
-       "by": "docket.html"
-      },
-      {
-       "at": "2026-09-06T21:54:42-07:00",
-       "status": "awaiting",
-       "by": "docket.html"
-      },
-      {
-       "at": "2026-09-06T21:54:43-07:00",
-       "status": "complete",
-       "by": "docket.html"
-      },
-      {
-       "at": "2026-09-06T21:54:44-07:00",
-       "status": "not_started",
-       "by": "docket.html"
       }
      ]
     },
@@ -141,17 +81,12 @@
      "owner": "Luke",
      "waitingOn": null,
      "due": null,
-     "status": "complete",
+     "status": "not_started",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
-      },
-      {
-       "at": "2026-09-06T21:54:45-07:00",
-       "status": "complete",
-       "by": "docket.html"
       }
      ]
     },
@@ -199,32 +134,12 @@
      "owner": "Luke",
      "waitingOn": null,
      "due": null,
-     "status": "awaiting",
+     "status": "not_started",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
-      },
-      {
-       "at": "2026-09-06T19:38:29-07:00",
-       "status": "complete",
-       "by": "todo.py"
-      },
-      {
-       "at": "2026-09-06T19:38:39-07:00",
-       "status": "not_started",
-       "by": "todo.py"
-      },
-      {
-       "at": "2026-09-06T21:47:10-07:00",
-       "status": "started",
-       "by": "todo.py"
-      },
-      {
-       "at": "2026-09-06T21:47:27-07:00",
-       "status": "awaiting",
-       "by": "todo.py"
       }
      ]
     },
@@ -347,17 +262,12 @@
      "owner": "Luke",
      "waitingOn": "Jordan",
      "due": null,
-     "status": "awaiting",
+     "status": "not_started",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
-      },
-      {
-       "at": "2026-09-06T21:47:10-07:00",
-       "status": "awaiting",
-       "by": "other-machine"
       }
      ]
     },
@@ -450,27 +360,12 @@
      "owner": "Luke",
      "waitingOn": "Jordan",
      "due": null,
-     "status": "complete",
+     "status": "not_started",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
-      },
-      {
-       "at": "2026-09-06T19:38:29-07:00",
-       "status": "awaiting",
-       "by": "todo.py"
-      },
-      {
-       "at": "2026-09-06T19:38:39-07:00",
-       "status": "not_started",
-       "by": "todo.py"
-      },
-      {
-       "at": "2026-09-06T21:47:38-07:00",
-       "status": "complete",
-       "by": "todo.py"
       }
      ]
     },
@@ -593,22 +488,12 @@
      "owner": "Claude",
      "waitingOn": null,
      "due": null,
-     "status": "complete",
+     "status": "not_started",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
-      },
-      {
-       "at": "2026-09-06T21:51:57-07:00",
-       "status": "started",
-       "by": "phone"
-      },
-      {
-       "at": "2026-09-06T21:52:02-07:00",
-       "status": "complete",
-       "by": "phone"
       }
      ]
     },
@@ -618,22 +503,12 @@
      "owner": "Claude",
      "waitingOn": null,
      "due": null,
-     "status": "complete",
+     "status": "not_started",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
-      },
-      {
-       "at": "2026-09-06T21:51:58-07:00",
-       "status": "awaiting",
-       "by": "todo.py"
-      },
-      {
-       "at": "2026-09-06T21:52:06-07:00",
-       "status": "complete",
-       "by": "phone"
       }
      ]
     },
