@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://api.github.com; form-action 'none'; base-uri 'none'; object-src 'none'">
 <title>Killer of Men Festival Campaign — the Docket</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -20,65 +21,180 @@
 .h .blocks{display:flex;gap:3px;flex-wrap:wrap;max-width:200px}.h .ct{font-size:12px;color:var(--mute);text-align:right;font-variant-numeric:tabular-nums}
 .items{display:none;padding:0 0 10px 30px;border-left:2px solid var(--sc);margin-left:8px}.g.open .items{display:block}
 .it{display:grid;grid-template-columns:160px 1fr 64px;gap:12px;align-items:center;padding:8px 0;border-top:1px solid rgba(42,61,102,.6)}.it:first-child{border-top:0}
-.dial{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mute);white-space:nowrap}.dial svg{width:18px;height:18px;flex:none}
+.dial{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mute);white-space:nowrap;cursor:pointer;border-radius:6px;margin-left:-5px;padding:3px 5px;border:1px solid transparent}
+.dial:hover{background:rgba(243,236,216,.06)}.dial:focus-visible{outline:none;border-color:var(--dim)}
+.it.busy .dial{opacity:.45;cursor:progress}.dial svg{width:18px;height:18px;flex:none}
 .it.c1 .dial .w{color:var(--s1)}.it.c2 .dial .w{color:var(--s2)}.it.c3 .dial .w{color:var(--s3)}
 .t .ref{color:var(--dim);font-size:11px;margin-right:6px;font-variant-numeric:tabular-nums}.t .who{display:block;font-size:11.5px;color:var(--mute);margin-top:2px}.t .who.w:before{content:"⌀ ";color:var(--s2)}
 .it.c3 .t{color:var(--mute)}.d{font-size:12px;color:var(--mute);text-align:right;font-variant-numeric:tabular-nums}.d b{color:var(--cream);font-weight:500}
 .foot{margin-top:10px;font-size:11px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;position:relative}
 .leg{display:flex;gap:14px}.leg span{display:inline-flex;align-items:center;gap:5px}.leg svg{width:14px;height:14px}
-.ctl{color:var(--mute);text-decoration:underline;cursor:pointer}
-#err{color:#e8703a}
+.ctl{color:var(--mute);text-decoration:underline;cursor:pointer}#msg a{color:var(--cream)}#err{color:#e8703a}
+.sheet{position:relative;margin-top:12px;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--panel);font-size:12.5px}
+.sheet p{margin:0 0 10px;color:var(--mute);line-height:1.5}.sheet b{color:var(--cream);font-weight:500}
+.sheet input[type=password]{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--cream);border-radius:6px;padding:8px 10px;font:inherit}
+.sheet label{display:block;margin:10px 0 4px}.sheet label.inline{display:flex;align-items:center;gap:8px}
+.sheet .row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.sheet button{font:inherit;background:transparent;color:var(--cream);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+.sheet button.pri{border-color:var(--cream)}
 @media (max-width:640px){.top{grid-template-columns:1fr}.map{align-items:flex-start}.it{grid-template-columns:1fr;gap:4px}.d{text-align:left}.h{grid-template-columns:18px 1fr 80px}.h .blocks{grid-column:1/-1;padding-left:30px;padding-bottom:8px}}
 </style></head><body>
 <div class="bd" id="bd"><div class="pat"></div>
   <div class="top"><div><div class="ttl" id="ttl">Killer of Men Festival Campaign<small id="tot">loading…</small></div></div><div class="map" id="map"></div></div>
   <div id="groups"></div>
   <div class="foot"><div class="leg" id="leg"></div><span id="prov">reading todo.json…</span></div>
+  <div class="foot"><span id="msg"></span><span id="tokctl"></span></div>
+  <div id="sheet" hidden></div>
 </div>
 <script>
 (function(){
-var S=['not_started','started','awaiting','complete'],SC={},LAB={},open={},lastRev=null,lastGood=null;
+var S=['not_started','started','awaiting','complete'],SC={},LAB={},open={},last=null,lastRev=null,lastGood=null,etag=null;
+var LOCAL=(location.hostname==='localhost'||location.hostname==='127.0.0.1');
+var REPO='Scroggdawg/kom-festival-board',BRANCH='main',API='https://api.github.com/repos/'+REPO+'/contents/todo.json',TOK_S='kom-token';
+var EVERY=LOCAL?3000:10000;
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function sprite(k,c){var s='<svg viewBox="0 0 18 18" aria-hidden="true">';
   if(k===0)s+='<circle cx="9" cy="9" r="6.5" fill="none" stroke="'+c+'" stroke-width="1.6"/>';
   else if(k===1)s+='<circle cx="9" cy="9" r="6.5" fill="none" stroke="'+c+'" stroke-width="1.6"/><path d="M9 2.5a6.5 6.5 0 0 1 0 13z" fill="'+c+'"/>';
   else if(k===2)s+='<circle cx="9" cy="9" r="6.5" fill="none" stroke="'+c+'" stroke-width="1.6"/><line x1="4.4" y1="13.6" x2="13.6" y2="4.4" stroke="'+c+'" stroke-width="1.6" stroke-linecap="round"/>';
   else s+='<circle cx="9" cy="9" r="7.3" fill="'+c+'"/>';return s+'</svg>';}
-function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]});}
 function fmt(iso){if(!iso)return'';var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);var d=m?new Date(+m[1],+m[2]-1,+m[3]):new Date(iso);return isNaN(d)?iso:d.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
+function nowIso(){var d=new Date(),o=-d.getTimezoneOffset(),p=function(n){return(n<10?'0':'')+n;};
+  return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+'T'+p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds())+(o>=0?'+':'-')+p(Math.floor(Math.abs(o)/60))+':'+p(Math.abs(o)%60);}
+function msg(t,isHtml){var m=$('msg');if(isHtml)m.innerHTML=t;else m.textContent=t;}
+
 function render(d){
   SC=d.statusColors||{};LAB=d.statusLabels||{};var st=d.statuses||S;
   var map='',groups='',done=0,N=0;
   d.sections.forEach(function(s,gi){
     var blocks=s.items.map(function(it){var k=st.indexOf(it.status);return'<i class="blk'+(k>0?' s'+k:'')+'"></i>';}).join('');
-    map+='<div class="mrow" style="--sc:'+s.color+'"><i class="k" style="background:'+s.color+'"></i>'+blocks+'</div>';
+    map+='<div class="mrow" style="--sc:'+esc(s.color)+'"><i class="k" style="background:'+esc(s.color)+'"></i>'+blocks+'</div>';
     var c=s.items.filter(function(it){return it.status==='complete';}).length;done+=c;N+=s.items.length;
     var isOpen=open[s.id]===undefined?gi===0:open[s.id];
-    groups+='<div class="g'+(isOpen?' open':'')+'" data-g="'+s.id+'" style="--sc:'+s.color+'"><div class="h"><span class="ch">▶</span><span class="nm">'+esc(s.name)+(s.timing?'<small>'+esc(s.timing)+'</small>':'')+'</span><div class="blocks">'+blocks+'</div><span class="ct">'+c+' / '+s.items.length+' complete</span></div><div class="items">'+
-      s.items.map(function(it){var k=st.indexOf(it.status);return'<div class="it c'+k+'"><div class="dial">'+sprite(k,SC[it.status]||'#9aa3b8')+'<span class="w">'+esc(LAB[it.status]||it.status)+'</span></div><div class="t"><span class="ref">'+esc(it.id)+'</span>'+esc(it.title)+'<span class="who'+(it.waitingOn?' w':'')+'">'+esc(it.waitingOn?'waiting on '+it.waitingOn:it.owner)+'</span></div><div class="d">'+(it.due?'<b>'+fmt(it.due)+'</b>':'')+'</div></div>';}).join('')+'</div></div>';
+    groups+='<div class="g'+(isOpen?' open':'')+'" data-g="'+esc(s.id)+'" style="--sc:'+esc(s.color)+'"><div class="h"><span class="ch">▶</span><span class="nm">'+esc(s.name)+(s.timing?'<small>'+esc(s.timing)+'</small>':'')+'</span><div class="blocks">'+blocks+'</div><span class="ct">'+c+' / '+s.items.length+' complete</span></div><div class="items">'+
+      s.items.map(function(it){var k=st.indexOf(it.status);
+        return'<div class="it c'+k+'" data-id="'+esc(it.id)+'"><div class="dial" role="button" tabindex="0" aria-label="'+esc(it.id)+' — '+esc(LAB[it.status]||it.status)+'; change status">'+sprite(k,SC[it.status]||'#9aa3b8')+'<span class="w">'+esc(LAB[it.status]||it.status)+'</span></div><div class="t"><span class="ref">'+esc(it.id)+'</span>'+esc(it.title)+'<span class="who'+(it.waitingOn?' w':'')+'">'+esc(it.waitingOn?'waiting on '+it.waitingOn:it.owner)+'</span></div><div class="d">'+(it.due?'<b>'+esc(fmt(it.due))+'</b>':'')+'</div></div>';}).join('')+'</div></div>';
   });
-  document.getElementById('map').innerHTML=map;document.getElementById('groups').innerHTML=groups;
-  document.getElementById('tot').innerHTML=done+' of '+N+' complete · <span class="ctl" id="all">expand all</span>';
-  document.getElementById('leg').innerHTML=st.map(function(k,i){return'<span style="color:'+SC[k]+'">'+sprite(i,SC[k])+esc(LAB[k]||k)+'</span>';}).join('');
-  if(d.title)document.getElementById('ttl').firstChild.textContent=d.title;
+  $('map').innerHTML=map;$('groups').innerHTML=groups;
+  $('tot').innerHTML=done+' of '+N+' complete · <span class="ctl" id="all">expand all</span>';
+  $('leg').innerHTML=st.map(function(k,i){return'<span style="color:'+esc(SC[k])+'">'+sprite(i,SC[k])+esc(LAB[k]||k)+'</span>';}).join('');
+  if(d.title)$('ttl').firstChild.textContent=d.title;
 }
-function prov(d,ageS){document.getElementById('prov').innerHTML='todo.json rev '+d.rev+' · written '+new Date(d.updated).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})+' by '+esc(d.updatedBy)+' · checked '+ageS+' s ago · every 3 s';}
-var last=null,lastAt=0;
-function poll(){
-  fetch('todo.json?ts='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(function(d){
-    lastGood=Date.now();document.getElementById('bd').classList.remove('stale');
-    if(d.rev!==lastRev){lastRev=d.rev;last=d;render(d);}
-    prov(d,0);
+function accept(d){last=d;if(d.rev!==lastRev){lastRev=d.rev;render(d);}else{render(d);}}
+function prov(d,ageS){
+  var where=LOCAL?'local server':(getToken()?'reading GitHub directly':'reading the published copy, about a minute behind');
+  $('prov').innerHTML='todo.json rev '+esc(d.rev)+' · written '+new Date(d.updated).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})+' by '+esc(d.updatedBy)+' · checked '+ageS+' s ago · every '+(EVERY/1000)+' s · '+where;
+}
+
+/* ---------- token (published copy only; same key as the board, one token serves both) ---------- */
+function getToken(){try{return sessionStorage.getItem(TOK_S)||localStorage.getItem(TOK_S);}catch(e){return null;}}
+function forgetToken(){try{sessionStorage.removeItem(TOK_S);localStorage.removeItem(TOK_S);}catch(e){}etag=null;}
+function tokCtl(){if(LOCAL){$('tokctl').textContent='';return;}$('tokctl').innerHTML='<span class="ctl" id="tokbtn">'+(getToken()?'token stored · change':'token…')+'</span>';}
+function tokenSheet(then){
+  var sh=$('sheet');sh.hidden=false;
+  sh.innerHTML='<div class="sheet"><p>Clicking a status commits todo.json in <b>'+esc(REPO)+'</b> through api.github.com. This page sends the token nowhere else. Use a fine-grained token limited to that one repository, Contents read and write, short expiry, from github.com → Settings → Developer settings. Only paste it on this page at its real address. Browser storage on this domain is shared by every page on it — use Forget on a machine you do not own.</p><label>Token</label><input type="password" id="tok" autocomplete="off"><label class="inline"><input type="checkbox" id="tokr">remember on this device (otherwise until this tab closes)</label><div class="row"><button class="pri" id="tokgo" type="button">Save</button><button id="tokforget" type="button">Forget stored token</button><button id="tokx" type="button">Cancel</button></div></div>';
+  $('tokx').onclick=function(){sh.hidden=true;};
+  $('tokforget').onclick=function(){forgetToken();sh.hidden=true;tokCtl();msg('Token forgotten.');};
+  $('tokgo').onclick=function(){var t=($('tok').value||'').trim();if(!t)return;try{($('tokr').checked?localStorage:sessionStorage).setItem(TOK_S,t);}catch(e){}sh.hidden=true;tokCtl();msg('');etag=null;poll();if(then)then();};
+  $('tok').focus();
+}
+function b64(str){var b=new TextEncoder().encode(str),s='';for(var i=0;i<b.length;i+=0x8000)s+=String.fromCharCode.apply(null,b.subarray(i,i+0x8000));return btoa(s);}
+function decodeB64(c){return new TextDecoder().decode(Uint8Array.from(atob(String(c).replace(/\n/g,'')),function(ch){return ch.charCodeAt(0);}));}
+function ghGet(token,useEtag){
+  var h={Authorization:'Bearer '+token,Accept:'application/vnd.github+json'};
+  if(useEtag&&etag)h['If-None-Match']=etag;
+  return fetch(API+'?ref='+BRANCH,{headers:h,cache:'no-store'}).then(function(r){
+    if(r.status===304)return null;
+    if(r.status===401||r.status===403)throw{code:r.status};
+    if(!r.ok)throw new Error('GitHub read failed: '+r.status);
+    if(useEtag)etag=r.headers.get('ETag');
+    return r.json().then(function(j){return{sha:j.sha,data:JSON.parse(decodeB64(j.content))};});
+  });
+}
+/* ---------- writes ---------- */
+function applyChange(d,id,status){
+  var hit=null;d.sections.forEach(function(s){s.items.forEach(function(it){if(it.id===id)hit=it;});});
+  if(!hit)throw new Error('no item '+id);
+  if((d.statuses||S).indexOf(status)<0)throw new Error('bad status '+status);
+  if(hit.status===status)return false;
+  hit.status=status;(hit.history=hit.history||[]).push({at:nowIso(),status:status,by:'docket.html'});
+  d.rev=(d.rev|0)+1;d.updated=nowIso();d.updatedBy='docket.html';return true;
+}
+function ghWrite(id,status,attempt){
+  var token=getToken();
+  if(!token){tokenSheet(function(){ghWrite(id,status,0);});return Promise.resolve(null);}
+  attempt=attempt||0;
+  msg(attempt?'todo.json moved underneath — retrying…':'Committing '+id+' → '+(LAB[status]||status)+'…');
+  return ghGet(token,false).then(function(g){
+    var d=g.data;
+    if(!applyChange(d,id,status)){msg('Already '+(LAB[status]||status)+'.');return d;}
+    return fetch(API,{method:'PUT',headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','Content-Type':'application/json'},
+      body:JSON.stringify({message:'docket: '+id+' → '+status+' (rev '+d.rev+')',content:b64(JSON.stringify(d,null,1)),sha:g.sha,branch:BRANCH})
+    }).then(function(put){
+      if(put.status===401||put.status===403)throw{code:put.status};
+      if(put.status===409||put.status===422){if(attempt<4)return ghWrite(id,status,attempt+1);throw new Error('kept colliding with other writes — try again in a minute');}
+      if(!put.ok)return put.json().catch(function(){return{};}).then(function(b){throw new Error('GitHub write failed ('+put.status+')'+(b.message?': '+b.message:''));});
+      return put.json().catch(function(){return{};}).then(function(j){
+        var sha=j.commit&&j.commit.sha;
+        etag=null;
+        msg('Committed '+esc(id)+' → '+esc(LAB[status]||status)+(sha?' · <a href="https://github.com/'+REPO+'/commit/'+esc(sha)+'" rel="noopener">commit</a>':'')+' · the published copy follows in about a minute',true);
+        return d;
+      });
+    });
   }).catch(function(e){
+    if(e&&(e.code===401||e.code===403)){forgetToken();tokCtl();msg('Token rejected ('+e.code+').');tokenSheet(function(){ghWrite(id,status,0);});}
+    else msg('Write failed: '+(e.message||e));
+    throw e;
+  });
+}
+function localWrite(id,status){
+  msg('Writing '+id+' → '+(LAB[status]||status)+'…');
+  return fetch('set',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:id,status:status})})
+    .then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.error||('HTTP '+r.status));return j;});})
+    .then(function(j){msg('Written · rev '+j.rev+' · pushing to GitHub');return j.data;})
+    .catch(function(e){msg('Write failed: '+(e.message||e));throw e;});
+}
+function cycle(el){
+  var row=el.closest('.it');if(!row||row.classList.contains('busy')||!last)return;
+  var id=row.dataset.id,cur=null;
+  last.sections.forEach(function(s){s.items.forEach(function(it){if(it.id===id)cur=it;});});
+  if(!cur)return;
+  var st=last.statuses||S,next=st[(st.indexOf(cur.status)+1)%st.length];
+  row.classList.add('busy');
+  (LOCAL?localWrite(id,next):ghWrite(id,next))
+    .then(function(d){if(d)accept(d);})
+    .catch(function(){})
+    .then(function(){var r=document.querySelector('.it[data-id="'+id.replace(/"/g,'\\"')+'"]');if(r)r.classList.remove('busy');});
+}
+/* ---------- polling ---------- */
+function poll(){
+  var tok=!LOCAL&&getToken();
+  var p=tok?ghGet(tok,true).then(function(g){return g?g.data:null;})
+          :fetch('todo.json?ts='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
+  p.then(function(d){
+    lastGood=Date.now();$('bd').classList.remove('stale');
+    if(d&&d.rev!==lastRev)accept(d);
+    prov(d||last,0);
+  }).catch(function(e){
+    if(e&&(e.code===401||e.code===403)){forgetToken();tokCtl();}
     var age=lastGood?Math.round((Date.now()-lastGood)/1000):null;
-    if(age!==null&&age>9)document.getElementById('bd').classList.add('stale');
-    document.getElementById('prov').innerHTML='<span id="err">'+esc(e.message)+'</span>'+(last?' · stale '+age+' s · last good rev '+last.rev:'');
+    if(age===null||age*1000>EVERY*3)$('bd').classList.add('stale');
+    $('prov').innerHTML='<span id="err">'+esc(e.message||('read failed'+(e.code?' ('+e.code+')':'')))+'</span>'+(last?' · stale '+age+' s · last good rev '+esc(last.rev):'');
   });
 }
 document.addEventListener('click',function(e){
-  var h=e.target.closest('.h');if(h){var g=h.parentElement;g.classList.toggle('open');open[g.dataset.g]=g.classList.contains('open');return;}
-  if(e.target.id==='all'){var any=document.querySelectorAll('.g:not(.open)').length>0;document.querySelectorAll('.g').forEach(function(g){g.classList.toggle('open',any);open[g.dataset.g]=any;});e.target.textContent=any?'collapse all':'expand all';}
+  var dl=e.target.closest?e.target.closest('.dial'):null;
+  if(dl){cycle(dl);return;}
+  var h=e.target.closest?e.target.closest('.h'):null;
+  if(h){var g=h.parentElement;g.classList.toggle('open');open[g.dataset.g]=g.classList.contains('open');return;}
+  if(e.target.id==='all'){var any=document.querySelectorAll('.g:not(.open)').length>0;document.querySelectorAll('.g').forEach(function(g){g.classList.toggle('open',any);open[g.dataset.g]=any;});e.target.textContent=any?'collapse all':'expand all';return;}
+  if(e.target.id==='tokbtn'){tokenSheet(null);return;}
 });
-poll();setInterval(poll,3000);
+document.addEventListener('keydown',function(e){
+  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('dial')){e.preventDefault();cycle(e.target);}
+});
+tokCtl();poll();setInterval(poll,EVERY);
 setInterval(function(){if(last&&lastGood)prov(last,Math.round((Date.now()-lastGood)/1000));},1000);
 })();
 </script></body></html>
