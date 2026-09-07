@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "rev": 4,
- "updated": "2026-09-06T20:20:38-07:00",
+ "rev": 5,
+ "updated": "2026-09-06T21:13:26-07:00",
  "updatedBy": "docket.html",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
@@ -36,7 +36,7 @@
      "owner": "Luke",
      "waitingOn": null,
      "due": "2026-09-09",
-     "status": "started",
+     "status": "not_started",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
@@ -56,6 +56,11 @@
       {
        "at": "2026-09-06T20:20:38-07:00",
        "status": "started",
+       "by": "docket.html"
+      },
+      {
+       "at": "2026-09-06T21:13:26-07:00",
+       "status": "not_started",
        "by": "docket.html"
       }
      ]
