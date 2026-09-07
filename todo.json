@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "rev": 24,
- "updated": "2026-09-06T21:55:47-07:00",
- "updatedBy": "reset after write tests",
+ "rev": 29,
+ "updated": "2026-09-07T08:05:42-07:00",
+ "updatedBy": "merge",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
  "statuses": [
@@ -72,6 +72,26 @@
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
+      },
+      {
+       "at": "2026-09-07T08:05:35-07:00",
+       "status": "started",
+       "by": "docket.html"
+      },
+      {
+       "at": "2026-09-07T08:05:36-07:00",
+       "status": "awaiting",
+       "by": "docket.html"
+      },
+      {
+       "at": "2026-09-07T08:05:36-07:00",
+       "status": "complete",
+       "by": "docket.html"
+      },
+      {
+       "at": "2026-09-07T08:05:37-07:00",
+       "status": "not_started",
+       "by": "docket.html"
       }
      ]
     },
