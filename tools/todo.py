@@ -5,19 +5,32 @@
   todo.py set <id> <status> [...]   set one or more items: not_started | started | awaiting | complete
   todo.py note <id> "<text>"        append a note to an item
   todo.py check                     validate the file
-  todo.py push                      commit todo.json and push (after set/note; separate so batches are one commit)
+  todo.py push                      merge with origin and publish
+  todo.py pull                      take origin's todo.json when nothing local is pending
 
-docket_server.py imports set_status / save / push from here, so the browser writes the same way.
+docket_server.py imports from here, so the browser and the command line share one writer.
+
+Two machines write this file: this one, and whoever opens the published page with a
+token. So push() never overwrites the remote wholesale — it merges item by item, the
+newer history entry wins, and both histories are kept.
+
+push() rebases by resetting to origin, which throws away uncommitted work. It therefore
+runs only in a checkout marked `.docket-clone` — a clone kept for the Docket alone — and
+only when todo.json is the sole modified file. Anywhere else it commits todo.json alone
+and, if the push is rejected, stops and says so rather than rewriting anything.
 """
 import json, os, sys, datetime, subprocess, tempfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATH = os.path.join(ROOT, "todo.json")
+DEDICATED = os.path.exists(os.path.join(ROOT, ".docket-clone"))
 STATUSES = ["not_started", "started", "awaiting", "complete"]
 ALIASES = {"not started": "not_started", "awaiting response": "awaiting", "done": "complete", "waiting": "awaiting"}
+class Conflict(Exception): pass
 
-def load():
-    with open(PATH, encoding="utf-8") as f: return json.load(f)
+def load(path=None):
+    with open(path or PATH, encoding="utf-8") as f: return json.load(f)
 def now(): return datetime.datetime.now().astimezone().isoformat(timespec="seconds")
+def dumps(d): return json.dumps(d, ensure_ascii=False, indent=1)
 def items(d):
     for s in d["sections"]:
         for it in s["items"]: yield s, it
@@ -38,60 +51,100 @@ def normalise(st):
     st = ALIASES.get(st, st).replace("-", "_")
     if st not in STATUSES: raise ValueError(f"bad status {st}; one of {STATUSES}")
     return st
-def set_status(d, iid, st, by="todo.py"):
-    """Change one item in memory. Returns True if it changed."""
+def set_status(d, iid, st, by="todo.py", expect=None):
+    """Change one item in memory. `expect` is a compare-and-set against the current status."""
     st = normalise(st); s, it = find(d, iid)
+    if expect is not None and it["status"] != normalise(expect):
+        raise Conflict(f"{iid} is now {it['status']}, not {normalise(expect)} — someone else changed it")
     if it["status"] == st: return False
-    it["status"] = st; it["history"].append({"at": now(), "status": st, "by": by}); return True
-def save(d, by):
+    it["status"] = st; it.setdefault("history", []).append({"at": now(), "status": st, "by": by}); return True
+def save(d, by, path=None):
     errs = check(d)
     if errs: raise ValueError("refused: " + "; ".join(errs))
     d["rev"] = int(d.get("rev", 0)) + 1; d["updated"] = now(); d["updatedBy"] = by
-    fd, tmp = tempfile.mkstemp(dir=ROOT, prefix=".todo.", suffix=".json")
-    with os.fdopen(fd, "w", encoding="utf-8") as f: json.dump(d, f, ensure_ascii=False, indent=1)
-    os.replace(tmp, PATH)
+    target = path or PATH
+    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(target), prefix=".todo.", suffix=".json")
+    with os.fdopen(fd, "w", encoding="utf-8") as f: f.write(dumps(d))
+    os.replace(tmp, target)
     return d["rev"]
-def _git(*a, check=True, env=None):
-    return subprocess.run(["git", "-C", ROOT, *a], check=check, capture_output=True, text=True, env=env)
-def _branch():
-    return _git("rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
-def _rebuild_onto(base, branch):
-    """Put HEAD's todo.json on top of `base` without touching the working tree.
 
-    The repo is shared with other sessions, so it is often dirty: `pull --rebase`
-    would refuse, and stashing could collide with another session's stash. This
-    writes the new commit through a temporary index instead — no checkout, no stash.
-    Refuses if main carries unpushed commits other than ours."""
-    ahead = _git("rev-list", f"{base}..HEAD").stdout.split()
-    if len(ahead) != 1: raise RuntimeError(f"{len(ahead)} unpushed commits on {branch}; not rewriting them")
-    blob = _git("rev-parse", "HEAD:todo.json").stdout.strip()
-    msg = _git("log", "-1", "--format=%B").stdout.strip()
-    fd, idx = tempfile.mkstemp(prefix=".docket-index."); os.close(fd); os.unlink(idx)
-    env = dict(os.environ, GIT_INDEX_FILE=idx)
-    try:
-        _git("read-tree", base, env=env)
-        _git("update-index", "--cacheinfo", f"100644,{blob},todo.json", env=env)
-        tree = _git("write-tree", env=env).stdout.strip()
-    finally:
-        if os.path.exists(idx): os.unlink(idx)
-    new = _git("commit-tree", tree, "-p", base, "-m", msg).stdout.strip()
-    _git("update-ref", f"refs/heads/{branch}", new, "HEAD")
+# ---------- merge: two writers, newest entry per item wins ----------
+def _last_at(it):
+    return max((e.get("at", "") for e in (it.get("history") or [])), default="")
+def _union_history(a, b):
+    seen, out = set(), []
+    for e in (a.get("history") or []) + (b.get("history") or []):
+        k = (e.get("at"), e.get("status"), e.get("by"))
+        if k not in seen: seen.add(k); out.append(e)
+    return sorted(out, key=lambda e: e.get("at", ""))
+def merge(local, remote):
+    """Remote is the base — it carries any structural change. Per item the side with the
+    newer history entry wins. Returns (merged, differs_from_remote)."""
+    lmap = {it["id"]: it for _, it in items(local)}
+    merged = json.loads(dumps(remote)); changed = False
+    for _, rit in items(merged):
+        lit = lmap.pop(rit["id"], None)
+        if not lit: continue
+        hist = _union_history(rit, lit)
+        local_newer = _last_at(lit) > _last_at(rit)
+        winner = lit if local_newer else rit
+        if winner["status"] != rit["status"]: changed = True
+        if hist != (rit.get("history") or []): changed = True
+        rit["status"] = winner["status"]; rit["history"] = hist
+        if local_newer:
+            for k in ("notes", "waitingOn", "due", "owner", "title"):
+                if k in lit and lit.get(k) != rit.get(k): rit[k] = lit[k]; changed = True
+    if lmap:                                   # items this machine has that the remote lacks
+        by_section = {s["id"]: s for s in merged["sections"]}
+        for s, it in items(local):
+            if it["id"] in lmap and s["id"] in by_section:
+                by_section[s["id"]]["items"].append(it); changed = True
+    if changed:
+        merged["rev"] = max(int(local.get("rev", 0)), int(remote.get("rev", 0))) + 1
+        merged["updated"] = now(); merged["updatedBy"] = "merge"
+    return merged, changed
+
+# ---------- git ----------
+def _git(*a, check=True):
+    return subprocess.run(["git", "-C", ROOT, *a], check=check, capture_output=True, text=True)
+def _branch(): return _git("rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
+def _dirty_besides_todo():
+    out = _git("status", "--porcelain", "--untracked-files=no").stdout.splitlines()
+    return [l[3:] for l in out if l[3:].strip() != "todo.json"]
+def _remote_todo(branch):
+    r = _git("show", f"origin/{branch}:todo.json", check=False)
+    return json.loads(r.stdout) if r.returncode == 0 else None
+def pull():
+    """Fast-forward this clone to origin, when nothing local is pending."""
+    if not DEDICATED: return "not the docket clone"
+    branch = _branch(); _git("fetch", "-q", "origin", branch)
+    if _git("diff", "--quiet", "HEAD", "--", "todo.json", check=False).returncode != 0: return "local change pending"
+    if _dirty_besides_todo(): return "clone has other edits; not resetting"
+    if _git("rev-parse", "HEAD").stdout.strip() == _git("rev-parse", f"origin/{branch}").stdout.strip(): return "current"
+    _git("reset", "-q", "--hard", f"origin/{branch}"); return "updated"
 def push(message=None):
-    """Commit todo.json alone (if changed) and push it. Never touches other files."""
+    """Merge with origin and publish. Returns a one-line result."""
     branch = _branch()
-    if _git("diff", "--quiet", "HEAD", "--", "todo.json", check=False).returncode != 0:
+    if not DEDICATED:
+        if _git("diff", "--quiet", "HEAD", "--", "todo.json", check=False).returncode == 0: return "nothing to commit"
         _git("commit", "--only", "todo.json", "-q", "-m", message or f"docket: todo.json rev {load().get('rev')}")
-    _git("fetch", "-q", "origin", branch)
-    if not _git("rev-list", f"origin/{branch}..HEAD").stdout.split():
-        return "nothing to push"
-    err = ""
-    for _ in range(4):
         p = _git("push", "-q", "origin", f"HEAD:{branch}", check=False)
-        if p.returncode == 0: return "pushed"
-        err = (p.stderr or p.stdout).strip().splitlines()[-1] if (p.stderr or p.stdout).strip() else "rejected"
+        return "pushed" if p.returncode == 0 else "push rejected; not the docket clone, so nothing was rewritten — run todo.py push in ~/.kom-docket"
+    other = _dirty_besides_todo()
+    if other: return "refused: " + ", ".join(other[:3]) + " modified in the docket clone; commit or discard them first"
+    for _ in range(4):
         _git("fetch", "-q", "origin", branch)
-        _rebuild_onto(f"origin/{branch}", branch)
-    return "push failed: " + err
+        local = load(); remote = _remote_todo(branch)
+        if remote is None: return "origin has no todo.json"
+        merged, changed = merge(local, remote)
+        if not changed: 
+            _git("reset", "-q", "--hard", f"origin/{branch}")   # take origin's copy; nothing of ours is pending
+            return "nothing to push"
+        _git("reset", "-q", "--hard", f"origin/{branch}")
+        with open(PATH, "w", encoding="utf-8") as f: f.write(dumps(merged))
+        _git("commit", "--only", "todo.json", "-q", "-m", message or f"docket: todo.json rev {merged['rev']}")
+        if _git("push", "-q", "origin", f"HEAD:{branch}", check=False).returncode == 0: return "pushed"
+    return "push kept colliding; will retry on the next change"
 
 def main(a):
     if not a or a[0] in ("-h", "--help"): print(__doc__); return
@@ -116,6 +169,7 @@ def main(a):
             s, it = find(d, a[1]); it.setdefault("notes", []).append({"at": now(), "text": " ".join(a[2:])})
             print(f"todo.json rev {save(d, 'todo.py note')} written")
         elif cmd == "push": print(push())
+        elif cmd == "pull": print(pull())
         else: sys.exit(f"unknown command {cmd}")
-    except (KeyError, ValueError) as e: sys.exit(str(e))
+    except (KeyError, ValueError, Conflict) as e: sys.exit(str(e))
 if __name__ == "__main__": main(sys.argv[1:])
