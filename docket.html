@@ -44,7 +44,7 @@ function sprite(k,c){var s='<svg viewBox="0 0 18 18" aria-hidden="true">';
   else if(k===2)s+='<circle cx="9" cy="9" r="6.5" fill="none" stroke="'+c+'" stroke-width="1.6"/><line x1="4.4" y1="13.6" x2="13.6" y2="4.4" stroke="'+c+'" stroke-width="1.6" stroke-linecap="round"/>';
   else s+='<circle cx="9" cy="9" r="7.3" fill="'+c+'"/>';return s+'</svg>';}
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]});}
-function fmt(iso){if(!iso)return'';var d=new Date(iso);return isNaN(d)?iso:d.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
+function fmt(iso){if(!iso)return'';var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);var d=m?new Date(+m[1],+m[2]-1,+m[3]):new Date(iso);return isNaN(d)?iso:d.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
 function render(d){
   SC=d.statusColors||{};LAB=d.statusLabels||{};var st=d.statuses||S;
   var map='',groups='',done=0,N=0;
