@@ -581,3 +581,34 @@ The comma in "spectacle, and survival" is doing emphasis work — a deliberate b
 ### Length, measured
 
 Against the 170 sourced loglines in `research/loglines-reference.md` and `research/reckoning-loglines.md`: **median 41 words, mean 44, max 157.** Gen 21 at 71 is longer than 86% of them. 31 of 170 (18%) run 66 words or more, so it is not an outlier — but it is firmly in the long tail, and it has grown 9 words since this morning's lock.
+
+## Generation 22 — Sep 8. **64 words, 349 characters**
+
+> In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own. When he stumbles upon the burial rites of his last opponent, he finds the ceremony being held in the ancient faith of their shared ancestors, who he must now face to decide whether he will kill again.
+
+Down 7 from Gen 21; 2 above the morning lock. Three changes: *taking the life of* → *killing*; *the opponent he just killed* → *his last opponent*; *or not* cut.
+
+### Luke was right about "opponent" and this file was wrong
+
+His argument, verbatim: *"opponent buys clarity. It's reminding you, it tells you that he killed him in a fight. It's possible to imagine that he just killed a man."*
+
+Correct. Gen 21's note argued for *"the man he just killed"* on the grounds that it pays off *"one of his own"*. It does — but a logline is read once, fast, and by sentence 3 the reader has to re-attach the killing to the fight in sentence 1 without help. "Opponent" does that work in one word. The kinship payoff was real but it was already carried by *"one of his own"* and *"their shared ancestors"*, which is where it belongs.
+
+### "means killing one of his own" — better than the note predicted
+
+The obvious objection is the echo: *killing* in sentence 2 and *kill again* at the end. That objection is wrong. **"Again" needs an antecedent.** With *"take the life of one of his own"*, the antecedent was semantic — the reader had to make the connection. With *"killing"*, it is lexical: the closing line points at a word actually on the page. Three words saved and the logic tightened at the same time.
+
+The three death-words fall at word 14 (*death*), 23 (*killing*) and 63 (*kill*). Spread, not clustered. It reads as a drumbeat.
+
+### "his last opponent" — the one real problem
+
+**"Last" carries two meanings and this sentence supports both.** Most recent, or final-ever — the one after whom he never fights again. In a logline whose closing question is *whether he will kill again*, the second reading is actively invited. It either misleads the reader or gives away an ending the film may not have.
+
+Fix, for one word: **"the opponent he killed"** — 65 words, unambiguous, keeps every bit of the clarity "opponent" was chosen for. Dropping *just* costs almost nothing; burial rites already imply immediacy.
+
+| Variant | Words |
+|---|---|
+| his last opponent | 64 |
+| his dead opponent | 64 |
+| **the opponent he killed** | **65** |
+| the opponent he just killed | 66 |
