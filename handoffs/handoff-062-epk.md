@@ -53,6 +53,12 @@ The brief says this machine has no pdftoppm — true, but **PyMuPDF is installed
 
 `press/epk-one-sheet.md` and `press/epk-inventory.md` now open with a line saying they predate the numbering and describe 47 fields where there are 49.
 
+### Written after this handoff was first saved
+
+- `press/epk-one-sheet.md` and `press/epk-inventory.md` each open with a line saying they predate the numbering and describe 47 fields where there are 49.
+- Memory: `pdf-rendering-on-this-mac.md` — this Mac has `reportlab` and PyMuPDF (`import fitz`) system-wide and no poppler, so a built PDF is checked with `fitz.open(p)[0].get_pixmap(dpi=150).save(png)` and then read as an image. The brief's "build PDFs in a scratch venv" is out of date; no venv is needed.
+- The 49-item list was rendered in chat as a widget, generated from `epk.json` so it cannot drift from the file.
+
 ---
 
 **Timestamp:** 2026-09-08
