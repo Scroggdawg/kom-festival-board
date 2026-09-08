@@ -165,3 +165,22 @@ Rulings:
 - "When he stumbles upon his opponent's burial ceremony, held in the faith of their shared ancestors, faced with his own nature, he must choose whether he will continue to live as a killer or stand up for the life that was taken from him." — *"I think I like that right now."*
 - **"Stand up for the life that was taken from him."**
 - *"Just keep adding stuff and then write out the ones that I just said."*
+
+## Generation 8 — Sep 7, night
+
+- On the 70-word version: *"I like it, but I think it's 'stand up for the life that was taken from **his people**.'"* Then, on reflection: *"'from him' was better than 'his people' in there, but I don't love it."* — **unresolved: "from him" vs "from his people"**
+- On the tightened 49: *"In 1834 an enslaved prizefighter must kill to survive and every victory costs him the man he was meant to become."* — *"Hmm, not great."*
+- *"His opponent's burial, held in the faith of their shared ancestors. He must choose whether to live as the killer or stand up for the life that was taken from him."* — note **"the killer"**, definite article, not "a killer"
+- **"An enslaved man is thrust into a world of underground prizefighting and entreats his most brutal nature in order to survive."**
+- *"I want more loglines of the ilk of Raging Bull — people having to reckon with violence, reckon with who they are. Man versus himself more than man versus man or man versus nature. Tell me if you disagree. I want to see how other loglines handled this duality. What other worlds would this type of language pop up?"*
+
+### Live pieces after this turn
+
+| Slot | Locked | Open |
+|---|---|---|
+| Opening | "In 1834 South Carolina, an enslaved prizefighter" | — |
+| Condition | — | "must kill to survive" · "must win or die" · "is thrust into a world of underground prizefighting" |
+| The nature | — | **"entreats his most brutal nature in order to survive"** (new) |
+| Cost | "the violence that has kept him alive costs him a little more of his humanity with every victory" | "every victory costs him the man he was meant to become" (*"not great"*) |
+| Ceremony | "held in the faith of their shared ancestors" | "his opponent's burial" vs "his fallen opponent's burial ceremony" |
+| Ending | "live as a killer / the killer, or stand up for the life that was taken from…" | **"him" vs "his people"** |
