@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "rev": 63,
- "updated": "2026-09-08T14:16:03-07:00",
+ "rev": 65,
+ "updated": "2026-09-08T14:28:44-07:00",
  "updatedBy": "merge",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
@@ -755,5 +755,5 @@
   }
  ],
  "paletteNote": "The five section colours are NOT a valid categorical set and must never carry identity on their own. Measured with the dataviz validator against this page's #14213d surface: violet #a06ff0 against periwinkle #6f93f0 is deltaE 3.2 for deuteranopia and 10.4 for normal vision, against a floor of 15; peach #f2b8a0 is under the chroma floor and reads grey. Section identity is carried by name and position, and the block map labels every row. The four status colours fail the same way as a set (sky #5fb3e0 against not-started grey #9aa3b8 is deltaE 5.9 deuteranopia), which is why every status is drawn with its own shape as well as its colour: outline not started, half-filled started, diagonal awaiting, solid complete. Measured 2026-09-08.",
- "dateNote": "Every due date here is only as good as the festival date behind it, and three times in one day a fee tier was mistaken for a deadline: Short Shorts Sep 9 was a pitch-competition cutoff, Curta Sep 12 an earlybird, SBIFF Sep 18 a $10 price step whose real door is Dec 2. The rule that catches it is narrower than 'cite the festival's own page': A DATE IS NOT A DEADLINE UNTIL SOMETHING NAMES ITS TIER. A verification that lives only in prose is not one either — SBIFF and Aspen both carried 'VERIFIED' in their notes while the structured data disagreed. Dates arriving in this file need the festival's own page, the tier named, and the claim in a field rather than a sentence. Recorded 2026-09-08."
+ "dateNote": "Every due date here is only as good as the festival date behind it, and three times in one day a fee tier was mistaken for a deadline: Short Shorts Sep 9 was a pitch-competition cutoff, Curta Sep 12 an earlybird, SBIFF Sep 18 a $10 price step whose real door is Dec 2. The rule that catches it is narrower than 'cite the festival's own page': A DATE IS NOT A DEADLINE UNTIL SOMETHING NAMES ITS TIER. A verification that lives only in prose is not one either — SBIFF and Aspen both carried 'VERIFIED' in their notes while the structured data disagreed. Dates arriving in this file need the festival's own page, the tier named, and the claim in a field rather than a sentence. The same rule covers a tool's output, not just a person's prose: a summariser reporting that a document does not say something is not evidence that it does not — Sundance's 2027 rules were summarised as a 2009 document containing no premiere or completion clauses, and contained every one of them. Extract the text and read it. Recorded 2026-09-08, extended the same day."
 }
