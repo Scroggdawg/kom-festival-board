@@ -127,23 +127,9 @@ The first and fourth are the strongest: each states the economics of his body in
 
 ---
 
-## 7. The Franken kit — pick one from each column
+## 7. Retired
 
-Every phrase below is either Luke's (from the idea box) or from a line he approved in §3. Assemble left to right.
-
-| Opening | The man | His condition | The *But* (the cost) | The ceremony | The ending |
-|---|---|---|---|---|---|
-| In 1834 South Carolina, | an enslaved prizefighter | must win or die for the entertainment of others. | But the same brutality that has kept him alive costs him a little more of himself each time he wins. | When he encounters the burial ceremony of his fallen opponent, held in the faith of their shared ancestors, | he must reckon with what the fighting has made of him. |
-| 1834, South Carolina. | an enslaved man | is forced to fight to survive, to win or die. | But the brutality that keeps him alive is taking the rest of him. | Then he stumbles upon his fallen opponent's burial, held in the faith of his ancestors. | and hears his own name among the mourned. |
-| Deep in the heat of a Carolina plantation, | Mace, an enslaved fighter, | is sent into the barn to fight one of his own. | But the violence that keeps him alive has cost him the part of himself that could still mourn. | At the burial, held in the faith they share, | and the rites are for him too. |
-| In the fighting pits of a South Carolina plantation, | a man whose body is worth more in the barn than in the field | kills or is killed for the men who own him, and he is good at it. | But it is turning him into the thing they paid to see. | he stumbles into the loser's burial ceremony, | and must decide which of the two men will walk out of the barn. |
-| Killer of Men is set in the heat of a South Carolina plantation, where | an enslaved Mandingo prizefighter | wins every bout his owner stages. | But everything the barn cannot see is coming apart. | he walks into a burial held in the faith of their shared ancestors, | and begins to remember who he was before the first fight. |
-
-Two assemblies to show the kit working, both Branch B, both under 45:
-
-> In 1834 South Carolina, an enslaved prizefighter must win or die for the entertainment of others. But the same brutality that keeps him alive costs him a little more of himself each time he wins. Then he stumbles upon his fallen opponent's burial, held in the faith of their shared ancestors, and hears his own name among the mourned. *(52 — trim the ending or the ceremony to land under 45)*
-
-> 1834, South Carolina. An enslaved man whose body is worth more in the barn than in the field kills or is killed for the men who own him. But the brutality that keeps him alive has cost him the part of himself that could still mourn, until he walks into his fallen opponent's burial, held in the faith they share. *(56 — the "until" makes the ceremony the turn; long but every clause is load-bearing)*
+The Franken kit that stood here was dropped Sep 7 — Luke: "I don't like." The working document is now `press/logline-where-we-are.md`.
 
 ---
 

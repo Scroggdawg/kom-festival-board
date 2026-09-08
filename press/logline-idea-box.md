@@ -132,3 +132,17 @@ Rulings:
 | Where the fights happen | A barn. **"Pit" is still acceptable** |
 | "Mandingo" / the myth | "Myth is interesting" — in play |
 | Structure | Two branches now. **A:** event, then feeling (the v4 lineage). **B:** the trait that saves him is the trait that costs him, pivoting on *But* (the Raging Bull rebuild) |
+
+## Generation 5 — Sep 7, later
+
+- "But the same brutality that has kept him alive threatens to strip him of his humanity." — *"sounds cheesy when I say it, but there's probably a better version of that out there."*
+- "Forced to reckon with the man he has become" — *"okay. It's an okay ending."*
+- *"I definitely want to go sub 50 for word count. Probably sub 45."*
+- "Costs him a little more of himself each time he wins" — *"an interesting concept. Let's expand on that."*
+- "Which of the two men will walk out of the barn" — *"interesting but it would need to be specific that it's not which of the two fighters."*
+- "The rites are for him too" — *"interesting… not A-pluses."*
+- The Franken kit — *"I don't like."*
+- **Film facts:** in the cabin scene the elder tells him the man he would have been in the motherland — *"You would have been a god."* His prayer: *"Ogun, do not reject me… protect me in this life."*
+- "In 1830 South Carolina, an enslaved prizefighter is thrust into a world where he must kill to survive. But when he stumbles upon the dead man's burial ceremony, held in their shared faith, he is confronted by the spirits of his ancestors, and must decide whether he will continue to participate in the violence that has kept him alive."
+- "An enslaved prizefighter is forced into a world where he must kill for sport."
+- *"Give me the list of where we're at. Two to three branches, and then a handful of fragments and other ideas."* → `press/logline-where-we-are.md`
