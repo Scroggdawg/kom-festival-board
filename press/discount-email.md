@@ -29,18 +29,22 @@ Notes:
 
 ---
 
-## Recipients — the nine, with the date that matters
+## Recipients — verified against each festival's own FilmFreeway Dates & Deadlines panel, Sep 8
 
-| Festival | Date | What the date is | Fee tier | Send |
-|---|---|---|---|---|
-| Short Shorts FF & Asia (Tokyo) | Sep 9 | deadline | — | today — decide fallback if no reply |
-| Curta Cinema Rio | Sep 12 | deadline | — | today |
-| Flickerfest (Sydney) | Sep 14 | early-price cutoff (final Oct 14) | $40 → $45 | today |
-| SBIFF | Sep 18 | early-price cutoff (final Dec 2) | $60 → $80 | today |
-| Aspen Shortsfest | Sep 25 | early-price cutoff (final Nov 13) | $80 → $95 · known ~half off | today |
-| SFFILM | Sep 30 | deadline | expensive — ask | today |
-| Cleveland IFF | Sep 30 | early-price cutoff (final Dec 15) | $65 → $100 | today |
-| Florida FF | Sep 30 | early-price cutoff (final Dec 9) | $35 → $90 | today |
-| Palm Springs ShortFest | Nov 1 | deadline | known discount | this week |
+**Correction, Sep 8:** the "next deadline" figures used until now came from a list scrape and two of them were not film deadlines at all. Checked directly on each festival's page:
+
+| Festival | Sep date | What that date actually is | Real final deadline |
+|---|---|---|---|
+| **Short Shorts Tokyo** | Sep 9 | **Short Drama Pitch Competition — one category, for pitching a project, not a finished film. Not applicable to KOM.** | **Sep 30 early · Jan 15, 2027 final** |
+| **Curta Cinema Rio** | Sep 12 | **Earlybird price tier** | Nov 20 regular · Dec 14 late · Jan 8, 2027 extended |
+| **Flickerfest** | — | Early Bird was **Aug 14** and has passed | Oct 14 |
+| **SBIFF** | Sep 18 | **Official Deadline** — a real one | Oct 30 late |
+| **Aspen Shortsfest** | Sep 25 | **Regular Deadline** — a real one (Earlybird was Jul 31) | Nov 13 |
+| **SFFILM** | Sep 30 | **EARLY — all films** | Nov 11 regular / last for shorts |
+| **Cleveland CIFF** | Sep 30 | Early price tier | Dec 15 |
+| **Florida FF** | Sep 30 | Early price tier | Dec 9 |
+| **Palm Springs ShortFest** | Nov 1 | Next deadline | — |
+
+**What this means:** there is **no hard door closing in early September.** The nearest genuine deadlines are **SBIFF Sep 18** and **Aspen Sep 25**; everything else in September is a price tier. The discount emails still want to go out before paying, but the emergency framing was wrong.
 
 Contact addresses: open each festival's FilmFreeway listing → contact. Log the send date and any reply on the board.

@@ -124,4 +124,4 @@ Aspect ratio, frame rate, shooting format, exhibition formats, sound configurati
 
 ---
 
-**Note the clock:** it is Sep 8. **Short Shorts Tokyo closes tomorrow, Sep 9**, and no discount email has gone out. The EPK is not required to submit — the FilmFreeway page and the screener are. The EPK is for the festivals that come after.
+**Note the clock, corrected Sep 8:** the Sep 9 Short Shorts date was the *pitch competition*, not the film deadline — its real dates are Sep 30 early, Jan 15 2027 final. The nearest genuine deadlines are **SBIFF Sep 18** and **Aspen Sep 25**. The EPK is not required to submit; the FilmFreeway page and the screener are.
