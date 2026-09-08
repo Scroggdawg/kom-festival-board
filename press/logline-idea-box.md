@@ -326,3 +326,43 @@ His fragments, in order:
 3. **"which path he will take"** → **"which path he takes"** saves one and is firmer. The longer form is his; either works.
 
 **Recommendation: C at 55, or D at 48 if the word count matters.** Both keep every beat he found tonight; D compresses "one of his own people" to "his own", which he has used approvingly before.
+
+## Generation 16 — Sep 8. "Ancient", and twelve endings
+
+**His version:**
+
+> In 1834 South Carolina, an enslaved man is forced to fight for spectacle. But with every victory, he must take the life of one of his own. He stumbles upon his fallen opponent's burial ceremony and finds it held in the **ancient** faith of their shared ancestors, who he must now face to **decide how his life will end**.
+
+### On "ancient" — recommend cutting it
+
+1. **Redundant.** "Ancestors" already carries the age. "Ancient faith of their shared ancestors" pays twice for one idea.
+2. **Wrong register, and costly here.** In 1834 that faith was not ancient to them — it was current, their mothers' faith, carried across in living memory, with people still being landed. "Ancient" files it as archaeology, and it is the exact vocabulary colonial writing used for African religion (*ancient rites, ancestral mysteries*). It makes distant the thing the film argues is alive and present in that clearing.
+
+If intensification is wanted: **the old faith** · **the faith the crossing did not kill** · **the faith their mothers carried**. Plain "the faith of their shared ancestors" already does the work.
+
+### On "decide how his life will end"
+
+A bigger claim than "which path he will take" — it implies he may choose to die. Stronger if the film supports it; a promise the film must keep if it does not. **Jordan's call.**
+
+### Twelve endings
+
+*Stem: "In 1834 South Carolina, an enslaved man is forced to fight for spectacle. But with every victory, he must take the life of one of his own. He stumbles upon his fallen opponent's burial ceremony and finds it held in the faith of their shared ancestors, …"*
+
+| # | Ending | Words | What it does |
+|---|---|---|---|
+| 1 | who he must now face to decide **how his life will end**. | 58 | His. Darkest. Promises a death decision |
+| 2 | who he must now face to decide **how he will live**. | 57 | The same shape, the opposite pole. Softer, and truer if he survives |
+| 3 | who he must now face to decide **which path he takes**. | 57 | The original. Safe, slightly generic |
+| 4 | who he must now face, and **answer for what he has become**. | 58 | They are owed. Turns the facing into a reckoning *to* someone |
+| 5 | **who he finds waiting for an answer**. | 53 | They are already waiting. Shortest of the strong ones; the pressure is theirs, not his |
+| 6 | who he must now face to **learn what he still owes them**. | 58 | A debt, not a decision. Implies obligation he does not yet know |
+| 7 | who he must now face **as one of the men who fill their graves**. | 60 | He is already among the dead he made. Hardest line here |
+| 8 | who he must now face, and **who will decide nothing for him**. | 58 | Refuses consolation. The ancestors do not rescue him |
+| 9 | who he must now face **before he is called to fight again**. | 58 | The only one with a clock. Says the fighting continues |
+| 10 | **who see him for the first time as what he has made of himself**. | 60 | Being seen, not deciding. Shame rather than choice |
+| 11 | **who ask him what he means to do about it**. | 56 | The ancestors speak. Most active, riskiest |
+| 12 | **and must face them**. | 50 | Everything cut. Trusts the reader entirely |
+
+**Recommendation: 5 or 9.** **5** (*"who he finds waiting for an answer"*) is the shortest strong option and moves the pressure onto them — they are already there, already expecting something. **9** (*"before he is called to fight again"*) is the only ending that says the fighting has not stopped, which is the fact that makes the decision urgent rather than reflective.
+
+If the darkness of his own #1 is what he wants, **7** delivers it without promising a death the film may not contain.
