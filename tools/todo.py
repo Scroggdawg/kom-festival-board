@@ -20,7 +20,7 @@ runs only in a checkout marked `.docket-clone` — a clone kept for the Docket a
 only when todo.json is the sole modified file. Anywhere else it commits todo.json alone
 and, if the push is rejected, stops and says so rather than rewriting anything.
 """
-import json, os, sys, datetime, subprocess, tempfile
+import json, os, re, sys, datetime, subprocess, tempfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATH = os.path.join(ROOT, "todo.json")
 DEDICATED = os.path.exists(os.path.join(ROOT, ".docket-clone"))
@@ -39,14 +39,55 @@ def find(d, iid):
     for s, it in items(d):
         if it["id"] == iid: return s, it
     raise KeyError(f"no item {iid}")
+def _iso_date(v):
+    try: datetime.date.fromisoformat(v); return True
+    except (ValueError, TypeError): return False
+def _iso_stamp(v):
+    try: datetime.datetime.fromisoformat(v); return True
+    except (ValueError, TypeError): return False
+def _hex(v): return isinstance(v, str) and re.fullmatch(r"#[0-9a-fA-F]{3,8}", v) is not None
+def _filled(v): return isinstance(v, str) and v.strip() != ""
 def check(d):
-    errs = []; seen = set()
+    """Every rule here was true of the file when it was written. They are stated so the
+    file cannot drift out of them — an absent value is null, never an empty string, and a
+    date either parses or is refused."""
+    errs = []
     if d.get("schema") != 1: errs.append("schema must be 1")
+    if not isinstance(d.get("rev"), int): errs.append("rev must be a whole number")
+    if not _iso_stamp(d.get("updated")): errs.append(f"updated is not a timestamp: {d.get('updated')!r}")
+    if not _filled(d.get("updatedBy")): errs.append("updatedBy must say who wrote the file")
+    if list(d.get("statuses") or []) != STATUSES: errs.append(f"statuses must be {STATUSES}")
+    for key in ("statusLabels", "statusColors"):
+        missing = [k for k in STATUSES if k not in (d.get(key) or {})]
+        if missing: errs.append(f"{key} has no entry for {', '.join(missing)}")
+    for k, v in (d.get("statusColors") or {}).items():
+        if not _hex(v): errs.append(f"statusColors[{k}] is not a colour: {v!r}")
+    seen_s, seen_i = set(), set()
+    for s in d.get("sections") or []:
+        if not _filled(s.get("id")): errs.append("a section has no id")
+        elif s["id"] in seen_s: errs.append(f"duplicate section id {s['id']}")
+        else: seen_s.add(s["id"])
+        if not _filled(s.get("name")): errs.append(f"section {s.get('id')} has no name")
+        if not _hex(s.get("color")): errs.append(f"section {s.get('id')} colour is not a colour: {s.get('color')!r}")
     for s, it in items(d):
-        if it["id"] in seen: errs.append(f"duplicate id {it['id']}")
-        seen.add(it["id"])
-        if it["status"] not in STATUSES: errs.append(f"{it['id']}: bad status {it['status']}")
-        if not it.get("title"): errs.append(f"{it['id']}: no title")
+        i = it.get("id")
+        if not _filled(i): errs.append(f"an item in {s.get('id')} has no id"); continue
+        if i in seen_i: errs.append(f"duplicate id {i}")
+        seen_i.add(i)
+        if it.get("status") not in STATUSES: errs.append(f"{i}: bad status {it.get('status')!r}")
+        if not _filled(it.get("title")): errs.append(f"{i}: no title")
+        if not _filled(it.get("owner")): errs.append(f"{i}: no owner")
+        if it.get("waitingOn") is not None and not _filled(it["waitingOn"]):
+            errs.append(f"{i}: waitingOn is empty; it should be null")
+        if it.get("due") is not None and not _iso_date(it["due"]):
+            errs.append(f"{i}: due is not a date: {it['due']!r}")
+        h = it.get("history")
+        if not isinstance(h, list) or not h: errs.append(f"{i}: no history")
+        else:
+            for e in h:
+                if not isinstance(e, dict) or not _iso_stamp(e.get("at")): errs.append(f"{i}: history entry has no timestamp")
+                elif e.get("status") not in STATUSES: errs.append(f"{i}: history entry has bad status {e.get('status')!r}")
+                elif not _filled(e.get("by")): errs.append(f"{i}: history entry does not say who wrote it")
     return errs
 def normalise(st):
     st = ALIASES.get(st, st).replace("-", "_")
