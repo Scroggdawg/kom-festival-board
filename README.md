@@ -12,9 +12,16 @@ log of decisions.
 
 ---
 
+## The surfaces
+
+Since September 8, 2026 the site has four pages. **`index.html` is the campaign
+dashboard** — a small page that reads `data.json`, `todo.json` and
+`press/epk.json` live and links to the three boards. **The festival board moved
+to `board.html`** and is byte-for-byte what `index.html` used to be.
+
 ## The board
 
-`index.html` is the whole application: a single self-contained page, no build
+`board.html` is the whole application: a single self-contained page, no build
 step, no dependencies. `data.json` is the single source of truth — 151
 researched festivals, of which 97 are live targets.
 
@@ -30,7 +37,11 @@ drift from the record.
 
 | File | What it is |
 |---|---|
-| `index.html` | The board — UI, logic, publishing, all of it |
+| `index.html` | Campaign dashboard — reads all three data files, links to the boards |
+| `board.html` | The festival board — UI, logic, publishing, all of it |
+| `docket.html` | The Docket — the to-do list, owned by the docket lane |
+| `epk.html` | The EPK worksheet, owned by the EPK lane |
+| `todo.json`, `press/epk.json` | Those two lanes' data. **Not written from the board lane** |
 | `data.json` | Schema 2. Festivals, key dates, the premiere ledger |
 | `mockup.html`, `mockup-detail.html` | Design markups the build was approved from |
 | `PLAN-v2.md`, `PLAN-edit-ux.md` | Build specs, including the disagreements |
@@ -68,7 +79,8 @@ number first.
 
 ## Working on it
 
-The board needs no toolchain — open `index.html`, or serve the folder:
+The board needs no toolchain — open `board.html` (or `index.html` for the
+dashboard), or serve the folder:
 
 ```bash
 python3 -m http.server 8642
@@ -76,8 +88,10 @@ python3 -m http.server 8642
 
 The utilities in `tools/` expect to run from the repository root and rewrite
 `data.json` in place. `embed-snapshot.py` refreshes the copy of the data
-embedded in `index.html` as an offline fallback, and should be run after any
-change to `data.json` that is committed by hand.
+embedded in `board.html` as an offline fallback, and should be run after any
+change to `data.json` that is committed by hand. `heat-expand.py` also rewrites
+`board.html`. Both targeted `index.html` before the September 8 move; both fail
+their assert rather than writing if pointed at the wrong file.
 
 ## Conventions worth knowing
 

@@ -99,7 +99,7 @@ NEW = {
  "isc-osaka-2027":                  (3, 4, 4, 1, 6),
 }
 
-html = open("index.html").read()
+html = open("board.html").read()
 
 m = re.search(r"(const HEAT = \{\n)(.*?)(\};\n)", html, re.S)
 if not m: sys.exit("HEAT block not found")
@@ -144,5 +144,5 @@ new_note = ("Assessed fit of all 97 targets across five dimensions, 0–10, rank
 if old_note not in html: sys.exit("section note not found")
 html = html.replace(old_note, new_note, 1)
 
-open("index.html", "w").write(html)
+open("board.html", "w").write(html)
 print("renderHeat sorted + starred; section note updated")
