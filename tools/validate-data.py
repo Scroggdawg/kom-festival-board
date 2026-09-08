@@ -45,6 +45,23 @@ names its tier -- and a verification that lives only in prose is not one.
 Provenance checks (advisory unless --strict), the rule learned the hard way:
   a close date is only trustworthy with the festival's own page behind it
   (source URL) and the tier or category named beside it (feesText/why).
+
+Two more advisories, added Sep 8 2026 for one reason between them: SILENCE WAS
+BEING MISTAKEN FOR CLEANLINESS. A neighbouring lane spent the day fixing four
+bugs that shared a shape -- "the code modelled the common case and treated
+everything else as nothing rather than as something it did not understand" --
+and the dated-tier check above had exactly that shape. It only matches tiers
+written with a year, and skipped 18 records without a word, so they read as
+passing when they were merely unexamined.
+
+  UNDATED TIER    feesText names a tier but no year appears anywhere, so the
+                  dated-tier check could not run. Unchecked, not clean.
+  PROSE PREMIERE  a premiere rule asserted only in `why`, with the structured
+                  `premiere` field null (true of all 97 targets). Premiere
+                  requirements are frequently FEATURE-category rules -- reading
+                  one as a shorts rule cost this lane a retracted claim about
+                  Sundance on Sep 8 -- so prose here is a claim awaiting a
+                  first-party read of the SHORTS rules, not a fact.
 """
 import json, sys, re, datetime, os
 
@@ -131,6 +148,21 @@ def main(argv):
                 if dt > c:
                     errs.append(f"{fid}: close {c} is EARLIER than a tier its own feesText dates "
                                 f"({txt!r}) — close must be the final door, not a fee tier")
+        if prov and f.get("disposition") == "target":
+            ft = f.get("feesText") or ""
+            if (re.search(r"\b(final|late|extended|early|regular|official)\b", ft, re.I)
+                    and not LATER_TIER.search(ft)):
+                warns.append(f"{fid}: feesText names a tier but dates no year — the dated-tier "
+                             f"check could not run here; unchecked, not clean")
+            if (re.search(r"\b(world|international|european|north american|us|national|regional)"
+                          r"\s+premiere\b", f.get("why") or "", re.I)
+                    and not f.get("premiere")):
+                warns.append(f"{fid}: premiere rule asserted in prose only, `premiere` is null — "
+                             f"confirm it against the festival's SHORTS rules, not its feature rules")
+            if f.get("premiere") and not f.get("source"):
+                (errs if strict else warns).append(
+                    f"{fid}: `premiere` is set but there is no source URL — a premiere rule is only "
+                    f"a fact with the festival's own SHORTS rules behind it")
         if prov and f.get("disposition") == "target" and f.get("close"):
             if not f.get("source"):
                 (errs if strict else warns).append(f"{fid}: close date with no source URL")
