@@ -4,6 +4,7 @@
   todo.py list                      print every item with its status
   todo.py set <id> <status> [...]   set one or more items: not_started | started | awaiting | complete
   todo.py note <id> "<text>"        append a note to an item
+  todo.py title <id> "<text>"       correct an item's wording
   todo.py check                     validate the file
   todo.py push                      merge with origin and publish
   todo.py pull                      take origin's todo.json when nothing local is pending
@@ -58,6 +59,14 @@ def set_status(d, iid, st, by="todo.py", expect=None):
         raise Conflict(f"{iid} is now {it['status']}, not {normalise(expect)} — someone else changed it")
     if it["status"] == st: return False
     it["status"] = st; it.setdefault("history", []).append({"at": now(), "status": st, "by": by}); return True
+def set_field(d, iid, field, value, by="todo.py"):
+    """Edit an item's wording. Stamps history so the change survives a merge."""
+    if field not in ("title", "owner", "waitingOn", "due"): raise ValueError(f"cannot set {field}")
+    s, it = find(d, iid)
+    if it.get(field) == value: return False
+    it[field] = value
+    it.setdefault("history", []).append({"at": now(), "status": it["status"], "by": by, "field": field})
+    return True
 def save(d, by, path=None):
     errs = check(d)
     if errs: raise ValueError("refused: " + "; ".join(errs))
@@ -74,7 +83,7 @@ def _last_at(it):
 def _union_history(a, b):
     seen, out = set(), []
     for e in (a.get("history") or []) + (b.get("history") or []):
-        k = (e.get("at"), e.get("status"), e.get("by"))
+        k = (e.get("at"), e.get("status"), e.get("by"), e.get("field"))
         if k not in seen: seen.add(k); out.append(e)
     return sorted(out, key=lambda e: e.get("at", ""))
 def merge(local, remote):
@@ -165,6 +174,10 @@ def main(a):
             for iid, st in zip(pairs[::2], pairs[1::2]):
                 if set_status(d, iid, st): print(f"{iid} → {d['statusLabels'][normalise(st)]}")
             print(f"todo.json rev {save(d, 'todo.py set')} written")
+        elif cmd == "title":
+            if set_field(d, a[1], "title", " ".join(a[2:]), by="todo.py title"):
+                print(f"{a[1]} retitled\ntodo.json rev {save(d, 'todo.py title')} written")
+            else: print("unchanged")
         elif cmd == "note":
             s, it = find(d, a[1]); it.setdefault("notes", []).append({"at": now(), "text": " ".join(a[2:])})
             print(f"todo.json rev {save(d, 'todo.py note')} written")
