@@ -33,23 +33,23 @@ COL = {"have": HAVE, "self": SELF, "blk": BLK}
 # Status is overridden to "have" when epk.json carries a value, unless the field is
 # blocked on a person.
 HOLD = {
- "p1-key-art": ("have", "exists — Jordan holds the file"), "p1-billing-block": ("self", "from end credits"),
+ "p1-key-art": ("have", "in the repo — press/assets/POSTER"), "p1-billing-block": ("have", "from the poster"),
  "p1-website-url": ("blk", "donate page — decide"), "p2-logline": ("blk", "2 versions — with Jordan"),
  "p2-synopsis": ("self", "3 drafts written — pick one"), "p2-hero-still": ("blk", "master access"),
  "p3-genre": ("have", ""), "p3-country": ("have", ""), "p3-shooting-location": ("self", "where was it shot?"),
  "p3-production-year": ("blk", "with the date decision"), "p3-completion-year": ("blk", "a 2026 date before Apr 24"),
- "p3-language": ("have", ""), "p3-subtitles": ("blk", "Yeo"), "p3-duration": ("have", ""),
+ "p3-language": ("have", ""), "p3-subtitles": ("have", "EN srt + scc — press/assets/SRT"), "p3-duration": ("have", ""),
  "p3-aspect-ratio": ("blk", "Yeo"), "p3-frame-rate": ("blk", "Yeo"), "p3-shooting-format": ("blk", "Yeo"),
  "p3-exhibition-formats": ("blk", "Yeo"), "p3-sound": ("blk", "Yeo"),
- "p3-heads-of-department": ("self", "end credits"), "p3-cast-principals": ("self", "end credits — do not guess"),
+ "p3-heads-of-department": ("have", "from the poster"), "p3-cast-principals": ("self", "end credits — do not guess"),
  "p3-rights-holder": ("have", ""), "p3-press-contact": ("self", "needs a name and email"),
  "p3-instagram": ("self", "verify the IG target"), "p4-statement": ("have", "final draft — needs Jordan"),
  "p4-photo-behind": ("blk", "master access"), "p5-bio-director": ("have", "draft — 2 brackets for Jordan"),
- "p5-bio-producer": ("self", "who is the producer?"), "p5-bio-cinematographer": ("self", 'LUKE — "why do you shoot"'),
+ "p5-bio-producer": ("self", "Ruoxiao Li — ask her"), "p5-bio-cinematographer": ("self", 'LUKE — "why do you shoot"'),
  "p5-bio-production-designer": ("self", "writes their own"), "p5-bio-editor": ("self", "writes their own"),
  "p5-headshots": ("self", "ask each person"), "p5-links": ("self", "ask each person"),
  "p7-cast-bios": ("self", "end credits + IMDb"), "p7-stills-in-character": ("blk", "master access"),
- "p8-bts-photos": ("blk", "Jordan drives — or crew phones"), "p9-key-credits": ("self", "end credits"),
+ "p8-bts-photos": ("blk", "Jordan drives — or crew phones"), "p9-key-credits": ("self", "sound + EPs from end credits"),
  "p9-full-cast": ("self", "end credits"), "p9-still-behind": ("blk", "master access"),
  "p10-full-crew": ("self", "end credits"), "p11-thanks": ("self", "end credits"),
  "p11-partner-logos": ("self", "end credits"), "p11-afi-boilerplate": ("self", "end credits"),
@@ -125,7 +125,7 @@ def main():
         c.drawString(x2, fy - 11 - i * 9.2, l)
     c.setFillColor(MUT); c.setFont("Helvetica", 6.6)
     c.drawString(M, M - 8, "Killer of Men · AFI thesis · 13 min · full detail in press/epk-one-sheet.md")
-    c.drawRightString(W - M, M - 8, "Only Yeo: aspect · frame rate · shooting + exhibition format · sound · SRTs · trailer · masters · DCP")
+    c.drawRightString(W - M, M - 8, "Only Yeo: aspect · frame rate · shooting + exhibition format · sound · trailer · masters · DCP")
     c.showPage(); c.save()
     print(f"wrote {OUT} — {len(c1)}+{len(c2)} blocks, footer at y={fy:.0f}, margin {M:.0f}")
     if fy < M + 70: print("WARNING: footer is close to the bottom margin; content may be overflowing")

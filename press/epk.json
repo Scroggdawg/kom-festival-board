@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 3,
- "updated": "2026-09-08T14:58:47-07:00",
- "updatedBy": "Luke via epk-intake",
+ "rev": 4,
+ "updated": "2026-09-08T15:26:25-07:00",
+ "updatedBy": "Luke's Downloads, Sep 8 — poster and captions from Jordan's Drive",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -16,12 +16,17 @@
      "id": "p1-key-art",
      "n": "1.1",
      "label": "Key art (poster / one-sheet file)",
-     "value": "Exists — file held by Jordan",
+     "value": "In the repo: press/assets/POSTER/KillerOfMen_Poster_2160x2700.jpg (2160×2700 JPG, 5.7 MB). Jordan's file, originally 'edit kom fin (1).JPG', downloaded from Drive Sep 8. https://github.com/Scroggdawg/kom-festival-board/blob/main/press/assets/POSTER/KillerOfMen_Poster_2160x2700.jpg",
      "history": [
       {
        "at": "2026-09-08T13:09:02-07:00",
        "by": "migration from rev 2",
        "value": "Exists — file held by Jordan"
+      },
+      {
+       "at": "2026-09-08T15:26:25-07:00",
+       "by": "Luke's Downloads, Sep 8 — poster and captions from Jordan's Drive",
+       "value": "In the repo: press/assets/POSTER/KillerOfMen_Poster_2160x2700.jpg (2160×2700 JPG, 5.7 MB). Jordan's file, originally 'edit kom fin (1).JPG', downloaded from Drive Sep 8. https://github.com/Scroggdawg/kom-festival-board/blob/main/press/assets/POSTER/KillerOfMen_Poster_2160x2700.jpg"
       }
      ]
     },
@@ -29,8 +34,14 @@
      "id": "p1-billing-block",
      "n": "1.2",
      "label": "Billing block",
-     "value": "",
-     "history": []
+     "value": "AFI CONSERVATORY PRESENTS\nKILLER OF MEN\nSTARRING ERIK ORJIAKO\nCASTING BY PAUL SINACORE · ORIGINAL MUSIC BY KEVIN LEYSATH II · EDITED BY YOU WU · PRODUCTION DESIGN BY RAJARAJESHWARI \"RJ\" RAGAMPUDI\nCINEMATOGRAPHY BY LUKE SCROGGINS · PRODUCED BY RUOXIAO LI · SCREENPLAY BY JORDAN BETINE & KIERRA BRATTON-LEWIS\nDIRECTED BY JORDAN BETINE\n(transcribed from the poster, Sep 8)",
+     "history": [
+      {
+       "at": "2026-09-08T15:26:25-07:00",
+       "by": "Luke's Downloads, Sep 8 — poster and captions from Jordan's Drive",
+       "value": "AFI CONSERVATORY PRESENTS\nKILLER OF MEN\nSTARRING ERIK ORJIAKO\nCASTING BY PAUL SINACORE · ORIGINAL MUSIC BY KEVIN LEYSATH II · EDITED BY YOU WU · PRODUCTION DESIGN BY RAJARAJESHWARI \"RJ\" RAGAMPUDI\nCINEMATOGRAPHY BY LUKE SCROGGINS · PRODUCED BY RUOXIAO LI · SCREENPLAY BY JORDAN BETINE & KIERRA BRATTON-LEWIS\nDIRECTED BY JORDAN BETINE\n(transcribed from the poster, Sep 8)"
+      }
+     ]
     },
     {
      "id": "p1-website-url",
@@ -172,8 +183,14 @@
      "id": "p3-subtitles",
      "n": "3.7",
      "label": "Subtitle files (SRT languages)",
-     "value": "",
-     "history": []
+     "value": "English only. SDH-style captions: 214 cues, 91 dialogue, the rest sound descriptions and lyrics; timecode starts at 01:00:00 (hour-one offset). SRT and SCC in press/assets/SRT/ (KillerOfMen_English.srt, KillerOfMen_English.scc), from the Dec 2025 caption pass on Drive. https://github.com/Scroggdawg/kom-festival-board/blob/main/press/assets/SRT",
+     "history": [
+      {
+       "at": "2026-09-08T15:26:25-07:00",
+       "by": "Luke's Downloads, Sep 8 — poster and captions from Jordan's Drive",
+       "value": "English only. SDH-style captions: 214 cues, 91 dialogue, the rest sound descriptions and lyrics; timecode starts at 01:00:00 (hour-one offset). SRT and SCC in press/assets/SRT/ (KillerOfMen_English.srt, KillerOfMen_English.scc), from the Dec 2025 caption pass on Drive. https://github.com/Scroggdawg/kom-festival-board/blob/main/press/assets/SRT"
+      }
+     ]
     },
     {
      "id": "p3-duration",
@@ -227,8 +244,14 @@
      "id": "p3-heads-of-department",
      "n": "3.14",
      "label": "Heads of department (role and name)",
-     "value": "",
-     "history": []
+     "value": "Director | Jordan Betine\nProducer | Ruoxiao Li\nCinematographer | Luke Scroggins\nProduction designer | Rajarajeshwari \"RJ\" Ragampudi\nEditor | You Wu\n(from the poster billing block)",
+     "history": [
+      {
+       "at": "2026-09-08T15:26:25-07:00",
+       "by": "Luke's Downloads, Sep 8 — poster and captions from Jordan's Drive",
+       "value": "Director | Jordan Betine\nProducer | Ruoxiao Li\nCinematographer | Luke Scroggins\nProduction designer | Rajarajeshwari \"RJ\" Ragampudi\nEditor | You Wu\n(from the poster billing block)"
+      }
+     ]
     },
     {
      "id": "p3-cast-principals",
@@ -405,8 +428,14 @@
      "id": "p9-key-credits",
      "n": "9.1",
      "label": "Key credits",
-     "value": "",
-     "history": []
+     "value": "Writer-director | Jordan Betine\nScreenplay | Jordan Betine & Kierra Bratton-Lewis\nProducer | Ruoxiao Li\nCinematographer | Luke Scroggins\nProduction designer | Rajarajeshwari \"RJ\" Ragampudi\nEditor | You Wu\nComposer | Kevin Leysath II\nCasting | Paul Sinacore\nSound designer |\nExecutive producers |\n(from the poster billing block; sound designer and EPs from the end credits)",
+     "history": [
+      {
+       "at": "2026-09-08T15:26:25-07:00",
+       "by": "Luke's Downloads, Sep 8 — poster and captions from Jordan's Drive",
+       "value": "Writer-director | Jordan Betine\nScreenplay | Jordan Betine & Kierra Bratton-Lewis\nProducer | Ruoxiao Li\nCinematographer | Luke Scroggins\nProduction designer | Rajarajeshwari \"RJ\" Ragampudi\nEditor | You Wu\nComposer | Kevin Leysath II\nCasting | Paul Sinacore\nSound designer |\nExecutive producers |\n(from the poster billing block; sound designer and EPs from the end credits)"
+      }
+     ]
     },
     {
      "id": "p9-full-cast",
