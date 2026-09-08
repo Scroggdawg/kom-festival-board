@@ -231,3 +231,14 @@ the speed of his hands · his strength · the ferocity that has kept him alive �
   - "In 1834 South Carolina, an enslaved prizefighter **whose physical dominance has kept him alive in the fighting pits**… **he finds his humanity slipping further away with every life he takes.**" *(59)*
   - "The violence / physical dominance that has… **leads him further and further estranged from his own people.**" *(54 assembled)*
 - Also raised: "his brutal practices" · "victory in the fighting pits itself" as the trait.
+
+## Generation 12 — Sep 7, night
+
+- **From the bank, his picks:** *"will to live is really interesting"* · *"what he's willing to do to stay alive, very fascinating"* · likes **hardens, consumes, drags him further**.
+- *"The cost — I think we need to develop the cost more. That feels like the weakest one of the slots."*
+- *"I like the opening of C quite a bit."* But: *"leaves him further estranged from his own people can be strengthened."*
+- *"With every life he takes is nice."*
+- **Enticement verdicts:** "survives by killing his own" = **enticing** · "an enslaved prizefighter's physical dominance keeps him alive in the fighting pits and…" = **pretty enticing** · "belongs a little more to the men who own him" = **not** · "estranged from his own people" = **not that enticing**.
+- On #2: *"the violence that has kept him alive costs him another piece of his humanity — this is the crux right here, we're right there."*
+- *"I'd rather five or six really fucking good ones… what's missing is the part that makes me want to watch that fucking movie. Revisit Joan — it's got to be enticing. Turn up the enticing."*
+- Asked why the 59-word "whose physical dominance" version was not in the six → now carried in `logline-top-versions.md` Part 1 as version A.
