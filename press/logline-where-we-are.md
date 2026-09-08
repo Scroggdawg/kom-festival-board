@@ -250,7 +250,7 @@ From the corpus of 119: `the_choice` is the smallest working class (11/119, 9%),
 
 Releasing the ending buys 15 words, and the cost clause already implies the stake.
 
-### Three locks, twelve connectives — 48 words
+### Three locks, twelve connectives — 49 words
 
 > In 1834 South Carolina, an enslaved prizefighter kills for the men who own him, and the violence that has kept him alive costs him a little more of his humanity with every victory — until he stumbles on his opponent's burial, held in the faith of their shared ancestors.
 
