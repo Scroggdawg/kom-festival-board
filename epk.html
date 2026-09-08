@@ -4,30 +4,31 @@
 <title>Killer of Men — EPK</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#14213d;--panel:#1b2c4f;--line:#2a3d66;--cream:#f3ecd8;--mute:#b7bdcc;--dim:#7f8aa6}
+:root{--ink:#14213d;--panel:#1b2c4f;--line:#2a3d66;--cream:#f3ecd8;--mute:#b7bdcc;--dim:#7f8aa6;--h1:#635ad0;--b1:#313149;--h2:#0051a1;--b2:#1e3646;--h3:#007588;--b3:#15393e;--h4:#005e42;--b4:#1b3a2f;--h5:#007c1a;--b5:#243927;--h7:#6a4400;--b7:#40311a;--h8:#ae5000;--b8:#462f20;--h9:#822f00;--b9:#482e23;--h10:#a61c52;--b10:#482c33;--h11:#8c598e;--b11:#412e41;--ha:#4d427f;--ba:#343048;}
 *{box-sizing:border-box}html,body{margin:0;background:#0f1930;color:var(--cream);font-family:'Archivo','Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:1.4}
 .bd{max-width:900px;margin:24px auto;background:var(--ink);border-radius:12px;padding:18px 22px 14px;transition:opacity .3s}
 .bd.stale{opacity:.6}
 .top{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .ttl{font-size:20px;font-weight:500}.ttl small{display:block;font-size:12px;color:var(--mute);font-weight:400;margin-top:5px;font-variant-numeric:tabular-nums}
-.sec{margin-top:18px}
-.sh{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:baseline;padding-bottom:6px;border-bottom:1px solid var(--line)}
-.sh .sn{font-variant-numeric:tabular-nums;color:var(--dim);font-size:13px}
-.sh .snm{font-size:15px;font-weight:500}
-.sh .sct{font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums}
-.r{display:grid;grid-template-columns:52px 240px 1fr;gap:12px;align-items:start;padding:7px 0;border-bottom:1px solid rgba(42,61,102,.55)}
-.r .n{font-variant-numeric:tabular-nums;color:var(--dim);font-size:13px;padding-top:1px}
+.sec{margin-top:14px;border-radius:8px;overflow:hidden}
+.sh{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:baseline;padding:9px 14px;background:var(--h)}
+.sh .sn{font-variant-numeric:tabular-nums;color:var(--cream);font-size:13px}
+.sh .snm{font-size:15px;font-weight:500;color:var(--cream)}
+.sh .sct{font-size:12px;color:var(--cream);font-variant-numeric:tabular-nums}
+.r{display:grid;grid-template-columns:52px 240px 1fr;gap:12px;align-items:start;padding:7px 14px;background:var(--b);border-bottom:1px solid rgba(0,0,0,.22)}
+.r:last-child{border-bottom:0}
+.r .n{font-variant-numeric:tabular-nums;color:rgba(243,236,216,.65);font-size:13px;padding-top:1px}
 .r .l{color:var(--cream)}
-.r.empty .l{color:var(--mute)}
-.v{color:var(--mute);white-space:pre-wrap;overflow-wrap:anywhere;cursor:text;border-radius:5px;padding:1px 5px;margin:-1px -5px;min-height:20px;border:1px solid transparent}
-.v:hover{background:rgba(243,236,216,.05)}.v:focus-visible{outline:none;border-color:var(--dim)}
+.r.empty .l{color:rgba(243,236,216,.72)}
+.v{color:rgba(243,236,216,.88);white-space:pre-wrap;overflow-wrap:anywhere;cursor:text;border-radius:5px;padding:1px 5px;margin:-1px -5px;min-height:20px;border:1px solid transparent}
+.v:hover{background:rgba(243,236,216,.09)}.v:focus-visible{outline:none;border-color:var(--cream)}
 .v.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .v.none{min-height:20px}
-.more{display:block;margin-top:2px;font-size:11.5px;color:var(--dim);background:none;border:0;padding:0;cursor:pointer;font-family:inherit}
-.ed textarea{width:100%;background:#0f1930;border:1px solid var(--dim);color:var(--cream);border-radius:6px;padding:8px 10px;font:inherit;line-height:1.45;resize:vertical;min-height:64px}
+.more{display:block;margin-top:2px;font-size:11.5px;color:rgba(243,236,216,.7);background:none;border:0;padding:0;cursor:pointer;font-family:inherit}
+.ed textarea{width:100%;background:rgba(15,25,48,.72);border:1px solid rgba(243,236,216,.45);color:var(--cream);border-radius:6px;padding:8px 10px;font:inherit;line-height:1.45;resize:vertical;min-height:64px}
 .ed .row{display:flex;gap:8px;margin-top:8px;align-items:center;flex-wrap:wrap}
-.ed .hintk{font-size:11.5px;color:var(--dim)}
-button.b{font:inherit;font-size:13px;background:transparent;color:var(--cream);border:1px solid var(--line);border-radius:6px;padding:5px 11px;cursor:pointer}
+.ed .hintk{font-size:11.5px;color:rgba(243,236,216,.72)}
+button.b{font:inherit;font-size:13px;background:rgba(15,25,48,.4);color:var(--cream);border:1px solid rgba(243,236,216,.4);border-radius:6px;padding:5px 11px;cursor:pointer}
 button.b.pri{border-color:var(--cream)}
 .foot{margin-top:14px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .ctl{color:var(--mute);text-decoration:underline;cursor:pointer}#msg a{color:var(--cream)}#err{color:#e8703a}
@@ -71,7 +72,8 @@ function render(d){
   var mode=d.numbering,html='';
   d.sections.forEach(function(s){
     var got=s.fields.filter(function(f){return f.value.trim();}).length;
-    html+='<div class="sec"><div class="sh"><span class="sn">'+esc(num(s.num+'.0',mode).replace(/\.0$/,''))+'</span><span class="snm">'+esc(s.name)+'</span><span class="sct">'+got+' / '+s.fields.length+'</span></div>';
+    var key=s.num.toLowerCase();
+    html+='<div class="sec" style="--h:var(--h'+key+');--b:var(--b'+key+')"><div class="sh"><span class="sn">'+esc(num(s.num+'.0',mode).replace(/\.0$/,''))+'</span><span class="snm">'+esc(s.name)+'</span><span class="sct">'+got+' / '+s.fields.length+'</span></div>';
     s.fields.forEach(function(f){
       var v=f.value,long=v.length>180,open=!!expanded[f.id];
       html+='<div class="r'+(v.trim()?'':' empty')+'" data-id="'+esc(f.id)+'">'+
