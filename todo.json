@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "rev": 29,
- "updated": "2026-09-07T08:05:42-07:00",
+ "rev": 31,
+ "updated": "2026-09-08T12:11:07-07:00",
  "updatedBy": "merge",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
@@ -436,7 +436,7 @@
     },
     {
      "id": "D.4.5",
-     "title": "Bios: each person writes their own; director’s from FilmFreeway; Luke’s producer bio gets the “why” test",
+     "title": "Bios: each person writes their own; director’s from FilmFreeway; Luke’s cinematographer bio gets the “why” test",
      "owner": "team",
      "waitingOn": null,
      "due": null,
@@ -446,6 +446,12 @@
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
+      },
+      {
+       "at": "2026-09-08T12:11:06-07:00",
+       "status": "not_started",
+       "by": "todo.py title",
+       "field": "title"
       }
      ]
     },
