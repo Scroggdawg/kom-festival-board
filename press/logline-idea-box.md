@@ -156,3 +156,12 @@ Rulings:
 - Out: "eating him alive", "the part of himself that could still mourn", "hollowing him out", "the thing they paid to see".
 - **Opening locked: "In 1834 South Carolina, an enslaved prizefighter".**
 - Keep branches A, B, C.
+
+## Generation 7 — Sep 7, later still
+
+- "In 1834 South Carolina, an enslaved prizefighter… every victory chips away at… erodes… exacts a toll on… the man he might have been, the man he was meant to become."
+- "1834 South Carolina, an enslaved prizefighter is thrust into a world where he must kill to survive, win or die."
+- "There's a fork: 'kill to survive' or 'win or die.' But with every victory he is pulled deeper into violence and further away from the man he was meant to become."
+- "When he stumbles upon his opponent's burial ceremony, held in the faith of their shared ancestors, faced with his own nature, he must choose whether he will continue to live as a killer or stand up for the life that was taken from him." — *"I think I like that right now."*
+- **"Stand up for the life that was taken from him."**
+- *"Just keep adding stuff and then write out the ones that I just said."*

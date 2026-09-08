@@ -20,6 +20,45 @@
 
 ---
 
+---
+
+## Sep 7, later still — everything Luke said this turn, then written out
+
+**Fragments, in order**
+
+- "In 1834 South Carolina, an enslaved prizefighter… every victory chips away at… erodes… exacts a toll on… the man he might have been, the man he was meant to become."
+- "1834 South Carolina, an enslaved prizefighter is thrust into a world where he must kill to survive, win or die."
+- "There's a fork here — it could go 'kill to survive' or 'win or die' — but: with every victory he is pulled deeper into violence and further away from the man he was meant to become."
+- "When he stumbles upon his opponent's burial ceremony, held in the faith of their shared ancestors, faced with his own nature, he must choose whether he will continue to live as a killer or stand up for the life that was taken from him." — *"I think I like that right now."*
+- **"Stand up for the life that was taken from him."**
+
+**Written out**
+
+Full, as said (70 words — over target, under Sundance's 75):
+
+> In 1834 South Carolina, an enslaved prizefighter is thrust into a world where he must kill to survive. With every victory he is pulled deeper into violence and further from the man he was meant to become. When he stumbles upon his opponent's burial ceremony, held in the faith of their shared ancestors, he must choose whether to go on living as a killer or stand up for the life that was taken from him.
+
+The "win or die" fork (same length):
+
+> In 1834 South Carolina, an enslaved prizefighter is thrust into a world where he must win or die. Every victory pulls him deeper into violence and further from the man he was meant to become. When he stumbles upon his opponent's burial ceremony, held in the faith of their shared ancestors, he must choose whether to go on living as a killer or stand up for the life that was taken from him.
+
+Tightened to one turn, his phrases intact (49):
+
+> In 1834 South Carolina, an enslaved prizefighter must kill to survive, and every victory costs him the man he was meant to become. At his opponent's burial, held in the faith of their shared ancestors, he must choose whether to live as a killer or stand up for the life that was taken from him.
+
+Tightened, "chips away" version (51):
+
+> In 1834 South Carolina, an enslaved prizefighter must kill to survive, and every victory chips away at the man he was meant to become. When he stumbles upon his opponent's burial, held in the faith of their shared ancestors, he must choose whether to live as a killer or stand up for the life that was taken from him.
+
+*Arithmetic, so the target is honest: the locked opening is 7 words, the locked ceremony phrase is 7, and "stand up for the life that was taken from him" with its "whether to live as a killer or" is 16. That is 30 before a single word of the middle. Under 50 is reachable (above); under 45 means cutting one of those three, and none of them is the one to cut.*
+
+**Cost phrasings from this turn**
+
+- every victory chips away at the man he might have been
+- every victory erodes the man he was meant to become
+- every victory exacts a toll on the man he was meant to become
+- with every victory he is pulled deeper into violence and further from the man he was meant to become
+
 ## Latest — Sep 7, evening. Everything Luke said this turn
 
 **Locked**
