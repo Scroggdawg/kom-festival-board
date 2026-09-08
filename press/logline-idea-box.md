@@ -279,3 +279,50 @@ Six writers × six angles = 36 loglines. Three reviewers (enticement / fidelity 
 1. **Who was the man he killed?** A name, a shared field, that Mace knows the song. All six call him a category. *Son of Saul* works because the corpse is "a boy he takes for his son."
 2. **One concrete noun from inside the surreal sequence** — nobody has said what he sees on the other side.
 3. **Does he fight again after the burial?** If so, that is the missing fuse, and it is one clause.
+
+## Generation 15 — Sep 8. The ancestors become the counterparty
+
+*"I think we're actually getting somewhere here."*
+
+**The move that changed it:** the ancestors stop being a theme and become **someone he has to face**. That is the externalisation he had been reaching for since the Raging Bull rebuild — it satisfies his own ruling that *"nobody cares about an internal conflict"* without giving up the interior stakes, because the interior question is now asked by a party standing in front of him.
+
+Second move, quieter but real: **"realizes"** / **"to find that"** — the beat is not stumbling on the burial, it is recognising whose faith it is.
+
+His fragments, in order:
+
+- "After killing an opponent, he stumbles upon the burial ceremony and **realizes it is held in the faith of their shared ancestors. Who he must now face to decide which path he will take.**"
+- "In 1834 South Carolina, an enslaved prizefighter **faces a brutal reality where he must kill his own people in order to survive**."
+- "In 1834, South Carolina, an enslaved man is **forced to fight for spectacle** … and with every victory he must **take the life of one of his own people**."
+- "After defeating an opponent, he stumbles upon the burial ceremony **to find that it is being held** in the faith of their shared ancestors, **who he must now face to decide which path he will take**."
+
+**"Fight for spectacle"** solves a problem he had rejected twice: it names the owners' entertainment without "owner's sport."
+
+### Assembled
+
+**A — his, as said · 64 words**
+
+> In 1834 South Carolina, an enslaved man is forced to fight for spectacle, and with every victory he must take the life of one of his own people. After defeating an opponent, he stumbles upon the burial ceremony to find that it is being held in the faith of their shared ancestors, who he must now face to decide which path he will take.
+
+**B — his shorter opening · 57**
+
+> In 1834 South Carolina, an enslaved prizefighter faces a brutal reality where he must kill his own people in order to survive. After defeating an opponent, he stumbles upon the burial ceremony to find that it is held in the faith of their shared ancestors, who he must now face to decide which path he will take.
+
+**C — tightened, his beats intact · 55**
+
+> In 1834 South Carolina, an enslaved man is forced to fight for spectacle, and every victory takes the life of one of his own. After a bout, he stumbles upon the burial ceremony and finds it held in the faith of their shared ancestors, who he must now face to decide which path he takes.
+
+**D — tightest · 48**
+
+> In 1834 South Carolina, an enslaved man is forced to fight his own for spectacle, and every victory costs another life. Stumbling upon his opponent's burial, he finds it held in the faith of their shared ancestors, who he must now face to decide which path he takes.
+
+**E — with the Although hinge kept · 57**
+
+> In 1834 South Carolina, an enslaved prizefighter must kill his own people to survive. Although the violence has kept him alive, it has carried him further from them with every victory. He stumbles upon his opponent's burial, held in the faith of their shared ancestors, who he must now face to decide which path he will take.
+
+### Three small things, his call
+
+1. **"who" vs "whom."** Strictly it is *whom he must now face*. In a logline "who" reads natural and "whom" reads stuffy. Recommend keeping **who**.
+2. **"to find that it is being held"** → **"and finds it held"** saves three words and loses nothing.
+3. **"which path he will take"** → **"which path he takes"** saves one and is firmer. The longer form is his; either works.
+
+**Recommendation: C at 55, or D at 48 if the word count matters.** Both keep every beat he found tonight; D compresses "one of his own people" to "his own", which he has used approvingly before.
