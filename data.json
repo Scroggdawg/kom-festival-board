@@ -2201,7 +2201,13 @@
    "source": "https://iffr.com/en/iffr-pro-submissions/film-entry",
    "lastChecked": "2026-09-03",
    "events": [],
-   "notes": [],
+   "notes": [
+    {
+     "nid": "8abf473f-3501-4209-a555-d1f49d7c93bc",
+     "date": "2026-09-08",
+     "text": "Verified Sep 8, 2026 against IFFR’s own film-entry page: shorts under 64 min, late/final tier 15 September 2026 17:00 CEST, €70 ex VAT. Premiere: world, international OR European — a US-only history (ABFF, MVAAFF) preserves European status. Students excluded EXCEPT post-graduate (master) year, so an AFI MFA thesis qualifies. Direct IFFR portal, not FilmFreeway. Prior feesText read “€85”, which appears nowhere on the page — likely €70 + 21% VAT (€84.70), but that was an inference, not a quote."
+    }
+   ],
    "tier": "worthy",
    "joanPick": true,
    "cat": "A-list Europe · Tiger Shorts",
@@ -2215,9 +2221,7 @@
    "links": {
     "site": "https://iffr.com/en/iffr-pro-submissions/film-entry"
    },
-   "sourceUrl": "https://iffr.com/en/iffr-pro-submissions/film-entry",
-   "provenance": "official",
-   "note": "Verified Sep 8, 2026 against IFFR’s own film-entry page: shorts under 64 min, late/final tier 15 September 2026 17:00 CEST, €70 ex VAT. Premiere: world, international OR European — a US-only history (ABFF, MVAAFF) preserves European status. Students excluded EXCEPT post-graduate (master) year, so an AFI MFA thesis qualifies. Direct IFFR portal, not FilmFreeway. Prior feesText read “€85”, which appears nowhere on the page — likely €70 + 21% VAT (€84.70), but that was an inference, not a quote."
+   "provenance": "official"
   },
   {
    "id": "riverrun-international-film-festival",
