@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "rev": 35,
- "updated": "2026-09-08T12:19:49-07:00",
+ "rev": 38,
+ "updated": "2026-09-08T12:20:04-07:00",
  "updatedBy": "merge",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
@@ -35,13 +35,19 @@
      "title": "Email every shortlisted festival with a fee over ~$20, before paying — nine festivals, template in press/discount-email.md",
      "owner": "Luke",
      "waitingOn": null,
-     "due": "2026-09-09",
+     "due": "2026-09-18",
      "status": "not_started",
      "history": [
       {
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
+      },
+      {
+       "at": "2026-09-08T12:20:04-07:00",
+       "status": "not_started",
+       "by": "todo.py due",
+       "field": "due"
       }
      ]
     },
@@ -115,7 +121,7 @@
      "title": "Decide what happens if a festival has not replied by its deadline — the nearest real doors are SBIFF Sep 18 and Aspen Sep 25",
      "owner": "Luke · your call",
      "waitingOn": null,
-     "due": "2026-09-09",
+     "due": "2026-09-18",
      "status": "not_started",
      "history": [
       {
@@ -128,6 +134,12 @@
        "status": "not_started",
        "by": "todo.py title",
        "field": "title"
+      },
+      {
+       "at": "2026-09-08T12:20:04-07:00",
+       "status": "not_started",
+       "by": "todo.py due",
+       "field": "due"
       }
      ]
     }
