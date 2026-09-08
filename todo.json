@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "rev": 50,
- "updated": "2026-09-08T13:43:11-07:00",
+ "rev": 52,
+ "updated": "2026-09-08T14:00:37-07:00",
  "updatedBy": "merge",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
@@ -717,5 +717,6 @@
     }
    ]
   }
- ]
+ ],
+ "paletteNote": "The five section colours are NOT a valid categorical set and must never carry identity on their own. Measured with the dataviz validator against this page's #14213d surface: violet #a06ff0 against periwinkle #6f93f0 is deltaE 3.2 for deuteranopia and 10.4 for normal vision, against a floor of 15; peach #f2b8a0 is under the chroma floor and reads grey. Section identity is carried by name and position, and the block map labels every row. The four status colours fail the same way as a set (sky #5fb3e0 against not-started grey #9aa3b8 is deltaE 5.9 deuteranopia), which is why every status is drawn with its own shape as well as its colour: outline not started, half-filled started, diagonal awaiting, solid complete. Measured 2026-09-08."
 }
