@@ -1,10 +1,93 @@
-# The top versions — Sep 7, night
-
-*All six use Luke's locked opening, his ceremony phrase, and the ending he likes ("the man he was meant to become"). Trait slot closed by his own correction: it is **violence**, or a word for violence — a skill costs nothing; only the acts cost humanity.*
-
-**Darker replacements for "a little more of his humanity"** (his note: not dark enough): *another piece of his humanity* · *what is left of his humanity* · *he belongs a little more to the men who own him* · *he bends further to the will of his oppressors* · *he submits further* · *he becomes more theirs*.
+# Logline versions and the word bank — Sep 7, night
 
 ---
+
+# Part 1 — This round: his originals and his notes
+
+## His originals, written out
+
+**A. "Whose physical dominance" — the appositive opening** · 59 words
+
+> In 1834 South Carolina, an enslaved prizefighter whose physical dominance has kept him alive in the fighting pits finds his humanity slipping further away with every life he takes. When he stumbles upon his fallen opponent's burial ceremony, held in the faith of their shared ancestors, he is forced to reckon with the man he was meant to become.
+
+*The "whose" clause loads the entire premise onto the man before the main verb arrives — OURIKA!'s technique. "Finds his humanity slipping further away" is his; it is darker than "costs him a little more" because slipping is something you cannot stop.*
+
+**B. "Every match he wins"** · 50 words
+
+> In 1834 South Carolina, an enslaved prizefighter bends further to the will of his oppressors with every match he wins. When he stumbles upon his fallen opponent's burial ceremony, held in the faith of their shared ancestors, he is forced to reckon with the man he was meant to become.
+
+*The tightest thing he has produced. "Every match he wins" is colder than "every life he takes" — it makes it routine, a record, a season.*
+
+**C. "Estranged from his own people"** · 54 words
+
+> In 1834 South Carolina, an enslaved prizefighter's physical dominance keeps him alive in the fighting pits and leaves him further estranged from his own people with every life he takes. At his fallen opponent's burial, held in the faith of their shared ancestors, he must reckon with the man he was meant to become.
+
+*One verb pair — "keeps… and leaves" — two opposite results. This is Cool Hand Luke's grammar arrived at independently, and "estranged from his own people" is the truest statement of what the burial scene costs him.*
+
+## His notes on the existing six
+
+| # | His note | Applied |
+|---|---|---|
+| **1** | *"I like it."* Wants "reckon with **his spiritual roots and** the man he was meant to become" | Below, at **71 words** |
+| **2** | *"Two is okay."* | Unchanged |
+| **3** | *"I don't know that"* — on "he belongs a little more to the men who own him" | Flagged; the phrase is now a candidate, not a fixture |
+| — | Night Feeds is 43 words. *"So we're almost double."* | The six run 39–67 |
+
+**#1 with his addition** · 71 words
+
+> In 1834 South Carolina, an enslaved prizefighter must kill to survive. Although his physical dominance has kept him alive in the fighting pits, with every life he takes he bends further to the will of his oppressors. When he stumbles upon his fallen opponent's burial ceremony, held in the faith of their shared ancestors, he is forced to reckon with his spiritual roots and the man he was meant to become.
+
+*71 is under Sundance's 75 ceiling. It is the everything version.*
+
+---
+
+# Part 2 — The word bank
+
+## ⚠ One distinction before the list
+
+Jordan's own director statement says the Mandingo myth "has always been used to showcase the **Black brute**." So the words **brute, brutal, brutality, savage, savagery, feral, animal, beast, ferocious** are the myth's own vocabulary. Used to describe **him**, the logline reproduces the slur the film exists to dismantle. Used to describe **what is done to him** — the bouts, the trade, the men who own him — they are accurate and safe.
+
+**Rule of thumb: brutality belongs to the institution, not to Mace.**
+
+## What wins the fight — the trait slot
+
+*Neutral or admiring (safe on him):* his physical dominance · his strength · his power · his size · his reach · his speed · his hands · what his hands can do · his prowess · his skill · his craft · his gift · his instinct · his killer instinct · his talent for it · his aptitude · his command · his mastery · his advantage · his edge · his record · his winning
+
+*Charged, and defensible on him because they name conduct, not nature:* his violence · the violence in him · his rage · his fury · his wrath · his aggression · his force · his ruthlessness · his mercilessness · his refusal to lose · his will to live · his willingness · what he is willing to do · what he will do to stay alive
+
+*Reserved for the institution, the pits, the owners — not for Mace:* brutality · savagery · barbarity · butchery · bloodlust · cruelty · viciousness · the blood sport · the spectacle · the wagering
+
+## What he actually does
+
+the killing · the taking of life · the blood he spills · the bodies · the men he leaves behind · the dead he makes · what he does in the pit · what the barn asks of him · what he is made to do · every match he wins · every life he takes · every victory · every bout
+
+## Verbs — what it does FOR him
+
+keeps him alive · has kept him alive · sustains him · sustains his life · preserves him · spares him · saves him · buys him another season · earns him another year · prolongs his life · protects him · delivers him · has carried him this far · is the only thing standing between him and the field
+
+## Verbs — what it does TO him
+
+costs him · takes from him · strips him of · buries · erodes · hollows · unmakes · blunts · deadens · numbs · hardens · corrupts · stains · empties · consumes · devours · claims · drags him further · **bends him further** *(his)* · submits him further · breaks · severs · estranges · **leaves him estranged** *(his)* · alienates · carries him further from · pulls him further from · **finds his humanity slipping** *(his)* · costs him a little more of · costs him another piece of
+
+## What it costs — the object slot
+
+his humanity · what is left of his humanity · the man he was meant to become *(his)* · the man he might have been · his spiritual roots *(his)* · his own people · his place among his own · his standing with his own people · his name · his soul *(worn)* · everything the barn cannot see · his claim to the faith he was born to · the part of him the ancestors would recognise · his belonging
+
+## Who benefits
+
+the men who own him · his oppressors *(his)* · the men who wager on him · the men who profit · his owner · the house · the pit · the trade
+
+## Recurrence phrases
+
+with every victory *(his)* · with every life he takes *(his)* · with every match he wins *(his)* · each victory *(his)* · every time he wins · every time he is made to fight · fight after fight · win after win · one body at a time
+
+## The hinges
+
+Although *(his)* · But · And *(Cool Hand Luke's — cheapest)* · Yet · Even as · While · until · so that · and in doing so · which is how · the same X that Y
+
+---
+
+# Part 3 — The six, unchanged
 
 ### 1. The Although — his newest, closest to Raging Bull · 67 words
 

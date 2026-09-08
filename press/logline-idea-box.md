@@ -218,3 +218,16 @@ the speed of his hands · his strength · the ferocity that has kept him alive �
 - *"'His own' doesn't belong in the middle of 'with every life he takes, he slips.'"* → the fragment becomes: **"With every life he takes, he slips deeper into the grasp of his oppressors."**
 - **New, the strongest of the turn:** *"Although his physical dominance has helped him survive the fighting pits, with every life he takes he bends further to the will of his oppressors."* — also "submits further".
 - *"I'm not saying any of these are definitive. I'm just testing them out."*
+
+## Generation 11 — Sep 7, night
+
+- *"Let's come up with a bunch of versions of rage and violence and brutality… What else? What else? We need more."* → word bank in `press/logline-top-versions.md` Part 2.
+- On **#1**: *"I like it."* Wants **"reckon with his spiritual roots and the man he was meant to become"** → 71 words.
+- On **#2**: *"Two is okay."*
+- On **#3**: *"I don't know that"* — "he belongs a little more to the men who own him" is not settled.
+- Night Feeds is 43 words: *"So we're almost double. Got it."*
+- **New originals this round:**
+  - "In 1834 South Carolina, an enslaved prizefighter **bends further to the will of his oppressors with every match he wins.**" *(50)*
+  - "In 1834 South Carolina, an enslaved prizefighter **whose physical dominance has kept him alive in the fighting pits**… **he finds his humanity slipping further away with every life he takes.**" *(59)*
+  - "The violence / physical dominance that has… **leads him further and further estranged from his own people.**" *(54 assembled)*
+- Also raised: "his brutal practices" · "victory in the fighting pits itself" as the trait.
