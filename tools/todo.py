@@ -155,10 +155,20 @@ def merge(local, remote):
         for s, it in items(local):
             if it["id"] in lmap and s["id"] in by_section:
                 by_section[s["id"]]["items"].append(it); changed = True
+    # Top-level keys the merge does not model. Anything this machine added that the
+    # remote has never seen is carried over rather than dropped; anything both sides
+    # changed keeps the remote's value and is named in the return, never dropped in
+    # silence. A palette note added here was destroyed twice before this existed.
+    MANAGED = {"rev", "updated", "updatedBy", "sections"}
+    overruled = []
+    for k, v in local.items():
+        if k in MANAGED: continue
+        if k not in merged: merged[k] = v; changed = True
+        elif merged[k] != v: overruled.append(k)
     if changed:
         merged["rev"] = max(int(local.get("rev", 0)), int(remote.get("rev", 0))) + 1
         merged["updated"] = now(); merged["updatedBy"] = "merge"
-    return merged, changed
+    return merged, changed, overruled
 
 # ---------- git ----------
 def _git(*a, check=True):
@@ -208,7 +218,7 @@ def push(message=None):
         _git("fetch", "-q", "origin", branch)
         local = load(); remote = _remote_todo(branch)
         if remote is None: return "origin has no todo.json"
-        merged, changed = merge(local, remote)
+        merged, changed, overruled = merge(local, remote)
         if not changed: 
             _git("reset", "-q", "--hard", f"origin/{branch}")   # take origin's copy; nothing of ours is pending
             return "nothing to push"
@@ -222,7 +232,8 @@ def push(message=None):
         if dumps(written) != dumps(merged):
             _git("checkout", "-q", "--", "todo.json"); return "refused: todo.json on disk does not match what was written; reverted"
         _git("commit", "--only", "todo.json", "-q", "-m", message or f"docket: todo.json rev {merged['rev']}")
-        if _git("push", "-q", "origin", f"HEAD:{branch}", check=False).returncode == 0: return "pushed"
+        if _git("push", "-q", "origin", f"HEAD:{branch}", check=False).returncode == 0:
+            return "pushed" + (f" (origin's {', '.join(overruled)} kept over this machine's)" if overruled else "")
     return "push kept colliding; will retry on the next change"
 
 def main(a):
