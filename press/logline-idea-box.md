@@ -461,9 +461,9 @@ Two versions offered, plus two hybrids.
 
 > …When he stumbles upon his fallen opponent's burial ceremony and finds it held in the ancient faith of their shared ancestors, **he is faced with the spirits of his past** and must decide whether he will kill again.
 
-**B — his, the relative clause · 59 words**
+**B — his, the relative clause · 60 words**
 
-> …He stumbles upon his fallen opponent's burial ceremony and finds it held in the ancient faith of their shared ancestors, **who he must now face** to decide whether he will kill again.
+> …When he stumbles upon his fallen opponent's burial ceremony and finds it held in the ancient faith of their shared ancestors, **who he must now face** to decide whether he will kill again.
 
 **C — hybrid, the "When" beat kept without re-naming · 59 words**
 
@@ -477,8 +477,8 @@ Two versions offered, plus two hybrids.
 
 1. **It names them twice, and the second naming is weaker.** "The ancient faith of their **shared ancestors** … the **spirits of his past**." The reader already knows who they are; the repeat trades a specific noun for a vaguer one.
 2. **"His past" files them as history.** In Yoruba practice the ancestors are present, not past — that presence is why the scene works at all. It is the same distancing risk "ancient" carried, and this time without a factual defence.
-3. Six words longer than B for less.
+3. Five words longer than B for less.
 
 **B's mechanism, and why it wins:** "who" points straight back at *ancestors* with a single pronoun. No re-naming, no drift, and the ancestors remain the grammatical object of "face" — they are the ones he confronts.
 
-**Recommendation: D at 56, or B at 59 if his exact wording is preferred.** D takes his "When" opening (which gives the sentence a beat), drops "and finds it" to a participial "held in" (saves three words), and keeps "face them" pointing at the ancestors. Every word in D is his except the participle.
+**Recommendation: D at 56, or B at 60 if his exact wording is preferred.** D takes his "When" opening (which gives the sentence a beat), drops "and finds it" to a participial "held in" (saves three words), and keeps "face them" pointing at the ancestors. Every word in D is his except the participle.

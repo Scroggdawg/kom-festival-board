@@ -18,9 +18,9 @@ B's *"who he must now face"* points back at *ancestors* with one pronoun — no 
 
 ### Four versions logged (idea box Generation 18)
 
-A 65 · B 59 · C 59 (hybrid, keeps his "When" beat with "he must face them") · **D 56 (tightest)**.
+A 65 · B 60 · C 59 (hybrid, keeps his "When" beat with "he must face them") · **D 56 (tightest)**.
 
-**Recommendation: D**, or B if his exact wording is preferred. D takes his "When" opening, drops "and finds it" to the participial "held in" (saves three words), and keeps "face them" pointing at the ancestors. Every word is his except the participle.
+**Recommendation: D**, or B (60) if his exact wording is preferred. D takes his "When" opening, drops "and finds it" to the participial "held in" (saves three words), and keeps "face them" pointing at the ancestors. Every word is his except the participle.
 
 > In 1834 South Carolina, an enslaved man is forced to fight for spectacle. But with every victory, he must take the life of one of his own. When he stumbles upon his fallen opponent's burial ceremony, held in the ancient faith of their shared ancestors, he must face them to decide whether he will kill again.
 
