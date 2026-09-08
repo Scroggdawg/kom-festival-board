@@ -184,3 +184,26 @@ Rulings:
 | Cost | "the violence that has kept him alive costs him a little more of his humanity with every victory" | "every victory costs him the man he was meant to become" (*"not great"*) |
 | Ceremony | "held in the faith of their shared ancestors" | "his opponent's burial" vs "his fallen opponent's burial ceremony" |
 | Ending | "live as a killer / the killer, or stand up for the life that was taken from…" | **"him" vs "his people"** |
+
+## Generation 9 — Sep 7, night
+
+- **"With every victory, the violence that has kept him alive costs him a little more of his humanity."** — *"That's really good."* (His reordering: the recurrence lands before the cost is named.)
+- *"I agree that the conflict can't be internal. Nobody cares about an internal conflict."* — man-vs-himself dropped.
+- **"the life that was taken"** — *"I like it. It'll depend on the syntax, but I like it."* (Ambiguity kept: the life slavery took from him, and the life he just took.)
+- **"With every life he takes — his own — he slips deeper into the grasp of his oppressors."** *(new; names the oppressors as the beneficiaries of his skill)*
+- "With every victory, the violence that has kept him alive eats away at his humanity with every life he takes."
+- **"When he stumbles upon his opponent's burial ceremony, held in the faith of their shared ancestors, he is forced to reckon with…"** — *"Alright, I want that. I want to see that written down."*
+- OUT: "kills for the men who own him" — *"I don't like."*
+- On the trait slot: *"if it's something that people would want, then it's his power, his strength, his dominance, his skill to kill. What else could go in there?"* · *"the deadly skill"*
+- Noted from the corpus: **Black Book**, **Cell 211**, and Donnie Brasco's *"at the expense of"*.
+- On the research: *"I'm not writing it through a formula. I would actually just need to see examples. The percentage thing — come on."* → present examples, not statistics.
+
+### The line as it stands after this turn
+
+> In 1834 South Carolina, an enslaved prizefighter. With every victory, the violence that has kept him alive costs him a little more of his humanity. When he stumbles upon his opponent's burial ceremony, held in the faith of their shared ancestors, he is forced to reckon with the life that was taken.
+
+*(51 words with the opening as a fragment; 43 for the two sentences alone. Compare: Night Feeds' own logline is 43 words in three sentences.)*
+
+### Trait-slot options, most enviable first
+
+the speed of his hands · his strength · the ferocity that has kept him alive · the deadly skill that has kept him alive · the gift that has kept him alive · the violence that has kept him alive *(locked, least enviable)*
