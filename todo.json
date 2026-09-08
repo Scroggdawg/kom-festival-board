@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "rev": 52,
- "updated": "2026-09-08T14:00:37-07:00",
+ "rev": 54,
+ "updated": "2026-09-08T14:06:03-07:00",
  "updatedBy": "merge",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
@@ -171,7 +171,7 @@
    "items": [
     {
      "id": "D.2.1",
-     "title": "Send Jordan the current press/filmfreeway-page draft — logline, bio, statement and the scope of page changes; he approves the direction once",
+     "title": "Send Jordan press/filmfreeway-page-v6.md — bio, statement, the scope of page changes, and two logline versions for him and Luke to choose between; he approves the direction once",
      "owner": "Luke",
      "waitingOn": null,
      "due": "2026-09-15",
@@ -202,6 +202,12 @@
       },
       {
        "at": "2026-09-08T13:43:09-07:00",
+       "status": "not_started",
+       "by": "todo.py title",
+       "field": "title"
+      },
+      {
+       "at": "2026-09-08T14:06:01-07:00",
        "status": "not_started",
        "by": "todo.py title",
        "field": "title"
