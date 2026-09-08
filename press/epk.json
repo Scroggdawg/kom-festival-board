@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 2,
- "updated": "2026-09-08T14:08:05-07:00",
- "updatedBy": "festival lane via epk-intake",
+ "rev": 3,
+ "updated": "2026-09-08T14:58:47-07:00",
+ "updatedBy": "Luke via epk-intake",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -234,8 +234,14 @@
      "id": "p3-cast-principals",
      "n": "3.15",
      "label": "Cast, principals (character and actor)",
-     "value": "",
-     "history": []
+     "value": "Mace | Erik Orjiako\nThe Elder | Sandra McDaniels\nKenner, the plantation owner |",
+     "history": [
+      {
+       "at": "2026-09-08T14:58:47-07:00",
+       "by": "Luke, in chat",
+       "value": "Mace | Erik Orjiako\nThe Elder | Sandra McDaniels\nKenner, the plantation owner |"
+      }
+     ]
     },
     {
      "id": "p3-rights-holder",
