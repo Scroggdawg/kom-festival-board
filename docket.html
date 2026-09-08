@@ -13,7 +13,10 @@
 .ttl{font-size:20px;font-weight:500}.ttl small{display:block;font-size:12px;color:var(--mute);font-weight:400;margin-top:5px}
 .map{display:flex;flex-direction:column;gap:5px;align-items:flex-end}.mrow{display:flex;gap:3px;align-items:center}.mrow .k{width:6px;height:6px;border-radius:50%;margin-right:6px}
 .blk{width:12px;height:8px;border-radius:1.5px;border:1px solid var(--sc);background:transparent;transition:background .25s,border-color .25s}
-.blk.s1{background:var(--s1);border-color:var(--s1)}.blk.s2{background:var(--s2);border-color:var(--s2)}.blk.s3{background:var(--s3);border-color:var(--s3)}
+.blk.s1{border-color:var(--s1);background:linear-gradient(90deg,var(--s1) 0 50%,transparent 50% 100%)}
+.blk.s2{border-color:var(--s2);background:linear-gradient(135deg,transparent 0 38%,var(--s2) 38% 62%,transparent 62% 100%)}
+.blk.s3{background:var(--s3);border-color:var(--s3)}
+.mrow .ml{font-size:10px;color:var(--dim);min-width:50px;text-align:right;letter-spacing:.02em}
 .g{position:relative;border-bottom:1px solid var(--line)}
 .h{display:grid;grid-template-columns:18px 1fr auto 96px;gap:12px;align-items:center;min-height:52px;cursor:pointer;user-select:none}
 .h .ch{color:var(--dim);font-size:11px;transition:transform .15s}.g.open .h .ch{transform:rotate(90deg)}
@@ -119,7 +122,7 @@ function render(d){
   d.sections.forEach(function(s,gi){
     var col=colour(s.color);
     var blocks=s.items.map(function(it){var k=st.indexOf(it.status);return'<i class="blk'+(k>0?' s'+k:'')+'"></i>';}).join('');
-    map+='<div class="mrow" style="--sc:'+col+'"><i class="k" style="background:'+col+'"></i>'+blocks+'</div>';
+    map+='<div class="mrow" style="--sc:'+col+'"><span class="ml">'+esc(s.id)+'</span><i class="k" style="background:'+col+'"></i>'+blocks+'</div>';
     var c=s.items.filter(function(it){return it.status==='complete';}).length;done+=c;N+=s.items.length;
     var isOpen=open[s.id]===undefined?gi===0:open[s.id];
     groups+='<div class="g'+(isOpen?' open':'')+'" data-g="'+esc(s.id)+'" style="--sc:'+col+'"><div class="h"><span class="ch">▶</span><span class="nm">'+esc(s.name)+(s.timing?'<small>'+esc(s.timing)+'</small>':'')+'</span><div class="blocks">'+blocks+'</div><span class="ct">'+c+' / '+s.items.length+' complete</span></div><div class="items">'+

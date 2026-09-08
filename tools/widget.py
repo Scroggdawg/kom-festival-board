@@ -57,7 +57,11 @@ css = """<style>
 .dk *{box-sizing:border-box}.dk-top{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;padding-bottom:14px;border-bottom:1px solid var(--line)}
 .dk-ttl{font-size:20px;font-weight:500;color:#f3ecd8}.dk-ttl small{display:block;font-size:12px;color:var(--mute);font-weight:400;margin-top:5px}
 .dk-map{display:flex;flex-direction:column;gap:5px;align-items:flex-end}.dk-mrow{display:flex;gap:3px;align-items:center}.dk-mrow .k{width:6px;height:6px;border-radius:50%;margin-right:6px}
-.dk-blk{display:inline-block;width:12px;height:8px;border-radius:1.5px;border:1px solid var(--sc);background:transparent}.dk-blk.s1{background:var(--s1);border-color:var(--s1)}.dk-blk.s2{background:var(--s2);border-color:var(--s2)}.dk-blk.s3{background:var(--s3);border-color:var(--s3)}
+.dk-blk{display:inline-block;width:12px;height:8px;border-radius:1.5px;border:1px solid var(--sc);background:transparent}
+.dk-blk.s1{border-color:var(--s1);background:linear-gradient(90deg,var(--s1) 0 50%,transparent 50% 100%)}
+.dk-blk.s2{border-color:var(--s2);background:linear-gradient(135deg,transparent 0 38%,var(--s2) 38% 62%,transparent 62% 100%)}
+.dk-blk.s3{background:var(--s3);border-color:var(--s3)}
+.dk-mrow .ml{font-size:10px;color:var(--dim);min-width:50px;text-align:right;letter-spacing:.02em}
 .dk-g{border-bottom:1px solid var(--line)}.dk-h{display:grid;grid-template-columns:18px 1fr auto 96px;gap:12px;align-items:center;min-height:52px;cursor:pointer;user-select:none}
 .dk-h .ch{color:var(--dim);font-size:11px;transition:transform .15s}.dk-g.open .dk-h .ch{transform:rotate(90deg)}
 .dk-h .nm{font-size:16px;font-weight:500;color:var(--sc)}.dk-h .nm small{font-size:11px;color:var(--mute);font-weight:400;margin-left:8px}
@@ -91,7 +95,7 @@ if nx or pk_n:
     right = f'<span class="k">Waiting on</span>{e(" · ".join(pk_list))}' if pk_n else ""
     strip = f'<div class="dk-nx"><div>{left}</div><div>{right}</div></div>'
 out.append(f'<div class="dk-top"><div class="dk-ttl">{e(d["title"])}<small>{done} of {N} complete{soon_html}</small></div><div class="dk-map">' +
-    ''.join(f'<div class="dk-mrow" style="--sc:{s["color"]}"><i class="k" style="background:{s["color"]}"></i>{blocks(s)}</div>' for s in d["sections"]) + '</div></div>')
+    ''.join(f'<div class="dk-mrow" style="--sc:{s["color"]}"><span class="ml">{e(s["id"])}</span><i class="k" style="background:{s["color"]}"></i>{blocks(s)}</div>' for s in d["sections"]) + '</div></div>')
 out.append(strip)
 for gi, s in enumerate(d["sections"]):
     c = sum(it["status"] == "complete" for it in s["items"])
