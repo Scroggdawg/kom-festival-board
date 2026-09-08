@@ -1,8 +1,8 @@
 {
  "schema": 2,
- "rev": 0,
- "updated": "2026-09-08T13:09:02-07:00",
- "updatedBy": "migration from rev 2",
+ "rev": 1,
+ "updated": "2026-09-08T13:37:26-07:00",
+ "updatedBy": "festival lane via epk-intake",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -56,8 +56,14 @@
      "id": "p2-logline",
      "n": "2.1",
      "label": "Logline",
-     "value": "",
-     "history": []
+     "value": "In 1834 South Carolina, an enslaved man is forced to fight for spectacle. But with every victory, he must take the life of one of his own. He stumbles upon the burial ceremony of his fallen opponent, and finds it being held in the ancient Faith of their shared ancestors, who he must now face to decide whether he will kill again.",
+     "history": [
+      {
+       "at": "2026-09-08T13:37:26-07:00",
+       "by": "festival lane — Luke locked it Sep 8",
+       "value": "In 1834 South Carolina, an enslaved man is forced to fight for spectacle. But with every victory, he must take the life of one of his own. He stumbles upon the burial ceremony of his fallen opponent, and finds it being held in the ancient Faith of their shared ancestors, who he must now face to decide whether he will kill again."
+      }
+     ]
     },
     {
      "id": "p2-synopsis",
