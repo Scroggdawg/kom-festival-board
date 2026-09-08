@@ -98,7 +98,8 @@ def main(argv):
                 (errs if strict else warns).append(f"{fid}: close date with no source URL")
             if not TIER.search((f.get("feesText") or "") + " " + (f.get("why") or "")):
                 (errs if strict else warns).append(f"{fid}: close date with no tier or category named")
-            if re.search(r"\b(final|late|extended)\b", f.get("feesText") or "", re.I):
+            if (f.get("provenance") != "official"
+                    and re.search(r"\b(final|late|extended)\b", f.get("feesText") or "", re.I)):
                 warns.append(f"{fid}: feesText names a later tier but the record is unverified — "
                              f"close {f.get('close')} may be a fee tier, as SBIFF's was")
 
