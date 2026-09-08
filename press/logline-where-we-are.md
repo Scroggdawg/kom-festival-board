@@ -1,6 +1,6 @@
 # Killer of Men logline — where we are
 
-*Sep 7, 2026. The single working document. Three branches, then fragments and other ideas. Everything in quotation marks is Luke's, listed one per line as he said it; assemblies are marked. Word target: **under 45.** Year: **1834.** The fights are in a barn; "pit" is acceptable. The Mandingo myth is in play.*
+*Sep 7, 2026, evening. The single working document. Opening locked: **In 1834 South Carolina, an enslaved prizefighter**. Three branches, then fragments and other ideas. Everything in quotation marks is Luke's, listed one per line as he said it; assemblies are marked. Word target: **under 45.** Year: **1834.** The fights are in a barn; "pit" is acceptable. The Mandingo myth is in play.*
 
 ---
 
@@ -15,6 +15,55 @@
 | In the cabin, the elder tells him the man he would have been in the motherland: **"You would have been a god."** | Luke, Sep 7 |
 | His prayer: **"Ogun, do not reject me… protect me in this life."** Ogun is the Yoruba orisha of iron, the forge and war — the warrior's god | Luke, Sep 7 |
 | He kills an opponent, then stumbles upon the burial | The page |
+
+---
+
+---
+
+## Latest — Sep 7, evening. Everything Luke said this turn
+
+**Locked**
+
+- The opening: **"In 1834 South Carolina, an enslaved prizefighter"**
+- "held in the faith of their shared ancestors" — *good*
+- The cost clause, his: **"But the violence that has kept him alive costs him a little more of his humanity with every victory."**
+- Keep branches A, B and C.
+
+**The ending idea**
+
+- "Live as a killer or die as a man" — *"a little too cheesy, but it's the idea."*
+
+**Out**
+
+- No ships. Not "had the ships never come," not ships at all.
+- No "the god he would have been." No god anything.
+- "eating him alive" — out
+- "the part of himself that could still mourn" — out
+- "hollowing him out" — out
+- "the thing they paid to see" — out
+
+**Where that leaves the assemblies**
+
+Branch B, his cost clause in, under 45:
+
+> In 1834 South Carolina, an enslaved prizefighter must win or die, and the violence that keeps him alive costs him a little more of his humanity with every victory. Then he stumbles upon his fallen opponent's burial, held in the faith of their shared ancestors. *(40)*
+
+Branch B, full, his phrasing throughout (over target — the ending is the place to cut):
+
+> In 1834 South Carolina, an enslaved prizefighter must win or die for the entertainment of others. But the violence that has kept him alive costs him a little more of his humanity with every victory. When he stumbles upon his fallen opponent's burial, held in the faith of their shared ancestors, he must decide whether to go on living as a killer, or die as a man. *(63)*
+
+Branch C, the killer-or-man idea as the decision:
+
+> In 1834 South Carolina, an enslaved prizefighter must kill to survive. But when he stumbles upon the dead man's burial, held in their shared faith, the spirits of his ancestors confront him, and he must decide whether to live as a killer or die as a man. *(46)*
+
+**"Live as a killer or die as a man" — the idea, less cheesy** *(Claude's; the cheese is in the symmetry, so most of these break it)*
+
+- …and must decide which of them leaves the barn alive: the killer, or the man.
+- …and must choose between the killer who keeps him alive and the man who would have to die for it.
+- …and learns that the killer can live, or the man can, but not both.
+- …and must choose: the killer the barn has made of him, or the man the barn will kill.
+- …and must decide whether to go on surviving as a killer, or to be a man and pay for it.
+- …and must decide which of the two men in him walks out of the barn.
 
 ---
 
@@ -60,9 +109,7 @@ Luke's versions, in order:
 
 > In 1834 South Carolina, an enslaved prizefighter must win or die for the entertainment of others. But the same brutality that has kept him alive is taking the rest of him. When he encounters his fallen opponent's burial, held in the faith of their shared ancestors, he is forced to reckon with the man he has become. *(52 — over target; the cost clause and the ending are the two places to cut and the two places still to decide)*
 
-**Branch B with the "each time he wins" engine** (assembled, Luke's phrases + the film's line):
-
-> In 1834 South Carolina, an enslaved prizefighter must win or die for sport, and every win costs him a little more of the man he might have been. Then he stumbles upon the dead man's burial and is shown the god he would have been. *(44)*
+**Branch B with the "each time he wins" engine** — superseded by Luke's own cost clause; see *Latest* above.
 
 ---
 
@@ -80,9 +127,7 @@ Luke's versions, in order:
 
 > In 1834 South Carolina, an enslaved prizefighter must kill to survive. But when he stumbles upon the dead man's burial, held in their shared faith, he is confronted by the spirits of his ancestors and must decide whether the fighter or the man walks out of the barn. *(46)*
 
-**Branch C with the film's own line** (assembled; the strongest candidate on the table):
-
-> In 1834 South Carolina, an enslaved prizefighter must kill to survive. But when he stumbles upon the dead man's burial, held in their shared faith, the spirits of his ancestors show him the man he would have been, had the ships never come. *(42)*
+**Branch C with the ships line** — ruled out (no ships, no god). The killer-or-man version is in *Latest* above.
 
 ---
 
@@ -114,10 +159,6 @@ Better than "strip him of his humanity":
 - …is taking the rest of him
 - …is burying the man he might have been *(the burial is already in the sentence)*
 - …is killing the man inside the fighter
-- …is turning him into the thing they paid to see *(the myth, made personal)*
-- …is hollowing him out
-- …has been eating him alive
-- …has cost him the part of himself that could still mourn
 - …at a price greater than death *(his; cheesy, liked)*
 
 "Costs him a little more of himself each time he wins," expanded:
@@ -136,15 +177,9 @@ Better than "strip him of his humanity":
 
 ### Endings
 
-From the film's own lines — the unworn, inspiring ones:
+From the film's own lines — ruled out Sep 7 evening (no ships, no god). Kept in the idea box only.
 
-- …show him the man he would have been, had the ships never come.
-- …and is shown the god he would have been.
-- …and learns that across the ocean, he would have been a god.
-- …and meets the man he would have been in the motherland.
-- …and the god of iron he prays to before every fight answers in a voice he does not expect. *(Ogun; long)*
 - …and must decide whether the fighter or the man walks out of the barn. *(the "two men" made specific)*
-- …and must choose between the fighter who keeps him alive and the god he would have been.
 
 Earlier candidates, his verdicts: "forced to reckon with the man he has become" — okay · "the rites are for him too" — interesting, not A+ · "hears his own name among the mourned" · "the ancestors he has never met come looking for him" · "begins to remember who he was before the first fight" · "reckon with what the fighting has made of him" — liked.
 

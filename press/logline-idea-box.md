@@ -146,3 +146,13 @@ Rulings:
 - "In 1830 South Carolina, an enslaved prizefighter is thrust into a world where he must kill to survive. But when he stumbles upon the dead man's burial ceremony, held in their shared faith, he is confronted by the spirits of his ancestors, and must decide whether he will continue to participate in the violence that has kept him alive."
 - "An enslaved prizefighter is forced into a world where he must kill for sport."
 - *"Give me the list of where we're at. Two to three branches, and then a handful of fragments and other ideas."* → `press/logline-where-we-are.md`
+
+## Generation 6 — Sep 7, evening
+
+- No ships. No "the god he would have been." No god anything.
+- "Live as a killer or die as a man" — *"a little too cheesy, but it's the idea."*
+- "Held in the faith of their shared ancestors" — *good.*
+- **"But the violence that has kept him alive costs him a little more of his humanity with every victory."**
+- Out: "eating him alive", "the part of himself that could still mourn", "hollowing him out", "the thing they paid to see".
+- **Opening locked: "In 1834 South Carolina, an enslaved prizefighter".**
+- Keep branches A, B, C.
