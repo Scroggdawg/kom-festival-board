@@ -1,5 +1,7 @@
 # Killer of Men — EPK, all the pieces
 
+*The live list is `press/epk.json`, rendered at [epk.html](https://scroggdawg.github.io/kom-festival-board/epk.html) and in `press/EPK-breakdown.pdf`. Both carry the permanent numbers (1.1 … A.6); this sheet predates them and describes 47 fields where there are now 49.*
+
 *One sheet. 11 pages. ● have it · ○ you can get it · ⌀ waiting on someone*
 
 | | Page | Piece | Who |

@@ -1,5 +1,7 @@
 # EPK inventory — every piece, and who holds it
 
+*The live list is `press/epk.json`, rendered at [epk.html](https://scroggdawg.github.io/kom-festival-board/epk.html). This analysis predates the permanent numbering and describes 47 fields where there are now 49.*
+
 *Sep 8, 2026. Built from the Docket's `epk` and `profile` lanes against the 11-page structure in `press/epk-spec.md`. Status is honest: **HAVE** means the text or file exists in this repo today.*
 
 ## The headline
