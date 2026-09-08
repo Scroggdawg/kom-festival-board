@@ -8,6 +8,20 @@ This makes the read-back mandatory instead of lucky.
   validate-data.py              structural checks; exit 1 on any error
   validate-data.py --provenance also report deadline provenance (advisory)
   validate-data.py --strict     make provenance an error, not a warning
+  validate-data.py --write-flags recompute and write the derived closeUnverifiedTier flag
+
+The flag exists because the campaign dashboard (index.html, another lane's surface)
+wanted the suspect count on the front page. Re-implementing the rule there would
+give two implementations of one rule, which drift -- we paid for that once already
+with `source` and `sourceUrl` holding the same fact and two validators disagreeing
+about which was authoritative. So the rule lives HERE, once, and its result is
+written into the data for anyone to read.
+
+Derived data rots silently -- an embedded snapshot in board.html did exactly that
+this week. So a plain run RECOMPUTES every flag and errors if a stored one
+disagrees. The flag cannot go stale without the gate saying so. Editing feesText
+or provenance from the board's browser publish will make it stale; the next
+validator run catches it, and --write-flags fixes it.
 
 Structural checks (always errors):
   schema is 2 · rev and updated present · ids unique and non-empty
@@ -59,9 +73,22 @@ def d(s):
     try: return datetime.date.fromisoformat(s)
     except Exception: return None
 
+FLAG = "closeUnverifiedTier"
+
+def suspect(f):
+    """True when an unverified target's own feesText names a later tier, so its
+    close may be a fee tier rather than the final door -- as SBIFF's was."""
+    return bool(
+        f.get("disposition") == "target"
+        and f.get("close")
+        and f.get("provenance") != "official"
+        and re.search(r"\b(final|late|extended)\b", f.get("feesText") or "", re.I)
+    )
+
 def main(argv):
     prov = "--provenance" in argv or "--strict" in argv
     strict = "--strict" in argv
+    write_flags = "--write-flags" in argv
     data = json.load(open(PATH, encoding="utf-8"))
     errs, warns = [], []
 
@@ -98,8 +125,7 @@ def main(argv):
                 (errs if strict else warns).append(f"{fid}: close date with no source URL")
             if not TIER.search((f.get("feesText") or "") + " " + (f.get("why") or "")):
                 (errs if strict else warns).append(f"{fid}: close date with no tier or category named")
-            if (f.get("provenance") != "official"
-                    and re.search(r"\b(final|late|extended)\b", f.get("feesText") or "", re.I)):
+            if suspect(f):
                 warns.append(f"{fid}: feesText names a later tier but the record is unverified — "
                              f"close {f.get('close')} may be a fee tier, as SBIFF's was")
 
@@ -109,6 +135,24 @@ def main(argv):
         pids.add(p.get("id"))
         if p.get("state") not in PREMIERE_STATES:
             errs.append(f"premiere {p.get('id')}: bad state {p.get('state')!r}")
+
+    # derived flag: recompute always, write only on request, error on disagreement
+    stale, flagged = [], 0
+    for f in data.get("festivals", []):
+        want, have = suspect(f), bool(f.get(FLAG))
+        if want: flagged += 1
+        if want != have:
+            if write_flags:
+                if want: f[FLAG] = True
+                else: f.pop(FLAG, None)
+            else:
+                stale.append(f"{f.get('id')}: stored {FLAG}={have} but computed {want} — "
+                             f"run --write-flags")
+    if write_flags and not errs:
+        json.dump(data, open(PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        open(PATH, "a", encoding="utf-8").write("\n")
+        print(f"  wrote {FLAG} — {flagged} record(s) flagged")
+    errs.extend(stale)
 
     n = len(data.get("festivals", []))
     tgt = sum(1 for f in data["festivals"] if f.get("disposition") == "target")

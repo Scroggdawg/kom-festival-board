@@ -110,7 +110,8 @@
    "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "paff-2027",
@@ -162,7 +163,8 @@
    "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "atlanta-ff-51st",
@@ -188,7 +190,8 @@
    "lastChecked": "2026-08-25",
    "events": [],
    "notes": [],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "flickerfest-36th",
@@ -214,7 +217,8 @@
    "lastChecked": "2026-09-08",
    "events": [],
    "notes": [],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "sxsw-2027",
@@ -240,7 +244,8 @@
    "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "carthage-jcc-37th",
@@ -386,7 +391,8 @@
      "text": "Verification ATTEMPTED Sep 8, 2026 and FAILED — provenance deliberately NOT set. Aspen Film’s own site publishes no deadlines or fee tiers: aspenfilm.org/our-festivals/shortsfest/ and /submit-your-film/ both defer entirely to FilmFreeway, and filmfreeway.com/AspenShortsfest returns 403 to automated fetch. So Sep 25 CANNOT be confirmed as the closing date from any first-party source. The record’s own feesText (“$80 by Sep 25 · $95 final”) implies a LATER final tier exists, which would make Sep 25 a price step rather than a door — the same shape as the SBIFF and Short Shorts errors. TO RESOLVE: a human with a FilmFreeway account must open the listing and read the Deadlines & Fees table, naming the tier beside each date. Festival dates Apr 6–10 2027 (from aspenfilm.org, which is first-party for dates but not for deadlines)."
     }
    ],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "cleveland-ciff51",
@@ -412,7 +418,8 @@
    "lastChecked": "2026-08-25",
    "events": [],
    "notes": [],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "florida-ff-36th",
@@ -437,7 +444,8 @@
    "source": "https://filmfreeway.com/FloridaFilmFestival",
    "lastChecked": "2026-08-25",
    "events": [],
-   "notes": []
+   "notes": [],
+   "closeUnverifiedTier": true
   },
   {
    "id": "college-television-awards-46th",
@@ -539,7 +547,8 @@
    "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "berlinale-shorts-77th",
@@ -640,7 +649,8 @@
    "lastChecked": "2026-08-25",
    "events": [],
    "notes": [],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "vienna-shorts-2027",
@@ -819,7 +829,8 @@
    "source": "https://filmfreeway.com/HeartlandFilmIndyShorts",
    "lastChecked": "2026-08-25",
    "events": [],
-   "notes": []
+   "notes": [],
+   "closeUnverifiedTier": true
   },
   {
    "id": "blackstar-2027",
@@ -1277,7 +1288,8 @@
    "lastChecked": "2026-08-25",
    "events": [],
    "notes": [],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "s16-2027",
@@ -1815,7 +1827,8 @@
    "links": {
     "site": "https://raindance.org/festival/submit/films/",
     "filmfreeway": "https://filmfreeway.com/Raindance"
-   }
+   },
+   "closeUnverifiedTier": true
   },
   {
    "id": "uppsala-short-film-festival",
@@ -2604,7 +2617,8 @@
    "lastChecked": "2026-09-03",
    "events": [],
    "notes": [],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "mspiff-45th",
@@ -3387,7 +3401,8 @@
      "text": "close changed 2026-09-30 -> 2027-01-15. The record contradicted itself: its own feesText reads “early tier to Sep 30 · regular Nov 30 · final Jan 15, 2027”, so Sep 30 was the EARLY tier sitting in a field the board defines as the final door. This is the third correction to this one record in a week: “Sep 9” was the Short Drama Pitch Competition deadline, not the film’s; the fix moved it to Sep 30, which was merely a different wrong tier. WARRANT: this change is derived from the record’s own feesText, NOT from a first-party check of the festival’s page — provenance stays unset. Someone should still read shortshorts.org’s own submission page and confirm the ladder."
     }
    ],
-   "joanPick": true
+   "joanPick": true,
+   "closeUnverifiedTier": true
   },
   {
    "id": "isc-osaka-2027",
