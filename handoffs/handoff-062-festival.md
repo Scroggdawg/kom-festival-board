@@ -9,6 +9,12 @@
 1. **Redundant** — "ancestors" already carries the age; the phrase pays twice for one idea.
 2. **Wrong register, and it costs something here.** In 1834 that faith was not ancient to them: it was current, their mothers' faith, carried in living memory with people still being landed. "Ancient" files it as archaeology, and it is the vocabulary colonial writing used for African religion (*ancient rites, ancestral mysteries*) — it distances the thing the film argues is alive and present in that clearing. Offered instead if intensification is wanted: *the old faith* · *the faith the crossing did not kill* · *the faith their mothers carried*.
 
+### Correction, same turn — Luke pushed back on "ancient" and was right
+
+He asked how old the faith actually was. **Yoruba tradition is at minimum a thousand years old by 1834** (Ile-Ifẹ̀ settled from ~500 BCE, classical city ~1000–1400 CE, orisha/Ifá formation in the first millennium CE) — against a United States that was fifty-eight. "Ancient" is defensible on the facts. The redundancy argument was also weak: "ancestors" says *whose*, not *how old*. **The objection was overstated and a taste call was dressed up as an ethics one.**
+
+What survives is small and aesthetic: "ancient faith" is a worn collocation. His real complaint — that the phrase lacks weight — is correct, and nine alternatives were offered. **Recommendation: name it Yoruba** — a proper noun outweighs an adjective, and no logline in the 119-entry corpus contained the word, so it is the single most differentiating term available. If more mass is wanted, *"a faith older than the country that owns him"* argues the age instead of asserting it, and is arithmetically true.
+
 ### Flagged: "decide how his life will end"
 
 A bigger claim than "which path he will take" — it implies he may choose to die. Stronger if the film supports it, a promise the film must keep if not. Jordan's call.
