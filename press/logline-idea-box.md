@@ -366,3 +366,29 @@ A bigger claim than "which path he will take" — it implies he may choose to di
 **Recommendation: 5 or 9.** **5** (*"who he finds waiting for an answer"*) is the shortest strong option and moves the pressure onto them — they are already there, already expecting something. **9** (*"before he is called to fight again"*) is the only ending that says the fighting has not stopped, which is the fact that makes the decision urgent rather than reflective.
 
 If the darkness of his own #1 is what he wants, **7** delivers it without promising a death the film may not contain.
+
+### Correction, same evening — Luke pushed back on "ancient" and was right
+
+His challenge: *"Just because it was current doesn't mean it wasn't very old. How old was this faith? Old enough to say its origins are ancient?"*
+
+**The facts.** Ile-Ifẹ̀, the Yoruba spiritual centre, shows urban settlement from roughly 500 BCE, with the classical city flourishing about 1000–1400 CE. Scholars generally place the formation of the orisha system and Ifá divination in the first millennium CE, roots plausibly older; oral tradition claims far more. By 1834 that is a recognisable tradition of **at least a thousand years** — and the United States was fifty-eight.
+
+**So "ancient" is defensible and the earlier objection was overstated.** The redundancy argument was also weak: "ancestors" says *whose*, not *how old*. Current and ancient are not opposites — nobody thinks calling Christianity's origins ancient denies that it is practised on Sunday.
+
+What survives is a much smaller, purely aesthetic point: **"ancient faith" is a worn collocation** that can read as adventure-story colour rather than weight. Taste, not ethics, and it was previously dressed up as more than that.
+
+**His underlying complaint is the real one: "faith of their shared ancestors" does not carry enough weight.** Options that add mass:
+
+| Option | Words | Note |
+|---|---|---|
+| the **ancient** faith of their shared ancestors | 59 | His. Defensible |
+| the **Yoruba** faith of their shared ancestors | 59 | **A proper noun outweighs an adjective.** No logline in the 119-entry corpus contained the word Yoruba — it is the single most differentiating word available |
+| a faith **older than the country that owns him** | 61 | Makes the argument instead of asserting it. True: ~1,000+ years against 58 |
+| the Yoruba faith their ancestors **carried across the water** | 61 | Name plus journey |
+| a faith **a thousand years older than the men who own him** | 64 | The age as a stated fact |
+| the **old** faith of their shared ancestors | 59 | Plainer, avoids the collocation |
+| the faith **the crossing did not kill** | 59 | Survival rather than age |
+| the one faith on that land **his owners have no claim on** | 64 | Jurisdiction — the strongest idea from the earlier deep pass |
+| the Yoruba rites their ancestors **kept for a thousand years** | 62 | Name and duration together |
+
+**Recommendation: name it Yoruba.** It is heavier than "ancient" because it is specific rather than atmospheric, it is the one word that tells a programmer they have not seen this film, and it costs nothing. If more mass is still wanted, *"a faith older than the country that owns him"* makes the case rather than claiming it — and it is arithmetically true.
