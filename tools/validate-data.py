@@ -14,6 +14,18 @@ Structural checks (always errors):
   disposition in target|bench|out · dates are ISO yyyy-mm-dd and parse
   close is not before open · premiere ledger ids unique, states valid
   events reference known types · no festival is missing a name
+  close is not earlier than a dated tier the record's own feesText names
+
+The last one was added Sep 8, 2026, after the same error appeared three times in
+one day: Short Shorts "Sep 9" was a pitch-competition deadline, then Sep 30 (its
+early tier) while its own feesText said the final was Jan 15 2027; and SBIFF's
+close held Sep 18, the regular fee tier, while the final was Dec 2. `close` means
+the FINAL door -- board.html says so in its own words: "Sorted by final deadline:
+read top to bottom as the order the doors close." A tier date in that field makes
+every consumer downstream call a price step a deadline.
+
+The rule, narrowed each time it failed: a date is not a deadline until something
+names its tier -- and a verification that lives only in prose is not one.
 
 Provenance checks (advisory unless --strict), the rule learned the hard way:
   a close date is only trustworthy with the festival's own page behind it
@@ -27,6 +39,20 @@ DISPOSITIONS = {"target", "bench", "out"}
 EVENT_TYPES = {"submitted", "withdrawn", "selected", "not_selected", "screened", "nominated", "won"}
 PREMIERE_STATES = {"available", "reserved", "spent"}
 TIER = re.compile(r"early|earlybird|early bird|regular|late|final|official|extended|deadline|tier|rolling", re.I)
+LATER_TIER = re.compile(r"\b([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2}),?\s*(\d{4})\b")
+MONTHS = {m: i + 1 for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"])}
+
+def dated_tiers(text):
+    """Explicitly-dated tiers named in free text. Year must be written out --
+    an inferred year would guess, and guessing is the bug this catches."""
+    out = []
+    for m in LATER_TIER.finditer(text or ""):
+        mo = MONTHS.get(m.group(1).lower())
+        if not mo: continue
+        try: out.append((datetime.date(int(m.group(3)), mo, int(m.group(2))), m.group(0)))
+        except ValueError: pass
+    return out
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 def d(s):
@@ -62,11 +88,19 @@ def main(argv):
         for e in f.get("events") or []:
             if e.get("type") not in EVENT_TYPES:
                 errs.append(f"{fid}: unknown event type {e.get('type')!r}")
+        if c:
+            for dt, txt in dated_tiers(f.get("feesText")):
+                if dt > c:
+                    errs.append(f"{fid}: close {c} is EARLIER than a tier its own feesText dates "
+                                f"({txt!r}) — close must be the final door, not a fee tier")
         if prov and f.get("disposition") == "target" and f.get("close"):
             if not f.get("source"):
                 (errs if strict else warns).append(f"{fid}: close date with no source URL")
             if not TIER.search((f.get("feesText") or "") + " " + (f.get("why") or "")):
                 (errs if strict else warns).append(f"{fid}: close date with no tier or category named")
+            if re.search(r"\b(final|late|extended)\b", f.get("feesText") or "", re.I):
+                warns.append(f"{fid}: feesText names a later tier but the record is unverified — "
+                             f"close {f.get('close')} may be a fee tier, as SBIFF's was")
 
     pids = set()
     for p in data.get("premieres", []):

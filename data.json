@@ -276,7 +276,7 @@
    "disposition": "target",
    "edition": "Feb 3–13, 2027",
    "open": "2026-07-01",
-   "close": "2026-09-18",
+   "close": "2026-12-02",
    "estimated": false,
    "feesText": "$50 earlybird Aug 7 (passed) · $60 REGULAR Sep 18 · $70 late Oct 30 · $80 FINAL Dec 2",
    "tiers": [],
@@ -295,6 +295,11 @@
      "nid": "b18f5005-013b-45b8-aa2c-621342caf864",
      "date": "2026-09-08",
      "text": "Verified Sep 8, 2026 against SBIFF’s own submit-a-film page. IMPORTANT CORRECTION: Sep 18 is the REGULAR fee tier ($60), NOT a closing deadline. The tiers are earlybird Aug 7 $50 (passed), regular Sep 18 $60, late Oct 30 $70, FINAL Dec 2 $80. Missing Sep 18 costs $10 and loses nothing. This board and its handoffs called Sep 18 a “live door” repeatedly on Sep 8; that was the same tier-vs-deadline error as Short Shorts Sep 9, repeated after the rule against it was adopted. 2027 edition, festival Feb 3–13 2027, notification Jan 8 2027. The page states no premiere requirement and no student rule."
+    },
+    {
+     "nid": "c767ce9d-b79e-4c14-b40a-e2cb5a15d692",
+     "date": "2026-09-08",
+     "text": "close changed 2026-09-18 -> 2026-12-02. The board’s own section note defines the field: “Each bar runs from the day submissions open to the FINAL deadline… Sorted by final deadline: read top to bottom as the order the doors close.” Sep 18 is the regular fee tier, so it never belonged in this field. Setting provenance:official on a record whose close held a tier date is what would have made the campaign dashboard call a $10 price step the “next deadline” on Sep 16. The tier ladder lives in feesText, where the money question belongs."
     }
    ],
    "joanPick": true,
@@ -3361,7 +3366,7 @@
    "disposition": "target",
    "edition": "May 31–Jun 9, 2027",
    "open": "2026-08-01",
-   "close": "2026-09-30",
+   "close": "2027-01-15",
    "estimated": false,
    "feesText": "early tier to Sep 30 · regular Nov 30 · final Jan 15, 2027",
    "tiers": [],
@@ -3375,7 +3380,13 @@
    "source": "",
    "lastChecked": "2026-09-08",
    "events": [],
-   "notes": [],
+   "notes": [
+    {
+     "nid": "d2deaecd-31ff-44eb-b4c6-de5349a939c5",
+     "date": "2026-09-08",
+     "text": "close changed 2026-09-30 -> 2027-01-15. The record contradicted itself: its own feesText reads “early tier to Sep 30 · regular Nov 30 · final Jan 15, 2027”, so Sep 30 was the EARLY tier sitting in a field the board defines as the final door. This is the third correction to this one record in a week: “Sep 9” was the Short Drama Pitch Competition deadline, not the film’s; the fix moved it to Sep 30, which was merely a different wrong tier. WARRANT: this change is derived from the record’s own feesText, NOT from a first-party check of the festival’s page — provenance stays unset. Someone should still read shortshorts.org’s own submission page and confirm the ladder."
+    }
+   ],
    "joanPick": true
   },
   {
