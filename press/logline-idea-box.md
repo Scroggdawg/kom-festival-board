@@ -450,3 +450,35 @@ What survives is a much smaller, purely aesthetic point: **"ancient faith" is a 
 - ***"and answer to"*** at 55 is the shortest and trusts the reader completely. Its risk is that it is nearly a shrug.
 
 **Recommendation: *"whether he fights again"* or *"before he is made to fight again."*** Both keep his structure, both are concrete, and both let the ancestors matter *to a decision the film can actually show*. His own line stays the pick if Jordan confirms the ending contains that choice.
+
+## Generation 18 — Sep 8. "Whether he will kill again"
+
+**The decision is settled: "whether he will kill again."** Concrete, showable in thirteen minutes, and it promises no death the film may not contain. Best decision-ending written in eighteen generations.
+
+Two versions offered, plus two hybrids.
+
+**A — his, "spirits of his past" · 65 words**
+
+> …When he stumbles upon his fallen opponent's burial ceremony and finds it held in the ancient faith of their shared ancestors, **he is faced with the spirits of his past** and must decide whether he will kill again.
+
+**B — his, the relative clause · 59 words**
+
+> …He stumbles upon his fallen opponent's burial ceremony and finds it held in the ancient faith of their shared ancestors, **who he must now face** to decide whether he will kill again.
+
+**C — hybrid, the "When" beat kept without re-naming · 59 words**
+
+> …When he stumbles upon his fallen opponent's burial ceremony and finds it held in the ancient faith of their shared ancestors, **he must face them** and decide whether he will kill again.
+
+**D — hybrid, tightest · 56 words**
+
+> In 1834 South Carolina, an enslaved man is forced to fight for spectacle. But with every victory, he must take the life of one of his own. When he stumbles upon his fallen opponent's burial ceremony, held in the ancient faith of their shared ancestors, **he must face them to decide whether he will kill again**.
+
+### The case against A
+
+1. **It names them twice, and the second naming is weaker.** "The ancient faith of their **shared ancestors** … the **spirits of his past**." The reader already knows who they are; the repeat trades a specific noun for a vaguer one.
+2. **"His past" files them as history.** In Yoruba practice the ancestors are present, not past — that presence is why the scene works at all. It is the same distancing risk "ancient" carried, and this time without a factual defence.
+3. Six words longer than B for less.
+
+**B's mechanism, and why it wins:** "who" points straight back at *ancestors* with a single pronoun. No re-naming, no drift, and the ancestors remain the grammatical object of "face" — they are the ones he confronts.
+
+**Recommendation: D at 56, or B at 59 if his exact wording is preferred.** D takes his "When" opening (which gives the sentence a beat), drops "and finds it" to a participial "held in" (saves three words), and keeps "face them" pointing at the ancestors. Every word in D is his except the participle.
