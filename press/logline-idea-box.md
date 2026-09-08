@@ -541,3 +541,43 @@ The four edits, in order:
 Keeps every gain, restores "with," restores "to decide":
 
 > In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle. But with every victory, he must take the life of one of his own. Stumbling upon the burial rites of the man he just killed, he finds the ceremony being held in the ancient Faith of their shared ancestors, who he must now face to decide whether he will kill again.
+
+## Generation 21 — Sep 8. Seven changes; two of them were notes taken
+
+**71 words, 377 characters.** (Gen 19 was 62/330, Gen 20 was 66/346.)
+
+> In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means taking the life of one of his own. When he stumbles upon the burial rites of the opponent he just killed, he finds the ceremony being held in the ancient faith of their shared ancestors, who he must now face to decide whether or not he will kill again.
+
+| | Gen 20 | Gen 21 | Note |
+|---|---|---|---|
+| 1 | "for spectacle." | "for spectacle, **and survival**." | New. The only added idea. |
+| 2 | "But every victory, he must take" | "But every victory **means taking**" | Fixes the broken grammar — he rebuilt rather than restoring *with* |
+| 3 | "**Stumbling** upon" | "**When he stumbles** upon" | The active verb is back |
+| 4 | "the **man** he just killed" | "the **opponent** he just killed" | |
+| 5 | "ancient **Faith**" | "ancient **faith**" | Capital-F flag answered |
+| 6 | "face **and** decide" | "face **to** decide" | Note taken |
+| 7 | "whether he will kill again" | "whether **or not** he will kill again" | |
+
+### "and survival" — the real addition
+
+It supplies the motive sentence 2 needs. Without it, "forced to fight for spectacle" makes him purely an object: he is entertainment, and the only reason he keeps going is that he is made to. "And survival" gives him a stake of his own — he wins because losing kills him — which is what makes "he must take the life of one of his own" a trap rather than just an atrocity. He complies because the alternative is dying.
+
+The cost is that pure objectification is the more damning image, and survival softens it by making him a man with a reason. That is a real trade and it is his to make. On balance the motive is worth more than the purity, because sentence 2 needs it.
+
+The comma in "spectacle, and survival" is doing emphasis work — a deliberate beat before the second word. It is not standard punctuation and it will read to some as a dictation artifact. Without it the line is smoother and flatter.
+
+### "whether or not" — cut it
+
+"Whether" already contains "or not." The phrase is legitimate only when it means *regardless of whether*, which is not the meaning here — here it is the choice itself. Two words for nothing, in the position where the line has to land hardest. "…whether he will kill again" ends on two stresses, KILL a-GAIN. "…whether **or not** he will kill again" drops two unstressed syllables into the run-up and softens the landing. **69 words without it.**
+
+### "opponent" vs "man" — close, and Gen 20 was better
+
+"The man he just killed" is the more brutal phrase, and it pays off sentence 2: *one of his own* is a man, the same kind of man as the "enslaved man" in sentence 1. That repetition is the point, not a flaw. "Opponent" re-files him as a role in a fight, which is the framing the film is arguing against. The one thing "opponent" buys is avoiding a second "man" in 71 words.
+
+### What he has built without naming it
+
+*"one of his own"* in sentence 2 is paid off by *"their shared ancestors"* in sentence 3. The logline has an internal rhyme of kinship — the same relationship stated twice, once as a horror and once as an inheritance. That is the strongest structural thing in it and it has survived every generation since 18.
+
+### Length, measured
+
+Against the 170 sourced loglines in `research/loglines-reference.md` and `research/reckoning-loglines.md`: **median 41 words, mean 44, max 157.** Gen 21 at 71 is longer than 86% of them. 31 of 170 (18%) run 66 words or more, so it is not an outlier — but it is firmly in the long tail, and it has grown 9 words since this morning's lock.
