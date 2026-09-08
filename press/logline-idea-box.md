@@ -612,3 +612,54 @@ Fix, for one word: **"the opponent he killed"** — 65 words, unambiguous, keeps
 | his dead opponent | 64 |
 | **the opponent he killed** | **65** |
 | the opponent he just killed | 66 |
+
+## Generation 23 — Sep 8. The title drop
+
+**67 words, 362 characters.**
+
+> In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own. When he stumbles upon his opponent's burial rites, he finds the ceremony being held in the ancient faith of their shared ancestors, who he must now face to decide whether he will continue to be -- a KILLER OF MEN.
+
+Two changes from Gen 22.
+
+### "his opponent's burial rites" — he solved the ambiguity better than the note proposed
+
+Gen 22's problem was *last* meaning both "most recent" and "final ever". The note offered *"the opponent he killed"* (65 words). The possessive is tighter — **two words shorter than the fix**, ambiguity gone, and the clarity survives: sentence 2 has already said every victory means killing, and *burial rites* say he is dead. Nothing had to be spelled out.
+
+### The title drop — what it gains
+
+It converts the closing question from **action** to **identity**. "Will he kill again" asks what he does; "will he continue to be a killer of men" asks what he *is*. And "continue to be" carries an implication "kill again" does not: **that he already is one.** The transformation has happened; the question is only whether it holds.
+
+It also makes the title mean something. Before the drop, *Killer of Men* is atmosphere — a violent-sounding phrase. After it, it is a **category of person** the protagonist may or may not belong to. Given that Jordan's own statement is about how a Black man's presence is read as menacing — about being *seen as* the brute — the identity question is the thematically truer one.
+
+### What it costs
+
+1. **"continue to be" is the flabbiest construction in English** — copula, helper, infinitive. Hear the stresses: *whether he will KILL a-GAIN* lands on two. *whether he will con-TIN-ue to BE a KILL-er of MEN* diffuses across six. The line stops landing.
+2. **It is no longer showable.** "Kill again" could be pictured inside thirteen minutes. "Continue to be a killer of men" is a theme, not an image.
+3. **The em dash.** Luke's own rule, Sep 7: *"Get rid of the long dash after boys… it's an obvious AI thing."* He wrote `--`, which may be dictation for "dash", but the rule is his.
+4. **ALL CAPS**, and it is the fourth death-word after *fight to the death*, *killing one of his own*, and the title already sitting at the top of the FilmFreeway page.
+
+### Measured against the corpus — 63 sourced loglines with an identifiable title
+
+| Where the title appears | Count |
+|---|---|
+| First quarter (the press-kit convention: *"DJANGO UNCHAINED stars…"*) | 18 |
+| Middle | 3 |
+| **Last third — the move here** | **2** |
+
+Both of the two are false positives on inspection: *The Man Who Could Not Remain Silent* matched on scattered words, and *Warrior* ends "…in Lionsgate's Warrior", a distributor sign-off. **Effectively none of the 63 end on the title as the answer to the film's question.** ALL-CAPS titles appear 4 times, all in the front-loaded press-kit position.
+
+Rarity is not proof it fails — it may be untested rather than bad, and none of those 63 were written for a FilmFreeway field where the title already sits directly above. But it is not a convention with a track record behind it.
+
+### The fix: "remain" — **64 words**, the same as Gen 22
+
+> …who he must now face to decide whether he will remain a killer of men.
+
+One word doing the work of three. A real verb instead of a copula. Keeps the identity framing whole, keeps the implication that he already is one, and drops the dash and the caps.
+
+| Ending | Words |
+|---|---|
+| …whether he will kill again. | 61 |
+| **…whether he will remain a killer of men.** | **64** |
+| …whether he will still be a killer of men. | 65 |
+| …whether he will continue to be a killer of men. | 66 |
+| …whether he will continue to be -- a KILLER OF MEN. | 67 |
