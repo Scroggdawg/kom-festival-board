@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "rev": "f9bfb55d-b5f3-4cbd-8a11-95298e906576",
+ "rev": "36e58426-86b6-48f5-8f58-0257f10d901d",
  "updated": "2026-09-08",
  "keyDates": [
   {
@@ -914,19 +914,19 @@
    "disposition": "target",
    "edition": "Jul 9–18, 2027",
    "open": "2026-07-27",
-   "close": "2026-11-20",
+   "close": "2027-04-30",
    "estimated": false,
-   "feesText": "earlybird to Sep 12 (~$11–19, student ~$4.50–6) · regular Nov 20 · late Dec 14 · extended Jan 8, 2027",
+   "feesText": "free",
    "tiers": [],
    "path": "Oscar-qualifying",
-   "why": "Premier European competitive shorts festival, free to enter, qualifying via its Grand Prix, and only a Portuguese premiere required — slots cleanly after any US premiere. CORRECTED 2026-09-08: Sep 12 is the EARLYBIRD price tier, not a deadline. Verified on the festival's own panel.",
+   "why": "Premier European competitive shorts festival, free to enter, qualifying via its Grand Prix, and only a Portuguese premiere required — slots cleanly after any US premiere.",
    "festDate": "2027-07-09",
    "links": {
     "site": "https://www.indieshortsmag.com/oscar-qualifying-film-festivals/",
     "filmfreeway": "https://filmfreeway.com/CurtasViladoConde"
    },
    "source": "https://filmfreeway.com/CurtasViladoConde",
-   "lastChecked": "2026-09-08",
+   "lastChecked": "2026-08-25",
    "events": [],
    "notes": []
   },
