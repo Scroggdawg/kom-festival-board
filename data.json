@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "rev": "36e58426-86b6-48f5-8f58-0257f10d901d",
+ "rev": "be53ab1c-f420-47b3-aa7e-0d98794c6e5d",
  "updated": "2026-09-08",
  "keyDates": [
   {
@@ -436,7 +436,7 @@
    "tiers": [],
    "path": "Student Emmy",
    "why": "The 46th window should cover work completed Aug 2025–Jul 2026 — a Jan 2026 finish fits — with submissions estimated late Sep–early Oct 2026. Verify at televisionacademy.com now; the window is weeks long. Submission note: own portal: TelevisionAcademy.com/CTA/submit (Television Academy Foundation's own submission system). No FilmFreeway listing found despite specific search.",
-   "festDate": "",
+   "festDate": null,
    "links": {
     "site": "https://www.televisionacademy.com/foundation/programs/cta/faq",
     "filmfreeway": ""
@@ -844,7 +844,7 @@
    "tiers": [],
    "path": "$2,500 + DGA screening",
    "why": "The 2027 window should cover films made Sept 2025–Dec 2026 — containing a Jan 2026 completion. Director must be from a marginalized community and within a year of graduation at a US school. Verify the window when rules post ~Nov 1. Submission note: own portal: dga.org's own online application (exact submission-form subdomain is only exposed during the open application window, roughly Nov-Apr). Confirmed no FilmFreeway page exists for DGA Student Film Awards after targeted search; contact students@dga.org for current cycle link.",
-   "festDate": "",
+   "festDate": null,
    "links": {
     "site": "https://www.dga.org/awards/students/applicationrules",
     "filmfreeway": ""
@@ -869,7 +869,7 @@
    "tiers": [],
    "path": "Medal → Oscar-eligible",
    "why": "Going for the 54th (2027) cycle: medal winners become Oscar-eligible without needing a festival win. Published windows key on completion-for-credit dates — the same school-film date argument applies. Verify the 54th rules the day they post (~spring 2027) and confirm what AFI certifies.",
-   "festDate": "",
+   "festDate": null,
    "links": {
     "site": "https://www.oscars.org/saa/apply",
     "filmfreeway": "https://filmfreeway.com/StudentAcademyAwards"
