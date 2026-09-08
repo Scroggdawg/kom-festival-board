@@ -30,6 +30,9 @@
 .d .rel{display:block;font-size:11px;color:var(--dim);margin-top:1px}
 .it.due .d{border-bottom:1px solid var(--cream);padding-bottom:3px}.it.due .d .rel{color:var(--cream);font-weight:500}
 #tot .soon{color:var(--cream)}
+.nx{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
+.nx .k{color:var(--dim);margin-right:8px}.nx .ref{color:var(--dim);font-variant-numeric:tabular-nums;margin-right:6px}.nx b{color:var(--cream);font-weight:400}
+@media (max-width:640px){.nx{grid-template-columns:1fr;gap:4px}}
 .foot{margin-top:10px;font-size:11px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;position:relative}
 .leg{display:flex;gap:14px}.leg span{display:inline-flex;align-items:center;gap:5px}.leg svg{width:14px;height:14px}
 .ctl{color:var(--mute);text-decoration:underline;cursor:pointer}#msg a{color:var(--cream)}#err{color:#e8703a}
@@ -44,6 +47,7 @@
 </style></head><body>
 <div class="bd" id="bd"><div class="pat"></div>
   <div class="top"><div><div class="ttl" id="ttl">Killer of Men Festival Campaign<small id="tot">loading…</small></div></div><div class="map" id="map"></div></div>
+  <div class="nx" id="nx" hidden></div>
   <div id="groups"></div>
   <div class="foot"><div class="leg" id="leg"></div><span id="prov">reading todo.json…</span></div>
   <div class="foot"><span id="msg"></span><span id="tokctl"></span></div>
@@ -83,6 +87,32 @@ function nowIso(){var d=new Date(),o=-d.getTimezoneOffset(),p=function(n){return
 function msg(t,isHtml){var m=$('msg');if(isHtml)m.innerHTML=t;else m.textContent=t;}
 function stampOf(d){return d?[d.rev,d.updated,d.updatedBy].join('|'):null;}
 
+function holder(w){return String(w||'').split(' · ')[0];}
+function nextUnblocked(d){
+  var open=[];d.sections.forEach(function(s){s.items.forEach(function(it){
+    if((it.status==='not_started'||it.status==='started')&&!it.waitingOn)open.push(it);});});
+  if(!open.length)return null;
+  for(var i=0;i<open.length;i++)if(open[i].status==='started')return open[i];
+  return open[0];
+}
+function parked(d){
+  var by={},n=0;
+  d.sections.forEach(function(s){s.items.forEach(function(it){
+    if(it.status==='complete')return;
+    if(!it.waitingOn&&it.status!=='awaiting')return;
+    var k=it.waitingOn?holder(it.waitingOn):'a reply';by[k]=(by[k]||0)+1;n++;});});
+  return{n:n,list:Object.keys(by).sort(function(a,b){return by[b]-by[a]||a.localeCompare(b);}).map(function(k){return k+' '+by[k];})};
+}
+function strip(d){
+  var el=$('nx'),nx=nextUnblocked(d),pk=parked(d),left,right='';
+  if(!nx&&!pk.n){el.hidden=true;return;}
+  el.hidden=false;
+  if(nx){var t=nx.title.length>72?nx.title.slice(0,71)+'…':nx.title;
+    left='<span class="k">Next</span><span class="ref">'+esc(nx.id)+'</span><b>'+esc(t)+'</b>';}
+  else left='<span class="k">Next</span>every remaining item is waiting on someone';
+  if(pk.n)right='<span class="k">Waiting on</span>'+esc(pk.list.join(' · '));
+  el.innerHTML='<div>'+left+'</div><div>'+right+'</div>';
+}
 function render(d){
   SC=d.statusColors||{};LAB=d.statusLabels||{};var st=d.statuses||S;
   var map='',groups='',done=0,N=0,soon=[];
@@ -103,6 +133,7 @@ function render(d){
   $('tot').innerHTML=done+' of '+N+' complete'+(sp?' · <span class="soon">'+sp+'</span>':'')+' · <span class="ctl" id="all">expand all</span>';
   $('leg').innerHTML=st.map(function(k,i){return'<span style="color:'+colour(SC[k])+'">'+sprite(i,SC[k])+esc(LAB[k]||k)+'</span>';}).join('');
   if(d.title)$('ttl').firstChild.textContent=d.title;
+  strip(d);
 }
 function accept(d){var sp=stampOf(d);if(sp!==stamp){stamp=sp;last=d;render(d);}else last=d;}
 function prov(ageS){

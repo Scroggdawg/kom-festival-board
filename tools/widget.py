@@ -25,6 +25,26 @@ def due_info(iso):
     label = (f"{abs(n)} days ago" if n < -1 else "yesterday" if n == -1 else "today" if n == 0
              else "tomorrow" if n == 1 else f"in {n} days" if n <= 7 else "")
     return {"n": n, "label": label, "urgent": n <= 1}
+def _holder(w): return str(w or "").split(" · ")[0]
+def next_unblocked(d):
+    """The first thing nobody else is holding: something already started if there is one,
+    otherwise the first untouched item, in the file's own order."""
+    open_ = [it for s in d["sections"] for it in s["items"]
+             if it["status"] in ("not_started", "started") and not it.get("waitingOn")]
+    if not open_: return None
+    for it in open_:
+        if it["status"] == "started": return it
+    return open_[0]
+def parked(d):
+    by = {}
+    for s in d["sections"]:
+        for it in s["items"]:
+            if it["status"] == "complete": continue
+            if not it.get("waitingOn") and it["status"] != "awaiting": continue
+            k = _holder(it["waitingOn"]) if it.get("waitingOn") else "a reply"
+            by[k] = by.get(k, 0) + 1
+    order = sorted(by, key=lambda k: (-by[k], k.lower()))   # ties alphabetical, matching docket.html
+    return sum(by.values()), [f"{k} {by[k]}" for k in order]
 def soon_phrase(ns):
     if not ns: return ""
     over = [n for n in ns if n < 0]; today = [n for n in ns if n == 0]; tom = [n for n in ns if n == 1]
@@ -50,6 +70,8 @@ css = """<style>
 .dk-d .rel{display:block;font-size:11px;color:var(--dim);margin-top:1px}
 .dk-it.due .dk-d{border-bottom:1px solid #f3ecd8;padding-bottom:3px}.dk-it.due .dk-d .rel{color:#f3ecd8;font-weight:500}
 .dk-soon{color:#f3ecd8}
+.dk-nx{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mute)}
+.dk-nx .k{color:var(--dim);margin-right:8px}.dk-nx .ref{color:var(--dim);font-variant-numeric:tabular-nums;margin-right:6px}.dk-nx b{color:#f3ecd8;font-weight:400}
 .dk-foot{margin-top:10px;font-size:11px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}.dk-leg{display:flex;gap:14px}.dk-leg span{display:inline-flex;align-items:center;gap:5px}.dk-leg svg{width:14px!important;height:14px!important}
 </style>"""
 done = sum(it["status"] == "complete" for s in d["sections"] for it in s["items"]); N = sum(len(s["items"]) for s in d["sections"])
@@ -58,8 +80,19 @@ soon = [i["n"] for s in d["sections"] for it in s["items"]
 sp = soon_phrase(soon)
 out = [f'<h2 class="sr-only">Campaign to-do list: {done} of {N} items complete across {len(d["sections"])} sections.</h2>', css, '<div class="dk">']
 soon_html = ' · <span class="dk-soon">' + e(sp) + '</span>' if sp else ''
+nx = next_unblocked(d); pk_n, pk_list = parked(d)
+strip = ""
+if nx or pk_n:
+    if nx:
+        t = nx["title"] if len(nx["title"]) <= 72 else nx["title"][:71] + "…"
+        left = f'<span class="k">Next</span><span class="ref">{e(nx["id"])}</span><b>{e(t)}</b>'
+    else:
+        left = '<span class="k">Next</span>every remaining item is waiting on someone'
+    right = f'<span class="k">Waiting on</span>{e(" · ".join(pk_list))}' if pk_n else ""
+    strip = f'<div class="dk-nx"><div>{left}</div><div>{right}</div></div>'
 out.append(f'<div class="dk-top"><div class="dk-ttl">{e(d["title"])}<small>{done} of {N} complete{soon_html}</small></div><div class="dk-map">' +
     ''.join(f'<div class="dk-mrow" style="--sc:{s["color"]}"><i class="k" style="background:{s["color"]}"></i>{blocks(s)}</div>' for s in d["sections"]) + '</div></div>')
+out.append(strip)
 for gi, s in enumerate(d["sections"]):
     c = sum(it["status"] == "complete" for it in s["items"])
     rows = ''
