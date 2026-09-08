@@ -225,3 +225,53 @@ Earlier candidates, his verdicts: "forced to reckon with the man he has become" 
 ---
 
 *Archive: `press/logline-idea-box.md` (the chronological log), `press/logline-studio.md` (Raging Bull breakdown, the in-the-style-of set, the banks), `research/loglines-reference.md` (the sourced corpus).*
+
+---
+
+## Sep 7, night — the arithmetic, corrected
+
+I told Luke earlier that his locked pieces came to "about 30 words before the middle." **That was wrong.** Counted exactly:
+
+| Locked piece | Words |
+|---|---|
+| "In 1834 South Carolina, an enslaved prizefighter" | 7 |
+| "the violence that has kept him alive costs him a little more of his humanity with every victory" | 18 |
+| "held in the faith of their shared ancestors" | 8 |
+| "live as a killer or stand up for the life that was taken from him" | 15 |
+| **Total** | **48** |
+
+Connective tissue cannot go below ~12–16 words (a verb for the killing, a verb for the stumbling, "must choose whether to"). **All four locks verbatim floors the logline at 60–64 words. Under 50 is arithmetically impossible with all four.** Not an opinion — arithmetic.
+
+### Which lock to release: the ending
+
+From the corpus of 119: `the_choice` is the smallest working class (11/119, 9%), and it is the one construction that structurally **competes** with the machine. You cannot say in one sentence that the violence has already been costing him his humanity with every victory *and* that he has yet to decide who he is — the first proposition has already answered the second.
+
+**Zero of the 19 trait-with-two-consequences entries also carry a choice clause. Zero of the purest seven do.**
+
+Releasing the ending buys 15 words, and the cost clause already implies the stake.
+
+### Three locks, twelve connectives — 48 words
+
+> In 1834 South Carolina, an enslaved prizefighter kills for the men who own him, and the violence that has kept him alive costs him a little more of his humanity with every victory — until he stumbles on his opponent's burial, held in the faith of their shared ancestors.
+
+*An arrangement of Luke's own locked words, offered as budget proof — not a logline proposed over his.*
+
+### If all four locks stay
+
+Accept 60–64 words and stop apologising for it. The official festival and distributor synopses in the corpus run 60–110 words (Whiplash 88, Infernal Affairs 90, Kapò 35). Sundance's own form allows 75. Under-50 is tagline territory in this register; the 50-word rule is a competition-form convention, not a craft law.
+
+### Three cheap cuts if he wants them anyway
+
+- "for the men who own him" is redundant with "enslaved" — **saves 6**. (Champion spends exactly one word on character: "unscrupulous".)
+- em dash + "until" is the corpus's cheapest reversal — 2 words for a hinge a "but" clause charges 8 for
+- "has kept" → "keeps" — **saves 1**, shape untouched
+
+### One warning about a locked phrase
+
+**"a little more of his humanity" is a hedge.** The corpus does not hedge costs: *"even his humanity"* (Whiplash), *"at any price"* (Kapò), *"in exchange for a few more months of life"* (The Grey Zone). Twenty entries name the cost as a person or an object; the abstraction-plus-quantifier form appears nowhere in the purest seven. It is locked, so it stays — but it is the one place the sentence lets the machine slip, and the corpus's answer to that slot is a named person, not a fraction.
+
+### Why Luke's phrasing was already right about something he didn't name
+
+The pure machine credits a trait the man **chose** — Kyle's accuracy, Luke's bravado, Andrew's perfectionism. Mace did not choose to be violent; it was compelled. That is why the corpus's two closest premise-matches, *Kapò* and *The Grey Zone*, both reach for `price_named` instead: a coerced trait cannot be credited with a victory in the same proud way.
+
+His locked phrasing solves it. **"The violence that has kept him alive"** credits the violence with *survival*, not with glory. That is the coerced man's version of the machine, and it is the correct one for this film.
