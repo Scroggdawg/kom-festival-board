@@ -2,7 +2,35 @@
 
 *Every logline, fragment and phrase Luke has dictated for Killer of Men, in order, in his words. Transcription noise cleaned only where the intent is unambiguous; `[?]` marks a guess. Nothing here is Claude's — Claude's takes are in `press/logline-studio.md`. This file is append-only; new dictation goes at the bottom.*
 
-## LOCKED — September 8, 2026
+## LOCKED — September 8, 2026. **TWO VERSIONS, A and B**
+
+Luke: *"These are the two im going to present. Lock them. A and B."* Twenty-four generations.
+
+**A — title front, concrete ending. 65 words, 356 characters.**
+
+> KILLER OF MEN -- In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own. When he stumbles upon his opponent's burial rites, he finds the ceremony being held in the ancient faith of their shared ancestors, who he must now face to decide whether he will kill again.
+
+**B — title drop, identity ending. 64 words, 354 characters.**
+
+> In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own. When he stumbles upon his opponent's burial rites, he finds the ceremony being held in the ancient faith of their shared ancestors, who he must now face to decide whether he will remain... a KILLER OF MEN.
+
+**The 56 words between "In 1834" and "…to decide" are identical in both.** The versions differ only in where the title sits and how the sentence ends.
+
+**One seam left open**, in his words: *"May eventually update 'who he must now face to decide' but the rest im good on."*
+
+### What each does
+
+**A** puts the title in the front-quarter position — which the corpus measurement in Generation 23 found is where **18 of the 23** title-bearing loglines put it. It is the press-kit convention, and A is the version with precedent behind it. It ends on the concrete, showable question.
+
+**B** takes the "remain" fix and keeps the drop at the end, replacing the em dash with an **ellipsis** — which sidesteps Luke's own Sep 7 rule against the long dash while keeping the theatrical pause. It ends on identity rather than action.
+
+They are genuinely different pitches, not variants: A sells the situation, B sells the question. Presenting both is the right call.
+
+---
+
+### The earlier single lock, superseded
+
+## Superseded lock — September 8, 2026 (morning)
 
 Luke: *"i think lock this for now."* Nineteen generations. **62 words.** His wording, verbatim.
 
@@ -663,3 +691,13 @@ One word doing the work of three. A real verb instead of a copula. Keeps the ide
 | …whether he will still be a killer of men. | 65 |
 | …whether he will continue to be a killer of men. | 66 |
 | …whether he will continue to be -- a KILLER OF MEN. | 67 |
+
+## Generation 24 — Sep 8. **LOCKED, A and B**
+
+Counts: **A 65 words / 356 chars · B 64 words / 354 chars.** Shared body 56 words.
+
+Both take findings from the last two generations. A uses the Gen 23 corpus measurement — the title's natural home is the first quarter, where 18 of 23 sourced loglines put it. B uses the "remain" fix (one word for three, a verb instead of a copula) and swaps the banned em dash for an ellipsis.
+
+The `--` in A sits in the title-separator position, not mid-sentence, and it is locked as dictated. In the .docx it is set as written.
+
+**Open seam, his words:** *"May eventually update 'who he must now face to decide' but the rest im good on."*
