@@ -123,12 +123,25 @@ def _dirty_besides_todo():
 def _remote_todo(branch):
     r = _git("show", f"origin/{branch}:todo.json", check=False)
     return json.loads(r.stdout) if r.returncode == 0 else None
+def _publish_pending(branch):
+    """Commits made in this clone but not yet on origin — a handoff, say — must be
+    published before any reset, never destroyed by one. Returns True when nothing is
+    left unpushed."""
+    ahead = lambda: _git("rev-list", f"origin/{branch}..HEAD").stdout.split()
+    if not ahead(): return True
+    if _git("push", "-q", "origin", f"HEAD:{branch}", check=False).returncode == 0: return True
+    if _dirty_besides_todo(): return False
+    _git("pull", "-q", "--rebase", check=False)          # clean tree, and this clone is ours alone
+    if not ahead(): return True
+    return _git("push", "-q", "origin", f"HEAD:{branch}", check=False).returncode == 0
+
 def pull():
     """Fast-forward this clone to origin, when nothing local is pending."""
     if not DEDICATED: return "not the docket clone"
     branch = _branch(); _git("fetch", "-q", "origin", branch)
     if _git("diff", "--quiet", "HEAD", "--", "todo.json", check=False).returncode != 0: return "local change pending"
     if _dirty_besides_todo(): return "clone has other edits; not resetting"
+    if not _publish_pending(branch): return "unpushed commits here; not resetting"
     if _git("rev-parse", "HEAD").stdout.strip() == _git("rev-parse", f"origin/{branch}").stdout.strip(): return "current"
     _git("reset", "-q", "--hard", f"origin/{branch}"); return "updated"
 def push(message=None):
@@ -141,6 +154,9 @@ def push(message=None):
         return "pushed" if p.returncode == 0 else "push rejected; not the docket clone, so nothing was rewritten — run todo.py push in ~/.kom-docket"
     other = _dirty_besides_todo()
     if other: return "refused: " + ", ".join(other[:3]) + " modified in the docket clone; commit or discard them first"
+    _git("fetch", "-q", "origin", branch)
+    if not _publish_pending(branch):
+        return "refused: this clone has unpushed commits and publishing them failed; a reset here would destroy them"
     for _ in range(4):
         _git("fetch", "-q", "origin", branch)
         local = load(); remote = _remote_todo(branch)
