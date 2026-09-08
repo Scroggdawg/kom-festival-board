@@ -262,3 +262,20 @@ the speed of his hands · his strength · the ferocity that has kept him alive �
 - *"Stick to — I don't want us to get too far from the ones that we like."*
 
 **His instruction:** *"Draw me into the movie… I want to see you do some deep work on this. Review it several times, and don't change it just for the sake of changing it — in the review you might nail it the first time."*
+
+## Generation 14 — Sep 7, the deep pass result
+
+Six writers × six angles = 36 loglines. Three reviewers (enticement / fidelity / adversarial) scored all 36. A reviser produced six finals under orders not to churn. A final adversary **cut three of the six**. Survivors in `press/logline-final-three.md`:
+
+- **A (52)** — "Every victory buys him another night and costs a man his life." Recommended; safest; no ancestral world.
+- **B (44)** — "opens onto a world the men who own him cannot buy." The risk; the only one carrying the ancestral world as *jurisdiction*.
+- **C (58)** — "wins because losing is dying" … "an elder tells him what he would have been in the motherland." Ends on a scene.
+
+**Best phrase of the night, per the adversary:** *"a world the men who own him cannot enter/buy."*
+
+**Cut, with reasons:** the "stranger at the graves" line (the estrangement note in a better coat, and interior); the "physical dominance / his own people gather" line (**Mace is not in his own logline**; and a skill costs nothing); the "hands take longer to open" line (the cost is a physical symptom — too cheap).
+
+**The three asks that would beat any further rewriting:**
+1. **Who was the man he killed?** A name, a shared field, that Mace knows the song. All six call him a category. *Son of Saul* works because the corpse is "a boy he takes for his son."
+2. **One concrete noun from inside the surreal sequence** — nobody has said what he sees on the other side.
+3. **Does he fight again after the burial?** If so, that is the missing fuse, and it is one clause.
