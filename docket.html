@@ -27,6 +27,9 @@
 .it.c1 .dial .w{color:var(--s1)}.it.c2 .dial .w{color:var(--s2)}.it.c3 .dial .w{color:var(--s3)}
 .t .ref{color:var(--dim);font-size:11px;margin-right:6px;font-variant-numeric:tabular-nums}.t .who{display:block;font-size:11.5px;color:var(--mute);margin-top:2px}.t .who.w:before{content:"⌀ ";color:var(--s2)}
 .it.c3 .t{color:var(--mute)}.d{font-size:12px;color:var(--mute);text-align:right;font-variant-numeric:tabular-nums}.d b{color:var(--cream);font-weight:500}
+.d .rel{display:block;font-size:11px;color:var(--dim);margin-top:1px}
+.it.due .d{border-bottom:1px solid var(--cream);padding-bottom:3px}.it.due .d .rel{color:var(--cream);font-weight:500}
+#tot .soon{color:var(--cream)}
 .foot{margin-top:10px;font-size:11px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;position:relative}
 .leg{display:flex;gap:14px}.leg span{display:inline-flex;align-items:center;gap:5px}.leg svg{width:14px;height:14px}
 .ctl{color:var(--mute);text-decoration:underline;cursor:pointer}#msg a{color:var(--cream)}#err{color:#e8703a}
@@ -61,6 +64,19 @@ function sprite(k,c){c=colour(c);var s='<svg viewBox="0 0 18 18" aria-hidden="tr
   else if(k===2)s+='<circle cx="9" cy="9" r="6.5" fill="none" stroke="'+c+'" stroke-width="1.6"/><line x1="4.4" y1="13.6" x2="13.6" y2="4.4" stroke="'+c+'" stroke-width="1.6" stroke-linecap="round"/>';
   else s+='<circle cx="9" cy="9" r="7.3" fill="'+c+'"/>';return s+'</svg>';}
 function fmt(iso){if(!iso)return'';var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);var d=m?new Date(+m[1],+m[2]-1,+m[3]):new Date(iso);return isNaN(d)?iso:d.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
+function dueInfo(iso){
+  var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(iso||'');if(!m)return null;
+  var due=new Date(+m[1],+m[2]-1,+m[3]),t=new Date();t.setHours(0,0,0,0);
+  var n=Math.round((due-t)/86400000);
+  var label=n<-1?Math.abs(n)+' days ago':n===-1?'yesterday':n===0?'today':n===1?'tomorrow':n<=7?'in '+n+' days':'';
+  return {n:n,label:label,urgent:n<=1};
+}
+function soonPhrase(ns){
+  if(!ns.length)return'';
+  var over=ns.filter(function(n){return n<0;}),today=ns.filter(function(n){return n===0;}),tom=ns.filter(function(n){return n===1;});
+  var g=over.length?[over.length,'overdue']:today.length?[today.length,'due today']:[tom.length,'due tomorrow'];
+  return g[0]+(g[0]===1?' item ':' items ')+g[1];
+}
 function clock(iso){var d=new Date(iso);return isNaN(d)?String(iso):d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});}
 function nowIso(){var d=new Date(),o=-d.getTimezoneOffset(),p=function(n){return(n<10?'0':'')+n;};
   return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+'T'+p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds())+(o>=0?'+':'-')+p(Math.floor(Math.abs(o)/60))+':'+p(Math.abs(o)%60);}
@@ -69,7 +85,7 @@ function stampOf(d){return d?[d.rev,d.updated,d.updatedBy].join('|'):null;}
 
 function render(d){
   SC=d.statusColors||{};LAB=d.statusLabels||{};var st=d.statuses||S;
-  var map='',groups='',done=0,N=0;
+  var map='',groups='',done=0,N=0,soon=[];
   d.sections.forEach(function(s,gi){
     var col=colour(s.color);
     var blocks=s.items.map(function(it){var k=st.indexOf(it.status);return'<i class="blk'+(k>0?' s'+k:'')+'"></i>';}).join('');
@@ -78,10 +94,13 @@ function render(d){
     var isOpen=open[s.id]===undefined?gi===0:open[s.id];
     groups+='<div class="g'+(isOpen?' open':'')+'" data-g="'+esc(s.id)+'" style="--sc:'+col+'"><div class="h"><span class="ch">▶</span><span class="nm">'+esc(s.name)+(s.timing?'<small>'+esc(s.timing)+'</small>':'')+'</span><div class="blocks">'+blocks+'</div><span class="ct">'+c+' / '+s.items.length+' complete</span></div><div class="items">'+
       s.items.map(function(it){var k=st.indexOf(it.status);
-        return'<div class="it c'+k+'" data-id="'+esc(it.id)+'"><div class="dial" role="button" tabindex="0" aria-label="'+esc(it.id)+' is '+esc(LAB[it.status]||it.status)+'; change it">'+sprite(k,SC[it.status])+'<span class="w">'+esc(LAB[it.status]||it.status)+'</span></div><div class="t"><span class="ref">'+esc(it.id)+'</span>'+esc(it.title)+'<span class="who'+(it.waitingOn?' w':'')+'">'+esc(it.waitingOn?'waiting on '+it.waitingOn:it.owner)+'</span></div><div class="d">'+(it.due?'<b>'+esc(fmt(it.due))+'</b>':'')+'</div></div>';}).join('')+'</div></div>';
+        var di=dueInfo(it.due),urgent=di&&di.urgent&&it.status!=='complete';
+        if(urgent)soon.push(di.n);
+        return'<div class="it c'+k+(urgent?' due':'')+'" data-id="'+esc(it.id)+'"><div class="dial" role="button" tabindex="0" aria-label="'+esc(it.id)+' is '+esc(LAB[it.status]||it.status)+'; change it">'+sprite(k,SC[it.status])+'<span class="w">'+esc(LAB[it.status]||it.status)+'</span></div><div class="t"><span class="ref">'+esc(it.id)+'</span>'+esc(it.title)+'<span class="who'+(it.waitingOn?' w':'')+'">'+esc(it.waitingOn?'waiting on '+it.waitingOn:it.owner)+'</span></div><div class="d">'+(it.due?'<b>'+esc(fmt(it.due))+'</b>'+(di&&di.label?'<span class="rel">'+esc(di.label)+'</span>':''):'')+'</div></div>';}).join('')+'</div></div>';
   });
   $('map').innerHTML=map;$('groups').innerHTML=groups;
-  $('tot').innerHTML=done+' of '+N+' complete · <span class="ctl" id="all">expand all</span>';
+  var sp=soonPhrase(soon);
+  $('tot').innerHTML=done+' of '+N+' complete'+(sp?' · <span class="soon">'+sp+'</span>':'')+' · <span class="ctl" id="all">expand all</span>';
   $('leg').innerHTML=st.map(function(k,i){return'<span style="color:'+colour(SC[k])+'">'+sprite(i,SC[k])+esc(LAB[k]||k)+'</span>';}).join('');
   if(d.title)$('ttl').firstChild.textContent=d.title;
 }

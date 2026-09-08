@@ -18,6 +18,18 @@ def fmt(iso):
     if not iso: return ''
     try: return datetime.date.fromisoformat(iso[:10]).strftime('%b %-d')
     except ValueError: return iso
+def due_info(iso):
+    """Same treatment as docket.html: how close a dated item is, in words."""
+    try: n = (datetime.date.fromisoformat(iso[:10]) - datetime.date.today()).days
+    except (ValueError, TypeError): return None
+    label = (f"{abs(n)} days ago" if n < -1 else "yesterday" if n == -1 else "today" if n == 0
+             else "tomorrow" if n == 1 else f"in {n} days" if n <= 7 else "")
+    return {"n": n, "label": label, "urgent": n <= 1}
+def soon_phrase(ns):
+    if not ns: return ""
+    over = [n for n in ns if n < 0]; today = [n for n in ns if n == 0]; tom = [n for n in ns if n == 1]
+    c, w = (len(over), "overdue") if over else (len(today), "due today") if today else (len(tom), "due tomorrow")
+    return f"{c} item{'' if c == 1 else 's'} {w}"
 def blocks(s):
     return ''.join(f'<i class="dk-blk{" s"+str(ST.index(it["status"])) if ST.index(it["status"]) else ""}"></i>' for it in s["items"])
 css = """<style>
@@ -35,20 +47,33 @@ css = """<style>
 .dk-dial{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mute);white-space:nowrap}.dk-it.c1 .w{color:var(--s1)}.dk-it.c2 .w{color:var(--s2)}.dk-it.c3 .w{color:var(--s3)}
 .dk-t{color:#f3ecd8}.dk-t .ref{color:var(--dim);font-size:11px;margin-right:6px;font-variant-numeric:tabular-nums}.dk-t .who{display:block;font-size:11.5px;color:var(--mute);margin-top:2px}.dk-t .who.w:before{content:"⌀ ";color:var(--s2)}
 .dk-it.c3 .dk-t{color:var(--mute)}.dk-d{font-size:12px;color:var(--mute);text-align:right;font-variant-numeric:tabular-nums}.dk-d b{color:#f3ecd8;font-weight:500}
+.dk-d .rel{display:block;font-size:11px;color:var(--dim);margin-top:1px}
+.dk-it.due .dk-d{border-bottom:1px solid #f3ecd8;padding-bottom:3px}.dk-it.due .dk-d .rel{color:#f3ecd8;font-weight:500}
+.dk-soon{color:#f3ecd8}
 .dk-foot{margin-top:10px;font-size:11px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}.dk-leg{display:flex;gap:14px}.dk-leg span{display:inline-flex;align-items:center;gap:5px}.dk-leg svg{width:14px!important;height:14px!important}
 </style>"""
 done = sum(it["status"] == "complete" for s in d["sections"] for it in s["items"]); N = sum(len(s["items"]) for s in d["sections"])
+soon = [i["n"] for s in d["sections"] for it in s["items"]
+        if it.get("due") and it["status"] != "complete" and (i := due_info(it["due"])) and i["urgent"]]
+sp = soon_phrase(soon)
 out = [f'<h2 class="sr-only">Campaign to-do list: {done} of {N} items complete across {len(d["sections"])} sections.</h2>', css, '<div class="dk">']
-out.append(f'<div class="dk-top"><div class="dk-ttl">{e(d["title"])}<small>{done} of {N} complete</small></div><div class="dk-map">' +
+soon_html = ' · <span class="dk-soon">' + e(sp) + '</span>' if sp else ''
+out.append(f'<div class="dk-top"><div class="dk-ttl">{e(d["title"])}<small>{done} of {N} complete{soon_html}</small></div><div class="dk-map">' +
     ''.join(f'<div class="dk-mrow" style="--sc:{s["color"]}"><i class="k" style="background:{s["color"]}"></i>{blocks(s)}</div>' for s in d["sections"]) + '</div></div>')
 for gi, s in enumerate(d["sections"]):
     c = sum(it["status"] == "complete" for it in s["items"])
     rows = ''
     for it in s["items"]:
         k = ST.index(it["status"]); who = f'waiting on {it["waitingOn"]}' if it.get("waitingOn") else it.get("owner", "")
-        rows += (f'<div class="dk-it c{k}"><div class="dk-dial">{sprite(k, SC[it["status"]])}<span class="w">{e(LAB[it["status"]])}</span></div>'
+        di = due_info(it["due"]) if it.get("due") else None
+        urgent = bool(di and di["urgent"] and it["status"] != "complete")
+        datecell = ""
+        if it.get("due"):
+            rel = f'<span class="rel">{e(di["label"])}</span>' if di and di["label"] else ""
+            datecell = f'<b>{e(fmt(it["due"]))}</b>{rel}' 
+        rows += (f'<div class="dk-it c{k}{" due" if urgent else ""}"><div class="dk-dial">{sprite(k, SC[it["status"]])}<span class="w">{e(LAB[it["status"]])}</span></div>'
                  f'<div class="dk-t"><span class="ref">{e(it["id"])}</span>{e(it["title"])}<span class="who{" w" if it.get("waitingOn") else ""}">{e(who)}</span></div>'
-                 f'<div class="dk-d">{"<b>"+fmt(it.get("due"))+"</b>" if it.get("due") else ""}</div></div>')
+                 f'<div class="dk-d">{datecell}</div></div>')
     timing = f'<small>{e(s["timing"])}</small>' if s.get("timing") else ''
     out.append(f'<div class="dk-g{" open" if gi == 0 else ""}" style="--sc:{s["color"]}"><div class="dk-h" onclick="this.parentElement.classList.toggle(\'open\')"><span class="ch">▶</span><span class="nm">{e(s["name"])}{timing}</span><div class="bl">{blocks(s)}</div><span class="ct">{c} / {len(s["items"])} complete</span></div><div class="dk-items">{rows}</div></div>')
 when = datetime.datetime.fromisoformat(d["updated"]).strftime('%-I:%M %p').lower()
