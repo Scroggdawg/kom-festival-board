@@ -53,7 +53,7 @@ function rows(list){return'<div class="rows">'+list.map(function(r){
 
 function board(d){
   var f=d.festivals||[],t=f.filter(function(x){return x.disposition==='target';});
-  var ver=t.filter(function(x){return x.provenance==='official'&&x.sourceUrl;});
+  var ver=t.filter(function(x){return x.provenance==='official'&&x.source;});
   var up=ver.filter(function(x){return x.close&&days(x.close)!==null&&days(x.close)>=0;})
            .sort(function(a,b){return a.close<b.close?-1:1;})[0];
   var prem=(d.premieres||[]).filter(function(p){return p.state==='available';}).length;
