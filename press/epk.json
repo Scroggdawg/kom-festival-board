@@ -1,0 +1,333 @@
+{
+ "schema": 1,
+ "rev": 1,
+ "updated": "2026-09-08T11:50:22-07:00",
+ "updatedBy": "seed",
+ "title": "Killer of Men — EPK worksheet",
+ "source": "press/epk-spec.md (11-page structure) + todo.json epk/profile lanes",
+ "pages": [
+  {
+   "id": "page1",
+   "n": "PAGE 1",
+   "name": "Poster",
+   "note": "",
+   "fields": [
+    {
+     "label": "Key art / one-sheet",
+     "hint": "does a poster exist?",
+     "value": ""
+    },
+    {
+     "label": "Billing block",
+     "hint": "AFI presents / cast / HoDs / EPs / writer-director",
+     "value": ""
+    },
+    {
+     "label": "Website URL",
+     "hint": "printed on the poster",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "id": "page2",
+   "n": "PAGE 2",
+   "name": "Logline + synopsis",
+   "note": "",
+   "fields": [
+    {
+     "label": "Logline",
+     "hint": "pick one of the three, or paste yours",
+     "value": ""
+    },
+    {
+     "label": "Synopsis",
+     "hint": "~100 words — not yet written",
+     "value": ""
+    },
+    {
+     "label": "Hero still",
+     "hint": "which frame?",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "id": "page3",
+   "n": "PAGE 3",
+   "name": "Specs · team · cast · rights · links",
+   "note": "the programmer page",
+   "fields": [
+    {
+     "label": "Genre",
+     "hint": "",
+     "value": "historical drama, southern gothic"
+    },
+    {
+     "label": "Country",
+     "hint": "",
+     "value": "United States"
+    },
+    {
+     "label": "Shooting location",
+     "hint": "where was it shot?",
+     "value": ""
+    },
+    {
+     "label": "Production year",
+     "hint": "",
+     "value": ""
+    },
+    {
+     "label": "Completion year",
+     "hint": "D.2.6 — the 2026 date decision",
+     "value": ""
+    },
+    {
+     "label": "Language / SRTs",
+     "hint": "English; which subtitle files exist?",
+     "value": ""
+    },
+    {
+     "label": "Duration",
+     "hint": "",
+     "value": "13 minutes"
+    },
+    {
+     "label": "Aspect ratio",
+     "hint": "Yeo",
+     "value": ""
+    },
+    {
+     "label": "Frame rate",
+     "hint": "Yeo",
+     "value": ""
+    },
+    {
+     "label": "Shooting format",
+     "hint": "camera / codec — Yeo",
+     "value": ""
+    },
+    {
+     "label": "Exhibition formats",
+     "hint": "2K DCP · 4K DCP · ProRes — Yeo",
+     "value": ""
+    },
+    {
+     "label": "Sound",
+     "hint": "5.1 / stereo — Yeo",
+     "value": ""
+    },
+    {
+     "label": "The team — 5 HoDs",
+     "hint": "role and name, one per line",
+     "value": ""
+    },
+    {
+     "label": "Cast — principals",
+     "hint": "character | actor, one per line",
+     "value": ""
+    },
+    {
+     "label": "Rights + contact",
+     "hint": "",
+     "value": "AFI Conservatory · contact: "
+    },
+    {
+     "label": "Instagram / website / email",
+     "hint": "",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "id": "page4",
+   "n": "PAGE 4",
+   "name": "Director's statement",
+   "note": "",
+   "fields": [
+    {
+     "label": "Statement",
+     "hint": "final draft exists",
+     "value": "[final draft in filmfreeway-page-v4.md — awaiting Jordan's approval]"
+    },
+    {
+     "label": "Photo behind the text",
+     "hint": "which still?",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "id": "page5_6",
+   "n": "PAGES 5–6",
+   "name": "Filmmaker bios",
+   "note": "~150 words each",
+   "fields": [
+    {
+     "label": "Director — Jordan Betine",
+     "hint": "MFA tense + 'why he directs' open",
+     "value": "[draft in filmfreeway-page-v4.md — 2 brackets for Jordan]"
+    },
+    {
+     "label": "Producer — Luke",
+     "hint": "answer 'why do you produce'",
+     "value": ""
+    },
+    {
+     "label": "Cinematographer",
+     "hint": "",
+     "value": ""
+    },
+    {
+     "label": "Production designer",
+     "hint": "",
+     "value": ""
+    },
+    {
+     "label": "Editor",
+     "hint": "",
+     "value": ""
+    },
+    {
+     "label": "Headshots",
+     "hint": "who has sent theirs?",
+     "value": ""
+    },
+    {
+     "label": "IG / IMDb links",
+     "hint": "one per person",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "id": "page7",
+   "n": "PAGE 7",
+   "name": "Cast",
+   "note": "one page per principal",
+   "fields": [
+    {
+     "label": "Cast bios",
+     "hint": "character | actor + credits-forward bio",
+     "value": ""
+    },
+    {
+     "label": "Stills in character",
+     "hint": "frames from the film, not headshots",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "id": "page8",
+   "n": "PAGE 8",
+   "name": "BTS mosaic",
+   "note": "8–12 set photos",
+   "fields": [
+    {
+     "label": "BTS photos",
+     "hint": "Jordan's drives — or the crew's phones",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "id": "page9",
+   "n": "PAGE 9",
+   "name": "Key credits + full cast",
+   "note": "",
+   "fields": [
+    {
+     "label": "Key credits",
+     "hint": "writer-dir · producer · DP · PD · editor · composer · sound · casting · EPs",
+     "value": ""
+    },
+    {
+     "label": "Full cast",
+     "hint": "character | actor",
+     "value": ""
+    },
+    {
+     "label": "Still behind",
+     "hint": "",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "id": "page10",
+   "n": "PAGE 10",
+   "name": "Full crew",
+   "note": "two role/name columns",
+   "fields": [
+    {
+     "label": "Full crew",
+     "hint": "straight from the end-credit roll",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "id": "page11",
+   "n": "PAGE 11",
+   "name": "Thanks + AFI end card",
+   "note": "",
+   "fields": [
+    {
+     "label": "Thanks list",
+     "hint": "",
+     "value": ""
+    },
+    {
+     "label": "Partner logos",
+     "hint": "",
+     "value": ""
+    },
+    {
+     "label": "AFI boilerplate + fellows",
+     "hint": "property notice · partial fulfilment · fellows by discipline · © AFI",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "id": "assets",
+   "n": "ASSETS",
+   "name": "Cross-cutting",
+   "note": "",
+   "fields": [
+    {
+     "label": "Stills",
+     "hint": "surreal · opening · colour ending · best twelve",
+     "value": ""
+    },
+    {
+     "label": "Trailer",
+     "hint": "Yeo",
+     "value": ""
+    },
+    {
+     "label": "Laurels",
+     "hint": "ABFF · Martha's Vineyard · SCAD",
+     "value": ""
+    },
+    {
+     "label": "Drive folders",
+     "hint": "00 PRESS / BTS · HEADSHOTS · POSTER · STILLS · TRAILER",
+     "value": ""
+    },
+    {
+     "label": "Jordan's 60-sec intro",
+     "hint": "",
+     "value": ""
+    },
+    {
+     "label": "Screenings & awards",
+     "hint": "",
+     "value": "ABFF 2026 · Martha's Vineyard AAFF 2026 · SCAD Savannah 2026"
+    }
+   ]
+  }
+ ]
+}
