@@ -207,3 +207,14 @@ Rulings:
 ### Trait-slot options, most enviable first
 
 the speed of his hands · his strength · the ferocity that has kept him alive · the deadly skill that has kept him alive · the gift that has kept him alive · the violence that has kept him alive *(locked, least enviable)*
+
+## Generation 10 — Sep 7, night
+
+- **The trait correction (his, and it overturns earlier advice):** *"You can have deadly skill — that alone doesn't cost you your humanity. Violence, murder, inhumane acts cost you your humanity."* → the trait must be morally loaded, not merely enviable. **Trait slot closed: violence.**
+- *"A little more of his humanity is not dark enough."* — agrees the hedge is soft.
+- Orderings tested: "his skill for violence" · "the violence that has sustained his life" · "each victory costs him a little more of his humanity."
+- **"He is forced to reckon with the man he was meant to become."** — *"I like."*
+- "He stumbles upon his fallen opponent's burial ceremony, held in the faith of their shared ancestors."
+- *"'His own' doesn't belong in the middle of 'with every life he takes, he slips.'"* → the fragment becomes: **"With every life he takes, he slips deeper into the grasp of his oppressors."**
+- **New, the strongest of the turn:** *"Although his physical dominance has helped him survive the fighting pits, with every life he takes he bends further to the will of his oppressors."* — also "submits further".
+- *"I'm not saying any of these are definitive. I'm just testing them out."*
