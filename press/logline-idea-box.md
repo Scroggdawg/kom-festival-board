@@ -8,7 +8,9 @@ Luke: *"i think lock this for now."* Nineteen generations. **62 words.** His wor
 
 > In 1834 South Carolina, an enslaved man is forced to fight for spectacle. But with every victory, he must take the life of one of his own. He stumbles upon the burial ceremony of his fallen opponent, and finds it being held in the ancient Faith of their shared ancestors, who he must now face to decide whether he will kill again.
 
-Shipped as `press/filmfreeway-page-v5.md` / `.docx` (whole logline in red; v4 quoted beneath). "For now" — the file stays append-only if it reopens.
+Shipped as `press/filmfreeway-page-v5.md` / `.docx` (whole logline in red; v4 quoted beneath).
+
+**Reopened the same day** — see Generation 20. The "for now" earned its keep. v5 stands until he picks again.
 
 ---
 
@@ -510,3 +512,32 @@ Luke's final, chosen over B, C and D. He kept his own construction and made thre
 62 words, 330 characters. Fits every FilmFreeway logline field.
 
 **Capital F on "Faith" preserved as dictated** — flagged once as a possible transcription artifact, kept unchanged.
+
+## Generation 20 — Sep 8, reopened. Four changes to the locked version
+
+Luke, unprompted, hours after locking. **66 words, 346 characters** (locked was 62 / 330).
+
+> In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle. But every victory, he must take the life of one of his own. Stumbling upon the burial rites of the man he just killed, he finds the ceremony being held in the ancient Faith of their shared ancestors, who he must now face and decide whether he will kill again.
+
+The four edits, in order:
+
+| | Locked | Gen 20 |
+|---|---|---|
+| 1 | "forced to fight for spectacle" | "forced to fight **to the death** for spectacle" |
+| 2 | "But **with** every victory" | "But every victory" |
+| 3 | "He stumbles upon the burial **ceremony of his fallen opponent**, and finds **it**" | "**Stumbling** upon the burial **rites of the man he just killed**, he finds **the ceremony**" |
+| 4 | "must now face **to** decide" | "must now face **and** decide" |
+
+**Edit 2 is broken and should not ship.** Dropping "with" leaves "every victory" with no grammatical job — it is not a prepositional phrase any more, and it cannot be the subject, because the subject is "he." It reads as a dictation drop, not a choice. Either restore "with," or rebuild the sentence around it ("But every victory means taking the life of one of his own").
+
+**Edit 1 is a clear gain.** "Fight for spectacle" left the question open — fight how, to what end? "To the death" answers it in three words and sets the stakes before sentence 2 confirms them. The cost: sentence 2 now partly restates what sentence 1 just said, so it leans entirely on "one of his own" to earn its place. It still does.
+
+**Edit 3 is split.** "Rites" beats "ceremony" — specific, religious, and it pre-loads "the ancient Faith" two clauses later. "The man he just killed" beats "his fallen opponent" — "fallen opponent" is a euphemism and this film has no use for one; "killed" puts it in his hands. But the sentence trades "ceremony" out and then trades it straight back in ("he finds **the ceremony** being held"), so the word is still there, just moved. And "Stumbling" demotes the stronger of the two verbs to a participle, leaving "finds" to carry the sentence.
+
+**Edit 4 loses something.** "Face **to** decide" makes the confrontation the means of deciding — facing them is what forces it. "Face **and** decide" makes them two separate acts on a list. The causal version is truer to the film.
+
+### The merge — **67 words, 350 characters**
+
+Keeps every gain, restores "with," restores "to decide":
+
+> In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle. But with every victory, he must take the life of one of his own. Stumbling upon the burial rites of the man he just killed, he finds the ceremony being held in the ancient Faith of their shared ancestors, who he must now face to decide whether he will kill again.
