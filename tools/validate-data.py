@@ -9,6 +9,7 @@ This makes the read-back mandatory instead of lucky.
   validate-data.py --provenance also report deadline provenance (advisory)
   validate-data.py --strict     make provenance an error, not a warning
   validate-data.py --write-flags recompute and write the derived closeUnverifiedTier flag
+                                (also stamps flagsComputedAt, so readers can spot staleness)
 
 The flag exists because the campaign dashboard (index.html, another lane's surface)
 wanted the suspect count on the front page. Re-implementing the rule there would
@@ -74,10 +75,20 @@ def d(s):
     except Exception: return None
 
 FLAG = "closeUnverifiedTier"
+STAMP = "flagsComputedAt"
 
 def suspect(f):
     """True when an unverified target's own feesText names a later tier, so its
-    close may be a fee tier rather than the final door -- as SBIFF's was."""
+    close may be a fee tier rather than the final door -- as SBIFF's was.
+
+    KNOWN FALSE-POSITIVE MODE, found Sep 8 2026 on Sundance: "late" is very often
+    the NAME of a festival's final tier, not evidence that a later one exists.
+    Sundance's ladder is early / official / LATE, and its close was correct. So a
+    flag means WORTH CHECKING, never DEFECT -- the only way to clear one is a
+    first-party read. That read is still worth doing: checking Sundance turned up
+    an unresolved premiere-eligibility contradiction that mattered more than
+    the date did.
+    """
     return bool(
         f.get("disposition") == "target"
         and f.get("close")
@@ -149,6 +160,11 @@ def main(argv):
                 stale.append(f"{f.get('id')}: stored {FLAG}={have} but computed {want} — "
                              f"run --write-flags")
     if write_flags and not errs:
+        # Stamp what the flags were computed against. The dashboard cannot otherwise
+        # tell a fresh flag from a stale one: a board publish bumps `rev` without
+        # recomputing, so rev != stamped rev means "these flags predate the data".
+        data[STAMP] = {"rev": data.get("rev"), "at": datetime.date.today().isoformat(),
+                       "flagged": flagged, "by": "tools/validate-data.py --write-flags"}
         json.dump(data, open(PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         open(PATH, "a", encoding="utf-8").write("\n")
         print(f"  wrote {FLAG} — {flagged} record(s) flagged")
