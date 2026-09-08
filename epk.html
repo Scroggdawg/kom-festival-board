@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://api.github.com; form-action 'none'; base-uri 'none'; object-src 'none'">
+<title>Killer of Men — EPK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14213d;--panel:#1b2c4f;--line:#2a3d66;--cream:#f3ecd8;--mute:#b7bdcc;--dim:#7f8aa6}
+*{box-sizing:border-box}html,body{margin:0;background:#0f1930;color:var(--cream);font-family:'Archivo','Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:1.4}
+.bd{max-width:900px;margin:24px auto;background:var(--ink);border-radius:12px;padding:18px 22px 14px;transition:opacity .3s}
+.bd.stale{opacity:.6}
+.top{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.ttl{font-size:20px;font-weight:500}.ttl small{display:block;font-size:12px;color:var(--mute);font-weight:400;margin-top:5px;font-variant-numeric:tabular-nums}
+.sec{margin-top:18px}
+.sh{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:baseline;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.sh .sn{font-variant-numeric:tabular-nums;color:var(--dim);font-size:13px}
+.sh .snm{font-size:15px;font-weight:500}
+.sh .sct{font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums}
+.r{display:grid;grid-template-columns:52px 240px 1fr;gap:12px;align-items:start;padding:7px 0;border-bottom:1px solid rgba(42,61,102,.55)}
+.r .n{font-variant-numeric:tabular-nums;color:var(--dim);font-size:13px;padding-top:1px}
+.r .l{color:var(--cream)}
+.r.empty .l{color:var(--mute)}
+.v{color:var(--mute);white-space:pre-wrap;overflow-wrap:anywhere;cursor:text;border-radius:5px;padding:1px 5px;margin:-1px -5px;min-height:20px;border:1px solid transparent}
+.v:hover{background:rgba(243,236,216,.05)}.v:focus-visible{outline:none;border-color:var(--dim)}
+.v.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.v.none{min-height:20px}
+.more{display:block;margin-top:2px;font-size:11.5px;color:var(--dim);background:none;border:0;padding:0;cursor:pointer;font-family:inherit}
+.ed textarea{width:100%;background:#0f1930;border:1px solid var(--dim);color:var(--cream);border-radius:6px;padding:8px 10px;font:inherit;line-height:1.45;resize:vertical;min-height:64px}
+.ed .row{display:flex;gap:8px;margin-top:8px;align-items:center;flex-wrap:wrap}
+.ed .hintk{font-size:11.5px;color:var(--dim)}
+button.b{font:inherit;font-size:13px;background:transparent;color:var(--cream);border:1px solid var(--line);border-radius:6px;padding:5px 11px;cursor:pointer}
+button.b.pri{border-color:var(--cream)}
+.foot{margin-top:14px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.ctl{color:var(--mute);text-decoration:underline;cursor:pointer}#msg a{color:var(--cream)}#err{color:#e8703a}
+.sheet{margin-top:12px;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--panel);font-size:12.5px}
+.sheet p{margin:0 0 10px;color:var(--mute);line-height:1.5}.sheet b{color:var(--cream);font-weight:500}
+.sheet input[type=password]{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--cream);border-radius:6px;padding:8px 10px;font:inherit}
+.sheet label{display:block;margin:10px 0 4px}.sheet label.inline{display:flex;align-items:center;gap:8px}
+.sheet .row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+@media (max-width:680px){.r,.sh{grid-template-columns:44px 1fr}.r .v,.sh .sct{grid-column:2/-1}.top{grid-template-columns:1fr}}
+</style></head><body>
+<div class="bd" id="bd">
+  <div class="top"><div class="ttl" id="ttl">Killer of Men — EPK<small id="tot">loading…</small></div><div><span id="tokctl"></span></div></div>
+  <div id="list"></div>
+  <div class="foot"><span id="msg"></span><span id="prov">reading press/epk.json…</span></div>
+  <div id="sheet" hidden></div>
+</div>
+<script>
+(function(){
+var last=null,stamp=null,lastGood=null,etag=null,errShown=false,editing=null,base='',dirty=false,pendingRender=false,expanded={};
+var LOCAL=(location.hostname==='localhost'||location.hostname==='127.0.0.1');
+var REPO='Scroggdawg/kom-festival-board',BRANCH='main',FILE='press/epk.json';
+var API='https://api.github.com/repos/'+REPO+'/contents/'+FILE,TOK_S='kom-token';
+var EVERY=LOCAL?3000:10000;
+var ROMAN={'1':'I','2':'II','3':'III','4':'IV','5':'V','6':'VI','7':'VII','8':'VIII','9':'IX','10':'X','11':'XI'};
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function msg(t,isHtml){var m=$('msg');if(isHtml)m.innerHTML=t;else m.textContent=t;}
+function clock(iso){var d=new Date(iso);return isNaN(d)?String(iso):d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});}
+function nowIso(){var d=new Date(),o=-d.getTimezoneOffset(),p=function(n){return(n<10?'0':'')+n;};
+  return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+'T'+p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds())+(o>=0?'+':'-')+p(Math.floor(Math.abs(o)/60))+':'+p(Math.abs(o)%60);}
+function stampOf(d){return d?[d.rev,d.updated,d.updatedBy].join('|'):null;}
+function num(n,mode){var i=String(n).lastIndexOf('.'),head=String(n).slice(0,i),tail=String(n).slice(i);
+  return (mode==='roman'&&ROMAN[head]?ROMAN[head]:head)+tail;}
+/* full match on id, never a prefix: p3-website-url and p1-website-url are one keystroke apart */
+function field(d,id){var hit=null;d.sections.forEach(function(s){s.fields.forEach(function(f){if(f.id===id)hit=f;});});return hit;}
+function counts(d){var n=0,t=0;d.sections.forEach(function(s){s.fields.forEach(function(f){t++;if(f.value.trim())n++;});});return[n,t];}
+
+/* ---------- render: number, label, and what is in it ---------- */
+function render(d){
+  if(editing){pendingRender=true;return;}
+  var mode=d.numbering,html='';
+  d.sections.forEach(function(s){
+    var got=s.fields.filter(function(f){return f.value.trim();}).length;
+    html+='<div class="sec"><div class="sh"><span class="sn">'+esc(num(s.num+'.0',mode).replace(/\.0$/,''))+'</span><span class="snm">'+esc(s.name)+'</span><span class="sct">'+got+' / '+s.fields.length+'</span></div>';
+    s.fields.forEach(function(f){
+      var v=f.value,long=v.length>180,open=!!expanded[f.id];
+      html+='<div class="r'+(v.trim()?'':' empty')+'" data-id="'+esc(f.id)+'">'+
+        '<span class="n">'+esc(num(f.n,mode))+'</span><span class="l">'+esc(f.label)+'</span>'+
+        '<div><div class="v'+(v.trim()?'':' none')+(long&&!open?' clamp':'')+'" tabindex="0" role="button" data-id="'+esc(f.id)+'">'+esc(v)+'</div>'+
+        (long?'<button class="more" data-x="'+esc(f.id)+'" type="button">'+(open?'less':'more')+'</button>':'')+'</div></div>';
+    });
+    html+='</div>';
+  });
+  $('list').innerHTML=html;
+  var c=counts(d);
+  $('tot').textContent=c[0]+' of '+c[1]+' filled';
+  if(d.title)$('ttl').firstChild.textContent=d.title;
+}
+function accept(d){var sp=stampOf(d);if(sp!==stamp){stamp=sp;last=d;render(d);}else last=d;}
+function prov(ageS){
+  if(errShown||!last)return;
+  var where=LOCAL?'local server':(getToken()?'reading GitHub directly':'reading the published copy, about a minute behind');
+  $('prov').textContent='epk.json rev '+last.rev+' · written '+clock(last.updated)+' by '+last.updatedBy+' · checked '+ageS+' s ago · every '+(EVERY/1000)+' s · '+where;
+}
+function showErr(text){errShown=true;$('prov').innerHTML='<span id="err">'+esc(text)+'</span>'+(last?' · last good rev '+esc(last.rev)+', written '+esc(clock(last.updated)):'');}
+
+/* ---------- editing ---------- */
+function closeEditor(reRender){
+  editing=null;dirty=false;
+  if(reRender||pendingRender){pendingRender=false;stamp=null;if(last)render(last);}
+}
+function openEditor(id){
+  if(editing===id||!last)return;
+  if(editing&&dirty&&!confirm('Discard the unsaved edit to '+num(field(last,editing).n,last.numbering)+'?'))return;
+  if(editing)closeEditor(false);
+  var f=field(last,id);if(!f)return;
+  editing=id;dirty=false;base=f.value;
+  var row=document.querySelector('.r[data-id="'+id+'"]');if(!row)return;
+  var cell=row.lastElementChild;
+  cell.innerHTML='<div class="ed"><textarea id="ta"></textarea><div class="row"><button class="b pri" id="sv" type="button">Save</button><button class="b" id="cx" type="button">Cancel</button><span class="hintk" id="hk"></span></div></div>';
+  var ta=$('ta');ta.value=f.value;
+  var grow=function(){ta.style.height='auto';ta.style.height=Math.min(ta.scrollHeight+2,520)+'px';};
+  var count=function(){$('hk').textContent=ta.value.length+' characters · ⌘/Ctrl+Enter saves · Esc cancels';};
+  grow();count();ta.focus();ta.setSelectionRange(ta.value.length,ta.value.length);
+  ta.oninput=function(){dirty=(ta.value!==base);grow();count();};
+  ta.onkeydown=function(e){
+    if(e.key==='Escape'){e.preventDefault();if(!dirty||confirm('Discard this edit?'))closeEditor(true);}
+    if(e.key==='Enter'&&(e.metaKey||e.ctrlKey)){e.preventDefault();commit(id,ta.value);}
+  };
+  $('sv').onclick=function(){commit(id,ta.value);};
+  $('cx').onclick=function(){if(!dirty||confirm('Discard this edit?'))closeEditor(true);};
+}
+function commit(id,value){
+  if(value===base){closeEditor(true);msg('Unchanged; nothing written.');return;}
+  var f=field(last,id),n=num(f.n,last.numbering),prev=base;
+  $('sv').disabled=true;$('cx').disabled=true;
+  (LOCAL?localWrite(id,value,prev,n):ghWrite(id,value,prev,n,0))
+    .then(function(d){dirty=false;closeEditor(true);if(d)accept(d);})
+    .catch(function(e){
+      var s=$('sv'),c=$('cx');if(s)s.disabled=false;if(c)c.disabled=false;
+      /* A conflict must not become a permanent block. Take the value that landed as the
+         new baseline, name it, and let a second Save through — the text it replaces stays
+         in the field's history, so neither side is lost. */
+      if(e&&e.conflict&&editing===id&&last){
+        var fresh=field(last,id);
+        if(fresh){base=fresh.value;if($('sv'))$('sv').textContent='Save anyway';
+          msg(n+' now reads "'+(fresh.value.length>90?fresh.value.slice(0,89)+'…':fresh.value||'(empty)')+
+              '" — nothing was written. Save again to replace it; the text you replace stays in the history.');}
+      }
+    });
+}
+
+/* ---------- token: published copy only. Same key as the board, so one token serves every page ---------- */
+function getToken(){try{return sessionStorage.getItem(TOK_S)||localStorage.getItem(TOK_S);}catch(e){return null;}}
+function forgetToken(){try{sessionStorage.removeItem(TOK_S);localStorage.removeItem(TOK_S);}catch(e){}etag=null;}
+function tokCtl(){if(LOCAL){$('tokctl').textContent='';return;}$('tokctl').innerHTML='<span class="ctl" id="tokbtn">'+(getToken()?'token stored · change':'token…')+'</span>';}
+function tokenSheet(then){
+  var sh=$('sheet');sh.hidden=false;
+  sh.innerHTML='<div class="sheet"><p>Saving a field commits '+esc(FILE)+' in <b>'+esc(REPO)+'</b> through api.github.com. This page sends the token nowhere else. Use a fine-grained token limited to that one repository, Contents read and write, short expiry, from github.com → Settings → Developer settings. Only paste it on this page at its real address. Browser storage on this domain is shared by every page on it — use Forget on a machine you do not own.</p><label>Token</label><input type="password" id="tok" autocomplete="off"><label class="inline"><input type="checkbox" id="tokr">remember on this device (otherwise until this tab closes)</label><div class="row"><button class="b pri" id="tokgo" type="button">Save</button><button class="b" id="tokforget" type="button">Forget stored token</button><button class="b" id="tokx" type="button">Cancel</button></div></div>';
+  $('tokx').onclick=function(){sh.hidden=true;};
+  $('tokforget').onclick=function(){forgetToken();sh.hidden=true;tokCtl();msg('Token forgotten.');};
+  $('tokgo').onclick=function(){var t=($('tok').value||'').trim();if(!t)return;try{($('tokr').checked?localStorage:sessionStorage).setItem(TOK_S,t);}catch(e){}sh.hidden=true;tokCtl();msg('');etag=null;errShown=false;poll();if(then)then();};
+  $('tok').focus();
+}
+function b64(str){var b=new TextEncoder().encode(str),s='';for(var i=0;i<b.length;i+=0x8000)s+=String.fromCharCode.apply(null,b.subarray(i,i+0x8000));return btoa(s);}
+function unb64(c){return new TextDecoder().decode(Uint8Array.from(atob(String(c).replace(/\n/g,'')),function(ch){return ch.charCodeAt(0);}));}
+function ghGet(token,useEtag){
+  var h={Authorization:'Bearer '+token,Accept:'application/vnd.github+json'};
+  if(useEtag&&etag)h['If-None-Match']=etag;
+  return fetch(API+'?ref='+BRANCH,{headers:h,cache:'no-store'}).then(function(r){
+    if(r.status===304)return null;
+    if(r.status===401)throw{code:401};
+    if(r.status===403)throw{code:403,rate:r.headers.get('X-RateLimit-Remaining')==='0'};
+    if(!r.ok)throw new Error('GitHub read failed: '+r.status);
+    if(useEtag)etag=r.headers.get('ETag');
+    return r.json().then(function(j){return{sha:j.sha,data:JSON.parse(unb64(j.content))};});
+  });
+}
+function authFail(e){
+  if(e.code===401){forgetToken();tokCtl();msg('Token rejected — GitHub says it is not valid.');tokenSheet(null);return true;}
+  if(e.code===403){msg(e.rate?'GitHub rate limit reached — it clears within the hour. The token is kept.':'GitHub refused (403). The token may lack Contents write on this repository. It is kept.');return true;}
+  return false;
+}
+/* ---------- writes: guarded by the value the page was showing, never a blind overwrite ---------- */
+function applyChange(d,id,value,prev){
+  var f=field(d,id);
+  if(!f)throw new Error('no field '+id);
+  if(f.value!==prev)throw{conflict:true};
+  f.value=value;
+  f.history=f.history||[];
+  f.history.push({at:nowIso(),by:'epk.html',value:value});   /* every change stamps history; a merge reads nothing else */
+  while(f.history.length>6)f.history.shift();
+  d.rev=(d.rev|0)+1;d.updated=nowIso();d.updatedBy='epk.html';
+  return true;
+}
+function ghWrite(id,value,prev,n,attempt){
+  var token=getToken();
+  if(!token){tokenSheet(function(){ghWrite(id,value,prev,n,0);});return Promise.resolve(null);}
+  msg(attempt?'epk.json moved underneath — retrying…':'Committing '+n+'…');
+  return ghGet(token,false).then(function(g){
+    var d=g.data;
+    try{applyChange(d,id,value,prev);}
+    catch(x){
+      if(x&&x.conflict){msg(n+' was changed elsewhere while you were typing. Nothing written — your text is still in the box.');accept(d);throw x;}
+      throw x;
+    }
+    return fetch(API,{method:'PUT',headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','Content-Type':'application/json'},
+      body:JSON.stringify({message:'epk: '+n+' (rev '+d.rev+')',content:b64(JSON.stringify(d,null,1)),sha:g.sha,branch:BRANCH})
+    }).then(function(put){
+      if(put.status===401)throw{code:401};
+      if(put.status===403)throw{code:403,rate:put.headers.get('X-RateLimit-Remaining')==='0'};
+      if(put.status===409||put.status===422){if(attempt<4)return ghWrite(id,value,prev,n,attempt+1);throw new Error('kept colliding with other writes — try again in a minute');}
+      if(!put.ok)return put.json().catch(function(){return{};}).then(function(b){throw new Error('GitHub write failed ('+put.status+')'+(b.message?': '+b.message:''));});
+      return put.json().catch(function(){return{};}).then(function(j){
+        var sha=j.commit&&j.commit.sha;etag=null;
+        msg(esc(n)+' · committed'+(sha&&/^[0-9a-f]{7,40}$/.test(sha)?' · <a href="https://github.com/'+REPO+'/commit/'+sha+'" rel="noopener">commit</a>':'')+' · the published copy follows in about a minute',true);
+        return d;
+      });
+    });
+  }).catch(function(e){
+    if(!(e&&e.conflict)&&!(e&&authFail(e)))msg('Write failed: '+(e&&e.message||e));
+    throw e;
+  });
+}
+function localWrite(id,value,prev,n){
+  msg(n+' · writing…');
+  return fetch('set',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:id,value:value,prev:prev})})
+    .then(function(r){return r.json().then(function(j){return{ok:r.ok,code:r.status,j:j};});})
+    .then(function(res){
+      if(res.code===409){msg(res.j.error||(n+' was changed elsewhere; nothing written'));if(res.j.data)accept(res.j.data);throw{conflict:true};}  /* accept() first, so the fresh value is the new baseline */
+      if(!res.ok)throw new Error(res.j.error||('HTTP '+res.code));
+      if(!res.j.changed){msg(n+' was already that; nothing written.');return res.j.data;}
+      msg(n+' · saved, publishing…');
+      return res.j.data;
+    })
+    .catch(function(e){if(!(e&&e.conflict))msg('Write failed: '+(e.message||e));throw e;});
+}
+/* ---------- polling ---------- */
+function pushState(){
+  if(!LOCAL)return Promise.resolve();
+  return fetch('status',{cache:'no-store'}).then(function(r){return r.json();}).then(function(s){
+    if(pushState.seen===undefined){pushState.seen=s.pushAt;return;}
+    if(s.pushAt&&s.pushAt!==pushState.seen){pushState.seen=s.pushAt;msg(s.push==='pushed'?'published '+clock(s.pushAt):s.push);}
+  }).catch(function(){});
+}
+function poll(){
+  var tok=!LOCAL&&getToken();
+  var p=tok?ghGet(tok,true).then(function(g){return g?g.data:null;})
+          :fetch(FILE+'?ts='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
+  p.then(function(d){
+    lastGood=Date.now();errShown=false;$('bd').classList.remove('stale');
+    if(d)accept(d);
+    prov(0);
+    return pushState();
+  }).catch(function(e){
+    if(e&&(e.code===401||e.code===403))authFail(e);
+    var age=lastGood?Math.round((Date.now()-lastGood)/1000):null;
+    if(age===null||age*1000>EVERY*3)$('bd').classList.add('stale');
+    showErr((e&&e.message)||('read failed'+(e&&e.code?' ('+e.code+')':'')));
+  });
+}
+document.addEventListener('click',function(e){
+  var t=e.target;if(!t.closest)return;
+  if(t.id==='tokbtn'){tokenSheet(null);return;}
+  var mo=t.closest('.more');if(mo){expanded[mo.dataset.x]=!expanded[mo.dataset.x];stamp=null;if(last)render(last);return;}
+  var v=t.closest('.v');if(v){openEditor(v.dataset.id);return;}
+});
+document.addEventListener('keydown',function(e){
+  var t=e.target;
+  if((e.key==='Enter'||e.key===' ')&&t.classList&&t.classList.contains('v')){e.preventDefault();openEditor(t.dataset.id);}
+});
+window.addEventListener('beforeunload',function(e){if(dirty){e.preventDefault();e.returnValue='';}});
+tokCtl();poll();setInterval(poll,EVERY);
+setInterval(function(){if(last&&lastGood)prov(Math.round((Date.now()-lastGood)/1000));},1000);
+})();
+</script></body></html>

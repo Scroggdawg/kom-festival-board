@@ -1,331 +1,489 @@
 {
- "schema": 1,
- "rev": 2,
- "updated": "2026-09-08T12:09:49-07:00",
- "updatedBy": "luke via worksheet",
- "title": "Killer of Men — EPK worksheet",
- "source": "press/epk-spec.md (11-page structure) + todo.json epk/profile lanes",
- "pages": [
+ "schema": 2,
+ "rev": 0,
+ "updated": "2026-09-08T13:09:02-07:00",
+ "updatedBy": "migration from rev 2",
+ "title": "Killer of Men — EPK",
+ "source": "press/epk-spec.md",
+ "numbering": "decimal",
+ "sections": [
   {
-   "id": "page1",
-   "n": "PAGE 1",
+   "id": "p1",
+   "num": "1",
    "name": "Poster",
-   "note": "",
    "fields": [
     {
-     "label": "Key art / one-sheet",
-     "hint": "does a poster exist?",
-     "value": "YES — a poster exists (Jordan holds it)"
+     "id": "p1-key-art",
+     "n": "1.1",
+     "label": "Key art (poster / one-sheet file)",
+     "value": "Exists — file held by Jordan",
+     "history": [
+      {
+       "at": "2026-09-08T13:09:02-07:00",
+       "by": "migration from rev 2",
+       "value": "Exists — file held by Jordan"
+      }
+     ]
     },
     {
+     "id": "p1-billing-block",
+     "n": "1.2",
      "label": "Billing block",
-     "hint": "AFI presents / cast / HoDs / EPs / writer-director",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "p1-website-url",
+     "n": "1.3",
      "label": "Website URL",
-     "hint": "printed on the poster",
-     "value": "https://www.killerofmen.com/ — OPEN QUESTION: it is the donate page"
+     "value": "https://www.killerofmen.com/",
+     "history": [
+      {
+       "at": "2026-09-08T13:09:02-07:00",
+       "by": "migration from rev 2",
+       "value": "https://www.killerofmen.com/"
+      }
+     ]
     }
    ]
   },
   {
-   "id": "page2",
-   "n": "PAGE 2",
-   "name": "Logline + synopsis",
-   "note": "",
+   "id": "p2",
+   "num": "2",
+   "name": "Logline and synopsis",
    "fields": [
     {
+     "id": "p2-logline",
+     "n": "2.1",
      "label": "Logline",
-     "hint": "pick one of the three, or paste yours",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "p2-synopsis",
+     "n": "2.2",
      "label": "Synopsis",
-     "hint": "~100 words — not yet written",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "p2-hero-still",
+     "n": "2.3",
      "label": "Hero still",
-     "hint": "which frame?",
-     "value": ""
+     "value": "",
+     "history": []
     }
    ]
   },
   {
-   "id": "page3",
-   "n": "PAGE 3",
-   "name": "Specs · team · cast · rights · links",
-   "note": "the programmer page",
+   "id": "p3",
+   "num": "3",
+   "name": "Specs, team, cast, rights, links",
    "fields": [
     {
+     "id": "p3-genre",
+     "n": "3.1",
      "label": "Genre",
-     "hint": "",
-     "value": "historical drama, southern gothic"
+     "value": "Historical drama, southern gothic",
+     "history": [
+      {
+       "at": "2026-09-08T13:09:02-07:00",
+       "by": "migration from rev 2",
+       "value": "Historical drama, southern gothic"
+      }
+     ]
     },
     {
+     "id": "p3-country",
+     "n": "3.2",
      "label": "Country",
-     "hint": "",
-     "value": "United States"
+     "value": "United States",
+     "history": [
+      {
+       "at": "2026-09-08T13:09:02-07:00",
+       "by": "migration from rev 2",
+       "value": "United States"
+      }
+     ]
     },
     {
+     "id": "p3-shooting-location",
+     "n": "3.3",
      "label": "Shooting location",
-     "hint": "where was it shot?",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "p3-production-year",
+     "n": "3.4",
      "label": "Production year",
-     "hint": "",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "p3-completion-year",
+     "n": "3.5",
      "label": "Completion year",
-     "hint": "D.2.6 — the 2026 date decision",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
-     "label": "Language / SRTs",
-     "hint": "English; which subtitle files exist?",
-     "value": ""
+     "id": "p3-language",
+     "n": "3.6",
+     "label": "Language",
+     "value": "English",
+     "history": [
+      {
+       "at": "2026-09-08T13:09:02-07:00",
+       "by": "migration from rev 2",
+       "value": "English"
+      }
+     ]
     },
     {
+     "id": "p3-subtitles",
+     "n": "3.7",
+     "label": "Subtitle files (SRT languages)",
+     "value": "",
+     "history": []
+    },
+    {
+     "id": "p3-duration",
+     "n": "3.8",
      "label": "Duration",
-     "hint": "",
-     "value": "13 minutes"
+     "value": "13 minutes",
+     "history": [
+      {
+       "at": "2026-09-08T13:09:02-07:00",
+       "by": "migration from rev 2",
+       "value": "13 minutes"
+      }
+     ]
     },
     {
+     "id": "p3-aspect-ratio",
+     "n": "3.9",
      "label": "Aspect ratio",
-     "hint": "Yeo",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "p3-frame-rate",
+     "n": "3.10",
      "label": "Frame rate",
-     "hint": "Yeo",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
-     "label": "Shooting format",
-     "hint": "camera / codec — Yeo",
-     "value": ""
+     "id": "p3-shooting-format",
+     "n": "3.11",
+     "label": "Shooting format (camera and codec)",
+     "value": "",
+     "history": []
     },
     {
-     "label": "Exhibition formats",
-     "hint": "2K DCP · 4K DCP · ProRes — Yeo",
-     "value": ""
+     "id": "p3-exhibition-formats",
+     "n": "3.12",
+     "label": "Exhibition formats (DCP, ProRes)",
+     "value": "",
+     "history": []
     },
     {
-     "label": "Sound",
-     "hint": "5.1 / stereo — Yeo",
-     "value": ""
+     "id": "p3-sound",
+     "n": "3.13",
+     "label": "Sound configuration",
+     "value": "",
+     "history": []
     },
     {
-     "label": "The team — 5 HoDs",
-     "hint": "role and name, one per line",
-     "value": ""
+     "id": "p3-heads-of-department",
+     "n": "3.14",
+     "label": "Heads of department (role and name)",
+     "value": "",
+     "history": []
     },
     {
-     "label": "Cast — principals",
-     "hint": "character | actor, one per line",
-     "value": ""
+     "id": "p3-cast-principals",
+     "n": "3.15",
+     "label": "Cast, principals (character and actor)",
+     "value": "",
+     "history": []
     },
     {
-     "label": "Rights + contact",
-     "hint": "",
-     "value": "AFI Conservatory · contact: [NEEDED — a name and email]"
+     "id": "p3-rights-holder",
+     "n": "3.16",
+     "label": "Rights holder",
+     "value": "AFI Conservatory",
+     "history": [
+      {
+       "at": "2026-09-08T13:09:02-07:00",
+       "by": "migration from rev 2",
+       "value": "AFI Conservatory"
+      }
+     ]
     },
     {
-     "label": "Instagram / website / email",
-     "hint": "",
-     "value": ""
+     "id": "p3-press-contact",
+     "n": "3.17",
+     "label": "Press contact (name and email)",
+     "value": "",
+     "history": []
+    },
+    {
+     "id": "p3-instagram",
+     "n": "3.18",
+     "label": "Instagram",
+     "value": "",
+     "history": []
     }
    ]
   },
   {
-   "id": "page4",
-   "n": "PAGE 4",
+   "id": "p4",
+   "num": "4",
    "name": "Director's statement",
-   "note": "",
    "fields": [
     {
+     "id": "p4-statement",
+     "n": "4.1",
      "label": "Statement",
-     "hint": "final draft exists",
-     "value": "[final draft in press/filmfreeway-page-v4.md — awaiting Jordan's approval]"
+     "value": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class, and often the biggest in the room. As I got older, I started noticing how my mere presence was read as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys, even those bigger and stronger than I was. It's never anything overt, but small, incessant microaggressions. Death by a million needles. These interactions have shaped me throughout my life, leaving me hyper-aware of myself in spaces, even in this country I call home. This experience, this reality, is the plight of all Black men in America.\n\nKiller of Men is an expression of pain: absolute brutality and suffering. But it's also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I'm putting on the screen.\n\nThe concept of Mandingo fighting has always fascinated me. It's a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history and in the media. It has always been used to showcase the animalistic Black brute. Rarely, if ever, has an audience been invited into the subjective perspective of the fighters themselves. What are their lives like? What do they hold dear? What keeps a man going when he's put in a situation like that?\n\nSetting this film during the period of American slavery, rather than in the present day or during the 1960s, allows me to examine the deep-seated historical roots of this aggression. Visually, I wanted the fight scenes to reflect the physical sports Black men often participate in, body slams, boxing, football tackles, to illustrate history repeating itself through various forms of expression. Early 1800s America also gave me the chance to explore my own heritage. With American chattel slavery at its peak and the transatlantic trade still bringing enslaved people ashore every year, we can examine themes we still recognize today as they were in the darkest hour of African Americans.\n\nA critical piece of this film is the spirituality of the enslaved at the time: their mix of cultures, beliefs and religions that slowly formed what we now recognize as Black culture. Killer of Men has been a grueling process, one that's forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won't shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do.",
+     "history": [
+      {
+       "at": "2026-09-08T13:09:02-07:00",
+       "by": "migration from rev 2",
+       "value": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class, and often the biggest in the room. As I got older, I started noticing how my mere presence was read as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys, even those bigger and stronger than I was. It's never anything overt, but small, incessant microaggressions. Death by a million needles. These interactions have shaped me throughout my life, leaving me hyper-aware of myself in spaces, even in this country I call home. This experience, this reality, is the plight of all Black men in America.\n\nKiller of Men is an expression of pain: absolute brutality and suffering. But it's also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I'm putting on the screen.\n\nThe concept of Mandingo fighting has always fascinated me. It's a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history and in the media. It has always been used to showcase the animalistic Black brute. Rarely, if ever, has an audience been invited into the subjective perspective of the fighters themselves. What are their lives like? What do they hold dear? What keeps a man going when he's put in a situation like that?\n\nSetting this film during the period of American slavery, rather than in the present day or during the 1960s, allows me to examine the deep-seated historical roots of this aggression. Visually, I wanted the fight scenes to reflect the physical sports Black men often participate in, body slams, boxing, football tackles, to illustrate history repeating itself through various forms of expression. Early 1800s America also gave me the chance to explore my own heritage. With American chattel slavery at its peak and the transatlantic trade still bringing enslaved people ashore every year, we can examine themes we still recognize today as they were in the darkest hour of African Americans.\n\nA critical piece of this film is the spirituality of the enslaved at the time: their mix of cultures, beliefs and religions that slowly formed what we now recognize as Black culture. Killer of Men has been a grueling process, one that's forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won't shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do."
+      }
+     ]
     },
     {
+     "id": "p4-photo-behind",
+     "n": "4.2",
      "label": "Photo behind the text",
-     "hint": "which still?",
-     "value": ""
+     "value": "",
+     "history": []
     }
    ]
   },
   {
-   "id": "page5_6",
-   "n": "PAGES 5–6",
-   "name": "Filmmaker bios",
-   "note": "~150 words each",
+   "id": "p5",
+   "num": "5",
+   "name": "Filmmaker bios (pages 5–6)",
    "fields": [
     {
-     "label": "Director — Jordan Betine",
-     "hint": "MFA tense + 'why he directs' open",
-     "value": "[draft in filmfreeway-page-v4.md — 2 brackets for Jordan]"
+     "id": "p5-bio-director",
+     "n": "5.1",
+     "label": "Director bio — Jordan Betine",
+     "value": "Jordan Betine [earned / is completing] his MFA in Directing at the American Film Institute. A Nigerian-American filmmaker raised between Lagos, Nigeria, and Ashburn, Virginia, he holds a film degree from Howard University. [He grew up hyper-aware of how a Black man's presence is read in a room; he directs to put that awareness on screen, telling difficult stories that honor his ancestors and his culture.] His work explores power, identity, and the African diaspora.",
+     "history": [
+      {
+       "at": "2026-09-08T13:09:02-07:00",
+       "by": "migration from rev 2",
+       "value": "Jordan Betine [earned / is completing] his MFA in Directing at the American Film Institute. A Nigerian-American filmmaker raised between Lagos, Nigeria, and Ashburn, Virginia, he holds a film degree from Howard University. [He grew up hyper-aware of how a Black man's presence is read in a room; he directs to put that awareness on screen, telling difficult stories that honor his ancestors and his culture.] His work explores power, identity, and the African diaspora."
+      }
+     ]
     },
     {
-     "label": "Producer",
-     "hint": "who is the producer? their own bio",
-     "value": ""
+     "id": "p5-bio-producer",
+     "n": "5.2",
+     "label": "Producer bio",
+     "value": "",
+     "history": []
     },
     {
-     "label": "Cinematographer",
-     "hint": "Luke — answer 'why do you shoot'",
-     "value": ""
+     "id": "p5-bio-cinematographer",
+     "n": "5.3",
+     "label": "Cinematographer bio — Luke Scroggins",
+     "value": "",
+     "history": []
     },
     {
-     "label": "Production designer",
-     "hint": "",
-     "value": ""
+     "id": "p5-bio-production-designer",
+     "n": "5.4",
+     "label": "Production designer bio",
+     "value": "",
+     "history": []
     },
     {
-     "label": "Editor",
-     "hint": "",
-     "value": ""
+     "id": "p5-bio-editor",
+     "n": "5.5",
+     "label": "Editor bio",
+     "value": "",
+     "history": []
     },
     {
+     "id": "p5-headshots",
+     "n": "5.6",
      "label": "Headshots",
-     "hint": "who has sent theirs?",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
-     "label": "IG / IMDb links",
-     "hint": "one per person",
-     "value": ""
+     "id": "p5-links",
+     "n": "5.7",
+     "label": "Instagram and IMDb links",
+     "value": "",
+     "history": []
     }
    ]
   },
   {
-   "id": "page7",
-   "n": "PAGE 7",
+   "id": "p7",
+   "num": "7",
    "name": "Cast",
-   "note": "one page per principal",
    "fields": [
     {
+     "id": "p7-cast-bios",
+     "n": "7.1",
      "label": "Cast bios",
-     "hint": "character | actor + credits-forward bio",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "p7-stills-in-character",
+     "n": "7.2",
      "label": "Stills in character",
-     "hint": "frames from the film, not headshots",
-     "value": ""
+     "value": "",
+     "history": []
     }
    ]
   },
   {
-   "id": "page8",
-   "n": "PAGE 8",
-   "name": "BTS mosaic",
-   "note": "8–12 set photos",
+   "id": "p8",
+   "num": "8",
+   "name": "Behind the scenes",
    "fields": [
     {
+     "id": "p8-bts-photos",
+     "n": "8.1",
      "label": "BTS photos",
-     "hint": "Jordan's drives — or the crew's phones",
-     "value": ""
+     "value": "",
+     "history": []
     }
    ]
   },
   {
-   "id": "page9",
-   "n": "PAGE 9",
-   "name": "Key credits + full cast",
-   "note": "",
+   "id": "p9",
+   "num": "9",
+   "name": "Key credits and full cast",
    "fields": [
     {
+     "id": "p9-key-credits",
+     "n": "9.1",
      "label": "Key credits",
-     "hint": "writer-dir · producer · DP · PD · editor · composer · sound · casting · EPs",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "p9-full-cast",
+     "n": "9.2",
      "label": "Full cast",
-     "hint": "character | actor",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
-     "label": "Still behind",
-     "hint": "",
-     "value": ""
+     "id": "p9-still-behind",
+     "n": "9.3",
+     "label": "Still behind the credits",
+     "value": "",
+     "history": []
     }
    ]
   },
   {
-   "id": "page10",
-   "n": "PAGE 10",
+   "id": "p10",
+   "num": "10",
    "name": "Full crew",
-   "note": "two role/name columns",
    "fields": [
     {
+     "id": "p10-full-crew",
+     "n": "10.1",
      "label": "Full crew",
-     "hint": "straight from the end-credit roll",
-     "value": ""
+     "value": "",
+     "history": []
     }
    ]
   },
   {
-   "id": "page11",
-   "n": "PAGE 11",
-   "name": "Thanks + AFI end card",
-   "note": "",
+   "id": "p11",
+   "num": "11",
+   "name": "Thanks and AFI end card",
    "fields": [
     {
+     "id": "p11-thanks",
+     "n": "11.1",
      "label": "Thanks list",
-     "hint": "",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "p11-partner-logos",
+     "n": "11.2",
      "label": "Partner logos",
-     "hint": "",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
-     "label": "AFI boilerplate + fellows",
-     "hint": "property notice · partial fulfilment · fellows by discipline · © AFI",
-     "value": ""
+     "id": "p11-afi-boilerplate",
+     "n": "11.3",
+     "label": "AFI boilerplate and fellows",
+     "value": "",
+     "history": []
     }
    ]
   },
   {
    "id": "assets",
-   "n": "ASSETS",
-   "name": "Cross-cutting",
-   "note": "",
+   "num": "A",
+   "name": "Assets",
    "fields": [
     {
+     "id": "a-stills",
+     "n": "A.1",
      "label": "Stills",
-     "hint": "surreal · opening · colour ending · best twelve",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "a-trailer",
+     "n": "A.2",
      "label": "Trailer",
-     "hint": "Yeo",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "a-laurels",
+     "n": "A.3",
      "label": "Laurels",
-     "hint": "ABFF · Martha's Vineyard · SCAD",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
+     "id": "a-drive-folders",
+     "n": "A.4",
      "label": "Drive folders",
-     "hint": "00 PRESS / BTS · HEADSHOTS · POSTER · STILLS · TRAILER",
-     "value": ""
+     "value": "",
+     "history": []
     },
     {
-     "label": "Jordan's 60-sec intro",
-     "hint": "",
-     "value": ""
+     "id": "a-intro",
+     "n": "A.5",
+     "label": "60-second introduction",
+     "value": "",
+     "history": []
     },
     {
-     "label": "Screenings & awards",
-     "hint": "",
-     "value": "ABFF 2026 · Martha's Vineyard AAFF 2026 · SCAD Savannah 2026"
+     "id": "a-screenings",
+     "n": "A.6",
+     "label": "Screenings and awards",
+     "value": "ABFF 2026 · Martha's Vineyard AAFF 2026 · SCAD Savannah 2026",
+     "history": [
+      {
+       "at": "2026-09-08T13:09:02-07:00",
+       "by": "migration from rev 2",
+       "value": "ABFF 2026 · Martha's Vineyard AAFF 2026 · SCAD Savannah 2026"
+      }
+     ]
     }
    ]
   }

@@ -28,43 +28,49 @@ HAVE = colors.HexColor("#1e8f5a"); SELF = colors.HexColor("#2b7cb8"); BLK = colo
 PAPER = colors.HexColor("#fbfaf6"); BODY = colors.HexColor("#2c2c2c")
 COL = {"have": HAVE, "self": SELF, "blk": BLK}
 
-# who holds each field: label -> (status, note). Status is overridden to "have"
-# when epk.json carries a value, unless the field is blocked on a person.
+# who holds each field: stable id -> (status, note). Keyed by id, not by the label —
+# a label can be reworded, and a lookup that misses would silently downgrade a row.
+# Status is overridden to "have" when epk.json carries a value, unless the field is
+# blocked on a person.
 HOLD = {
- "Key art / one-sheet": ("have", "exists — Jordan holds the file"), "Billing block": ("self", "from end credits"),
- "Website URL": ("blk", "donate page — decide"), "Logline": ("have", "3 finalists — pick one"),
- "Synopsis": ("self", "3 drafts written — pick one"), "Hero still": ("blk", "master access"),
- "Genre": ("have", ""), "Country": ("have", ""), "Shooting location": ("self", "where was it shot?"),
- "Production year": ("blk", "with the date decision"), "Completion year": ("blk", "a 2026 date before Apr 24"),
- "Language / SRTs": ("blk", "Yeo"), "Duration": ("have", ""), "Aspect ratio": ("blk", "Yeo"),
- "Frame rate": ("blk", "Yeo"), "Shooting format": ("blk", "Yeo"), "Exhibition formats": ("blk", "Yeo"),
- "Sound": ("blk", "Yeo"), "The team — 5 HoDs": ("self", "end credits"),
- "Cast — principals": ("self", "end credits — do not guess"), "Rights + contact": ("self", "needs a name and email"),
- "Instagram / website / email": ("self", "verify the IG target"), "Statement": ("have", "final draft — needs Jordan"),
- "Photo behind the text": ("blk", "master access"), "Director — Jordan Betine": ("have", "draft — 2 brackets for Jordan"),
- "Producer": ("self", "who is the producer?"), "Cinematographer": ("self", 'LUKE — "why do you shoot"'),
- "Production designer": ("self", "writes their own"), "Editor": ("self", "writes their own"),
- "Headshots": ("self", "ask each person"), "IG / IMDb links": ("self", "ask each person"),
- "Cast bios": ("self", "end credits + IMDb"), "Stills in character": ("blk", "master access"),
- "BTS photos": ("blk", "Jordan drives — or crew phones"), "Key credits": ("self", "end credits"),
- "Full cast": ("self", "end credits"), "Still behind": ("blk", "master access"), "Full crew": ("self", "end credits"),
- "Thanks list": ("self", "end credits"), "Partner logos": ("self", "end credits"),
- "AFI boilerplate + fellows": ("self", "end credits"), "Stills": ("blk", "master access"), "Trailer": ("blk", "Yeo"),
- "Laurels": ("self", "email the 3 festivals"), "Drive folders": ("self", "30 min, no dependencies"),
- "Jordan's 60-sec intro": ("blk", "Jordan"), "Screenings & awards": ("have", ""),
+ "p1-key-art": ("have", "exists — Jordan holds the file"), "p1-billing-block": ("self", "from end credits"),
+ "p1-website-url": ("blk", "donate page — decide"), "p2-logline": ("have", "3 finalists — pick one"),
+ "p2-synopsis": ("self", "3 drafts written — pick one"), "p2-hero-still": ("blk", "master access"),
+ "p3-genre": ("have", ""), "p3-country": ("have", ""), "p3-shooting-location": ("self", "where was it shot?"),
+ "p3-production-year": ("blk", "with the date decision"), "p3-completion-year": ("blk", "a 2026 date before Apr 24"),
+ "p3-language": ("have", ""), "p3-subtitles": ("blk", "Yeo"), "p3-duration": ("have", ""),
+ "p3-aspect-ratio": ("blk", "Yeo"), "p3-frame-rate": ("blk", "Yeo"), "p3-shooting-format": ("blk", "Yeo"),
+ "p3-exhibition-formats": ("blk", "Yeo"), "p3-sound": ("blk", "Yeo"),
+ "p3-heads-of-department": ("self", "end credits"), "p3-cast-principals": ("self", "end credits — do not guess"),
+ "p3-rights-holder": ("have", ""), "p3-press-contact": ("self", "needs a name and email"),
+ "p3-instagram": ("self", "verify the IG target"), "p4-statement": ("have", "final draft — needs Jordan"),
+ "p4-photo-behind": ("blk", "master access"), "p5-bio-director": ("have", "draft — 2 brackets for Jordan"),
+ "p5-bio-producer": ("self", "who is the producer?"), "p5-bio-cinematographer": ("self", 'LUKE — "why do you shoot"'),
+ "p5-bio-production-designer": ("self", "writes their own"), "p5-bio-editor": ("self", "writes their own"),
+ "p5-headshots": ("self", "ask each person"), "p5-links": ("self", "ask each person"),
+ "p7-cast-bios": ("self", "end credits + IMDb"), "p7-stills-in-character": ("blk", "master access"),
+ "p8-bts-photos": ("blk", "Jordan drives — or crew phones"), "p9-key-credits": ("self", "end credits"),
+ "p9-full-cast": ("self", "end credits"), "p9-still-behind": ("blk", "master access"),
+ "p10-full-crew": ("self", "end credits"), "p11-thanks": ("self", "end credits"),
+ "p11-partner-logos": ("self", "end credits"), "p11-afi-boilerplate": ("self", "end credits"),
+ "a-stills": ("blk", "master access"), "a-trailer": ("blk", "Yeo"),
+ "a-laurels": ("self", "email the 3 festivals"), "a-drive-folders": ("self", "30 min, no dependencies"),
+ "a-intro": ("blk", "Jordan"), "a-screenings": ("have", ""),
 }
 ROW, HEAD, GAP = 9.4, 12.0, 6.5
 
 def main():
     D = json.load(open(SRC, encoding="utf-8"))
-    blocks = []
-    for p in D["pages"]:
+    blocks, unknown = [], []
+    for p in D["sections"]:
         rows = []
         for f in p["fields"]:
-            st, note = HOLD.get(f["label"], ("self", f.get("hint", "")))
+            if f["id"] not in HOLD: unknown.append(f["n"])
+            st, note = HOLD.get(f["id"], ("self", ""))
             if f.get("value") and st != "blk": st = "have"
-            rows.append((f["label"], st, note))
-        blocks.append((p["n"], p["name"], rows, HEAD + len(rows) * ROW + GAP))
+            rows.append((f["n"], f["label"], st, note))
+        blocks.append((p["num"], p["name"], rows, HEAD + len(rows) * ROW + GAP))
+    if unknown: print("WARNING: no holder recorded for " + ", ".join(unknown) + " — add them to HOLD")
 
     half = sum(b[3] for b in blocks) / 2
     c1, c2, run = [], [], 0
@@ -77,9 +83,9 @@ def main():
     c.setFillColor(PAPER); c.rect(0, 0, W, H, fill=1, stroke=0)
     y = H - M
     c.setFillColor(INK); c.setFont("Helvetica-Bold", 16.5); c.drawString(M, y - 4, "KILLER OF MEN — EPK breakdown")
-    n = sum(len(p["fields"]) for p in D["pages"])
+    n = sum(len(p["fields"]) for p in D["sections"])
     c.setFont("Helvetica", 8.5); c.setFillColor(MUT)
-    c.drawRightString(W - M, y - 3, f"{len(D['pages'])} sections · {n} fields · rev {D.get('rev')} · {D.get('updated','')[:10]}")
+    c.drawRightString(W - M, y - 3, f"{len(D['sections'])} sections · {n} fields · rev {D.get('rev')} · {D.get('updated','')[:10]}")
     y -= 17; c.setStrokeColor(INK); c.setLineWidth(1.1); c.line(M, y, W - M, y); y -= 13
     c.setFont("Helvetica", 8); lx = M
     for k, lab in (("have", "have it"), ("self", "you can get it — nobody blocking"), ("blk", "waiting on someone")):
@@ -90,12 +96,13 @@ def main():
 
     def draw(col, x, top):
         cy = top
-        for num, name, rows, _ in col:
-            c.setFillColor(INK); c.setFont("Helvetica-Bold", 8.8); c.drawString(x, cy, f"{num}   {name}")
+        for secnum, name, rows, _ in col:
+            c.setFillColor(INK); c.setFont("Helvetica-Bold", 8.8); c.drawString(x, cy, f"{secnum}   {name}")
             cy -= 2.5; c.setStrokeColor(RULE); c.setLineWidth(0.5); c.line(x, cy, x + CW, cy); cy -= 8.6
-            for lab, st, note in rows:
+            for n, lab, st, note in rows:
                 c.setFillColor(COL[st]); c.rect(x, cy - 0.6, 4.5, 4.5, fill=1, stroke=0)
-                c.setFillColor(BODY); c.setFont("Helvetica", 7.5); c.drawString(x + 8, cy, lab)
+                c.setFillColor(MUT); c.setFont("Helvetica", 7.5); c.drawString(x + 8, cy, n)
+                c.setFillColor(BODY); c.drawString(x + 30, cy, lab)
                 if note:
                     c.setFillColor(MUT); c.setFont("Helvetica-Oblique", 6.7); c.drawRightString(x + CW, cy, note)
                 cy -= ROW
