@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "rev": 41,
- "updated": "2026-09-08T13:37:00-07:00",
+ "rev": 43,
+ "updated": "2026-09-08T13:38:13-07:00",
  "updatedBy": "merge",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
@@ -155,7 +155,7 @@
      "id": "D.2.1",
      "title": "Send Jordan the draft of logline, bio and statement and the scope of page changes — press/filmfreeway-page-v5.md; he approves the direction once",
      "owner": "Luke",
-     "waitingOn": "Jordan · MFA tense (E.2)",
+     "waitingOn": null,
      "due": null,
      "status": "not_started",
      "history": [
@@ -169,6 +169,12 @@
        "status": "not_started",
        "by": "todo.py title",
        "field": "title"
+      },
+      {
+       "at": "2026-09-08T13:38:12-07:00",
+       "status": "not_started",
+       "by": "todo.py waiting",
+       "field": "waitingOn"
       }
      ]
     },
