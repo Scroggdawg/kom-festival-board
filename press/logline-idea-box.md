@@ -2,6 +2,16 @@
 
 *Every logline, fragment and phrase Luke has dictated for Killer of Men, in order, in his words. Transcription noise cleaned only where the intent is unambiguous; `[?]` marks a guess. Nothing here is Claude's — Claude's takes are in `press/logline-studio.md`. This file is append-only; new dictation goes at the bottom.*
 
+## LOCKED — September 8, 2026
+
+Luke: *"i think lock this for now."* Nineteen generations. **62 words.** His wording, verbatim.
+
+> In 1834 South Carolina, an enslaved man is forced to fight for spectacle. But with every victory, he must take the life of one of his own. He stumbles upon the burial ceremony of his fallen opponent, and finds it being held in the ancient Faith of their shared ancestors, who he must now face to decide whether he will kill again.
+
+Shipped as `press/filmfreeway-page-v5.md` / `.docx` (whole logline in red; v4 quoted beneath). "For now" — the file stays append-only if it reopens.
+
+---
+
 ## Where it started (the page as it stood, Sep 6)
 
 > Killer of Men follows Mace, an enslaved man forced into mandingo fights. After killing an opponent, he stumbles upon the burial of the man he killed, igniting a reckoning with guilt, faith, and the violence shaping his life and identity.
@@ -482,3 +492,21 @@ Two versions offered, plus two hybrids.
 **B's mechanism, and why it wins:** "who" points straight back at *ancestors* with a single pronoun. No re-naming, no drift, and the ancestors remain the grammatical object of "face" — they are the ones he confronts.
 
 **Recommendation: D at 56, or B at 60 if his exact wording is preferred.** D takes his "When" opening (which gives the sentence a beat), drops "and finds it" to a participial "held in" (saves three words), and keeps "face them" pointing at the ancestors. Every word in D is his except the participle.
+
+## Generation 19 — Sep 8. LOCKED
+
+Luke's final, chosen over B, C and D. He kept his own construction and made three changes to B:
+
+| | B (offered) | Locked |
+|---|---|---|
+| Opening of sentence 3 | "When he stumbles upon…" | "He stumbles upon…" — no subordinate clause; it stands as its own sentence |
+| Word order | "his fallen opponent's burial ceremony" | "the burial ceremony of his fallen opponent" — ends the phrase on *opponent*, right before the turn |
+| Participle | "finds it held" | "finds it being held" — the ceremony is in progress, happening as he walks in |
+
+**"being" is doing real work.** "Held" is a fact about the ceremony; "being held" is something he is interrupting. He walked in on it. The extra word buys present tense inside a past-tense sentence — worth the two characters.
+
+**Word order buys the pivot.** Ending on "his fallen opponent," puts the comma exactly where the film turns, and the ancestors arrive in the next breath.
+
+62 words, 330 characters. Fits every FilmFreeway logline field.
+
+**Capital F on "Faith" preserved as dictated** — flagged once as a possible transcription artifact, kept unchanged.
