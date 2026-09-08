@@ -242,3 +242,23 @@ the speed of his hands · his strength · the ferocity that has kept him alive �
 - On #2: *"the violence that has kept him alive costs him another piece of his humanity — this is the crux right here, we're right there."*
 - *"I'd rather five or six really fucking good ones… what's missing is the part that makes me want to watch that fucking movie. Revisit Joan — it's got to be enticing. Turn up the enticing."*
 - Asked why the 59-word "whose physical dominance" version was not in the six → now carried in `logline-top-versions.md` Part 1 as version A.
+
+## Generation 13 — Sep 7, night. Rejections and the deep pass
+
+**Rejected, all of them, in his words:**
+
+- "no right to mourn" — *"I don't love it. That's just not that enticing."*
+- "the right to be buried among his own" — *"not that enticing. Come on, man."*
+- "grieve a man he killed" — *"not that enticing"*
+- "a faith he no longer has the right to claim" — *"not that enticing"*
+- "owner's sport" — *"we got rid of that already. I don't like it."*
+- "hardened him past recognition" — *"a good idea but they're not the right words."*
+
+**The lesson:** the entire Tier-1 "a right he has lost" framing failed. It is legalistic and cold. Enticement is not a legal predicament.
+
+**Kept from this round:**
+
+- **"an enslaved prizefighter is forced to survive by killing his own"** — his refinement of #1
+- *"Stick to — I don't want us to get too far from the ones that we like."*
+
+**His instruction:** *"Draw me into the movie… I want to see you do some deep work on this. Review it several times, and don't change it just for the sake of changing it — in the review you might nail it the first time."*
