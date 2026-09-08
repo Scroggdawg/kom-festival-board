@@ -57,11 +57,14 @@ function board(d){
   var up=ver.filter(function(x){return x.close&&days(x.close)!==null&&days(x.close)>=0;})
            .sort(function(a,b){return a.close<b.close?-1:1;})[0];
   var prem=(d.premieres||[]).filter(function(p){return p.state==='available';}).length;
+  // read the flag the board's validator writes; the rule lives there, not here
+  var tier=t.filter(function(x){return x.closeUnverifiedTier;}).length;
   return'<h2><a href="board.html">Festival board</a></h2>'+
     '<div class="big">'+t.length+'<span>targets of '+f.length+' researched</span></div>'+bar(t.length,f.length)+
     rows([
       ['next deadline', up?esc(short(up.name))+' '+fmt(up.close)+' · '+when(days(up.close)):'none verified yet'],
       ['verified at the festival', ver.length+' of '+t.length, ver.length<t.length],
+      ['may be a price step', tier, tier>0],
       ['premieres available', prem]
     ]);
 }
