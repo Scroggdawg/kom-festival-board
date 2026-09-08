@@ -34,7 +34,7 @@ COL = {"have": HAVE, "self": SELF, "blk": BLK}
 # blocked on a person.
 HOLD = {
  "p1-key-art": ("have", "exists — Jordan holds the file"), "p1-billing-block": ("self", "from end credits"),
- "p1-website-url": ("blk", "donate page — decide"), "p2-logline": ("have", "3 finalists — pick one"),
+ "p1-website-url": ("blk", "donate page — decide"), "p2-logline": ("blk", "2 versions — with Jordan"),
  "p2-synopsis": ("self", "3 drafts written — pick one"), "p2-hero-still": ("blk", "master access"),
  "p3-genre": ("have", ""), "p3-country": ("have", ""), "p3-shooting-location": ("self", "where was it shot?"),
  "p3-production-year": ("blk", "with the date decision"), "p3-completion-year": ("blk", "a 2026 date before Apr 24"),

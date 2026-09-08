@@ -24,6 +24,13 @@ Numbers are permanent. A field's number is how Luke refers to it when he sends
 material, so save() refuses any change that moves an existing id to a different
 number or a different section. New fields are appended to the end of their section.
 
+A field may carry `options`: two or more candidate values, none of them primary,
+for a slot whose text is written but whose choice is still out with someone. The
+field's `value` stays empty until a choice comes back, and choosing copies the
+stored bytes rather than retyping them. `options` is a record, not a draft folder —
+nothing here privileges the first entry, and a free edit to `value` is always
+allowed and does not have to match any of them.
+
 push() rebases by resetting to origin, which throws away uncommitted work. It
 therefore runs only in a checkout marked `.epk-clone` — a clone kept for the EPK
 alone — and only when epk.json is the sole modified file. Anywhere else it commits
@@ -95,8 +102,8 @@ def check(d):
     cannot drift out of them. The one that matters most: a value and its history
     cannot disagree, because the history is what a merge reads."""
     errs = []
-    if d.get("schema") != 2:
-        errs.append("schema must be 2")
+    if d.get("schema") != 3:
+        errs.append("schema must be 3")
     if not isinstance(d.get("rev"), int):
         errs.append("rev must be a whole number")
     if not _iso_stamp(d.get("updated")):
@@ -162,6 +169,23 @@ def check(d):
                     errs.append(f"{n}: a history entry has no value")
             if isinstance(v, str) and current(f) != v:
                 errs.append(f"{n}: value and history disagree; the merge would read the history")
+            if "options" in f:
+                o = f["options"]
+                if not isinstance(o, list) or len(o) < 2:
+                    errs.append(f"{n}: options must be two or more candidates, or absent")
+                else:
+                    keys = set()
+                    for c in o:
+                        if not isinstance(c, dict) or not _filled(c.get("key")):
+                            errs.append(f"{n}: an option has no key")
+                        elif c["key"] in keys:
+                            errs.append(f"{n}: duplicate option key {c['key']}")
+                        else:
+                            keys.add(c["key"])
+                        if not isinstance(c.get("value"), str):
+                            errs.append(f"{n}: option {c.get('key')} has no value")
+                        if "note" in c and not isinstance(c["note"], str):
+                            errs.append(f"{n}: option {c.get('key')} has a non-text note")
         if seq != sorted(seq):
             errs.append(f"section {num}: numbers are out of order — new fields go at the end")
     return errs
@@ -171,7 +195,7 @@ def check_stable(new, base):
     """Numbers are how Luke refers to fields. An id that already exists must keep the
     number and the section it was given. Returns a list of violations. A baseline from
     before schema 2 carries no numbers, so there is nothing it can pin."""
-    if not isinstance(base, dict) or base.get("schema") != 2:
+    if not isinstance(base, dict) or base.get("schema", 0) < 2:
         return []
     was = {f["id"]: (s["id"], f["n"]) for s, f in fields(base)}
     errs = []
@@ -206,6 +230,28 @@ def set_value(d, ref, value, by="epk.py", expect=None):
     f["value"] = value
     h = f.setdefault("history", [])
     h.append({"at": now(), "by": by, "value": value})
+    del h[:-HISTORY_KEEP]
+    return True
+
+
+def set_options(d, ref, options, by="epk.py"):
+    """Attach or replace a field's candidates. Stamps history at the field's current
+    value — an options change with no history entry would look identical to the other
+    machine's copy and be discarded by the merge, which is the failure the Docket lane
+    hit with status-free field edits."""
+    s, f = find(d, ref)
+    if options is None:
+        if "options" not in f:
+            return False
+        del f["options"]
+    else:
+        if not isinstance(options, list) or len(options) < 2:
+            raise ValueError("options must be two or more candidates")
+        if f.get("options") == options:
+            return False
+        f["options"] = options
+    h = f.setdefault("history", [])
+    h.append({"at": now(), "by": by, "value": f["value"]})
     del h[:-HISTORY_KEEP]
     return True
 
@@ -263,10 +309,15 @@ def merge(local, remote):
             continue
         hist = _union_history(rf, lf)
         winner = lf if _last_at(lf) > _last_at(rf) else rf
-        if winner["value"] != rf["value"] or hist != (rf.get("history") or []):
+        if winner["value"] != rf["value"] or hist != (rf.get("history") or []) \
+           or winner.get("options") != rf.get("options"):
             changed = True
         rf["history"] = hist
         rf["value"] = hist[-1]["value"] if hist else winner["value"]
+        if "options" in winner:                # candidates travel with the side that wrote last
+            rf["options"] = winner["options"]
+        else:
+            rf.pop("options", None)
     if lmap:                                   # fields this machine has that the remote lacks
         by_section = {s["id"]: s for s in merged["sections"]}
         for s, f in fields(local):
@@ -417,11 +468,18 @@ def main(a):
                 print(f"\n{s['num']}  {s['name']}  {got}/{len(s['fields'])}")
                 for f in s["fields"]:
                     v = " ".join(f["value"].split())
+                    if not v and f.get("options"):
+                        v = "undecided between " + ", ".join(c["key"] for c in f["options"])
                     if not show_all and len(v) > 60:
                         v = v[:59] + "…"
                     print(f"  {label_of(f['n'], d['numbering']):>6}  {f['label'][:34]:34} {v}")
+                    if show_all:
+                        for c in f.get("options") or []:
+                            print(f"          {c['key']}: {c['value']}")
             n = sum(1 for _, f in fields(d) if f["value"].strip())
-            print(f"\n{n} of {sum(1 for _ in fields(d))} filled · rev {d['rev']}")
+            pend = sum(1 for _, f in fields(d) if not f["value"].strip() and f.get("options"))
+            print(f"\n{n} of {sum(1 for _ in fields(d))} filled"
+                  + (f" · {pend} undecided" if pend else "") + f" · rev {d['rev']}")
         elif cmd == "get":
             print(find(d, a[1])[1]["value"])
         elif cmd == "check":
