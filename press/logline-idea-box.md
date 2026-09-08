@@ -392,3 +392,61 @@ What survives is a much smaller, purely aesthetic point: **"ancient faith" is a 
 | the Yoruba rites their ancestors **kept for a thousand years** | 62 | Name and duration together |
 
 **Recommendation: name it Yoruba.** It is heavier than "ancient" because it is specific rather than atmospheric, it is the one word that tells a programmer they have not seen this film, and it costs nothing. If more mass is still wanted, *"a faith older than the country that owns him"* makes the case rather than claiming it — and it is arithmetically true.
+
+## Generation 17 — Sep 8. The final clause, and everything before it locked
+
+**LOCKED, his ruling: "ancient" stays. Everything up to "shared ancestors" is settled.**
+
+> In 1834 South Carolina, an enslaved man is forced to fight for spectacle. But with every victory, he must take the life of one of his own. He stumbles upon his fallen opponent's burial ceremony and finds it held in the ancient faith of their shared ancestors, **___**
+
+### The fifteen fills, grouped by what the sentence lands on
+
+**A decision — he chooses something**
+
+| Words | Fill |
+|---|---|
+| 59 | who he must now face to decide **how his life will end**. *(his)* |
+| 58 | who he must now face to decide **how he will live**. |
+| 58 | who he must now face to decide **whether he fights again**. |
+| 58 | who he must now face to decide **what he does next**. |
+
+**A clock — the fighting has not stopped**
+
+| Words | Fill |
+|---|---|
+| 59 | who he must now face **before he is made to fight again**. |
+| 56 | who he must now face **before the next bout**. |
+
+**A debt — they are owed**
+
+| Words | Fill |
+|---|---|
+| 55 | who he must now face, **and answer to**. |
+| 59 | who he must now face **to learn what he still owes them**. |
+| 59 | who he must now face, **and who will not answer for him**. |
+
+**Being seen — no decision offered**
+
+| Words | Fill |
+|---|---|
+| 58 | who he must now face **with the blood still on him**. |
+| 59 | who he must now face **as the man who made the body**. |
+| 54 | **who he finds waiting for an answer**. |
+| 58 | **who see him now for what the fighting has made him**. |
+
+**The verb changed**
+
+| Words | Fill |
+|---|---|
+| 60 | **whom he must now stand before** to decide how his life will end. |
+| 59 | **who he must now answer to for every life he has taken**. |
+
+### Read on the five best
+
+- **His own** — *"to decide how his life will end"* — is the darkest and the most committing. It works if the film contains a death he chooses. If it does not, it is a promise the film has to keep.
+- ***"whether he fights again"*** is the same decision made concrete. It names the actual choice in front of him rather than an abstraction about his life, and it is the only decision-ending that a thirteen-minute film can plausibly resolve on screen.
+- ***"before he is made to fight again"*** is the only fill with a clock. It says the fighting has not stopped, which is what makes the moment urgent rather than reflective — and "made to" keeps the coercion in the sentence to the last word.
+- ***"as the man who made the body"*** is the hardest line available. No decision, no consolation: he faces them as the person who filled the grave they are standing around.
+- ***"and answer to"*** at 55 is the shortest and trusts the reader completely. Its risk is that it is nearly a shrug.
+
+**Recommendation: *"whether he fights again"* or *"before he is made to fight again."*** Both keep his structure, both are concrete, and both let the ancestors matter *to a decision the film can actually show*. His own line stays the pick if Jordan confirms the ending contains that choice.
