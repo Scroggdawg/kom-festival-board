@@ -160,11 +160,18 @@ def merge(local, remote):
     # changed keeps the remote's value and is named in the return, never dropped in
     # silence. A palette note added here was destroyed twice before this existed.
     MANAGED = {"rev", "updated", "updatedBy", "sections"}
+    # This machine is ahead when its rev is higher: the local file was written on top of a
+    # copy of the remote, so its version of a shared key is the later edit. When the revs
+    # have diverged instead, the remote wins and the key is named rather than dropped in
+    # silence — the first version of this lost an edit to an existing key exactly that way.
+    ahead = int(local.get("rev", 0)) > int(remote.get("rev", 0))
     overruled = []
     for k, v in local.items():
         if k in MANAGED: continue
         if k not in merged: merged[k] = v; changed = True
-        elif merged[k] != v: overruled.append(k)
+        elif merged[k] != v:
+            if ahead: merged[k] = v; changed = True
+            else: overruled.append(k)
     if changed:
         merged["rev"] = max(int(local.get("rev", 0)), int(remote.get("rev", 0))) + 1
         merged["updated"] = now(); merged["updatedBy"] = "merge"
@@ -219,9 +226,9 @@ def push(message=None):
         local = load(); remote = _remote_todo(branch)
         if remote is None: return "origin has no todo.json"
         merged, changed, overruled = merge(local, remote)
-        if not changed: 
+        if not changed:
             _git("reset", "-q", "--hard", f"origin/{branch}")   # take origin's copy; nothing of ours is pending
-            return "nothing to push"
+            return "nothing to push" + (f" — origin's {', '.join(overruled)} kept over this machine's" if overruled else "")
         errs = check(merged)
         if errs: return "refused: the merge produced an invalid document (" + errs[0] + "); nothing written"
         _git("reset", "-q", "--hard", f"origin/{branch}")
