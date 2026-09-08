@@ -5,6 +5,8 @@
   todo.py set <id> <status> [...]   set one or more items: not_started | started | awaiting | complete
   todo.py note <id> "<text>"        append a note to an item
   todo.py title <id> "<text>"       correct an item's wording
+  todo.py due <id> <YYYY-MM-DD|->   set or clear an item's date
+  todo.py waiting <id> <who|->      set or clear who an item is waiting on
   todo.py check                     validate the file
   todo.py push                      merge with origin and publish
   todo.py pull                      take origin's todo.json when nothing local is pending
@@ -103,6 +105,10 @@ def set_status(d, iid, st, by="todo.py", expect=None):
 def set_field(d, iid, field, value, by="todo.py"):
     """Edit an item's wording. Stamps history so the change survives a merge."""
     if field not in ("title", "owner", "waitingOn", "due"): raise ValueError(f"cannot set {field}")
+    if field == "due" and value is not None and not _iso_date(value):
+        raise ValueError(f"due must be YYYY-MM-DD, not {value!r}")
+    if field == "waitingOn" and value is not None and not _filled(value):
+        raise ValueError("waitingOn must name someone, or be cleared with -")
     s, it = find(d, iid)
     if it.get(field) == value: return False
     it[field] = value
@@ -241,6 +247,16 @@ def main(a):
         elif cmd == "title":
             if set_field(d, a[1], "title", " ".join(a[2:]), by="todo.py title"):
                 print(f"{a[1]} retitled\ntodo.json rev {save(d, 'todo.py title')} written")
+            else: print("unchanged")
+        elif cmd == "due":
+            v = None if a[2] == "-" else a[2]
+            if set_field(d, a[1], "due", v, by="todo.py due"):
+                print(f"{a[1]} due {v or 'cleared'}\ntodo.json rev {save(d, 'todo.py due')} written")
+            else: print("unchanged")
+        elif cmd == "waiting":
+            v = None if a[2] == "-" else " ".join(a[2:])
+            if set_field(d, a[1], "waitingOn", v, by="todo.py waiting"):
+                print(f"{a[1]} waiting on {v or 'nobody'}\ntodo.json rev {save(d, 'todo.py waiting')} written")
             else: print("unchanged")
         elif cmd == "note":
             s, it = find(d, a[1]); it.setdefault("notes", []).append({"at": now(), "text": " ".join(a[2:])})
