@@ -165,8 +165,15 @@ def push(message=None):
         if not changed: 
             _git("reset", "-q", "--hard", f"origin/{branch}")   # take origin's copy; nothing of ours is pending
             return "nothing to push"
+        errs = check(merged)
+        if errs: return "refused: the merge produced an invalid document (" + errs[0] + "); nothing written"
         _git("reset", "-q", "--hard", f"origin/{branch}")
         with open(PATH, "w", encoding="utf-8") as f: f.write(dumps(merged))
+        try: written = load()                              # read back what actually landed
+        except (ValueError, OSError) as e:
+            _git("checkout", "-q", "--", "todo.json"); return f"refused: todo.json did not read back ({e}); reverted"
+        if dumps(written) != dumps(merged):
+            _git("checkout", "-q", "--", "todo.json"); return "refused: todo.json on disk does not match what was written; reverted"
         _git("commit", "--only", "todo.json", "-q", "-m", message or f"docket: todo.json rev {merged['rev']}")
         if _git("push", "-q", "origin", f"HEAD:{branch}", check=False).returncode == 0: return "pushed"
     return "push kept colliding; will retry on the next change"
