@@ -2206,7 +2206,7 @@
    "joanPick": true,
    "cat": "A-list Europe · Tiger Shorts",
    "edition": "Jan 28–Feb 7, 2027",
-   "feesText": "€85",
+   "feesText": "€70 ex VAT by Sep 15, 17:00 CEST (late/final) · €40 early Jun 15 · €55 standard Aug 31",
    "path": "Not Oscar-qualifying; EFA pipeline",
    "why": "A genuine A-list slot — the Tiger Short Competition is among Europe's most prestigious. Requires at minimum a European premiere (a US-only history preserves it) and its dates collide with Sundance. A deliberate Europe-first pivot, not a default: deadline Sep 15. Submission note: Direct IFFR portal, not FilmFreeway; late-fee deadline confirmed.",
    "festDate": "2027-01-28",
@@ -2214,7 +2214,10 @@
    "tiers": [],
    "links": {
     "site": "https://iffr.com/en/iffr-pro-submissions/film-entry"
-   }
+   },
+   "sourceUrl": "https://iffr.com/en/iffr-pro-submissions/film-entry",
+   "provenance": "official",
+   "note": "Verified Sep 8, 2026 against IFFR’s own film-entry page: shorts under 64 min, late/final tier 15 September 2026 17:00 CEST, €70 ex VAT. Premiere: world, international OR European — a US-only history (ABFF, MVAAFF) preserves European status. Students excluded EXCEPT post-graduate (master) year, so an AFI MFA thesis qualifies. Direct IFFR portal, not FilmFreeway. Prior feesText read “€85”, which appears nowhere on the page — likely €70 + 21% VAT (€84.70), but that was an inference, not a quote."
   },
   {
    "id": "riverrun-international-film-festival",
