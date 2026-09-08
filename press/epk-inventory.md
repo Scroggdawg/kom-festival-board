@@ -15,7 +15,7 @@ Of roughly 40 pieces the EPK needs, **five are written**, about **twelve need no
 ### Page 1 — Poster
 | Piece | Status |
 |---|---|
-| Key art / one-sheet | **NEED** — does a poster exist? Not in the repo. Ask Jordan |
+| Key art / one-sheet | **HAVE** — a poster exists; Jordan holds the file |
 | Billing block (AFI Conservatory presents / cast / HoDs / EPs / writer-director) | **NEED** — derives from the end credits |
 | Website URL printed | **HAVE-ish** — the site exists but Luke says it is "built more toward donating"; decide whether to print it |
 
@@ -54,8 +54,9 @@ Of roughly 40 pieces the EPK needs, **five are written**, about **twelve need no
 | Piece | Status |
 |---|---|
 | Director bio (~150 words) | **HAVE** — draft with two brackets: the MFA tense (E.2) and the "why he directs" sentence, both Jordan's to settle |
-| Producer bio — Luke | **NEED** — Luke writes his own. Joan's test applies: it must answer *why do you produce* |
-| DP, production designer, editor bios | **NEED** — each writes their own (D.4.5) |
+| Producer bio | **NEED** — who is the producer? |
+| **Cinematographer bio — Luke** | **NEED** — Luke writes his own. Joan's test applies: it must answer *why do you shoot* |
+| Production designer, editor bios | **NEED** — each writes their own (D.4.5) |
 | Headshots, named `KILLER_OF_MEN_First_Last_Role` | **NEED** — ask each person for theirs; no drives required |
 | Instagram / IMDb links per person | **NEED** — ask each person; no drives required |
 
@@ -107,7 +108,7 @@ Of roughly 40 pieces the EPK needs, **five are written**, about **twelve need no
 
 1. **Transcribe the end-credit roll from the YouTube link.** Unblocks pages 3, 9, 10, 11 and most of 7 — cast, crew, HoDs, composer, sound designer, thanks, AFI boilerplate.
 2. **Write the ~100-word synopsis.** Not written, not previously flagged, and page 2 needs it.
-3. **Write his own producer bio** — the "why do you produce" version.
+3. **Write his own cinematographer bio** — the "why do you shoot" version.
 4. **Build the Drive skeleton** (D.4.2) — folders and two docs, thirty minutes.
 5. **Email the three festivals for laurel files** (D.4.8).
 6. **Ask each HoD for a bio, a headshot and their IMDb/Instagram** — one message to the group.

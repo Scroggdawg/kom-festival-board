@@ -4,9 +4,9 @@
 
 | | Page | Piece | Who |
 |---|---|---|---|
-| ⌀ | **1 Poster** | Key art / one-sheet | Jordan — does one exist? |
+| ● | **1 Poster** | Key art / one-sheet | **exists** — Jordan holds the file |
 | ○ | | Billing block | end credits |
-| ○ | | Website URL | decide: it's a donation page |
+| ⌀ | | Website URL | killerofmen.com — **decision: it is the donate page** |
 | ● | **2 Logline + synopsis** | Logline | 3 finals — pick one |
 | ○ | | **Synopsis ~100 words** | **never written — gap** |
 | ⌀ | | Hero still | master access |
@@ -18,14 +18,15 @@
 | ⌀ | | Language · SRT languages | Yeo |
 | ○ | | The team — 5 HoD roles | end credits |
 | ○ | | Cast — principals | end credits, don't guess |
-| ○ | | Rights: AFI Conservatory + named contact | — |
+| ⌀ | | Rights: AFI Conservatory + named contact | **needs a name and email** |
 | ○ | | 5 links: BTS · stills · poster · trailer · headshots | needs the Drive folders |
 | ○ | | Email · website · Instagram | verify the IG target |
 | ● | **4 Director's statement** | 300–350 words, signed | final draft — needs Jordan's OK |
 | ⌀ | | Ghosted photo behind | master access |
 | ● | **5–6 Filmmaker bios** | Director bio | 2 brackets for Jordan |
-| ○ | | Producer bio — yours | answer "why do you produce" |
-| ○ | | DP · production designer · editor | each writes their own |
+| ○ | | Producer bio | who is the producer? |
+| ○ | | **Cinematographer bio — Luke** | answer "why do you shoot" |
+| ○ | | Production designer · editor | each writes their own |
 | ○ | | Headshots `KILLER_OF_MEN_First_Last_Role` | ask each person |
 | ○ | | IG + IMDb per person | ask each person |
 | ○ | **7 Cast** | CHARACTER \| ACTOR + bio, one page each | end credits + IMDb |
@@ -51,7 +52,7 @@
 
 1. Transcribe the end credits
 2. Write the ~100-word synopsis
-3. Write your producer bio
+3. Write your **cinematographer** bio
 4. Build the Drive skeleton
 5. Email the three festivals for laurel files
 6. One message to the HoDs: bio, headshot, IMDb, Instagram

@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "rev": 1,
- "updated": "2026-09-08T11:50:22-07:00",
- "updatedBy": "seed",
+ "rev": 2,
+ "updated": "2026-09-08T12:09:49-07:00",
+ "updatedBy": "luke via worksheet",
  "title": "Killer of Men — EPK worksheet",
  "source": "press/epk-spec.md (11-page structure) + todo.json epk/profile lanes",
  "pages": [
@@ -15,7 +15,7 @@
     {
      "label": "Key art / one-sheet",
      "hint": "does a poster exist?",
-     "value": ""
+     "value": "YES — a poster exists (Jordan holds it)"
     },
     {
      "label": "Billing block",
@@ -25,7 +25,7 @@
     {
      "label": "Website URL",
      "hint": "printed on the poster",
-     "value": ""
+     "value": "https://www.killerofmen.com/ — OPEN QUESTION: it is the donate page"
     }
    ]
   },
@@ -131,7 +131,7 @@
     {
      "label": "Rights + contact",
      "hint": "",
-     "value": "AFI Conservatory · contact: "
+     "value": "AFI Conservatory · contact: [NEEDED — a name and email]"
     },
     {
      "label": "Instagram / website / email",
@@ -149,7 +149,7 @@
     {
      "label": "Statement",
      "hint": "final draft exists",
-     "value": "[final draft in filmfreeway-page-v4.md — awaiting Jordan's approval]"
+     "value": "[final draft in press/filmfreeway-page-v4.md — awaiting Jordan's approval]"
     },
     {
      "label": "Photo behind the text",
@@ -170,13 +170,13 @@
      "value": "[draft in filmfreeway-page-v4.md — 2 brackets for Jordan]"
     },
     {
-     "label": "Producer — Luke",
-     "hint": "answer 'why do you produce'",
+     "label": "Producer",
+     "hint": "who is the producer? their own bio",
      "value": ""
     },
     {
      "label": "Cinematographer",
-     "hint": "",
+     "hint": "Luke — answer 'why do you shoot'",
      "value": ""
     },
     {
