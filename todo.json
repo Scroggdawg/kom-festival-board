@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "rev": 43,
- "updated": "2026-09-08T13:38:13-07:00",
+ "rev": 50,
+ "updated": "2026-09-08T13:43:11-07:00",
  "updatedBy": "merge",
  "title": "Killer of Men Festival Campaign",
  "source": "meetings/2026-09-06-joan-call.md §D",
@@ -35,7 +35,7 @@
      "title": "Email every shortlisted festival with a fee over ~$20, before paying — nine festivals, template in press/discount-email.md",
      "owner": "Luke",
      "waitingOn": null,
-     "due": "2026-09-18",
+     "due": "2026-09-15",
      "status": "not_started",
      "history": [
       {
@@ -45,6 +45,12 @@
       },
       {
        "at": "2026-09-08T12:20:04-07:00",
+       "status": "not_started",
+       "by": "todo.py due",
+       "field": "due"
+      },
+      {
+       "at": "2026-09-08T13:43:09-07:00",
        "status": "not_started",
        "by": "todo.py due",
        "field": "due"
@@ -118,10 +124,10 @@
     },
     {
      "id": "D.1.5",
-     "title": "Decide what happens if a festival has not replied by its deadline — the nearest real doors are SBIFF Sep 18 and Aspen Sep 25",
+     "title": "Decide what happens if a festival has not replied by its deadline — the first doors are IFFR Sep 15, SBIFF Sep 18, Aspen Sep 25",
      "owner": "Luke · your call",
      "waitingOn": null,
-     "due": "2026-09-18",
+     "due": "2026-09-15",
      "status": "not_started",
      "history": [
       {
@@ -140,6 +146,18 @@
        "status": "not_started",
        "by": "todo.py due",
        "field": "due"
+      },
+      {
+       "at": "2026-09-08T13:43:09-07:00",
+       "status": "not_started",
+       "by": "todo.py due",
+       "field": "due"
+      },
+      {
+       "at": "2026-09-08T13:43:09-07:00",
+       "status": "not_started",
+       "by": "todo.py title",
+       "field": "title"
       }
      ]
     }
@@ -153,10 +171,10 @@
    "items": [
     {
      "id": "D.2.1",
-     "title": "Send Jordan the draft of logline, bio and statement and the scope of page changes — press/filmfreeway-page-v5.md; he approves the direction once",
+     "title": "Send Jordan the current press/filmfreeway-page draft — logline, bio, statement and the scope of page changes; he approves the direction once",
      "owner": "Luke",
      "waitingOn": null,
-     "due": null,
+     "due": "2026-09-15",
      "status": "not_started",
      "history": [
       {
@@ -175,6 +193,18 @@
        "status": "not_started",
        "by": "todo.py waiting",
        "field": "waitingOn"
+      },
+      {
+       "at": "2026-09-08T13:43:09-07:00",
+       "status": "not_started",
+       "by": "todo.py due",
+       "field": "due"
+      },
+      {
+       "at": "2026-09-08T13:43:09-07:00",
+       "status": "not_started",
+       "by": "todo.py title",
+       "field": "title"
       }
      ]
     },
@@ -546,7 +576,7 @@
    "items": [
     {
      "id": "D.5.1",
-     "title": "Import FilmFreeway’s Export Submissions as the source of truth (30 submissions; deadlines incl. Short Shorts Sep 9)",
+     "title": "Import FilmFreeway’s Export Submissions as the source of truth (30 submissions, each with its real deadline tiers)",
      "owner": "Claude",
      "waitingOn": null,
      "due": null,
@@ -556,6 +586,12 @@
        "at": "2026-09-06T19:36:26-07:00",
        "status": "not_started",
        "by": "seed"
+      },
+      {
+       "at": "2026-09-08T13:43:09-07:00",
+       "status": "not_started",
+       "by": "todo.py title",
+       "field": "title"
       }
      ]
     },
