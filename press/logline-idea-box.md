@@ -99,3 +99,36 @@ Phrases worth keeping on their own:
 | Yoruba | The README says he "reconnects with the Yoruba faith of his ancestors". Naming it is a differentiator no other logline in the corpus has |
 | "Pit" | Claude's image, not Luke's. If the fights happen in a barn, a ring or a clearing, "pit" is wrong |
 | "Mandingo" | Jordan's statement calls it "a strange, bastardized idea". Using the word signals the film engages the myth; it is also the exploitation term. Luke's call |
+
+## Generation 4 — Sep 7, rebuilding Raging Bull as our own (Branch B opens)
+
+*"I'm just going to rebuild Raging Bull as our own." Then: "This is kind of a second take. A completely different take. So we have at least two branches."*
+
+The rebuild, in order:
+
+- "In 1830 South Carolina. An enslaved man is forced to fight to survive. But… [the] brutality that has kept him alive has cost him… caused him to forget, forsake, his ancestral past."
+- "1830 South Carolina. An enslaved prizefighter… forced to survive… a brutal reality where he must kill or be killed for others' entertainment." — *"That's pretty good."*
+- **"In 1830 South Carolina, an enslaved prizefighter is forced to survive in a world [where he] must win or die for the entertainment of others. But the rage and violence that have kept him alive may also prove to strip him of his humanity. When he encounters the burial ceremony of his fallen opponent, he is forced to reckon with the man he has become, and [something] with his ancestral past."** — *"I really like where that's at."*
+- "Killer of Men is set in the heat of a South Carolina plantation where an enslaved prizefighter is doomed to fight to survive, to win or die. But the same brutality that has kept him alive [costs him something] greater than death." — *"Kind of cheesy but I still like it."*
+- "The same brutality that has kept him alive… what's the best way to say 'cost him his soul', 'forgot how to be human'?"
+- "He encounters the burial ceremony of his fallen opponent, held in the faith of their shared ancestors, [and is re]connected with his spiritual heritage — that might need to get a little better. He is confronted with the cost of his brutal way of life."
+- "He stumbles upon this fallen opponent's burial ceremony, held in the faith of his spiritual home, or ancestral home."
+- "Extra-athleticism [his physicality] — it's part of his [director's] statement, might be nice to have in there."
+- *"I'm looking for an unworn ending that's still inspiring."*
+
+Reactions to the studio, for the record:
+
+- The trait-with-two-consequences construction: *"a much better hook for our story… I love that kind of dichotomy. Keeps it both active and character-driven."*
+- Liked from §2 (in the style of): "the fighting pits of a South Carolina plantation" (*"pretty badass, 33 words too"*); Em & Selma (*"vague but pretty fucking enticing"*); Raging Bull (*"pretty good"*); Sweet Country — *"reckon with what the fighting has made of him, that's interesting"*; Sweetheart — *"he stumbles upon a burial held in the faith of his ancestors — actually pretty cool."* Verdict on §2: *"quite good."*
+- The six originals: *"I like the idea but I don't love the execution. None of these six are very good."*
+- The original page logline: *"way too wordy."* "Roots, guilt, faith and violence": *"still a big list. It doesn't actually say anything, just buzzwords."*
+- "Pressed, condemned, bound to" — *"thank you for those."*
+
+Rulings:
+
+| Fact | Ruling |
+|---|---|
+| Year | **1834** — "better than the 1830s" |
+| Where the fights happen | A barn. **"Pit" is still acceptable** |
+| "Mandingo" / the myth | "Myth is interesting" — in play |
+| Structure | Two branches now. **A:** event, then feeling (the v4 lineage). **B:** the trait that saves him is the trait that costs him, pivoting on *But* (the Raging Bull rebuild) |
