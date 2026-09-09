@@ -9,6 +9,7 @@ Delivered EPK materials, named to the Drive and delivery skeletons in `press/epk
 | `SRT/KillerOfMen_English.scc` | Same captions, Scenarist SCC (broadcast) | Drive folder `KOM Caption`, Dec 2025 | 2026-09-08 |
 | `STILLS/Still 2026-09-08 210640_1.1.N.png` | 41 frame grabs, PNG 1920×1080 letterboxed, picture in rows 138–941 (2.39:1). `1.1.25` and `1.1.26` are the same frame | `FINAL/KOM Stills (Additional)`, Resolve export 210640 | 2026-09-08 |
 | `BTS/*.jpg`, `BTS/*.JPG` | 102 behind-the-scenes photographs, camera originals, unmodified, 714 MB | `FINAL/BTS Selects`, same files as the shared Drive folder | 2026-09-08 |
+| `HEADSHOTS/KOM Headshots v3-N.jpg` | 4 crew headshots, 6200 px wide, unmodified. **Not yet renamed** to the `KILLER_OF_MEN_First_Last_Role` convention — that needs Luke to say which file is which person | `Headshots/Edits`, shot Sept 2024 | 2026-09-09 |
 | `STILLS/contact-sheet.jpg`, `BTS/contact-sheet.jpg` | Every frame, numbered or named. **Derivatives**, for choosing | built from the sets | 2026-09-08 |
 
 Resolve gallery names and camera filenames are kept, because they are how a frame is found again in the project.
@@ -61,4 +62,4 @@ Both are still on Luke's disk in `FINAL/KOM Stills`, and both are in this reposi
 
 Left out on purpose: the `.drx` files that came with an earlier stills export. They are Resolve grade sidecars, not press material.
 
-Still to arrive: headshots, trailer, laurels (see `press/epk.json`, fields 5.6, A.2, A.3). Still to choose: the hero still (2.3), the photo behind the statement (4.2), stills in character (7.2), the still behind the credits (9.3), the best 12 stills for the Drive, and 8–12 BTS photographs for page 8.
+Still to arrive: the trailer and the laurels (`press/epk.json`, A.2 and A.3), plus a fifth headshot — four files cover five credited fellows. Still to choose: the hero still (2.3), the photo behind the statement (4.2), stills in character (7.2), the still behind the credits (9.3), the best 12 stills for the Drive, and 8–12 BTS photographs for page 8.
