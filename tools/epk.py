@@ -469,7 +469,7 @@ def main(a):
                 for f in s["fields"]:
                     v = " ".join(f["value"].split())
                     if not v and f.get("options"):
-                        v = "undecided between " + ", ".join(c["key"] for c in f["options"])
+                        v = f"{len(f['options'])} versions: " + ", ".join(c["key"] for c in f["options"])
                     if not show_all and len(v) > 60:
                         v = v[:59] + "…"
                     print(f"  {label_of(f['n'], d['numbering']):>6}  {f['label'][:34]:34} {v}")
@@ -477,9 +477,7 @@ def main(a):
                         for c in f.get("options") or []:
                             print(f"          {c['key']}: {c['value']}")
             n = sum(1 for _, f in fields(d) if f["value"].strip())
-            pend = sum(1 for _, f in fields(d) if not f["value"].strip() and f.get("options"))
-            print(f"\n{n} of {sum(1 for _ in fields(d))} filled"
-                  + (f" · {pend} undecided" if pend else "") + f" · rev {d['rev']}")
+            print(f"\n{n} of {sum(1 for _ in fields(d))} filled · rev {d['rev']}")
         elif cmd == "get":
             print(find(d, a[1])[1]["value"])
         elif cmd == "check":

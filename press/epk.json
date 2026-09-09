@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 9,
- "updated": "2026-09-08T22:03:31-07:00",
- "updatedBy": "Luke, Sep 8 — Drive watch folder built",
+ "rev": 10,
+ "updated": "2026-09-08T22:30:41-07:00",
+ "updatedBy": "Luke via epk-intake",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -83,18 +83,28 @@
        "at": "2026-09-08T14:08:05-07:00",
        "by": "festival lane — Luke locked two versions Sep 8",
        "value": ""
+      },
+      {
+       "at": "2026-09-08T22:30:41-07:00",
+       "by": "Luke, in chat — three loglines by destination; B dropped",
+       "value": ""
       }
      ],
      "options": [
       {
-       "key": "A",
-       "note": "title front, concrete ending",
-       "value": "KILLER OF MEN -- In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own. When he stumbles upon his opponent's burial rites, he finds the ceremony being held in the ancient faith of their shared ancestors, who he must now face to decide whether he will kill again."
+       "key": "FilmFreeway",
+       "note": "the FilmFreeway page",
+       "value": "Killer of Men follows Mace, an enslaved man forced into mandingo fights. After killing an opponent, he stumbles upon the burial of the man he killed, igniting a reckoning with guilt, faith, and the violence shaping his life and identity."
       },
       {
-       "key": "B",
-       "note": "title drop, identity ending",
-       "value": "In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own. When he stumbles upon his opponent's burial rites, he finds the ceremony being held in the ancient faith of their shared ancestors, who he must now face to decide whether he will remain... a KILLER OF MEN."
+       "key": "Website",
+       "note": "killerofmen.com",
+       "value": "Mace, an enslaved man forced to kill in brutal underground fights, must confront his faith, his heritage, and his humanity when he discovers an unexpected connection to his latest opponent."
+      },
+      {
+       "key": "A",
+       "note": "the press-kit logline, locked Sep 8",
+       "value": "KILLER OF MEN -- In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own. When he stumbles upon his opponent's burial rites, he finds the ceremony being held in the ancient faith of their shared ancestors, who he must now face to decide whether he will kill again."
       }
      ]
     },
@@ -304,12 +314,17 @@
      "id": "p4-statement",
      "n": "4.1",
      "label": "Statement",
-     "value": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class, and often the biggest in the room. As I got older, I started noticing how my mere presence was read as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys, even those bigger and stronger than I was. It's never anything overt, but small, incessant microaggressions. Death by a million needles. These interactions have shaped me throughout my life, leaving me hyper-aware of myself in spaces, even in this country I call home. This experience, this reality, is the plight of all Black men in America.\n\nKiller of Men is an expression of pain: absolute brutality and suffering. But it's also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I'm putting on the screen.\n\nThe concept of Mandingo fighting has always fascinated me. It's a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history and in the media. It has always been used to showcase the animalistic Black brute. Rarely, if ever, has an audience been invited into the subjective perspective of the fighters themselves. What are their lives like? What do they hold dear? What keeps a man going when he's put in a situation like that?\n\nSetting this film during the period of American slavery, rather than in the present day or during the 1960s, allows me to examine the deep-seated historical roots of this aggression. Visually, I wanted the fight scenes to reflect the physical sports Black men often participate in, body slams, boxing, football tackles, to illustrate history repeating itself through various forms of expression. Early 1800s America also gave me the chance to explore my own heritage. With American chattel slavery at its peak and the transatlantic trade still bringing enslaved people ashore every year, we can examine themes we still recognize today as they were in the darkest hour of African Americans.\n\nA critical piece of this film is the spirituality of the enslaved at the time: their mix of cultures, beliefs and religions that slowly formed what we now recognize as Black culture. Killer of Men has been a grueling process, one that's forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won't shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do.",
+     "value": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class. I was often one of the biggest in the room. As I got older, I started noticing how my mere presence was often seen as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys—even those bigger and stronger than I was. It’s never anything overt, but small, incessant microaggressions. Death by a 1000 needles. It’s a plight that’s shaped me throughout my life, leaving me hyper-aware of myself in spaces. This experience, this reality, is tied to the plight of the Black man in America.\n\nThe concept of Mandingo fighting has always fascinated me. It’s a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history, and the media. It’s always been used to showcase the “Black brute,” but it has never been shown subjectively from the perspective of those involved. What are their lives like? What do they hold dear? What keeps a man going when he’s put in a situation like that?\nSetting this film in slavery times, rather than in the present day or during the 1960s, allows me to examine the deep-rooted history of this aggression. Visually, I want the fight scenes to reflect the physical sports Black men often participate in—body slams, boxing, football tackles—to show history repeating itself through various forms of expression.\nBy setting the story in the 1800s, I also had the chance to explore my heritage. With slavery still in full force and new enslaved people being brought in from Africa, I can examine the past in different ways.\nI want to delve into the spirituality of the enslaved at the time, capturing the mix of cultures, beliefs, and religions that slowly formed what we now know as Black culture.\n\nKiller of Men is an expression of pain—absolute brutality and suffering. But it’s also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I’m putting on the screen.\nKiller of Men has been a grueling process—one that’s forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won’t shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do.",
      "history": [
       {
        "at": "2026-09-08T13:09:02-07:00",
        "by": "migration from rev 2",
        "value": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class, and often the biggest in the room. As I got older, I started noticing how my mere presence was read as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys, even those bigger and stronger than I was. It's never anything overt, but small, incessant microaggressions. Death by a million needles. These interactions have shaped me throughout my life, leaving me hyper-aware of myself in spaces, even in this country I call home. This experience, this reality, is the plight of all Black men in America.\n\nKiller of Men is an expression of pain: absolute brutality and suffering. But it's also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I'm putting on the screen.\n\nThe concept of Mandingo fighting has always fascinated me. It's a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history and in the media. It has always been used to showcase the animalistic Black brute. Rarely, if ever, has an audience been invited into the subjective perspective of the fighters themselves. What are their lives like? What do they hold dear? What keeps a man going when he's put in a situation like that?\n\nSetting this film during the period of American slavery, rather than in the present day or during the 1960s, allows me to examine the deep-seated historical roots of this aggression. Visually, I wanted the fight scenes to reflect the physical sports Black men often participate in, body slams, boxing, football tackles, to illustrate history repeating itself through various forms of expression. Early 1800s America also gave me the chance to explore my own heritage. With American chattel slavery at its peak and the transatlantic trade still bringing enslaved people ashore every year, we can examine themes we still recognize today as they were in the darkest hour of African Americans.\n\nA critical piece of this film is the spirituality of the enslaved at the time: their mix of cultures, beliefs and religions that slowly formed what we now recognize as Black culture. Killer of Men has been a grueling process, one that's forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won't shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do."
+      },
+      {
+       "at": "2026-09-08T22:30:41-07:00",
+       "by": "Jordan via Luke, in chat — corrected",
+       "value": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class. I was often one of the biggest in the room. As I got older, I started noticing how my mere presence was often seen as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys—even those bigger and stronger than I was. It’s never anything overt, but small, incessant microaggressions. Death by a 1000 needles. It’s a plight that’s shaped me throughout my life, leaving me hyper-aware of myself in spaces. This experience, this reality, is tied to the plight of the Black man in America.\n\nThe concept of Mandingo fighting has always fascinated me. It’s a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history, and the media. It’s always been used to showcase the “Black brute,” but it has never been shown subjectively from the perspective of those involved. What are their lives like? What do they hold dear? What keeps a man going when he’s put in a situation like that?\nSetting this film in slavery times, rather than in the present day or during the 1960s, allows me to examine the deep-rooted history of this aggression. Visually, I want the fight scenes to reflect the physical sports Black men often participate in—body slams, boxing, football tackles—to show history repeating itself through various forms of expression.\nBy setting the story in the 1800s, I also had the chance to explore my heritage. With slavery still in full force and new enslaved people being brought in from Africa, I can examine the past in different ways.\nI want to delve into the spirituality of the enslaved at the time, capturing the mix of cultures, beliefs, and religions that slowly formed what we now know as Black culture.\n\nKiller of Men is an expression of pain—absolute brutality and suffering. But it’s also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I’m putting on the screen.\nKiller of Men has been a grueling process—one that’s forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won’t shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do."
       }
      ]
     },
@@ -331,12 +346,17 @@
      "id": "p5-bio-director",
      "n": "5.1",
      "label": "Director bio — Jordan Betine",
-     "value": "Jordan Betine [earned / is completing] his MFA in Directing at the American Film Institute. A Nigerian-American filmmaker raised between Lagos, Nigeria, and Ashburn, Virginia, he holds a film degree from Howard University. [He grew up hyper-aware of how a Black man's presence is read in a room; he directs to put that awareness on screen, telling difficult stories that honor his ancestors and his culture.] His work explores power, identity, and the African diaspora.",
+     "value": "Jordan Betine is a Nigerian-American filmmaker raised between Lagos, Nigeria, and Ashburn, Virginia. He earned his undergraduate degree in film from Howard University. Jordan studied Directing at the American Film Institute, where he directed six short films across genres, including historical drama, social realism, and surrealist comedy. His thesis film, \"Killer of Men,\" is a historical drama set in 1830s South Carolina about an enslaved man who is forced into underground prizefighting. His work explores power, identity, and the African diaspora.",
      "history": [
       {
        "at": "2026-09-08T13:09:02-07:00",
        "by": "migration from rev 2",
        "value": "Jordan Betine [earned / is completing] his MFA in Directing at the American Film Institute. A Nigerian-American filmmaker raised between Lagos, Nigeria, and Ashburn, Virginia, he holds a film degree from Howard University. [He grew up hyper-aware of how a Black man's presence is read in a room; he directs to put that awareness on screen, telling difficult stories that honor his ancestors and his culture.] His work explores power, identity, and the African diaspora."
+      },
+      {
+       "at": "2026-09-08T22:30:41-07:00",
+       "by": "Jordan via Luke, in chat — corrected",
+       "value": "Jordan Betine is a Nigerian-American filmmaker raised between Lagos, Nigeria, and Ashburn, Virginia. He earned his undergraduate degree in film from Howard University. Jordan studied Directing at the American Film Institute, where he directed six short films across genres, including historical drama, social realism, and surrealist comedy. His thesis film, \"Killer of Men,\" is a historical drama set in 1830s South Carolina about an enslaved man who is forced into underground prizefighting. His work explores power, identity, and the African diaspora."
       }
      ]
     },

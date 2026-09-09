@@ -105,7 +105,7 @@ function render(d){
   });
   $('list').innerHTML=html;
   var c=counts(d);
-  $('tot').textContent=c[0]+' of '+c[1]+' filled'+(c[2]?' · '+c[2]+' undecided':'');
+  $('tot').textContent=c[0]+' of '+c[1]+' filled';
   if(d.title)$('ttl').firstChild.textContent=d.title;
 }
 function accept(d){var sp=stampOf(d);if(sp!==stamp){stamp=sp;last=d;render(d);}else last=d;}
