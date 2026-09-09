@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 11,
- "updated": "2026-09-08T22:41:58-07:00",
- "updatedBy": "Luke and killerofmen.com via epk-intake",
+ "rev": 13,
+ "updated": "2026-09-08T22:48:45-07:00",
+ "updatedBy": "end-credit roll — still photographer named",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -331,12 +331,17 @@
      "id": "p3-cast-principals",
      "n": "3.15",
      "label": "Cast, principals (character and actor)",
-     "value": "Mace | Erik Orjiako\nThe Elder | Sandra McDaniels\nKenner, the plantation owner |",
+     "value": "Mace | Erik Orjiako\nMaster Kenner | Eric Pargac\nKojo | Jamal Dennis\nKojo's Master | Casey Long\nFred | Chaundre Hall-Broomfield\nElder | Sandra McDaniels\nGirl | Loren Fenton\nSpectator | Daniel Kassar\nSpectator | Nikita Korshunov\nStunt coordinator | Zedric Harris\n\nBilled cast in crawl order, from the End Titles tab. The crawl does not separate principals from supporting, so this is the whole billed list; page 7 takes the top of it.\nRESOLVED: Kenner's actor is Eric Pargac. The slot had been empty since Sep 8.\nTWO NAMES CORRECTED PER THE SHEET'S OWN NOTES: 'DANILE KASSAR' carries the note 'Daniel'; 'NIKITA MAKSIMCHIK' carries the note 'Nikita Korshunov per contract'. Both appear again in the extras list marked 'delete', which is consistent with them being billed here instead.\nLIKELY the fallen opponent, the man whose burial Mace interrupts, is KOJO — the captions carry '[Kojo's Master]' and both roles are billed. That is an inference from the script and captions, not something the crawl states. Confirm before it is written as fact anywhere.",
      "history": [
       {
        "at": "2026-09-08T14:58:47-07:00",
        "by": "Luke, in chat",
        "value": "Mace | Erik Orjiako\nThe Elder | Sandra McDaniels\nKenner, the plantation owner |"
+      },
+      {
+       "at": "2026-09-08T22:48:26-07:00",
+       "by": "end-credit roll — 2513 KOM Credits 11-5-SDnotes.xlsx, End Titles tab",
+       "value": "Mace | Erik Orjiako\nMaster Kenner | Eric Pargac\nKojo | Jamal Dennis\nKojo's Master | Casey Long\nFred | Chaundre Hall-Broomfield\nElder | Sandra McDaniels\nGirl | Loren Fenton\nSpectator | Daniel Kassar\nSpectator | Nikita Korshunov\nStunt coordinator | Zedric Harris\n\nBilled cast in crawl order, from the End Titles tab. The crawl does not separate principals from supporting, so this is the whole billed list; page 7 takes the top of it.\nRESOLVED: Kenner's actor is Eric Pargac. The slot had been empty since Sep 8.\nTWO NAMES CORRECTED PER THE SHEET'S OWN NOTES: 'DANILE KASSAR' carries the note 'Daniel'; 'NIKITA MAKSIMCHIK' carries the note 'Nikita Korshunov per contract'. Both appear again in the extras list marked 'delete', which is consistent with them being billed here instead.\nLIKELY the fallen opponent, the man whose burial Mace interrupts, is KOJO — the captions carry '[Kojo's Master]' and both roles are billed. That is an inference from the script and captions, not something the crawl states. Confirm before it is written as fact anywhere."
       }
      ]
     },
@@ -528,7 +533,7 @@
      "id": "p8-bts-photos",
      "n": "8.1",
      "label": "BTS photos",
-     "value": "102 behind-the-scenes photographs in the repo, press/assets/BTS/, camera originals, unmodified, 714 MB. Same files as the shared Drive folder (16JPwgGC791ET9oFbNgmDzLbWXXUmpcgw) — checked file by file.\nBy shoot day, from the files' own capture dates:\n  58  KOM_Day3_TheFarm-*     8 Jul 2025 — the farm and the barn: crew and camera, the fight staging, cast portraits, the unit photo\n  21  KOM_Day4_Soundstage-*  4 Jul 2025 — the soundstage: the burial table, lantern and smoke, cast and crew portraits\n   6  KOM_Stage-*           23 May 2025\n   5  KOM_Anamorphic*       21 May 2025 — anamorphic frames, several black and white\n   8  DSCF* / _DSF*      21–22 May 2025\n   4  IMG_*                 27 Jun 2025\nFour cameras: Sony A7 IV (the bulk), Fujifilm X100VI, Fujifilm GFX50S II, Canon EOS R5 C. No GPS in any file. Largest is IMG_4616.jpg at 53 MB.\nThe May frames predate the July shoot days and look like camera and lens tests rather than principal photography — worth confirming before any are captioned as set photography.\nNo photographer is named in the files. Page 8 needs a credit line and the thanks list needs the name.\nContact sheet: contact-sheet.jpg (a derivative, for choosing). Page 8 wants 8-12 of these; none picked yet.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/BTS",
+     "value": "102 behind-the-scenes photographs in the repo, press/assets/BTS/, camera originals, unmodified, 714 MB. Same files as the shared Drive folder (16JPwgGC791ET9oFbNgmDzLbWXXUmpcgw) — checked file by file.\nBy shoot day, from the files' own capture dates:\n  58  KOM_Day3_TheFarm-*     8 Jul 2025 — the farm and the barn: crew and camera, the fight staging, cast portraits, the unit photo\n  21  KOM_Day4_Soundstage-*  4 Jul 2025 — the soundstage: the burial table, lantern and smoke, cast and crew portraits\n   6  KOM_Stage-*           23 May 2025\n   5  KOM_Anamorphic*       21 May 2025 — anamorphic frames, several black and white\n   8  DSCF* / _DSF*      21–22 May 2025\n   4  IMG_*                 27 Jun 2025\nFour cameras: Sony A7 IV (the bulk), Fujifilm X100VI, Fujifilm GFX50S II, Canon EOS R5 C. No GPS in any file. Largest is IMG_4616.jpg at 53 MB.\nThe May frames predate the July shoot days and look like camera and lens tests rather than principal photography — worth confirming before any are captioned as set photography.\nPHOTOGRAPHER ANSWERED: the end credits bill JEDIDIAH WOODS as Still Photographer. Use that as the page 8 credit line. Caveat: the 102 selects come off four cameras including a phone-era Canon and two Fujifilms, so some frames may be other people's; Jedidiah Woods is the credited stills photographer, which is what a press kit needs.\nContact sheet: contact-sheet.jpg (a derivative, for choosing). Page 8 wants 8-12 of these; none picked yet.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/BTS",
      "history": [
       {
        "at": "2026-09-08T21:25:07-07:00",
@@ -539,6 +544,11 @@
        "at": "2026-09-08T21:43:44-07:00",
        "by": "Luke, Sep 8 — full-resolution originals restored at his instruction",
        "value": "102 behind-the-scenes photographs in the repo, press/assets/BTS/, camera originals, unmodified, 714 MB. Same files as the shared Drive folder (16JPwgGC791ET9oFbNgmDzLbWXXUmpcgw) — checked file by file.\nBy shoot day, from the files' own capture dates:\n  58  KOM_Day3_TheFarm-*     8 Jul 2025 — the farm and the barn: crew and camera, the fight staging, cast portraits, the unit photo\n  21  KOM_Day4_Soundstage-*  4 Jul 2025 — the soundstage: the burial table, lantern and smoke, cast and crew portraits\n   6  KOM_Stage-*           23 May 2025\n   5  KOM_Anamorphic*       21 May 2025 — anamorphic frames, several black and white\n   8  DSCF* / _DSF*      21–22 May 2025\n   4  IMG_*                 27 Jun 2025\nFour cameras: Sony A7 IV (the bulk), Fujifilm X100VI, Fujifilm GFX50S II, Canon EOS R5 C. No GPS in any file. Largest is IMG_4616.jpg at 53 MB.\nThe May frames predate the July shoot days and look like camera and lens tests rather than principal photography — worth confirming before any are captioned as set photography.\nNo photographer is named in the files. Page 8 needs a credit line and the thanks list needs the name.\nContact sheet: contact-sheet.jpg (a derivative, for choosing). Page 8 wants 8-12 of these; none picked yet.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/BTS"
+      },
+      {
+       "at": "2026-09-08T22:48:45-07:00",
+       "by": "end-credit roll — 2513 KOM Credits 11-5-SDnotes.xlsx",
+       "value": "102 behind-the-scenes photographs in the repo, press/assets/BTS/, camera originals, unmodified, 714 MB. Same files as the shared Drive folder (16JPwgGC791ET9oFbNgmDzLbWXXUmpcgw) — checked file by file.\nBy shoot day, from the files' own capture dates:\n  58  KOM_Day3_TheFarm-*     8 Jul 2025 — the farm and the barn: crew and camera, the fight staging, cast portraits, the unit photo\n  21  KOM_Day4_Soundstage-*  4 Jul 2025 — the soundstage: the burial table, lantern and smoke, cast and crew portraits\n   6  KOM_Stage-*           23 May 2025\n   5  KOM_Anamorphic*       21 May 2025 — anamorphic frames, several black and white\n   8  DSCF* / _DSF*      21–22 May 2025\n   4  IMG_*                 27 Jun 2025\nFour cameras: Sony A7 IV (the bulk), Fujifilm X100VI, Fujifilm GFX50S II, Canon EOS R5 C. No GPS in any file. Largest is IMG_4616.jpg at 53 MB.\nThe May frames predate the July shoot days and look like camera and lens tests rather than principal photography — worth confirming before any are captioned as set photography.\nPHOTOGRAPHER ANSWERED: the end credits bill JEDIDIAH WOODS as Still Photographer. Use that as the page 8 credit line. Caveat: the 102 selects come off four cameras including a phone-era Canon and two Fujifilms, so some frames may be other people's; Jedidiah Woods is the credited stills photographer, which is what a press kit needs.\nContact sheet: contact-sheet.jpg (a derivative, for choosing). Page 8 wants 8-12 of these; none picked yet.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/BTS"
       }
      ]
     }
@@ -553,12 +563,17 @@
      "id": "p9-key-credits",
      "n": "9.1",
      "label": "Key credits",
-     "value": "Writer-director | Jordan Betine\nScreenplay | Jordan Betine & Kierra Bratton-Lewis\nProducer | Ruoxiao Li\nCinematographer | Luke Scroggins\nProduction designer | Rajarajeshwari \"RJ\" Ragampudi\nEditor | You Wu\nComposer | Kevin Leysath II\nCasting | Paul Sinacore\nSound designer |\nExecutive producers |\n(from the poster billing block; sound designer and EPs from the end credits)",
+     "value": "Writer-director | Jordan Betine\nScreenplay | Jordan Betine & Kierra Bratton-Lewis\nProducer | Ruoxiao Li\nCinematographer | Luke Scroggins\nProduction designer | Rajarajeshwari \"RJ\" Ragampudi\nEditor | You Wu\nOriginal music | Kevin Leysath II\nCasting | Paul Sinacore\nExecutive producers | Yingli Xin · Zeju Zhang · Olaoluwa Oluwaseun Ogunseye · Kay Ann Scroggins\nUnit production manager | Shirley Sui\nFirst assistant director | Eddy Gudakov\nSecond assistant director | Kevin Prescott\nColorist | Walter Volpatto\nStunt coordinator | Zedric Harris\nStill photographer | Jedidiah Woods\nSound designer | STILL UNKNOWN\n\nExecutive producers and the rest come from the End Titles tab; the top block matches the poster.\nSOUND IS NOT ANSWERED. The whole post-sound block on the sheet reads TBD: sound effects editor, sound\neditor, recordist, foley artist, foley mixer, ADR mixer. Production sound on set was Jacob Eliett, mixer,\nwith Day Wren on boom, but no sound designer or re-recording mixer is named anywhere in the document.\nThe colour house is a placeholder too, listed as 'Picture Shop 1' through 'Picture Shop 7'.",
      "history": [
       {
        "at": "2026-09-08T15:26:25-07:00",
        "by": "Luke's Downloads, Sep 8 — poster and captions from Jordan's Drive",
        "value": "Writer-director | Jordan Betine\nScreenplay | Jordan Betine & Kierra Bratton-Lewis\nProducer | Ruoxiao Li\nCinematographer | Luke Scroggins\nProduction designer | Rajarajeshwari \"RJ\" Ragampudi\nEditor | You Wu\nComposer | Kevin Leysath II\nCasting | Paul Sinacore\nSound designer |\nExecutive producers |\n(from the poster billing block; sound designer and EPs from the end credits)"
+      },
+      {
+       "at": "2026-09-08T22:48:26-07:00",
+       "by": "end-credit roll — 2513 KOM Credits 11-5-SDnotes.xlsx, End Titles tab",
+       "value": "Writer-director | Jordan Betine\nScreenplay | Jordan Betine & Kierra Bratton-Lewis\nProducer | Ruoxiao Li\nCinematographer | Luke Scroggins\nProduction designer | Rajarajeshwari \"RJ\" Ragampudi\nEditor | You Wu\nOriginal music | Kevin Leysath II\nCasting | Paul Sinacore\nExecutive producers | Yingli Xin · Zeju Zhang · Olaoluwa Oluwaseun Ogunseye · Kay Ann Scroggins\nUnit production manager | Shirley Sui\nFirst assistant director | Eddy Gudakov\nSecond assistant director | Kevin Prescott\nColorist | Walter Volpatto\nStunt coordinator | Zedric Harris\nStill photographer | Jedidiah Woods\nSound designer | STILL UNKNOWN\n\nExecutive producers and the rest come from the End Titles tab; the top block matches the poster.\nSOUND IS NOT ANSWERED. The whole post-sound block on the sheet reads TBD: sound effects editor, sound\neditor, recordist, foley artist, foley mixer, ADR mixer. Production sound on set was Jacob Eliett, mixer,\nwith Day Wren on boom, but no sound designer or re-recording mixer is named anywhere in the document.\nThe colour house is a placeholder too, listed as 'Picture Shop 1' through 'Picture Shop 7'."
       }
      ]
     },
@@ -566,8 +581,14 @@
      "id": "p9-full-cast",
      "n": "9.2",
      "label": "Full cast",
-     "value": "",
-     "history": []
+     "value": "Mace | Erik Orjiako\nMaster Kenner | Eric Pargac\nKojo | Jamal Dennis\nKojo's Master | Casey Long\nFred | Chaundre Hall-Broomfield\nElder | Sandra McDaniels\nGirl | Loren Fenton\nSpectator | Daniel Kassar\nSpectator | Nikita Korshunov\n\nExtras | D'Shae J Beasley · Mel Hampton · Ayodeji Fatigun · Charles Kiema · Tyler Fisher · Nikkia Danielle Matthews · Olaoluwa Oluwaseun Ogunseye · Patience Dooshima Ohabuike · Youlanda Davis · Danny Potter · Ricardo Vargas · Rob Mark Saduski · Gage Phillips · Erik Scilley · Anthony Aroyan\n\nFifteen extras. The sheet's list has seventeen; Nikita Korshunov and Daniel Kassar are both marked 'delete' there because they are billed above as Spectators.",
+     "history": [
+      {
+       "at": "2026-09-08T22:48:26-07:00",
+       "by": "end-credit roll — 2513 KOM Credits 11-5-SDnotes.xlsx, End Titles tab",
+       "value": "Mace | Erik Orjiako\nMaster Kenner | Eric Pargac\nKojo | Jamal Dennis\nKojo's Master | Casey Long\nFred | Chaundre Hall-Broomfield\nElder | Sandra McDaniels\nGirl | Loren Fenton\nSpectator | Daniel Kassar\nSpectator | Nikita Korshunov\n\nExtras | D'Shae J Beasley · Mel Hampton · Ayodeji Fatigun · Charles Kiema · Tyler Fisher · Nikkia Danielle Matthews · Olaoluwa Oluwaseun Ogunseye · Patience Dooshima Ohabuike · Youlanda Davis · Danny Potter · Ricardo Vargas · Rob Mark Saduski · Gage Phillips · Erik Scilley · Anthony Aroyan\n\nFifteen extras. The sheet's list has seventeen; Nikita Korshunov and Daniel Kassar are both marked 'delete' there because they are billed above as Spectators."
+      }
+     ]
     },
     {
      "id": "p9-still-behind",
@@ -587,8 +608,14 @@
      "id": "p10-full-crew",
      "n": "10.1",
      "label": "Full crew",
-     "value": "",
-     "history": []
+     "value": "CAMERA\nCamera operator | Dominika Podczaska\nSteadicam | Dae Hyun Kim\nFirst assistant camera | Julia Maixer\nSecond assistant camera | Tristian Ibarra Martin\nDIT | Kate Keying Wu\nStill photographer | Jedidiah Woods\nSecond unit camera | Reb Richard · Eliot Grigo\n\nPRODUCTION\nLine producer | Colt Kozal\nScript supervisors | Libby McNeil · Zhiyan Liu\nProduction coordinator | Jack Ruefli\n2nd second assistant director | Japhet E. Velazquez\n\nELECTRIC\nGaffer | Adam Birch\nBest person electric | Chansoul Tao\nElectric | Jules Howard · Thomas Lian · Eric He\n\nGRIP\nKey grip | Weiland Kurt\nBest person grip | Eugene Vise\nDolly grip | Alexander Hageman\nCompany grip | Jasper Khadjenouri · Hasan Iqba · Matthew Roveto\n\nSOUND\nProduction sound mixer | Jacob Eliett\nBoom operator | Day Wren\n\nART\nArt directors | Trey Wright · Fernando Acuna\nAssistant art directors | James Robert · Cyan Mireille\nSet dressers | Nicole Kuang · Shirley Wu · Jahnvi Gupta · Naomi Stevens · Chanel Kalinski · Coral Lomeli · Adrian Gonzalez\nArt PAs | Roman Raynes · Cherice Carr · Chen Jing · Jue \"Jade\" Lin · Andrew Lee\nScenic painter | Mayra C. Saucedo\n\nCOSTUME, HAIR AND MAKEUP\nCostume designer | X. Hill\nAssistant costume designers | Odessa Newman · Jolisa Osborn-Polakoff\nDepartment head makeup and SFX makeup | Shawnee Cerkowniak\nKey makeup artist | Neve Andrews\n\nPOST\nAssistant editor | Hazel Yuntong Dai\nColorist | Walter Volpatto\n\nSAFETY AND SPECIAL EFFECTS\nPyrotechnic designer | John Eggett\nFire safety advisors | William Moorhead · Kerry Yim · Tim Ruddell\nSnake wrangler | Aaron Wells\nOn-set medic | Greg Levine\n\nSUPPORT\nDrivers | Zhanyin Xiao · Claudio Del Pino Mercado · Colt Kozal\nOffice production assistants | Evelyn Tang · Hongyu An · Claudio Del Pino Mercado · Tonghan \"Andi\" Tian\nProduction assistants | Jude Brandford-Sackey · Daminabo Peterside · Tyler Fisher · Nicholas Collins · Joshua Montrel · Kayode Oladeji · Biola Olateru-Olagbegi\nCatering | Kylie Rothfield\n\nRoles the sheet marks 'combine and make plural' have been combined, which is what produced the plural\nheadings above.\n\nTWO CREDITS THE SHEET MARKS 'Delete': Thesis Mentor Keola Racela and Editing Advisor Jeff Groth. Both are\nleft out here. The AFI instructions tab says no AFI faculty or staff may receive a thank-you credit on a\nsecond-year thesis, which is consistent with the deletion.\n\nELEVEN POSITIONS ARE BLANK ON THE SHEET and so are absent above: location manager, property master,\nassistant production coordinator, casting assistant, extras casting, key set PA, sustainability\ncoordinator, studio teacher, craft service, animal trainer, first aid, security. Blank may mean the role\nwas unfilled or simply not typed in. Worth one pass before the crawl locks.",
+     "history": [
+      {
+       "at": "2026-09-08T22:48:26-07:00",
+       "by": "end-credit roll — 2513 KOM Credits 11-5-SDnotes.xlsx, End Titles tab",
+       "value": "CAMERA\nCamera operator | Dominika Podczaska\nSteadicam | Dae Hyun Kim\nFirst assistant camera | Julia Maixer\nSecond assistant camera | Tristian Ibarra Martin\nDIT | Kate Keying Wu\nStill photographer | Jedidiah Woods\nSecond unit camera | Reb Richard · Eliot Grigo\n\nPRODUCTION\nLine producer | Colt Kozal\nScript supervisors | Libby McNeil · Zhiyan Liu\nProduction coordinator | Jack Ruefli\n2nd second assistant director | Japhet E. Velazquez\n\nELECTRIC\nGaffer | Adam Birch\nBest person electric | Chansoul Tao\nElectric | Jules Howard · Thomas Lian · Eric He\n\nGRIP\nKey grip | Weiland Kurt\nBest person grip | Eugene Vise\nDolly grip | Alexander Hageman\nCompany grip | Jasper Khadjenouri · Hasan Iqba · Matthew Roveto\n\nSOUND\nProduction sound mixer | Jacob Eliett\nBoom operator | Day Wren\n\nART\nArt directors | Trey Wright · Fernando Acuna\nAssistant art directors | James Robert · Cyan Mireille\nSet dressers | Nicole Kuang · Shirley Wu · Jahnvi Gupta · Naomi Stevens · Chanel Kalinski · Coral Lomeli · Adrian Gonzalez\nArt PAs | Roman Raynes · Cherice Carr · Chen Jing · Jue \"Jade\" Lin · Andrew Lee\nScenic painter | Mayra C. Saucedo\n\nCOSTUME, HAIR AND MAKEUP\nCostume designer | X. Hill\nAssistant costume designers | Odessa Newman · Jolisa Osborn-Polakoff\nDepartment head makeup and SFX makeup | Shawnee Cerkowniak\nKey makeup artist | Neve Andrews\n\nPOST\nAssistant editor | Hazel Yuntong Dai\nColorist | Walter Volpatto\n\nSAFETY AND SPECIAL EFFECTS\nPyrotechnic designer | John Eggett\nFire safety advisors | William Moorhead · Kerry Yim · Tim Ruddell\nSnake wrangler | Aaron Wells\nOn-set medic | Greg Levine\n\nSUPPORT\nDrivers | Zhanyin Xiao · Claudio Del Pino Mercado · Colt Kozal\nOffice production assistants | Evelyn Tang · Hongyu An · Claudio Del Pino Mercado · Tonghan \"Andi\" Tian\nProduction assistants | Jude Brandford-Sackey · Daminabo Peterside · Tyler Fisher · Nicholas Collins · Joshua Montrel · Kayode Oladeji · Biola Olateru-Olagbegi\nCatering | Kylie Rothfield\n\nRoles the sheet marks 'combine and make plural' have been combined, which is what produced the plural\nheadings above.\n\nTWO CREDITS THE SHEET MARKS 'Delete': Thesis Mentor Keola Racela and Editing Advisor Jeff Groth. Both are\nleft out here. The AFI instructions tab says no AFI faculty or staff may receive a thank-you credit on a\nsecond-year thesis, which is consistent with the deletion.\n\nELEVEN POSITIONS ARE BLANK ON THE SHEET and so are absent above: location manager, property master,\nassistant production coordinator, casting assistant, extras casting, key set PA, sustainability\ncoordinator, studio teacher, craft service, animal trainer, first aid, security. Blank may mean the role\nwas unfilled or simply not typed in. Worth one pass before the crawl locks."
+      }
+     ]
     }
    ]
   },
@@ -601,8 +628,14 @@
      "id": "p11-thanks",
      "n": "11.1",
      "label": "Thanks list",
-     "value": "",
-     "history": []
+     "value": "THE FILMMAKERS WISH TO THANK\n\nShiqi Sukia Zhang · Xuanning Zhang · Dongpo Xu · Qing Liao · Lina Hu · Ping Guo & Baozhen Ling · Xie Linchen · Weiwei Xu · Kuai Yu\nXiaomin Zhang · Xuanfang Gao · Lin Yi · Mallik & Preethi Ragampudi · Santos Velazquez & Anadelis Figueroa · Dawn and J. Martin\nAkshay Kumar · Padma Chitrapu · Sriram Chintalapati · Sairam Tadigadapa · Srini Tipirneni · Raghuram & Kanchan Devarakonda\nNellai Subramaniam & Shaila Nellai · Phillip Brooks · Tracey B · Byron Chang\nSalaar Khan · Yuhong Lai & Chunhui Wu · Cecil Gao\n\nThirty names, transcribed row by row from the sheet in the order they appear.\n\nPADMA CHITRAPU APPEARS TWICE on the sheet, in row 3 and again in row 5; listed once here.\nAFI'S OWN INSTRUCTION is that this section runs alphabetically by last name and that no principal team\nmember and no AFI faculty or staff may be thanked. The sheet is not yet in alphabetical order, and\n'Tracey B' has no surname to sort on. Sorting is a decision for whoever locks the crawl, not for me.",
+     "history": [
+      {
+       "at": "2026-09-08T22:48:26-07:00",
+       "by": "end-credit roll — 2513 KOM Credits 11-5-SDnotes.xlsx, End Titles tab",
+       "value": "THE FILMMAKERS WISH TO THANK\n\nShiqi Sukia Zhang · Xuanning Zhang · Dongpo Xu · Qing Liao · Lina Hu · Ping Guo & Baozhen Ling · Xie Linchen · Weiwei Xu · Kuai Yu\nXiaomin Zhang · Xuanfang Gao · Lin Yi · Mallik & Preethi Ragampudi · Santos Velazquez & Anadelis Figueroa · Dawn and J. Martin\nAkshay Kumar · Padma Chitrapu · Sriram Chintalapati · Sairam Tadigadapa · Srini Tipirneni · Raghuram & Kanchan Devarakonda\nNellai Subramaniam & Shaila Nellai · Phillip Brooks · Tracey B · Byron Chang\nSalaar Khan · Yuhong Lai & Chunhui Wu · Cecil Gao\n\nThirty names, transcribed row by row from the sheet in the order they appear.\n\nPADMA CHITRAPU APPEARS TWICE on the sheet, in row 3 and again in row 5; listed once here.\nAFI'S OWN INSTRUCTION is that this section runs alphabetically by last name and that no principal team\nmember and no AFI faculty or staff may be thanked. The sheet is not yet in alphabetical order, and\n'Tracey B' has no surname to sort on. Sorting is a decision for whoever locks the crawl, not for me."
+      }
+     ]
     },
     {
      "id": "p11-partner-logos",
@@ -615,8 +648,14 @@
      "id": "p11-afi-boilerplate",
      "n": "11.3",
      "label": "AFI boilerplate and fellows",
-     "value": "",
-     "history": []
+     "value": "AFI FELLOWS, as the sheet lists them\nRuoxiao Li, AFI Producing Fellow\nRajarajeshwari Ragampudi, AFI Production Design Fellow\nLuke Scroggins, AFI Cinematography Fellow\nJordan Uwhubetine, AFI Directing Fellow\nYou Wu, AFI Editing Fellow\n\nBOILERPLATE, verbatim\n\"The characters and events depicted in this motion picture are fictitious. Any similarity to actual\npersons, living or dead, is purely coincidental.\"\n\n\"This motion picture is the property of the American Film Institute and is protected under the copyright\nlaws of the United States and other countries. Unauthorized duplication, distribution or exhibition may\nresult in civil liability and criminal prosecution.\"\n\n\"Produced at the AFI Conservatory in partial fulfillment of the requirements for the Master of Fine Arts\nDegree or Certificate of Completion.\"\n\n\"Edited on Avid Media Composer\"\n\n© copyright MMXXV\nAmerican Film Institute\n[AFI Conservatory logo]\n\nTHE DIRECTOR'S NAME DOES NOT MATCH. The fellows list reads \"Jordan Uwhubetine\"; the poster, the billing\nblock and every other credit read \"Jordan Betine\". It may be his legal name against his professional one.\nDo not print either until Jordan says which. The sheet also spells the discipline \"Directring\", plainly a\ntypo for Directing, corrected above.\n\nTHE COPYRIGHT YEAR IS MMXXV, 2025, while 3.5 records completion as 2026. One of the two is wrong, or the\ncopyright is dated to the year of creation rather than completion. Worth settling before submission,\nbecause festivals read both.\n\nSTILL OPEN ON THIS PAGE: vendor logos and the Green Seal are placeholders; the camera-equipment courtesy\nline is unresolved, marked \"delete if from AFI\"; and the animal-welfare line carries the question \"Did you\nwork with the Humane Society?\" — the crawl bills a snake wrangler, so an animal was on set and the\nAmerican Humane wording needs checking.",
+     "history": [
+      {
+       "at": "2026-09-08T22:48:26-07:00",
+       "by": "end-credit roll — 2513 KOM Credits 11-5-SDnotes.xlsx, End Titles tab",
+       "value": "AFI FELLOWS, as the sheet lists them\nRuoxiao Li, AFI Producing Fellow\nRajarajeshwari Ragampudi, AFI Production Design Fellow\nLuke Scroggins, AFI Cinematography Fellow\nJordan Uwhubetine, AFI Directing Fellow\nYou Wu, AFI Editing Fellow\n\nBOILERPLATE, verbatim\n\"The characters and events depicted in this motion picture are fictitious. Any similarity to actual\npersons, living or dead, is purely coincidental.\"\n\n\"This motion picture is the property of the American Film Institute and is protected under the copyright\nlaws of the United States and other countries. Unauthorized duplication, distribution or exhibition may\nresult in civil liability and criminal prosecution.\"\n\n\"Produced at the AFI Conservatory in partial fulfillment of the requirements for the Master of Fine Arts\nDegree or Certificate of Completion.\"\n\n\"Edited on Avid Media Composer\"\n\n© copyright MMXXV\nAmerican Film Institute\n[AFI Conservatory logo]\n\nTHE DIRECTOR'S NAME DOES NOT MATCH. The fellows list reads \"Jordan Uwhubetine\"; the poster, the billing\nblock and every other credit read \"Jordan Betine\". It may be his legal name against his professional one.\nDo not print either until Jordan says which. The sheet also spells the discipline \"Directring\", plainly a\ntypo for Directing, corrected above.\n\nTHE COPYRIGHT YEAR IS MMXXV, 2025, while 3.5 records completion as 2026. One of the two is wrong, or the\ncopyright is dated to the year of creation rather than completion. Worth settling before submission,\nbecause festivals read both.\n\nSTILL OPEN ON THIS PAGE: vendor logos and the Green Seal are placeholders; the camera-equipment courtesy\nline is unresolved, marked \"delete if from AFI\"; and the animal-welfare line carries the question \"Did you\nwork with the Humane Society?\" — the crawl bills a snake wrangler, so an animal was on set and the\nAmerican Humane wording needs checking."
+      }
+     ]
     }
    ]
   },

@@ -36,25 +36,25 @@ HOLD = {
  "p1-key-art": ("have", "in the repo — press/assets/POSTER"), "p1-billing-block": ("have", "from the poster"),
  "p1-website-url": ("blk", "donate page — decide"), "p2-logline": ("have", "3 versions by destination"),
  "p2-synopsis": ("self", "3 drafts written — pick one"), "p2-hero-still": ("self", "pick from the 41 stills"),
- "p3-genre": ("have", ""), "p3-country": ("have", ""), "p3-shooting-location": ("self", "where was it shot?"),
- "p3-production-year": ("blk", "with the date decision"), "p3-completion-year": ("blk", "a 2026 date before Apr 24"),
- "p3-language": ("have", ""), "p3-subtitles": ("have", "EN srt + scc — press/assets/SRT"), "p3-duration": ("have", ""),
- "p3-aspect-ratio": ("blk", "Yeo"), "p3-frame-rate": ("blk", "Yeo"), "p3-shooting-format": ("blk", "Yeo"),
- "p3-exhibition-formats": ("blk", "Yeo"), "p3-sound": ("blk", "Yeo"),
- "p3-heads-of-department": ("have", "from the poster"), "p3-cast-principals": ("self", "end credits — do not guess"),
+ "p3-genre": ("have", ""), "p3-country": ("have", ""), "p3-shooting-location": ("have", ""),
+ "p3-production-year": ("have", ""), "p3-completion-year": ("have", "vs © MMXXV on the crawl"),
+ "p3-language": ("have", ""), "p3-subtitles": ("have", "EN srt + scc"), "p3-duration": ("have", ""),
+ "p3-aspect-ratio": ("have", ""), "p3-frame-rate": ("have", ""), "p3-shooting-format": ("have", "\"RE-RAW\" — ARRIRAW?"),
+ "p3-exhibition-formats": ("blk", "Yeo"), "p3-sound": ("have", ""),
+ "p3-heads-of-department": ("have", "from the poster"), "p3-cast-principals": ("have", "from the end credits"),
  "p3-rights-holder": ("have", ""), "p3-press-contact": ("self", "needs a name and email"),
  "p3-instagram": ("self", "verify the IG target"), "p4-statement": ("have", "final draft — needs Jordan"),
  "p4-photo-behind": ("self", "pick from the 41 stills"), "p5-bio-director": ("have", "draft — 2 brackets for Jordan"),
- "p5-bio-producer": ("self", "Ruoxiao Li — ask her"), "p5-bio-cinematographer": ("self", 'LUKE — "why do you shoot"'),
- "p5-bio-production-designer": ("self", "writes their own"), "p5-bio-editor": ("self", "writes their own"),
+ "p5-bio-producer": ("have", "from the website"), "p5-bio-cinematographer": ("self", 'credits list — needs the "why"'),
+ "p5-bio-production-designer": ("have", "from the website"), "p5-bio-editor": ("have", "from the website"),
  "p5-headshots": ("self", "ask each person"), "p5-links": ("self", "ask each person"),
- "p7-cast-bios": ("self", "end credits + IMDb"), "p7-stills-in-character": ("self", "pick from the 41 stills"),
- "p8-bts-photos": ("have", "102 originals in press/assets/BTS — pick 8-12"), "p9-key-credits": ("self", "sound + EPs from end credits"),
- "p9-full-cast": ("self", "end credits"), "p9-still-behind": ("self", "pick from the 41 stills"),
- "p10-full-crew": ("self", "end credits"), "p11-thanks": ("self", "end credits"),
- "p11-partner-logos": ("self", "end credits"), "p11-afi-boilerplate": ("self", "end credits"),
+ "p7-cast-bios": ("self", "names known — bios from IMDb"), "p7-stills-in-character": ("self", "pick from the 41 stills"),
+ "p8-bts-photos": ("have", "102 originals in press/assets/BTS — pick 8-12"), "p9-key-credits": ("have", "sound designer still unknown"),
+ "p9-full-cast": ("have", "from the end credits"), "p9-still-behind": ("self", "pick from the 41 stills"),
+ "p10-full-crew": ("have", "12 blanks on the sheet"), "p11-thanks": ("have", "30 names — needs alphabetising"),
+ "p11-partner-logos": ("self", "placeholders on the sheet"), "p11-afi-boilerplate": ("have", "director name mismatch"),
  "a-stills": ("have", "41 in press/assets/STILLS — pick 12"), "a-trailer": ("blk", "Yeo"),
- "a-laurels": ("self", "email the 3 festivals"), "a-drive-folders": ("self", "30 min, no dependencies"),
+ "a-laurels": ("self", "email the 3 festivals"), "a-drive-folders": ("have", "built — Drive, synced"),
  "a-intro": ("blk", "Jordan"), "a-screenings": ("have", ""),
 }
 ROW, HEAD, GAP = 9.4, 12.0, 6.5
@@ -111,21 +111,22 @@ def main():
 
     fy = min(draw(c1, M, y), draw(c2, M + CW + 18, y)) - 6
     c.setStrokeColor(INK); c.setLineWidth(1.1); c.line(M, fy, W - M, fy); fy -= 13
-    c.setFillColor(INK); c.setFont("Helvetica-Bold", 8.8); c.drawString(M, fy, "THE ONE UNLOCK")
+    c.setFillColor(INK); c.setFont("Helvetica-Bold", 8.8); c.drawString(M, fy, "WHAT THE END CREDITS ANSWERED")
     c.setFont("Helvetica", 7.5); c.setFillColor(BODY)
-    t = ("The end-credit roll gives you cast, full crew, HoDs, composer, sound designer, thanks and the AFI boilerplate — "
-         "six of the eleven pages. It is the last ninety seconds of the film, reachable on the YouTube link. No hard drives needed.")
+    t = ("The end credits are in. They filled cast, full crew, executive producers, thanks and the AFI boilerplate. "
+         "Three things they did NOT settle: no sound designer is named anywhere, the fellows list calls the director "
+         "Jordan Uwhubetine where everything else says Jordan Betine, and the crawl is dated MMXXV against a 2026 completion.")
     for i, l in enumerate(simpleSplit(t, "Helvetica", 7.5, CW)): c.drawString(M, fy - 11 - i * 9.2, l)
     x2 = M + CW + 18
-    c.setFillColor(INK); c.setFont("Helvetica-Bold", 8.8); c.drawString(x2, fy, "TONIGHT, NEEDING NOBODY")
+    c.setFillColor(INK); c.setFont("Helvetica-Bold", 8.8); c.drawString(x2, fy, "NEXT, NEEDING NOBODY")
     c.setFont("Helvetica", 7.5); c.setFillColor(BODY)
-    for i, l in enumerate(["1  Transcribe the end credits", "2  Pick a synopsis — 3 drafts written",
-                           "3  Write your cinematographer bio", "4  Build the Drive folders",
-                           "5  Email the 3 festivals for laurels", "6  Message the HoDs: bio, headshot, links"]):
+    for i, l in enumerate(["1  Pick the pictures: hero, BTS mosaic, cast, credits", "2  Pick a synopsis",
+                           "3  Rewrite your bio to answer 'why do you shoot'", "4  Ask Jordan: Betine or Uwhubetine?",
+                           "5  Email the 3 festivals for laurels", "6  Find the sound designer"]):
         c.drawString(x2, fy - 11 - i * 9.2, l)
     c.setFillColor(MUT); c.setFont("Helvetica", 6.6)
     c.drawString(M, M - 8, "Killer of Men · AFI thesis · 13 min · full detail in press/epk-one-sheet.md")
-    c.drawRightString(W - M, M - 8, "Only Yeo: aspect · frame rate · shooting + exhibition format · sound · trailer · masters · DCP")
+    c.drawRightString(W - M, M - 8, "Still with Yeo: exhibition formats · the trailer · the masters · the DCP")
     c.showPage(); c.save()
     print(f"wrote {OUT} — {len(c1)}+{len(c2)} blocks, footer at y={fy:.0f}, margin {M:.0f}")
     if fy < M + 70: print("WARNING: footer is close to the bottom margin; content may be overflowing")
