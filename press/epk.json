@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 5,
- "updated": "2026-09-08T19:13:54-07:00",
- "updatedBy": "Luke, Sep 8 — Resolve gallery stills from FINAL/KOM Stills and KOM Stills (Additional)",
+ "rev": 6,
+ "updated": "2026-09-08T21:10:57-07:00",
+ "updatedBy": "Luke, Sep 8 — single Resolve export 210640 replaces both earlier sets",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -504,12 +504,17 @@
      "id": "a-stills",
      "n": "A.1",
      "label": "Stills",
-     "value": "43 frame grabs in the repo, press/assets/STILLS/, two Resolve gallery exports, PNG, as delivered:\nset-2025-12-18: 10 stills, 2048×858 (scope frame, no bars) — barn fight, oak grove, the burial, Mace at the cabin, candle and shell, the wheel of fire, the Elder at the graves.\nset-2026-09-08: 33 stills, 1920×1080 letterboxed (picture rows 138–941, bars top and bottom) — shells in hands, the fight, barn exteriors, the doorway silhouettes, Mace at the cabin, the Elder by firelight, the lantern, the spirit blur, the body in kente. 1.1.21 and 1.1.22 are the same frame.\nContact sheets: contact-set-2025-12-18.jpg, contact-set-2026-09-08.jpg. Nothing picked yet: hero still (2.3), photo behind the statement (4.2), stills in character (7.2), still behind the credits (9.3), best 12 for the Drive.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/STILLS",
+     "value": "41 frame grabs in the repo, press/assets/STILLS/, one Resolve gallery export (210640), PNG 1920×1080 letterboxed, picture in rows 138–941 (2.39:1). Gallery names kept: Still 2026-09-08 210640_1.1.N.png, N = 1–41.\nCovers the film end to end: shells in cupped hands, the barn fight, Kenner and the barn exteriors, the doorway silhouettes, the oak grove, the burial, Mace at the cabin, the Elder by firelight, the shrine and candle, the lantern on the water, the spirit blur, the priest, the body in kente, the Elder at the graves.\n1.1.25 and 1.1.26 are the same frame. Contact sheet: contact-sheet.jpg.\nThis export replaced two earlier sets (10 scope + 33 letterboxed) on Sep 8; it covers all but two frames of the December scope set — see press/assets/README.md.\nNothing picked yet: hero still (2.3), photo behind the statement (4.2), stills in character (7.2), still behind the credits (9.3), best 12 for the Drive.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/STILLS",
      "history": [
       {
        "at": "2026-09-08T19:13:54-07:00",
        "by": "Luke, Sep 8 — Resolve gallery stills from FINAL/KOM Stills and KOM Stills (Additional)",
        "value": "43 frame grabs in the repo, press/assets/STILLS/, two Resolve gallery exports, PNG, as delivered:\nset-2025-12-18: 10 stills, 2048×858 (scope frame, no bars) — barn fight, oak grove, the burial, Mace at the cabin, candle and shell, the wheel of fire, the Elder at the graves.\nset-2026-09-08: 33 stills, 1920×1080 letterboxed (picture rows 138–941, bars top and bottom) — shells in hands, the fight, barn exteriors, the doorway silhouettes, Mace at the cabin, the Elder by firelight, the lantern, the spirit blur, the body in kente. 1.1.21 and 1.1.22 are the same frame.\nContact sheets: contact-set-2025-12-18.jpg, contact-set-2026-09-08.jpg. Nothing picked yet: hero still (2.3), photo behind the statement (4.2), stills in character (7.2), still behind the credits (9.3), best 12 for the Drive.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/STILLS"
+      },
+      {
+       "at": "2026-09-08T21:10:57-07:00",
+       "by": "Luke, Sep 8 — single Resolve export 210640 replaces both earlier sets",
+       "value": "41 frame grabs in the repo, press/assets/STILLS/, one Resolve gallery export (210640), PNG 1920×1080 letterboxed, picture in rows 138–941 (2.39:1). Gallery names kept: Still 2026-09-08 210640_1.1.N.png, N = 1–41.\nCovers the film end to end: shells in cupped hands, the barn fight, Kenner and the barn exteriors, the doorway silhouettes, the oak grove, the burial, Mace at the cabin, the Elder by firelight, the shrine and candle, the lantern on the water, the spirit blur, the priest, the body in kente, the Elder at the graves.\n1.1.25 and 1.1.26 are the same frame. Contact sheet: contact-sheet.jpg.\nThis export replaced two earlier sets (10 scope + 33 letterboxed) on Sep 8; it covers all but two frames of the December scope set — see press/assets/README.md.\nNothing picked yet: hero still (2.3), photo behind the statement (4.2), stills in character (7.2), still behind the credits (9.3), best 12 for the Drive.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/STILLS"
       }
      ]
     },
