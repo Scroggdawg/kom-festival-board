@@ -47,7 +47,7 @@ HOLD = {
  "p4-photo-behind": ("self", "pick from the 41 stills"), "p5-bio-director": ("have", "draft — 2 brackets for Jordan"),
  "p5-bio-producer": ("have", "from the website"), "p5-bio-cinematographer": ("self", 'credits list — needs the "why"'),
  "p5-bio-production-designer": ("have", "from the website"), "p5-bio-editor": ("have", "from the website"),
- "p5-headshots": ("self", "ask each person"), "p5-links": ("self", "ask each person"),
+ "p5-headshots": ("have", "complete set — name the files"), "p5-links": ("self", "ask each person"),
  "p7-cast-bios": ("self", "names known — bios from IMDb"), "p7-stills-in-character": ("self", "pick from the 41 stills"),
  "p8-bts-photos": ("have", "102 originals in press/assets/BTS — pick 8-12"), "p9-key-credits": ("have", "sound designer still unknown"),
  "p9-full-cast": ("have", "from the end credits"), "p9-still-behind": ("self", "pick from the 41 stills"),

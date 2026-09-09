@@ -62,4 +62,4 @@ Both are still on Luke's disk in `FINAL/KOM Stills`, and both are in this reposi
 
 Left out on purpose: the `.drx` files that came with an earlier stills export. They are Resolve grade sidecars, not press material.
 
-Still to arrive: the trailer and the laurels (`press/epk.json`, A.2 and A.3), plus a fifth headshot — four files cover five credited fellows. Still to choose: the hero still (2.3), the photo behind the statement (4.2), stills in character (7.2), the still behind the credits (9.3), the best 12 stills for the Drive, and 8–12 BTS photographs for page 8.
+Still to arrive: the trailer and the laurels (`press/epk.json`, A.2 and A.3). The four headshots are the complete set — Luke confirmed there is no headshot for the writer and no other copies of these masters. Still to choose: the hero still (2.3), the photo behind the statement (4.2), stills in character (7.2), the still behind the credits (9.3), the best 12 stills for the Drive, and 8–12 BTS photographs for page 8.

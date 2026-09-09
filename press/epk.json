@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 19,
- "updated": "2026-09-09T01:07:54-07:00",
- "updatedBy": "Luke via epk-intake",
+ "rev": 20,
+ "updated": "2026-09-09T01:40:40-07:00",
+ "updatedBy": "Luke, Sep 9 — confirmed these are the masters",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -541,12 +541,17 @@
      "id": "p5-headshots",
      "n": "5.6",
      "label": "Headshots",
-     "value": "FOUR headshots in, full resolution, unmodified. Shot September 2024; source is the project's own Headshots/Edits folder.\n  KOM Headshots v3-1.jpg   6200 × 7134\n  KOM Headshots v3-2.jpg   6200 × 7033\n  KOM Headshots v3-3.jpg   6200 × 6713\n  KOM Headshots v3-4.jpg   6200 × 6372\nOn the Drive at 05 MARKETING/00 PRESS/HEADSHOTS and in the repo at press/assets/HEADSHOTS — both checked byte for byte against the source. Nothing resized or re-encoded. They carry the film's own lighting: hard side key, deep falloff, sepia-black.\nNOT RENAMED. epk-spec.md wants KILLER_OF_MEN_First_Last_Role.jpg, which means deciding which file is which person. Not guessed. Luke maps number to name and the rename is a second's work.\nFOUR FILES, FIVE FELLOWS. Bios 5.1–5.5 cover Jordan Betine, Ruoxiao Li, Luke Scroggins, Rajarajeshwari Ragampudi and You Wu. One person is unaccounted for — either not shot, or held somewhere this folder does not reach. A bio page with no portrait is what makes a kit look unfinished.\nHigher-resolution alternates exist and were left alone: Headshots/CCD Headshots holds four v3 files up to 28 MB, possibly the same four people at a better grade.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/HEADSHOTS",
+     "value": "FOUR headshots in, full resolution, unmodified. THESE ARE THE MASTERS — Luke confirmed Sep 9: there are no other copies and no higher-resolution set. Shot September 2024, source Headshots/Edits.\n  KOM Headshots v3-1.jpg   6200 × 7134\n  KOM Headshots v3-2.jpg   6200 × 7033\n  KOM Headshots v3-3.jpg   6200 × 6713\n  KOM Headshots v3-4.jpg   6200 × 6372\nOn the Drive at 05 MARKETING/00 PRESS/HEADSHOTS and in the repo at press/assets/HEADSHOTS — both checked byte for byte against the source. Nothing resized or re-encoded. They carry the film's own lighting: hard side key, deep falloff, sepia-black.\nFOUR IS THE COMPLETE SET. Luke: there is no headshot for the writer, and one was never taken. So four files against five bio slots is not a missing file to chase — it is the true state. Whoever lays out pages 5 and 6 should plan for one bio without a portrait rather than waiting on one.\nNOT RENAMED. epk-spec.md wants KILLER_OF_MEN_First_Last_Role.jpg, which means deciding which file is which person. Not guessed. Luke maps number to name and the rename is a second's work — the last thing this field needs.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/HEADSHOTS",
      "history": [
       {
        "at": "2026-09-09T00:44:03-07:00",
        "by": "Luke, Sep 9 — crew headshots from Headshots/Edits",
        "value": "FOUR headshots in, full resolution, unmodified. Shot September 2024; source is the project's own Headshots/Edits folder.\n  KOM Headshots v3-1.jpg   6200 × 7134\n  KOM Headshots v3-2.jpg   6200 × 7033\n  KOM Headshots v3-3.jpg   6200 × 6713\n  KOM Headshots v3-4.jpg   6200 × 6372\nOn the Drive at 05 MARKETING/00 PRESS/HEADSHOTS and in the repo at press/assets/HEADSHOTS — both checked byte for byte against the source. Nothing resized or re-encoded. They carry the film's own lighting: hard side key, deep falloff, sepia-black.\nNOT RENAMED. epk-spec.md wants KILLER_OF_MEN_First_Last_Role.jpg, which means deciding which file is which person. Not guessed. Luke maps number to name and the rename is a second's work.\nFOUR FILES, FIVE FELLOWS. Bios 5.1–5.5 cover Jordan Betine, Ruoxiao Li, Luke Scroggins, Rajarajeshwari Ragampudi and You Wu. One person is unaccounted for — either not shot, or held somewhere this folder does not reach. A bio page with no portrait is what makes a kit look unfinished.\nHigher-resolution alternates exist and were left alone: Headshots/CCD Headshots holds four v3 files up to 28 MB, possibly the same four people at a better grade.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/HEADSHOTS"
+      },
+      {
+       "at": "2026-09-09T01:40:40-07:00",
+       "by": "Luke, Sep 9 — confirmed these are the masters",
+       "value": "FOUR headshots in, full resolution, unmodified. THESE ARE THE MASTERS — Luke confirmed Sep 9: there are no other copies and no higher-resolution set. Shot September 2024, source Headshots/Edits.\n  KOM Headshots v3-1.jpg   6200 × 7134\n  KOM Headshots v3-2.jpg   6200 × 7033\n  KOM Headshots v3-3.jpg   6200 × 6713\n  KOM Headshots v3-4.jpg   6200 × 6372\nOn the Drive at 05 MARKETING/00 PRESS/HEADSHOTS and in the repo at press/assets/HEADSHOTS — both checked byte for byte against the source. Nothing resized or re-encoded. They carry the film's own lighting: hard side key, deep falloff, sepia-black.\nFOUR IS THE COMPLETE SET. Luke: there is no headshot for the writer, and one was never taken. So four files against five bio slots is not a missing file to chase — it is the true state. Whoever lays out pages 5 and 6 should plan for one bio without a portrait rather than waiting on one.\nNOT RENAMED. epk-spec.md wants KILLER_OF_MEN_First_Last_Role.jpg, which means deciding which file is which person. Not guessed. Luke maps number to name and the rename is a second's work — the last thing this field needs.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/HEADSHOTS"
       }
      ]
     },
