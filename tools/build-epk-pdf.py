@@ -43,7 +43,7 @@ HOLD = {
  "p3-exhibition-formats": ("blk", "Yeo"), "p3-sound": ("have", ""),
  "p3-heads-of-department": ("have", "from the poster"), "p3-cast-principals": ("have", "from the end credits"),
  "p3-rights-holder": ("have", ""), "p3-press-contact": ("self", "needs a name and email"),
- "p3-instagram": ("self", "verify the IG target"), "p4-statement": ("have", "final draft — needs Jordan"),
+ "p3-instagram": ("have", ""), "p3-imdb": ("have", ""), "p4-statement": ("have", "final draft — needs Jordan"),
  "p4-photo-behind": ("self", "pick from the 41 stills"), "p5-bio-director": ("have", "draft — 2 brackets for Jordan"),
  "p5-bio-producer": ("have", "from the website"), "p5-bio-cinematographer": ("self", 'credits list — needs the "why"'),
  "p5-bio-production-designer": ("have", "from the website"), "p5-bio-editor": ("have", "from the website"),

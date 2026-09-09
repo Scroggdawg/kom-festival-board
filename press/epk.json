@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 13,
- "updated": "2026-09-08T22:48:45-07:00",
- "updatedBy": "end-credit roll — still photographer named",
+ "rev": 14,
+ "updated": "2026-09-09T00:36:21-07:00",
+ "updatedBy": "Luke via epk-intake",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -136,14 +136,10 @@
        "value": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class. I was often one of the biggest in the room. As I got older, I started noticing how my mere presence was often seen as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys—even those bigger and stronger than I was. It’s never anything overt, but small, incessant microaggressions. Death by a 1000 needles. It’s a plight that’s shaped me throughout my life, leaving me hyper-aware of myself in spaces. This experience, this reality, is tied to the plight of the Black man in America.\n\nThe concept of Mandingo fighting has always fascinated me. It’s a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history, and the media. It’s always been used to showcase the “Black brute,” but it has never been shown subjectively from the perspective of those involved. What are their lives like? What do they hold dear? What keeps a man going when he’s put in a situation like that?\nSetting this film in slavery times, rather than in the present day or during the 1960s, allows me to examine the deep-rooted history of this aggression. Visually, I want the fight scenes to reflect the physical sports Black men often participate in—body slams, boxing, football tackles—to show history repeating itself through various forms of expression.\nBy setting the story in the 1800s, I also had the chance to explore my heritage. With slavery still in full force and new enslaved people being brought in from Africa, I can examine the past in different ways.\nI want to delve into the spirituality of the enslaved at the time, capturing the mix of cultures, beliefs, and religions that slowly formed what we now know as Black culture.\n\nKiller of Men is an expression of pain—absolute brutality and suffering. But it’s also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I’m putting on the screen.\nKiller of Men has been a grueling process—one that’s forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won’t shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do."
       }
      ]
-    },
-    {
-     "id": "p2-hero-still",
-     "n": "2.3",
-     "label": "Hero still",
-     "value": "",
-     "history": []
     }
+   ],
+   "retired": [
+    "2.3"
    ]
   },
   {
@@ -369,8 +365,27 @@
      "id": "p3-instagram",
      "n": "3.18",
      "label": "Instagram",
-     "value": "",
-     "history": []
+     "value": "https://www.instagram.com/killerofmenmovie/",
+     "history": [
+      {
+       "at": "2026-09-09T00:36:21-07:00",
+       "by": "Luke, in chat",
+       "value": "https://www.instagram.com/killerofmenmovie/"
+      }
+     ]
+    },
+    {
+     "id": "p3-imdb",
+     "n": "3.19",
+     "label": "IMDb",
+     "value": "https://www.imdb.com/title/tt37523933/",
+     "history": [
+      {
+       "at": "2026-09-09T00:36:21-07:00",
+       "by": "Luke, in chat",
+       "value": "https://www.imdb.com/title/tt37523933/"
+      }
+     ]
     }
    ]
   },
@@ -396,14 +411,10 @@
        "value": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class. I was often one of the biggest in the room. As I got older, I started noticing how my mere presence was often seen as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys—even those bigger and stronger than I was. It’s never anything overt, but small, incessant microaggressions. Death by a 1000 needles. It’s a plight that’s shaped me throughout my life, leaving me hyper-aware of myself in spaces. This experience, this reality, is tied to the plight of the Black man in America.\n\nThe concept of Mandingo fighting has always fascinated me. It’s a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history, and the media. It’s always been used to showcase the “Black brute,” but it has never been shown subjectively from the perspective of those involved. What are their lives like? What do they hold dear? What keeps a man going when he’s put in a situation like that?\nSetting this film in slavery times, rather than in the present day or during the 1960s, allows me to examine the deep-rooted history of this aggression. Visually, I want the fight scenes to reflect the physical sports Black men often participate in—body slams, boxing, football tackles—to show history repeating itself through various forms of expression.\nBy setting the story in the 1800s, I also had the chance to explore my heritage. With slavery still in full force and new enslaved people being brought in from Africa, I can examine the past in different ways.\nI want to delve into the spirituality of the enslaved at the time, capturing the mix of cultures, beliefs, and religions that slowly formed what we now know as Black culture.\n\nKiller of Men is an expression of pain—absolute brutality and suffering. But it’s also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I’m putting on the screen.\nKiller of Men has been a grueling process—one that’s forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won’t shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do."
       }
      ]
-    },
-    {
-     "id": "p4-photo-behind",
-     "n": "4.2",
-     "label": "Photo behind the text",
-     "value": "",
-     "history": []
     }
+   ],
+   "retired": [
+    "4.2"
    ]
   },
   {
@@ -589,14 +600,10 @@
        "value": "Mace | Erik Orjiako\nMaster Kenner | Eric Pargac\nKojo | Jamal Dennis\nKojo's Master | Casey Long\nFred | Chaundre Hall-Broomfield\nElder | Sandra McDaniels\nGirl | Loren Fenton\nSpectator | Daniel Kassar\nSpectator | Nikita Korshunov\n\nExtras | D'Shae J Beasley · Mel Hampton · Ayodeji Fatigun · Charles Kiema · Tyler Fisher · Nikkia Danielle Matthews · Olaoluwa Oluwaseun Ogunseye · Patience Dooshima Ohabuike · Youlanda Davis · Danny Potter · Ricardo Vargas · Rob Mark Saduski · Gage Phillips · Erik Scilley · Anthony Aroyan\n\nFifteen extras. The sheet's list has seventeen; Nikita Korshunov and Daniel Kassar are both marked 'delete' there because they are billed above as Spectators."
       }
      ]
-    },
-    {
-     "id": "p9-still-behind",
-     "n": "9.3",
-     "label": "Still behind the credits",
-     "value": "",
-     "history": []
     }
+   ],
+   "retired": [
+    "9.3"
    ]
   },
   {

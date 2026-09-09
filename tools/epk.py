@@ -24,6 +24,11 @@ Numbers are permanent. A field's number is how Luke refers to it when he sends
 material, so save() refuses any change that moves an existing id to a different
 number or a different section. New fields are appended to the end of their section.
 
+A dropped field's number is retired, never reused: drop_field() records it in the
+section's `retired` list and add_field() counts past it. Otherwise dropping 2.3 and
+adding a field would hand the new one the number 2.3, and a number Luke had already
+used in conversation would silently mean something else.
+
 A field may carry `options`: two or more candidate values, none of them primary,
 for a slot whose text is written but whose choice is still out with someone. The
 field's `value` stays empty until a choice comes back, and choosing copies the
@@ -132,6 +137,10 @@ def check(d):
         if not isinstance(s.get("fields"), list) or not s["fields"]:
             errs.append(f"section {sid} has no fields")
             continue
+        retired = s.get("retired") or []
+        if not isinstance(retired, list) or any(not _filled(r) for r in retired):
+            errs.append(f"section {num}: retired must be a list of numbers")
+            retired = []
         seq = []
         for f in s["fields"]:
             fid, n = f.get("id"), f.get("n")
@@ -150,6 +159,8 @@ def check(d):
             if not re.fullmatch(re.escape(str(num)) + r"\.\d+", str(n)):
                 errs.append(f"{fid}: number {n} does not belong to section {num}")
                 continue
+            if n in retired:
+                errs.append(f"{fid}: number {n} was retired and cannot be reused")
             seq.append(int(str(n).rsplit(".", 1)[1]))
             if not _filled(f.get("label")):
                 errs.append(f"{n}: no label")
@@ -232,6 +243,41 @@ def set_value(d, ref, value, by="epk.py", expect=None):
     h.append({"at": now(), "by": by, "value": value})
     del h[:-HISTORY_KEEP]
     return True
+
+
+def _section(d, num_or_id):
+    for s in d["sections"]:
+        if s["id"] == num_or_id or s["num"] == num_or_id:
+            return s
+    raise KeyError(f"no section {num_or_id!r}")
+
+
+def add_field(d, section, fid, label, value="", by="epk.py"):
+    """Append a field. Its number is one past the highest ever used in that section,
+    counting retired numbers, so nothing is reused."""
+    s = _section(d, section)
+    if any(f["id"] == fid for _, f in fields(d)):
+        raise ValueError(f"{fid} already exists")
+    used = [int(str(x).rsplit(".", 1)[1]) for x in
+            [f["n"] for f in s["fields"]] + list(s.get("retired") or [])]
+    n = f"{s['num']}.{max(used, default=0) + 1}"
+    f = {"id": fid, "n": n, "label": label, "value": "", "history": []}
+    s["fields"].append(f)
+    if value:
+        set_value(d, fid, value, by=by)
+    return n
+
+
+def drop_field(d, ref, by="epk.py"):
+    """Retire a field. Refuses if it holds anything — a field with a value or
+    candidates is data, and dropping it is not this function's decision to make.
+    Every prior revision stays in git regardless."""
+    s, f = find(d, ref)
+    if f["value"].strip() or f.get("options"):
+        raise ValueError(f"{f['n']} still holds content; clear it first if you really mean to drop it")
+    s["fields"].remove(f)
+    s.setdefault("retired", []).append(f["n"])
+    return f["n"]
 
 
 def set_options(d, ref, options, by="epk.py"):
