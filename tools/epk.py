@@ -24,6 +24,9 @@ Numbers are permanent. A field's number is how Luke refers to it when he sends
 material, so save() refuses any change that moves an existing id to a different
 number or a different section. New fields are appended to the end of their section.
 
+A field may carry `waiting`: the person it is blocked on. It is who, not what — the
+material itself always lives in `value`.
+
 A dropped field's number is retired, never reused: drop_field() records it in the
 section's `retired` list and add_field() counts past it. Otherwise dropping 2.3 and
 adding a field would hand the new one the number 2.3, and a number Luke had already
@@ -180,6 +183,8 @@ def check(d):
                     errs.append(f"{n}: a history entry has no value")
             if isinstance(v, str) and current(f) != v:
                 errs.append(f"{n}: value and history disagree; the merge would read the history")
+            if "waiting" in f and not _filled(f["waiting"]):
+                errs.append(f"{n}: waiting must name someone, or be absent")
             if "options" in f:
                 o = f["options"]
                 if not isinstance(o, list) or len(o) < 2:
@@ -280,6 +285,41 @@ def drop_field(d, ref, by="epk.py"):
     return f["n"]
 
 
+def set_waiting(d, ref, who, by="epk.py"):
+    """Record who a field is blocked on, or clear it with None. Stamps history so the
+    change survives a merge — a waiting-only edit leaves `value` untouched, and without
+    a stamp the merge would see both sides as identical and discard it."""
+    s, f = find(d, ref)
+    if who is None:
+        if "waiting" not in f:
+            return False
+        del f["waiting"]
+    else:
+        if not _filled(who):
+            raise ValueError("waiting must name someone")
+        if f.get("waiting") == who:
+            return False
+        f["waiting"] = who
+    h = f.setdefault("history", [])
+    h.append({"at": now(), "by": by, "value": f["value"]})
+    del h[:-HISTORY_KEEP]
+    return True
+
+
+def set_label(d, ref, label, by="epk.py"):
+    """Reword a field. The number is what is permanent, not the wording."""
+    s, f = find(d, ref)
+    if not _filled(label):
+        raise ValueError("a label must say something")
+    if f["label"] == label:
+        return False
+    f["label"] = label
+    h = f.setdefault("history", [])
+    h.append({"at": now(), "by": by, "value": f["value"]})
+    del h[:-HISTORY_KEEP]
+    return True
+
+
 def set_options(d, ref, options, by="epk.py"):
     """Attach or replace a field's candidates. Stamps history at the field's current
     value — an options change with no history entry would look identical to the other
@@ -360,10 +400,13 @@ def merge(local, remote):
             changed = True
         rf["history"] = hist
         rf["value"] = hist[-1]["value"] if hist else winner["value"]
-        if "options" in winner:                # candidates travel with the side that wrote last
-            rf["options"] = winner["options"]
-        else:
-            rf.pop("options", None)
+        for key in ("options", "waiting"):      # these travel with the side that wrote last
+            if key in winner:
+                rf[key] = winner[key]
+            else:
+                rf.pop(key, None)
+        if winner is lf and lf["label"] != rf["label"]:
+            rf["label"] = lf["label"]
     if lmap:                                   # fields this machine has that the remote lacks
         by_section = {s["id"]: s for s in merged["sections"]}
         for s, f in fields(local):

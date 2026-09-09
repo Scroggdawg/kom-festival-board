@@ -20,6 +20,7 @@
 .r .n{font-variant-numeric:tabular-nums;color:rgba(243,236,216,.65);font-size:13px;padding-top:1px}
 .r .l{color:var(--cream)}
 .r.empty .l{color:rgba(243,236,216,.72)}
+.wait{display:inline-block;margin-left:8px;font-size:11.5px;color:rgba(243,236,216,.75);border:1px solid rgba(243,236,216,.3);border-radius:4px;padding:0 6px}
 .v{color:rgba(243,236,216,.88);white-space:pre-wrap;overflow-wrap:anywhere;cursor:text;border-radius:5px;padding:1px 5px;margin:-1px -5px;min-height:20px;border:1px solid transparent}
 .v:hover{background:rgba(243,236,216,.09)}.v:focus-visible{outline:none;border-color:var(--cream)}
 .v.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
@@ -97,7 +98,8 @@ function render(d){
         }).join('')+'</div>';
       }
       html+='<div class="r'+(v.trim()?'':' empty')+'" data-id="'+esc(f.id)+'">'+
-        '<span class="n">'+esc(num(f.n,mode))+'</span><span class="l">'+esc(f.label)+'</span>'+
+        '<span class="n">'+esc(num(f.n,mode))+'</span><span class="l">'+esc(f.label)+
+          (f.waiting?'<span class="wait">'+esc(f.waiting)+'</span>':'')+'</span>'+
         '<div><div class="v'+(v.trim()?'':' none')+(long&&!open?' clamp':'')+'" tabindex="0" role="button" data-id="'+esc(f.id)+'">'+esc(v)+'</div>'+
         (long?'<button class="more" data-x="'+esc(f.id)+'" type="button">'+(open?'less':'more')+'</button>':'')+opts+'</div></div>';
     });

@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 15,
- "updated": "2026-09-09T00:44:03-07:00",
- "updatedBy": "Luke, Sep 9 — crew headshots from Headshots/Edits",
+ "rev": 17,
+ "updated": "2026-09-09T00:45:53-07:00",
+ "updatedBy": "merge",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -93,6 +93,11 @@
        "at": "2026-09-08T22:41:58-07:00",
        "by": "Luke, in chat — third logline renamed Workshop",
        "value": ""
+      },
+      {
+       "at": "2026-09-09T00:43:41-07:00",
+       "by": "Luke, in chat",
+       "value": ""
       }
      ],
      "options": [
@@ -110,7 +115,8 @@
        "key": "Workshop",
        "value": "KILLER OF MEN -- In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own. When he stumbles upon his opponent's burial rites, he finds the ceremony being held in the ancient faith of their shared ancestors, who he must now face to decide whether he will kill again."
       }
-     ]
+     ],
+     "waiting": "Jordan Betine"
     },
     {
      "id": "p2-synopsis",
@@ -121,6 +127,11 @@
       {
        "at": "2026-09-08T22:41:58-07:00",
        "by": "Luke, in chat — two candidate synopses",
+       "value": ""
+      },
+      {
+       "at": "2026-09-09T00:43:41-07:00",
+       "by": "Luke, in chat",
        "value": ""
       }
      ],
@@ -135,7 +146,8 @@
        "note": "the full text of 4.1",
        "value": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class. I was often one of the biggest in the room. As I got older, I started noticing how my mere presence was often seen as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys—even those bigger and stronger than I was. It’s never anything overt, but small, incessant microaggressions. Death by a 1000 needles. It’s a plight that’s shaped me throughout my life, leaving me hyper-aware of myself in spaces. This experience, this reality, is tied to the plight of the Black man in America.\n\nThe concept of Mandingo fighting has always fascinated me. It’s a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history, and the media. It’s always been used to showcase the “Black brute,” but it has never been shown subjectively from the perspective of those involved. What are their lives like? What do they hold dear? What keeps a man going when he’s put in a situation like that?\nSetting this film in slavery times, rather than in the present day or during the 1960s, allows me to examine the deep-rooted history of this aggression. Visually, I want the fight scenes to reflect the physical sports Black men often participate in—body slams, boxing, football tackles—to show history repeating itself through various forms of expression.\nBy setting the story in the 1800s, I also had the chance to explore my heritage. With slavery still in full force and new enslaved people being brought in from Africa, I can examine the past in different ways.\nI want to delve into the spirituality of the enslaved at the time, capturing the mix of cultures, beliefs, and religions that slowly formed what we now know as Black culture.\n\nKiller of Men is an expression of pain—absolute brutality and suffering. But it’s also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I’m putting on the screen.\nKiller of Men has been a grueling process—one that’s forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won’t shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do."
       }
-     ]
+     ],
+     "waiting": "Jordan Betine"
     }
    ],
    "retired": [
@@ -295,7 +307,14 @@
      "n": "3.12",
      "label": "Exhibition formats (DCP, ProRes)",
      "value": "",
-     "history": []
+     "history": [
+      {
+       "at": "2026-09-09T00:43:41-07:00",
+       "by": "Luke, in chat",
+       "value": ""
+      }
+     ],
+     "waiting": "You Wu"
     },
     {
      "id": "p3-sound",
@@ -508,9 +527,15 @@
     {
      "id": "p5-links",
      "n": "5.7",
-     "label": "Instagram and IMDb links",
+     "label": "Instagram and IMDb, per filmmaker",
      "value": "",
-     "history": []
+     "history": [
+      {
+       "at": "2026-09-09T00:43:41-07:00",
+       "by": "Luke, in chat",
+       "value": ""
+      }
+     ]
     }
    ]
   },
@@ -727,7 +752,14 @@
      "n": "A.5",
      "label": "60-second introduction",
      "value": "",
-     "history": []
+     "history": [
+      {
+       "at": "2026-09-09T00:43:41-07:00",
+       "by": "Luke, in chat",
+       "value": ""
+      }
+     ],
+     "waiting": "Jordan Betine"
     },
     {
      "id": "a-screenings",
