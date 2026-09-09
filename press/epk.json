@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 4,
- "updated": "2026-09-08T15:26:25-07:00",
- "updatedBy": "Luke's Downloads, Sep 8 — poster and captions from Jordan's Drive",
+ "rev": 5,
+ "updated": "2026-09-08T19:13:54-07:00",
+ "updatedBy": "Luke, Sep 8 — Resolve gallery stills from FINAL/KOM Stills and KOM Stills (Additional)",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -504,8 +504,14 @@
      "id": "a-stills",
      "n": "A.1",
      "label": "Stills",
-     "value": "",
-     "history": []
+     "value": "43 frame grabs in the repo, press/assets/STILLS/, two Resolve gallery exports, PNG, as delivered:\nset-2025-12-18: 10 stills, 2048×858 (scope frame, no bars) — barn fight, oak grove, the burial, Mace at the cabin, candle and shell, the wheel of fire, the Elder at the graves.\nset-2026-09-08: 33 stills, 1920×1080 letterboxed (picture rows 138–941, bars top and bottom) — shells in hands, the fight, barn exteriors, the doorway silhouettes, Mace at the cabin, the Elder by firelight, the lantern, the spirit blur, the body in kente. 1.1.21 and 1.1.22 are the same frame.\nContact sheets: contact-set-2025-12-18.jpg, contact-set-2026-09-08.jpg. Nothing picked yet: hero still (2.3), photo behind the statement (4.2), stills in character (7.2), still behind the credits (9.3), best 12 for the Drive.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/STILLS",
+     "history": [
+      {
+       "at": "2026-09-08T19:13:54-07:00",
+       "by": "Luke, Sep 8 — Resolve gallery stills from FINAL/KOM Stills and KOM Stills (Additional)",
+       "value": "43 frame grabs in the repo, press/assets/STILLS/, two Resolve gallery exports, PNG, as delivered:\nset-2025-12-18: 10 stills, 2048×858 (scope frame, no bars) — barn fight, oak grove, the burial, Mace at the cabin, candle and shell, the wheel of fire, the Elder at the graves.\nset-2026-09-08: 33 stills, 1920×1080 letterboxed (picture rows 138–941, bars top and bottom) — shells in hands, the fight, barn exteriors, the doorway silhouettes, Mace at the cabin, the Elder by firelight, the lantern, the spirit blur, the body in kente. 1.1.21 and 1.1.22 are the same frame.\nContact sheets: contact-set-2025-12-18.jpg, contact-set-2026-09-08.jpg. Nothing picked yet: hero still (2.3), photo behind the statement (4.2), stills in character (7.2), still behind the credits (9.3), best 12 for the Drive.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/STILLS"
+      }
+     ]
     },
     {
      "id": "a-trailer",
