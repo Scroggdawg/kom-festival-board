@@ -4,6 +4,7 @@
     gdoc.py auth                     one-time: print the consent URL, wait, store the token
     gdoc.py whoami                   confirm which account the stored token belongs to
     gdoc.py push <docId> <file.docx> replace that Doc's contents with the .docx
+    gdoc.py backup <docId> <dir>     export the Doc as .docx and .txt before touching it
 
 Why files.update and not the Docs API: replacing a Doc through documents().batchUpdate
 means tearing the body down and rebuilding every run and its styling by hand, and any
@@ -100,6 +101,30 @@ def push(doc_id, path):
     return after
 
 
+def backup(doc_id, out_dir):
+    """Export the Doc as it stands. Run before any push — the Doc is a place people
+    type into, and a replace is not reversible from this side."""
+    import io
+    from googleapiclient.http import MediaIoBaseDownload
+    os.makedirs(out_dir, exist_ok=True)
+    drive = service("drive", "v3")
+    meta = drive.files().get(fileId=doc_id, fields="name,modifiedTime").execute()
+    stamp = meta["modifiedTime"].replace(":", "").replace("-", "")[:15]
+    written = []
+    for mime, ext in ((DOCX, "docx"), ("text/plain", "txt")):
+        buf = io.BytesIO()
+        dl = MediaIoBaseDownload(buf, drive.files().export_media(fileId=doc_id, mimeType=mime))
+        done = False
+        while not done:
+            _, done = dl.next_chunk()
+        path = os.path.join(out_dir, f"{meta['name']} {stamp}.{ext}")
+        open(path, "wb").write(buf.getvalue())
+        written.append(path)
+    for w in written:
+        print("saved", w)
+    return written
+
+
 def main(a):
     if not a or a[0] in ("-h", "--help"):
         print(__doc__)
@@ -111,6 +136,10 @@ def main(a):
     elif cmd == "whoami":
         about = service("drive", "v3").about().get(fields="user").execute()
         print(about["user"].get("emailAddress"), "·", about["user"].get("displayName"))
+    elif cmd == "backup":
+        if len(a) < 3:
+            sys.exit("usage: gdoc.py backup <docId> <dir>")
+        backup(a[1], a[2])
     elif cmd == "push":
         if len(a) < 3:
             sys.exit("usage: gdoc.py push <docId> <file.docx>")
