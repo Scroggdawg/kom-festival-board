@@ -39,8 +39,8 @@ HOLD = {
  "p3-genre": ("have", ""), "p3-country": ("have", ""), "p3-shooting-location": ("have", ""),
  "p3-production-year": ("have", ""), "p3-completion-year": ("have", "vs © MMXXV on the crawl"),
  "p3-language": ("have", ""), "p3-subtitles": ("have", "EN srt + scc"), "p3-duration": ("have", ""),
- "p3-aspect-ratio": ("have", ""), "p3-frame-rate": ("have", ""), "p3-shooting-format": ("have", "\"RE-RAW\" — ARRIRAW?"),
- "p3-exhibition-formats": ("blk", "Yeo"), "p3-sound": ("have", ""),
+ "p3-aspect-ratio": ("have", ""), "p3-frame-rate": ("have", ""), "p3-shooting-format": ("have", ""),
+ "p3-exhibition-formats": ("blk", "You Wu"), "p3-sound": ("have", ""),
  "p3-heads-of-department": ("have", "from the poster"), "p3-cast-principals": ("have", "from the end credits"),
  "p3-rights-holder": ("have", ""), "p3-press-contact": ("self", "needs a name and email"),
  "p3-instagram": ("have", ""), "p3-imdb": ("have", ""), "p4-statement": ("have", "final draft — needs Jordan"),
@@ -53,7 +53,7 @@ HOLD = {
  "p9-full-cast": ("have", "from the end credits"), "p9-still-behind": ("self", "pick from the 41 stills"),
  "p10-full-crew": ("have", "12 blanks on the sheet"), "p11-thanks": ("have", "30 names — needs alphabetising"),
  "p11-partner-logos": ("self", "placeholders on the sheet"), "p11-afi-boilerplate": ("have", "director name mismatch"),
- "a-stills": ("have", "41 in press/assets/STILLS — pick 12"), "a-trailer": ("blk", "Yeo"),
+ "a-stills": ("have", "41 in press/assets/STILLS — pick 12"), "a-trailer": ("blk", "You Wu"),
  "a-laurels": ("self", "email the 3 festivals"), "a-drive-folders": ("have", "built — Drive, synced"),
  "a-intro": ("blk", "Jordan"), "a-screenings": ("have", ""),
 }
@@ -128,7 +128,7 @@ def main():
         c.drawString(x2, fy - 11 - i * 9.2, l)
     c.setFillColor(MUT); c.setFont("Helvetica", 6.6)
     c.drawString(M, M - 8, "Killer of Men · AFI thesis · 13 min · full detail in press/epk-one-sheet.md")
-    c.drawRightString(W - M, M - 8, "Still with Yeo: exhibition formats · the trailer · the masters · the DCP")
+    c.drawRightString(W - M, M - 8, "Still with You Wu: exhibition formats · the trailer · the masters · the DCP")
     c.showPage(); c.save()
     print(f"wrote {OUT} — {len(c1)}+{len(c2)} blocks, footer at y={fy:.0f}, margin {M:.0f}")
     if fy < M + 70: print("WARNING: footer is close to the bottom margin; content may be overflowing")

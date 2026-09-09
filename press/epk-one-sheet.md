@@ -15,9 +15,9 @@
 | ● | **3 Specs · team · cast · links** | Genre · country · duration 13 min | — |
 | ○ | | Shooting location | — |
 | ⌀ | | Production + completion year | D.2.6 still open |
-| ⌀ | | Aspect · frame rate · shooting format | Yeo |
-| ⌀ | | Exhibition formats · sound 5.1/stereo | Yeo |
-| ⌀ | | Language · SRT languages | Yeo |
+| ⌀ | | Aspect · frame rate · shooting format | You Wu |
+| ⌀ | | Exhibition formats · sound 5.1/stereo | You Wu |
+| ⌀ | | Language · SRT languages | You Wu |
 | ○ | | The team — 5 HoD roles | end credits |
 | ○ | | Cast — principals | end credits, don't guess |
 | ⌀ | | Rights: AFI Conservatory + named contact | **needs a name and email** |
@@ -40,7 +40,7 @@
 | ○ | **11 Thanks + AFI card** | Thanks list · partner logos | end credits |
 | ○ | | AFI boilerplate · fellows by discipline · © AFI · logo | end credits |
 | ⌀ | **Assets** | Stills: surreal · opening · colour ending · best 12 | master access |
-| ⌀ | | Trailer | Yeo |
+| ⌀ | | Trailer | You Wu |
 | ○ | | Laurels: ABFF · Martha's Vineyard · SCAD | email each festival |
 | ○ | | Drive skeleton `00 PRESS / BTS · HEADSHOTS · POSTER · STILLS · TRAILER` | you |
 | ⌀ | | Jordan's 60-second intro | Jordan |
@@ -64,6 +64,6 @@
 
 Hard drives (BTS, stills) · MFA tense · his "why he directs" sentence · approval of the page text · the 60-second intro · YouTube access · whether a poster exists
 
-## Only Yeo
+## Only You Wu
 
 Aspect ratio · frame rate · shooting format · exhibition formats · sound configuration · SRT languages · the trailer · the masters · the regenerated DCP

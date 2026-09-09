@@ -4,9 +4,9 @@
 
 ---
 
-## To Yeo — clears six page-3 spec fields at once
+## To You Wu — clears six page-3 spec fields at once
 
-> Hey Yeo — I'm building the press kit for Killer of Men and I need the technical specs for the specifications page. Six things, whatever you have to hand:
+> Hey You Wu — I'm building the press kit for Killer of Men and I need the technical specs for the specifications page. Six things, whatever you have to hand:
 >
 > - Aspect ratio
 > - Frame rate

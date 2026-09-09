@@ -6,7 +6,7 @@
 
 ## The headline
 
-Of roughly 40 pieces the EPK needs, **five are written**, about **twelve need nobody but Luke**, and the rest sit behind two people — Jordan (drives, approvals, his own bio, the intro video) and Yeo (masters, trailer, DCP, all technical specs).
+Of roughly 40 pieces the EPK needs, **five are written**, about **twelve need nobody but Luke**, and the rest sit behind two people — Jordan (drives, approvals, his own bio, the intro video) and You Wu (masters, trailer, DCP, all technical specs).
 
 **The single unlock:** the end-credit roll. It supplies the cast list, the full crew, the HoD names, the composer, the sound designer, the thanks list and the AFI boilerplate — six of the eleven pages. **It does not require the hard drives.** It is the last ninety seconds of the film, and Luke can already reach the film on the YouTube link. Watch it, pause it, transcribe it. That one hour of work unblocks more of the EPK than anything else on this list.
 
@@ -35,11 +35,11 @@ Of roughly 40 pieces the EPK needs, **five are written**, about **twelve need no
 | COUNTRY | **HAVE** — United States |
 | SHOOTING LOCATION | **NEED** — where was it shot? |
 | PRODUCTION YEAR / COMPLETION YEAR | **BLOCKED** — this is D.2.6, the 2026-date decision, still open |
-| LANGUAGE + SRT languages available | **NEED** — English; are there SRTs? Yeo |
+| LANGUAGE + SRT languages available | **NEED** — English; are there SRTs? You Wu |
 | DURATION | **HAVE** — 13 minutes |
-| ASPECT RATIO · FRAME RATE · SHOOTING FORMAT | **NEED** — Yeo |
-| EXHIBITION FORMAT (2K/4K DCP, ProRes) | **PARTLY** — a DCP exists; the rest is Yeo. Note D.3.6: the DCP must be regenerated once the completion date is set |
-| SOUND (5.1 / stereo) | **NEED** — Yeo |
+| ASPECT RATIO · FRAME RATE · SHOOTING FORMAT | **NEED** — You Wu |
+| EXHIBITION FORMAT (2K/4K DCP, ProRes) | **PARTLY** — a DCP exists; the rest is You Wu. Note D.3.6: the DCP must be regenerated once the completion date is set |
+| SOUND (5.1 / stereo) | **NEED** — You Wu |
 | THE TEAM — five HoD roles + names | **NEED** — end credits |
 | CAST — principals | **PARTLY** — the lead is on the FilmFreeway page; the slave owner ("the Kenner") and the final opponent were floated on the Joan call. Names garbled in the transcript — **take from the end credits, do not guess** |
 | RIGHTS — AFI Conservatory + named contact | **NEED** — who is the named contact? Probably Luke |
@@ -97,7 +97,7 @@ Of roughly 40 pieces the EPK needs, **five are written**, about **twelve need no
 | Asset | Status | Docket |
 |---|---|---|
 | Stills — the surreal sequence, the opening, a colour frame from the ending, plus the best twelve | **BLOCKED** on master access | D.4.3 / D.2.8 |
-| Trailer | **BLOCKED on Yeo** (China; reachable via Jump) | D.3.4 |
+| Trailer | **BLOCKED on You Wu** (China; reachable via Jump) | D.3.4 |
 | Poster | **NEED** — existence unconfirmed | — |
 | Laurels — ABFF, Martha's Vineyard, SCAD | **NEED** — request from each festival; no drives required | D.4.8 |
 | Drive skeleton (`00 PRESS` with BTS · HEADSHOTS · POSTER · STILLS · TRAILER · z_Old_EPKs · EPK INFO · EPK LINKS · Social Toolkit) | **NEED** — Luke, no dependencies | D.4.2 |
@@ -120,7 +120,7 @@ Of roughly 40 pieces the EPK needs, **five are written**, about **twelve need no
 
 The hard drives (BTS, stills) · the MFA tense · his own "why he directs" sentence · approval of the page text · the 60-second intro · YouTube access · whether a poster exists.
 
-## What only Yeo can give
+## What only You Wu can give
 
 Aspect ratio, frame rate, shooting format, exhibition formats, sound configuration, SRT languages · the trailer · the masters · the regenerated DCP.
 
