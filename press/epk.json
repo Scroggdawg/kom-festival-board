@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 10,
- "updated": "2026-09-08T22:30:41-07:00",
- "updatedBy": "Luke via epk-intake",
+ "rev": 11,
+ "updated": "2026-09-08T22:41:58-07:00",
+ "updatedBy": "Luke and killerofmen.com via epk-intake",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -88,6 +88,11 @@
        "at": "2026-09-08T22:30:41-07:00",
        "by": "Luke, in chat — three loglines by destination; B dropped",
        "value": ""
+      },
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "Luke, in chat — third logline renamed Workshop",
+       "value": ""
       }
      ],
      "options": [
@@ -102,8 +107,7 @@
        "value": "Mace, an enslaved man forced to kill in brutal underground fights, must confront his faith, his heritage, and his humanity when he discovers an unexpected connection to his latest opponent."
       },
       {
-       "key": "A",
-       "note": "the press-kit logline, locked Sep 8",
+       "key": "Workshop",
        "value": "KILLER OF MEN -- In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own. When he stumbles upon his opponent's burial rites, he finds the ceremony being held in the ancient faith of their shared ancestors, who he must now face to decide whether he will kill again."
       }
      ]
@@ -113,7 +117,25 @@
      "n": "2.2",
      "label": "Synopsis",
      "value": "",
-     "history": []
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "Luke, in chat — two candidate synopses",
+       "value": ""
+      }
+     ],
+     "options": [
+      {
+       "key": "Website",
+       "note": "killerofmen.com",
+       "value": "KILLER OF MEN is a powerful and intense exploration of a man, Mace, who is trapped in the brutal reality of slavery and forced combat. It combines elements of historical fiction with spiritual and psychological themes, particularly focusing on Mace's internal struggle and his connection to his African roots and gods, like Ogun, the god of war in Yoruba religion."
+      },
+      {
+       "key": "Director's statement",
+       "note": "the full text of 4.1",
+       "value": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class. I was often one of the biggest in the room. As I got older, I started noticing how my mere presence was often seen as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys—even those bigger and stronger than I was. It’s never anything overt, but small, incessant microaggressions. Death by a 1000 needles. It’s a plight that’s shaped me throughout my life, leaving me hyper-aware of myself in spaces. This experience, this reality, is tied to the plight of the Black man in America.\n\nThe concept of Mandingo fighting has always fascinated me. It’s a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history, and the media. It’s always been used to showcase the “Black brute,” but it has never been shown subjectively from the perspective of those involved. What are their lives like? What do they hold dear? What keeps a man going when he’s put in a situation like that?\nSetting this film in slavery times, rather than in the present day or during the 1960s, allows me to examine the deep-rooted history of this aggression. Visually, I want the fight scenes to reflect the physical sports Black men often participate in—body slams, boxing, football tackles—to show history repeating itself through various forms of expression.\nBy setting the story in the 1800s, I also had the chance to explore my heritage. With slavery still in full force and new enslaved people being brought in from Africa, I can examine the past in different ways.\nI want to delve into the spirituality of the enslaved at the time, capturing the mix of cultures, beliefs, and religions that slowly formed what we now know as Black culture.\n\nKiller of Men is an expression of pain—absolute brutality and suffering. But it’s also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I’m putting on the screen.\nKiller of Men has been a grueling process—one that’s forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won’t shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do."
+      }
+     ]
     },
     {
      "id": "p2-hero-still",
@@ -159,22 +181,40 @@
      "id": "p3-shooting-location",
      "n": "3.3",
      "label": "Shooting location",
-     "value": "",
-     "history": []
+     "value": "California",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "Luke, in chat",
+       "value": "California"
+      }
+     ]
     },
     {
      "id": "p3-production-year",
      "n": "3.4",
      "label": "Production year",
-     "value": "",
-     "history": []
+     "value": "2025",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "Luke, in chat",
+       "value": "2025"
+      }
+     ]
     },
     {
      "id": "p3-completion-year",
      "n": "3.5",
      "label": "Completion year",
-     "value": "",
-     "history": []
+     "value": "2026",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "Luke, in chat",
+       "value": "2026"
+      }
+     ]
     },
     {
      "id": "p3-language",
@@ -219,22 +259,40 @@
      "id": "p3-aspect-ratio",
      "n": "3.9",
      "label": "Aspect ratio",
-     "value": "",
-     "history": []
+     "value": "2.39:1",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "Luke, in chat",
+       "value": "2.39:1"
+      }
+     ]
     },
     {
      "id": "p3-frame-rate",
      "n": "3.10",
      "label": "Frame rate",
-     "value": "",
-     "history": []
+     "value": "24 fps",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "Luke, in chat",
+       "value": "24 fps"
+      }
+     ]
     },
     {
      "id": "p3-shooting-format",
      "n": "3.11",
      "label": "Shooting format (camera and codec)",
-     "value": "",
-     "history": []
+     "value": "Alexa 35, RE-RAW",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "Luke, in chat — dictated, spelling unverified",
+       "value": "Alexa 35, RE-RAW"
+      }
+     ]
     },
     {
      "id": "p3-exhibition-formats",
@@ -247,8 +305,14 @@
      "id": "p3-sound",
      "n": "3.13",
      "label": "Sound configuration",
-     "value": "",
-     "history": []
+     "value": "Stereo and 5.1",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "Luke, in chat",
+       "value": "Stereo and 5.1"
+      }
+     ]
     },
     {
      "id": "p3-heads-of-department",
@@ -364,29 +428,53 @@
      "id": "p5-bio-producer",
      "n": "5.2",
      "label": "Producer bio",
-     "value": "",
-     "history": []
+     "value": "Ruoxiao Li is a storyteller from China. A graduate of the School of the Art Institute of Chicago, she is currently pursuing a degree in Producing at the American Film Institute. She is mentored by Lianne Halfon, whose notable works include Juno and Ghost World.",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "killerofmen.com, verbatim",
+       "value": "Ruoxiao Li is a storyteller from China. A graduate of the School of the Art Institute of Chicago, she is currently pursuing a degree in Producing at the American Film Institute. She is mentored by Lianne Halfon, whose notable works include Juno and Ghost World."
+      }
+     ]
     },
     {
      "id": "p5-bio-cinematographer",
      "n": "5.3",
      "label": "Cinematographer bio — Luke Scroggins",
-     "value": "",
-     "history": []
+     "value": "Luke Scroggins studied theater under David Connelly at the North East School of the Arts in his home town of San Antonio and continued at Otterbein University School of Theatre, earning a BFA in Acting. Television credits include SWITCHED AT BIRTH, GENERAL HOSPITAL and DAYS OF OUR LIVES. After a period coordinating and editing for fashion clients, Scroggins joined the Dark Side and began working in camera. Recently he has moved into the narrative space as Utility on the independent feature FRESH KILLS and the limited series RZR. He made his cinematographer debut on the short films COSMIC BEACH and L'DIRECTOR",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "killerofmen.com, verbatim",
+       "value": "Luke Scroggins studied theater under David Connelly at the North East School of the Arts in his home town of San Antonio and continued at Otterbein University School of Theatre, earning a BFA in Acting. Television credits include SWITCHED AT BIRTH, GENERAL HOSPITAL and DAYS OF OUR LIVES. After a period coordinating and editing for fashion clients, Scroggins joined the Dark Side and began working in camera. Recently he has moved into the narrative space as Utility on the independent feature FRESH KILLS and the limited series RZR. He made his cinematographer debut on the short films COSMIC BEACH and L'DIRECTOR"
+      }
+     ]
     },
     {
      "id": "p5-bio-production-designer",
      "n": "5.4",
      "label": "Production designer bio",
-     "value": "",
-     "history": []
+     "value": "Rajarajeshwari \"RJ\" Ragampudi, is a recent graduate with a bachelor's degree in Architecture from India. She is recognized in her university for her undergraduate thesis, an in-depth research-based design project through the study of the films of the Indian film director, Satyajit Ray. Her experience as an Architect has helped her gain practical knowledge in spatial design, construction and project management. Along with this, she is also skilled in creative visualization with a stark interest in Film, enabling her to pursue an MFA degree in Production Design. She strives to design sets that are not only authentic to the setting but deeply character-driven, enhancing and punctuating key moments in the story.",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "killerofmen.com, verbatim",
+       "value": "Rajarajeshwari \"RJ\" Ragampudi, is a recent graduate with a bachelor's degree in Architecture from India. She is recognized in her university for her undergraduate thesis, an in-depth research-based design project through the study of the films of the Indian film director, Satyajit Ray. Her experience as an Architect has helped her gain practical knowledge in spatial design, construction and project management. Along with this, she is also skilled in creative visualization with a stark interest in Film, enabling her to pursue an MFA degree in Production Design. She strives to design sets that are not only authentic to the setting but deeply character-driven, enhancing and punctuating key moments in the story."
+      }
+     ]
     },
     {
      "id": "p5-bio-editor",
      "n": "5.5",
      "label": "Editor bio",
-     "value": "",
-     "history": []
+     "value": "You Wu is a working editor with four years of professional experience. He has worked on a range of short films across different genres, contributing as both an editor and in key roles such as DIT and sound designer. Several of the films he edited have been selected for major film festivals, including LA Shorts and the Avignon International Film Festival.",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "killerofmen.com, verbatim",
+       "value": "You Wu is a working editor with four years of professional experience. He has worked on a range of short films across different genres, contributing as both an editor and in key roles such as DIT and sound designer. Several of the films he edited have been selected for major film festivals, including LA Shorts and the Avignon International Film Festival."
+      }
+     ]
     },
     {
      "id": "p5-headshots",
@@ -420,8 +508,14 @@
      "id": "p7-stills-in-character",
      "n": "7.2",
      "label": "Stills in character",
-     "value": "",
-     "history": []
+     "value": "To be pulled from the BTS set — Luke's call, Sep 8",
+     "history": [
+      {
+       "at": "2026-09-08T22:41:58-07:00",
+       "by": "Luke, in chat",
+       "value": "To be pulled from the BTS set — Luke's call, Sep 8"
+      }
+     ]
     }
    ]
   },
