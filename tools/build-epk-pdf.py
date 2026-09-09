@@ -49,7 +49,7 @@ HOLD = {
  "p5-bio-production-designer": ("self", "writes their own"), "p5-bio-editor": ("self", "writes their own"),
  "p5-headshots": ("self", "ask each person"), "p5-links": ("self", "ask each person"),
  "p7-cast-bios": ("self", "end credits + IMDb"), "p7-stills-in-character": ("self", "pick from the 41 stills"),
- "p8-bts-photos": ("have", "102 in press/assets/BTS — pick 8-12"), "p9-key-credits": ("self", "sound + EPs from end credits"),
+ "p8-bts-photos": ("have", "102 originals in press/assets/BTS — pick 8-12"), "p9-key-credits": ("self", "sound + EPs from end credits"),
  "p9-full-cast": ("self", "end credits"), "p9-still-behind": ("self", "pick from the 41 stills"),
  "p10-full-crew": ("self", "end credits"), "p11-thanks": ("self", "end credits"),
  "p11-partner-logos": ("self", "end credits"), "p11-afi-boilerplate": ("self", "end credits"),
