@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 6,
- "updated": "2026-09-08T21:10:57-07:00",
- "updatedBy": "Luke, Sep 8 — single Resolve export 210640 replaces both earlier sets",
+ "rev": 7,
+ "updated": "2026-09-08T21:25:07-07:00",
+ "updatedBy": "Luke, Sep 8 — FINAL/BTS Selects, resized for the repo",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -414,8 +414,14 @@
      "id": "p8-bts-photos",
      "n": "8.1",
      "label": "BTS photos",
-     "value": "",
-     "history": []
+     "value": "102 behind-the-scenes photographs in the repo, press/assets/BTS/, JPEG, long edge 2560, original filenames kept.\nBy shoot day, from the files' own capture dates:\n  58  KOM_Day3_TheFarm-*     8 Jul 2025 — the farm and the barn: crew and camera, the fight staging, cast portraits, the unit photo\n  21  KOM_Day4_Soundstage-*  4 Jul 2025 — the soundstage: the burial table, lantern and smoke, cast and crew portraits\n   6  KOM_Stage-*           23 May 2025\n   5  KOM_Anamorphic*       21 May 2025 — anamorphic frames, several black and white\n   8  DSCF* / _DSF*      21–22 May 2025\n   4  IMG_*                 27 Jun 2025\nFour cameras: Sony A7 IV (the bulk), Fujifilm X100VI, Fujifilm GFX50S II, Canon EOS R5 C. No GPS in any file.\nThe May frames predate the July shoot days and look like camera and lens tests rather than principal photography — worth confirming before any are captioned as set photography.\nNo photographer is named in the files. Page 8 needs a credit line and the thanks list needs the name.\nThe camera originals are 714 MB and stay on Luke's disk at FINAL/BTS Selects; they belong in the Drive folder (A.4). The repo carries the page-ready size.\nContact sheet: contact-sheet.jpg. Page 8 wants 8-12 of these; none picked yet.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/BTS",
+     "history": [
+      {
+       "at": "2026-09-08T21:25:07-07:00",
+       "by": "Luke, Sep 8 — FINAL/BTS Selects, resized for the repo",
+       "value": "102 behind-the-scenes photographs in the repo, press/assets/BTS/, JPEG, long edge 2560, original filenames kept.\nBy shoot day, from the files' own capture dates:\n  58  KOM_Day3_TheFarm-*     8 Jul 2025 — the farm and the barn: crew and camera, the fight staging, cast portraits, the unit photo\n  21  KOM_Day4_Soundstage-*  4 Jul 2025 — the soundstage: the burial table, lantern and smoke, cast and crew portraits\n   6  KOM_Stage-*           23 May 2025\n   5  KOM_Anamorphic*       21 May 2025 — anamorphic frames, several black and white\n   8  DSCF* / _DSF*      21–22 May 2025\n   4  IMG_*                 27 Jun 2025\nFour cameras: Sony A7 IV (the bulk), Fujifilm X100VI, Fujifilm GFX50S II, Canon EOS R5 C. No GPS in any file.\nThe May frames predate the July shoot days and look like camera and lens tests rather than principal photography — worth confirming before any are captioned as set photography.\nNo photographer is named in the files. Page 8 needs a credit line and the thanks list needs the name.\nThe camera originals are 714 MB and stay on Luke's disk at FINAL/BTS Selects; they belong in the Drive folder (A.4). The repo carries the page-ready size.\nContact sheet: contact-sheet.jpg. Page 8 wants 8-12 of these; none picked yet.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/BTS"
+      }
+     ]
     }
    ]
   },
