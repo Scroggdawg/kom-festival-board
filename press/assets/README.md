@@ -13,6 +13,21 @@ Delivered EPK materials, named to the Drive and delivery skeletons in `press/epk
 
 Resolve gallery names and camera filenames are kept, because they are how a frame is found again in the project.
 
+## Where these files also live
+
+Everything here is also in a Google Drive folder that syncs to Luke's Mac through Drive
+for Desktop, so it is on the Drive and on the machine at the same time. That folder, not
+this repository, is the home for the full-resolution assets, and the EPK links out to it.
+
+- Project root — <https://drive.google.com/drive/folders/1OUOykJpMq5o91PkZ54qvMpoVJgKpDPx7>
+- Press folder — <https://drive.google.com/drive/folders/1utGEFQb5gDuUOC9JU7zvuslwRlwbRorx>
+- `EPK INFO` and `EPK LINKS` are Google Docs inside it. `EPK INFO` is generated from
+  `press/epk.json` by `tools/build-epk-info.py`; `epk.json` stays the master.
+
+Separate from ours, and not ours to reorganise: AFI's own Delivery tree, owned by
+`asigel@afi.com`. Its Trailers, FEST, Poster Blu-Ray and Closed Captions folders were
+checked on 8 September 2026 and are all empty.
+
 ## The BTS photographs are the camera originals
 
 All 102 as shot, 714 MB, largest file 53 MB. They match the shared Drive folder file for file.

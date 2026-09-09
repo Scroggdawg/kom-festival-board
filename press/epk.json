@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 8,
- "updated": "2026-09-08T21:43:44-07:00",
- "updatedBy": "Luke, Sep 8 — full-resolution originals restored at his instruction",
+ "rev": 9,
+ "updated": "2026-09-08T22:03:31-07:00",
+ "updatedBy": "Luke, Sep 8 — Drive watch folder built",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -547,8 +547,14 @@
      "id": "a-drive-folders",
      "n": "A.4",
      "label": "Drive folders",
-     "value": "",
-     "history": []
+     "value": "BUILT. Google Drive, synced to Luke's Mac through Drive for Desktop, so the folder is on the Drive and on the machine at the same time — drop a file on either side and it appears on the other.\nRoot: KILLER OF MEN — https://drive.google.com/drive/folders/1OUOykJpMq5o91PkZ54qvMpoVJgKpDPx7\nPress: 05 MARKETING/00 PRESS — https://drive.google.com/drive/folders/1utGEFQb5gDuUOC9JU7zvuslwRlwbRorx\n  BTS · HEADSHOTS · POSTER · STILLS · TRAILER · SRT · LAURELS · EPK BUILDS · z_Old_EPKs\n  EPK INFO — all the text: https://docs.google.com/document/d/1ae-MPbAq1otTtYA5-SSYYGd13jjvuz1Co2Zi0IrGvSI/edit\n  EPK LINKS — every share URL: https://docs.google.com/document/d/16x38uawE0Iq91JCj3AC7cVV7SnpCO7kNdBJ0Dj8vUKg/edit\nAlongside: 05 MARKETING/07 FESTIVALS (accepted, cover letters, details, laurels, social, receipts) and DELIVERY.\nLocal path: ~/Google Drive/My Drive/KILLER OF MEN/\nIn it so far: the poster, 41 stills, 102 BTS originals, the English SRT and SCC, both contact sheets, the EPK breakdown PDF. Empty and waiting: HEADSHOTS, TRAILER, LAURELS.\nEPK INFO is generated from this file by tools/build-epk-info.py — epk.json stays the master; regenerate and repaste after any change rather than editing the doc as the source.\nSeparate and not ours: AFI's own Delivery tree, owned by asigel@afi.com, holds the BTS masters. Its Trailers, FEST, Poster Blu-Ray and Closed Captions folders were checked on Sep 8 and are all empty.",
+     "history": [
+      {
+       "at": "2026-09-08T22:03:31-07:00",
+       "by": "Luke, Sep 8 — Drive watch folder built",
+       "value": "BUILT. Google Drive, synced to Luke's Mac through Drive for Desktop, so the folder is on the Drive and on the machine at the same time — drop a file on either side and it appears on the other.\nRoot: KILLER OF MEN — https://drive.google.com/drive/folders/1OUOykJpMq5o91PkZ54qvMpoVJgKpDPx7\nPress: 05 MARKETING/00 PRESS — https://drive.google.com/drive/folders/1utGEFQb5gDuUOC9JU7zvuslwRlwbRorx\n  BTS · HEADSHOTS · POSTER · STILLS · TRAILER · SRT · LAURELS · EPK BUILDS · z_Old_EPKs\n  EPK INFO — all the text: https://docs.google.com/document/d/1ae-MPbAq1otTtYA5-SSYYGd13jjvuz1Co2Zi0IrGvSI/edit\n  EPK LINKS — every share URL: https://docs.google.com/document/d/16x38uawE0Iq91JCj3AC7cVV7SnpCO7kNdBJ0Dj8vUKg/edit\nAlongside: 05 MARKETING/07 FESTIVALS (accepted, cover letters, details, laurels, social, receipts) and DELIVERY.\nLocal path: ~/Google Drive/My Drive/KILLER OF MEN/\nIn it so far: the poster, 41 stills, 102 BTS originals, the English SRT and SCC, both contact sheets, the EPK breakdown PDF. Empty and waiting: HEADSHOTS, TRAILER, LAURELS.\nEPK INFO is generated from this file by tools/build-epk-info.py — epk.json stays the master; regenerate and repaste after any change rather than editing the doc as the source.\nSeparate and not ours: AFI's own Delivery tree, owned by asigel@afi.com, holds the BTS masters. Its Trailers, FEST, Poster Blu-Ray and Closed Captions folders were checked on Sep 8 and are all empty."
+      }
+     ]
     },
     {
      "id": "a-intro",
