@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
 """Build the KILLER OF MEN credit cards as a PDF, from press/epk.json.
 
-    <venv>/bin/python tools/build-credit-card.py [--out press/KillerOfMen_Credits.pdf]
+    <venv>/bin/python tools/build-credit-card.py [--transparent] [--png] [--out FILE]
+
+    --transparent   draw no ground at all, so the pages keep their alpha
+    --png           also render each page to press/assets/CREDITS at 200 dpi
+
+A transparent PDF opened in Preview looks blank: the type is cream, and a viewer
+paints white behind a page that carries none of its own. That is the format working,
+not failing. Composite it over the footage, or use the PNGs.
 
 Three pages at the EPK's own page size (1296 x 1728 pt, per press/epk-spec.md) so they
 drop straight into the kit as pages 9-11:
@@ -125,7 +132,11 @@ def unletterbox(path):
     return ImageReader(buf)
 
 
-def ground(c, still=None):
+def ground(c, still=None, transparent=False):
+    """transparent=True draws nothing at all, so the page keeps its alpha and the
+    cards can be laid over footage, a still, or a page in a layout app."""
+    if transparent:
+        return
     c.setFillColor(GROUND)
     c.rect(0, 0, W, H, fill=1, stroke=0)
     if still and os.path.exists(still):
@@ -204,8 +215,8 @@ def split_columns(entries):
     return left, right
 
 
-def page_cast(c, d, still):
-    ground(c, still)
+def page_cast(c, d, still, transparent=False):
+    ground(c, still, transparent)
     y0 = heading(c, "C A S T", H - M - 46)
     billed = pairs(field(d, "9.2"))
     cast = [e for e in billed if e[0] and e[0].lower() != "extras"]
@@ -230,8 +241,8 @@ def page_cast(c, d, still):
     c.showPage()
 
 
-def page_crew(c, d, still):
-    ground(c, still)
+def page_crew(c, d, still, transparent=False):
+    ground(c, still, transparent)
     y0 = heading(c, "C R E W", H - M - 46)
     entries = pairs(field(d, "10.1"))
     left, right = split_columns(entries)
@@ -254,8 +265,8 @@ def wrapped(c, text, x, y, width, font, size, lead, fill, track=0.0, align="cent
     return y
 
 
-def page_thanks(c, d, still):
-    ground(c, still)
+def page_thanks(c, d, still, transparent=False):
+    ground(c, still, transparent)
     y0 = heading(c, "T H A N K S", H - M - 46)
     raw = field(d, "11.1")
     names = []
@@ -300,24 +311,40 @@ def page_thanks(c, d, still):
 
 
 def main():
-    out = OUT
+    transparent = "--transparent" in sys.argv
+    out = OUT if not transparent else OUT.replace(".pdf", "_transparent.pdf")
     if "--out" in sys.argv:
         out = sys.argv[sys.argv.index("--out") + 1]
     d = load()
     stills = sorted(f for f in os.listdir(BG) if f.endswith(".png")) if os.path.isdir(BG) else []
+
     def pick(n):
         want = f"1.1.{n}.png"
-        for s in stills:
-            if s.endswith(want):
-                return os.path.join(BG, s)
+        for st in stills:
+            if st.endswith(want):
+                return os.path.join(BG, st)
         return None
+
     c = canvas.Canvas(out, pagesize=(W, H))
     c.setTitle("Killer of Men — Credits")
-    page_cast(c, d, pick(31))
-    page_crew(c, d, pick(35))
-    page_thanks(c, d, pick(41))
+    page_cast(c, d, pick(31), transparent)
+    page_crew(c, d, pick(35), transparent)
+    page_thanks(c, d, pick(41), transparent)
     c.save()
     print(f"wrote {out}")
+
+    if "--png" in sys.argv:
+        import pymupdf
+        dpi = 200
+        names = ["1_Cast", "2_Crew", "3_Thanks"]
+        outdir = os.path.join(ROOT, "press", "assets", "CREDITS")
+        os.makedirs(outdir, exist_ok=True)
+        doc = pymupdf.open(out)
+        for i, page in enumerate(doc):
+            suffix = "_transparent" if transparent else ""
+            f = os.path.join(outdir, f"KillerOfMen_Credits_{names[i]}{suffix}.png")
+            page.get_pixmap(dpi=dpi, alpha=transparent).save(f)
+            print(f"  {os.path.basename(f)}")
 
 
 if __name__ == "__main__":
