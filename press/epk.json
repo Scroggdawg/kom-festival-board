@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 21,
- "updated": "2026-09-09T21:20:31-05:00",
- "updatedBy": "bio lane, Sep 9 — four candidates from the 64-agent bio raid; see press/bio-luke-scroggins.md",
+ "rev": 22,
+ "updated": "2026-09-10T12:31:04-05:00",
+ "updatedBy": "Luke, in chat, Sep 10",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -586,12 +586,17 @@
      "id": "p5-links",
      "n": "5.7",
      "label": "Instagram and IMDb, per filmmaker",
-     "value": "",
+     "value": "Director | Jordan Betine | @jordanbetine | https://www.imdb.com/name/nm17461892/\nProducer | Ruoxiao Li | @smile_xiao624 | https://www.imdb.com/name/nm15376948/\nCinematographer | Luke Scroggins | @Luscroggs | https://www.imdb.com/name/nm3596666/\nProduction designer | Rajarajeshwari \"RJ\" Ragampudi | @itsrjactually | https://www.imdb.com/name/nm15956329/\nEditor | You Wu | @ywu.0125 | https://www.imdb.com/name/nm17461889/\n(From Luke, Sep 10. Instagram handles exactly as typed. IMDb links stored without the ?ref_= tracking suffix his copies carried; the name ids are unchanged.)",
      "history": [
       {
        "at": "2026-09-09T00:43:41-07:00",
        "by": "Luke, in chat",
        "value": ""
+      },
+      {
+       "at": "2026-09-10T12:31:04-05:00",
+       "by": "Luke, in chat, Sep 10",
+       "value": "Director | Jordan Betine | @jordanbetine | https://www.imdb.com/name/nm17461892/\nProducer | Ruoxiao Li | @smile_xiao624 | https://www.imdb.com/name/nm15376948/\nCinematographer | Luke Scroggins | @Luscroggs | https://www.imdb.com/name/nm3596666/\nProduction designer | Rajarajeshwari \"RJ\" Ragampudi | @itsrjactually | https://www.imdb.com/name/nm15956329/\nEditor | You Wu | @ywu.0125 | https://www.imdb.com/name/nm17461889/\n(From Luke, Sep 10. Instagram handles exactly as typed. IMDb links stored without the ?ref_= tracking suffix his copies carried; the name ids are unchanged.)"
       }
      ]
     }
