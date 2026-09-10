@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 23,
- "updated": "2026-09-10T14:58:22-05:00",
- "updatedBy": "cast lane, Sep 10",
+ "rev": 24,
+ "updated": "2026-09-10T15:42:23-05:00",
+ "updatedBy": "Luke, Sep 10 (Canva plan answers)",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -429,6 +429,19 @@
        "at": "2026-09-09T00:36:21-07:00",
        "by": "Luke, in chat",
        "value": "https://www.imdb.com/title/tt37523933/"
+      }
+     ]
+    },
+    {
+     "id": "p3-production-email",
+     "n": "3.20",
+     "label": "Production email (press contact)",
+     "value": "killerofmenmovie@gmail.com",
+     "history": [
+      {
+       "at": "2026-09-10T15:42:23-05:00",
+       "by": "Luke, Sep 10 (Canva plan answers), via the Illustrator/Canva session",
+       "value": "killerofmenmovie@gmail.com"
       }
      ]
     }

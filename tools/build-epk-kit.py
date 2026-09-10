@@ -430,10 +430,19 @@ def page_programmer(c, d):
         link(c, url, xr - wtxt - 8, y - 8, wtxt + 16, step)
         y -= step
 
-    # footer: website · instagram · imdb, all live, all underlined (F06)
-    items = [("WWW.KILLEROFMEN.COM", field(d, "1.3")),
+    # footer: email · website · instagram · imdb, all live, all underlined (F06).
+    # The production email is field 3.20 (Luke, Sep 10); absent, the row is skipped.
+    def optional(n):
+        try:
+            return field(d, n).strip()
+        except KeyError:
+            return ""
+    email = optional("3.20")
+    items = [(email.upper(), "mailto:" + email) if email else ("", ""),
+             ("WWW.KILLEROFMEN.COM", field(d, "1.3")),
              ("INSTAGRAM  @KILLEROFMENMOVIE", field(d, "3.18")),
              ("IMDB", field(d, "3.19"))]
+    items = [it for it in items if it[1].strip()]
     yy = M + 24 + (len(items) - 1) * step
     for text, url in items:
         if not url.strip():

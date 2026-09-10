@@ -1,0 +1,44 @@
+{
+  "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
+  "updated": "2026-09-10T15:30:00-07:00",
+  "updated_by": "Fable session, Illustrator/Canva lane",
+  "decisions": {
+    "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
+    "typeface": "Build in Libre Baskerville (apps cannot use uploaded fonts). Optional afterwards, Luke's call: split /System/Library/Fonts/Supplemental/Baskerville.ttc into Regular, SemiBold, Bold .ttf with fontTools, upload to Brand > Fonts, swap in the editor. Not required; the kit must be right for KILLER OF MEN, not match Night Feeds.",
+    "master_after_build": "Canva becomes the master once the design is built and accepted. The worksheet (press/epk.json) and the kit remain the source for the PDF and the .ai until Luke says otherwise; rebuilding a Canva page replaces it and discards edits made in Canva on that page.",
+    "email": "killerofmenmovie@gmail.com, worksheet field 3.20, drawn on page 3's footer as a mailto link. If Canva's export drops mailto links, show the address as plain text.",
+    "line_breaks": "Editable paragraphs that Canva reflows (collaborators can edit words); tracked headings and labels are one element per line so their breaks hold.",
+    "editor_driving": "Luke gave blanket OK (2026-09-10) for an agent to drive his logged-in Canva editor for this build, at human pace, through the documented UI. Accepting Canva's Developer Terms is Luke's own click."
+  },
+  "canva_account": {
+    "owner": "Luke Scroggins (camerawrap@gmail.com)",
+    "developer_terms_accepted": null,
+    "app_created_in_developer_portal": null,
+    "app_id": null,
+    "development_url": "http://localhost:8080"
+  },
+  "design": {
+    "url": null,
+    "id": null,
+    "page_px": null,
+    "scale_px_per_pt": null,
+    "created_how": null
+  },
+  "probes": {
+    "pdf_import": { "done": false, "result": null },
+    "fonts": { "done": false, "Bask": null, "Bask-SB": null, "Bask-B": null, "uploaded_baskerville_visible_to_app": null },
+    "page_size": { "done": false, "width_px": null, "height_px": null }
+  },
+  "ops": {
+    "file": "canva/ops/epk-canva.json",
+    "url": "https://scroggdawg.github.io/kom-festival-board/canva/ops/epk-canva.json",
+    "regenerate": "venv/bin/python tools/build-epk-canva.py",
+    "epk_rev_built_from": null
+  },
+  "pages_built": [],
+  "pilot": { "page": 3, "status": "not started", "luke_verdict": null },
+  "export": { "last_pdf": null, "pages": null, "links": null, "size_mb": null, "verdicts": null },
+  "sharing": { "edit_link_sent_to": [], "view_link": null },
+  "last_error": null,
+  "next_step": "Step 1 of canva/README.md: run the emitter is done; run the app locally, create the app in the Developer Portal, then the three probes."
+}
