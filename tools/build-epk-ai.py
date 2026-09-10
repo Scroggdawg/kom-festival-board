@@ -140,10 +140,14 @@ class Ops:
 
 
 class Recorder:
-    """Stands in for the reportlab canvas the kit and the card draw on."""
+    """Stands in for the reportlab canvas the kit and the card draw on. Fill colour and
+    alpha are tracked so a ground drawn natively (rect, drawImage, rect) is recorded as
+    it is drawn, whatever recipe the card uses."""
     def __init__(self, o):
         self.o = o
         self._stroke, self._lw = rgb(kit.RULE), 0.7
+        self._fill, self._alpha = rgb(kit.GROUND), 1.0
+        self._stack = []
 
     def stringWidth(self, s, font, size):
         return _measure.stringWidth(s, font, size)
@@ -155,17 +159,30 @@ class Recorder:
     def linkURL(self, url, rect, relative=0, thickness=0):
         self.o.link(url, *rect)
 
-    def drawImage(self, im, x, y, w, h, **kw):            # page 1: the poster, whole
-        self.o.image(to_drive(im.path), (x, y + h, w, h), region=im.region, fit="contain")
+    def setFillColor(self, c): self._fill = rgb(c)
+    def setFillAlpha(self, a): self._alpha = float(a)
+    def saveState(self): self._stack.append((self._fill, self._alpha, self._stroke, self._lw))
+    def restoreState(self):
+        if self._stack:
+            self._fill, self._alpha, self._stroke, self._lw = self._stack.pop()
 
-    # the kit's ground() and cover() are replaced below, so these never carry meaning
+    def rect(self, x, y, w, h, fill=0, stroke=1, **k):
+        if fill:
+            self.o.rect(x, y + h, w, h, self._fill, None if self._alpha >= 1 else self._alpha)
+
+    def drawImage(self, im, x, y, w, h, **kw):
+        """An image object must say where it came from (.path) and which fraction of the
+        frame is shown (.region); the .ai links the Drive twin of that path. The poster on
+        page 1 is drawn whole (contain); anything else is a cover-fit crop."""
+        if not hasattr(im, "path"):
+            raise TypeError("drawImage received an image with no .path; the .ai cannot link it")
+        region = getattr(im, "region", (0.0, 0.0, 1.0, 1.0))
+        fit = "contain" if abs((w / h) - ((region[2] - region[0]) * im.size[0])
+                               / ((region[3] - region[1]) * im.size[1])) < 0.01 else "cover"
+        self.o.image(to_drive(im.path), (x, y + h, w, h), region=region, opacity=self._alpha, fit=fit)
+
     def showPage(self): pass
     def setFont(self, *a): pass
-    def setFillColor(self, *a): pass
-    def setFillAlpha(self, *a): pass
-    def saveState(self): pass
-    def restoreState(self): pass
-    def rect(self, *a, **k): pass
 
 
 def install(o):
@@ -196,6 +213,10 @@ def install(o):
             o.rect(0, H, W, H, rgb(kit.GROUND), opacity=scrim)
 
     def card_ground(c, still=None, transparent=False):
+        """Used only while the card's own ground() hands drawImage an anonymous buffer.
+        Once the card publishes GROUND_RECIPE and images that carry .path/.region (the
+        contract agreed with the card session, 2026-09-09), its ground() runs natively
+        through the Recorder and this stand-in is not installed."""
         o.new_page()
         o.rect(0, H, W, H, rgb(kit.GROUND))
         if still:
@@ -203,6 +224,12 @@ def install(o):
             r0, r1 = picture_rows(path)
             o.image(path, (0, H, W, H), region=(0, r0, 1, r1), opacity=0.16)
             o.rect(0, H, W, H, rgb(kit.GROUND), opacity=0.55)
+
+    _card_ground_native = card.ground
+
+    def card_ground_native(c, still=None, transparent=False):
+        o.new_page()
+        _card_ground_native(c, still, transparent)
 
     def tracked(c, x, y, s, font, size, track, fill, align="left"):
         wd = _measure.stringWidth(s, font, size) + track * max(len(s) - 1, 0)
@@ -219,7 +246,10 @@ def install(o):
 
     kit.load_rgb, kit.unletterbox, kit.reader = load_rgb, unletterbox, reader
     kit.cover, kit.ground, kit.tracked, kit.para = cover, ground, tracked, para
-    card.tracked, card.ground = tracked, card_ground
+    card.tracked = tracked
+    # A card that publishes its ground recipe draws its own ground through the Recorder;
+    # the older card gets the stand-in that knows its one recipe.
+    card.ground = card_ground_native if hasattr(card, "GROUND_RECIPE") else card_ground
 
 
 def record():
