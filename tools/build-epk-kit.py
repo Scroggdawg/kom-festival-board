@@ -80,8 +80,31 @@ LINKS = [("BTS", PRESS_FOLDER), ("STILLS", PRESS_FOLDER), ("POSTER", PRESS_FOLDE
 # v3-4 Luke Scroggins. There is no portrait of the director.
 PORTRAITS_CONFIRMED = True
 PORTRAITS = {"5.1": None, "5.2": 2, "5.3": 4, "5.4": 3, "5.5": 1}
-# Instagram / IMDb per person (field 5.7 is empty). key -> [(label, url), ...]
-PERSON_LINKS = {}
+# Instagram / IMDb per filmmaker come from field 5.7 at build time (Luke, Sep 10):
+# "Role | Name | @handle | https://www.imdb.com/name/nmNNN/", one line each. Matched to
+# a bio slot by the role word; handles are shown exactly as typed.
+ROLE_TO_BIO = {"director": "5.1", "producer": "5.2", "cinematographer": "5.3",
+               "production designer": "5.4", "editor": "5.5"}
+
+
+def person_links(d):
+    """key -> [(label, url), ...] from field 5.7; empty when the field is."""
+    out = {}
+    for line in field(d, "5.7").split("\n"):
+        parts = [p.strip() for p in line.split("|")]
+        if len(parts) < 4:
+            continue
+        key = ROLE_TO_BIO.get(parts[0].lower())
+        if not key:
+            continue
+        handle, imdb = parts[2], parts[3]
+        links = []
+        if handle.startswith("@"):
+            links.append((handle, f"https://www.instagram.com/{handle[1:]}/"))
+        if imdb.startswith("http"):
+            links.append(("IMDB", imdb))
+        out[key] = links
+    return out
 
 PORTRAIT_H = 396.0                              # every portrait, every page
 PORTRAIT_W = round(PORTRAIT_H * 0.84)           # 333
@@ -444,13 +467,23 @@ def bio_block(c, key, role, name, y, side, height):
     head_text = f"{role}  |  {name}"
     hx = M if side == "left" else W - M
     tracked(c, hx, y, head_text, "Bask-SB", SUB, 2.2, CREAM, "left" if side == "left" else "right")
-    # person links, when they exist (field 5.7)
+    # Instagram handle and IMDB, on the heading baseline, in the label tone, each a live
+    # link: after the heading when it sits left, before it when it sits right.
+    links = person_links(c._d).get(key, [])
     hw = text_width(c, head_text, "Bask-SB", SUB, 2.2)
-    lx = hx + hw + 22 if side == "left" else M
-    for i, (lab, url) in enumerate(PERSON_LINKS.get(key, [])):
-        px = lx + i * 74
-        tracked(c, px, y, lab.upper(), "Bask", Z.role, Z.track_r, DIM)
-        link(c, url, px - 4, y - 6, 66, Z.role + 10)
+    gap = 28
+    if side == "left":
+        px = hx + hw + gap
+        for lab, url in links:
+            wd = tracked(c, px, y, lab, "Bask", Z.role, Z.track_r, DIM)
+            link(c, url, px - 4, y - 6, wd + 8, Z.role + 10)
+            px += wd + gap
+    else:
+        px = hx - hw - gap
+        for lab, url in reversed(links):
+            wd = tracked(c, px, y, lab, "Bask", Z.role, Z.track_r, DIM, "right")
+            link(c, url, px - wd - 4, y - 6, wd + 8, Z.role + 10)
+            px -= wd + gap
     y -= 40
     img_h = PORTRAIT_H
     img_w = PORTRAIT_W
