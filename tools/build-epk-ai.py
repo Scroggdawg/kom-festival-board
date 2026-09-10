@@ -55,7 +55,7 @@ W, H, M = kit.W, kit.H, kit.M
 # Space between artboards. A full-page still placed cover-fit is about 4,100 pt wide
 # before its clipping mask, so it reaches ~1,400 pt past the board on each side.
 GAPX = 1600.0
-FONT = {"Bask": "Baskerville", "Bask-SB": "Baskerville-SemiBold"}
+FONT = {"Bask": "Baskerville", "Bask-B": "Baskerville-Bold", "Bask-SB": "Baskerville-SemiBold"}
 ARTBOARDS = ["01 Poster", "02 Logline", "03 Programmer", "04 Statement", "05 Filmmakers",
              "06 Filmmakers", "07 Cast", "08 Behind the scenes", "09 Cast credits", "10 Crew", "11 Thanks"]
 

@@ -51,7 +51,7 @@ Law: PAINT hues never appear as type, rule, or fill on a document. PRINT tokens 
 | DIM | `#b9a88c` | secondary type: role labels, section labels, captions, footers a reader needs | labels only; never running text | constant; EPK p02 section label brightest `#b8a88c` |
 | RULE | `#6b5942` | hairline rules 0.5–0.7 pt; department headings in the credit columns | 2.98:1, just under the 3:1 large-text line: structure only, where the grouping already tells the reader what the heading says; never labels, footers or running text (the proof slug moved to DIM on 2026-09-09) | constant; p02 footer at 9.5 pt samples `#584936` (antialiased) |
 | LETTERBOX | `#000000` | the stills' own bars | travels with the still; never a page ground | median of bar rows across all 41 stills |
-| GHOST | `#0e0e0a` | measured result of a still at 22% under a 50% GROUND scrim (page 3). The family in use: 0.16/0.55 on pages 9–11, 0.22/0.50 on page 3, 0.20/0.50 on page 4 | a recipe family, not a paint colour; a ghost needs a centre-crop mean luminance of about 70 or more to read at all | EPK p03 right-column median |
+| GHOST | `#0e0e0a` | measured result of a still at 22% under a 50% GROUND scrim (page 3). The family in use on pages 3 and 4: 0.22/0.50 and 0.20/0.50. **Pages 9–11 CONTESTED**: the redesigned card draws the still at 1.0 / 0.60 / 0.45 with no scrim (`GROUND_RECIPE` in `tools/build-credit-card.py`) | a recipe family, not a paint colour; a ghost needs a centre-crop mean luminance of about 70 or more to read at all | EPK p03 right-column median |
 | EMPHASIS (PROPOSED) | `#df0001` | the one reserved hue | at most one instance per surface; type 18 pt and up, rules, markers only; never body text, never fill; unused on every current surface | median of red drop-shadow pixels behind the poster title (8,652 px) |
 | PAINT red | `#be2e13` | poster glow, title shadow | poster only | median of pixels hue 345–12°, S>0.55, V>0.35 (3.6% of frame) |
 | PAINT orange | `#a7682c` | sunset band, skin, wood | poster only | hue 15–42° band (28% of frame); pure sunset region `#fe5907` |
@@ -113,11 +113,13 @@ Sizes and tracking at scale 1.0, in points, from `tools/build-credit-card.py` an
 | Provenance footer (proof slug) | Regular | 9.5 | 1.4 | caps | DIM |
 | Behind-the-scenes credit strip | Regular | 14.2 | 1.35 | caps | DIM |
 
-Never-rules: the poster title is an image, never re-set in any face. Tracking scales with size (`Sz`); no hand-tuned lines. Enlarged cards (1.30x, 1.75x) stack role over name, centred. Names are never clipped: condense tracking, then size (`condense()`). No second family, italic, or Bold (index 1).
+Never-rules: the poster title is an image, never re-set in any face. Tracking scales with size (`Sz`); no hand-tuned lines. Enlarged cards (1.30x, 1.75x) stack role over name, centred. Names are never clipped: condense tracking, then size (`condense()`). No second family or italic. **Bold (index 1): CONTESTED** since 2026-09-10; the redesigned credit card sets every credit in Baskerville Bold (see the redesign table below).
+
+The rows above that describe the credit pages (page titles CAST / CREW / THANKS, department heading, role label, name, AFI boilerplate) are **CONTESTED** for pages 9–11 as of handoff-105-epk; the card's own values are in the redesign table. They stand for pages 1–8.
 
 ## 5. Mark geometry — MISSING, owner Jordan
 
-Clear space and minimum size follow the logo files (chapter 2). Page geometry in use is DEFINED: 1296 × 1728 pt pages, 74 pt margins, heading rule 236 pt wide, 0.7 pt, 22 pt below the title baseline; list dividers 0.5 pt.
+Clear space and minimum size follow the logo files (chapter 2). Page geometry in use is DEFINED for pages 1–8: 1296 × 1728 pt pages, 74 pt margins, heading rule 236 pt wide, 0.7 pt, 22 pt below the title baseline; list dividers 0.5 pt. **CONTESTED for pages 9–11**: the redesigned CREW page runs 48 pt side margins and the card titles carry no rule (handoff-105-epk).
 
 ## 6. Voice
 
@@ -170,7 +172,25 @@ Recorded from a cross-family audit (Codex, read-only, 2026-09-09; verdict UNSOUN
 | The sampler is not committed | One re-run of the red mask gives `#bd2f13` against `#be2e13` here | Commit `tools/sample-brand.py` and re-run every hex from it |
 | Validator results are not evidence either way | The dataviz checks are built for chart series | Keep only the CVD-separation figure; find a text-palette check |
 
+## Contested by the credit-card redesign — PROPOSED, for Luke
+
+On 2026-09-09 Luke redirected the credit cards to the Night Feeds EPK as the guide ("using this as the guide, edit and improve upon the full credit cards"). The rebuilt card (handoff-105-epk, `tools/build-credit-card.py`) deviates from the DEFINED entries above on purpose. Per the playbook's law, a deviation is proposed here, not silently made. Each row is a PROPOSED amendment; the affected DEFINED rows are marked CONTESTED until Luke rules.
+
+| | What the card now does | What the Bible defined | Scope |
+|---|---|---|---|
+| a | Every credit in Baskerville **Bold** (index 1, `Bask-B`); SemiBold no longer drawn on the card | no Bold; SemiBold for headings only | type |
+| b | Role labels in **CREAM**; DIM survives only on the two logo-slot labels, the CONTINUED tag and, under `--label-gold`, three wayfinding labels | role labels DIM | colour |
+| c | Department headings **off** by default; under `--headings` they are CREAM 17 pt tracked 3.0 | department headings RULE, SemiBold 14.2 | type, colour |
+| d | The still is the page: drawn once at **1.0 / 0.60 / 0.45** (CREDITS / CREW / THANKS) with **no scrim**, horizontal anchor 0.20 / 0.50 / 0.70; enlarged sets use still 1.1.27 at 0.45 | ghost family 0.16–0.22 under a 0.50–0.55 scrim | texture |
+| e | Titles are single words **CREDITS / CREW** at 60 / 56 pt tracked 2.0, no rule | spaced "C A S T" at 40 pt tracked 6.0 with the 236 pt rule | type |
+| f | Poster-block names 26 / lead 30; cast rows 20; crew 17; page-3 body 20; boilerplate **Bold 20 pt CREAM on a 1160 pt measure** | name 15.6 / 21; boilerplate Regular 11.4 / 17 | type |
+| g | CREW side margins **48 pt** | 74 pt page geometry | geometry |
+| h | A tracking table of 1.0–4.0 by element | Sz-scaled 6.0 / 1.35 / 0.95 | type |
+
+The question these rows raise is larger than any row: pages 1–8 of the EPK are cream Baskerville Regular on warm near-black with ghosted stills, pages 9–11 are now the Night Feeds form. **Either the whole kit follows the redirect or the credit pages stand apart as a second object.** That is Luke's ruling, and it settles every row above at once. `tokens.css` is untouched until he rules.
+
 ## Amendments
 
 - 2026-09-09 — v0.1 DRAFT written from the artifacts. Awaiting Luke's ratification.
+- 2026-09-10 — Credit-card redesign contradictions appended as PROPOSED (rows a–h, from the builder's deviations report via the card session, handoff-105-epk); the DEFINED rows they touch marked CONTESTED for pages 9–11.
 - 2026-09-09 — Codex audit folded in: GHOST corrected from a single recipe to the family actually in use; RULE law narrowed to structure only; type table updated for the page-3 title law, the label class, the 19/28 programmer column and the DIM proof slug; counter-evidence table added.

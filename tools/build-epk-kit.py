@@ -567,13 +567,13 @@ def credit_pages(c, d):
     extras = [e for e in billed if e[0] and e[0].lower() == "extras"]
     key = [e for e in pairs(field(d, "9.1"))
            if e[0] and "unknown" not in " ".join(e[1]).lower()]
-    # Ghosts need a bright centre crop (mean L >= 70) to read at 0.16 under 0.55:
-    # 14 the mourners around the body, 13 the oaks and field, 15 the burial under the
-    # oaks. 16 and 17 are spill fallbacks so no two consecutive pages repeat a frame.
+    # Since handoff-105 the card chooses its own still, opacity and anchor per page from
+    # its GROUND_RECIPE; a bare path passed here is ignored with a notice. None lets the
+    # recipe rule. To override, pass (path, alpha, anchor) tuples instead.
     card.one_col_pages(c, "C A S T", [cast, key] + ([extras] if extras else []),
-                       z, stills_for([14, 16]), False)
-    card.two_col_pages(c, "C R E W", pairs(field(d, "10.1")), z, stills_for([13, 17]), False)
-    card.page_thanks(c, d, z, stills_for([15]), False)
+                       z, stills_for([None]), False)
+    card.two_col_pages(c, "C R E W", pairs(field(d, "10.1")), z, stills_for([None]), False)
+    card.page_thanks(c, d, z, stills_for([None]), False)
 
 
 def main():
