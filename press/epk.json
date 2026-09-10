@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 20,
- "updated": "2026-09-09T01:40:40-07:00",
- "updatedBy": "Luke, Sep 9 — confirmed these are the masters",
+ "rev": 21,
+ "updated": "2026-09-09T21:20:31-05:00",
+ "updatedBy": "bio lane, Sep 9 — four candidates from the 64-agent bio raid; see press/bio-luke-scroggins.md",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -508,6 +508,33 @@
        "at": "2026-09-08T22:41:58-07:00",
        "by": "killerofmen.com, verbatim",
        "value": "Luke Scroggins studied theater under David Connelly at the North East School of the Arts in his home town of San Antonio and continued at Otterbein University School of Theatre, earning a BFA in Acting. Television credits include SWITCHED AT BIRTH, GENERAL HOSPITAL and DAYS OF OUR LIVES. After a period coordinating and editing for fashion clients, Scroggins joined the Dark Side and began working in camera. Recently he has moved into the narrative space as Utility on the independent feature FRESH KILLS and the limited series RZR. He made his cinematographer debut on the short films COSMIC BEACH and L'DIRECTOR"
+      },
+      {
+       "at": "2026-09-09T21:20:31-05:00",
+       "by": "bio lane, Sep 9 — four candidates from the 64-agent bio raid; see press/bio-luke-scroggins.md",
+       "value": "Luke Scroggins studied theater under David Connelly at the North East School of the Arts in his home town of San Antonio and continued at Otterbein University School of Theatre, earning a BFA in Acting. Television credits include SWITCHED AT BIRTH, GENERAL HOSPITAL and DAYS OF OUR LIVES. After a period coordinating and editing for fashion clients, Scroggins joined the Dark Side and began working in camera. Recently he has moved into the narrative space as Utility on the independent feature FRESH KILLS and the limited series RZR. He made his cinematographer debut on the short films COSMIC BEACH and L'DIRECTOR"
+      }
+     ],
+     "options": [
+      {
+       "key": "recommended",
+       "value": "Cinematographer Luke Scroggins shot KILLER OF MEN, his thesis film at the AFI Conservatory, for director Jordan Betine. The 1830s South Carolina drama was shot on the ARRI Alexa 35, on a farm, in a barn and on a soundstage. For director John Lavelle he shot the short KEEPING WARM, one continuous scene inside a minivan. His AFI cycle films are PLACENTA for director Japhet Velazquez, PROSPECT, a motorcycle-club crime drama, for Piper De Palma, and DEEP TISSUE, an action thriller, for Matthew Genecov. With director Ze'ev Waismann he shot LE'DIRECTOR, his AFI application film, and commercials for Ford Bronco, the U.S. Air Force and Banner Health. Before AFI he was camera utility and data manager on the feature FRESH KILLS under cinematographer Ben Hardwicke. He holds a BFA in Acting from Otterbein University and appeared on SWITCHED AT BIRTH, GENERAL HOSPITAL and DAYS OF OUR LIVES. He is from San Antonio and based in Los Angeles.",
+       "note": "EPK page 5. 157 words. Every credit with its director; one process fact per headline credit; acting as one clause."
+      },
+      {
+       "key": "credits-first",
+       "value": "Cinematographer Luke Scroggins shot KILLER OF MEN, his thesis film at the AFI Conservatory, for director Jordan Betine. The 1830s South Carolina drama was shot in July 2025 on the ARRI Alexa 35. He shot the short KEEPING WARM for director John Lavelle. His AFI cycle films are PLACENTA, 2023, for director Japhet Velazquez, and PROSPECT and DEEP TISSUE, both 2024, for Piper De Palma and Matthew Genecov. He shot LE'DIRECTOR, his AFI application film, for director Ze'ev Waismann. For Waismann at Electra Filmworks he has shot commercials for Ford Bronco, the U.S. Air Force, the University of Idaho, St. Luke's Hospital and Banner Health. He was camera utility and data manager on the feature FRESH KILLS, 2023, under cinematographer Ben Hardwicke. He was camera utility on the series RZR, 2024, under cinematographer Matt Plaxco. He holds a BFA in Acting from Otterbein University. He appeared on SWITCHED AT BIRTH, GENERAL HOSPITAL and DAYS OF OUR LIVES.",
+       "note": "FilmFreeway, agency and rep submissions. 157 words. Years on every credit; adds RZR and St. Luke's."
+      },
+      {
+       "key": "craft-first",
+       "value": "Cinematographer Luke Scroggins shot KILLER OF MEN, his thesis film at the AFI Conservatory, for director Jordan Betine. The 1830s South Carolina drama was shot in July 2025 on the ARRI Alexa 35, on a farm, in a barn and on a soundstage. It used two cameras and a crane, with night exteriors. The lighting was researched from 1800s light sources and chiaroscuro painting. For director John Lavelle he shot the short KEEPING WARM, one continuous scene inside a minivan. At AFI he shot DEEP TISSUE, an action thriller with a fight sequence, for director Matthew Genecov, and PROSPECT, a motorcycle-club crime drama, for Piper De Palma. He has shot commercials for Ford Bronco, the U.S. Air Force and Banner Health for director Ze'ev Waismann. Before AFI he was camera utility and data manager on the feature FRESH KILLS under cinematographer Ben Hardwicke. He holds a BFA in Acting from Otterbein University and is based in Los Angeles.",
+       "note": "lukescroggins.com and cinematographer readers. 158 words. Process facts for KILLER OF MEN; drops PLACENTA and LE'DIRECTOR."
+      },
+      {
+       "key": "chronology",
+       "value": "Cinematographer Luke Scroggins shot KILLER OF MEN, his thesis film at the AFI Conservatory, for director Jordan Betine. He is from San Antonio. He studied acting under David Connelly at the North East School of the Arts and holds a BFA in Acting from Otterbein University. He appeared on SWITCHED AT BIRTH, GENERAL HOSPITAL and DAYS OF OUR LIVES. From 2014 to 2019 he wrote, shot and edited about 100 spots for the clinical-research company Flourish Research. He was camera utility and data manager on the feature FRESH KILLS, 2023, under cinematographer Ben Hardwicke. He completed an MFA in Cinematography at the AFI Conservatory in 2025, shooting PLACENTA, PROSPECT and DEEP TISSUE for directors Japhet Velazquez, Piper De Palma and Matthew Genecov. He has shot commercials for Ford Bronco, the U.S. Air Force and Banner Health for director Ze'ev Waismann at Electra Filmworks. He shot the short KEEPING WARM for director John Lavelle. He is based in Los Angeles.",
+       "note": "Website about page. 159 words. Career in date order with the count of Flourish spots, NESA, Connelly and the MFA year. Not for the EPK page."
       }
      ]
     },
