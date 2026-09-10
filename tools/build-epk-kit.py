@@ -17,9 +17,10 @@ Page order follows press/epk-spec.md, which was modelled on a strong AFI thesis 
     10  Crew                   ) drawn by tools/build-credit-card.py, unchanged
     11  Thanks + AFI end card  )
 
-Text is selectable on every page, and the links on page 3 are real PDF link
-annotations. Both are things the model kit got wrong (pages 5-11 of it are pictures
-of text, and it has no links at all).
+Text is selectable on every page, and the links are real PDF link annotations. The
+model kit (built in Canva, per its PDF metadata) has live text only on pages 2-4 and
+pictures of text on 5-11; it does carry links (thirty, on pages 3, 5, 6 and 7), so
+the earlier note here that it had none was wrong (corrected 2026-09-10).
 
 Nothing is retyped. Every fact comes out of press/epk.json at build time, except two
 paragraphs the worksheet does not hold yet: the logline is read from
