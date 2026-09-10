@@ -1,6 +1,6 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-10T15:30:00-07:00",
+  "updated": "2026-09-10T16:21:38-05:00",
   "updated_by": "Fable session, Illustrator/Canva lane",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
@@ -25,20 +25,61 @@
     "created_how": null
   },
   "probes": {
-    "pdf_import": { "done": false, "result": null },
-    "fonts": { "done": false, "Bask": null, "Bask-SB": null, "Bask-B": null, "uploaded_baskerville_visible_to_app": null },
-    "page_size": { "done": false, "width_px": null, "height_px": null }
+    "pdf_import": {
+      "done": false,
+      "result": null
+    },
+    "fonts": {
+      "done": false,
+      "Bask": null,
+      "Bask-SB": null,
+      "Bask-B": null,
+      "uploaded_baskerville_visible_to_app": null
+    },
+    "page_size": {
+      "done": false,
+      "width_px": null,
+      "height_px": null
+    }
   },
   "ops": {
     "file": "canva/ops/epk-canva.json",
     "url": "https://scroggdawg.github.io/kom-festival-board/canva/ops/epk-canva.json",
     "regenerate": "venv/bin/python tools/build-epk-canva.py",
-    "epk_rev_built_from": null
+    "epk_rev_built_from": 24,
+    "served": "GitHub Pages returns 200 for the ops JSON and the 22 derivatives as of 2026-09-10 16:05 PDT"
   },
   "pages_built": [],
-  "pilot": { "page": 3, "status": "not started", "luke_verdict": null },
-  "export": { "last_pdf": null, "pages": null, "links": null, "size_mb": null, "verdicts": null },
-  "sharing": { "edit_link_sent_to": [], "view_link": null },
+  "pilot": {
+    "page": 3,
+    "status": "not started",
+    "luke_verdict": null
+  },
+  "export": {
+    "last_pdf": null,
+    "pages": null,
+    "links": null,
+    "size_mb": null,
+    "verdicts": null
+  },
+  "sharing": {
+    "edit_link_sent_to": [],
+    "view_link": null
+  },
   "last_error": null,
-  "next_step": "Step 1 of canva/README.md: run the emitter is done; run the app locally, create the app in the Developer Portal, then the three probes."
+  "next_step": "Luke clicks Connect in the Claude-in-Chrome prompt; then runbook step 3 (create the app in the Developer Portal, Development URL http://localhost:8080, Preview) and step 4 (the three probes). Dev server: launch.json 'canva-app'.",
+  "app": {
+    "path": "canva/kom-epk-builder",
+    "commit": "c9fba15",
+    "typecheck": "tsc zero errors, eslint clean, npm run build ok (2026-09-10)",
+    "run": "npm --prefix canva/kom-epk-builder run start  (or the launch.json entry canva-app); serves http://localhost:8080",
+    "notes": [
+      "mailto: links are shown as plain text by the app (richtext link documents http(s) only); the two mailto rows keep their text",
+      "after the first addPage the app checks the new page is the current page before any per-element fallback",
+      "page order from getDesignMetadata is documented as not guaranteed; confirm by eye after page 1"
+    ]
+  },
+  "blockers": [
+    "Browser pairing: the Connect prompt sent to both Chromes timed out (no click within 2 min). Developer Portal app creation and the probes wait on Luke clicking Connect in the Chrome that is logged in to Canva."
+  ]
 }
