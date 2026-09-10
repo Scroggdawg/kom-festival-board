@@ -1,7 +1,7 @@
 {
  "schema": 2,
- "rev": "be53ab1c-f420-47b3-aa7e-0d98794c6e5d",
- "updated": "2026-09-08",
+ "rev": "258c81b9-87bb-4691-82b6-63f153d68320",
+ "updated": "2026-09-10",
  "keyDates": [
   {
    "id": "sundance-final",
@@ -1434,18 +1434,35 @@
   },
   {
    "id": "international-cinematographers-film-festival-manaki-brothers",
-   "name": "International Cinematographers' Film Festival Manaki Brothers",
+   "name": "Manaki Brothers 48th",
    "loc": "Bitola, North Macedonia",
-   "disposition": "bench",
-   "benchNote": "The world's oldest festival devoted to cinematographers (since 1979) — Camerimage's Balkan sibling. Its program includes a Short Films Competition and a Student Program alongside the feature Camera 30…",
-   "fit": 8,
+   "disposition": "target",
    "close": "2027-06-20",
    "estimated": true,
-   "path": "unclear (likely no)",
+   "path": "Not Oscar-qualifying. Crystal Camera 300 for Best Cinematography (Student Films Competition)",
    "source": "https://filmfreeway.com/ManakiBrothers",
-   "lastChecked": "2026-08-25",
+   "lastChecked": "2026-09-10",
    "events": [],
-   "notes": []
+   "notes": [
+    {
+     "nid": "a3c3db76-51b2-4942-9130-1d16bd21f57b",
+     "date": "2026-09-10",
+     "text": "Added to the list by Luke for next year (2027, 48th edition). Verified Sep 10, 2026 against the FilmFreeway rules for the 47th: opened Feb 9, final (late) deadline Jun 20, notification Aug 20, festival Sep 19-25, 2026. The 2027 dates are that pattern moved forward one year and are unconfirmed until the 48th call posts."
+    }
+   ],
+   "cat": "Cinematographers' festival · Student Competition",
+   "tier": "strong",
+   "edition": "~Sep 2027 (48th; the 2026 edition closed Jun 20)",
+   "open": "2027-02-09",
+   "feesText": "Student Competition $3 early · $5 regular · $7 late (2026 fees)",
+   "tiers": [],
+   "why": "The world's oldest festival devoted to cinematographers (since 1979), IMAGO-linked; its honorees include Nykvist, Storaro and Deakins. The Student Films Competition takes narrative shorts under 20 minutes and awards the Crystal Camera 300 for Best Cinematography. The festival pays travel and accommodation for the cinematographer of every selected short and student film. Macedonian premiere only, which is intact. ELIGIBILITY GATE: production must be completed within 18 months before the festival. For a ~Sep 2027 edition that means a completion date after ~Mar 18, 2026; the Jan 2026 picture lock alone misses by about two months, so entry rests on AFI's certified delivery date. The Short Films Competition also requires release within the past 12 months, which the spent premiere likely rules out.",
+   "festDate": "2027-09-18",
+   "links": {
+    "site": "https://manaki.com.mk/",
+    "filmfreeway": "https://filmfreeway.com/ManakiBrothers"
+   },
+   "closeUnverifiedTier": true
   },
   {
    "id": "encounters-film-festival-bristol",
@@ -3443,9 +3460,9 @@
   }
  ],
  "flagsComputedAt": {
-  "rev": "be53ab1c-f420-47b3-aa7e-0d98794c6e5d",
-  "at": "2026-09-08",
-  "flagged": 14,
+  "rev": "258c81b9-87bb-4691-82b6-63f153d68320",
+  "at": "2026-09-10",
+  "flagged": 15,
   "by": "tools/validate-data.py --write-flags"
  }
 }
