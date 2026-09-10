@@ -7,3 +7,5 @@ __pycache__/
 # together and this repo publishes GitHub Pages, which caps a published site at 1 GB.
 # Rebuild them with tools/build-credit-card-ai.py — they are generated, not authored.
 press/illustrator/
+# build-epk-ai.py's generated ExtendScript and log; the .ai it makes lives on the Drive
+tools/.epk-ai-build/

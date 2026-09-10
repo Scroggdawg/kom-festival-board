@@ -75,11 +75,16 @@ LINKS = [("BTS", PRESS_FOLDER), ("STILLS", PRESS_FOLDER), ("POSTER", PRESS_FOLDE
          ("TRAILER", PRESS_FOLDER), ("HEADSHOTS", PRESS_FOLDER)]
 
 # ---- pages 5-6: portrait mapping. File number per bio slot, or None for no portrait.
-# The order the files are listed in is NOT a statement about who is in them.
-PORTRAITS_CONFIRMED = False
-PORTRAITS = {"5.1": 1, "5.2": 2, "5.3": 4, "5.4": 3, "5.5": None}
+# Settled Sep 9 by checksum against the named copies Luke put on the Drive
+# (05 MARKETING/00 PRESS/HEADSHOTS): v3-1 You Wu, v3-2 Ruoxiao Li, v3-3 RJ Ragampudi,
+# v3-4 Luke Scroggins. There is no portrait of the director.
+PORTRAITS_CONFIRMED = True
+PORTRAITS = {"5.1": None, "5.2": 2, "5.3": 4, "5.4": 3, "5.5": 1}
 # Instagram / IMDb per person (field 5.7 is empty). key -> [(label, url), ...]
 PERSON_LINKS = {}
+
+PORTRAIT_H = 396.0                              # every portrait, every page
+PORTRAIT_W = round(PORTRAIT_H * 0.84)           # 333
 
 BIOS = [  # field, heading role, name
     ("5.1", "WRITER-DIRECTOR", "JORDAN BETINE"),
@@ -89,18 +94,20 @@ BIOS = [  # field, heading role, name
     ("5.5", "EDITOR", "YOU WU"),
 ]
 
-# ---- page 8: twelve set photographs, and the grid they sit in. Cells are (file, w).
+# ---- page 8: ten set photographs on a held thirds grid, with one size break: the crew
+# photograph runs the full width on the last row. Cells are (file, relative width).
+# Row heights + 3 gaps + the 74 pt credit strip sum to exactly 1728.
 MOSAIC = [
-    (412, [("KOM_Day3_TheFarm-18.jpg", 430), ("KOM_Day3_TheFarm-59.jpg", 430),
-           ("KOM_Day3_TheFarm-149.jpg", 430)]),
-    (372, [("IMG_4467.jpg", 430), ("KOM_Day3_TheFarm-152.jpg", 430),
-           ("KOM_Day3_TheFarm-99.jpg", 430)]),
-    (455, [("KOM_Day3_TheFarm-185.jpg", 380), ("KOM_Day3_TheFarm-220.jpg", 455),
-           ("KOM_Day4_Soundstage-32.jpg", 455)]),
-    (443, [("KOM_Day4_Soundstage-81.jpg", 430), ("KOM_Day4_Soundstage-93.jpg", 430),
-           ("KOM_Day3_TheFarm-237.jpg", 430)]),
+    (399, [("KOM_Day3_TheFarm-18.jpg", 432), ("KOM_Day3_TheFarm-59.jpg", 432),
+           ("KOM_Day3_TheFarm-149.jpg", 432)]),
+    (399, [("KOM_Day3_TheFarm-152.jpg", 432), ("KOM_Day4_Soundstage-81.jpg", 432),
+           ("KOM_Day3_TheFarm-185.jpg", 432)]),
+    (399, [("KOM_Day3_TheFarm-220.jpg", 432), ("KOM_Day4_Soundstage-32.jpg", 432),
+           ("KOM_Day4_Soundstage-93.jpg", 432)]),
+    (439, [("KOM_Day3_TheFarm-237.jpg", 1296)]),
 ]
 GAP = 6.0
+STRIP = M                                       # the credit strip is the page's own margin
 
 
 # ---------- text the worksheet does not hold yet ----------
@@ -180,12 +187,14 @@ def cover(c, im, x, y, w, h, alpha=1.0, focus=(0.5, 0.5), q=84):
     c.restoreState()
 
 
-def ground(c, still_n=None, alpha=0.16, scrim=0.55):
+def ground(c, still_n=None, alpha=0.16, scrim=0.55, focus=(0.5, 0.5)):
+    """A ghost at 0.16 under 0.55 only reads when the still's centre crop has a mean
+    luminance of about 70 or more; darker frames vanish into the ground."""
     c.setFillColor(GROUND)
     c.rect(0, 0, W, H, fill=1, stroke=0)
     if still_n is not None:
         im = unletterbox(load_rgb(STILL(still_n), 1600))
-        cover(c, im, 0, 0, W, H, alpha=alpha, q=78)
+        cover(c, im, 0, 0, W, H, alpha=alpha, focus=focus, q=78)
         c.saveState()
         c.setFillColor(GROUND)
         c.setFillAlpha(scrim)
@@ -211,8 +220,12 @@ def title(c, text, y, align="center", x=None):
     return y - 62
 
 
-def label(c, x, y, text, align="left", size=None, color=DIM):
-    tracked(c, x, y, text.upper(), "Bask", size or Z.role, Z.track_r + 0.4, color, align)
+LABEL_TRACK = Z.track_r + 1.0                   # one label class across pages 2, 7 and 11
+
+
+def label(c, x, y, text, align="left", color=DIM):
+    """Section label: 15.6 pt Baskerville caps, tracked 2.35, DIM. Pass plain words."""
+    tracked(c, x, y, text.upper(), "Bask", BODY, LABEL_TRACK, color, align)
 
 
 def para(c, text, x, y, width, size=BODY, lead=BODY_LEAD, color=CREAM, align="left",
@@ -264,7 +277,8 @@ def link(c, url, x, y, w, h):
 
 
 def proof_slug(c, text):
-    tracked(c, W / 2, M * 0.45, text, "Bask", 9.5, 1.2, RULE, "center")
+    """The one mark whose job is to be read, so DIM (8.6:1), not RULE (3:1)."""
+    tracked(c, W / 2, M * 0.45, text, "Bask", 9.5, 1.4, DIM, "center")
 
 
 # ---------- pages ----------
@@ -287,13 +301,13 @@ def page_logline(c, d):
     cover(c, im, 0, H - hero_h, W, hero_h, focus=(0.5, 0.5), q=88)
     lg, lg_draft = logline(d)
     sy, sy_draft = synopsis(d)
-    x, w = M + 40, W - 2 * (M + 40)
-    y = H - hero_h - 104
-    label(c, x, y, "L O G L I N E", size=Z.role + 4)
-    y -= 54
+    x, w = M, 900.0                                # the page margin, and a measure that
+    y = H - hero_h - 90                            # holds 75-90 characters a line
+    label(c, x, y, "LOGLINE")
+    y -= 52
     y = para(c, lg, x, y, w, 26.0, 40.0)
-    y -= 62
-    label(c, x, y, "S Y N O P S I S", size=Z.role + 4)
+    y -= 48
+    label(c, x, y, "SYNOPSIS")
     y -= 52
     room = y - M - 44
     size, lead = fit(sy, w, room, 22.0, 34.5)
@@ -303,102 +317,123 @@ def page_logline(c, d):
     c.showPage()
 
 
-def page_programmer(c, d):
-    ground(c, 41, alpha=0.22, scrim=0.50)
-    xr = W - M                      # everything right-aligned to this edge
-    y = H - M - 40
-    tracked(c, xr, y, "K I L L E R   O F   M E N", "Bask", 30, 4.0, CREAM, "right")
-    y -= 44
+COL_SIZE, COL_STEP = 19.0, 28.0                 # the programmer page's one type size and step
 
-    def kv(k, v):
-        nonlocal y
-        line = f"{k}: {v}".upper()
-        size, tr = card.condense(c, line, "Bask", Z.name, Z.track_n, W - 2 * M - 300)
-        tracked(c, xr, y, line, "Bask", size, tr, CREAM, "right")
-        y -= Z.lead + 3
 
-    def head(t):
-        nonlocal y
-        y -= 34
-        tracked(c, xr, y, t, "Bask-SB", SUB, 2.2, CREAM, "right")
-        y -= 34
-
-    lang = field(d, "3.6").strip()
+def programmer_rows(d):
+    """The page as data first, so the column's type size can be settled before a line
+    is drawn: ('kv', key, value) · ('head', title) · ('cast', role, actor)."""
+    rows = []
     srt = field(d, "3.7")
     srt_langs = "English" if srt.lower().startswith("english only") else ""
-    kv("Genre", field(d, "3.1"))
-    kv("Country", field(d, "3.2"))
-    kv("Shooting location", field(d, "3.3"))
-    kv("Production year", field(d, "3.4"))
+    kv = lambda k, v: rows.append(("kv", k, v))
+    kv("Genre", field(d, "3.1")); kv("Country", field(d, "3.2"))
+    kv("Shooting location", field(d, "3.3")); kv("Production year", field(d, "3.4"))
     kv("Completion year", field(d, "3.5"))
-    kv("Language", lang + (f"  (.srt available: {srt_langs})" if srt_langs else ""))
-    kv("Duration", field(d, "3.8"))
-    kv("Aspect ratio", field(d, "3.9"))
-    kv("Frame rate", field(d, "3.10"))
-    kv("Shooting format", field(d, "3.11"))
-    exh = field(d, "3.12").strip()
-    if exh:
-        kv("Exhibition format", exh)
-    snd = field(d, "3.13").strip()
-    if snd:
-        kv("Sound", snd.replace("Stereo 5.1", "5.1, stereo"))
-
-    head("THE TEAM")
+    kv("Language", field(d, "3.6").strip() + (f"  (.srt available: {srt_langs})" if srt_langs else ""))
+    kv("Duration", field(d, "3.8")); kv("Aspect ratio", field(d, "3.9"))
+    kv("Frame rate", field(d, "3.10")); kv("Shooting format", field(d, "3.11"))
+    if field(d, "3.12").strip():
+        kv("Exhibition format", field(d, "3.12").strip())
+    if field(d, "3.13").strip():
+        kv("Sound", field(d, "3.13").strip().replace("Stereo 5.1", "5.1, stereo"))
+    rows.append(("head", "THE TEAM"))
     for role, names in pairs(field(d, "3.14")):
         if role:
-            kv({"Director": "Written & directed by"}.get(role, role + " ") .rstrip(), " · ".join(names))
-
-    head("CAST")
+            kv({"Director": "Written & directed by"}.get(role, role), " · ".join(names))
+    rows.append(("head", "CAST"))
     for role, names in pairs(field(d, "3.15")):
         if role and "coordinator" not in role.lower():
-            tracked(c, xr, y, f"{role}  |  {' · '.join(names)}".upper(), "Bask",
-                    Z.name, Z.track_n, CREAM, "right")
-            y -= Z.lead + 1
-
-    head("RIGHTS")
+            rows.append(("cast", role, " · ".join(names)))
+    rows.append(("head", "RIGHTS"))
     kv("Rights holder", field(d, "3.16"))
     contact = field(d, "3.17").strip()
     if contact:
         name, _, email = contact.partition("·")
         kv("Contact", name.strip())
         if email.strip():
-            kv("Email", email.strip())
-            link(c, "mailto:" + email.strip(), xr - 520, y + Z.lead - 2, 520, Z.lead + 4)
+            rows.append(("kv", "Email", email.strip(), "mailto:" + email.strip()))
+    return rows
 
-    head("LINKS")
+
+def page_programmer(c, d):
+    ground(c, 41, alpha=0.22, scrim=0.50)
+    xr = W - M                      # everything right-aligned to this edge
+    y = title(c, "KILLER OF MEN", H - M - 30, align="right", x=xr)
+    rows = programmer_rows(d)
+
+    # One size for the whole column. If any line would have to condense below 18 pt to
+    # fit, the column steps down together rather than letting one line differ.
+    room = W - 2 * M - 300
+    size, step = COL_SIZE, COL_STEP
+    for r in rows:
+        if r[0] == "kv":
+            s, _ = card.condense(c, f"{r[1]}: {r[2]}".upper(), "Bask", size, Z.track_n, room)
+            if s < 18.0:
+                size, step = 18.0, 27.0
+                break
+
+    def two_tone(key, value):
+        """Key in DIM, value in CREAM, one baseline, one right edge (F05)."""
+        nonlocal y
+        line = f"{key}{value}".upper()
+        s, tr = card.condense(c, line, "Bask", size, Z.track_n, room)
+        wv = tracked(c, xr, y, value.upper(), "Bask", s, tr, CREAM, "right")
+        tracked(c, xr - wv, y, key.upper(), "Bask", s, tr, DIM, "right")
+        base = y
+        y -= step
+        return base
+
+    for r in rows:
+        if r[0] == "head":
+            y -= 34
+            tracked(c, xr, y, r[1], "Bask-SB", 24.0, 2.2, CREAM, "right")
+            y -= 34
+        elif r[0] == "kv":
+            base = two_tone(f"{r[1]}: ", r[2])
+            if len(r) > 3:                                  # a live mailto under the value
+                link(c, r[3], xr - 520, base - 6, 520, size + 6)
+        elif r[0] == "cast":
+            two_tone(f"{r[1]}  |  ", r[2])
+
+    y -= 34
+    tracked(c, xr, y, "LINKS", "Bask-SB", 24.0, 2.2, CREAM, "right")
+    y -= 34
     for name, url in LINKS:
-        wtxt = tracked(c, xr, y, name, "Bask", Z.name + 1, Z.track_n + 0.6, CREAM, "right")
-        c.setStrokeColor(RULE); c.setLineWidth(0.5)
-        c.line(xr - wtxt, y - 5, xr, y - 5)
-        link(c, url, xr - wtxt - 8, y - 8, wtxt + 16, Z.lead + 4)
-        y -= Z.lead + 5
+        wtxt = tracked(c, xr, y, name, "Bask", size, Z.track_n, CREAM, "right")
+        c.setStrokeColor(DIM); c.setLineWidth(0.5)
+        c.line(xr - wtxt, y - 6, xr, y - 6)
+        link(c, url, xr - wtxt - 8, y - 8, wtxt + 16, step)
+        y -= step
 
-    # footer: website · instagram · imdb, all live
-    y = M + 24
+    # footer: website · instagram · imdb, all live, all underlined (F06)
     items = [("WWW.KILLEROFMEN.COM", field(d, "1.3")),
              ("INSTAGRAM  @KILLEROFMENMOVIE", field(d, "3.18")),
              ("IMDB", field(d, "3.19"))]
-    yy = y + (len(items) - 1) * (Z.lead + 4)
+    yy = M + 24 + (len(items) - 1) * step
     for text, url in items:
         if not url.strip():
             continue
-        wtxt = tracked(c, xr, yy, text, "Bask", Z.name, Z.track_n + 0.4, CREAM, "right")
-        link(c, url.strip(), xr - wtxt - 8, yy - 8, wtxt + 16, Z.lead + 2)
-        yy -= Z.lead + 4
+        wtxt = tracked(c, xr, yy, text, "Bask", size, Z.track_n, CREAM, "right")
+        c.setStrokeColor(DIM); c.setLineWidth(0.5)
+        c.line(xr - wtxt, yy - 6, xr, yy - 6)
+        link(c, url.strip(), xr - wtxt - 8, yy - 8, wtxt + 16, step)
+        yy -= step
     c.showPage()
 
 
 def page_statement(c, d):
-    ground(c, 10, alpha=0.26, scrim=0.50)
+    # focus 0.62 keeps both doorway silhouettes whole in the 3:4 crop of still 10
+    ground(c, 10, alpha=0.20, scrim=0.50, focus=(0.62, 0.5))
     y = title(c, "DIRECTOR'S STATEMENT", H - M - 30)
     text = field(d, "4.1")
-    x, w = M + 40, W - 2 * (M + 40)
+    x, w = (W - 720) / 2, 720.0                     # a letter's measure: 75-84 characters
     top = y - 44
-    room = top - (M + 76)
+    room = top - (M + 76) - 56                      # the signature lives inside the box
     size, lead = fit(text, w, room, 23.0, 36.5)     # fit() steps down until it fits
-    para(c, text, x, top, w, size, lead, align="center")
-    tracked(c, W / 2, M + 18, "JORDAN BETINE, WRITER-DIRECTOR", "Bask", Z.role + 1,
-            Z.track_r + 1.0, DIM, "center")
+    y_end = para(c, text, x, top, w, size, lead, align="center")
+    tracked(c, W / 2, y_end - 56, "JORDAN BETINE, WRITER-DIRECTOR", "Bask", Z.role + 1,
+            Z.track_r + 1.0, DIM, "center")       # closes the letter, not the page
     c.showPage()
 
 
@@ -417,21 +452,33 @@ def bio_block(c, key, role, name, y, side, height):
         tracked(c, px, y, lab.upper(), "Bask", Z.role, Z.track_r, DIM)
         link(c, url, px - 4, y - 6, 66, Z.role + 10)
     y -= 40
-    img_h = height - 40
-    img_w = round(img_h * 0.84)
-    text_w = W - 2 * M - img_w - 48
+    img_h = PORTRAIT_H
+    img_w = PORTRAIT_W
+    text_w = W - 2 * M - img_w - 48                 # the measure every bio shares
+    text = field(c._d, key)
+    size, lead = fit(text, text_w, img_h - 4, 19.0, 30.0)
     if has_img:
         im = load_rgb(HEADSHOT(pn), 1200)
         ix = M if side == "left" else W - M - img_w
         cover(c, im, ix, y - img_h, img_w, img_h, focus=(0.5, 0.40), q=86)
         tx = M + img_w + 48 if side == "left" else M
-    else:
-        tx, text_w = M, W - 2 * M
-    text = field(c._d, key)
-    size, lead = fit(text, text_w, img_h - 4, 19.0, 30.0)
-    para(c, text, tx, y - lead * 0.85, text_w, size, lead,
-         align="left" if side == "left" or not has_img else "right")
-    return y - img_h
+        para(c, text, tx, y - lead * 0.85, text_w, size, lead,
+             align="left" if side == "left" else "right")
+        return y - img_h
+    # No portrait: the text keeps the shared measure under its own heading and the
+    # block is only as tall as the words, so no empty slot is reserved (F01 fallback).
+    para(c, text, M, y - lead * 0.85, text_w, size, lead)
+    return y - para_height(text, text_w, size, lead) - lead
+
+
+def bio_height(d, key):
+    """What bio_block() will use, so the page can distribute its spare evenly."""
+    pn = PORTRAITS.get(key)
+    if pn is not None and os.path.exists(HEADSHOT(pn)):
+        return 40 + PORTRAIT_H
+    text_w = W - 2 * M - PORTRAIT_W - 48
+    size, lead = fit(field(d, key), text_w, PORTRAIT_H - 4, 19.0, 30.0)
+    return 40 + para_height(field(d, key), text_w, size, lead) + lead
 
 
 def page_bios(c, d, items, first):
@@ -442,11 +489,13 @@ def page_bios(c, d, items, first):
         y = title(c, "FILMMAKERS", y)
         y -= 20
     avail = y - M - 30
-    block = 436.0 if len(items) >= 3 else 560.0     # heading + portrait; two get more
-    spare = avail - block * len(items)
-    between = min(90.0, spare / max(len(items), 1))  # breathe, but do not stretch
+    heights = [bio_height(d, key) for key, _, _ in items]
+    # The spare splits evenly above, between and below the blocks, so a two-bio page
+    # sits in its frame instead of stacking at the top (F08).
+    between = (avail - sum(heights)) / (len(items) + 1)
+    y -= between
     for i, (key, role, name) in enumerate(items):
-        y = bio_block(c, key, role, name, y, "left" if i % 2 == 0 else "right", block)
+        y = bio_block(c, key, role, name, y, "left" if i % 2 == 0 else "right", heights[i])
         y -= between
     if not PORTRAITS_CONFIRMED:
         proof_slug(c, "PROOF — PORTRAITS NOT YET ASSIGNED TO NAMES")
@@ -455,7 +504,8 @@ def page_bios(c, d, items, first):
 
 def page_cast(c, d):
     ground(c)
-    hero_h = 900.0
+    bios = field(d, "7.1").strip()
+    hero_h = 1000.0 if bios else 1230.0            # the still takes the room a bio would
     im = unletterbox(load_rgb(STILL(40), 2000))
     cover(c, im, 0, H - hero_h, W, hero_h, focus=(0.5, 0.35), q=88)
     x = M
@@ -465,41 +515,41 @@ def page_cast(c, d):
     tracked(c, x, y, f"{lead_role}  |  {' · '.join(lead_names)}".upper(), "Bask-SB", SUB + 3,
             2.4, CREAM)
     y -= 50
-    bios = field(d, "7.1").strip()
     if bios:
         y = para(c, bios, x, y, W - 2 * M, BODY - 0.6, BODY_LEAD - 1.5) - 30
     else:
         y -= 6
-    label(c, x, y, "B I L L E D   C A S T", size=Z.role + 1)
+    label(c, x, y, "BILLED CAST")
     y -= 34
     col_x = [x, x + (W - 2 * M) / 2]
     half = (len(billed) + 1) // 2
     for ci, chunk in enumerate([billed[:half], billed[half:]]):
         yy = y
         for role, names in chunk:
-            tracked(c, col_x[ci], yy, role.upper(), "Bask", Z.role, Z.track_r, DIM)
-            tracked(c, col_x[ci] + 210, yy, " · ".join(names).upper(), "Bask", Z.name,
+            tracked(c, col_x[ci], yy, role.upper(), "Bask", BODY, Z.track_r, DIM)
+            tracked(c, col_x[ci] + 210, yy, " · ".join(names).upper(), "Bask", 17.0,
                     Z.track_n, CREAM)
-            yy -= Z.lead + 4
+            yy -= 28
     c.showPage()
 
 
 def page_bts(c):
     ground(c)
-    strip = 28.0
     y = H
     for row_h, cells in MOSAIC:
-        total_w = sum(w for _, w in cells) + GAP * (len(cells) - 1)
-        scale = W / total_w
+        # cells share the width minus the gutters, so the last one lands on 1296 exactly
+        scale = (W - GAP * (len(cells) - 1)) / sum(w for _, w in cells)
         x = 0.0
         for f, w in cells:
             cw = w * scale
             im = load_rgb(BTS(f), 1500)
-            cover(c, im, x, y - row_h, cw - (GAP if f != cells[-1][0] else 0), row_h, q=84)
-            x += cw
+            cover(c, im, x, y - row_h, cw, row_h, q=84)
+            x += cw + GAP
         y -= row_h + GAP
-    tracked(c, W / 2, strip * 0.38, "BEHIND THE SCENES   ·   PHOTOGRAPHS JEDIDIAH WOODS",
-            "Bask", 9.5, 1.4, DIM, "center")
+    y += GAP                                        # the loop pays a gap after the last row too
+    assert abs(y - STRIP) < 0.01, f"mosaic rows do not sum to the page: strip would be {y:.1f}"
+    tracked(c, W / 2, M * 0.45, "BEHIND THE SCENES   ·   PHOTOGRAPHS JEDIDIAH WOODS",
+            "Bask", Z.role, Z.track_r, DIM, "center")   # the role-label class, on the mark line
     c.showPage()
 
 
@@ -517,10 +567,13 @@ def credit_pages(c, d):
     extras = [e for e in billed if e[0] and e[0].lower() == "extras"]
     key = [e for e in pairs(field(d, "9.1"))
            if e[0] and "unknown" not in " ".join(e[1]).lower()]
+    # Ghosts need a bright centre crop (mean L >= 70) to read at 0.16 under 0.55:
+    # 14 the mourners around the body, 13 the oaks and field, 15 the burial under the
+    # oaks. 16 and 17 are spill fallbacks so no two consecutive pages repeat a frame.
     card.one_col_pages(c, "C A S T", [cast, key] + ([extras] if extras else []),
-                       z, stills_for([31, 27, 38]), False)
-    card.two_col_pages(c, "C R E W", pairs(field(d, "10.1")), z, stills_for([35, 3, 19]), False)
-    card.page_thanks(c, d, z, stills_for([41, 13]), False)
+                       z, stills_for([14, 16]), False)
+    card.two_col_pages(c, "C R E W", pairs(field(d, "10.1")), z, stills_for([13, 17]), False)
+    card.page_thanks(c, d, z, stills_for([15]), False)
 
 
 def main():

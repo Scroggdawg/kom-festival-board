@@ -1,0 +1,51 @@
+/* KILLER OF MEN — brand tokens. v0.1 DRAFT, unratified, 2026-09-09.
+   Machine layer of BRAND.md (same folder). Sampled from the artifacts with
+   Pillow (medians), never eyeballed. Do not re-derive; amend BRAND.md first.
+   Two palettes: PRINT (every document surface) and PAINT (the poster only).
+   Contrast figures are WCAG 2.x ratios against --ground. */
+
+:root {
+  /* ---------- PRINT palette: every document surface ---------- */
+  --ground:    #0b0806;  /* page ground. Warm near-black. Constant in tools/build-credit-card.py; render sample #0a0805 (EPK p02). Never pure #000 on a page. */
+  --cream:     #efe6d6;  /* primary type: names, running text, page titles. 16.13:1 on --ground. */
+  --dim:       #b9a88c;  /* secondary type: role labels, section labels, captions. 8.60:1 on --ground. */
+  --rule:      #6b5942;  /* hairline rules 0.5-0.7pt; department headings; provenance footers only. 2.98:1 — never for text a reader must read. */
+  --letterbox: #000000;  /* the stills' own bars. Sampled median of all 41 stills' bar rows. Not a page colour; travels with the still. */
+  --ghost:     #0e0e0a;  /* MEASURED, not set: --ground with a still at 16% opacity under a 55% --ground scrim (EPK p03). Result of the treatment, do not paint it directly. */
+
+  /* ---------- emphasis: ONE reserved colour, PROPOSED ---------- */
+  --emphasis:  #df0001;  /* median of the red drop-shadow pixels behind the poster title. 3.94:1 on --ground: large text (>=18pt), rules, markers only; never body text, never fill. Unused on any current surface. */
+
+  /* ---------- PAINT palette: the poster and things cut from it ---------- */
+  --paint-red:    #be2e13;  /* median of saturated red-band pixels (3.6% of frame). Glow behind the mourners; title shadow. */
+  --paint-orange: #a7682c;  /* median of saturated orange-band pixels (28% of frame, includes skin and wood). Sunset band region median: #fe5907. */
+  --paint-yellow: #f6e62c;  /* median of saturated yellow-band pixels (5.8%). Sky. Sun core: #fbd012. */
+  --paint-green:  #688d2b;  /* median of saturated green-band pixels (1.5%). Moss. */
+  --paint-blue:   #006b97;  /* median of blue-band pixels; border strips sample #006a97. The ragged frame. */
+  --paint-cream:  #efeca1;  /* median of the title lettering and billing type on the poster. Image only — never used as a type colour; use --cream. */
+  --paint-black:  #100100;  /* median of the darkest 5% of poster pixels. Behind the billing block. */
+
+  /* ---------- FILM material: measured from the 41 stills, not tokens to paint with ---------- */
+  --film-median:    #19120f;  /* median of per-still medians, picture area only. */
+  --film-midtone:   #69401d;  /* median of warm midtones (skin, wood, lamplight), hue 28 deg. */
+  --film-flame:     #efcd4a;  /* candle highlight, still 1.1.22. */
+  --film-red:       #5f1c14;  /* the elder's headwrap, still 1.1.18. 1.58:1 on --ground — never type. */
+
+  /* ---------- type ---------- */
+  --face:        "Baskerville", "Libre Baskerville", Georgia, serif;   /* /System/Library/Fonts/Supplemental/Baskerville.ttc index 0 (Regular) */
+  --face-strong: "Baskerville SemiBold", "Baskerville", Georgia, serif; /* same file, index 4 (SemiBold) */
+  /* print sizes (pt) from tools/build-credit-card.py and tools/build-epk-kit.py at scale 1.0 */
+  --size-head: 40pt;  --track-head: 6.0pt;    /* page titles, letterspaced caps */
+  --size-sub:  21pt;  --track-sub:  2.2pt;    /* section and person headings, SemiBold caps */
+  --size-name: 15.6pt; --track-name: 0.95pt;  /* names, caps */
+  --size-role: 14.2pt; --track-role: 1.35pt;  /* role labels, caps, --dim */
+  --size-body: 15.6pt; --lead-body: 24.5pt;   /* running text, sentence case */
+  --size-small: 12.4pt; --lead-small: 18pt;
+  --size-boiler: 11.4pt; --lead-boiler: 17pt; /* AFI boilerplate, caps */
+  --size-foot: 9.5pt;  --track-foot: 1.2pt;   /* provenance footer, --rule */
+  --lead-list: 21pt;                          /* credit list leading */
+
+  /* ---------- page ---------- */
+  --page-w: 1296pt; --page-h: 1728pt; --margin: 74pt;  /* EPK and credit-card page, per press/epk-spec.md */
+  --rule-w: 0.7pt;                                    /* heading rule; list dividers 0.5pt */
+}

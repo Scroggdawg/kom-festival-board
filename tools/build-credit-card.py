@@ -198,10 +198,23 @@ def heading(c, text, y, z, cont=False):
 
 
 # ---------- flow: the part that makes --large possible ----------
+def label_lines(role, z):
+    """A long role label wraps onto extra lines at full size instead of shrinking
+    (side-by-side layout only). z.label_room is the width the column gives labels."""
+    room = getattr(z, "label_room", None)
+    if z.stacked or not room:
+        return [role.upper()]
+    lab = role.upper()
+    if pdfmetrics.stringWidth(lab, "Bask", z.role) + z.track_r * max(len(lab) - 1, 0) <= room:
+        return [lab]
+    return simpleSplit(lab, "Bask", z.role, room - z.track_r * max(len(lab) - 1, 0) / 2)
+
+
 def item_h(e, z):
     if e[0] is None:
         return z.lead + z.gap
     n = len(e[1]) + (1 if z.stacked else 0)        # stacked spends a line on the role
+    n = max(n, len(label_lines(e[0], z)))          # a wrapped label can be the tall side
     return z.lead * n + z.gap * (1.35 if z.stacked else 1.0)
 
 
@@ -229,19 +242,34 @@ def flow(entries, col_h, z):
     return cols
 
 
-def balance(cols, z):
+def balance(cols, z, col_h=None):
     """When everything fits on one page, split it evenly instead of filling column one
-    to the brim and leaving column two short."""
+    to the brim and leaving column two short. The split falls on a department heading
+    when one fits, so neither column opens mid-department (F22); otherwise the old
+    nearest-to-half split stands."""
     if len(cols) != 2:
         return cols
     flat = cols[0] + cols[1]
-    total = sum(item_h(e, z) for e in flat)
+    h = [item_h(e, z) for e in flat]
+    total = sum(h)
+    if col_h:
+        best, best_diff = None, None
+        for i in range(1, len(flat)):
+            if flat[i][0] is not None:                      # only at a heading
+                continue
+            lh, rh = sum(h[:i]), sum(h[i:])
+            if lh > col_h or rh > col_h:
+                continue
+            if best is None or abs(lh - rh) < best_diff:
+                best, best_diff = i, abs(lh - rh)
+        if best is not None:
+            return [flat[:best], flat[best:]]
     left, run = [], 0.0
     for i, e in enumerate(flat):
-        if run + item_h(e, z) / 2 > total / 2:
+        if run + h[i] / 2 > total / 2:
             break
         left.append(e)
-        run += item_h(e, z)
+        run += h[i]
     right = flat[len(left):]
     while left and left[-1][0] is None:
         right.insert(0, left.pop())
@@ -280,15 +308,15 @@ def draw_col(c, entries, x_role, x_name, y, z, left_bound=M):
                 y -= z.lead
             y -= z.gap * 1.35
             continue
-        lab = role.upper()
-        size, tr = condense(c, lab, "Bask", z.role, z.track_r,
-                            x_role - left_bound)   # the column's own bound, not the page's
-        tracked(c, x_role, y, lab, "Bask", size, tr, DIM, "right")
+        # A label too long for its room wraps at full size (F17); only names condense.
+        lines = label_lines(role, z)
+        for i, lab in enumerate(lines):
+            tracked(c, x_role, y - i * z.lead, lab, "Bask", z.role, z.track_r, DIM, "right")
         for i, n in enumerate(names):
             u = n.upper()
             ns, nt = condense(c, u, "Bask", z.name, z.track_n, W - M - x_name)
             tracked(c, x_name, y - i * z.lead, u, "Bask", ns, nt, CREAM)
-        y -= z.lead * len(names) + z.gap
+        y -= z.lead * max(len(names), len(lines)) + z.gap
     return y
 
 
@@ -296,12 +324,13 @@ def draw_col(c, entries, x_role, x_name, y, z, left_bound=M):
 def two_col_pages(c, title, entries, z, stills, transparent):
     y_probe = H - M - 46 * z.s
     col_h = (y_probe - 62 * z.s) - M
-    cols = flow(entries, col_h, z)
-    if len(cols) == 2:
-        cols = balance(cols, z)
     colw = (W - 2 * M - 56) / 2
     lx = M + colw * 0.52
     rx = M + colw + 56 + colw * 0.52
+    z.label_room = colw * 0.52                     # what a label may take before wrapping
+    cols = flow(entries, col_h, z)
+    if len(cols) == 2:
+        cols = balance(cols, z, col_h)
     for p in range(0, len(cols), 2):
         ground(c, next(stills), transparent)
         y0 = heading(c, title, y_probe, z, cont=(p > 0))
@@ -315,6 +344,7 @@ def one_col_pages(c, title, groups, z, stills, transparent):
     """groups: list of entry-lists, drawn with a rule between them. Centred column."""
     y_probe = H - M - 46 * z.s
     col_h = (y_probe - 62 * z.s) - M
+    z.label_room = W / 2 - 26 * z.s - M
     seq = []
     for gi, g in enumerate(groups):
         if gi:
@@ -368,8 +398,17 @@ def page_thanks(c, d, z, stills, transparent):
         "ANY SIMILARITY TO ACTUAL PERSONS, LIVING OR DEAD, IS PURELY COINCIDENTAL.",
     ]
     y_probe = H - M - 46 * z.s
-    foot = (34 * z.s + len(fellows) * z.lead + 34 * z.s
-            + len(BOILER) * (2 * z.boiler_lead + 16) + 10 + z.lead + 40 * z.s)
+    # Boilerplate sets on a 540 pt measure (F11): two lines a paragraph, 10-12 words on
+    # the last; a last line under three words widens the measure a notch instead.
+    def split_boiler(para):
+        for width in (540, 520):
+            lines = simpleSplit(para, "Bask", z.boiler, width * max(z.s * 0.8, 1.0))
+            if len(lines[-1].split()) >= 3:
+                return lines
+        return lines
+    boiler_lines = [split_boiler(p) for p in BOILER]
+    legal_h = sum(len(l) * z.boiler_lead for l in boiler_lines) + 12 * (len(BOILER) - 1)
+    foot = (34 * z.s + len(fellows) * z.lead + 34 * z.s + legal_h + 10 + z.lead + 40 * z.s)
     avail = (y_probe - 62 * z.s) - M
 
     # names first, over as many pages as they need; the AFI card lands on the last one
@@ -382,9 +421,17 @@ def page_thanks(c, d, z, stills, transparent):
     for i, chunk in enumerate(chunks):
         ground(c, next(stills), transparent)
         y = heading(c, "T H A N K S", y_probe, z, cont=(i > 0))
+        if len(chunks) == 1:
+            # One page: the names and fellows sit centred between the title and the
+            # legal block anchored at the foot, so the seam is two zones, not one hole.
+            block = (46 * z.s + len(chunk) * z.lead + 40 * z.s + 30 * z.s
+                     + len(fellows) * z.lead)
+            legal_top = M + 18 + 10 + z.lead + legal_h
+            spare = (y - legal_top) - block
+            y -= max(0.0, spare / 2 - 40 * z.s)
         if i == 0:
             tracked(c, W / 2, y, "THE FILMMAKERS WISH TO THANK", "Bask",
-                    z.role, z.track_r + 1.0 * z.s, DIM, "center")
+                    z.role * 1.1, z.track_r + 1.0 * z.s, DIM, "center")   # the label class
             y -= 46 * z.s
         for n in chunk:
             tracked(c, W / 2, y, n.upper(), "Bask", z.name, z.track_n, CREAM, "center")
@@ -393,21 +440,22 @@ def page_thanks(c, d, z, stills, transparent):
             y -= 40 * z.s
             c.setStrokeColor(RULE)
             c.setLineWidth(0.5)
-            c.line(W / 2 - 118 * z.s, y + 14, W / 2 + 118 * z.s, y + 14)
+            c.line(W / 2 - 90 * z.s, y + 14, W / 2 + 90 * z.s, y + 14)   # a divider, not a title rule
             y -= 30 * z.s
             for fl in fellows:
                 tracked(c, W / 2, y, fl.upper(), "Bask", z.role + 0.4 * z.s,
                         z.track_n, CREAM, "center")
                 y -= z.lead
-            y -= 34 * z.s
-            for para in BOILER:
-                c.setFont("Bask", z.boiler)
-                for line in simpleSplit(para, "Bask", z.boiler, W - 2 * M - 180):
+            # The legal block anchors from the foot: the © line on the kit's footer
+            # baseline, the three paragraphs stacked above it. The ghost holds the seam.
+            y_c = M + 18
+            y = y_c + 10 + z.lead + legal_h
+            for lines in boiler_lines:
+                for line in lines:
                     tracked(c, W / 2, y, line, "Bask", z.boiler, 0.6, DIM, "center")
                     y -= z.boiler_lead
-                y -= 16
-            y -= 10
-            tracked(c, W / 2, y, "© MMXXV   AMERICAN FILM INSTITUTE", "Bask",
+                y -= 12
+            tracked(c, W / 2, y_c, "© MMXXV   AMERICAN FILM INSTITUTE", "Bask",
                     z.role, z.track_r, CREAM, "center")
         c.showPage()
 
