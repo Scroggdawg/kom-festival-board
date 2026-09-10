@@ -99,3 +99,7 @@ Names are explicit suffixes. Log which upload each festival received, and the vi
 2. Text version of the EPK in `EPK INFO`.
 3. Layout (Joan offered Illustrator; Canva acceptable). Text selectable. Export `KillerOfMen_EPK_<HHMM>_<DDMMYYYY>_compressed.pdf`; move superseded versions to `z_Old_EPKs`.
 4. Attach to FilmFreeway; link from page 3 to every Drive folder.
+
+## Credit pages 9–11 — build note (2026-09-09)
+
+`tools/build-credit-card.py` now draws each credit page over one full-bleed still at the alpha and horizontal anchor in its `GROUND_RECIPE` (no scrim, no gradient; backdrops derived at build time in `unletterbox()` from `press/assets/STILLS`, which is never modified). The backdrop is the page-shaped crop at native resolution, JPEG q90, so the three-page card is 0.29 MB (was 0.45 MB) and the kit's pages 9–11 add about 70 KB each. Text stays selectable on all three pages. Two logo positions (partner logos, AFI Conservatory logo) are reserved as labelled hairline slots until the files arrive from AFI's SDAC portal.

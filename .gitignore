@@ -9,3 +9,7 @@ __pycache__/
 press/illustrator/
 # build-epk-ai.py's generated ExtendScript and log; the .ai it makes lives on the Drive
 tools/.epk-ai-build/
+
+# Redesign scratch: contains rendered pages of ANOTHER film's press kit (the NightFeeds
+# reference) and builder experiments. Not ours to republish; never committed.
+press/credit-redesign/

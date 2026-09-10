@@ -2,18 +2,29 @@
 """Build the credit cards as real Illustrator documents, with live editable text.
 
     <venv>/bin/python tools/build-credit-card-ai.py [--medium|--large] [--transparent]
-                                                    [--out DIR]
+                                                    [--headings] [--label-gold]
+                                                    [--crew-size 16|17|18] [--press]
+                                                    [--out DIR] [--jsx-only]
 
-It does NOT redraw the card. It replays build-credit-card.py's own layout against a
-recording canvas, turns the recorded operations into an ExtendScript, and hands that to
-Illustrator. So the .ai and the .pdf come out of one set of coordinates and cannot
-disagree — which is the whole reason for doing it this way instead of by hand.
+It does NOT redraw the card. It replays build-credit-card.py's own layout (its build()
+entry point, the same one the PDF uses) against a recording canvas, turns the recorded
+operations into an ExtendScript, and hands that to Illustrator. So the .ai and the .pdf
+come out of one set of coordinates and cannot disagree — which is the whole reason for
+doing it this way instead of by hand.
 
 What lands in the .ai:
   * one artboard per page, at the EPK's 1296 x 1728 pt
-  * layer TYPE      — every credit as live point text, Baskerville, tracked
-  * layer BACKGROUND— the ground, the backdrop still and its scrim, locked
+  * layer TYPE      — every credit as live point text, Baskerville Bold, tracked, plus
+                      the hairlines of the two logo slots
+  * layer BACKGROUND— the ground rect and the page-shaped crop of the still at its
+                      alpha (no scrim: see build-credit-card.GROUND_RECIPE), locked
   * --transparent    omits the BACKGROUND layer entirely
+  * --jsx-only       writes the ExtendScript and stops; nothing is launched
+
+The Recorder mimics exactly these canvas calls: stringWidth, beginText/drawText (via
+tracked()), setFillColor, setStrokeColor, setLineWidth, setFillAlpha, saveState,
+restoreState, rect (fill only), line, drawImage, showPage, save, setFont, setTitle.
+Anything else the layout calls raises AttributeError here, on purpose.
 
 Needs Adobe Illustrator installed; it is driven through AppleScript.
 """
@@ -106,6 +117,8 @@ class Recorder:
         self.ops.append(("line", x1, y1, x2, y2, self._stroke, self._lw))
 
     def drawImage(self, img, x, y, w, h, mask=None):
+        # the card's unletterbox() writes the page-shaped crop to disk and hands it
+        # over as img._kom_path, so nothing is re-derived here
         path = getattr(img, "_kom_path", None)
         if path:
             self.ops.append(("image", x, y, w, h, path, self._alpha))
@@ -152,6 +165,7 @@ function pickFont(want, fallbackContains) {
   return app.textFonts[0];
 }
 var FONTS = { "Bask": pickFont("Baskerville", "Baskerville"),
+              "Bask-B": pickFont("Baskerville-Bold", "Baskerville"),
               "Bask-SB": pickFont("Baskerville-SemiBold", "Baskerville") };
 function rgb(hex) {
   var c = new RGBColor();
@@ -236,72 +250,32 @@ function IMG(layer, path, x, y, w, h, alpha) {
 def main():
     large = "--large" in sys.argv
     medium = "--medium" in sys.argv
-    transparent = "--transparent" in sys.argv
+    opts = bcc.Opts.from_argv(sys.argv)
     outdir = (sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv
               else os.path.join(ROOT, "press", "illustrator"))
     os.makedirs(outdir, exist_ok=True)
     name = ("KillerOfMen_Credits"
             + ("_large" if large else "_medium" if medium else "")
-            + ("_transparent" if transparent else "") + ".ai")
+            + ("_transparent" if opts.transparent else "") + ".ai")
     out_ai = os.path.join(outdir, name)
 
-    z = bcc.Sz(1.75 if large else 1.30 if medium else 1.0)
-    d = bcc.load()
-
-    # keep the backdrop bytes on disk so Illustrator can place them
-    tmpdir = tempfile.mkdtemp(prefix="komcard-")
-    real_unletterbox = bcc.unletterbox
-
-    def recording_unletterbox(path):
-        img = real_unletterbox(path)
-        p = os.path.join(tmpdir, os.path.basename(path).replace(".png", ".jpg"))
-        if not os.path.exists(p):
-            from PIL import Image
-            im = Image.open(path).convert("RGB")
-            g = im.convert("L")
-            w, h = g.size
-            rows = [y for y in range(h) if g.crop((0, y, w, y + 1)).getextrema()[1] > 8]
-            if rows and (rows[0] > 2 or rows[-1] < h - 3):
-                im = im.crop((0, rows[0], w, rows[-1] + 1))
-            im.thumbnail((1600, 1600), Image.LANCZOS)
-            im.save(p, "JPEG", quality=78, optimize=True)
-        img._kom_path = p
-        return img
-
-    bcc.unletterbox = recording_unletterbox
-
+    z = bcc.Sz(1.75 if large else 1.30 if medium else 1.0, opts)
     c = Recorder()
-    pool = sorted(f for f in os.listdir(bcc.BG) if f.endswith(".png"))
-
-    def pick(n):
-        for st in pool:
-            if st.endswith(f"1.1.{n}.png"):
-                return os.path.join(bcc.BG, st)
-        return None
-
-    def stills_for(nums):
-        while True:
-            for n in nums:
-                yield pick(n)
-
-    billed = bcc.pairs(bcc.field(d, "9.2"))
-    cast = [e for e in billed if e[0] and e[0].lower() != "extras"]
-    extras = [e for e in billed if e[0] and e[0].lower() == "extras"]
-    key = [e for e in bcc.pairs(bcc.field(d, "9.1"))
-           if e[0] and "unknown" not in " ".join(e[1]).lower()]
-    bcc.one_col_pages(c, "C A S T", [cast, key] + ([extras] if extras else []),
-                      z, stills_for([31, 27, 38]), transparent)
-    crew = bcc.pairs(bcc.field(d, "10.1"))
-    if z.stacked:
-        bcc.one_col_pages(c, "C R E W", [crew], z, stills_for([35, 3, 19]), transparent)
-    else:
-        bcc.two_col_pages(c, "C R E W", crew, z, stills_for([35, 3, 19]), transparent)
-    bcc.page_thanks(c, d, z, stills_for([41, 13]), transparent)
+    sections = bcc.build(c, z, opts)          # the same entry point the PDF uses
     c.save()
+    kinds = {}
+    for ops in c.pages:
+        for op in ops:
+            kinds[op[0]] = kinds.get(op[0], 0) + 1
+    print(f"{len(c.pages)} artboards ({', '.join(sections)}); ops {kinds}")
 
-    jsx = emit(c.pages, out_ai, transparent)
+    jsx = emit(c.pages, out_ai, opts.transparent)
+    tmpdir = tempfile.mkdtemp(prefix="komcard-")
     jsx_path = os.path.join(tmpdir, "build.jsx")
     open(jsx_path, "w", encoding="utf-8").write(jsx)
+    if "--jsx-only" in sys.argv:
+        print(f"  wrote {jsx_path} ({os.path.getsize(jsx_path) // 1024} KB); not launched")
+        return
     scpt = os.path.join(tmpdir, "run.applescript")
     # AppleScript's default reply timeout is two minutes; ten artboards of text take
     # longer than that, and the failure looks like error -1712 rather than anything useful.
