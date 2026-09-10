@@ -2,3 +2,8 @@
 *.swp
 .vercel
 __pycache__/
+
+# Illustrator sources live on the Drive, not here: the three .ai files are 70 MB
+# together and this repo publishes GitHub Pages, which caps a published site at 1 GB.
+# Rebuild them with tools/build-credit-card-ai.py — they are generated, not authored.
+press/illustrator/
