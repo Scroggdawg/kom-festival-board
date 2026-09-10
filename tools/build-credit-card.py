@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 """Build the KILLER OF MEN credit cards as a PDF, from press/epk.json.
 
-    <venv>/bin/python tools/build-credit-card.py [--transparent] [--png] [--out FILE]
+    <venv>/bin/python tools/build-credit-card.py [--medium|--large] [--transparent] [--png]
 
+    --medium        type at 1.30x, stacked and centred. The readable middle.
+    --large         type at 1.75x, stacked and centred. For projection.
+
+    Both enlarged sizes STACK role over name instead of setting them side by side.
+    The two-column reference layout only fits at 1x: a crew column leaves 284pt for
+    the label and the longest one already needs 388pt at 1x. Enlarging it clips names
+    off the page edge, which the first attempt at --large did.
+                    Pages are FLOWED, not crammed: each carries its heading.
     --transparent   draw no ground at all, so the pages keep their alpha
     --png           also render each page to press/assets/CREDITS at 200 dpi
 
@@ -10,12 +18,12 @@ A transparent PDF opened in Preview looks blank: the type is cream, and a viewer
 paints white behind a page that carries none of its own. That is the format working,
 not failing. Composite it over the footage, or use the PNGs.
 
-Three pages at the EPK's own page size (1296 x 1728 pt, per press/epk-spec.md) so they
-drop straight into the kit as pages 9-11:
+Pages are the EPK's own size (1296 x 1728 pt, per press/epk-spec.md) so they drop
+straight into the kit:
 
-    1  CAST            billed cast, then extras
-    2  CREW            two columns, role right, name left  -- the reference layout
-    3  THANKS + AFI    thank-yous, fellows, the required boilerplate
+    CAST            billed cast, key credits, extras
+    CREW            two columns, role right, name left  -- the reference layout
+    THANKS + AFI    thank-yous, fellows, the required boilerplate
 
 Nothing is retyped. Every name is parsed out of press/epk.json fields 9.1, 9.2, 10.1,
 11.1 and 11.3, which were themselves transcribed from the End Titles tab of
@@ -29,7 +37,7 @@ that is not "role | name". Those caveats stay in the worksheet where they belong
 import json, os, re, sys
 
 from reportlab.lib import colors
-from reportlab.lib.utils import ImageReader
+from reportlab.lib.utils import ImageReader, simpleSplit
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
@@ -39,25 +47,42 @@ SRC = os.path.join(ROOT, "press", "epk.json")
 OUT = os.path.join(ROOT, "press", "KillerOfMen_Credits.pdf")
 BG = os.path.join(ROOT, "press", "assets", "STILLS")
 
-W, H = 1296.0, 1728.0                      # the EPK page, per epk-spec.md
+W, H = 1296.0, 1728.0
 BASK = "/System/Library/Fonts/Supplemental/Baskerville.ttc"
 pdfmetrics.registerFont(TTFont("Bask", BASK, subfontIndex=0))
 pdfmetrics.registerFont(TTFont("Bask-SB", BASK, subfontIndex=4))
 
-CREAM = colors.HexColor("#efe6d6")         # the film's own cream, off the poster
-DIM = colors.HexColor("#b9a88c")           # role labels sit back from the names
+CREAM = colors.HexColor("#efe6d6")
+DIM = colors.HexColor("#b9a88c")
 GROUND = colors.HexColor("#0b0806")
 RULE = colors.HexColor("#6b5942")
 
-M = 74.0                                   # page margin
-TITLE = 40.0
-ROLE = 14.2
-NAME = 15.6
-LEAD = 21.0                                # line to line, within a block
-GAP = 15.0                                 # between role blocks
-TRACK_T = 6.0                              # letterspacing: title
-TRACK_R = 1.35                             # roles
-TRACK_N = 0.95                             # names
+M = 74.0
+S = 1.0                                    # type scale; --large raises it
+
+
+class Sz:
+    """Every measurement derives from the scale, so one number moves the whole card."""
+    def __init__(self, s):
+        self.s = s
+        self.title = 40.0 * s
+        self.role = 14.2 * s
+        self.name = 15.6 * s
+        self.lead = 21.0 * s
+        self.gap = 15.0 * s
+        self.track_t = 6.0 * s
+        self.track_r = 1.35 * s
+        self.track_n = 0.95 * s
+        self.boiler = 11.4 * max(s * 0.8, 1.0)
+        self.boiler_lead = 17.0 * max(s * 0.8, 1.0)
+        # Two columns only survive at 1x, and only just. A crew column is 546pt wide
+        # and leaves 284pt for the label, while "Department head makeup and SFX makeup"
+        # is 388pt at 1x already — it works today because it lands beside empty space,
+        # which is luck, not design. Any enlargement STACKS role over name, centred,
+        # the way an end crawl does. That is also what lets the names get properly big.
+        self.stacked = s > 1.05
+        if self.stacked:
+            self.role *= 0.72                      # the label steps back; the name leads
 
 
 # ---------- reading the worksheet ----------
@@ -66,14 +91,14 @@ def load():
 
 
 def field(d, n):
-    for s in d["sections"]:
-        for f in s["fields"]:
+    for sec in d["sections"]:
+        for f in sec["fields"]:
             if f["n"] == n:
                 return f["value"]
     raise KeyError(n)
 
 
-def pairs(text, stop_at_prose=True):
+def pairs(text):
     """(role, [names]) out of 'Role | Name' lines. A line with no pipe ends the run,
     which is what keeps the fields' trailing caveats off the card."""
     out = []
@@ -82,22 +107,20 @@ def pairs(text, stop_at_prose=True):
         if not line.strip():
             continue
         if "|" not in line:
-            if line.isupper() and len(line) < 40:      # a department heading
+            if line.isupper() and len(line) < 40:
                 out.append((None, line.strip()))
                 continue
-            if stop_at_prose:
-                break
-            continue
+            break
         role, _, name = line.partition("|")
         role, name = role.strip(), name.strip()
-        if not name:                                    # an empty slot: not drawn
+        if not name:
             continue
         names = [n.strip() for n in re.split(r"\s+·\s+", name) if n.strip()]
         out.append((role, names))
     return out
 
 
-# ---------- drawing ----------
+# ---------- drawing primitives ----------
 def tracked(c, x, y, s, font, size, track, fill, align="left"):
     """Letterspacing lives on the text object, not the canvas."""
     w = c.stringWidth(s, font, size) + track * max(len(s) - 1, 0)
@@ -115,9 +138,9 @@ def tracked(c, x, y, s, font, size, track, fill, align="left"):
 
 
 def unletterbox(path):
-    """The stills carry their black bars in the pixels. Drawn as a background those bars
-    show up as a hard horizontal edge across the page, so the picture area is found and
-    cropped out first. Detected, not hardcoded, so any still can be used."""
+    """The stills carry their black bars in the pixels. Drawn as a background those
+    bars show as a hard horizontal edge, so the picture area is found and cropped out.
+    Detected, not hardcoded, so any still works."""
     from PIL import Image
     import io
     im = Image.open(path).convert("RGB")
@@ -126,15 +149,18 @@ def unletterbox(path):
     rows = [y for y in range(h) if g.crop((0, y, w, y + 1)).getextrema()[1] > 8]
     if rows and (rows[0] > 2 or rows[-1] < h - 3):
         im = im.crop((0, rows[0], w, rows[-1] + 1))
+    # The backdrop sits at 16% under a 55% scrim; it does not need six megapixels, and
+    # at full size ten pages of it made a 35 MB PDF. This is the card's own artwork,
+    # not a delivered asset — the stills themselves are untouched in press/assets.
+    im.thumbnail((1600, 1600), Image.LANCZOS)
     buf = io.BytesIO()
-    im.save(buf, "PNG")
+    im.save(buf, "JPEG", quality=78, optimize=True)   # lossless is wasted at 16% opacity
     buf.seek(0)
     return ImageReader(buf)
 
 
 def ground(c, still=None, transparent=False):
-    """transparent=True draws nothing at all, so the page keeps its alpha and the
-    cards can be laid over footage, a still, or a page in a layout app."""
+    """transparent=True draws nothing, so the page keeps its alpha."""
     if transparent:
         return
     c.setFillColor(GROUND)
@@ -151,123 +177,178 @@ def ground(c, still=None, transparent=False):
             c.restoreState()
         except Exception:
             pass
-    c.saveState()                                        # settle the ground back down
+    c.saveState()
     c.setFillColor(GROUND)
     c.setFillAlpha(0.55)
     c.rect(0, 0, W, H, fill=1, stroke=0)
     c.restoreState()
 
 
-def heading(c, text, y):
-    tracked(c, W / 2, y, text, "Bask", TITLE, TRACK_T, CREAM, "center")
+def heading(c, text, y, z, cont=False):
+    tracked(c, W / 2, y, text, "Bask", z.title, z.track_t, CREAM, "center")
     c.setStrokeColor(RULE)
     c.setLineWidth(0.7)
-    c.line(W / 2 - 118, y - 22, W / 2 + 118, y - 22)
-    return y - 62
-
-
-def block_height(entries, lead=None, gap=None):
-    lead, gap = lead or LEAD, gap or GAP
-    h = 0.0
-    for role, names in entries:
-        h += (lead + gap) if role is None else lead * len(names) + gap
-    return h
-
-
-def fit(natural, available, lo=1.0, hi=1.62):
-    """One factor on leading and gap so a page fills its column rather than stopping
-    two thirds down. Clamped: a short page opens up, it never becomes a poster."""
-    if natural <= 0:
-        return 1.0
-    return max(lo, min(hi, available / natural))
-
-
-def draw_column(c, entries, x_role, x_name, y, lead=None, gap=None):
-    """Roles right-aligned to x_role, names left-aligned from x_name."""
-    lead, gap = lead or LEAD, gap or GAP
-    for role, names in entries:
-        if role is None:                                  # department heading
-            y -= 6
-            tracked(c, x_name, y, names, "Bask-SB", ROLE, TRACK_R + 0.7, RULE)
-            y -= lead + gap - 6
-            continue
-        tracked(c, x_role, y, role.upper(), "Bask", ROLE, TRACK_R, DIM, "right")
-        for i, n in enumerate(names):
-            tracked(c, x_name, y - i * lead, n.upper(), "Bask", NAME, TRACK_N, CREAM)
-        y -= lead * len(names) + gap
+    half = 118 * z.s
+    c.line(W / 2 - half, y - 22 * z.s, W / 2 + half, y - 22 * z.s)
+    y -= 62 * z.s
+    if cont:
+        tracked(c, W / 2, y + 18 * z.s, "CONTINUED", "Bask", z.role * 0.8,
+                z.track_r, RULE, "center")
     return y
 
 
-def split_columns(entries):
-    """Balance by drawn height, and never orphan a department heading at a column foot."""
-    total = block_height(entries)
-    _ = total
-    left, right, run = [], [], 0.0
-    for i, e in enumerate(entries):
-        h = LEAD + GAP if e[0] is None else LEAD * len(e[1]) + GAP
-        if run + h / 2 <= total / 2 and not right:
-            left.append(e)
-            run += h
-        else:
-            right.append(e)
-    while left and left[-1][0] is None:                   # heading stranded at the foot
+# ---------- flow: the part that makes --large possible ----------
+def item_h(e, z):
+    if e[0] is None:
+        return z.lead + z.gap
+    n = len(e[1]) + (1 if z.stacked else 0)        # stacked spends a line on the role
+    return z.lead * n + z.gap * (1.35 if z.stacked else 1.0)
+
+
+def flow(entries, col_h, z):
+    """Break the list into columns that fit col_h. A department heading is never left
+    at the foot of a column with nothing under it — it moves to the next column."""
+    cols, cur, run = [], [], 0.0
+    for e in entries:
+        h = item_h(e, z)
+        if cur and run + h > col_h:
+            while cur and cur[-1][0] is None:
+                e_moved = cur.pop()
+                run -= item_h(e_moved, z)
+                cols.append(cur) if False else None
+                cur_tail = [e_moved]
+                break
+            else:
+                cur_tail = []
+            cols.append(cur)
+            cur, run = cur_tail, sum(item_h(x, z) for x in cur_tail)
+        cur.append(e)
+        run += h
+    if cur:
+        cols.append(cur)
+    return cols
+
+
+def balance(cols, z):
+    """When everything fits on one page, split it evenly instead of filling column one
+    to the brim and leaving column two short."""
+    if len(cols) != 2:
+        return cols
+    flat = cols[0] + cols[1]
+    total = sum(item_h(e, z) for e in flat)
+    left, run = [], 0.0
+    for i, e in enumerate(flat):
+        if run + item_h(e, z) / 2 > total / 2:
+            break
+        left.append(e)
+        run += item_h(e, z)
+    right = flat[len(left):]
+    while left and left[-1][0] is None:
         right.insert(0, left.pop())
-    return left, right
+    return [left, right]
 
 
-def page_cast(c, d, still, transparent=False):
-    ground(c, still, transparent)
-    y0 = heading(c, "C A S T", H - M - 46)
-    billed = pairs(field(d, "9.2"))
-    cast = [e for e in billed if e[0] and e[0].lower() != "extras"]
-    extras = [e for e in billed if e[0] and e[0].lower() == "extras"]
-    key = [e for e in pairs(field(d, "9.1"))
-           if e[0] and "unknown" not in " ".join(e[1]).lower()]
-    SEP1, SEP2 = 56.0, 30.0
-    natural = (block_height(cast) + SEP1 + block_height(key)
-               + (SEP2 + block_height(extras) if extras else 0))
-    f = fit(natural, y0 - M)
-    lead, gap = LEAD * f, GAP * f
-    x_role, x_name = W / 2 - 26, W / 2 + 26
-    y = draw_column(c, cast, x_role, x_name, y0, lead, gap)
-    y -= SEP1 * f * 0.45
-    c.setStrokeColor(RULE); c.setLineWidth(0.5)
-    c.line(W / 2 - 90, y + 10, W / 2 + 90, y + 10)
-    y -= SEP1 * f * 0.55
-    y = draw_column(c, key, x_role, x_name, y, lead, gap)
-    if extras:
-        y -= SEP2 * f
-        draw_column(c, extras, x_role, x_name, y, lead, gap)
-    c.showPage()
+def condense(c, text, font, size, track, room):
+    """Shrink a label until it fits its room. Clipping a name is not an option, and
+    silently running past the margin is how the first --large render broke."""
+    while size > 6 and c.stringWidth(text, font, size) + track * max(len(text) - 1, 0) > room:
+        size -= 0.4
+        track = max(track - 0.03, 0)
+    return size, track
 
 
-def page_crew(c, d, still, transparent=False):
-    ground(c, still, transparent)
-    y0 = heading(c, "C R E W", H - M - 46)
-    entries = pairs(field(d, "10.1"))
-    left, right = split_columns(entries)
-    f = fit(max(block_height(left), block_height(right)), y0 - M)
-    lead, gap = LEAD * f, GAP * f
+def draw_col(c, entries, x_role, x_name, y, z, left_bound=M):
+    """Side by side at normal size; stacked and centred on the page at large size."""
+    for role, names in entries:
+        if role is None:                                        # department heading
+            y -= 6 * z.s
+            if z.stacked:
+                tracked(c, W / 2, y, names, "Bask-SB", z.role * 1.1,
+                        z.track_r + 0.7 * z.s, RULE, "center")
+            else:
+                sz, tr = condense(c, names, "Bask-SB", z.role,
+                                  z.track_r + 0.7 * z.s, W - M - x_name)
+                tracked(c, x_name, y, names, "Bask-SB", sz, tr, RULE)
+            y -= z.lead + z.gap - 6 * z.s
+            continue
+        if z.stacked:
+            tracked(c, W / 2, y, role.upper(), "Bask", z.role,
+                    z.track_r + 0.6 * z.s, DIM, "center")
+            y -= z.lead
+            for n in names:
+                tracked(c, W / 2, y, n.upper(), "Bask", z.name, z.track_n, CREAM, "center")
+                y -= z.lead
+            y -= z.gap * 1.35
+            continue
+        lab = role.upper()
+        size, tr = condense(c, lab, "Bask", z.role, z.track_r,
+                            x_role - left_bound)   # the column's own bound, not the page's
+        tracked(c, x_role, y, lab, "Bask", size, tr, DIM, "right")
+        for i, n in enumerate(names):
+            u = n.upper()
+            ns, nt = condense(c, u, "Bask", z.name, z.track_n, W - M - x_name)
+            tracked(c, x_name, y - i * z.lead, u, "Bask", ns, nt, CREAM)
+        y -= z.lead * len(names) + z.gap
+    return y
+
+
+# ---------- pages ----------
+def two_col_pages(c, title, entries, z, stills, transparent):
+    y_probe = H - M - 46 * z.s
+    col_h = (y_probe - 62 * z.s) - M
+    cols = flow(entries, col_h, z)
+    if len(cols) == 2:
+        cols = balance(cols, z)
     colw = (W - 2 * M - 56) / 2
     lx = M + colw * 0.52
     rx = M + colw + 56 + colw * 0.52
-    draw_column(c, left, lx, lx + 18, y0, lead, gap)
-    draw_column(c, right, rx, rx + 18, y0, lead, gap)
-    c.showPage()
+    for p in range(0, len(cols), 2):
+        ground(c, next(stills), transparent)
+        y0 = heading(c, title, y_probe, z, cont=(p > 0))
+        draw_col(c, cols[p], lx, lx + 18 * z.s, y0, z, M)
+        if p + 1 < len(cols):
+            draw_col(c, cols[p + 1], rx, rx + 18 * z.s, y0, z, M + colw + 56)
+        c.showPage()
 
 
-def wrapped(c, text, x, y, width, font, size, lead, fill, track=0.0, align="center"):
-    from reportlab.lib.utils import simpleSplit
-    c.setFont(font, size)
-    for line in simpleSplit(text, font, size, width):
-        tracked(c, x, y, line, font, size, track, fill, align)
-        y -= lead
-    return y
+def one_col_pages(c, title, groups, z, stills, transparent):
+    """groups: list of entry-lists, drawn with a rule between them. Centred column."""
+    y_probe = H - M - 46 * z.s
+    col_h = (y_probe - 62 * z.s) - M
+    seq = []
+    for gi, g in enumerate(groups):
+        if gi:
+            seq.append(("__RULE__", None))
+        seq += g
+    pages, cur, run = [], [], 0.0
+    for e in seq:
+        h = 46 * z.s if e[0] == "__RULE__" else item_h(e, z)
+        if cur and run + h > col_h:
+            pages.append(cur)
+            cur, run = [], 0.0
+            if e[0] == "__RULE__":
+                continue
+        cur.append(e)
+        run += h
+    if cur:
+        pages.append(cur)
+    x_role, x_name = W / 2 - 26 * z.s, W / 2 + 26 * z.s
+    for i, page in enumerate(pages):
+        ground(c, next(stills), transparent)
+        y = heading(c, title, y_probe, z, cont=(i > 0))
+        for e in page:
+            if e[0] == "__RULE__":
+                y -= 20 * z.s
+                c.setStrokeColor(RULE)
+                c.setLineWidth(0.5)
+                c.line(W / 2 - 90 * z.s, y + 10, W / 2 + 90 * z.s, y + 10)
+                y -= 26 * z.s
+                continue
+            y = draw_col(c, [e], x_role, x_name, y, z)
+        c.showPage()
 
 
-def page_thanks(c, d, still, transparent=False):
-    ground(c, still, transparent)
-    y0 = heading(c, "T H A N K S", H - M - 46)
+def page_thanks(c, d, z, stills, transparent):
     raw = field(d, "11.1")
     names = []
     for line in raw.split("\n")[1:]:
@@ -286,64 +367,109 @@ def page_thanks(c, d, still, transparent=False):
         "THE CHARACTERS AND EVENTS DEPICTED IN THIS MOTION PICTURE ARE FICTITIOUS. "
         "ANY SIMILARITY TO ACTUAL PERSONS, LIVING OR DEAD, IS PURELY COINCIDENTAL.",
     ]
-    # the fixed furniture at the foot does not stretch; only the two name lists do
-    foot = 34 + len(fellows) * LEAD + 34 + len(BOILER) * (2 * 17 + 16) + 10 + LEAD + 40
-    f = fit(46 + len(names) * LEAD, y0 - M - foot, hi=1.45)
-    lead = LEAD * f
-    tracked(c, W / 2, y0, "THE FILMMAKERS WISH TO THANK", "Bask", ROLE, TRACK_R + 1.0, DIM, "center")
-    y = y0 - 46 * f
-    for n in names:
-        tracked(c, W / 2, y, n.upper(), "Bask", NAME, TRACK_N, CREAM, "center")
-        y -= lead
-    y -= 40
-    c.setStrokeColor(RULE); c.setLineWidth(0.5)
-    c.line(W / 2 - 118, y + 14, W / 2 + 118, y + 14)
-    y -= 30
-    for fl in fellows:
-        tracked(c, W / 2, y, fl.upper(), "Bask", ROLE + 0.4, TRACK_N, CREAM, "center")
-        y -= LEAD
-    y -= 34
-    for para in BOILER:
-        y = wrapped(c, para, W / 2, y, W - 2 * M - 180, "Bask", 11.4, 17, DIM, 0.6) - 16
-    y -= 10
-    tracked(c, W / 2, y, "© MMXXV   AMERICAN FILM INSTITUTE", "Bask", ROLE, TRACK_R, CREAM, "center")
-    c.showPage()
+    y_probe = H - M - 46 * z.s
+    foot = (34 * z.s + len(fellows) * z.lead + 34 * z.s
+            + len(BOILER) * (2 * z.boiler_lead + 16) + 10 + z.lead + 40 * z.s)
+    avail = (y_probe - 62 * z.s) - M
+
+    # names first, over as many pages as they need; the AFI card lands on the last one
+    per = max(1, int((avail - 46 * z.s) // z.lead))
+    chunks = [names[i:i + per] for i in range(0, len(names), per)] or [[]]
+    if len(chunks) == 1 and 46 * z.s + len(names) * z.lead > avail - foot:
+        room = max(1, int((avail - 46 * z.s - foot) // z.lead))
+        chunks = [names[:room], names[room:]]
+
+    for i, chunk in enumerate(chunks):
+        ground(c, next(stills), transparent)
+        y = heading(c, "T H A N K S", y_probe, z, cont=(i > 0))
+        if i == 0:
+            tracked(c, W / 2, y, "THE FILMMAKERS WISH TO THANK", "Bask",
+                    z.role, z.track_r + 1.0 * z.s, DIM, "center")
+            y -= 46 * z.s
+        for n in chunk:
+            tracked(c, W / 2, y, n.upper(), "Bask", z.name, z.track_n, CREAM, "center")
+            y -= z.lead
+        if i == len(chunks) - 1:
+            y -= 40 * z.s
+            c.setStrokeColor(RULE)
+            c.setLineWidth(0.5)
+            c.line(W / 2 - 118 * z.s, y + 14, W / 2 + 118 * z.s, y + 14)
+            y -= 30 * z.s
+            for fl in fellows:
+                tracked(c, W / 2, y, fl.upper(), "Bask", z.role + 0.4 * z.s,
+                        z.track_n, CREAM, "center")
+                y -= z.lead
+            y -= 34 * z.s
+            for para in BOILER:
+                c.setFont("Bask", z.boiler)
+                for line in simpleSplit(para, "Bask", z.boiler, W - 2 * M - 180):
+                    tracked(c, W / 2, y, line, "Bask", z.boiler, 0.6, DIM, "center")
+                    y -= z.boiler_lead
+                y -= 16
+            y -= 10
+            tracked(c, W / 2, y, "© MMXXV   AMERICAN FILM INSTITUTE", "Bask",
+                    z.role, z.track_r, CREAM, "center")
+        c.showPage()
 
 
 def main():
+    large = "--large" in sys.argv
+    medium = "--medium" in sys.argv
     transparent = "--transparent" in sys.argv
-    out = OUT if not transparent else OUT.replace(".pdf", "_transparent.pdf")
+    z = Sz(1.75 if large else 1.30 if medium else 1.0)
+    out = OUT
+    if large:
+        out = out.replace(".pdf", "_large.pdf")
+    elif medium:
+        out = out.replace(".pdf", "_medium.pdf")
+    if transparent:
+        out = out.replace(".pdf", "_transparent.pdf")
     if "--out" in sys.argv:
         out = sys.argv[sys.argv.index("--out") + 1]
+
     d = load()
-    stills = sorted(f for f in os.listdir(BG) if f.endswith(".png")) if os.path.isdir(BG) else []
+    pool = sorted(f for f in os.listdir(BG) if f.endswith(".png")) if os.path.isdir(BG) else []
 
     def pick(n):
-        want = f"1.1.{n}.png"
-        for st in stills:
-            if st.endswith(want):
+        for st in pool:
+            if st.endswith(f"1.1.{n}.png"):
                 return os.path.join(BG, st)
         return None
 
+    def stills_for(nums):
+        while True:
+            for n in nums:
+                yield pick(n)
+
     c = canvas.Canvas(out, pagesize=(W, H))
     c.setTitle("Killer of Men — Credits")
-    page_cast(c, d, pick(31), transparent)
-    page_crew(c, d, pick(35), transparent)
-    page_thanks(c, d, pick(41), transparent)
+
+    billed = pairs(field(d, "9.2"))
+    cast = [e for e in billed if e[0] and e[0].lower() != "extras"]
+    extras = [e for e in billed if e[0] and e[0].lower() == "extras"]
+    key = [e for e in pairs(field(d, "9.1"))
+           if e[0] and "unknown" not in " ".join(e[1]).lower()]
+    one_col_pages(c, "C A S T", [cast, key] + ([extras] if extras else []),
+                  z, stills_for([31, 27, 38]), transparent)
+    crew = pairs(field(d, "10.1"))
+    if z.stacked:
+        one_col_pages(c, "C R E W", [crew], z, stills_for([35, 3, 19]), transparent)
+    else:
+        two_col_pages(c, "C R E W", crew, z, stills_for([35, 3, 19]), transparent)
+    page_thanks(c, d, z, stills_for([41, 13]), transparent)
     c.save()
     print(f"wrote {out}")
 
     if "--png" in sys.argv:
         import pymupdf
-        dpi = 200
-        names = ["1_Cast", "2_Crew", "3_Thanks"]
         outdir = os.path.join(ROOT, "press", "assets", "CREDITS")
         os.makedirs(outdir, exist_ok=True)
         doc = pymupdf.open(out)
+        tag = ("_large" if large else "_medium" if medium else "") + \
+              ("_transparent" if transparent else "")
         for i, page in enumerate(doc):
-            suffix = "_transparent" if transparent else ""
-            f = os.path.join(outdir, f"KillerOfMen_Credits_{names[i]}{suffix}.png")
-            page.get_pixmap(dpi=dpi, alpha=transparent).save(f)
+            f = os.path.join(outdir, f"KillerOfMen_Credits_p{i+1}{tag}.png")
+            page.get_pixmap(dpi=200, alpha=transparent).save(f)
             print(f"  {os.path.basename(f)}")
 
 
