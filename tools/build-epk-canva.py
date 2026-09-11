@@ -57,6 +57,8 @@ FONTS = {
     "Bask-B":  {"family": "Baskerville", "weight": "bold",     "fallback_family": "Libre Baskerville", "fallback_weight": "bold"},
 }
 ASCENT = 0.95                 # baseline to richtext box top, in em; tuned on the pilot page
+LINE_SLACK = 1.35             # a line's box is this much wider than its Baskerville measure, plus
+LINE_PAD = 24.0               # LINE_PAD pt: Libre Baskerville runs wider and must never wrap a line
 
 
 def hexcolor(rgb):
@@ -174,11 +176,24 @@ def convert(o, write_images=True):
                 width = ai._measure.stringWidth(op["text"], {v: k for k, v in ai.FONT.items()}[op["font"]], size) \
                     + track_pt * max(len(op["text"]) - 1, 0)
                 baseline_from_top = H - op["y"]
+                # The box is generous and anchored on the line's own alignment edge: a right-
+                # aligned line keeps its right edge (page 3's spine) and grows leftward if the
+                # substitute face is wider; a centred line stays centred; a left one grows right.
+                # The 2026-09-11 pilot wrapped 63 of page 3's lines with the old measured box.
+                align = op.get("align", "left")
+                ax = op.get("ax", op["x"])
+                box_w = width * LINE_SLACK + LINE_PAD
+                if align == "right":
+                    bx, calign = ax - box_w, "end"
+                elif align == "center":
+                    bx, calign = ax - box_w / 2, "center"
+                else:
+                    bx, calign = op["x"], "start"
                 elements.append({"type": "text", "kind": "line", "text": op["text"], "font": FONT_KEY[op["font"]],
                                  "size_pt": round(size, 2), "leading_pt": round(size * 1.2, 2),
-                                 "tracking_pt": round(track_pt, 3), "color": hexcolor(op["fill"]), "align": "start",
-                                 "x": round(op["x"], 2), "y": round(baseline_from_top - size * ASCENT, 2),
-                                 "w": round(width + 4, 2), "_baseline": baseline_from_top, "links": []})
+                                 "tracking_pt": round(track_pt, 3), "color": hexcolor(op["fill"]), "align": calign,
+                                 "x": round(bx, 2), "y": round(baseline_from_top - size * ASCENT, 2),
+                                 "w": round(box_w, 2), "_baseline": baseline_from_top, "links": []})
                 i += 1
                 continue
             i += 1

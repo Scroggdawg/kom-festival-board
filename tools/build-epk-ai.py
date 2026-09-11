@@ -129,10 +129,14 @@ class Ops:
                          "h": h, "font": FONT[font], "size": size, "lead": lead, "fill": fill,
                          "align": align, "min": max(9.0, size - 4.0), "gap": gap})
 
-    def point(self, text, x, y, font, size, track, fill):
+    def point(self, text, x, y, font, size, track, fill, align="left", ax=None):
+        # align and ax (the anchor x before alignment) let the Canva emitter anchor a line's
+        # box on its own edge, so a wider substitute face grows the line along its rag and
+        # never wraps it (pilot 2026-09-11: 63 of page 3's lines wrapped in Libre Baskerville)
         self.ops.append({"op": "point", "p": self.page, "text": text, "x": x, "y": y,
                          "font": FONT[font], "size": size, "fill": fill,
-                         "track": (track / size) * 1000.0 if size else 0})
+                         "track": (track / size) * 1000.0 if size else 0,
+                         "align": align, "ax": x if ax is None else ax})
 
     def rule(self, x1, y1, x2, y2, width, stroke):
         self.ops.append({"op": "rule", "p": self.page, "x1": x1, "y1": y1, "x2": x2, "y2": y2,
@@ -253,7 +257,7 @@ def install(o):
     def tracked(c, x, y, s, font, size, track, fill, align="left"):
         wd = _measure.stringWidth(s, font, size) + track * max(len(s) - 1, 0)
         lx = x - wd if align == "right" else x - wd / 2.0 if align == "center" else x
-        o.point(s, lx, y, font, size, track, rgb(fill))
+        o.point(s, lx, y, font, size, track, rgb(fill), align=align, ax=x)
         return wd
 
     def para(c, text, x, y, width, size=kit.BODY, lead=kit.BODY_LEAD, color=kit.CREAM,
