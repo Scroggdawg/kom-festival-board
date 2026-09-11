@@ -96,12 +96,23 @@ export type WrapFlag = {
   read_px: number;
 };
 
-/** Pick the ops page a read-back page corresponds to: unique element-count match, else `hint`. */
+/** Pick the ops page a read-back page corresponds to. A full read (`total` equals the
+ * contract's page count) pairs by position, since two contract pages can share an element
+ * count (pages 4 and 8, 5 and 7 in the 2026-09-11 contract: paired by count alone, both
+ * candidates were held against the hinted page and the other page's images and paragraphs
+ * came out as false WRAPPED flags). Otherwise: unique element-count match, else `hint`. */
 export function matchOpsPage(
   doc: OpsDoc,
   read: ReadPage,
   hint?: number,
+  total?: number,
 ): OpsPage | undefined {
+  if (total === doc.pages.length) {
+    const byIndex = doc.pages[read.index];
+    if (byIndex && byIndex.elements.length === read.count) {
+      return byIndex;
+    }
+  }
   const byCount = doc.pages.filter((p) => p.elements.length === read.count);
   if (byCount.length === 1) {
     return byCount[0];

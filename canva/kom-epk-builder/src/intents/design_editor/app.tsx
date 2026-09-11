@@ -500,12 +500,13 @@ export const App = () => {
       appendLog(
         `read back (${r.scope}): ${r.pages.map((p) => `p${p.index + 1}=${p.count}`).join(" ")}`,
       );
-      // Wrap check: pair each read page with an ops page (unique element-count match, else the
-      // Page n field) and flag `line` elements taller than leading*s*1.3.
+      // Wrap check: pair each read page with an ops page (by position when the read covers
+      // every page, else unique element-count match, else the Page n field) and flag `line`
+      // elements taller than leading*s*1.3 and paragraphs longer than their measured lines.
       if (doc && s !== undefined) {
         const flags: WrapFlag[] = [];
         for (const rp of r.pages) {
-          const ops = matchOpsPage(doc, rp, pageN);
+          const ops = matchOpsPage(doc, rp, pageN, r.pages.length);
           if (!ops) {
             appendLog(
               `wrap check: read page ${rp.index + 1} (${rp.count} elements) matches no ops page by count; set Page n and read again`,

@@ -30,7 +30,11 @@
   ],
   "scale_px_per_pt": 1.333333,
   "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL",
-  "pages": "11 pages in order, every element placed (2026-09-11 20:06Z)"
+  "pages": "11 pages in order, every element placed, rebuilt 2026-09-11 21:10-21:13Z from the Libre-measured contract (blank page 1 deleted afterwards)",
+  "rebuilds": [
+   "2026-09-11 19:52-20:06Z first full build (Baskerville-measured contract); Luke's five notes",
+   "2026-09-11 21:10-21:13Z rebuild from the Libre-measured contract (commit ffc96ca): all 11 pages deleted in the grid view one by one (Delete on page 1, eleven times, after '+' added a blank page to keep), Reset, Load, Build all ascending, Place page 10, blank page deleted"
+  ]
  },
  "probes": {
   "pdf_import": {
@@ -67,79 +71,114 @@
  "pages_built": [
   {
    "n": 1,
+   "name": "01 Poster",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T19:52Z (ascending run)",
+   "at": "2026-09-11T21:10:18Z (rebuild from the Libre-measured contract, generated 16:02:44)",
    "elements_attempted": 1,
-   "elements_placed": 1
+   "elements_placed": 1,
+   "page_id": "PB1snrB0C5yrf0Vm"
   },
   {
    "n": 2,
+   "name": "02 Logline",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T19:52Z (ascending run)",
-   "elements_attempted": 6,
-   "elements_placed": 6
+   "at": "2026-09-11T21:10:20Z (rebuild from the Libre-measured contract, generated 16:02:44)",
+   "elements_attempted": 7,
+   "elements_placed": 7,
+   "page_id": "PBV2Df2LxzxspwMb"
   },
   {
    "n": 3,
+   "name": "03 Programmer",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T19:52Z (ascending run)",
+   "at": "2026-09-11T21:10:23Z (rebuild from the Libre-measured contract, generated 16:02:44)",
    "elements_attempted": 53,
-   "elements_placed": 53
+   "elements_placed": 53,
+   "page_id": "PBPG3grYl3fRGhq3"
   },
   {
    "n": 4,
+   "name": "04 Statement",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T19:52Z (ascending run)"
+   "at": "2026-09-11T21:10:24Z (rebuild from the Libre-measured contract, generated 16:02:44)",
+   "elements_attempted": 11,
+   "elements_placed": 11,
+   "page_id": "PBZX0pZGdTqqfQkM"
   },
   {
    "n": 5,
+   "name": "05 Filmmakers",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T19:52Z (ascending run)"
+   "at": "2026-09-11T21:10:28Z (rebuild from the Libre-measured contract, generated 16:02:44)",
+   "elements_attempted": 23,
+   "elements_placed": 23,
+   "page_id": "PBsZlZtSqPVJzCwx"
   },
   {
    "n": 6,
+   "name": "06 Filmmakers",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T19:52Z (ascending run)"
+   "at": "2026-09-11T21:10:32Z (rebuild from the Libre-measured contract, generated 16:02:44)",
+   "elements_attempted": 14,
+   "elements_placed": 14,
+   "page_id": "PBFc7HVtBTrS8lqL"
   },
   {
    "n": 7,
+   "name": "07 Cast",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T19:52Z (ascending run)"
+   "at": "2026-09-11T21:10:34Z (rebuild from the Libre-measured contract, generated 16:02:44)",
+   "elements_attempted": 23,
+   "elements_placed": 23,
+   "page_id": "PBSKRLf2h3nkD44z"
   },
   {
    "n": 8,
+   "name": "08 Behind the scenes",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T19:52Z (ascending run)"
+   "at": "2026-09-11T21:10:51Z (rebuild from the Libre-measured contract, generated 16:02:44)",
+   "elements_attempted": 11,
+   "elements_placed": 11,
+   "page_id": "PBZVssSlCSVM7g2h"
   },
   {
    "n": 9,
+   "name": "09 Cast credits",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T19:52Z (ascending run)"
+   "at": "2026-09-11T21:10:53Z (rebuild from the Libre-measured contract, generated 16:02:44)",
+   "elements_attempted": 44,
+   "elements_placed": 44,
+   "page_id": "PB3HksJvtsdW6xjn"
   },
   {
    "n": 10,
+   "name": "10 Crew",
    "status": "done",
    "mode": "per-element on the selected page (paced)",
-   "at": "2026-09-11T20:06Z",
-   "elements_attempted": 126,
-   "elements_placed": 126,
-   "note": "first placement 123/126: addElementAtPoint rate limit ('Add native element rate limit exceeded') exhausted four retries on #30 SCRIPT SUPERVISORS, #62 FERNANDO ACUNA, #94 HAZEL YUNTONG DAI; commit b7e188d lengthens the backoff to 16 s over 7 tries and paces placements 150 ms apart; page cleared and re-placed",
-   "page_id": "PB0SFL2fVtVVyZZm"
+   "at": "2026-09-11T21:13:22Z (rebuild from the Libre-measured contract, generated 16:02:44)",
+   "elements_attempted": 135,
+   "elements_placed": 135,
+   "page_id": "PBchySx5shgK5QfT",
+   "note": "addPage rejected the 135-element batch (100-element cap) and left the background-only page; placed on the selected page with addElementAtPoint, 135/135 on the first pass at PACE_MS 150 (no rate-limit loss this time). 126 -> 135 elements: CREW falls to the card's 16 pt cascade in Libre, 14 wrapped roles"
   },
   {
    "n": 11,
+   "name": "11 Thanks",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T19:52Z (ascending run)"
+   "at": "2026-09-11T21:10:56Z (rebuild from the Libre-measured contract, generated 16:02:44)",
+   "elements_attempted": 77,
+   "elements_placed": 77,
+   "page_id": "PBK68Mp87t11JtWM"
   }
  ],
  "pilot": {
@@ -165,7 +204,7 @@
   "view_link": null
  },
  "last_error": null,
- "next_step": "Rebuild all 11 pages in Canva from the Libre-measured contract (commit ffc96ca, epk rev 26): grid view delete pages 1-11, Reset, Load, pick fonts, Build all ascending into the blank page, Place page 10 on the selected empty page, delete the blank page, read back all pages (lines and paragraphs), Luke exports (PDF Print, RGB, Flatten off), verify with pymupdf, copy to the Drive EPK BUILDS/CANVA, rename the design, share; then handoff-115.",
+ "next_step": "Luke: Share > Download > PDF Print, RGB, Flatten off, crop marks off, all pages; then verify the export with pymupdf against the contract (per-page chars, paragraph bottoms, handle/lockup bboxes), copy to the Drive EPK BUILDS/CANVA, rename the design, share; handoff-115.",
  "app": {
   "path": "canva/kom-epk-builder",
   "commit": "4fa036b",
@@ -217,5 +256,7 @@
   "decisions_hold": "yes ('if that refers to the canva project being editable')",
   "draft": "Luke on the 2026-09-11 taste-pass draft: 'it looks great'; the contract is regenerated from that layout"
  },
- "wrap_check": "2026-09-11 20:07Z, all_pages read-back after the page 10 re-placement: every page matches its ops page by count; no wrapped lines on any page"
+ "wrap_check": {
+  "note": "the panel's Read design reads one page per call on the stable SDK; after the rebuild it kept returning page 1's read (count 1, the poster) whichever page was selected in the Pages strip, so the per-page read back was not obtained this run; the export is the check (pymupdf per-page text and bboxes against the contract)"
+ }
 }
