@@ -281,10 +281,11 @@ export const App = () => {
     emptyProgress(""),
   );
   const [pageN, setPageN] = useState<number | undefined>(1);
-  // addPage() inserts after the CURRENT page and the new page does not become current
-  // (pilot 2026-09-11: page_is_current false every time), so a run of pages inserted in
-  // ascending order reads backwards. Build all therefore runs 11 down to 1 by default.
-  const [reverseOrder, setReverseOrder] = useState(true);
+  // Observed 2026-09-11 on the full build: each addPage() lands AFTER the previously added
+  // page (the insertion point follows the new page) even though getCurrentPageMetadata()
+  // reports the new page as not current. Ascending order therefore reads in order; a
+  // reverse run (tried first, on the strength of that reading) came out backwards.
+  const [reverseOrder, setReverseOrder] = useState(false);
   const [building, setBuilding] = useState(false);
   const [lastError, setLastError] = useState<string | undefined>();
 

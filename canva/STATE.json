@@ -1,6 +1,6 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-11T14:46:22-05:00",
+  "updated": "2026-09-11T14:53:37-05:00",
   "updated_by": "Fable session, Canva lane, preflight answered",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
@@ -10,7 +10,7 @@
     "line_breaks": "Editable paragraphs that Canva reflows (collaborators can edit words); tracked headings and labels are one element per line so their breaks hold.",
     "editor_driving": "Luke gave blanket OK (2026-09-10) for an agent to drive his logged-in Canva editor for this build, at human pace, through the documented UI. Accepting Canva's Developer Terms is Luke's own click.",
     "ghost": "Ratified by Luke 2026-09-11 from four rendered strengths of page 3: the ghost family (pages 3, 4, 7) draws the still at alpha 0.48 under a 0.32 scrim (GHOST_ALPHA / GHOST_SCRIM in the kit; was 0.22 / 0.50). Luke on the pilot: 'i think the image in the background is too dark but i like the rest'.",
-    "build_order": "addPage inserts after the current page and the new page never becomes current, so the full build runs 11 down to 1 into a design holding one blank page (the app's default order toggle); the blank page is deleted afterwards."
+    "build_order": "Each addPage lands after the previously added page (the insertion point follows the new page) although getCurrentPageMetadata() reports the new page as not current; Build all runs 1 to 11 into a design holding one blank page, then the blank page is deleted. A reverse run was tried first on the strength of the pilot's 'current false' reading and came out backwards (2026-09-11 14:50); the pages were deleted in the grid view and rebuilt ascending (14:52)."
   },
   "canva_account": {
     "owner": "Luke Scroggins (camerawrap@gmail.com)",
@@ -28,7 +28,8 @@
       2304
     ],
     "scale_px_per_pt": 1.333333,
-    "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL"
+    "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL",
+    "pages": "11 built pages in order after the blank anchor was deleted (2026-09-11); the design is the master once Luke accepts"
   },
   "probes": {
     "pdf_import": {
@@ -63,17 +64,76 @@
   },
   "pages_built": [
     {
-      "n": 3,
-      "name": "03 Programmer",
+      "n": 1,
       "status": "done",
-      "elements_attempted": 53,
-      "elements_placed": 53,
       "mode": "batch",
-      "page_id": "PBssGzj932LhbDs8",
-      "page_is_current": false,
-      "at": "2026-09-11T18:14:27Z",
-      "wrap_check": "no wrapped lines",
-      "round": 3
+      "at": "2026-09-11T19:52Z (ascending run)",
+      "elements_attempted": 1,
+      "elements_placed": 1
+    },
+    {
+      "n": 2,
+      "status": "done",
+      "mode": "batch",
+      "at": "2026-09-11T19:52Z (ascending run)",
+      "elements_attempted": 6,
+      "elements_placed": 6
+    },
+    {
+      "n": 3,
+      "status": "done",
+      "mode": "batch",
+      "at": "2026-09-11T19:52Z (ascending run)",
+      "elements_attempted": 53,
+      "elements_placed": 53
+    },
+    {
+      "n": 4,
+      "status": "done",
+      "mode": "batch",
+      "at": "2026-09-11T19:52Z (ascending run)"
+    },
+    {
+      "n": 5,
+      "status": "done",
+      "mode": "batch",
+      "at": "2026-09-11T19:52Z (ascending run)"
+    },
+    {
+      "n": 6,
+      "status": "done",
+      "mode": "batch",
+      "at": "2026-09-11T19:52Z (ascending run)"
+    },
+    {
+      "n": 7,
+      "status": "done",
+      "mode": "batch",
+      "at": "2026-09-11T19:52Z (ascending run)"
+    },
+    {
+      "n": 8,
+      "status": "done",
+      "mode": "batch",
+      "at": "2026-09-11T19:52Z (ascending run)"
+    },
+    {
+      "n": 9,
+      "status": "done",
+      "mode": "batch",
+      "at": "2026-09-11T19:52Z (ascending run)"
+    },
+    {
+      "n": 10,
+      "status": "done",
+      "mode": "batch",
+      "at": "2026-09-11T19:52Z (ascending run)"
+    },
+    {
+      "n": 11,
+      "status": "done",
+      "mode": "batch",
+      "at": "2026-09-11T19:52Z (ascending run)"
     }
   ],
   "pilot": {
@@ -99,7 +159,7 @@
     "view_link": null
   },
   "last_error": null,
-  "next_step": "Full build: reload the panel (new bundle), Load, Read page size, pick the three fonts, Find Libre; in the editor add a blank page and delete the pilot page; Reset progress; Build all (order 11 down to 1); verify 11 pages in order and delete the blank page; Read design; export PDF Print, Flatten off (Luke's click); verify with pymupdf; share links.",
+  "next_step": "Read design (wrap check over all pages); export PDF Print, RGB, Flatten off, crop marks off (Luke's click); verify with pymupdf (11 pages 1296 x 1728 pt, text on every page, 18 live links); put the PDF on the Drive under 05 MARKETING/00 PRESS/EPK BUILDS/CANVA; share links (step 9).",
   "app": {
     "path": "canva/kom-epk-builder",
     "commit": "4fa036b",
