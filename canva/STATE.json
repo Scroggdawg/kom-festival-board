@@ -30,7 +30,7 @@
   ],
   "scale_px_per_pt": 1.333333,
   "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL",
-  "pages": "11 pages in order, every element placed, rebuilt 2026-09-11 21:10-21:13Z from the Libre-measured contract (blank page 1 deleted afterwards)",
+  "pages": "11 pages in order; page 7 still the 23-element cast page with the two Spectator rows (contract now 19 elements there); page 2 deleted by a stray Backspace and restored by Undo 2026-09-11",
   "rebuilds": [
    "2026-09-11 19:52-20:06Z first full build (Baskerville-measured contract); Luke's five notes",
    "2026-09-11 21:10-21:13Z rebuild from the Libre-measured contract (commit ffc96ca): all 11 pages deleted in the grid view one by one (Delete on page 1, eleven times, after '+' added a blank page to keep), Reset, Load, Build all ascending, Place page 10, blank page deleted"
@@ -204,7 +204,7 @@
   "view_link": null
  },
  "last_error": null,
- "next_step": "Luke: Share > Download > PDF Print, RGB, Flatten off, crop marks off, all pages; then verify the export with pymupdf against the contract (per-page chars, paragraph bottoms, handle/lockup bboxes), copy to the Drive EPK BUILDS/CANVA, rename the design, share; handoff-115.",
+ "next_step": "With the app's tab in front (Luke closes or leaves his duplicate tab): Load the 395-element contract (generated 2026-09-11T17:15:44), pick the three fonts, delete page 7, select page 6, Build page 7 (cast page without the two Spectator rows), read back; then Luke's ruling on the five-on-one filmmakers page; export; Drive; share.",
  "app": {
   "path": "canva/kom-epk-builder",
   "commit": "4fa036b",
