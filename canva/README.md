@@ -55,6 +55,14 @@ Read this before touching Canva; it is the context a cold start would otherwise 
 
 Each step ends with a check. Record the result in `STATE.json` before moving on.
 
+### 0. Pre-flight: check, then ask, before anything else
+
+```bash
+bash canva/preflight.sh
+```
+
+It checks what a machine can check (Node, the venv, the app's dependencies, the contract, GitHub Pages, git) and then prints four questions that only Luke can answer: whether the Claude in Chrome extension is signed in to this Claude account, which Chrome is logged in to Canva Pro, whether he is at the keyboard for the Developer Terms click, and whether the decisions in `STATE.json` still hold. **Ask them in conversation and wait for the answers. Do not start step 3 until all four are answered.** Fix every MISSING line before moving on.
+
 ### 1. Regenerate the operations (repo, no Canva needed)
 
 ```bash

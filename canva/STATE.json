@@ -1,6 +1,6 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-10T19:35:40-05:00",
+  "updated": "2026-09-10T22:47:25-05:00",
   "updated_by": "Fable session, Illustrator/Canva lane",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
@@ -67,7 +67,7 @@
     "view_link": null
   },
   "last_error": null,
-  "next_step": "Luke clicks Connect in the Claude-in-Chrome prompt; then runbook step 3 (create the app in the Developer Portal, Development URL http://localhost:8080, Preview) and step 4 (the three probes). Dev server: launch.json 'canva-app'.",
+  "next_step": "Step 0 of canva/README.md: run `bash canva/preflight.sh`, fix every MISSING line, then ask Luke its four questions and wait for the answers. Only then step 3 (Developer Portal app) and step 4 (probes).",
   "app": {
     "path": "canva/kom-epk-builder",
     "commit": "c9fba15",
