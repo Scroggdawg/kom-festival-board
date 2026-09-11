@@ -258,6 +258,8 @@
   "draft": "Luke on the 2026-09-11 taste-pass draft: 'it looks great'; the contract is regenerated from that layout"
  },
  "wrap_check": {
-  "note": "the panel's Read design reads one page per call on the stable SDK; after the rebuild it kept returning page 1's read (count 1, the poster) whichever page was selected in the Pages strip, so the per-page read back was not obtained this run; the export is the check (pymupdf per-page text and bboxes against the contract)"
+  "at": "2026-09-11T22:59Z (after the page 7 rebuild)",
+  "result": "all-pages read back, pages paired by position (readback.ts, commit dfd1e42): no wrapped lines, no paragraph longer than its measured lines",
+  "note": "the earlier count-based pairing produced false flags for pages 4/8 and 5/7 (equal element counts); a 15.6 pt handle reads 33 px in Canva's box against 24.96 px of leading, which is not a wrap"
  }
 }
