@@ -44,6 +44,9 @@ export type OpsText = {
   y: number;
   w: number;
   links?: OpsLink[];
+  // colour runs within the text (a key in DIM and its value in CREAM on one line); the whole
+  // text takes `color` first, then each run overrides its range (emitter, 2026-09-11)
+  runs?: { start: number; end: number; color: string }[];
 };
 
 export type OpsRule = {

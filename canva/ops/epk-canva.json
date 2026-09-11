@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generated": "2026-09-11T13:05:38",
+ "generated": "2026-09-11T13:11:09",
  "source": {
-  "kit_commit": "bc1383c",
+  "kit_commit": "e44b45e",
   "epk_rev": 24
  },
  "page": {
@@ -155,7 +155,7 @@
    "n": 3,
    "name": "03 Programmer",
    "background": "#0b0806",
-   "count": 81,
+   "count": 53,
    "elements": [
     {
      "type": "image",
@@ -197,332 +197,299 @@
     {
      "type": "text",
      "kind": "line",
-     "text": "HISTORICAL DRAMA, SOUTHERN GOTHIC",
+     "text": "GENRE: HISTORICAL DRAMA, SOUTHERN GOTHIC",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 618.87,
+     "x": 508.58,
      "y": 147.95,
-     "w": 603.13,
-     "links": []
+     "w": 713.42,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 7,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 7,
+       "end": 40,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "GENRE: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 658.72,
-     "y": 147.95,
-     "w": 134.3,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "UNITED STATES",
+     "text": "COUNTRY: UNITED STATES",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 977.7,
+     "x": 822.09,
      "y": 175.95,
-     "w": 244.3,
-     "links": []
+     "w": 399.91,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 9,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 9,
+       "end": 22,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "COUNTRY: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 879.21,
-     "y": 175.95,
-     "w": 179.61,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "CALIFORNIA",
+     "text": "SHOOTING LOCATION: CALIFORNIA",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1026.42,
+     "x": 701.71,
      "y": 203.95,
-     "w": 195.58,
-     "links": []
+     "w": 520.29,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 19,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 19,
+       "end": 29,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "SHOOTING LOCATION: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 746.19,
-     "y": 203.95,
-     "w": 348.71,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "2025",
+     "text": "PRODUCTION YEAR: 2025",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1142.85,
+     "x": 854.36,
      "y": 231.95,
-     "w": 79.15,
-     "links": []
+     "w": 367.64,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 17,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 17,
+       "end": 21,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "PRODUCTION YEAR: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 868.66,
-     "y": 231.95,
-     "w": 312.49,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "2026",
+     "text": "COMPLETION YEAR: 2026",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1142.85,
+     "x": 857.03,
      "y": 259.95,
-     "w": 79.15,
-     "links": []
+     "w": 364.97,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 17,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 17,
+       "end": 21,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "COMPLETION YEAR: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 871.33,
-     "y": 259.95,
-     "w": 309.82,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "ENGLISH  (.SRT AVAILABLE: ENGLISH)",
+     "text": "LANGUAGE: ENGLISH  (.SRT AVAILABLE: ENGLISH)",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 683.57,
+     "x": 514.37,
      "y": 287.95,
-     "w": 538.43,
-     "links": []
+     "w": 707.63,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 10,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 10,
+       "end": 44,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "LANGUAGE: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 647.74,
-     "y": 287.95,
-     "w": 193.2,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "13 MINUTES",
+     "text": "DURATION: 13 MINUTES",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1034.7,
+     "x": 867.67,
      "y": 315.95,
-     "w": 187.3,
-     "links": []
+     "w": 354.33,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 10,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 10,
+       "end": 20,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "DURATION: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 910.0,
-     "y": 315.95,
-     "w": 191.03,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "2.39:1",
+     "text": "ASPECT RATIO: 2.39:1",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1127.46,
+     "x": 909.35,
      "y": 343.95,
-     "w": 94.54,
-     "links": []
+     "w": 312.65,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 14,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 14,
+       "end": 20,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "ASPECT RATIO: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 927.63,
-     "y": 343.95,
-     "w": 242.12,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "24 FPS",
+     "text": "FRAME RATE: 24 FPS",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1117.04,
+     "x": 923.65,
      "y": 371.95,
-     "w": 104.96,
-     "links": []
+     "w": 298.35,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 12,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 12,
+       "end": 18,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "FRAME RATE: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 944.64,
-     "y": 371.95,
-     "w": 217.39,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "ALEXA 35 ARRIRAW",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "end",
-     "x": 930.02,
-     "y": 399.95,
-     "w": 291.98,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "SHOOTING FORMAT: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 704.05,
-     "y": 399.95,
-     "w": 319.44,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "5.1, STEREO",
+     "text": "SHOOTING FORMAT: ALEXA 35 ARRIRAW",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1036.64,
-     "y": 427.95,
-     "w": 185.36,
-     "links": []
+     "x": 634.57,
+     "y": 399.95,
+     "w": 587.43,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 17,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 17,
+       "end": 33,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "SOUND: ",
+     "text": "SOUND: 5.1, STEREO",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
-     "color": "#b9a88c",
+     "color": "#efe6d6",
      "align": "end",
-     "x": 964.44,
+     "x": 922.61,
      "y": 427.95,
-     "w": 138.03,
-     "links": []
+     "w": 299.39,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 7,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 7,
+       "end": 18,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
@@ -542,152 +509,137 @@
     {
      "type": "text",
      "kind": "line",
-     "text": "JORDAN BETINE",
+     "text": "WRITTEN & DIRECTED BY: JORDAN BETINE",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 977.16,
+     "x": 607.52,
      "y": 523.95,
-     "w": 244.84,
-     "links": []
+     "w": 614.48,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 23,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 23,
+       "end": 36,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "WRITTEN & DIRECTED BY: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 664.77,
-     "y": 523.95,
-     "w": 393.64,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "RUOXIAO LI",
+     "text": "PRODUCER: RUOXIAO LI",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1028.56,
+     "x": 857.52,
      "y": 551.95,
-     "w": 193.44,
-     "links": []
+     "w": 364.48,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 10,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 10,
+       "end": 20,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "PRODUCER: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 901.45,
-     "y": 551.95,
-     "w": 195.04,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "LUKE SCROGGINS",
+     "text": "CINEMATOGRAPHER: LUKE SCROGGINS",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 949.69,
+     "x": 647.82,
      "y": 579.95,
-     "w": 272.31,
-     "links": []
+     "w": 574.18,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 17,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 17,
+       "end": 31,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "CINEMATOGRAPHER: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 712.2,
-     "y": 579.95,
-     "w": 325.87,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "RAJARAJESHWARI \"RJ\" RAGAMPUDI",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "end",
-     "x": 713.23,
-     "y": 607.95,
-     "w": 508.77,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "PRODUCTION DESIGNER: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 482.51,
-     "y": 607.95,
-     "w": 380.39,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "YOU WU",
+     "text": "PRODUCTION DESIGNER: RAJARAJESHWARI \"RJ\" RAGAMPUDI",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1082.84,
-     "y": 635.95,
-     "w": 139.16,
-     "links": []
+     "x": 356.83,
+     "y": 607.95,
+     "w": 865.17,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 21,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 21,
+       "end": 50,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "EDITOR: ",
+     "text": "EDITOR: YOU WU",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
-     "color": "#b9a88c",
+     "color": "#efe6d6",
      "align": "end",
-     "x": 988.58,
+     "x": 958.72,
      "y": 635.95,
-     "w": 148.11,
-     "links": []
+     "w": 263.28,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 8,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 8,
+       "end": 14,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
@@ -707,272 +659,245 @@
     {
      "type": "text",
      "kind": "line",
-     "text": "ERIK ORJIAKO",
+     "text": "MACE  |  ERIK ORJIAKO",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 997.15,
+     "x": 872.53,
      "y": 731.95,
-     "w": 224.85,
-     "links": []
+     "w": 349.47,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 9,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 9,
+       "end": 21,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "MACE  |  ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 924.6,
-     "y": 731.95,
-     "w": 148.62,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "ERIC PARGAC",
+     "text": "MASTER KENNER  |  ERIC PARGAC",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1010.43,
+     "x": 726.53,
      "y": 759.95,
-     "w": 211.57,
-     "links": []
+     "w": 495.47,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 18,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 18,
+       "end": 29,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "MASTER KENNER  |  ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 775.16,
-     "y": 759.95,
-     "w": 307.9,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "JAMAL DENNIS",
+     "text": "KOJO  |  JAMAL DENNIS",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 997.4,
+     "x": 877.08,
      "y": 787.95,
-     "w": 224.6,
-     "links": []
+     "w": 344.92,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 9,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 9,
+       "end": 21,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "KOJO  |  ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 929.09,
-     "y": 787.95,
-     "w": 144.32,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "CASEY LONG",
+     "text": "KOJO'S MASTER  |  CASEY LONG",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 1021.34,
+     "x": 756.95,
      "y": 815.95,
-     "w": 200.66,
-     "links": []
+     "w": 465.05,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 18,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 18,
+       "end": 28,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "KOJO'S MASTER  |  ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 802.75,
-     "y": 815.95,
-     "w": 288.39,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "CHAUNDRE HALL-BROOMFIELD",
+     "text": "FRED  |  CHAUNDRE HALL-BROOMFIELD",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 760.78,
+     "x": 643.39,
      "y": 843.95,
-     "w": 461.22,
-     "links": []
+     "w": 578.61,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 9,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 9,
+       "end": 33,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "FRED  |  ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 756.74,
-     "y": 843.95,
-     "w": 141.39,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "SANDRA MCDANIELS",
+     "text": "ELDER  |  SANDRA MCDANIELS",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 913.46,
+     "x": 777.42,
      "y": 871.95,
-     "w": 308.54,
-     "links": []
+     "w": 444.58,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 10,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 10,
+       "end": 26,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "ELDER  |  ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 851.19,
-     "y": 871.95,
-     "w": 160.04,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "LOREN FENTON",
+     "text": "GIRL  |  LOREN FENTON",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 979.24,
+     "x": 867.2,
      "y": 899.95,
-     "w": 242.76,
-     "links": []
+     "w": 354.8,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 9,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 9,
+       "end": 21,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "GIRL  |  ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 923.91,
-     "y": 899.95,
-     "w": 136.05,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "DANIEL KASSAR",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "end",
-     "x": 978.22,
-     "y": 927.95,
-     "w": 243.78,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "SPECTATOR  |  ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 824.04,
-     "y": 927.95,
-     "w": 235.16,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "NIKITA KORSHUNOV",
+     "text": "SPECTATOR  |  DANIEL KASSAR",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 906.52,
-     "y": 955.95,
-     "w": 315.48,
-     "links": []
+     "x": 767.06,
+     "y": 927.95,
+     "w": 454.94,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 14,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 14,
+       "end": 27,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "SPECTATOR  |  ",
+     "text": "SPECTATOR  |  NIKITA KORSHUNOV",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
-     "color": "#b9a88c",
+     "color": "#efe6d6",
      "align": "end",
-     "x": 770.92,
+     "x": 695.36,
      "y": 955.95,
-     "w": 235.16,
-     "links": []
+     "w": 526.64,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 14,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 14,
+       "end": 30,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",
@@ -992,98 +917,89 @@
     {
      "type": "text",
      "kind": "line",
-     "text": "AFI CONSERVATORY",
+     "text": "RIGHTS HOLDER: AFI CONSERVATORY",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "end",
-     "x": 913.19,
+     "x": 664.68,
      "y": 1051.95,
-     "w": 308.81,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "RIGHTS HOLDER: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 738.52,
-     "y": 1051.95,
-     "w": 272.52,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "SUSAN DRETZKA",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "end",
-     "x": 966.2,
-     "y": 1079.95,
-     "w": 255.8,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "CONTACT: ",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#b9a88c",
-     "align": "end",
-     "x": 872.83,
-     "y": 1079.95,
-     "w": 177.46,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "SDRETZKA@AFI.COM",
-     "font": "Bask",
-     "size_pt": 19.0,
-     "leading_pt": 22.8,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "end",
-     "x": 905.18,
-     "y": 1107.95,
-     "w": 316.82,
-     "links": [
+     "w": 557.32,
+     "links": [],
+     "runs": [
       {
-       "url": "mailto:sdretzka@afi.com",
        "start": 0,
-       "end": 16
+       "end": 15,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 15,
+       "end": 31,
+       "color": "#efe6d6"
       }
      ]
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "EMAIL: ",
+     "text": "CONTACT: SUSAN DRETZKA",
      "font": "Bask",
      "size_pt": 19.0,
      "leading_pt": 22.8,
      "tracking_pt": 0.95,
-     "color": "#b9a88c",
+     "color": "#efe6d6",
      "align": "end",
-     "x": 878.82,
+     "x": 812.74,
+     "y": 1079.95,
+     "w": 409.26,
+     "links": [],
+     "runs": [
+      {
+       "start": 0,
+       "end": 9,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 9,
+       "end": 22,
+       "color": "#efe6d6"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "kind": "line",
+     "text": "EMAIL: SDRETZKA@AFI.COM",
+     "font": "Bask",
+     "size_pt": 19.0,
+     "leading_pt": 22.8,
+     "tracking_pt": 0.95,
+     "color": "#efe6d6",
+     "align": "end",
+     "x": 802.9,
      "y": 1107.95,
-     "w": 126.28,
-     "links": []
+     "w": 419.1,
+     "links": [
+      {
+       "url": "mailto:sdretzka@afi.com",
+       "start": 0,
+       "end": 23
+      }
+     ],
+     "runs": [
+      {
+       "start": 0,
+       "end": 7,
+       "color": "#b9a88c"
+      },
+      {
+       "start": 7,
+       "end": 23,
+       "color": "#efe6d6"
+      }
+     ]
     },
     {
      "type": "text",

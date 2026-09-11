@@ -248,6 +248,17 @@ export function richtextElement(
     color: el.color,
     ...(font.fontWeight ? { fontWeight: font.fontWeight } : {}),
   });
+  // two-tone lines: the key's range takes its own colour after the whole-range colour
+  for (const run of el.runs ?? []) {
+    const start = clamp(run.start, 0, bounds.length);
+    const end = clamp(run.end, start, bounds.length);
+    if (end > start) {
+      range.formatText(
+        { index: start, length: end - start },
+        { color: run.color },
+      );
+    }
+  }
   for (const link of el.links ?? []) {
     if (!HTTP_LINK.test(link.url)) {
       notes.push(

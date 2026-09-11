@@ -193,10 +193,48 @@ def convert(o, write_images=True):
                                  "size_pt": round(size, 2), "leading_pt": round(size * 1.2, 2),
                                  "tracking_pt": round(track_pt, 3), "color": hexcolor(op["fill"]), "align": calign,
                                  "x": round(bx, 2), "y": round(baseline_from_top - size * ASCENT, 2),
-                                 "w": round(box_w, 2), "_baseline": baseline_from_top, "links": []})
+                                 "w": round(box_w, 2), "_baseline": baseline_from_top, "links": [],
+                                 "_left": op["x"], "_right": op["x"] + width, "_width": width,
+                                 "_align": align, "_ax": ax})
                 i += 1
                 continue
             i += 1
+
+        # Two-tone rows: a key and a value drawn as two abutting runs on one baseline become
+        # ONE line with two colour runs, anchored on the value's edge. As two boxes, a wider
+        # substitute face slid the value under the key's tail (pilot round 2, 2026-09-11).
+        merged, i = [], 0
+        while i < len(elements):
+            a = elements[i]
+            b = elements[i + 1] if i + 1 < len(elements) else None
+            if (b is not None and a["type"] == "text" and b["type"] == "text"
+                    and a["kind"] == "line" and b["kind"] == "line"
+                    and abs(a["_baseline"] - b["_baseline"]) < 0.5 and a["font"] == b["font"]
+                    and abs(a["size_pt"] - b["size_pt"]) < 0.05 and abs(a["tracking_pt"] - b["tracking_pt"]) < 0.01):
+                left, right = (a, b) if a["_left"] <= b["_left"] else (b, a)
+                if abs(left["_right"] - right["_left"]) < 2.0:
+                    text = left["text"] + right["text"]
+                    width = left["_width"] + right["_width"]
+                    box_w = width * LINE_SLACK + LINE_PAD
+                    if right["_align"] == "right":
+                        bx, calign, ax = right["_ax"] - box_w, "end", right["_ax"]
+                    elif left["_align"] == "left":
+                        bx, calign, ax = left["_left"], "start", left["_left"]
+                    else:
+                        mid = (left["_left"] + right["_right"]) / 2
+                        bx, calign, ax = mid - box_w / 2, "center", mid
+                    m = dict(right)
+                    m.update({"text": text, "color": right["color"], "align": calign, "x": round(bx, 2),
+                              "w": round(box_w, 2), "links": [], "_left": left["_left"], "_right": right["_right"],
+                              "_width": width, "_align": calign, "_ax": ax,
+                              "runs": [{"start": 0, "end": len(left["text"]), "color": left["color"]},
+                                       {"start": len(left["text"]), "end": len(text), "color": right["color"]}]})
+                    merged.append(m)
+                    i += 2
+                    continue
+            merged.append(a)
+            i += 1
+        elements = merged
 
         # links: attach each recorded rectangle to the line whose baseline it covers
         unattached = []
@@ -215,7 +253,8 @@ def convert(o, write_images=True):
             else:
                 hit["links"].append({"url": lk["url"], "start": 0, "end": len(hit["text"])})
         for e in elements:
-            e.pop("_baseline", None)
+            for k in ("_baseline", "_left", "_right", "_width", "_align", "_ax"):
+                e.pop(k, None)
         out_pages.append({"n": p, "name": ai.ARTBOARDS[p - 1], "background": background,
                           "count": len(elements), "elements": elements,
                           "unattached_links": [lk["url"] for lk in unattached]})
