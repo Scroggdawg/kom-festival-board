@@ -1,6 +1,6 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-10T16:21:38-05:00",
+  "updated": "2026-09-10T19:35:40-05:00",
   "updated_by": "Fable session, Illustrator/Canva lane",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
@@ -81,5 +81,20 @@
   },
   "blockers": [
     "Browser pairing: the Connect prompt sent to both Chromes timed out (no click within 2 min). Developer Portal app creation and the probes wait on Luke clicking Connect in the Chrome that is logged in to Canva."
-  ]
+  ],
+  "fresh_clone_test": {
+    "at": "2026-09-10",
+    "commit": "8fe4d38",
+    "result": "pass: files present, venv from requirements.txt, emitter 405 elements / 20 links, npm ci + tsc + build clean",
+    "not_covered": "everything inside Canva (steps 3-9)"
+  },
+  "research": {
+    "path": "canva/research/",
+    "files": [
+      "research-lanes-2026-09-10.json",
+      "verification-verdicts-2026-09-10.json",
+      "workflow-synthesis-2026-09-10.md"
+    ]
+  },
+  "handover_note": "Luke may run the Canva steps from a different Claude account. That account needs: this repo (clone), the Claude in Chrome extension signed in to it, Luke logged in to Canva Pro in that Chrome, Node 24, Python 3. It does not need anything from the first session's memory; everything is in canva/README.md, STATE.json, research/, and the app's BUILD-REPORT.md."
 }

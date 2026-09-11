@@ -143,6 +143,19 @@ Luke uploads Regular, SemiBold and Bold in Canva › Brand › Fonts and swaps t
 
 Share › Anyone with the link › Can edit, to the director and producer (they should sign in with free accounts so they can comment and download). A separate view link for press. Record both in `STATE.json`.
 
+## Fresh-clone test (2026-09-10)
+
+A `git clone --depth 1` of commit 8fe4d38 into an empty folder, on a Mac with Node 24 and Python 3, then exactly the prerequisite commands above:
+
+| Step | Result |
+|---|---|
+| Sixteen files a cold account must find (runbook, STATE, contract, app source, the four tools, requirements, worksheet, plan, poster, a still, a derivative, BRAND.md) | all present |
+| `python3 -m venv venv && venv/bin/pip install -r tools/requirements.txt` | imports ok |
+| `venv/bin/python tools/build-epk-canva.py --no-images` | 11 pages, 405 elements, 22 images, 20 links attached, 0 unattached |
+| `cd canva/kom-epk-builder && npm ci && npx tsc --noEmit && npm run build` | zero type errors; build completed; `dist/app.js` produced |
+
+Not covered by this test, because it needs Luke's Canva login: creating the app in the Developer Portal, the three probes, the pilot, the build, the export. Those are steps 3 to 9.
+
 ## Resuming
 
 1. Read `STATE.json`. `next_step` says where to go; `pages_built` says which pages exist.
