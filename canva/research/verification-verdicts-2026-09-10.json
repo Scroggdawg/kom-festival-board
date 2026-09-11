@@ -1,0 +1,1540 @@
+[
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live page confirms every quoted detail verbatim (preset types, 40\u20138000 px, 25,000,000 px\u00b2 area cap, image-only asset_id, 7-day deletion of unedited blank designs, 20 req/min/user), but \"no other content can be specified\" is too strong: the body also accepts an optional title (1\u2013255 chars), and the endpoint now has two preview-labelled variants (type \"design\" copying an existing design_id with optional page_numbers, and type \"brand_template\" from a brand_template_id) that seed the new design with existing content.",
+   "correction": "Replace \"No other content can be specified\" with: \"Beyond design_type/asset_id, only an optional title (1\u2013255 chars) can be set in the default type_and_asset mode; two preview-only modes (type: 'design' with design_id, type: 'brand_template' with brand_template_id, each with optional page_numbers) create the design as a copy of existing content, but preview features carry unannounced-breaking-change warnings and block public-integration review.\"",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/designs/create-design/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Current canva.dev pages confirm POST /v1/asset-uploads with application/octet-stream body, Asset-Upload-Metadata header with name_base64 (50-char unencoded max), /v1/url-asset-uploads, images under 50 MB in the listed formats, videos under 500 MB, 30 req/min/user, and asset:write scope; the only detail the claim omits is that the URL variant carries its own tighter limits.",
+   "correction": "The URL variant (/v1/url-asset-uploads) uses a JSON body with a plain `name` field (1-255 chars, not name_base64) and caps video uploads at 100 MB, not 500 MB; the 500 MB video limit applies to the binary upload path. Image formats and the 50 MB image limit are stated on the Assets API overview page, not the create-asset-upload-job page.",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/assets/create-asset-upload-job/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Fetched 2026-09-10: canva.dev/docs/mcp and its llms.txt still say custom-client redirect URIs must be added to the allowlist via the Waitlist form, reviewed for \"brand alignment, trust and safety considerations, compliance readiness, technical fit, and strategic alignment\", and the June 9 2026 blog post still lists ChatGPT, Codex, Claude, Grok, Perplexity, Superhuman \"and more\" as pre-configured; but the quoted sentence \"Private access is currently limited as we have a full waitlist of clients\" appears on none of the three cited canva.dev pages nor on the Google Form, so that quote is unsourced.",
+   "correction": "Replace the \"full waitlist of clients\" quote with the wording actually on canva.dev/docs/mcp (and llms.txt): \"We periodically review all applications to the waitlist, and will reach out if we see a fit.\" The Google Form itself is titled \"Canva MCP Connector - Join the Waitlist\", is aimed at IT admins and AI-platform builders, and tells individual/personal users to use the Help Center instead \u2014 so a solo Python agent is doubly outside the self-serve path. The docs' mcp-remote/stdio recipe does not bypass the gate; it still relies on an allowlisted redirect URI. Claude Code: confirmed not named on canva.dev (docs name Claude, ChatGPT, Codex, Gemini, Cursor, VS Code); third-party guides that mention Claude Code are describing Canva's local Dev MCP server (docs/CLI helper), not mcp.canva.com. Help Center page (canva.com/help/mcp-agent-setup) returned 403/WAF, so its client list and any plan-tier gating could not be verified.",
+   "evidence_url": "https://www.canva.dev/docs/mcp/llms.txt"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both cited pages are live and current: findFonts says \"Only a subset of Canva's fonts are returned\", FontRef is defined as \"A unique identifier that points to a font asset in Canva's backend\", and neither page mentions Brand Kit/uploaded fonts or any specific font such as Baskerville.",
+   "correction": "requestFontSelection does not return a bare {ref, name, weights}; it returns a Promise resolving to either {type: \"completed\", font: {ref, name, weights, previewUrl?}} or {type: \"aborted\"}. The font object (in both APIs) also carries previewUrl, and each weight entry is {weight: FontWeightName, styles: FontStyle[]} where weight is one of normal/thin/extralight/light/medium/semibold/bold/ultrabold/heavy and styles is normal/italic. The status can be upgraded from could-not-verify to verified for the quoted doc text; only the Baskerville-availability and brand-kit-exposure questions remain unstated in the docs.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/asset-request-font-selection/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Verified against the local source (this is a local-code claim, so canva.dev is not the primary evidence): build-epk-kit.py has no JSON emitter and para() (lines 255-276) does draw per line via simpleSplit + beginText/textOut/drawText; build-epk-ai.py's docstring (lines 13-17) and record()/Recorder (lines 103-268) replay the kit against a recording canvas and json.dumps(o.ops) at line 438 \u2014 but the recorder does not replay para() line by line, so the \"one element per line\" detail is false.",
+   "correction": "install() (build-epk-ai.py lines 189-249) monkeypatches kit.para with a recorder version that emits a single {\"op\":\"area\", text, x, top, w, h, font, size, lead, align, gap} op per para() call \u2014 the whole paragraph block, unwrapped, with height from kit.para_height \u2014 and tracked() emits one \"point\" op per string. The Recorder class implements no beginText/drawText, so the kit's per-line textOut path never runs during recording. A Canva emitter reusing this recorder therefore gets one text block per para() call (and one per tracked heading) for free; the per-line problem only arises if someone bypasses install() and drives the kit's own para() against the Recorder, which would raise AttributeError rather than emit per-line ops. Wrapping/line-fitting would be delegated to Canva's own text layout, as it is to Illustrator's area type with the \"min\" fit-loop floor.",
+   "evidence_url": "file:///Users/scrogdawg/BMF%20Headquarters/Previous%20Years/2025%20-%20SEW%20TO%20GROW/25_01%20KILLER%20OF%20MEN%20(THESIS)/FESTIVAL%20CAMPAIGN/site/tools/build-epk-ai.py"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "All three cited sources, fetched live on 2026-09-10, state Node.js v24 / npm v11 (bundled), a default dev server at http://localhost:8080 that only exposes a JS bundle and cannot be previewed directly, preview via Developer Portal App source > Development URL then the Preview button, and Safari requiring `--use-https` (Chrome and Firefox allow the plain-HTTP localhost exception); no gating, deprecation, or preview status was found.",
+   "evidence_url": "https://www.canva.dev/docs/apps/previewing-apps/",
+   "correction": "Minor detail only: the plain-HTTP exception applies to Firefox as well as Chrome, and the starter-kit README invokes HTTPS as `npm start --use-https` (wrapping `canva apps start`)."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live Help Center page (read via browser 2026-09-10) states 'Limit size' is PNG/JPG only, single page only, and lists no PDF target-size or download-size cap; the sharing-limitations page carries the Dropbox 150 MB/100-page and Google 200 MB/100-page caps exactly as claimed.",
+   "correction": "Two omissions: (1) 'Limit size' export (plus quality, scale, compression, CMYK, transparent PNG/SVG) is gated to Canva Pro, Teams, Education and Nonprofits - not available on Free; (2) PDF does have a size-reduction control, 'Compress PDF' (also Pro/Teams/Edu/Nonprofit only), but it is a quality toggle, not a target-KB option. Also the Help Center's 'Download designs' index lists no article on a download file-size cap, supporting the 'not documented' point, though absence across the entire Help Center cannot be proven exhaustively.",
+   "evidence_url": "https://www.canva.com/help/download-file-types/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Rendered the live page in Chrome on 2026-09-10 (WebFetch got 403 as the claim said) and independently confirmed every detail: header reads \"effective as of 19 August 2026\"; clause (viii) bans \"any form of data mining, extraction, or scraping ... (including but not limited to AI, machine learning, and data science purposes)\"; clause (ix) bans bypassing access-restriction measures; regex counts over the full 47k-char body text for automated/robot/spider/bot/crawl/API are all 0 (the only 'script' hits are inside words like 'subscription'); and the archived 2021-11-03 terms do contain the \"robots,\" \"spiders\" clause, which notably only barred automated systems that send more requests than a human could produce in a conventional browser, so the claim's \"human pace\" reading is consistent with even the older text.",
+   "evidence_url": "https://www.canva.com/policies/terms-of-use/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Read live today (Sep 10 2026) in the browser: the page states you must upload both regular and bold/italic files (B/I buttons greyed out otherwise), up to 18 styles per family, mis-grouped fonts have metadata problems and must be deleted and re-uploaded with the correct family name, \"Condensed\" style fonts always upload separately, and Canva doesn't support variable fonts \u2014 every element of the claim matches current documentation; note only that the whole feature is gated to paid plans (Pro/Teams/Business/Education/Nonprofit/Enterprise) and to owners/admins/brand designers, and OTF/TTF/WOFF only (no WOFF2).",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both cited canva.dev pages (findFonts marked GA, requestFontSelection marked v2, no deprecation or preview notice) carry the quoted \"Only a subset of Canva's fonts are returned\" and FontRef wording and the {ref, name, weights, previewUrl?} shape as of today, but the adjacent Apps SDK \"Using fonts\" guide adds constraints the claim omits: \"Apps can't upload or otherwise define custom fonts\" and \"Apps can't access Canva Pro fonts\", and findFonts returns locale-based \"recommended fonts\" rather than the full library.",
+   "correction": "The return shape also includes an optional previewUrl, and the Apps SDK fonts guide (https://www.canva.dev/docs/apps/fonts/) is not silent on the open questions: apps cannot access Canva Pro fonts and cannot upload or define custom fonts, and findFonts returns a locale-influenced recommended subset. Brand Kit fonts remain unaddressed in the docs; whether Baskerville Regular/SemiBold/Bold is in the returned subset is still unverified and could only be settled by calling findFonts or opening requestFontSelection in a live app.",
+   "evidence_url": "https://www.canva.dev/docs/apps/fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Re-read the live Help Center page in the browser on 2026-09-10 and every shortcut in the claim appears verbatim under Basic, Element, Text, Zoom and Page view with no plan gate, preview label or deprecation notice; only one detail on that page differs from the claim and a companion page says which is right.",
+   "correction": "The shortcuts page itself prints the More-actions shortcut as \"Shift + 10\" (a typo), while Canva's screen-reader article (https://www.canva.com/help/screen-reader-editor/ per the \"Use a screen reader in the Canva Editor\" section) gives Shift+F10 and also notes Cmd+F1 only works \"with an active selection\". Additional current items the claim omits: Cmd+E is an alternate for / quick actions, Cmd+/ toggles the side panel, Option+Shift+, / . are large-step rotate, Shift+Cmd+F6 is previous surface, Cmd+\\ elbowed line, C circle, S sticky note, Option+Shift+T tidy up, F8 / Shift+W-A-S-D multi-select. Nudge, rotate, resize and spacing increments remain unstated on the page, so step sizes must be measured empirically before automation relies on them.",
+   "evidence_url": "https://www.canva.com/help/canva-keyboard-shortcuts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Confirmed live on canva.dev/docs/apps/fonts/ that Brand Kit/uploaded fonts are never mentioned and the help center (via search snippets; canva.com page 403, canva.cn mirror unreachable) lists font upload as Pro/Teams/Education/Nonprofits with OTF/TTF/WOFF, 500 per kit, embedding license \u2014 but the claim is too soft: the SDK docs are not fully silent, they carry an explicit Gotcha that apps cannot access Canva Pro fonts or define custom fonts, and findFonts states only a subset of Canva's fonts is returned.",
+   "correction": "Replace \"not documented anywhere / silent\" with: the Apps SDK fonts page has a Gotchas section stating \"Apps can't access Canva Pro fonts\" and \"Apps can't upload or otherwise define custom fonts\" (plus no font-file download, paragraph-level font only), and the findFonts reference says \"Only a subset of Canva's fonts are returned.\" Brand Kit uploaded fonts are still unmentioned, but since they are a Pro-tier asset class and even Canva's own Pro fonts are documented as inaccessible to apps, the default expectation should be that Luke's uploaded Baskerville will NOT appear in requestFontSelection/findFonts \u2014 a runtime test is still required, but it should be framed as confirming a likely negative, not an open question. Plan-gate wording holds; note Canva Business/Enterprise are not named in the help-center snippet (it lists Pro, Teams, Education, Nonprofits).",
+   "evidence_url": "https://www.canva.dev/docs/apps/fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Rendered pages on 2026-09-10: canva.com/learn/the-best-free-business-fonts/ does list \"Libre Baskerville\" (heading + description), and canva.com/fonts/ plus every guessed Help Center font-list URL returned 404, so no primary free-tier catalogue listing with weights could be confirmed; the Help Center (upload-fonts, upload-formats-requirements) adds that font upload itself is Pro/Teams/Business/Education/Nonprofits-only and requires an embedding licence.",
+   "correction": "The Apple system Baskerville question is moot on a Canva Free account: per the Help Center, custom font upload is not available on Canva Free at all (Pro/Teams/Business/Education/Nonprofits only), the file must be OTF/TTF/WOFF and \"licensed for embedding\" (Terms of Use s.4b cited), and Canva rejects unlicensed uploads. Libre Baskerville is referenced on Canva Learn but no primary Canva font-library page listing it or its weights exists publicly (canva.com/fonts/ is 404); confirm inside the editor's font picker.",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Live read of all three Canva Help pages on 2026-09-10 confirms the PDF-import article carries no \"Who can use this feature?\" block or plan mention (only file limits: 500 pages, 300 MB, 1,400 elements, plus Brand Controls/team-permission notes), while Resize states \"Plan type: Pro, Business, Enterprise, Education, Higher education, Nonprofits, Teams\" and Upload fonts states \"Canva Pro, Canva Teams, Canva Business, Canva Education, and Canva for Nonprofits\" \u2014 both omit Free.",
+   "correction": "Direction is right but two details need tightening: (1) the gate is \"any paid plan\" (Pro, Business, Enterprise, Education, Nonprofits, Teams), not Pro specifically; (2) the Resize page now notes each Magic Resize use counts against the monthly AI usage limit, and font upload is additionally role-gated (team owners, admins, brand designers) as a Brand Kit feature. Also, Free-tier import working is inferred from the absence of a gate on the help page, not from an explicit Canva statement \u2014 the page never says \"available on Free.\"",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The current addPage page confirms GA status (no preview label), placement after the selected page, 40-8000 px sides with area <= 25,000,000, the seven element types, positions -32768..32767 and dimensions 0..32767, and shape limits of 1-30 paths, 2 KB combined, 6 unique fills, but its text element properties do not include a \"link\" field.",
+   "correction": "Text element formatting fields documented are fontRef, fontSize, color, textAlign, decoration, fontWeight, fontStyle (plus rotation and width); \"link\" is not a documented text property on addPage. Image elements accept either ref or dataUrl, plus top, left, width, height, altText and rotation.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-add-page/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Rendered Help Center text on 2026-09-10 confirms every element: Font size 'Choose a font size or enter a value in the field', Text color tile, Alignment control (Left/Center/Right/Justify), Bold/Italics, 'Advanced Settings > Under Spacing, adjust the line spacing and letter spacing sliders', 'Advanced settings > More settings > Advanced tab > Under Typography, toggle Kerning and Ligatures', and the shortcuts page lists 'Open font menu: Shift + Command \u2318-F'.",
+   "correction": "Two small refinements for the automation lane: (1) the same article documents a numeric field for letter/line spacing on mobile only ('Drag the slider... You can also enter a value in the field' is the mobile step), so 'numeric entry not documented' is correct for desktop but not universally; (2) desktop letter/line spacing also has documented keyboard shortcuts (Option+Cmd+, / . for letter spacing, Option+Cmd+Up/Down for line spacing), which is a more automation-friendly path than dragging sliders. Also note the shortcuts page canonical URL is https://www.canva.com/help/canva-keyboard-shortcuts/.",
+   "evidence_url": "https://www.canva.com/help/format-text/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The API reference confirms the eight element types and the exact ranges (top/left -32768..32767, width/height 0..32767, rotation -180..180) and the elements page confirms Richtext under addElementAtPoint with the Docs exclusion, but no current page excludes Whiteboards and the positioning guide explicitly says units are relative, not absolute pixels.",
+   "correction": "Two details are wrong: (1) the docs say addElementAtPoint works in \"all design types except for documents\" / \"fixed design types, such as Presentations\" \u2014 Whiteboards are never named as unsupported, so drop that exclusion or mark it as untested; (2) the positioning guide states \"dimensions and coordinates are defined with relative units, not absolute units\" and warns not to treat them as pixel values (the API page phrases it as \"pixels relative to their container\"), so plan the 18x24in replay on the page's own coordinate space via getCurrentPageContext rather than assuming true pixel units. Origin at the page's top-left (treat top/left as 0,0) holds.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-add-element-at-point/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Live canva.dev docs (fetched 2026-09-10) confirm: addElementAtPoint/addPage/addNativeElement image, shape and group element types expose no link property (embed has only a media `url`), richtext InlineFormatting is the sole place with `link` (\"An external URL that the text links to.\"), and the @canva/design changelog through its latest entry 2.13.0 (2026-08-31) has no entry adding element-level links; the canva.com/help/hyperlinks page could not be read (Cloudflare 403 / tab redirects) so the editor-UI-and-PDF half rests on the claimant's search snippet, not on a fresh fetch.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-changelog/",
+   "correction": "Minor detail: the relevant changelog is at /docs/apps/api/latest/design-changelog/ (the /docs/apps/changelog/ path 404s), latest entry 2.13.0 dated 2026-08-31. The editor-UI statement (links on images/videos survive non-flattened PDF export) was not re-verified this pass and should stay labelled as snippet-sourced."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both Help Center pages, read rendered in Chrome on 2026-09-10, state the claim's steps, the Cmd+K shortcut, and the PDF-only (non-flattened) limitation verbatim, with no plan gate, preview label, or deprecation notice.",
+   "correction": "Minor detail: the text-effects failure is scoped to the Lift and Neon effects only (per the linked \"Hyperlinks are not working on text effects\" article), not effects in general; and in Canva Docs/Sheets and when editing an existing link, the Link control appears directly on the floating toolbar rather than under More (...). Also, links additionally work in Presenter view for videos, and the Help Center explicitly adds MP4 and social-media posts to the no-link list alongside PNG/JPG.",
+   "evidence_url": "https://www.canva.com/help/hyperlinks/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The current fonts guide and both @canva/asset API references (findFonts is marked GA, requestFontSelection is v2/latest, no preview/beta/deprecation flags, no plan-tier gating) confirm FontRef opacity, both discovery methods, findFonts({fontRefs}) resolution, and all three stated limits verbatim; the starter-kit changelog through @canva/asset 2.3.0 shows no font-API deprecations.",
+   "correction": "Add one omitted hard limit that matters for replaying an operation list: \"Apps can only set the font of paragraphs, not of inline text\" \u2014 so per-run font changes within a text element cannot be reproduced. Also, requestFontSelection returns {type:\"completed\"|\"aborted\", font:{ref,name,weights,styles,previewUrl?}} (weights/styles are per-font arrays, and there is an optional previewUrl the claim did not mention). The docs do not explicitly promise FontRef stability across time; hard-coding a discovered ref is common practice but should be treated as an inference, not documented guarantee.",
+   "evidence_url": "https://www.canva.dev/docs/apps/fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live Canva Help Center page (read via browser 2026-09-10) states verbatim: Free = one palette with up to three colours; Pro/Teams/Business/Education/Enterprise/Nonprofits = 100 palettes with up to 100 colours each, added by hex code; CMYK only for Pro users and Teams/Business admins and brand designers; colour themes on Pro and above; Brand Controls restricted to Teams/Business/Enterprise admins \u2014 every element of the claim matches with no plan-tier, preview, or deprecation caveats.",
+   "evidence_url": "https://www.canva.com/help/color-palettes/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live Canva Help Center page (read 2026-09-10 via browser; curl/WebFetch are Cloudflare-blocked) states verbatim that you can set one default font per heading type per Brand Kit for H1-H5 plus Body text, chosen from a dropdown that includes uploaded fonts, with optional size/bold/italic, that these heading types carry semantic tags so exported PDFs work with screen readers, and that the feature is available to Canva Pro, Teams, Business, Education, and Nonprofits (with the added caveat that on teams only owners, administrators, and brand designers can set them up).",
+   "evidence_url": "https://www.canva.com/help/brand-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Live fetches of all three Canva pages (via proxy, Cloudflare blocks direct fetch) confirm: poster wiki lists Medium = 18 x 24 in; design-from-scratch says units px/in/mm/cm with \"at least 40px and not more than 8000px\" and \"Maximum dimensions: 8000 x 3125 px\"; help/resize lists plan type \"Pro, Business, Enterprise, Education, Higher education, Nonprofits, Teams\" and \"Each use of Magic Resize counts against your monthly AI usage limit.\"",
+   "correction": "\"Each side between 40 px and 8000 px\" is imprecise: the hard cap is 8000 x 3125 px (long side 8000, short side 3125), so both sides cannot approach 8000; the field turns red outside that envelope. Gate list also includes Higher education.",
+   "evidence_url": "https://www.canva.com/help/resize/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both Help Center pages, re-read live on 2026-09-10 (via the r.jina.ai render proxy, since canva.com 403s direct fetchers and the shared Chrome tab was being driven by another agent), carry the exact quoted text: Upload files / Upload folder / drag to Uploads tab, the \"large batches may cause errors\" warning, JPEG/PNG/HEIC-HEIF/WebP under 50MB and not more than 250 million total pixels, and 5GB Free / 100GB Pro, with no plan gate on uploading itself.",
+   "correction": "Storage line is incomplete rather than wrong: the same page also lists Business at up to 500GB per team and Enterprise at 1-5TB per team, and adds a separate SVG rule (under 3MB, 150-200px wide) that the image-limits sentence should not be read as covering.",
+   "evidence_url": "https://www.canva.com/help/upload-formats-requirements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "correction": "Format list is exact and current: live page reads \"The following font formats are supported: Open Type Font (.otf), True Type Font (.ttf), Web Open Font Format (.woff)\" and the error page reads \"Canva doesn't support .ZIP, .EOT, .SVG, or .WOFF2.\" Two details to add: (1) .ttc is absent from the supported list but Canva never names it as rejected, so \"cannot be uploaded as-is\" is an inference from omission, not a documented rejection (the error page's \"For new styles (like Bold or Italic), upload them as separate files\" supports the one-face-per-file workflow); (2) font upload itself is plan-gated (\"available to Canva Pro, Canva Teams, Canva Business, Canva Education, and Canva for Nonprofits users\"), restricted to Brand Kit admins/owners, capped at 15 MB per file and 500 fonts per Brand Kit, and Adobe Originals fonts are refused regardless of format.",
+   "evidence_url": "https://www.canva.com/help/upload-formats-requirements/",
+   "reason": "Both cited Canva Help Center pages were read live on 2026-09-10 (via browser; curl/WebFetch return Cloudflare 403) and state verbatim the OTF/TTF/WOFF list and the ZIP/EOT/SVG/WOFF2 rejection, so the claim is current; the only softening is that .ttc exclusion is by omission, and the plan-tier/role gating on font upload is undisclosed in the claim."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The create-job page currently states POST /rest/v1/imports with application/octet-stream body, Import-Metadata title_base64/mime_type, the verbatim \"Imports with a large number of pages or assets are split into multiple designs,\" edit_url/view_url \"only valid for 30 days,\" 20 req/min/user, scope design:content:write, and no file-size limit; the overview page lists the 17 supported types (Illustrator, Photoshop, Affinity, Keynote/Numbers/Pages, Office, OpenOffice, PDF) and defers size limits to Canva Help upload-formats-requirements; the changelog dates URL import GA to 2025-06-24 (design import itself GA 2024-09-19).",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/design-imports/create-design-import-job/",
+   "correction": "Minor precision: the full path is https://api.canva.com/rest/v1/imports (the \"/rest\" prefix), and the 2025-06-24 GA date applies to URL import only \u2014 file-based design import went GA 2024-09-19."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Live canva.dev docs (fetched 2026-09-10) confirm every element: Authorization Code + PKCE with SHA-256, at least one redirect URL required, quickstart redirect http://127.0.0.1:3001/oauth/redirect, token exchange must come from a backend or be CORS-blocked, access-token expiry \"currently 4 hours\" and \"subject to change\", \"Each refresh token can only be used once\", and no stated refresh-token lifetime anywhere; only nuance is that plain-HTTP loopback acceptance is demonstrated by the quickstart rather than stated as a general rule.",
+   "evidence_url": "https://www.canva.dev/docs/connect/authentication/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Neither canva.dev (Apps docs, design-editing) nor the Help Center states whether the design surface is a <canvas>/WebGL element or DOM-rendered, so the \"not documented, must probe\" claim is correct in direction; but the Help Center's \"Use a screen reader in the Canva Editor\" page documents that design elements (text, shape, image, video, line, table, frame, groups, sticky notes) are keyboard-focusable via Ctrl/Cmd+F2 -> Enter -> Tab and that a screen reader announces each selected element's type, alt text, styling and position, which means elements are exposed in the accessibility tree regardless of paint technology and the \"no boxes to click\" fear is overstated.",
+   "correction": "Rendering technology is indeed undocumented, but the accessibility-tree question is documented: Canva's screen-reader page states elements on the Canvas surface are focusable and announced with type/alt text/position (keyboard: Ctrl/Cmd+F2 to Canvas, Enter twice to select an element, Tab / Shift+W-A-S-D to move between elements, Ctrl/Cmd+F1 to the toolbar, Shift+F10 for the context menu, / for quick actions). The 15-minute probe should therefore be reframed: primary automation path is the documented keyboard-navigation + accessibility-tree route (read_page/find on the focused element), with the canvas-element count and contenteditable check as secondary diagnostics for whether coordinate clicks are needed. Note Docs (responsive design types) are explicitly unsupported by screen-reader navigation, and support is desktop-browser only.",
+   "evidence_url": "https://www.canva.com/help/screen-reader-editor/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live Canva Help Center page (rendered 2026-09-10 via browser, bypassing the Cloudflare 403 that blocks plain fetches) carries the quoted sentence verbatim under \"Limits and requirements > Depending on your file\", plus \"Scanned PDFS are imported as a single flattened image\" and a troubleshooting entry attributing non-editable text to scanned or flattened text; no plan-tier gate, beta label, or deprecation appears, and pdffonts on the local file confirms three embedded TrueType subsets (Baskerville, Baskerville-SemiBold, Baskerville-Bold), so editable text boxes are the documented expectation.",
+   "correction": "Two details missing from the claim: (1) editability is hedged as \"may be separated\" under \"Depending on your file\", not guaranteed, and the page lists no criteria beyond scanned/flattened; (2) the same section states \"Unsupported fonts may be replaced with similar fonts\" \u2014 the kit embeds Apple's Baskerville family, which is not a Canva library face (Canva ships Libre Baskerville), so expect font substitution and re-styling on import, not just possible fragmentation of the tracked caps. Documented limits for reference: 500 pages, 300 MB, 1,400 elements/images; desktop browser recommended. The fragmentation-of-tracked-caps point remains an undocumented inference \u2014 Canva gives no grouping rules.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live design-editing guide shows only fontSize, color, fontWeight and textAlign in createTextElement/replaceText formatting inside openDesign, with no fontRef, link, decoration or fontStyle anywhere on the page, so the could-not-verify status for hyperlink/font-by-ref on openDesign-created text is accurate.",
+   "evidence_url": "https://www.canva.dev/docs/apps/design-editing/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Live fetch of both pages on 2026-09-10 (via reader proxy; canva.com returns 403 to direct fetch) confirms the Pro page says \"create and manage up to 5 separate brands\" and the help page lists \"Up to 1,000 Brand Kits\" and \"Up to 2,000 brand assets per asset category\", with Pro admins/brand designers explicitly able to create multiple Brand Kits.",
+   "correction": "The help page frames the 1,000 figure as a per-team ceiling \"depending on your subscription\" (pricing page governs the actual number per plan), not as a flat Teams-plan entitlement; it also notes personal Brand Kits (one per user, admin-enabled) don't count toward that limit. The 2,000-per-category and 5-brands-on-Pro figures stand as stated.",
+   "evidence_url": "https://www.canva.com/help/brand-kit/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current canva.dev create-design-export-job page states every detail claimed verbatim: the nine formats, PDF export_quality regular (default)/pro, size (a4/a3/letter/legal) only for Canva Docs, pages array, the exact pro-export/premium-elements sentence, all rate limits (20/min/user; 750 per 5 min and 5,000 per 24 h per integration; 75 per 5 min per document; 75 per 5 min and 500 per 24 h per user), 24-hour download URLs, and the 1.125 Free-plan upscale cap, with no CMYK/bleed/crop-mark/flatten options documented.",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/exports/create-design-export-job/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live Create design reference (fetched 2026-09-10) matches every quoted detail verbatim \u2014 presets doc/email/presentation/whiteboard, 40\u20138000 px per side, 25,000,000 px\u00b2 area cap, image-only asset_id, 7-day auto-delete, 20 req/min/user, no preview or plan-tier gating on this endpoint \u2014 but the request body also accepts an optional `title` (1\u2013255 chars), so \"no other content can be specified\" overstates the case slightly.",
+   "correction": "Besides asset_id, the body also accepts an optional `title` string (1\u2013255 characters); design_type is a structured object with `type: \"preset\"|\"custom\"`. No visual content beyond one image asset can be specified, and the docs additionally note the auto-deleted blank designs bypass the trash (permanent deletion). Endpoint is GA, not preview.",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/designs/create-design/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current canva.dev Autofill overview and Create design autofill job reference pages contain the quoted Enterprise/limited-trial text verbatim, the 60 req/min/user rate limit, scope design:content:write, the three job types (create_from_brand_template, create_from_design, update_design), the field types (text, image accepting image or video, chart max 100 rows x 20 columns, sheet), string max length 10000, max 20 media items per cell, and \"silently skipped\" for unknown field names; the Connect changelog dates GA of create_from_design/update_design and chart/sheet/video fields to 2026-08-25.",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/autofills/create-design-autofill-job/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live Help Center article (fetched 2026-09-10 via browser; curl/WebFetch are Cloudflare-blocked) lists exactly the claimed paths \u2014 Homepage drag-and-drop, banner Upload > Upload files, Projects > plus (Add new) > Upload files; Editor drag-and-drop, File > Upload files, side panel Uploads > Upload files; PDF editor/converter page 'Upload your file'/'Upload your PDF' \u2014 with no plan-tier gate or beta label, only limits (500 pages, 300 MB, 1,400 elements) and Brand Controls/team-permission caveats.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/",
+   "correction": "Minor detail only: the PDF editor/converter page button is worded 'Upload your file' or 'Upload your PDF'; the article also notes scanned PDFs import as a single flattened image and a desktop browser is recommended for advanced editing."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live prerequisites page states \"Anyone with a standard Canva account has complete access to the Developer Portal,\" and the live quickstart's create-app step requires agreeing to the Canva Developer Terms; the only plan gate found (team/private app distribution requires an Enterprise team) applies to distribution, not to creating the app or Portal access.",
+   "evidence_url": "https://www.canva.dev/docs/apps/prerequisites/",
+   "correction": "Minor caveat, not a defect in the claim: distributing an app privately to a team requires that team to be on an Enterprise plan; building and previewing your own app in the editor needs only the free account."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "No Canva Help Center or canva.dev engineering page reachable today documents whether the editor page is a DOM or canvas/WebGL surface (canva.dev/blog/engineering index lists no rendering posts; canva.com blog and help pages return 403 to fetchers), so \"undocumented, must be probed\" is the right direction; but \"could not be inspected without a logged-in session\" overstates the block, because Luke's logged-in Chrome is already reachable through the claude-in-chrome tools and my probe failed only because another agent kept re-navigating the shared tab group to the Terms of Use page, not because of login.",
+   "correction": "Change \"could not be inspected without a logged-in session\" to \"can be inspected now in Luke's logged-in Chrome via claude-in-chrome JS (count canvas elements, contenteditable, aria on selected element) \u2014 run it as a pre-execution gate, not at minute 15\". Add a dependency the claim omits: Canva Terms of Use (effective 19 Aug 2026) s.2(e) forbids data mining/scraping of the Service and bypassing access-restriction measures, so the browser-automation lane needs Luke's explicit per-action OK regardless of what the rendering probe finds.",
+   "evidence_url": "https://www.canva.com/policies/terms-of-use/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Live canva.dev docs and the current OpenAPI spec confirm every stated format, the PDF export_quality/size/pages details, the premium-elements failure sentence, all rate limits, 24-hour URLs and the Free-plan 1.125x upscale cap, but the \"no CMYK/bleed/crop-mark\" statement omits a separate print-only endpoint and the HTML formats are narrower than implied.",
+   "correction": "Three refinements: (1) POST /v1/exports itself has no CMYK/bleed/crop-mark/flatten options, but Canva does document them on a separate endpoint, Create print partner design export job (PrintPartnerPdfExportFormat: bleed in microns default 3000, crop_marks, cmyk, pdfx) \u2014 it is a preview API restricted to approved Print Partners, so not usable by a general integration. (2) html_bundle/html_standalone (added 2026-03-25) apply only to email designs and export a single page (pages maxItems 1). (3) Additional plan gates exist beyond 'pro' quality: PNG transparent_background=true and lossless=false both fail on Canva Free (paid plan required); and the 1.125x upscale cap is stated in the spec explicitly as a Free-plan restriction.",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/exports/create-design-export-job/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live page (loaded 2026-09-10 via browser; curl/WebFetch return 403) states verbatim under \"Upload SVG images\": \"Under 3MB in size\", \"Between 150 to 200 pixels wide\", \"Saved with an SVG Profile of 'SVG 1.1'\", and \"Expand all strokes, paths, and text boxes (Select your artwork > Object > Expand)\", so the four requirements are documented-current; however the page says nothing about SVGs being \"graphic elements, not converted to designs\" or being limited to resize/recolor, so that part of the claim is inference, not documentation.",
+   "correction": "The four SVG requirements are confirmed verbatim. The claims \"uploaded as graphic elements, not converted to designs\" and \"can only be resized/recolored\" are NOT stated on the cited page (or anywhere I could find in the Help Center); relabel them as inference. The conclusion (expanding text boxes = outlined text = no editable text; no hyperlink preservation documented) still follows logically from the \"Expand all strokes, paths, and text boxes\" requirement. Side note: the same page also says of PDF import \"the pages become individual images in an A4 document. It doesn't become a page of editable text like in Docs\", which contradicts Canva's own \"Import and edit PDFs\" article (https://www.canva.com/help/import-and-edit-pdfs-canva/) that says text/images are separated into editable elements \u2014 flag for the PDF lane.",
+   "evidence_url": "https://www.canva.com/help/upload-formats-requirements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Canva's own pages (canva.com/fonts, /help, /learn) all return 403 so the Canva-side statements (no Monotype Baskerville; Libre Baskerville free) remain secondary-only and unconfirmed, but the \"Regular/Italic/Bold only, no SemiBold\" detail is stale for the family itself: Google Fonts' METADATA.pb ships Libre Baskerville as variable files (LibreBaskerville[wght].ttf, wght axis 400\u2013700) and Fontsource (version dated 2025-11-20) lists 400/500/600/700 in roman and italic.",
+   "correction": "Upstream Libre Baskerville is now a variable family with a continuous 400\u2013700 weight axis (Medium 500 and SemiBold 600 exist as of the 2025 Google Fonts release). Whether Canva exposes those intermediate weights (or only the legacy static Regular/Italic/Bold cuts) could not be verified because every canva.com page is 403 to fetch; treat \"SemiBold unavailable in Canva\" as unverified rather than established, and confirm inside the editor or via the Apps SDK font picker before designing around Bold as the only heavy weight.",
+   "evidence_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/librebaskerville/METADATA.pb"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The prerequisites page states \"Anyone with a standard Canva account has complete access to the Developer Portal\" and lists only \"a free Canva account,\" and the quickstart's manual create-app flow requires you to \"Agree to the terms and conditions\" linking the developer terms \u2014 but the quickstart also notes that team (private) apps are Enterprise-only.",
+   "correction": "Correct for building and previewing an app on a free account. One nuance the claim omits: the quickstart says \"Team apps are only available to teams on an Enterprise plan,\" so distributing an app privately to a team requires an Enterprise plan; a free account can still create, develop, and preview apps (and submit public ones). The terms agreement appears in the Developer Portal's manual create-app flow, not in the CLI/prerequisites text.",
+   "evidence_url": "https://www.canva.dev/docs/apps/prerequisites/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Read live on 2026-09-10: canva.com/pro/brand-kit/ says \"With Brand Kit you can create and manage up to 5 separate brands,\" and canva.com/help/brand-kit/ (\"Set up Brand Kits\") lists \"Limits per team: Up to 1,000 Brand Kits, depending on your subscription. Up to 2,000 brand assets per asset category in a Brand Kit,\" and states admins/brand designers on Canva Pro, Teams, Business, or Education can create multiple Brand Kits. Minor nuance, not a correction: the 1,000 figure is qualified \"depending on your subscription,\" and the help page also notes Free users get only one 3-color palette (Brand Kit proper is paid-gated as claimed). Note: WebFetch/curl return 403 for canva.com; verified via Chrome.",
+   "evidence_url": "https://www.canva.com/help/brand-kit/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Re-ran fontTools on the file today: 6 glyf faces, all nameID 1 = 'Baskerville', subfamilies Regular/Bold/Italic/Bold Italic/SemiBold/SemiBold Italic, all OS/2 fsType = 0, so the local measurement is exact; Canva's help page confirms TTF is accepted (TTC is not listed, so the split is required), that fonts must be \"licensed for embedding\", and that multi-weight fonts group by the family name in the file's metadata (up to 18 styles per family), which is consistent with the six faces grouping as one family.",
+   "correction": "Canva does not document fsType=0 as its check; its stated requirement is that the font \"should be licensed for embedding\" and it says nothing about which OS/2 bits it reads, so \"pass Canva's embedding check\" is an inference from the fsType value, not a documented pass. Separately, an installable fsType is a technical flag only: Apple's macOS system-font licence terms are a distinct legal question the fsType bits do not answer, and the same help centre notes some fonts upload successfully yet render wrongly, so a clean upload is not guaranteed by fsType alone.",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The 2026-04-26 Wayback capture of Canva's live help page (live page is Cloudflare-blocked to automation) states verbatim \"Upload SVG images: Under 3MB in size, Between 150 to 200 pixels wide, Saved with an SVG Profile of 'SVG 1.1'\" and \"Expand all strokes, paths, and text boxes\", lists SVG under \"Upload ... images\" alongside JPEG/PNG rather than under the \"Import\" (PPTX/DOCX/PDF) sections, and shows no plan gating for SVG upload; the resize/recolor-only and no-hyperlink consequences are corroborated by Nov 2025-May 2026 third-party guides, not by the Canva page itself.",
+   "correction": "All quoted requirements are current on Canva's page. Two details are inferences rather than Canva-documented: (1) Canva's page does not itself say uploaded SVGs are limited to resize/recolor or that text becomes non-editable \u2014 that comes from third-party guides (francescatabor.com 2025-11-18, imagetosvg.com, freesvgonline.com 2026-05-20) which agree SVGs land as a single element, text is rendered as shapes, and only flat-fill colour swatches are exposed; (2) \"no hyperlinks\" follows from the element model but is not stated anywhere. Also note: SVG upload is NOT Pro-gated per Canva's page (only custom-font upload is), contradicting some third-party posts claiming Pro-only; SVG export is Pro-only. The conclusion (not viable for an editable, linked kit) stands.",
+   "evidence_url": "https://web.archive.org/web/20260426231019/https://www.canva.com/help/upload-formats-requirements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current help page \"Upload and use Brand Kit fonts\" states under \"Who can upload fonts?\": \"Team owners, administrators, and brand designers\" and \"Canva Pro, Canva Teams, Canva Business, Canva Education, and Canva for Nonprofits\" \u2014 Free is absent from the list (excluded by omission, not by an explicit \"not on Free\" sentence), and the page adds OTF/TTF/WOFF support, 500 fonts per Brand Kit, and no variable fonts.",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The current llms.txt endpoint index contains no endpoint that edits design content (Designs offers only create/list/get/pages/export formats/dataset; content mutation lives in the Apps SDK Design Editing API), but the claim's \"full endpoint index\" omits the \"Print partner\" section header that llms.txt does list (with no endpoints under it) and the Webhook Notifications subsection.",
+   "correction": "The core claim (no content-editing endpoint in Connect REST) holds. The endpoint index as stated is not quite \"full\": llms.txt also lists a \"Print partner\" section (header only, no documented endpoints) and a Webhook Notifications section (Design access requested, Folder access requested, Team invite, Design approval requested/response/reviewer invalidated, Comment, Suggestion, Share design, Share folder) plus non-endpoint sections (Access, Approvals, Collaborating, Sharing, Appendix). Note also the Comments section has a deprecated \"Create comment\" endpoint alongside thread/reply endpoints, and Designs also exposes \"Get design dataset\". The content-editing surface is documented under the Apps SDK at canva.dev/docs/apps/design-editing/ (\"The Design Editing API enables apps to read and edit the 'ingredients' of a design, such as pages and elements\"), not Connect.",
+   "evidence_url": "https://www.canva.dev/docs/connect/llms.txt"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Current canva.dev docs (fetched 2026-09-10) confirm preview needs no review, team apps are Enterprise-only and approved by a team owner/admin with Canva's review team uninvolved, and public release requires Canva review; the only overstated detail is that non-owners have no route to run an unreleased app.",
+   "correction": "The gate description is right, but the consequence is too strong: canva.dev/docs/apps/app-configuration/collaboration/ documents \"app collaborators\" (Canva Teams OR Enterprise plan, max 49, must be members of the developer's Canva team) and collaborators with Member role or higher \"can preview the app\" before release. So the director/producer could run the unreleased app if Luke has a Canva Teams plan and adds them to his Canva team as collaborators; otherwise (Free/Pro), the claim's owner-only-preview conclusion stands. Note the previewing-apps page does not itself specify who may preview; owner-only is inferred from the absence of any other sharing mechanism outside collaborators/team apps. Access reverts to owner-only if the Teams subscription lapses.",
+   "evidence_url": "https://www.canva.dev/docs/apps/managing-team-apps/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live canva.dev Apps SDK asset-upload page (fetched 2026-09-10, \"latest\" version, no deprecation or preview notice) states verbatim \"Maximum file size: 50MB\", lists exactly the six image MIME types claimed, requires the URL to be \"publicly accessible (i.e. not a localhost URL)\" and \"Must not redirect\", and requires thumbnail URLs to use HTTPS with CORS or a base64 data URL with \"Maximum size: 10MB\"; the claim omits three additional URL rules (must use HTTPS, must return 200, must not contain an IP address) but states nothing incorrect.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/asset-upload/",
+   "correction": "Incomplete rather than wrong: the source URL must also use HTTPS, return a 200 status code, and not contain an IP address."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Current canva.dev docs (fetched 2026-09-10) confirm every element verbatim: previewing-apps has the exact Preview-button sentence and Development URL field with no plan-tier or review gate stated; managing-team-apps states \"Team apps are only available to teams on an Enterprise plan\" and that Canva's app review team is not involved for team apps; public release goes through Canva's app review process.",
+   "evidence_url": "https://www.canva.dev/docs/apps/previewing-apps/",
+   "correction": "None required. Minor nuance: the Development URL field must be cleared before an app can be submitted for review, and public apps become discoverable in the editor on release but only appear in the Apps Marketplace after a Canva employee adds them (typically within a week). Enterprise-only statement verified at https://www.canva.dev/docs/apps/managing-team-apps/ (help-center page still 403)."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Both quotes verify verbatim against live Canva sources: the Connect docs (creating-integrations and quickstart) state \"Private integrations can only be used by your team on a Canva Enterprise plan\" and that Public integrations need Canva review only to be made available to all users, and the Jun 9, 2026 Canva developer blog states \"public integrations can be used in draft state for individual usage and testing. Unless your integration will be accessed in a marketplace, you don't need to submit it for verification and approval\" \u2014 with no plan gate, tester cap, or deprecation notice found for draft-mode public integrations.",
+   "evidence_url": "https://www.canva.dev/blog/developers/canva-and-coding-agents-platforms/",
+   "correction": "Minor precision only: the \"draft state for individual usage and testing\" sentence lives in the Jun 2026 blog post, not in the creating-integrations or submitting-integrations docs pages (those only say review is required for Public availability and that Private has no submission process); no Canva doc explicitly names the Pro tier, so \"any plan\" is an inference from the absence of a stated gate rather than a documented statement."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current canva.dev Apps SDK asset-upload page states verbatim \"Maximum file size: 50MB\", lists exactly image/jpeg, image/heic, image/png, image/svg+xml, image/webp, image/tiff, requires the URL to be publicly accessible (not localhost) and not redirect, and requires thumbnail URLs to be HTTPS with CORS support or a base64 data URL with a 10MB maximum; the page also adds constraints the claim omits (HTTPS, 200 status, no IP address, 4096-char limit, thumbnail must be PNG/JPEG/SVG), but nothing in the claim is wrong.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/asset-upload/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Both quoted passages appear verbatim on the live pages as of 2026-09-10: the moving-elements page states X and Y values measure distance \"in pixels\" with no mention of unit switching for inch/mm designs, while the rulers page says \"Rulers showing pixel dimensions appear... The ruler's unit matches the design's dimensions\" (itself internally ambiguous), so neither page states whether Position > Advanced follows the design unit, and the recommendation to read the design's real px dimensions before converting is the correct hedge.",
+   "evidence_url": "https://www.canva.com/help/moving-elements/",
+   "correction": "Secondary source https://www.canva.com/help/margins-bleed-crop-marks/ confirms the rulers quote; note its own text also calls them \"rulers showing pixel dimensions\" one sentence before saying the unit matches the design, so even the rulers page is ambiguous for non-px designs."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The rendered Help Center page (read 2026-09-10) states the Uploads tab > Upload files / Upload folder / drag-from-computer-folder flow, the warning that \"Uploading large batches of files may cause errors,\" image limits of under 50MB and not more than 250 million total pixels for JPEG/PNG/HEIC/HEIF/WebP (static only), and storage of 5 GB Free / 100 GB Pro exactly as claimed; the only omission is the additional tiers (Business 500 GB, Enterprise 1-5 TB, Teams 1 TB), which does not contradict the claim.",
+   "evidence_url": "https://www.canva.com/help/upload-media/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "correction": "Core claim verified against live docs (POST /v1/asset-uploads, application/octet-stream, Asset-Upload-Metadata with name_base64 \u2264 50 chars unencoded, image list JPEG/PNG/HEIC/single-frame GIF/TIFF/single-frame WEBP, images max 50 MB, videos max 500 MB, 30 req/min/user, asset:write). Two details need fixing: (1) the URL variant (/v1/url-asset-uploads) is NOT documented-current \u2014 it is still a Preview API (added 2025-07-02, still flagged preview; public integrations using it cannot pass review, breaking changes possible without version bump), and its video limit is 100 MB, not 500 MB; it also uses a plain JSON body with `name` (1-255 chars) and `url`, not the octet-stream + header pattern. (2) Video formats (M4V, MKV, MP4, MPEG, QuickTime, WebM) are GA since 2025-06-19.",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/assets/create-url-asset-upload-job/",
+   "reason": "The binary upload endpoint details match the current docs exactly, but the URL-upload variant the claim lumps in as documented-current is still a preview API with a different body shape and a 100 MB video cap, per the endpoint page and the changelog (latest entry 2026-08-25, no GA announcement for it)."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live addElementAtPoint reference (fetched 2026-09-10) lists exactly children, fontSize 1-1000 (default 16), textAlign start|center|end|justify, color #rrggbb, fontRef, fontWeight (the nine listed values), fontStyle normal|italic, decoration none|underline for the plain \"text\" element plus top/left/width/rotation positioning, with no height, letterSpacing, lineHeight, or link property; the creating-text page still carries the gotchas \"Text elements can't have a predefined height\" and \"Apps can't set the line-height of text\" \u2014 note that lineHeightEm, letterSpacingEm and link DO exist, but only on the richtext element (line-height/letter-spacing went GA in @canva/design 2.11.0, 2026-08-10), so the plain-text limitation is accurate while a richtext element is the escape hatch if the EPK replay needs tracking or leading.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-add-element-at-point/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Fetched the live canva.dev scopes page on 2026-09-10 and extracted exactly the 18 scope names in the claim (asset:read through profile:read), with design:content:write described as \"Create designs on the user's behalf\" and no deprecation, preview, or plan-tier gating notices on the page.",
+   "evidence_url": "https://www.canva.dev/docs/connect/appendix/scopes/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live page (rendered in Chrome, 2026-09-10; canva.com still 403s WebFetch) states verbatim: uploaders are 'Team owners, administrators, and brand designers' on 'Canva Pro, Canva Teams, Canva Business, Canva Education, and Canva for Nonprofits'; 'Canva supports OTF, TTF, and WOFF'; fonts 'should be licensed for embedding'; 'For each font family, you can add up to 18 styles'; 'Canva doesn't support variable fonts'; uploaded fonts 'will appear under your Uploaded fonts' in the toolbar font menu; the page's own summary adds 'Since you're using Canva Free, you won't be able to upload custom fonts.'",
+   "correction": "Detail additions only, not contradictions: the page also lists Enterprise among eligible plans, caps each file at 15 MB and each Brand Kit at 500 fonts, notes WOFF2/EOT/SVG/ZIP are rejected and Adobe Originals fonts are unsupported, and the current UI path is Brand > Fonts > Add to category > Upload a font (with grouped weights shown under an arrow).",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Re-measured with pypdf 6.14.2 on 2026-09-10: 11 pages at 1296 x 1728 pt, 19 link annotations (p3: 9, p5: 6, p6: 4), 287 non-blank text lines and three Baskerville faces all match, but the file contains 24 placed image draws, not 18 \u2014 the six omitted are 1920x1080 stills wrapped in transparency-group Form XObjects on p3 (2), p4 (1), p10 (2), p11 (1), i.e. reduced-opacity background stills the count skipped; this is a local-PDF measurement claim, so Canva documentation is not the relevant evidence and was not used.",
+   "correction": "Placed images: 24, not 18 \u2014 the 18 full-opacity images listed (p1 poster, p2 hero, p5-6 four headshots, p7 one, p8 ten BTS, p9 one) plus 6 background/faded 1920x1080 stills drawn via Form XObjects on p3 (2), p4 (1), p10 (2), p11 (1). Also the stated pypdf version (6.18.0) could not be confirmed; the only pypdf found on this machine is 6.14.2 under the Xcode python. All other figures hold.",
+   "evidence_url": "file:///Users/scrogdawg/BMF%20Headquarters/Previous%20Years/2025%20-%20SEW%20TO%20GROW/25_01%20KILLER%20OF%20MEN%20(THESIS)/FESTIVAL%20CAMPAIGN/site/press/KillerOfMen_EPK_1234_10092026_compressed.pdf"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current createRichtextRange reference lists formatParagraph with fontRef, fontSize, textAlign, list props, lineHeightEm (0.5-2.5, default 1.4) and letterSpacingEm (-0.2-0.8, default 0), formatText with color/fontWeight/fontStyle/decoration/strikethrough/link (\"An external URL that the text links to\") and no fontRef; the changelog dates 2.11.0 to 2026-08-10 moving line height/letter spacing out of Preview, the fonts page states \"Apps can only set the font of paragraphs, not of inline text\", and the richtext example shows type 'richtext' with range/top/left/width plus letterSpacingEm/lineHeightEm.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-create-richtext-range/",
+   "correction": "Minor nuance only: formatParagraph also accepts the inline props (color, fontWeight, fontStyle, decoration, strikethrough, link) as a superset; no correction to the claim's substance."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Fetched the guide page on 2026-09-10: its openDesign createTextElement examples show only fontSize, color, fontWeight, and textAlign in region formatting, and neither fontRef nor link appears anywhere on the page; the adjacent fonts guide demonstrates fontRef only with addElementAtPoint (not openDesign), and the text-elements example page has no openDesign sample, so hyperlink/font-by-ref support for openDesign-created text remains unconfirmed from the guides (an 2026-08-13 starter-kit changelog entry mentions \"new formatting attributes\" for richtext but does not name fontRef or link).",
+   "evidence_url": "https://www.canva.dev/docs/apps/design-editing/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Fetched the live Help Center page through a text proxy (direct fetch and Wayback both return Canva's \"Unsupported client\" stub) and it states verbatim: up to 300 MB, up to 500 pages, up to 1,400 elements and images, unsupported fonts replaced with similar fonts, scanned PDFs imported as a single flattened image, text and images \"may be separated into editable elements\", and says nothing about hyperlinks or plan-tier gating, so the figures are current and not tier-locked.",
+   "correction": "Status can move from could-not-verify to verified against the live page (2026-09-10). Two wording nits: Canva hedges that text and images \"may be\" separated into editable elements (not always are), and the companion upload-formats page adds that when a PDF is imported into a Canva Doc the pages become individual images in an A4 document rather than editable text. Link/hyperlink preservation remains unstated on both pages. A third-party 2026 pricing blog claims PDF import is Pro-only; Canva's own Help page lists no plan restriction, so treat that blog claim as unsupported.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The current canva.dev fonts guide and API pages confirm FontRef-based referencing, requestFontSelection returning ref/name/weights(with styles), findFonts returning \"only a subset of Canva's fonts\" with a fontRefs option, and the three verbatim limits (no Pro fonts, no custom fonts, no downloading font files); however the guide states asset references \"are short-lived and should only be used soon after the app receives them,\" so the \"hard-code a ref once discovered\" step is not documented and is contradicted by that warning.",
+   "correction": "Drop \"A ref can be hard-coded once discovered\" or label it an untested inference: the fonts guide says asset references are short-lived and should be used soon after receipt, and gives no guidance on persisting a FontRef across sessions. Also add a fourth documented limit relevant to replaying a layout: \"Apps can only set the font of paragraphs, not of inline text.\"",
+   "evidence_url": "https://www.canva.dev/docs/apps/fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live Help Center page (rendered 2026-09-10 in Luke's Chrome) still states verbatim the plan gate (Pro/Teams/Business/Education/Nonprofits), the owner/admin/brand-designer role, OTF/TTF/WOFF, embedding licence, 18 styles per family, no variable fonts, and 'Uploaded fonts' in the font menu; no deprecation or preview notice found.",
+   "correction": "Add the omitted limits: font files must be under 15 MB, max 500 fonts per Brand Kit, WOFF2/EOT/ZIP rejected, Adobe Originals fonts unsupported; Enterprise is also eligible. Material for the lane: Canva's own page-top summary rendered in Luke's logged-in session says \"Since you're using Canva Free, you won't be able to upload custom fonts\", so on the account actually being automated the feature is unavailable until an upgrade.",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "canva.dev/docs/mcp confirms the server URL, the three plan tiers verbatim, the three editing-transaction tools, the two named operations, the upload-first rule (public HTTPS, asset_id) and the 30/20/20 req/min limits, but the tools table gives specific editing-transaction limits (20/50/20) and lists brand kits/brand templates as \"Pro and above\", and the upload-asset page names additional fill operations.",
+   "correction": "Editing transaction rate limits are specifically start 20, perform 50, commit 20, cancel 20 req/min (not a vague \"20\u2013100\"). The tools table (canva.dev/docs/mcp/tools) lists search-brand-templates, list-brand-kits and create-design-from-brand-template as \"Pro and above\" \u2014 only autofill-design and get-brand-template-dataset are Enterprise-only \u2014 contradicting the overview page's \"Enterprise: brand kits, brand templates\" wording. The perform-editing-operations page names only replace_text and find_and_replace_text but does not claim to be exhaustive; the upload-asset-from-url page also references fill operations update_fill and insert_fill.",
+   "evidence_url": "https://www.canva.dev/docs/mcp/tools.md"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The help-page detail is accurate (the only \"Change all\" on canva.com/help/format-text/ is step 5 under Advanced > Typography for Kerning/Ligatures, and no help article documents design-wide font replacement), but the planning conclusion is too pessimistic: Canva's own May 2026 newsroom post states \"You can now change all colours or fonts on a single page in one go,\" and several independent 2026 write-ups (Brenda Cadman, Feb 2026; SlideModel, May 2026; a 2026 YouTube tutorial) consistently describe a \"Change all\" control at the bottom of the font dropdown that swaps one font for another across the design, with no plan-tier gating reported.",
+   "correction": "Canva does ship a font-swap \"Change all\" control in the font picker (select a text box, pick a new font, click \"Change all\" at the bottom of the font panel), plus a May 2026 per-page \"change all fonts on this page\" option; neither is documented in the Help Center's Format text or Find and replace articles, which is why the help-page search came up empty. Plan for using that control first and falling back to per-text-box or select-all-on-page only if the button is absent in the account's editor. Caveat: the swap is literal (every text box using the source font changes), and it could not be verified inside a live editor session because canva.com blocks automated fetches (HTTP 403).",
+   "evidence_url": "https://www.canva.com/newsroom/news/whats-new-may-2026/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Neither current help page documents any mapping of imported-PDF font names onto Brand Kit uploaded fonts: the upload-fonts page says only that uploaded fonts \"can be used the same way as fonts from the Canva library\" via the toolbar Font picker (under \"Uploaded fonts\"), and the PDF-import page says only \"Unsupported fonts may be replaced with similar fonts\" with the remedy being to select the affected text and choose a different font from the toolbar, i.e. manual re-assignment.",
+   "correction": "Minor sharpening: the PDF-import page does document the fallback behaviour the claim leaves open \u2014 unsupported fonts are auto-substituted with a \"similar font\" from Canva's library, and the documented fix is per-text-box manual re-pick from the toolbar. So \"assume manual re-assignment per text box\" is not just a safe default; it is what Canva's own troubleshooting section instructs. Whether Canva would treat an uploaded Baskerville as a \"supported\" font during import remains undocumented.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live Help Center page states verbatim under Limits and requirements \"Unsupported fonts may be replaced with similar fonts.\" and under troubleshooting \"The original font isn't supported in Canva and was replaced with a similar font.\" with the fix \"Select the affected text. Use the editor toolbar to choose a different font. Adjust the font formatting as needed.\" \u2014 and the page documents no way to control which substitute Canva picks.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/",
+   "correction": "Minor: the documented fix is three steps (select text, choose a different font from toolbar, adjust formatting), not two; the claim is otherwise exact."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Direct fetches of the addElementAtPoint and addPage references list only type/altText/top/left/width/height/rotation/dataUrl/ref for image elements (no crop or opacity), and the Design Editing page states images are handled as rects with fills, ImageFill exposes imageRef/flipX/flipY only, and all elements share a common `transparency` property (example: element.transparency = 0.8).",
+   "correction": "The only caveat in the claim (\"transparency not re-confirmed on a direct fetch\") is now resolved: the Design Editing page directly confirms `transparency` as a common element property, and it is also settable at creation time on rect elements (createRect accepts top, left, width, height, rotation, transparency, fill), so the ghost-still opacity can be set in the same call that adds the rect rather than only post-hoc. Minor: addPage also accepts the identical image shape, so both add paths lack crop/opacity.",
+   "evidence_url": "https://www.canva.dev/docs/apps/design-editing/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "canva.dev's asset-upload reference states \"Maximum file size: 50MB\" for URL-referenced images and \"Maximum size: 10MB (10 \u00d7 1024 \u00d7 1024 characters)\" for data URLs; ls -la confirms exactly 12 BTS files between 18.3 MB and 52.9 MB (IMG_4616.jpg = 52,889,348 bytes, over 50 MB), and build-epk-kit.py lines 177\u2013226 contain load_rgb (thumbnail to \u22641800 px) and cover() (crop to box), so uploading those derived crops rather than the masters is the correct and documented-current approach.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/asset-upload/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both quoted passages are verbatim on the current pages (read rendered 2026-09-10; WebFetch returned 403): the dedicated import page says \"Text and images may be separated into editable elements\", lists 500 pages / 300 MB / 1,400 elements, and the upload-formats page says PDF \"pages become individual images in an A4 document\" \u2014 so the documented contradiction is real and the test-first recommendation stands.",
+   "correction": "The \"contradiction\" is partly reconciled on the import page itself: it states outcomes depend on the file \u2014 vector/text PDFs get editable text and images, while \"Scanned PDFs are imported as a single flattened image\" and flattened text \"can't be edited\" \u2014 so the A4-images statement on upload-formats describes the flattened case, not a blanket rule. Also note the .ai size limit conflicts between pages (upload-formats: 300 MB; Import Illustrator page: 100 MB), and the import page's \"Text in the imported PDF can't be edited\" troubleshooting entry gives a quick tell for the 15-minute test: check whether each page arrived as one image.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "canva.dev docs as of Sep 2026 confirm every tier gate in the claim (private integrations Enterprise-only; Autofill Enterprise-only with paid-plan \"limited trial while your integration is under development\"; Brand Templates list/read explicitly open to Canva Pro/Teams/Enterprise; PDF export_quality regular|pro; import accepts .pdf/.ai/.pptx and ~20 more types), but the claim's \"documented-current\" label hides that several listed surfaces are still preview and that Connect has gained page-level (not element-level) editing.",
+   "correction": "Comments APIs (all endpoints, incl. Create thread/Create reply) and the Webhooks Keys API carry explicit preview notices (\"unannounced breaking changes\"; \"Public integrations that use preview APIs will not pass the review process\"), so a Pro user can use them in draft but not in a reviewed public integration. Create Design's copy-existing-design and create-from-brand-template modes are also preview; blank designs are auto-deleted if unedited for 7 days. Since Aug 2026 Connect also offers preview Design Merge jobs (insert/move/delete pages) and Autofill update_design (GA Aug 25 2026, still Enterprise-only in production) \u2014 so \"no editing in Connect\" should read \"no element-level editing; page-level merge exists in preview.\" Element-level CRUD lives in the Apps SDK Design Editing API (still \"actively developing\", Apps SDK only). Canva's own docs treat all of this as one product as of 2026-09-10; no deprecation of anything the claim lists.",
+   "evidence_url": "https://www.canva.dev/docs/connect/changelog/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live Canva Help page's \"Limits and requirements\" section states verbatim: up to 500 pages, up to 300 MB, up to 1,400 elements and images (\"Larger files may import incompletely or experience performance issues\"), and \"A desktop browser is recommended for advanced editing and Brand features\" \u2014 so an 11-page / 9.8 MB file is well inside every published limit.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/",
+   "correction": "Minor nuance only: the desktop-browser recommendation is scoped to \"advanced editing and Brand features\", not to import itself; and element count is not verifiable from page count or file size, so the 1,400-element ceiling remains an assumption for Luke's file (though very likely fine at 11 pages)."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The current canva.dev Design Editing page confirms every checkable detail verbatim (all_pages \"currently in preview and only available in the preview package\", \"1-minute expiry\", \"Only one page can be loaded at a time\", element types Embeds/Groups/Rects/Shapes/Text, \"images are videos are handled as rects with fills\", \"Table elements are not currently supported\", the four elementStateBuilder create* helpers, insertAfter, and required sync()), but \"Pages cannot be added from openDesign\" is not an explicit statement on the page \u2014 it is an inference from the absence of any page-creation method.",
+   "correction": "Replace \"Pages cannot be added from openDesign\" with \"The Design Editing API documents no method for adding pages (inferred limitation, not stated)\". Also note groups are created via the session.helpers.group() helper after inserting elements, not via an elementStateBuilder createGroup helper.",
+   "evidence_url": "https://www.canva.dev/docs/apps/design-editing/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Both cited Canva Help Center pages, fetched live 2026-09-10, state verbatim that hyperlinks work only in PDF downloads (except flattened PDFs) or when presenting, not in PNG/JPG/MP4 or social posts; list external URL, same-design page, and recent Canva design as link targets; and still describe the Lift/Neon text-effect PDF hyperlink bug as a current, unfixed issue with workarounds, with no plan-tier gating mentioned.",
+   "evidence_url": "https://www.canva.com/help/hyperlinks/",
+   "correction": "Minor nuance only: for links placed on video elements, Canva says they are clickable only in the Presenter window while in Presenter view, not in the standard presentation view."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current previewing-apps and quickstart pages say only that Preview \"will open the app in a new tab\" / \"in a preview Canva editor\", that a dropdown next to Preview selects the intent (default Design Editor), and that the app must be connected via Open on first use; no section mentions opening the app inside an existing design or choosing design type/dimensions at preview time, so the could-not-verify status is accurate.",
+   "evidence_url": "https://www.canva.dev/docs/apps/previewing-apps.md"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "correction": "Core claim confirmed: the Connect changelog (2024-06-18 to 2026-08-25, 63 entries) has no Design Editing API or element-level editing entry; the Design Editing API lives only in the Apps SDK (canva.dev/docs/apps/design-editing). The four cited 2026 items are real (create_from_design/update_design + Get design dataset GA 2026-08-25; Get design export formats GA 2026-01-08; html_bundle/html_standalone email export formats 2026-03-25), but \"2026 entries are ...\" is not exhaustive \u2014 2026 also includes preview analytics APIs (06-29), Publish brand template preview (06-04), merge job APIs and CSV export for Sheets (05-12), Create design copy/from-brand-template (05-14), design_types fields GA (07-10), and assorted parameter additions and bug fixes. None of these is element-level editing, so the conclusion stands.",
+   "evidence_url": "https://www.canva.dev/docs/connect/changelog/",
+   "reason": "The live changelog fetched 2026-09-10 shows no Connect-side Design Editing or element-editing entry and matches the cited dates, but the 2026 entry list in the claim omits several other (non-editing) 2026 additions."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Re-running pypdf over the named PDF on 2026-09-10 reproduces every figure exactly (11 pages 1296x1728 pt; 18 images p1:1/p2:1/p5:2/p6:2/p7:1/p8:10/p9:1; 19 links p3:9/p5:6/p6:4; 287 text lines; Baskerville Regular/SemiBold/Bold; recorder script has --jsx-only and rect/image/area/point/rule/link ops), but the stated tool version is wrong.",
+   "correction": "Source line should read pypdf 6.14.2 (the version installed at /usr/bin/python3), not 6.18.0; no other detail changes. This is a local file measurement, not a Canva product claim, so plan-tier/deprecation gating does not apply.",
+   "evidence_url": "file:///Users/scrogdawg/BMF%20Headquarters/Previous%20Years/2025%20-%20SEW%20TO%20GROW/25_01%20KILLER%20OF%20MEN%20(THESIS)/FESTIVAL%20CAMPAIGN/site/press/KillerOfMen_EPK_1234_10092026_compressed.pdf"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "correction": "Primary docs confirm: getDesignMetadata().defaultPageDimensions and getCurrentPageContext().dimensions are documented as width/height \"in pixels\" (both may be undefined for unbounded designs), and design-add-page documents page width/height 40\u20138000 px with a 25,000,000 px\u00b2 area cap \u2014 so the \"8000 x 3125\" figure is just the addPage caps (8000 x 3125 = 25M), not a separately documented editor limit; canva.com/help/resize could not be read (403/JS-rendered). No canva.dev or canva.com/help page states an in\u2192px factor; 96 px/in stays unverified from primary sources, so the runtime-read-and-scale approach is the only supportable one. The 300-dpi exclusion argument is valid against the documented addPage caps.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-add-page/",
+   "reason": "The three canva.dev API pages fetched today state pixel units for page dimensions and the 40\u20138000 px / 25M px\u00b2 addPage limits while publishing no inch-to-pixel conversion, which matches the claim's substance; only the provenance of the 8000 x 3125 figure needed tightening."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The canva.dev blog post dated June 25, 2025 announces the Design Editing API moving from beta to General Availability with the verbatim \"DOM-like powers to read and modify Canva designs\" wording, and the current Apps SDK docs (canva.dev/docs/apps/design-editing/) place it under the Apps SDK (@canva/design), not the Connect REST API; only the all_pages context remains in preview.",
+   "evidence_url": "https://www.canva.dev/blog/developers/launching-new-ways-to-build/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live changelog spans exactly 2024-06-18 to 2026-08-25 and contains no Connect-side Design Editing API or element-level editing entry (the only \"in-place modification\" is autofill update_design, which operates on dataset fields, not elements); the GA dates cited (autofill create_from_design/update_design and Get design dataset 2026-08-25; Get design export formats 2026-01-08; email CSV/HTML export 2026-03-25) all check out.",
+   "correction": "The 2026 entry list is incomplete, not exhaustive: 2026 also includes preview analytics APIs (2026-06-29), merge job APIs and CSV export for Sheets (2026-05-12), Create design copy/from-brand-template (2026-05-14), Publish brand template preview (2026-06-04), design_types field GA (2026-07-10), page IDs/dimensions on Get design pages, limit/pin_status params, and a 2026-08-12 bug fix. None of these add element-level editing, so the core claim stands.",
+   "evidence_url": "https://www.canva.dev/docs/connect/changelog/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live page (read 2026-09-10 via browser; curl/WebFetch are Cloudflare-blocked with 403) states verbatim: PDF Standard is 96 dpi; PDF Print is 300 dpi \"with bleed, crop marks, and color profile (RGB or CMYK) selection option\"; \"Compress PDF ... available only to Canva Pro, Teams, Education, and Nonprofit\"; \"The password protection feature is only available for PDF Standard file type\"; and \"Quality, file size export limit, scale, compression, CMYK color profile options ... are available to accounts with the Canva Pro, Canva for Teams, Canva Education, and Canva for Nonprofits plans\" (note that gating sentence sits under the Image heading, not the Document heading, but it is the page's only tier statement for those controls).",
+   "evidence_url": "https://www.canva.com/help/download-file-types/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Live page text (2026-09-10) confirms every element: the Design Wiki poster table lists \"Medium 18 \u00d7 24 in\"; the Design-from-scratch help text says units px/in/mm/cm with sides \"at least 40px and not more than 8000px\" and prints \"Minimum dimensions: 40 x 40 px / Maximum dimensions: 8000 x 3125 px\"; the Resize help page gates the feature to \"Pro, Business, Enterprise, Education, Higher education, Nonprofits, Teams\" and states \"Each use of Magic Resize counts against your monthly AI usage limit.\"",
+   "evidence_url": "https://www.canva.com/help/resize/",
+   "correction": "Minor: the current Resize page also lists \"Higher education\" as an eligible plan, and 18 x 24 in is a Design Wiki size listing rather than a named preset inside the editor; neither changes the claim's substance."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both quoted sentences appear verbatim on the live Canva Help pages as of 2026-09-10 (fetched via browser), neither page states that source page dimensions are preserved, and the design-import page adds \"Some layouts may shift slightly after import\" \u2014 so could-not-verify is the accurate status.",
+   "correction": "Minor detail fixes: (1) the design-import page's fuller wording is \"Canva keeps your document as close as possible to the original while making supported content editable\" plus \"Some layouts may shift slightly after import and may need minor adjustments\" \u2014 still no dimension guarantee; (2) the upload-formats page's \"individual images in an A4 document\" sentence sits in a generic \"Import PDF files\" limits list (300 MB / 500 pages), not under a Docs heading, so it is ambiguous whether it describes Docs or all imports \u2014 it directly contradicts the import page's \"Text and images may be separated into editable elements\"; (3) the suggested check, Resize > Custom size, is a Pro/Teams-gated feature per Canva's Resize help page, so a Free-plan user must confirm dimensions another way (e.g. the download/print dialog or the page-size shown when creating a copy). No changelog or community report found in 2025\u20132026 confirming or denying that an 18 x 24 in page survives at 18 x 24 in; an empirical test is still required.",
+   "evidence_url": "https://www.canva.com/help/upload-formats-requirements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live page (read rendered 2026-09-10) contains every quoted shortcut and the 'announces its type and details like alt text, styling, or position' sentence verbatim, and lists 'Voiceover + Chrome' as a recommended combo, so the documented-current status is confirmed.",
+   "correction": "Supported list is incomplete: the page also lists sticky notes, presentations, social media, and unbounded designs (whiteboards); it explicitly says responsive design types like Docs are NOT supported, and mobile support is 'experimental'. The Enter step is 'Press Enter, then Arrow keys to move between pages' and 'Double-press Enter to select an element' (single Enter enters page-navigation, not a page's elements). The final sentence \u2014 elements are exposed in the accessibility tree and read_page/find can select them without pixel clicks \u2014 is an inference, not documented text; the page only promises screen-reader announcements and recommends focus mode/virtual-cursor off, which suggests a custom application-role widget whose element names may or may not surface as discrete nodes to read_page. Label it inference and verify against a live design before relying on it.",
+   "evidence_url": "https://www.canva.com/help/screen-reader-editor/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "canva.dev's MCP tool pages (start-editing-transaction, perform-editing-operations, get-design-content) document only replace_text / find_and_replace_text on existing richtext elements plus update_fill / insert_fill on editable image fills, with get-design-content returning text-only plus metadata \u2014 no text-element insertion, page insertion, or position/coordinate data appears anywhere on canva.dev as of 2026-09-10.",
+   "correction": "\"Only text replacement on existing elements\" understates the documented surface slightly: perform-editing-operations also covers image fills (update_fill / insert_fill on elements start-editing-transaction marks as editable, requiring the image to be uploaded via upload-asset-from-url first). Everything else in the claim stands: no new-text insertion, no page insertion, and no geometry read/write is documented; coordinate-level placement via MCP remains unverified.",
+   "evidence_url": "https://www.canva.dev/docs/mcp/tools/perform-editing-operations.md"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current asset-upload page states verbatim type \"image\", the six MIME types (jpeg/heic/png/svg+xml/webp/tiff), aiDisclosure, the HTTPS-URL rules (publicly accessible/not localhost, must not redirect, no IP address, 50MB) and the data-URL cap \"10MB (10 \u00d7 1024 \u00d7 1024 characters)\", returning {ref, whenUploaded}; the addElementAtPoint page confirms image elements accept either ref or dataUrl, so the localhost/redirect/data-URL consequences follow.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/asset-upload/",
+   "correction": "Minor: the data-URL rule also requires \";base64\" in the URL, and the addElementAtPoint page does not state a size limit for a direct dataUrl image element (the 10MB figure is documented only for upload())."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The Canva article (Wayback copy, dateModified 2026-01-23) does list Libre Baskerville and describes its 1941 ATF origin and screen optimisation, but the Google Fonts specimen no longer ships only Regular/Italic/Bold: since PR #9909 (merged 2025-10-22, v2.005) it is a variable family with a wght 400-700 axis in both Roman and Italic, and the CSS API serves weight 600 and italic 700 today.",
+   "correction": "Libre Baskerville on Google Fonts is now a variable font (LibreBaskerville[wght].ttf and LibreBaskerville-Italic[wght].ttf, wght 400-700, v24 on gstatic), so SemiBold (600) and Bold Italic both exist upstream; the \"Regular, Italic and Bold only\" description matches the 2012 v1.0 FONTLOG, not the current release. Whether Canva exposes the variable weights or still ships the old three static styles could not be verified (canva.com/fonts pages return 403 and the article does not list styles), so \"no native SemiBold in Canva\" should be marked unverified rather than documented-current.",
+   "evidence_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/librebaskerville/METADATA.pb"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live PDF import help page (read 2026-09-10) has no \"Who can use this feature\" block or any plan restriction, while the Resize page explicitly lists \"Plan type: Pro, Business, Enterprise, Education, Higher education, Nonprofits, Teams\" and the font page says fonts can be uploaded by \"Canva Pro, Canva Teams, Canva Business, Canva Education, and Canva for Nonprofits\" - so the absence-vs-presence contrast is confirmed as documented.",
+   "correction": "Two detail nits: (1) the claim's \"Import itself should work on Free\" is an inference from absence, not a stated fact - the page nowhere says Free; the page does state hard limits (500 pages, 300 MB, 1,400 elements, unsupported fonts substituted, scanned PDFs flattened, and Brand Controls/team permissions may restrict editing) that apply regardless of plan. (2) \"Pro is needed\" understates the gates: Resize lists Pro, Business, Enterprise, Education, Higher education, Nonprofits, Teams; font upload lists Pro, Teams, Business, Education, Nonprofits and is further restricted by role (team owners, administrators, brand designers). Also note Resize now says each Magic Resize use counts against a monthly AI usage limit.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Re-ran fontTools TTCollection on /System/Library/Fonts/Supplemental/Baskerville.ttc today and reproduced the measurement exactly: 6 faces, all glyf-based, all name-ID-1 family \"Baskerville\" (no ID 16/17 typographic names), styles Regular/Bold/Italic/Bold Italic/SemiBold/SemiBold Italic, OS/2 fsType=0 on every face; the only unverified part is the inference about Canva's current upload behaviour, since canva.com/help returned 403 to WebFetch and a JS shell to curl and the web-search budget was exhausted.",
+   "correction": "The local font facts are confirmed. Downgrade the Canva half from \"documented-current\" to \"inference\": (a) I could not retrieve Canva's current upload-fonts help page to confirm the fsType/restricted-embedding rejection rule or family-grouping behaviour as of 2026-09-10; (b) uploading custom fonts is gated to paid plans (Pro/Teams/Nonprofit/Education) \u2014 free accounts cannot upload at all, so \"pass Canva's embedding check\" presumes a paid workspace; (c) grouping into one family is plausible because all six share name ID 1 and lack conflicting ID 16/17 entries, but whether Canva surfaces \"SemiBold\" and \"SemiBold Italic\" as distinct styles rather than collapsing/misordering them is untested. Also note that splitting a TTC into TTFs and re-uploading is a licence question (Apple system-font redistribution) independent of fsType.",
+   "evidence_url": "file:///System/Library/Fonts/Supplemental/Baskerville.ttc"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The download-file-types page (read live 2026-09-10 via browser) states Limit size is available only for PNG or JPG, \"not available for other file types,\" and \"only ... when downloading a single page\"; no PDF target-KB option or PDF download size cap appears there, and the sharing-limitations page's only PDF-relevant caps are per share destination.",
+   "correction": "Two details: (1) PDF does have a documented size-reduction option - \"Compress PDF: For reduced file size, image quality may be lowered\" (Pro/Teams/Education/Nonprofit) - just not a target-KB control. (2) Dropbox and Google are not the only documented share caps: the page also lists Microsoft (100 pages for PDF/PPTX), Slack (10 MB, 1 page, PDF supported), Facebook, Instagram, LinkedIn, Mailchimp, Pinterest, Tumblr and Twitter limits. Dropbox 150 MB / 100 pages is confirmed; the 200 MB / 100 pages figure is listed under \"Google upload limitations\" as \"Max. attachment size\", not explicitly labeled Google Drive. The universal negative (\"nowhere in the Help Center\") could not be exhaustively verified because Help Center search returned 404 in this session; it holds for the pages checked.",
+   "evidence_url": "https://www.canva.com/help/download-file-types/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Live canva.dev docs (fetched 2026-09-10) confirm POST /rest/v1/imports with octet-stream body and Import-Metadata (title_base64 required, mime_type optional), the 18+ supported types including Illustrator/Photoshop/Affinity/iWork/Office/OpenOffice/PDF, the verbatim \"split into multiple designs\" note, 30-day edit/view URLs, 20 req/min/user, design:content:write scope, no stated file-size limit (deferral to Canva Help upload requirements), and the changelog's 2025-06-24 URL-import GA entry, with no later deprecation or plan-tier gating through the 2026-06-25 entries.",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/design-imports/create-design-import-job/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Read rendered on 2026-09-10 in Luke's Chrome, the Canva Help Center page \"Check file upload formats and requirements\" confirms the licence point (\"Only upload content that you own and are licensed to use. See section 4.2 of our Terms of Use\") and additionally shows custom-font upload is gated to Pro/Teams/Business/Education/Nonprofits and requires an embedding-permitted licence; the Canva Learn page does carry a \"Libre Baskerville\" heading, but I likewise found no primary Canva font-library listing confirming it (or its weights) in the Free tier, so that half stays unverified.",
+   "correction": "Two details missing from the claim: (1) the Apple system Baskerville question is moot on a Canva Free account because font upload itself is a paid-tier feature (Pro, Teams, Business, Education, Nonprofits) and Canva also requires the font licence to allow embedding, otherwise the upload fails. (2) Libre Baskerville is SIL OFL 1.1; the Google Fonts source (google/fonts ofl/librebaskerville/METADATA.pb) ships two variable files, Regular and Italic (wght axis), not a fixed set of static weights. Gate for the claim's status should read \"Pro-or-higher for upload; Free-tier library availability of Libre Baskerville unconfirmed\".",
+   "evidence_url": "https://www.canva.com/help/upload-formats-requirements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Verified on 2026-09-10 against the live Canva Help Center: the Format text page's only \"Change all\" appears under Advanced settings > More settings > Advanced tab > Typography (Kerning and Ligatures), with no documented design-wide font-swap control, while the Find and replace page documents replacing text content only (File > Find and replace text, Replace / Replace all across pages), so the blog's font-dropdown \"Change all\" remains undocumented by Canva and per-text-box (or select-all-then-set-font) reassignment is the safe plan.",
+   "evidence_url": "https://www.canva.com/help/format-text/",
+   "correction": "Minor: the blog (brendacadman.com, Jan 22 2026, updated Feb 18 2026) places its \"Change all\" at the bottom of the font dropdown, not in Advanced settings; Canva's docs neither confirm nor deny that UI, so its status stays could-not-verify rather than refuted. The find-and-replace help URL sometimes redirects unexpectedly (landed on \"Add hyperlinks\" once) but resolved correctly on retry."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both quoted passages appear verbatim on the current pages read rendered in Chrome on 2026-09-10: the \"Advanced resize options\" section on resize-and-crop says \"Resize photos, shapes, and videos into exact measurements\" with no mention of text boxes, and wrap-text documents white pill handles widening/narrowing text boxes without affecting font size; whether Position > Advanced W/H fields accept text boxes is indeed not stated.",
+   "correction": "The same resize-and-crop page also has a section titled \"Resize elements, text boxes, photos, and videos\" that documents dragging the corner resize handles on a selected text box (which scales the whole element, with the note \"For better control at resizing text, use the font size option\"), so text-box resizing is documented in two forms \u2014 corner handles (scales text) and white pill handles (width only, font size unaffected) \u2014 not only the pill handles. The page's AI summary also says generically \"Select the element you want to resize\" for Position > Advanced, but the detailed section scopes it to photos, shapes, and videos.",
+   "evidence_url": "https://www.canva.com/help/resize-and-crop/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Read live 2026-09-10 in the browser (curl/WebFetch get a Cloudflare 403): the page states verbatim PDF Standard 96 dpi; PDF Print 300 dpi with bleed, crop marks, RGB/CMYK color profile; Compress PDF gated to Pro/Teams/Education/Nonprofit; password protection PDF Standard only; and \"Quality, file size export limit, scale, compression, CMYK color profile options... are available to accounts with the Canva Pro, Canva for Teams, Canva Education, and Canva for Nonprofits plans.\"",
+   "correction": "Two details: (1) the sentence gating quality/scale/compression/CMYK sits under the Image (JPG/PNG) section, not the PDF section, so the CMYK-PDF gate is corroborated separately by the sibling article \"Download or save designs to your device\" (\"More download options are available to Canva Pro, Canva Teams, Canva Business, Canva Education, and Canva for Nonprofits users, including downloading a CMYK PDF\"); (2) that sibling article also lists Canva Business as a qualifying paid tier, which the claim's gate list omits. Password protection is also noted to depend on the viewer supporting protected PDFs.",
+   "evidence_url": "https://www.canva.com/help/download-file-types/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live Canva Help Center article \"Import and edit PDFs in Canva\" (read 2026-09-10) lists exactly the claimed paths \u2014 Homepage: drag-and-drop, banner Upload > Upload files, side nav Projects > plus (Add new) > Upload files; Editor: drag-and-drop, File > Upload files, side panel Uploads > Upload files; plus the PDF editor/converter page with \"Upload your file\"/\"Upload your PDF\" \u2014 and states the PDF opens in the Editor after import.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/",
+   "correction": "Minor detail only: the article says the import opens \"in the Canva Editor\" / \"Your PDF opens in the Editor after the import finishes\"; it does not use the phrase \"appears as a design\" explicitly (though imported files are listed under Projects). Also documented limits: up to 500 pages, 300 MB, 1,400 elements; scanned PDFs import as a single flattened image."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The Canva Help Center page read rendered in Chrome on 2026-09-10 states units px/in/mm/cm, 40 x 40 px minimum, 8000 x 3125 px maximum, and red fields for out-of-range input, with no plan gate; the secondary /help/resize/ citation could not be re-verified (the URL redirected to unrelated help pages), so the claim rests on the primary page only.",
+   "correction": "Minor: the maximum is asymmetric (8000 wide x 3125 tall, not 8000 on both axes, despite the step text saying \"not more than 8000px\"); the red-field min/max message appears only after pressing Enter or clicking elsewhere; the documented workaround for out-of-range sizes (start at a supported size, then resize with locked aspect ratio) depends on the Pro-tier resize feature. Drop or re-verify the \"same limits repeated at /help/resize/\" citation.",
+   "evidence_url": "https://www.canva.com/help/design-from-scratch/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Read the live Canva Help Center page on 2026-09-10 via browser (Canva 403s curl/WebFetch) and every detail matches verbatim: Pro/Teams/Business/Education/Nonprofits gate; owners, administrators, brand designers; OTF/TTF/WOFF; \"licensed for embedding\"; \"Canva doesn't support variable fonts\"; 500 fonts per Brand Kit; 18 styles per family; regular plus bold files needed for the B button; Brand > Fonts > Add to category > Upload a font; and the embedded Font upload error article confirms under 15 MB and no .ZIP/.EOT/.SVG/.WOFF2 (TTC unmentioned). Minor wrinkle only: the error article says \"Only Brand Kit admins and owners can upload fonts,\" omitting brand designers, an internal inconsistency on Canva's side rather than an error in the claim.",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live canva.dev asset-upload reference (fetched 2026-09-10, no preview/beta/deprecated markers) states verbatim the HTTPS-URL constraints (\"Must be publicly accessible (i.e. not a localhost URL)\", \"Must not redirect\", \"Must not contain an IP address\", \"Maximum file size: 50MB\"), accepts base64 data URLs with \"Maximum size: 10MB (10 \u00d7 1024 \u00d7 1024 characters)\", lists mimeTypes jpeg/heic/png/svg+xml/webp/tiff, requires aiDisclosure, returns {ref, whenUploaded}, and the addElementAtPoint reference confirms image elements accept a dataUrl alternative to ref; the only unsourced part is the Google Drive assertion, which is an inference from the no-redirect rule rather than a documented statement.",
+   "correction": "Minor: the Google Drive claim is an inference (share/uc links 302-redirect), not documented by Canva; and the addElementAtPoint dataUrl field carries no documented size limit of its own, so the 10MB figure applies to upload() only.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/asset-upload/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Re-read 2026-09-10 via browser: the Help Center article \"Publish designs as Brand Templates\" (/help/publish-team-template/) lists no plan tiers, only says \"Brand Designers and Admins can publish\" with share options scoped to team members/\"Your Team\"; the Business marketing page body has no Pro mention (find('Pro') hits only nav links); and /help/collaborate-with-anyone/ still carries the exact quote \"If you're on Canva Pro, you can't invite people to your team when sharing. To create or expand a team, upgrade to Canva Business.\" \u2014 so the could-not-verify status and team-plan gate stand.",
+   "evidence_url": "https://www.canva.com/help/publish-team-template/",
+   "correction": "Minor: the relevant Help Center article lives at /help/publish-team-template/ (not a /create-brand-templates/ URL, which 404s), and its publisher roles (Brand Designer, Admin) are team roles, which implicitly reinforces the team-plan gate even though no plan list is stated."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Current Canva Help Center article \"Upload and use Brand Kit fonts\" reads verbatim \"Your fonts should be licensed for embedding. Otherwise, they may not upload\" and \"Only upload fonts that you're licensed to use\", and the Terms of Use (effective 19 Aug 2026) section 4(a) User Content reads \"You represent and warrant that you own all rights, title, and interest in and to your User Content or that you have otherwise secured all necessary rights\" \u2014 both quotes match the live pages; the only wrinkle is that the help article itself cross-references \"section 4b\" (Licensed Content), whereas the warranty actually sits in 4(a) as the claim states.",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Current canva.dev pages confirm the structural claim (Private = Enterprise-only; Autofill = Enterprise with a paid-plan \"limited trial while your integration is under development\"; Design Editing API is Apps SDK openDesign only, not Connect), but the usable-feature list is undersold in several details and Comments is a preview API.",
+   "correction": "Detail fixes from the live docs: (1) Design Import supports far more than PDF/.ai/PPTX \u2014 also .psd, Affinity, Keynote/Pages/Numbers, Word/Excel/PowerPoint (.doc/.docx/.xls/.xlsx/.ppt), OpenOffice formats. (2) Export is not just PDF: JPG, PNG, GIF, PDF, MP4, PPTX, CSV, HTML bundle/standalone; \"pro\" export_quality (and lossy/transparent PNG, upscaling) needs a Pro-or-higher plan, which a Pro user has. (3) Brand Templates is not read-only \u2014 Publish brand template, Get, Get dataset, List; Pro/Teams/Enterprise all qualify. (4) Comments APIs are marked preview: usable now, but \"Public integrations that use preview APIs will not pass the review process.\" (5) Claim omits other Pro-usable Connect APIs: Resizes (requires premium `resize` capability, i.e. Pro), Merges, Analytics, Get user capabilities. (6) Autofill trial phrasing is exact: \"Users on Canva paid plans have access to a limited trial while your integration is under development.\" (7) Webhooks page documents scopes/notification types only; no plan gate stated. (8) \"OAuth into a public-in-draft integration without review\" is implied by the Quickstart/local-development flow (127.0.0.1 redirect, Developer Portal authorization URL generator) but not stated verbatim as a policy. (9) The MCP server documented under Connect docs is the Canva *Dev* MCP server (developer assistance); the end-user mcp.canva.com page redirects to canva.com/help/mcp-agent-setup which returned 403 and was not verified.",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/autofills/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Read live on 2026-09-10 via browser (canva.com blocks plain fetch with a Cloudflare challenge): the pricing page shows Free US$0, Pro US$180/year for one person, Business US$250/year per person, Enterprise \"Let's talk\"; its FAQ states \"Only one person can use a Canva Pro account,\" \"Canva Teams is no longer available for new sign-ups or upgrades,\" and that inviting team members applies to Business; the About Canva Business help page adds \"If you want to create a team, subscribe to Canva Business via web\" \u2014 every element of the claim matches current first-party text.",
+   "evidence_url": "https://www.canva.com/pricing/",
+   "correction": "None needed. Two footnotes for the lane: (1) prices are shown exclusive of tax and on the Yearly toggle (monthly billing is higher); (2) the roles page's Teams/Business table applies only to legacy Teams subscribers for the Teams column, so the Business roles (owner/admin/brand designer/member) are the ones that matter for Luke, director, producer."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Canva's current upload-formats page lists only .otf, .ttf and .woff for custom fonts and says \"Make sure your font license allows embedding\" (not the literal phrase \"licensed for embedding\"), so a .ttc must indeed be split; the local file and subfont indices check out (0 Regular, 1 Bold, 4 SemiBold, and the TTC also holds Italic/Bold Italic/SemiBold Italic at 2/3/5), and font uploads additionally require a paid Canva plan.",
+   "correction": "Three detail fixes: (1) Canva's wording is \"Make sure your font license allows embedding. If it's not, the upload may fail\" \u2014 not \"licensed for embedding\". (2) Font upload is gated to Canva Pro/Teams/Business/Education/Nonprofits, not Free \u2014 add that as a precondition. (3) The font's own OS/2 fsType embedding flag is 0 (installable embedding) on all six subfonts, so a technical upload would likely succeed; the copyright string names Agfa Monotype (\"Monotype Baskerville\"), so the licensing question is Apple's macOS SLA plus Monotype's terms, and remains for Luke to decide before any upload.",
+   "evidence_url": "https://www.canva.com/help/upload-formats-requirements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The current canva.dev addPage reference and design changelog (latest 2.13.0, 2026-08-31) confirm every API detail \u2014 title \u2264255, solid/image/video background, ElementAtPoint[] incl. richtext, dimensions 40\u20138000 px per side with area \u226425,000,000 px\u00b2, return {id, title, dimensions, type}, custom dimensions in 2.7.5 (2025-12-09), page IDs in 2.12.0 (2026-08-12), no plan gating or preview flag \u2014 but the help-center \"8000 x 3125\" editor envelope could not be verified (both help URLs return 403 / an error page) and the claim omits that the 25M px\u00b2 cap makes an 18 x 24 in page infeasible at print resolution.",
+   "correction": "Drop or mark unverified the help-center \"min 40 x 40, max 8000 x 3125 px\" envelope \u2014 it rests only on a search snippet and the page cannot be fetched. Add the feasibility consequence: 18 x 24 in at 300 dpi = 5400 x 7200 px = 38.9M px\u00b2, which exceeds addPage's 25,000,000 px\u00b2 area limit; only lower effective resolutions fit (e.g. 96 dpi \u2192 1728 x 2304 = 3.98M px\u00b2; the cap allows at most ~3535 x 4714 px at a 3:4 ratio, \u2248196 dpi). Also note the return `type` may be \"unsupported\" and `dimensions` may be undefined for some page types.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-add-page.md"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Current page text confirms JPEG/PNG/HEIC-HEIF/WebP uploads must be \"Under 50MB\" and \"Not more than 250 million total pixels\", PDF import is capped at 300MB / 500 pages with no statement anywhere (nor on the import-and-edit-pdfs page) about image resolution handling, and pdfimages -list on the compressed EPK confirms the downsampled sizes.",
+   "correction": "Two details: (1) the pdfimages figures are slightly understated \u2014 stills are 1920x1080 at 34 ppi on most pages but 67 ppi (p2) and 47 ppi (p7) elsewhere, and page 8 also carries a 3600x2400 image at 200 ppi alongside the 1663x1109 BTS set; (2) the upload-formats page adds a caveat the claim omits: \"When importing a PDF document to Canva, the pages become individual images in an A4 document\" (while the import-and-edit-pdfs page says text and images \"may be separated into editable elements\" up to 1,400 elements), so whether embedded images are even individually replaceable is itself inconsistently documented \u2014 re-uploading originals is the safe path either way.",
+   "evidence_url": "https://www.canva.com/help/upload-formats-requirements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The full macOS Tahoe 26 SLA PDF (section 2E \"Fonts\") contains the quoted clause verbatim: fonts may be used \"to display and print content while running the Apple Software\" and embedded only where the font's embedding restrictions (Font Book > Show Font Info) permit; the SLA is silent on uploading font files to a third-party cloud service, so the \"unverified for Canva\" status is accurate.",
+   "correction": "The SLA clause is now confirmed from the full PDF text (not just search snippets), so the source note should be upgraded; the clause grants use only \"while running the Apple Software,\" which on its face does not cover copying the .ttc to Canva's servers, so that fork leans against, not neutral. Two items remain unverified: canva.com/help/upload-fonts returned HTTP 403 to fetch, so Canva's own font-upload licence wording was not checked; and Apple's bundled-fonts list (support.apple.com/en-us/103197) lists Baskerville 13.0d1e10 without a vendor attribution, so \"Monotype-owned design\" stays an unverified inference.",
+   "evidence_url": "https://www.apple.com/legal/sla/docs/macOSTahoe.pdf"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "All three pages, read live on 2026-09-10 via Chrome (curl/WebFetch get a Cloudflare 403), confirm each element: flattening \"converts the file into a static image, preventing editing in software like Adobe Acrobat\", \"may increase its file size\", \"Flattening removes accessibility tags\", and hyperlinks work in PDF downloads \"except flattened PDFs\" \u2014 so the press-kit advice (do not flatten) follows directly.",
+   "correction": "Minor detail: the flatten control is described as a toggle under Advanced Settings on the flattened-PDF page, but the accessibility page calls it the \"Flatten PDF checkbox\" \u2014 the two Canva pages disagree on the control type. Also, the accessibility page says tagged export requires the Digital preset (not Print), which the claim omits.",
+   "evidence_url": "https://www.canva.com/help/download-flattened-pdf/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current addElementAtPoint reference lists exactly the claimed text properties (children array with only first string used, fontSize 1-1000, six-char #hex color, textAlign start|center|end|justify, fontWeight normal..heavy, fontStyle normal|italic, decoration none|underline, fontRef, width, rotation) with no letterSpacing, lineHeight, height, or link property, and the creating-text guide states verbatim \"Apps can't set the line-height of text\", \"Text elements can't have a predefined height\", and that font sizes are px in the API but shown as pt in the UI.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-add-element-at-point/",
+   "correction": "Minor nuance only: `children` is typed as a string array (only the first element is used), not a single string; letter-spacing and links are absent by omission from the plain-text schema rather than by an explicit prohibition sentence (links exist only on richtext)."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live Canva Help Center page (read 2026-09-10 via browser after WebFetch/curl returned 403) contains verbatim under \"Limits and requirements\": \"Unsupported fonts may be replaced with similar fonts.\" and under troubleshooting \"Some fonts changed after importing the PDF.\" the cause \"The original font isn't supported in Canva and was replaced with a similar font.\" with the fix \"Select the affected text. Use the editor toolbar to choose a different font. Adjust the font formatting as needed.\" \u2014 no plan-tier gate, no beta/preview label, and no documented control over which substitute is chosen; the only nuance is that sibling articles (Illustrator/Photoshop and PowerPoint import) phrase it as Canva \"try[ing] to identify and match\" the font, which is consistent with, not contradictory to, the claim.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Canva's own page (fetched via the browser pane after the 403) lists Libre Baskerville among 11 fonts and states \"They're all free and are available on Canva\", confirming the free look-alike claim, while no Canva primary page documents a font inventory, so the absence of Monotype Baskerville remains unverified and the \"Regular/Italic/Bold only\" weight statement is wrong at the source: Google Fonts' METADATA.pb ships Libre Baskerville as a variable font with a wght axis 400\u2013700 (Regular and Italic files), which includes a 600/SemiBold weight.",
+   "correction": "Keep: Libre Baskerville is free in Canva (Canva primary page confirms). Downgrade: \"Canva does not carry Monotype Baskerville\" is unverifiable from canva.com/canva.dev \u2014 no public font list exists; check in the editor's font picker. Fix: the upstream Libre Baskerville family is now variable (wght 400\u2013700, upright + italic), so SemiBold 600 exists in the font itself; whether Canva exposes intermediate weights (its brand-fonts page only says the font \"has style variants\") is undocumented and needs an in-editor check.",
+   "evidence_url": "https://www.canva.com/learn/the-best-free-business-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Live page text (2026-09-10) states hyperlinks work only in downloaded PDFs \"except flattened PDFs\" or when presenting, not in PNG/JPG/MP4 or social posts; link targets listed are another website page, a page within the design, or a recent Canva design; and the text-effects page still lists Lift and Neon as the affected effects on downloaded PDFs. Minor detail not in the claim: for videos, links are clickable only in the Presenter window on Presenter view, and Canva Docs/email designs also offer email-specific link types.",
+   "evidence_url": "https://www.canva.com/help/hyperlinks/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live page (read 2026-09-10) contains the verbatim sentence \"Text and images may be separated into editable elements.\" and states \"Scanned PDFs are imported as a single flattened image, so their text and design elements can't be edited,\" with troubleshooting adding \"The PDF was scanned or contains flattened text\"; pdffonts on the local EPK confirms three embedded TrueType subsets (CKPGNO+Baskerville, -SemiBold, -Bold), so real text is present and the fragmentation inference is correctly labelled as undocumented.",
+   "correction": "Three details: (1) Canva's page says \"may be separated\" and hedges everything under \"Depending on your file\" \u2014 editable text boxes are the expected outcome, not a documented guarantee. (2) The word \"outlined\" is Luke's, not Canva's; Canva defines flattened text only as \"Text turned into an image\", so vector-outlined text is not explicitly addressed on the page. (3) The page also warns \"Unsupported fonts may be replaced with similar fonts\" \u2014 the kit's embedded Baskerville subsets are a candidate for substitution on import (Canva ships Libre Baskerville, not Apple's Baskerville), which the claim omits.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both quoted passages were re-read verbatim in the rendered pages on 2026-09-10 (WebFetch got 403 as stated), with no plan-tier gate on PDF import and the 500 pages / 300 MB / 1,400 elements limits and the .ai \"PDF compatible format... layers may be flattened\" text all present, so the claim is accurate in substance; only the \"contradiction\" framing needs tightening.",
+   "correction": "The two pages are less contradictory than the claim says. The dedicated PDF page (import-and-edit-pdfs-canva) explicitly resolves the split: vector/text PDFs have text and images separated into editable elements, while scanned or flattened-text PDFs import as a single flattened image per page. The formats page's one-liner (\"pages become individual images in an A4 document. It doesn't become a page of editable text like in Docs\") sits in a Docs-oriented context and reads as an older, blunter summary of that flattened case, not a competing statement about the editor. Practical consequence is unchanged: the 15-minute test is still the right move, but the likely outcome for an exported (non-scanned) 11-page PDF is editable elements with font substitution and layout drift, not 11 A4 images; also expect the imported design to inherit the PDF's page size, not forced A4, though this was not testable from the help text alone.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Read live on 2026-09-10: Canva's hyperlinks page confirms the claim's details (More > Link; text/elements/images/videos; \"Hyperlinks will only work if you download your design as a PDF (except flattened PDFs)\"; not PNG/JPG), and the PDF-import page is not silent but says imported PDF pages \"become individual images in an A4 document\", which makes loss of the 19 link annotations a primary-source inference rather than an unverifiable blog claim.",
+   "correction": "Two detail fixes: (1) the cited import URL https://www.canva.com/help/import-and-edit-pdfs-canva/ is stale and 301-redirects to https://www.canva.com/help/upload-formats-requirements/; (2) that page is not \"silent\" on links \u2014 under \"Import PDF files\" it states pages become individual images (rasterized) in an A4 document, so link annotations cannot survive import. Status can move from could-not-verify to verified-by-inference; the plan (re-add all 19 links manually, export PDF Standard with Flatten PDF off) stands. No plan-tier gating found on PDF import or hyperlinks; a known open bug: links on text with Lift/Neon effects do not work in downloaded PDFs.",
+   "evidence_url": "https://www.canva.com/help/upload-formats-requirements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The design-editing guide page still carries every detail claimed (1-minute expiry, one page loaded at a time, text/rect/shape/group/embed, media as rect fills, tables unsupported, elementStateBuilder.create*Element + insertAfter + session.sync()), but the @canva/design changelog records \"Promoted the Multi-Page Editing functionality of design.openDesign from Beta to GA\" in 2.10.0 (2026-06-12) and the GA (\"latest\") openDesign reference now documents type: \"all_pages\", so the guide's \"currently in preview and only available in the preview package\" sentence is stale.",
+   "correction": "all_pages is GA as of @canva/design 2.10.0 (2026-06-12), not preview-only; the guide page's preview notice is stale. Also, \"Pages cannot be added from openDesign\" is literally true but misleading \u2014 the same @canva/design package exposes a GA addPage() (linked from the openDesign reference, with custom dimensions support), so apps can add pages, just via addPage rather than an openDesign session. \"Only one page can be loaded at a time\" applies specifically to the all_pages context (openPage cannot be nested).",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-changelog/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The Apps SDK fonts doc never names Brand Kit or uploaded fonts, so app access to Luke's Baskerville is indeed undocumented and needs a runtime test \u2014 but the doc is not \"silent\": its Gotchas section states \"Apps can't access Canva Pro fonts\" and \"Apps can't upload or otherwise define custom fonts,\" which is an explicit negative signal the claim omitted.",
+   "correction": "Replace \"silent\" with: canva.dev/docs/apps/fonts.md (fetched 2026-09-10) says apps use \"a limited subset\" of Canva's fonts; findFonts docs say \"Only a subset of Canva's fonts are returned\"; and the Gotchas list explicitly excludes Canva Pro fonts and any custom fonts. Brand Kit uploaded fonts are not mentioned by name, so a runtime test is still required, but the documented exclusions make it more likely than not that an uploaded Baskerville will NOT appear in requestFontSelection/findFonts. The help-center plan-gating details (Pro+/OTF-TTF-WOFF/500 fonts/licensing) could not be re-verified: canva.com/help/upload-fonts/ returns 403 to fetch and the search budget was exhausted; treat those figures as unconfirmed.",
+   "evidence_url": "https://www.canva.dev/docs/apps/fonts.md"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Current Canva Help pages confirm the direction: PDF import documents editable text (\"Text and images may be separated into editable elements\"), PPTX and .ai import are both labelled \"early version (beta release)\" with the identical caveat that font matching is \"not always possible to find an exact match\", the SVG requirements say to \"Expand all ... text boxes\" (i.e. no live text), and none of the three import pages mention hyperlinks at all.",
+   "correction": "Three details to tighten: (1) the PDF route carries the same font caveat as PPTX/.ai (\"Unsupported fonts may be replaced with similar fonts\") and likewise has zero hyperlink documentation, so \"no link documentation\" is not a differentiator against PDF \u2014 it is the state of every route; (2) the general upload-formats page still says imported PDF \"pages become individual images in an A4 document\", contradicting the dedicated PDF article \u2014 treat PDF text editability as documented but with a known inconsistency in Canva's own help, and verify on a test import; (3) .ai import is only accepted for files saved as \"PDF compatible format\", is capped at 100MB on its own page (300MB on the formats page), and is beta-only via desktop browser, so it is a weaker fallback than the claim implies. SVG is also absent from the Connect API design-import supported-types table entirely.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Current v2 docs confirm addElementAtPoint supports image, video, embed, text, richtext, shape, group, table with top/left -32768..32767, width/height 0..32767, rotation -180..180, pixel units, top-left origin, and no preview/plan-tier/deprecation gating \u2014 but the Docs/Whiteboards exclusion is only half-documented.",
+   "correction": "Docs state addElementAtPoint works on \"all design types except documents\" (Docs); whiteboards are not listed as unsupported. Whiteboards lack page dimensions, so getCurrentPageContext is unavailable there, not addElementAtPoint itself. Also, \"pixels\" are described as relative to their container \u2014 Canva warns nested (group/app-element) units may not map 1:1 to design pixels \u2014 so for an 18x24in poster place elements at page level and validate against getCurrentPageContext dimensions.",
+   "evidence_url": "https://www.canva.dev/docs/apps/elements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current Help Center page (read rendered 2026-09-10) states verbatim: \"Optional: Double-click the text box and highlight the part of the text you want to add a link. Select More icon from the toolbar. Select Link. To link to another website page, enter the link and press Enter\", \"Hyperlinks will only work if you download your design as a PDF (except flattened PDFs)\", \"Image formats like JPG and PNG do not support hyperlinks\", and links to \"Hyperlinks are not working on text effects\" (Lift and Neon effects); the keyboard-shortcuts page lists \"Add link: Command \u2318 + K\". Minor non-contradicting detail: the page also notes links stay clickable when presenting (Presenter view), which the claim omits.",
+   "evidence_url": "https://www.canva.com/help/hyperlinks/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Live canva.dev MCP docs (fetched 2026-09-10) confirm the server URL, plan tiers as quoted from the overview page, richtexts/fills element ids, replace_text / find_and_replace_text operations, the upload-first rule for images, and all stated rate limits (editing tools 20/50/20 req/min, upload 30, export 20, import 20).",
+   "correction": "The tools page lists list-brand-kits, search-brand-templates and create-design-from-brand-template as \"Pro and above\", contradicting the overview's \"Enterprise\" line; only autofill-design and get-brand-template-dataset are marked Enterprise-only. Also the docs reference asset_id use in \"fill operations\", so image-fill replacement exists alongside the two text ops; DCR auth is deprecated in favor of CIMD.",
+   "evidence_url": "https://www.canva.dev/docs/mcp/tools.md"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Current canva.dev pages confirm Preview (\"click the Preview button. This will open the app in a new tab\", no plan gate stated), \"Team apps are only available to teams on an Enterprise plan\", and public apps are \"reviewed by Canva\" before release; the one imprecision is that team apps are still reviewed, just by team administrators rather than Canva.",
+   "correction": "Team apps are not \"unreviewed\": they skip Canva's review queue but must be approved by the team's owner/administrators (\"the team's administrators are responsible for reviewing it\"; submitting-apps: \"Before an app can be released to the public or a team, it must be submitted for review\"). The Enterprise gate is stated on canva.dev/docs/apps/creating-apps/, not only on the 403'd canva.com/help page. Also: \"You can't submit an app for review while the [Development URL] field contains a value.\"",
+   "evidence_url": "https://www.canva.dev/docs/apps/creating-apps/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Canva's pricing page (Yearly toggle) shows exactly Free US$0/year for one person, Pro US$180/year for one person, Business US$250/year per person, Enterprise \"Contact Sales\"; the About Canva Business help article and pricing FAQ state verbatim \"Canva Teams is no longer available for new sign-ups or upgrades\"; the FAQ says \"Only one person can use a Canva Pro account\" and Business is \"designed for both individuals and small teams\" with the help article adding \"If you want to create a team, subscribe to Canva Business via web\" \u2014 so Business is the cheapest plan on which Luke can create a team with the director and producer.",
+   "correction": "Canva does not describe Business as a \"renamed\" Teams plan. It calls Business \"a new plan\" introduced alongside Teams' closure; existing Teams subscribers stay on Teams at their old pricing and features and do NOT receive Business-exclusive features. Say \"Business is the successor to Teams for new sign-ups\", not \"the renamed Teams plan\". Also note prices exclude tax, and the mobile Business subscription is solo-only \u2014 team creation requires subscribing via web.",
+   "evidence_url": "https://www.canva.com/help/about-canva-business/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "correction": "Both quotes are real and current, but the attribution is off: \"Private integrations can only be used by your team on a Canva Enterprise plan\" is on canva.dev/docs/connect/creating-integrations/, while the \"draft state for individual usage and testing ... don't need to submit it for verification and approval\" sentence appears only in the Jun 9, 2026 blog post (canva-and-coding-agents-platforms), not on submitting-integrations/. The submitting-integrations page itself says only that review is required \"before your integration can [be] made available to all Canva users\" and does not mention draft-state use. The docs also don't state a plan gate for public integrations; the \"any plan\" inference is supported by the blog's \"personal automation don't need public review\" and by the localhost redirect-URL allowance, not by an explicit docs sentence.",
+   "evidence_url": "https://www.canva.dev/blog/developers/canva-and-coding-agents-platforms/",
+   "reason": "The Enterprise-only Private gate is verbatim on the creating-integrations docs page and the draft-state/no-review language is verbatim on Canva's Jun 9, 2026 developer blog, so the direction (Pro user builds a Public integration, leaves it in draft, authorizes his own account) holds, but the draft quote is misattributed to the submitting-integrations page, which does not contain it."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The current addPage reference confirms title \u2264255 chars, solid-hex/image/video background, elements incl. richtext, dimensions each 40..8000 with area \u226425,000,000, and the changelog confirms custom dimensions in 2.7.5 (2025-12-09) and page IDs in 2.12.0 (2026-08-12); the Canva Help Center \"editor envelope\" sentence could not be verified because canva.com/help returns 403 to every fetch method available, so it must be downgraded to unconfirmed.",
+   "correction": "Two fixes: (1) the return type is a union \u2014 AbsolutePageMetadata {id, dimensions{width,height}, title, type:\"absolute\"} OR UnsupportedPageMetadata {type:\"unsupported\"} for design types without fixed page dimensions, so callers must branch on `type`; (2) the sentence \"Canva's editor imposes the same envelope: designs min 40 x 40 px, max 8000 x 3125 px (help center)\" is not verified from current page text (help center blocked with 403 on fetch, curl and browser) and should be marked unconfirmed/removed; only the SDK limits (40..8000 per side, \u226425,000,000 px\u00b2 area \u2014 8000 x 3125 is simply that area cap at max width) are documented-current. 18 x 24 in at 300 dpi = 5400 x 7200 = 38.9M px\u00b2 exceeds the area cap; at 200 dpi (3600 x 4800 = 17.3M px\u00b2) it fits.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-add-page.md"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Local file confirms the registration and the TTC's name table confirms indices 0/1/4 = Regular/Bold/SemiBold; Canva Help (upload-fonts, font-upload-error) currently lists OTF/TTF/WOFF only, names .TTC as rejected, and requires fonts \"licensed for embedding\" on Pro/Teams/Education/Nonprofits plans, so the claim is correct but omits the plan gate.",
+   "correction": "Add two details: (1) font upload is a Brand Kit feature limited to Canva Pro, Teams, Education, and Nonprofits (not Free), and only Brand Kit admins/owners can upload; (2) the TTC's OS/2 fsType is 0 (installable embedding) for all six faces, which satisfies Canva's technical check, but Apple's macOS SLA grants use \"while running the Apple Software\" and does not clearly permit uploading the font file to a third-party service \u2014 the licensing question is real and unresolved, and Monotype (the copyright holder) is the party whose terms would govern.",
+   "evidence_url": "https://www.canva.com/help/font-upload-error/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Live fetch of canva.com/help/powerpoint-import/ on 2026-09-10 matches the claim verbatim: \"early version (beta release)\", \"only available on canva.com via your desktop browser\", 100MB .ppt / 300MB .pptx/.potx/.ppsm, 300 pages or slides, 1,400 elements and images, charts/SmartArt/3D/WordArt ignored, scans processed as flat image, and the exact font-matching sentence; hyperlinks and slide-size preservation are indeed not mentioned on either page.",
+   "correction": "Minor only: the upload-formats page additionally lists \"pattern fills\" as content that may not import, and its file-type line says \".ppt, .pptx, and .potx\" (omitting .ppsm, which appears only in the size limit line). No plan-tier gating found on either page.",
+   "evidence_url": "https://www.canva.com/help/powerpoint-import/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Both source quotes were re-read rendered in Chrome on 2026-09-10 and match verbatim: the rulers page says \"The ruler's unit matches the design's dimensions. For example, pixel designs show pixel rulers,\" while the moving-elements page says X and Y \"measure the distance (in pixels)\" with no mention of unit-following behaviour for the Position > Advanced fields, so the \"not stated / could-not-verify\" status is accurate and the read-real-px-dimensions-first precaution is warranted (web-search budget was exhausted, so no 2025-26 community reports could be checked; one unverified inference: the in-editor Resize button that would expose the px dimensions is historically Pro-gated, so a free-tier account may need another route to the design's px size).",
+   "evidence_url": "https://www.canva.com/help/moving-elements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Re-read rendered on 2026-09-10: the Help Center page still says 'Resize photos, shapes, and videos into exact measurements' under Advanced resize options and never lists text boxes there, while the text-box article still describes width-only pill-handle dragging that 'won't affect the text font size' \u2014 so 'not stated' is the accurate status for W/H fields on text boxes.",
+   "correction": "Two detail fixes: (1) the same page's section header does list text boxes among things you can resize by corner handles ('Resize elements, text boxes, photos, and videos') and adds 'For better control at resizing text, use the font size option' \u2014 so text is documented as corner-drag/font-size resizable, only the exact-pixel W/H path is silent on text; (2) https://www.canva.com/help/wrap-text/ now redirects to https://www.canva.com/help/format-text/, where the quoted pill-handle text appears in the 'Resize text boxes and wrap text' excerpt \u2014 cite that URL instead. No plan gate or deprecation found; still a could-not-verify on the W/H-accepts-text question, resolvable only by clicking a text box in the editor.",
+   "evidence_url": "https://www.canva.com/help/resize-and-crop/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Canva's live help page (rendered 2026-09-10) states images must be \"Under 50MB in size\" and \"Not more than 250 million total pixels (width x height)\" for JPEG/PNG/HEIC/HEIF/WebP with no plan gating, neither the upload-requirements page nor the Import-and-edit-PDFs page states any image resolution on PDF import, and pdfimages -list on FESTIVAL CAMPAIGN/site/press/KillerOfMen_EPK_1234_10092026_compressed.pdf confirms the embedded raster sizes (BTS 1663x1109 at 200 ppi, stills 1920x1080 at 34 ppi, poster 2160x2700).",
+   "correction": "Two details: (1) WebP is limited to static images only, per the same page. (2) The PDF import section on that page still says pages \"become individual images in an A4 document,\" which contradicts Canva's dedicated PDF import article (https://www.canva.com/help/import-and-edit-pdfs-canva/) saying text and images \"may be separated into editable elements\" (300 MB, 500 pages, 1,400 elements/images cap); cite the dedicated article for import behaviour, and note the poster page also carries a 3600x2400 image on p.8 alongside the 1663x1109 BTS set.",
+   "evidence_url": "https://www.canva.com/help/upload-formats-requirements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Current canva.dev pages confirm each part: previewing-apps describes owner preview via a Development URL with no review (only noting \"You can't submit an app for review while the field contains a value\"); releasing-apps says an app can be released \"After an app successfully passes through the app review process\" (public) and team apps become available when a team owner/administrator approves; managing-team-apps states \"Team apps are only available to teams on an Enterprise plan\" and \"Canva's app review team is not involved in the app review process for team apps.\"",
+   "evidence_url": "https://www.canva.dev/docs/apps/managing-team-apps/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Canva's current Apps SDK docs (fetched 2026-09-10, no preview/deprecation/plan gating shown) confirm getDesignMetadata().defaultPageDimensions and getCurrentPageContext().dimensions are in pixels and may be undefined for unbounded designs, and addPage/Connect create-design cap pages at 40-8000 px per side with area <= 25,000,000 px^2 \u2014 so the runtime-read-and-scale approach is sound and a 5400x7200 (300 dpi) page is impossible; the 96 px/in factor remains unpublished by Canva (help pages are bot-blocked; only inferable from Canva's known presets such as A4 = 794x1123 px, Letter = 816x1056 px), so it stays an inference, not a documented fact.",
+   "correction": "\"8000 x 3125 max\" is not a fixed rectangle: the documented limit is each side 40-8000 px AND width*height <= 25,000,000 px^2 (8000x3125 is just the area cap expressed at max width; 5000x5000 is also allowed). Both dimension fields are optional (undefined for whiteboards/docs), so the agent must handle the undefined case. 96 px/in (-> 1728x2304 for 18x24 in) is consistent with Canva's known preset sizes but is not stated in any Canva doc \u2014 keep it labelled as inference and rely on the runtime value.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-add-page/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live PDF-import help page (fetched 2026-09-10) never mentions hyperlinks or link annotations, and the live hyperlinks page confirms select element > More > Link (text, elements, images, and videos), links clickable only in PDF downloads except flattened PDFs, not PNG/JPG/MP4/social; the local EPK PDF contains exactly 19 /Subtype /Link annotations, so the manual re-add plan is sound.",
+   "correction": "Two details: (1) the hyperlinks page lists videos as a fourth linkable type (Presenter view only), not just text/elements/images; (2) the PDF-import page's own download list offers \"PDF Standard or PDF Print\", not \"Digital\" \u2014 so export as PDF Standard with Flatten PDF off. Also note a documented bug: links on text with Lift or Neon effects do not work in downloaded PDFs. Canva's silence on preserving imported links is confirmed, but that is absence of evidence, not a statement that links are dropped; only a test import settles it. Incidentally, the open browser tab points at KillerOfMen_EPK_1112_... which no longer exists on disk; the current file is KillerOfMen_EPK_1234_10092026_compressed.pdf.",
+   "evidence_url": "https://www.canva.com/help/hyperlinks/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Canva's live 'best free business fonts' article still carries a 'Libre Baskerville' heading (confirmed in-browser 2026-09-10), and the Google Fonts METADATA.pb confirms the Impallari/ATF-1941 lineage, but the style list is out of date: Google Fonts now serves Libre Baskerville as a variable font (wght axis 400-700, upright and italic), and the specimen page lists Regular, Italic, SemiBold 600, SemiBold Italic, Bold and Bold Italic, so the 'no SemiBold, no Bold Italic' premise and the 'no native equivalent' conclusion are wrong in detail.",
+   "correction": "Libre Baskerville on Google Fonts is now a variable family: LibreBaskerville[wght].ttf and LibreBaskerville-Italic[wght].ttf with wght 400-700, exposed as Regular, Italic, SemiBold 600, SemiBold 600 Italic, Bold 700 and Bold 700 Italic (fonts.google.com/specimen/Libre+Baskerville, read 2026-09-10; raw.githubusercontent.com/google/fonts/main/ofl/librebaskerville/METADATA.pb). A SemiBold weight therefore exists upstream; whether Canva's native Libre Baskerville exposes the 600 weight is unverified from Canva primary documentation (canva.com/help and canva.com/fonts returned 403 to fetch; Canva publishes no font-style inventory), so downgrade the 'no native equivalent' line to 'unconfirmed in Canva - test in editor'. The Canva article confirms only that the family is listed, not which weights Canva bundles.",
+   "evidence_url": "https://fonts.google.com/specimen/Libre+Baskerville"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current \"Upload and use Brand Kit fonts\" article (read via the user's Chrome 2026-09-10, since curl/WebFetch hit a Cloudflare 403) states verbatim that you must upload both the regular file and the bold/italic file (B/I buttons gray out otherwise), each family takes up to 18 styles, mis-grouped fonts mean bad file metadata that must be fixed with the correct family name and re-uploaded after deleting, \"Condensed\" style fonts are always uploaded separately, and \"Canva doesn't support variable fonts.\"",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/",
+   "correction": "Minor detail only: the page says to delete the mis-grouped fonts from the Brand Kit before fixing metadata and re-uploading, and notes fonts uploaded before July 2023 need re-uploading to get auto-grouping. The companion \"Font upload error\" article adds a 15 MB per-file cap and that OTF/TTF/WOFF are supported but WOFF2/EOT/SVG/ZIP are not."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live Help Center page (rendered in Chrome 2026-09-10) confirms every quoted shortcut, the \"announces its type and details like alt text, styling, or position\" wording, the recommended screen-reader/browser combos and the desktop-browser-only gate; the only detail errors are in the supported-elements list, and the read_page/find inference is plausible but not something the page documents.",
+   "correction": "Supported list is broader than stated: it also includes sticky notes and unbounded designs (whiteboards), with fixed designs explicitly listed as presentations, posters and social media; responsive design types such as Docs are explicitly unsupported \"at this time\". The page also carries an \"additional elements and design types will be added soon\" caveat and calls mobile support experimental. Note that \"screen reader announces type/alt text/position\" is documentary evidence that elements are exposed via ARIA, but the further claim that an automation agent's read_page/find can select elements without pixel clicks is an inference, not documented by Canva, and Cmd+F2 requires the key event to reach the focused editor tab.",
+   "evidence_url": "https://www.canva.com/help/screen-reader-editor/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Direct fetches of the current canva.dev references confirm ImageElementAtPoint has only type/altText/top/left/width/height/rotation/dataUrl/ref (no crop or opacity), ImageFill has exactly type/imageRef/flipX/flipY (no crop, in both latest and preview packages), and RectElement carries an editable `transparency` (0-1, not readonly, no preview marker) \u2014 so the claim's direction is right, but the post-hoc ghost value must be inverted because Canva's property is transparency, not opacity.",
+   "correction": "Element `transparency` is a 0-1 value where 0 = fully opaque (docs example) and 1 = invisible, so a 16%-opacity ghost still must be set to transparency \u2248 0.84, not 0.16. The property is on the element returned inside an openDesign() session (e.g. openDesign({type:\"current_page\"}, ({page}) => { element.transparency = 0.84 })), not on openDesign itself; `current_page` context is GA while `all_pages` is preview-only. RectElement `width`/`height`/`fill`/`stroke` are readonly at the property level (fill state is swapped via mediaContainer), so resizing an already-placed rect post-hoc is also not available \u2014 sizes must be right at add time.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-types-absolute-element/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Loaded both pages live on 2026-09-10 via the browser: the help article \"Upload and use Brand Kit fonts\" carries verbatim \"Your fonts should be licensed for embedding. Otherwise, they may not upload.\" and \"Only upload fonts that you're licensed to use.\", and the current Terms of Use \u00a74(a) User Content reads \"You represent and warrant that you own all rights, title, and interest in and to your User Content or that you have otherwise secured all necessary rights...\" \u2014 so licence responsibility does sit with the uploader. Minor nuance only: the help page itself cross-references \"section 4b\" of the Terms while the warranty text actually lives in 4(a), so the claim's citation is more accurate than Canva's own; font upload is also gated to paid plans (Pro/Teams/Business/Education/Nonprofits) and owner/admin/brand-designer roles, which the claim does not contradict.",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "I read both Apple SLA PDFs in full (pdftotext) and Section 2.E \"Fonts\" appears verbatim in both the Sequoia and Tahoe agreements exactly as the claim quotes it, so the \"could-not-verify\" status is now upgradeable to verified for the clause text; the Canva-upload question remains a genuine legal ambiguity, not a Canva product fact.",
+   "correction": "Clause text is now confirmed, not merely snippet-seen: macOS Sequoia and macOS Tahoe SLAs, \u00a72.E \"Fonts\", identical wording in both (\"...you may use the fonts included with the Apple Software to display and print content while running the Apple Software; however, you may only embed fonts in content if that is permitted by the embedding restrictions accompanying the font in question. These embedding restrictions can be found in the Font Book/Preview/Show Font Info panel.\"). Additional verified detail from the installed file /System/Library/Fonts/Supplemental/Baskerville.ttc: copyright \"Digitized data copyright Monotype Typography, Ltd 1991-1997\", trademark \"Monotype Baskerville\", and OS/2 fsType = 0 (installable embedding, no restrictions) \u2014 so the embedding-restriction limb is satisfied, but the \"while running the Apple Software\" limb is what makes uploading the .ttc to Canva's servers legally unresolved; that part stays unverified and is a lawyer question, not a product one. Also note this claim is not about Canva's product at all; the only Canva-side gate is that uploading custom fonts requires Canva Pro/Teams/Enterprise, which was not checked here.",
+   "evidence_url": "https://www.apple.com/legal/sla/docs/macOSTahoe.pdf"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live Canva Help page \"Upload and use Brand Kit fonts\" (read 2026-09-10 via browser; WebFetch/curl were 403'd) states every element of the claim verbatim: gated to Pro/Teams/Business/Education/Nonprofits and to team owners, administrators, and brand designers; OTF, TTF, WOFF supported; \"Your fonts should be licensed for embedding\"; max 500 fonts per Brand Kit; up to 18 styles per family; upload regular and bold/italic files separately or the B/I buttons gray out; \"Canva doesn't support variable fonts\"; path Brand > Fonts > Add to category > Upload a font; and the linked Font upload error article adds \"under 15 MB\" and \"doesn't support .ZIP, .EOT, .SVG, or .WOFF2\" (TTC not mentioned anywhere). One minor cross-page inconsistency: the Font upload error article says only \"Brand Kit admins and owners\" can upload, omitting brand designers, but the primary upload-fonts page includes them as the claim states.",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both Help Center pages, read rendered in Chrome on 2026-09-10, carry the quoted text verbatim (X/Y \"in pixels\" from top-left under Position > Advanced; Width/Height \"pixel values\" with a Ratio lock) with no plan-tier gate stated, so the mechanism is documented-current on Free.",
+   "correction": "Two detail caveats from the same pages: (1) the resize-and-crop page says \"Canva graphics have a fixed aspect ratio and you won't be able to stretch them\" \u2014 independent Width/Height entry applies to photos, shapes, and videos, not library graphics; (2) on desktop the Rotate field is documented directly \"Under Rotate\" in the Position panel, not under Advanced (the \"Under Advanced ... Rotate\" wording is the mobile step). The pages document the fields but do not promise pixel-exact fidelity for agent automation; that remains an inference until tested in the live editor.",
+   "evidence_url": "https://www.canva.com/help/resize-and-crop/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "canva.dev/docs/mcp/ (and its llms.txt) currently says \"To add your redirect URI to the Canva MCP allowlist, apply for access with our Waitlist form\" with review for \"brand alignment, trust and safety considerations, compliance readiness, technical fit, and strategic alignment\"; the coding-agents blog post carries the verbatim \"Private access is currently limited as we have a full waitlist of clients. Pre-configured access is available in many commonly used tools like ChatGPT, Codex, Claude, Grok, Perplexity, Superhuman, and more.\"; the docs page names Claude, ChatGPT, Codex, Gemini, Cursor, VS Code, and none of the three pages names Claude Code.",
+   "evidence_url": "https://www.canva.dev/docs/mcp/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live create-design-autofill-job page (fetched 2026-09-10) carries the Enterprise/limited-trial gate sentence verbatim, lists text/image/video/chart/sheet fields with the 100x20 chart cap, 10,000-char strings, 20 media items per cell, silent skip of unknown field names, 60 req/min/user and design:content:write, and the Connect changelog dates create_from_design/update_design GA to 2026-08-25 with no deprecation or preview label remaining.",
+   "evidence_url": "https://www.canva.dev/docs/connect/api-reference/autofills/create-design-autofill-job/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Canva's current help pages (fetched 2026-09-10) confirm the direction: PDF import is documented as GA with editable text, PowerPoint import and Illustrator import are both still labelled \"early version (beta release)\", SVG upload guidance tells you to expand text so SVG arrives as shapes, and none of the four pages documents hyperlink preservation for any format.",
+   "correction": "Two details are off. (1) The font-matching caveat is not a PPTX/.ai-only disadvantage: the PDF import page carries the same warning (\"Unsupported fonts may be replaced with similar fonts\" / \"Some fonts changed after importing the PDF\"), so it is not a differentiator against PDF \u2014 it is a caveat for every route; upload your fonts to the Brand Kit (Pro/Teams/Business/Education/Nonprofits only) to avoid substitution. (2) Hyperlinks are undocumented for PDF import too, so \"no link documentation\" on PPTX is parity, not a PPTX disadvantage; treat link survival as untested on every route. Also note .ai import is itself beta, requires \"PDF compatible format\" saves, and warns \"some elements might be rasterized\", so it is a weaker fallback than the claim implies. One inconsistency to be aware of: Canva's Upload formats page still says imported PDF pages \"become individual images in an A4 document\" \u2014 that line contradicts the dedicated PDF import page and 2025-2026 community reports showing editable text, and reads as stale Docs-context copy; verify with a one-page test import before committing.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live Canva Help page (read via browser, bypassing the 403) states under \"Limits and requirements\": up to 500 pages, up to 300 MB, up to 1,400 elements and images, text and images \"may be separated into editable elements\", unsupported fonts \"may be replaced with similar fonts\", and scanned PDFs \"are imported as a single flattened image\"; the page says nothing about link annotations, so that gap is correctly stated.",
+   "correction": "Status should be upgraded from could-not-verify to verified against the primary page. Two wording tweaks: the page hedges every behaviour with \"may\" (text/images \"may be separated into editable elements\", fonts \"may be replaced\") rather than asserting it, and it says \"similar fonts\", not \"the closest Canva font\". Scanned PDFs (and any PDF with flattened text) import as a single flattened image. The 1,400 figure is \"elements and images\" per file, and exceeding it can cause incomplete imports rather than hard rejection.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Every element is present in current page text: the authentication page states Authorization Code + PKCE (SHA-256), at least one redirect URL required, backend-only token exchange due to CORS, and \"Each refresh token can only be used once\"; the quickstart lists http://127.0.0.1:3001/oauth/redirect; the generate-access-token reference gives expiry \"currently 4 hours... subject to change\" with expires_in 14400; and no page states a refresh-token lifetime.",
+   "evidence_url": "https://www.canva.dev/docs/connect/authentication/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "correction": "Node.js v24 / npm v11, `canva apps create`/`canva apps start`, localhost:8080, App source > Development URL + Preview, and `canva apps start --use-https` for Safari are all documented-current. One detail: you CAN open http://localhost:8080 directly, but you only see the app's minified source code; the docs' actual statement is \"You can't preview an app outside of the Canva editor\" because the SDK must exchange messages with the editor. Also, the starter-kit README uses `npm start` / `npm start --use-https` rather than the `canva apps` CLI commands (those come from the quickstart/previewing docs).",
+   "evidence_url": "https://www.canva.dev/docs/apps/previewing-apps.md",
+   "reason": "canva.dev prerequisites/quickstart/previewing pages (fetched 2026-09-10) confirm Node v24, npm v11, `canva apps start` serving http://localhost:8080, Development URL + Preview flow, and `--use-https` for Safari; only the \"cannot open localhost\" phrasing is slightly off since the URL serves the bundle source while the app renders solely inside the editor."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both Help Center pages, read rendered on 2026-09-10, carry the quoted text verbatim: moving-elements says X/Y \"measure the distance (in pixels) from the top-left corner of the canvas\" and are entered under Position > Advanced; resize-and-crop says to enter \"the pixel values in the Width and Height fields\" under Position > Advanced with a Ratio lock; the flip-and-rotate excerpt says to enter a degree value under Rotate within Position.",
+   "correction": "Two details: (1) on desktop the rotate field is documented as \"click on Position... Under Rotate, enter the value in the text box\" \u2014 only the mobile steps place it under Advanced, so do not assume the desktop Rotate field sits inside the Advanced section; (2) resize-and-crop adds that Width/Height numeric resize applies to \"photos, shapes, and videos\" and that \"Canva graphics have a fixed aspect ratio and you won't be able to stretch them,\" so the agent cannot set independent W/H on library graphics. No plan gate is stated on either page (Free holds).",
+   "evidence_url": "https://www.canva.com/help/moving-elements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Current canva.dev reference pages show `link` (\"An external URL that the text links to\") only in richtext InlineFormatting (formatText/appendText); ImageElementAtPoint (type, altText, top, left, width, height, rotation, dataUrl, ref), ShapeElementAtPoint (type, viewBox, paths, top, left, width, height, rotation), group, video and embed carry no link/url property in addElementAtPoint or addPage, the plain `text` element has none either, the @canva/design changelog through 2.13.0 (latest, 2026-08-31) and 2.13.1-beta.1 has no entry adding one, and the Canva help page states users can add hyperlinks to \"text, elements, images, and videos\" that work when downloaded as PDF \"except flattened PDFs\".",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-add-element-at-point/",
+   "correction": "Detail only: the @canva/design changelog lives at https://www.canva.dev/docs/apps/api/latest/design-changelog.md (latest 2.13.0, 2026-08-31; preview 2.13.1-beta.1), and the help-page evidence was read via a proxy since canva.com/help returns a Cloudflare 403 to direct fetches."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live Canva Help page (read via browser 2026-09-10; WebFetch/curl were 403-blocked) states under \"Who can upload fonts?\": team owners, administrators, and brand designers, on Canva Pro, Teams, Business, Education, and Nonprofits, with the free-account summary confirming Free is excluded \u2014 the only gap is that Canva Enterprise (which also has Brand Kit font upload, subject to Brand Controls) is missing from the claim's plan list.",
+   "correction": "Add Canva Enterprise to the eligible plans (Pro, Teams, Business, Enterprise, Education, Nonprofits; not Free). Roles as stated (owners, administrators, brand designers); on Enterprise, Brand Controls set by admins may further restrict uploads. Supported formats OTF/TTF/WOFF (not WOFF2), max 500 fonts per Brand Kit, 15 MB per file.",
+   "evidence_url": "https://www.canva.com/help/upload-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "canva.dev's MCP tool docs (tools index + perform-editing-operations.md) still list only the nine legacy design tools and name just two operations, \"replace_text\" and \"find_and_replace_text\", with no insert-text/insert-page/coordinate placement \u2014 but the \"read_design/edit_design ... text insertion and page insertion ... reads geometry\" text is indexed from Canva's own Help Center (canva.com/help/mcp-canva-usage, 403 to fetchers), scoped to \"Canva's design tools in Claude\", not from a third-party page, and element geometry is already documented on canva.dev via start-editing-transaction's position/dimension fields.",
+   "correction": "Three fixes: (1) the source of the edit_design/read_design claim is Canva's Help Center (search-snippet only; page returns 403), not third-party pages \u2014 so it is first-party but unfetchable and appears scoped to the Claude connector; (2) canva.dev's perform-editing-operations.md documents exactly two operations, replace_text and find_and_replace_text \u2014 no insertion ops; (3) \"reads geometry\" IS on canva.dev: start-editing-transaction.md returns per-element position {top,left} and dimension {width,height}, so geometry reading is verified. Coordinate-level placement of new text/images via any MCP tool remains undocumented on canva.dev and should stay unverified; note also that no canva.dev MCP changelog exists (llms.txt lists none).",
+   "evidence_url": "https://www.canva.dev/docs/mcp/tools/perform-editing-operations.md"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both current Canva help pages (read 2026-09-10 in a live browser) list exactly .otf, .ttf and .woff as supported and the font-upload-error page states verbatim that Canva doesn't support .ZIP, .EOT, .SVG or .WOFF2; .ttc appears nowhere, so its exclusion follows from the closed list.",
+   "correction": "The .ttc rejection is an inference from the closed supported list, not an explicit Canva statement (TTC/TrueType Collection is never named). Also add two documented constraints the claim omits: each font file must be under 15 MB, and Canva does not support variable fonts (per canva.com/help/upload-fonts/, where upload-formats-requirements/ redirected on first load). Bold/italic faces must be uploaded as separate files, consistent with extracting each Baskerville face.",
+   "evidence_url": "https://www.canva.com/help/font-upload-error/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Both help pages read rendered today (design-from-scratch and resize) list unit options \"px, in, mm, or cm\" but state limits only in pixels (40 x 40 px min, 8000 x 3125 px max) with no inch-to-pixel or DPI factor, and https://www.canva.com/sizes/poster/ lists \"Medium 18 \u00d7 24 in\" in its size table, so the claim's could-not-verify status and its preset-size fallback are both accurate.",
+   "evidence_url": "https://www.canva.com/help/design-from-scratch/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Current canva.dev asset-upload reference confirms both limits (URL-hosted raster images 50 MB; data URLs 10 MB = 10x1024x1024 characters), and ls confirms 12 BTS JPGs at 18.3-52.9 MB with load_rgb/cover at tools/build-epk-kit.py lines 177-226 \u2014 but only one of the 12 actually exceeds the 50 MB URL cap.",
+   "correction": "All 12 large BTS JPGs (18.3-52.9 MB) exceed the 10 MB data-URL limit, but only IMG_4616.jpg (52,889,348 bytes) exceeds the 50 MB URL-upload limit; the other 11 (18.3-44.9 MB) would be accepted via URL. The conclusion \u2014 upload the downsampled/cropped derivatives, not masters \u2014 still stands for consistency, size, and the never-alter-delivered-assets rule. Note the 10 MB data-URL cap is measured in characters (base64), so the effective binary ceiling is ~7.5 MB.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/asset-upload/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Read rendered 2026-09-10: the Help Center \"Design from scratch\" page lists units px/in/mm/cm and gives limits only in px (40 x 40 min, 8000 x 3125 max) with no in-to-px factor, and /sizes/poster/ lists \"Medium 18 \u00d7 24 in\", so both factual parts of the claim check out; the correction is that this is Canva's Design Wiki size guide, not a homepage preset design type.",
+   "correction": "\"Supported preset\" overstates it: 18 x 24 in appears in Canva's Design Wiki poster-size guide (and that page's poster templates are 46 x 61 cm, i.e. 18 x 24 in), but no help page read confirms it as a selectable homepage design-type preset or states the inch-to-pixel conversion; the help page does say in/mm/cm are accepted custom-size units and that out-of-range fields turn red, so an 18 x 24 in entry would only fail if Canva's internal px conversion exceeds 8000 x 3125 px, which is undocumented.",
+   "evidence_url": "https://www.canva.com/help/design-from-scratch/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Both cited Canva Help pages were re-read on 2026-09-10 (via text proxy; canva.com blocks direct fetch): the PDF-import page only says unsupported fonts \"may be replaced with similar fonts\" and that the fix is to select the affected text and pick a different font from the toolbar, while the upload-fonts page only says uploaded fonts \"can be used the same way as fonts from the Canva library\" from the picker \u2014 neither page, nor any 2025-2026 community/blog result found, documents mapping of imported PDF font names onto Brand Kit uploads, so manual per-text-box reassignment remains the safe assumption (and font upload itself is gated to Pro/Teams/Business/Education/Nonprofits, restricted to owners, admins and brand designers).",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/",
+   "correction": "No correction to the claim; one enrichment: the PDF-import page does positively document the substitution behaviour (\"unsupported fonts may be replaced with similar fonts\") and the manual fix, so the status could be upgraded from \"could-not-verify\" to \"documented: substitution to a similar Canva-library font, manual reassignment; Brand Kit mapping undocumented\". Uploaded fonts also require a paid tier (Pro/Teams/Business/Education/Nonprofits) and owner/admin/brand-designer role."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current canva.dev scopes appendix lists exactly the 18 scopes named, in that order, and describes design:content:write verbatim as \"Create designs on the user's behalf\"; the six kit scopes (asset:write, design:content:write, design:content:read, design:meta:read, folder:read, folder:write) all appear with matching descriptions.",
+   "evidence_url": "https://www.canva.dev/docs/connect/appendix/scopes/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "correction": "The endpoint index is accurate (14 categories, no Designs update/edit endpoint), but \"NO endpoint edits design content\" is too strong as of 2026-09-10: the Create design autofill job API's `update_design` job type (preview 2026-08-10, GA 2026-08-25 per the Connect changelog) autofills an existing design in place, replacing text, image, video, chart and sheet data-field content \u2014 Canva Enterprise only, and only for designs with pre-configured autofill data fields. The Merges API (preview, 2026-05-12) also modifies an existing design by inserting/moving/deleting whole pages. Neither offers free-form element editing (arbitrary text, positions, hyperlinks); that remains Apps SDK Design Editing API territory. Restate as: \"no general-purpose element-editing endpoint; in-place content changes are limited to Enterprise autofill data fields (`update_design`) and page-level merges.\"",
+   "evidence_url": "https://www.canva.dev/docs/connect/changelog/",
+   "reason": "The llms.txt index matches the claim, but the changelog and Create design autofill job reference document a GA `update_design` job type (2026-08-25) that \"updates the specified design directly\" for text/image/video/chart/sheet fields, so the absolute \"no content editing\" wording is stale by about two weeks."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "All three Canva Help Center pages, read live on 2026-09-10 (copyright footer 2026), state verbatim that Flatten PDF under Advanced Settings converts the design to a static image preventing Acrobat editing, \"may increase its file size\", \"removes accessibility tags\", and that hyperlinks work in PDFs \"except flattened PDFs\", with no plan-tier gating or deprecation notice.",
+   "evidence_url": "https://www.canva.com/help/download-flattened-pdf/",
+   "correction": "None needed. Minor wording note only: the accessibility page refers to the control as a \"Flatten PDF checkbox\" while the flatten page calls it a toggle under Advanced Settings; same control, same location."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both cited pages (fetched 2026-09-10) confirm every element: Brand Designers and Admins publish; the Share-with options are \"Brand designers and admins only\", \"Specific team members\", and \"Your Team\"; the before/after table says \"Only people in the same team account can access\"; \"public access to Brand Templates is no longer supported\" with externals getting a copy shared \"as a view-only design\"; and \"Any comments and comment history will be deleted once you publish.\"",
+   "correction": "The first sharing option's exact label is \"Brand designers and admins only\" (the claim drops the word \"only\"); otherwise the claim matches the current page text verbatim in substance.",
+   "evidence_url": "https://www.canva.com/help/publish-team-template/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both quoted passages are on the live pages verbatim ('keeps the original layout as closely as possible'; 'the pages become individual images in an A4 document. It doesn't become a page of editable text like in Docs'), and neither page states that source page dimensions are preserved, so 'could-not-verify' on 18 x 24 in surviving is correct; the one detail to fix is that the design-import page's quote is 'as close as possible' in its intro and 'as closely as possible' in the Import PDF section, and it now also warns 'Some layouts may shift slightly after import'.",
+   "correction": "The design-import page (import-and-edit-pdfs-canva) uses both 'as close as possible to the original' (intro) and 'keeps the original layout as closely as possible' (Import PDF section) and adds 'Some layouts may shift slightly after import and may need minor adjustments' -- still no statement about page dimensions. The upload-formats page's A4 sentence sits under 'Import PDF files' in the general design-upload list (alongside PSD/AI), not in a Docs-specific section, so it reads as a general (likely stale) claim rather than a Docs-only note; the contradiction with the design-import page stands. Retain status could-not-verify; empirical check via Resize > Custom size after import remains the only way to confirm 18 x 24 in survival.",
+   "evidence_url": "https://www.canva.com/help/upload-formats-requirements/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The current createRichtextRange API reference lists formatParagraph accepting fontRef, fontSize (1-1000), textAlign, listLevel/listMarker, lineHeightEm (0.5-2.5, default 1.4), letterSpacingEm (-0.2..0.8, default 0) plus the inline props, and formatText accepting color, fontWeight, fontStyle, decoration, strikethrough, link with no preview or plan-gating note; the design-changelog 2.11.0 (2026-08-10) entry states line height and letter spacing were promoted from Preview; the richtext-elements example shows type 'richtext' with range/top/left/width and letterSpacingEm; fonts.md states \"Apps can only set the font of paragraphs, not of inline text.\"",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-create-richtext-range/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Every shortcut in the claim appears verbatim on the current Canva Help Center shortcuts page (read rendered 2026-09-10), with nudge/spacing increments indeed unstated; the only wrinkle is the page itself prints the More-actions shortcut as \"Shift + 10\" (a typo), while Canva's screen-reader article prints the correct \"Shift+F10\".",
+   "correction": "The shortcuts page lists \"Open More actions menu for a selected element: Shift + 10\" (sic); the correct key \"Shift+F10\" is confirmed on the companion page https://www.canva.com/help/screen-reader-canva-editor/ (linked \"Use a screen reader in the Canva Editor\"). Also note the page lists both \"Add empty page: Command + Return\" and \"Add page break: Command + Enter\" (Docs), and additional automation-relevant shortcuts not in the claim: C circle, S sticky note, Cmd+\\ elbowed line, Cmd+/ toggle side panel, Cmd+E quick actions alternate, Shift+Cmd+F6 previous surface, Tab/Shift+Tab next/previous element, Shift+W/A/S/D directional multi-select, Option+Shift+, / . rotate large, Shift+Cmd+arrows resize large, Option+Cmd+] / [ to front/back, Shift+Cmd+G ungroup, Shift+Cmd+0 zoom to fill.",
+   "evidence_url": "https://www.canva.com/help/canva-keyboard-shortcuts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both Canva Help Center pages, read live on 2026-09-10 (Cloudflare blocks curl/WebFetch; read via browser), state the exact three Share-with options, \"Only people in the same team account can access\", \"public access to Brand Templates is no longer supported\", embedded and template-link external sharing \"phased out\", and \"any comments and comment history will be deleted once you publish\".",
+   "correction": "External people do not automatically \"get a view-only design copy\"; Canva's stated workaround is that a team member must manually make a copy of the Brand Template and share it as a view-only design. Also note the pages frame this as an in-progress rollout (\"We're rolling out improvements\", ownership \"expected while we update\"), and the feature is limited to Brand Designers/Admins on Teams/Enterprise (and Education/Nonprofit) plans - not available on Free or Pro individual accounts.",
+   "evidence_url": "https://www.canva.com/help/brand-templates-2/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live help article (read 2026-09-10) states exactly: one default font per heading type per Brand Kit for H1 (Title), H2 (Subtitle), H3 (Heading), H4 (Subheading), H5 (Section header) and Body text; fonts chosen from a dropdown that includes uploaded fonts; optional font size, bold and italic; the heading types \"carry semantic tags for accessibility\" so exported PDFs work with screen readers; available to Canva Pro, Teams, Business, Education and Nonprofits (Enterprise not named on this page).",
+   "evidence_url": "https://www.canva.com/help/brand-fonts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The live addPage reference (no preview label; changelog confirms graduation from preview to GA) matches the page limits (40\u20138000 px per side, area \u2264 25,000,000), the seven element types, image fields, position/dimension ranges and shape limits exactly; the only detail off is that `link` is not a field on the basic text element \u2014 it exists only in richtext formatting.",
+   "correction": "Text-element formatting fields are fontRef, fontSize, color, textAlign, decoration, fontWeight, fontStyle (plus rotation, width); `link` (\"an external URL that the text links to\") is available only via the richtext element's formatText/appendText formatting, not on plain text elements. Also note addPage now accepts optional `background` and `title` options per the changelog.",
+   "evidence_url": "https://www.canva.dev/docs/apps/api/latest/design-add-page/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "The Jun 25, 2025 canva.dev blog post confirms the Design Editing API is an Apps SDK feature that moved \"from beta to GA\" and contains the quoted \"DOM-like powers\" sentence verbatim, and the current Apps SDK docs page shows no deprecation or plan-tier gating \u2014 but the docs still mark one part of it (the `all_pages` design context) as preview-only, so \"GA\" applies to the core API, not every surface.",
+   "correction": "Core Design Editing API (e.g. `current_page` context) is GA in the Apps SDK as of Jun 25, 2025; the `all_pages` design context remains preview-only, available only in the Apps SDK preview package (https://www.canva.dev/docs/apps/design-editing/), and the docs page still says the API is \"actively\" under development.",
+   "evidence_url": "https://www.canva.dev/blog/developers/launching-new-ways-to-build/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Rendered https://www.canva.com/policies/terms-of-use/ on 2026-09-10 confirms \"effective as of 19 August 2026\", clause (viii) data mining/extraction/scraping and (ix) bypass measures verbatim, and zero matches for robot/spider/bot/crawl/automated in the 47k-char text; the 2021-11-03 version does contain the robots/spiders clause as claimed.",
+   "correction": "Two details the claim omits: (1) the Terms incorporate Canva's Acceptable Use Policy (https://www.canva.com/policies/acceptable-use-policy/) by reference, so it is part of the binding text; I read it rendered the same day and it also contains no automation/bot/scraping/bypass language, so the conclusion stands but should cite both documents. (2) The 2021 robots/spiders clause was itself rate-scoped, prohibiting automated systems only when they send more requests than a human could produce in a conventional browser, so even the older terms did not ban human-pace UI automation outright. Also, clause (vi) forbids VPN use to circumvent geographic pricing/content access, worth adding to the no-go list.",
+   "evidence_url": "https://www.canva.com/policies/terms-of-use/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live canva.com/help/powerpoint-import/ page (fetched 2026-09-10 via r.jina.ai after direct fetch was Cloudflare-blocked) contains every claimed statement verbatim: \"early version (beta release)\", \"only available on canva.com via your desktop browser\", .pptx/.potx/.ppsm up to 300MB and .ppt 100MB, \"up to 300 pages or slides\", \"up to 1,400 elements and images per file\", \"Charts, SmartArt, 3D objects, and WordArt aren't supported and will be ignored\", the exact font-matching sentence, and scans processed \"as a flat or merged image\"; neither that page nor upload-formats-requirements mentions hyperlinks or slide-size preservation, so the \"not documented\" clause also holds.",
+   "evidence_url": "https://www.canva.com/help/powerpoint-import/",
+   "correction": "None required. Minor addendum only: upload-formats-requirements/ separately lists \"3D objects, WordArt, pattern fills\" as content that may not import, so pattern fills could be added to the ignored list."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "Fetched both cited pages on 2026-09-10: previewing-apps says Preview \"will open the app in a new tab\", defaults to the Design Editor intent, and offers a dropdown only for choosing which intent to preview; quickstart says Preview opens \"a preview Canva editor\" \u2014 neither page states whether Preview can target an existing design or lets you choose the design type/size, so the could-not-verify status is accurate.",
+   "evidence_url": "https://www.canva.dev/docs/apps/previewing-apps/",
+   "correction": "Minor note only: the intent dropdown is described in previewing-apps, not quickstart; and the docs also say apps cannot be previewed outside the Canva editor and must be installed once via \"Open\" on first preview \u2014 still nothing about existing designs or design size."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both pages, read rendered 2026-09-10, state verbatim the px/in/mm/cm unit dropdown, 40 x 40 px minimum, 8000 x 3125 px maximum, and red fields for out-of-range values; the Magic Resize plan gate matches exactly, but the \"only stated limits\" wording overstates it slightly.",
+   "correction": "Units are given as examples (\"for example, px, in, mm, or cm\"), not an exhaustive list; the resize page adds further stated limits beyond dimensions (up to 50 designs per bulk resize, up to 5 new sizes per design, max 250 outputs per bulk action), and the red-field behavior on the resize panel also surfaces a min/max message after Enter or clicking away.",
+   "evidence_url": "https://www.canva.com/help/design-from-scratch/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Both Help Center pages, read rendered 2026-09-10, confirm every element of the claim verbatim (font-size field entry, Text color, Alignment, Bold/Italics, Advanced Settings > Spacing sliders, Advanced settings > More settings > Advanced tab > Typography Kerning/Ligatures toggles, and \"Open font menu: Shift + Command \u2318-F\" on the shortcuts page) with no plan-tier gate or preview flag anywhere on either page.",
+   "correction": "Two small additions for the automation lane: (1) the Kerning/Ligatures flow has a final step the claim omits, \"Select Change all\", after toggling; (2) \"numeric entry not documented\" for spacing is accurate for the panel, but the shortcuts page documents deterministic keyboard steps that avoid slider-dragging: line spacing Option+Cmd+Up/Down, letter spacing Option+Cmd+,/., and font size Shift+Cmd+,/. (increment by one). Also note one Help Center caveat: Kerning is not yet supported when exporting text animations.",
+   "evidence_url": "https://www.canva.com/help/canva-keyboard-shortcuts/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live page (read 2026-09-10) states verbatim: Free gets one palette of up to three colours; Pro/Teams/Business/Education/Enterprise/Nonprofits get 100 palettes of up to 100 colours; colours are added by picking or entering a hex code; CMYK can be added only by Pro users and Teams/Business admins and brand designers; colour themes (backgrounds/elements/text) are on Pro/Teams/Business/Education/Enterprise/Nonprofits; and only Teams/Business/Enterprise admins can set Brand Controls restricting access to brand palettes \u2014 every element of the claim matches.",
+   "evidence_url": "https://www.canva.com/help/color-palettes/"
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds",
+   "reason": "The live Canva Help Center page (fetched 2026-09-10) states verbatim under \"Limits and requirements\": up to 500 pages, up to 300 MB, up to 1,400 elements and images, \"Larger files may import incompletely or experience performance issues\", with no plan-tier gate or beta label on the PDF article (unlike the adjacent AI/PSD and PowerPoint import articles, which are still marked beta); the only nuance is that the desktop-browser line is scoped to \"advanced editing and Brand features\", not to import itself, so an 11-page / 9.8 MB file is comfortably inside every limit.",
+   "evidence_url": "https://www.canva.com/help/import-and-edit-pdfs-canva/",
+   "correction": "Minor wording: the page says \"A desktop browser is recommended for advanced editing and Brand features\", i.e. desktop is recommended for editing, not required for import (mobile import paths are documented on the same page)."
+  }
+ },
+ {
+  "claim": null,
+  "verdict": {
+   "verdict": "holds_with_correction",
+   "reason": "Verified against the local files: build-epk-kit.py has no JSON emission (grep finds none), build-epk-ai.py records ops via Ops/Recorder and dumps them with json.dumps into the JSX (line 438) plus links.json (line 441), and kit.para() does draw line-by-line via simpleSplit+textOut (lines 255-276); however the \"one element per line\" consequence is wrong because install() replaces kit.para with a recorder that emits one \"area\" op per paragraph block and kit.tracked with one \"point\" op per heading, and the Recorder has no beginText/textOut/drawText methods, so a Canva emitter reusing the same recording canvas gets paragraph-level text elements, not per-line ones.",
+   "correction": "Replace \"so a naive replay produces one element per line\" with: \"but build-epk-ai.py's install() swaps kit.para for a recorder that emits a single 'area' op per paragraph block (text, x, top, w, h, font, size, lead, fill, align, min, gap \u2014 see Ops.area at ~line 124 and install() at ~lines 236-241) and kit.tracked for one 'point' op per heading; the Recorder has no beginText/textOut, so per-line drawing never happens during recording. A Canva emitter reusing this recorder receives paragraph-level text elements it can map to Canva text boxes, and only a fresh replay against the raw reportlab canvas would produce one element per line.\"",
+   "evidence_url": "file:///Users/scrogdawg/BMF%20Headquarters/Previous%20Years/2025%20-%20SEW%20TO%20GROW/25_01%20KILLER%20OF%20MEN%20(THESIS)/FESTIVAL%20CAMPAIGN/site/tools/build-epk-ai.py"
+  }
+ }
+]

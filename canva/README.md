@@ -27,15 +27,29 @@ The plan and its research: `press/canva-plan.md`.
 
 | Need | Check | Install |
 |---|---|---|
-| This repo, cloned | `git -C kom-festival-board log -1` | `git clone https://github.com/Scroggdawg/kom-festival-board.git` |
-| Python 3.12+ with a venv | `venv/bin/python -c "import reportlab, PIL, pypdf, pymupdf"` | `python3 -m venv venv && venv/bin/pip install reportlab pillow pypdf pymupdf fonttools` |
+| This repo, cloned, with push access if you will commit | `git -C kom-festival-board log -1` | `git clone https://github.com/Scroggdawg/kom-festival-board.git`; pushing needs Luke's GitHub credentials on the machine (`gh auth status`) |
+| Python 3.12+ with a venv at the repo root | `venv/bin/python -c "import reportlab, PIL, pypdf, pymupdf, fontTools"` | `python3 -m venv venv && venv/bin/pip install -r tools/requirements.txt` (`venv/` is gitignored) |
 | Baskerville on the machine (the kit measures text with it) | `ls /System/Library/Fonts/Supplemental/Baskerville.ttc` | macOS ships it; on another OS the kit will not measure identically |
 | Node 24 and npm 11 | `node -v && npm -v` | https://nodejs.org |
-| Canva CLI | `npx @canva/cli@latest --version` | `npm i -g @canva/cli` |
-| Chrome logged in to Luke's Canva account (Pro) | open https://www.canva.com | Luke logs in; an agent drives it with Claude in Chrome |
+| The app's dependencies | `ls canva/kom-epk-builder/node_modules` | `cd canva/kom-epk-builder && npm ci` (about a minute; `node_modules` and `dist` are gitignored) |
+| Chrome logged in to Luke's Canva account (Pro) | open https://www.canva.com | Luke logs in |
+| **The Claude in Chrome extension signed in to the SAME Claude account as the session driving it** | the session's browser tools list a connected browser | the extension pairs with one Claude account; a new Claude account must sign the extension in before it can drive Chrome. The session then asks which browser to use and Luke clicks Connect in Chrome |
 | Access to the Canva Developer Portal on that account | https://www.canva.dev/ | Luke accepts the Developer Terms once, himself |
+| Google Drive for Desktop (mirrors only) | `ls ~/Google\ Drive/My\ Drive/KILLER\ OF\ MEN` | optional; the repo is the source, the Drive is a mirror |
 
-No secrets are needed. The app runs from `http://localhost:8080` and the Developer Portal points at it; the ops JSON and the images are fetched from public GitHub Pages URLs.
+No secrets are needed. The app runs from `http://localhost:8080` and the Developer Portal points at it; the ops JSON and the images are fetched from public GitHub Pages URLs. A fresh clone of the repo was tested on 2026-09-10 (venv from `tools/requirements.txt`, emitter, `npm ci`, typecheck, build): see "Fresh-clone test" below.
+
+## What the first session knew that is written nowhere else
+
+Read this before touching Canva; it is the context a cold start would otherwise lack.
+
+- **Nothing has run inside Canva yet.** The app has passed the type checker, the linter, a production build and two documentary reviews, but no Developer Portal app exists, no probe has run, no page has been built. The first run inside Canva will surface things the type checker cannot: whether `addPage` accepts the richtext batch, whether the Preview button can open the app inside an existing 18 × 24 in design, the pixel size Canva gives that page. Expect to debug; `canva/kom-epk-builder/BUILD-REPORT.md` lists every SDK call with the doc it was checked against, and `canva/research/` holds the full research and 175 verification verdicts.
+- **The app treats `mailto:` links as plain text** because Canva documents richtext links as external URLs only. Two rows on page 3 (the AFI contact and the film email) will show the address without a link. That matches the recorded decision.
+- **Page order.** Canva documents `getDesignMetadata().pageMetadata` order as not guaranteed. Build page 1 first, confirm by eye that it landed where you expect and that the app's log says the new page is the current page, delete the design's default blank page, then build the rest.
+- **The dev server warns** `CANVA_APP_ID not found in .env`. That only disables the CLI's own preview link. The Developer Portal's Preview button does not need it. To silence it, `npx canva apps link` after the app exists in the Portal.
+- **Fidelity is not pixel-identical and was accepted as such.** Libre Baskerville, Canva's own line breaking on paragraphs, and screen-pixel page size are known; the pilot on page 3 is where Luke judges them.
+- **Browser driving.** Canva's Terms of Use forbid scraping and bypassing access controls. Use the documented UI, at human pace, with Luke's standing OK (recorded in `STATE.json`). If the app route fails outright, `press/canva-plan.md` route B (browser automation of the editor) is the fallback, with its costs.
+- **Two sessions may share the working tree** on Luke's Mac. Explicit-path commits only; test a handoff filename does not exist before writing it (`[ -e handoffs/handoff-NNN-epk.md ]` must be false); never stash or reset.
 
 ## Steps
 

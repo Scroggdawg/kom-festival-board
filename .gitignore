@@ -13,3 +13,7 @@ tools/.epk-ai-build/
 # Redesign scratch: contains rendered pages of ANOTHER film's press kit (the NightFeeds
 # reference) and builder experiments. Not ours to republish; never committed.
 press/credit-redesign/
+
+# local Python environments (see tools/requirements.txt)
+venv/
+.venv/

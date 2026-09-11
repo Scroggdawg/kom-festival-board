@@ -1,0 +1,1061 @@
+[
+ {
+  "lane": "Canva Connect API (REST, canva.dev) \u2014 with the two adjacent Canva surfaces that the Connect docs point to when content editing is asked about: the Apps SDK Design Editing API and the Canva remote MCP server (mcp.canva.com)",
+  "claims": [
+   {
+    "claim": "The Connect REST API has NO endpoint that edits design content (text, images, element positions, hyperlinks). The full endpoint index lists only: Authentication, Analytics, Assets, Autofill, Brand Templates, Comments, Designs (create/list/get/pages/export formats/dataset), Design Imports, Exports, Folders, Merges, Resizes, Users, Webhooks.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/llms.txt",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "The Connect changelog (2024-06-18 through 2026-08-25) contains no entry for a Connect-side Design Editing API or any element-level editing; 2026 entries are autofill (create_from_design / update_design GA 2026-08-25), Get design dataset GA, Get design export formats GA, email HTML export formats.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/changelog/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "The 'Design Editing API' announced 2025 belongs to the Apps SDK (JavaScript running inside the Canva editor as an app), not to Connect. It moved 'from beta to GA' on Jun 25, 2025 ('The Design Editing API gives your app DOM-like powers to read and modify Canva designs').",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/blog/developers/launching-new-ways-to-build/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Apps SDK Design Editing (openDesign): `current_page` context is GA; `all_pages` context is 'currently in preview and only available in the preview package'. Sessions have a 1-minute expiry; only one page can be loaded at a time. Elements that can be read/created/edited: text, rect (with solid colour or image/video fill), shape (SVG paths), group, embed. Images and videos are represented as rects with media fills; tables 'not currently supported'. Pages cannot be added from openDesign. Element creation via session.helpers.elementStateBuilder.createTextElement / createRectElement / createShapeElement / createEmbedElement, inserted with session.page.elements.insertAfter, saved with await session.sync().",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/design-editing/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Apps SDK openDesign createTextElement formatting documented on the guide page is fontSize, color, fontWeight, textAlign. fontRef and link are NOT shown for elements created inside openDesign on that page \u2014 hyperlink/font-by-ref support for openDesign-created text could not be confirmed from the guide.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.dev/docs/apps/design-editing/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Apps SDK addPage (GA, no preview label) adds a page after the current one with custom dimensions (each side 40\u20138000 px, area \u2264 25,000,000) and accepts text, image, video, shape, group, embed and richtext elements. Text formatting fields include fontRef, fontSize, color, link, textAlign, decoration, fontWeight, fontStyle; image elements take ref, top, left, width, height, altText (+ rotation). Positions -32768..32767 px, dimensions 0..32767 px. Shapes: 1\u201330 paths, \u2264 2 KB combined, \u2264 6 unique fills.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/design-add-page/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Apps SDK editContent (GA): target 'current_page' only; only 'richtext' content type; inline formatting includes color, fontWeight, fontStyle, decoration, strikethrough, lineHeightEm 0.5\u20132.5, letter spacing, `link` ('An external URL that the text links to'), `fontRef`; paragraph formatting includes textAlign, list markers, fontSize 1\u20131000 px. Cannot add elements or pages.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/design-edit-content/",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Apps SDK fonts: findFonts returns 'Only a subset of Canva's fonts'; a FontRef is 'A unique identifier that points to a font asset in Canva's backend'; requestFontSelection returns {ref, name, weights}. Whether Baskerville (Regular/SemiBold/Bold) exists in Canva's library, and whether brand-kit/uploaded fonts are exposed to these APIs, is not stated.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.dev/docs/apps/api/latest/asset-find-fonts/ and https://www.canva.dev/docs/apps/api/latest/asset-request-font-selection/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Apps SDK image upload (upload()): 'Maximum file size: 50MB'; MIME types image/jpeg, image/heic, image/png, image/svg+xml, image/webp, image/tiff; the URL 'Must be publicly accessible (i.e. not a localhost URL)' and 'Must not redirect'; thumbnail URL must be HTTPS+CORS, or a base64 data URL \u2264 10 MB.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/asset-upload/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "A developer can run their own Apps SDK app inside the Canva editor without Canva review: 'In the Developer Portal, click the Preview button. This will open the app in a new tab.' (Development URL field). No plan-tier requirement for Preview is stated. Team apps (unreviewed release to a whole team) are Enterprise-only; public release requires Canva app review.",
+    "status": "documented-gated",
+    "gate": "Preview: developer's own account, no review, no stated plan gate. Team apps: Enterprise only. Public: Canva review.",
+    "source": "https://www.canva.dev/docs/apps/previewing-apps/ ; https://www.canva.dev/docs/apps/releasing-apps/ ; https://www.canva.com/help/what-are-team-apps/ (via search snippet; direct fetch 403)",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Connect integrations are Public or Private. 'Private integrations can only be used by your team on a Canva Enterprise plan.' Public integrations need Canva review only to be released to all users; 'Public integrations can be used in draft state for individual usage and testing. Unless your integration will be accessed in a marketplace, you don't need to submit it for verification and approval.' So a Pro user creates a PUBLIC integration, leaves it in draft, and authorizes it with his own account.",
+    "status": "documented-current",
+    "gate": "Private = Enterprise only; Public-in-draft = any plan, no review",
+    "source": "https://www.canva.dev/docs/connect/creating-integrations/ ; https://www.canva.dev/docs/connect/submitting-integrations/ ; https://www.canva.dev/blog/developers/canva-and-coding-agents-platforms/ (Jun 9, 2026)",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Public integrations that use preview APIs 'will not pass the review process', and preview APIs 'are not finalized and we don't recommend them for use in production' \u2014 irrelevant to a draft integration used privately, but note Get design pages is still preview.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "OAuth: Authorization Code + PKCE (SHA-256); at least one redirect URL must be set; the Quickstart uses http://127.0.0.1:3001/oauth/redirect (plain-HTTP loopback accepted); token exchange must come from a backend (CORS-blocked in browser); access tokens expire in 4 hours (expires_in 14400, 'subject to change'); 'Each refresh token can only be used once'; refresh-token lifetime not documented.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/authentication/ ; https://www.canva.dev/docs/connect/quickstart/ ; https://www.canva.dev/docs/connect/api-reference/authentication/generate-access-token/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Scopes (18): asset:read, asset:write, brandtemplate:content:read, brandtemplate:content:write, brandtemplate:meta:read, collaboration:event, comment:read, comment:write, design:content:read, design:content:write ('Create designs on the user's behalf'), design:meta:read, email, folder:permission:write, folder:read, folder:write, openid, profile, profile:read. Needed for this kit: asset:write, design:content:write, design:content:read, design:meta:read, folder:read, folder:write.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/appendix/scopes/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Create design (POST /v1/designs): preset types doc/email/presentation/whiteboard, or custom width/height in pixels, each 40\u20138000 px with area \u2264 25,000,000 px\u00b2 (1296 x 1728 = 2,239,488 fits). Optional asset_id to add one asset \u2014 'Currently, this only supports image assets.' No other content can be specified. 'Blank designs created with this API are automatically deleted if they're not edited within 7 days.' 20 req/min/user.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/api-reference/designs/create-design/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Asset upload (POST /v1/asset-uploads, application/octet-stream body + Asset-Upload-Metadata header with name_base64, name \u2264 50 chars unencoded) and a URL variant (/v1/url-asset-uploads). Images: JPEG, PNG, HEIC, single-frame GIF, TIFF, single-frame WEBP, 'smaller than 50 MB'; videos < 500 MB. Rate limit 30 req/min/user. Requires asset:write.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/api-reference/assets/ ; https://www.canva.dev/docs/connect/api-reference/assets/create-asset-upload-job/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Export (POST /v1/exports): formats JPG, PNG, GIF, PPTX, MP4, PDF, CSV, html_bundle, html_standalone. PDF: export_quality 'regular' (default) or 'pro' ('Premium quality export'); 'size' (a4/a3/letter/legal) applies only to Canva Docs; 'pages' array. 'A pro export might fail if the design contains premium elements and the calling user ... isn't on a Canva plan (such as Canva Pro) that has premium features.' No CMYK/bleed/crop-mark/flatten options documented. Limits: 20 req/min/user; 750 exports per 5 min and 5,000 per 24 h per integration; 75 per 5 min per document; 75 per 5 min and 500 per 24 h per user; download URLs valid 24 h. Free plan cannot upscale fixed-dimension designs beyond 1.125x.",
+    "status": "documented-current",
+    "gate": "'pro' quality with premium elements: paid plan",
+    "source": "https://www.canva.dev/docs/connect/api-reference/exports/create-design-export-job/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Design import (POST /v1/imports, octet-stream body + Import-Metadata header title_base64 / mime_type) and URL import (GA 2025-06-24). Supported types include Adobe Illustrator (application/illustrator, .ai), Photoshop, Affinity, Keynote/Numbers/Pages, Excel/PowerPoint/Word, OpenOffice, PDF. 'Imports with a large number of pages or assets are split into multiple designs.' Response gives design IDs plus edit/view URLs valid 30 days. 20 req/min/user; scope design:content:write. File-size limits are not stated in the API docs (they defer to Canva Help upload requirements).",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/api-reference/design-imports/ ; https://www.canva.dev/docs/connect/api-reference/design-imports/create-design-import-job/ ; https://www.canva.dev/docs/connect/changelog/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Canva Help upload limits for PDF import: up to 300 MB and 500 pages (~1,400 elements); unsupported fonts are replaced with the closest Canva font; scanned PDFs import as flattened images; text and images become separate editable elements. Whether PDF link annotations survive import is not stated. Help Center pages returned HTTP 403 to the fetcher; these figures come from search-result snippets of canva.com/help pages and third-party write-ups.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/upload-formats-requirements/ and https://www.canva.com/help/import-and-edit-pdfs-canva/ (403 on fetch; figures via search snippets)",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Folders: POST /v1/folders creates a folder under 'root', 'uploads' or a parent folder id (20 req/min/user, scope folder:write); also Get/Update/Delete folder, List folder items, Move folder item. No plan gate stated.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/api-reference/folders/create-folder/ ; https://www.canva.dev/docs/connect/llms.txt",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Autofill API: 'To use the Autofill APIs, your integration must act on behalf of a user who is a member of a Canva Enterprise organization. Users on Canva paid plans have access to a limited trial while your integration is under development.' Fields: text, image (video as image), chart (\u2264100 rows x 20 cols), sheet; strings \u2264 10,000 chars; \u2264 20 media items per cell; unknown field names silently skipped; 60 req/min/user; scope design:content:write. Job types create_from_brand_template, create_from_design, update_design (GA 2026-08-25).",
+    "status": "documented-gated",
+    "gate": "Enterprise for production; 'limited trial' for paid plans during development (extent of trial not quantified)",
+    "source": "https://www.canva.dev/docs/connect/api-reference/autofills/ ; https://www.canva.dev/docs/connect/api-reference/autofills/create-design-autofill-job/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Brand Templates API (list/get/dataset/publish): 'your integration must act on behalf of a user that's on a Canva plan with access to brand templates (such as Canva Pro, Canva Teams, or Canva Enterprise)'; 100 req/min/user; scope brandtemplate:meta:read.",
+    "status": "documented-gated",
+    "gate": "Pro / Teams / Enterprise",
+    "source": "https://www.canva.dev/docs/connect/api-reference/brand-templates/list-brand-templates/",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Get design pages (GET /v1/designs/{id}/pages) is 'currently provided as a preview'; returns page thumbnails/dimensions/ids only, not elements; 100 req/min/user.",
+    "status": "documented-gated",
+    "gate": "preview API",
+    "source": "https://www.canva.dev/docs/connect/api-reference/designs/get-design-pages/",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Rate limits are documented per endpoint (no global page exists): create design 20/min, asset upload 30/min, export 20/min (+ the quotas above), import 20/min, folders 20/min, autofill 60/min, brand templates 100/min, users/me 10/min, comments list 100/min \u2014 all 'for each user of your integration'. Poll async jobs with exponential backoff.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/api-requests-responses/ plus the per-endpoint pages cited above",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Canva remote MCP server (https://mcp.canva.com/mcp) plan availability: 'All plans: Design generation, editing, search, exports, comments, asset uploads, and most core features'; 'Canva Pro and above: Design resizing'; 'Enterprise: Autofill templates, brand kits, brand templates'. Editing tools: start-editing-transaction (returns element ids for 'richtexts and fills'), perform-editing-operations, commit-editing-transaction; documented operations are replace_text and find_and_replace_text; images must be uploaded first with upload-asset-from-url (public HTTPS URL, 30 req/min) to get an asset_id. Editing transactions 20\u2013100 req/min; export-design 20/min; import-design-from-url 20/min.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/mcp/ ; https://www.canva.dev/docs/mcp/tools.md ; https://www.canva.dev/docs/mcp/tools/perform-editing-operations/ ; https://www.canva.dev/docs/mcp/tools/start-editing-transaction.md",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Third-party pages claim the MCP edit tool 'now supports text insertion and page insertion' and reads geometry \u2014 this was NOT found on canva.dev; the canva.dev operation docs show only text replacement on existing elements. Treat coordinate-level placement of new text/images via MCP as unverified.",
+    "status": "could-not-verify",
+    "source": "canva.dev MCP tool pages (above) vs search snippets citing docs.dust.tt / canva.com/help/mcp-canva-usage (403 on fetch)",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Connecting one's OWN MCP client (e.g. a Python agent) to mcp.canva.com requires the redirect URI to be allowlisted via a Waitlist form reviewed for 'brand alignment, trust and safety considerations, compliance readiness, technical fit, and strategic alignment'; 'Private access is currently limited as we have a full waitlist of clients.' Pre-configured access exists for 'ChatGPT, Codex, Claude, Grok, Perplexity, Superhuman, and more' (canva.dev also names Gemini, Cursor, VS Code). Claude Code specifically: not named on canva.dev pages read.",
+    "status": "documented-gated",
+    "gate": "waitlist for custom clients; self-serve only through pre-approved assistants",
+    "source": "https://www.canva.dev/docs/mcp/ ; https://www.canva.dev/docs/mcp/llms.txt ; https://www.canva.dev/blog/developers/canva-and-coding-agents-platforms/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Newsroom pages (canva.com/newsroom/...) and Help Center pages (canva.com/help/...) returned HTTP 403 to the fetcher; claims sourced from them are marked could-not-verify or rely on canva.dev equivalents.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/newsroom/news/new-apis-data-connectors/ ; https://www.canva.com/help/mcp-agent-setup/",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Summary of what an individual Canva Pro user can use TODAY via Connect without Enterprise: OAuth into a public-in-draft integration (no review), Asset Upload, Create Design (blank, or blank + one image), Design Import (PDF / .ai / PPTX), Export (PDF regular or pro), Folders, Brand Templates (read/list), Get design/list designs, Comments, Webhooks. NOT usable: Private integrations (Enterprise), Autofill in production (Enterprise; dev-time 'limited trial' only), any element-level editing (does not exist in Connect).",
+    "status": "documented-current",
+    "source": "Aggregate of the canva.dev pages cited above",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   }
+  ],
+  "steps_for_this_kit": [
+   "1. In Luke's Chrome, open canva.dev Developer Portal > Your integrations > Create an integration > PUBLIC (leave in draft; never submit). Name it, add redirect URL http://127.0.0.1:3001/oauth/redirect, tick scopes asset (R/W), design:content (R/W), design:meta (R), folder (R/W), brandtemplate:meta (R). Generate client secret once and store it locally (never in the repo).",
+   "2. Run a tiny local OAuth PKCE receiver (Python, port 3001). Agent opens the authorize URL in Luke's logged-in Chrome; Luke clicks Allow; receiver exchanges the code for an access token (4 h) + single-use refresh token. Persist tokens locally; refresh on 401.",
+   "3. Connect: POST /v1/folders to create 'KILLER OF MEN \u2014 EPK' under root and a 'Press assets' subfolder. Then POST /v1/asset-uploads for the poster JPG, 41 stills (1920x1080 PNG), 10 BTS JPGs and 4 headshots \u2014 all under 50 MB each; throttle to <30/min (56 files \u2248 2\u20133 min). Optionally move uploaded assets into the subfolder with Move folder item. Record every asset_id \u2192 filename in a JSON manifest.",
+   "4. Baseline design \u2014 two documented options, run both and compare: (a) Design Import: POST /v1/imports with the 9.8 MB compressed EPK PDF (or the .ai) \u2192 editable design(s); check page count (11), whether text landed as editable text, fonts substituted, and whether the 19 links survived (unverified). (b) Create Design: POST /v1/designs with custom 1296x1728 px (fits the 25 M px\u00b2 cap) \u2014 this yields ONE blank page only; Connect cannot add pages or content.",
+   "5. Content placement is NOT possible through Connect. Choose the placement surface and flag it plainly to Luke: (i) Apps SDK app run via Developer Portal 'Preview' (no review, no stated plan gate) from the agent's local dev server \u2014 port build-epk-kit.py's operations list to addPage() calls (custom 1296x1728 page; text with fontRef + link; images by asset ref) for pages 2\u201311 and openDesign for page 1; fonts: resolve Baskerville via findFonts/requestFontSelection first and fall back if absent; or (ii) drive the Canva editor UI directly with Claude-in-Chrome (the browser lane); or (iii) Canva AI Connector from a pre-approved assistant (text replacement documented; insertion unverified). Recommendation: (i) for fidelity, (ii) as fallback.",
+   "6. Verification: GET /v1/designs/{id}/pages (preview API, thumbnails) to eyeball each page; POST /v1/exports {format:'pdf', export_quality:'pro'} and diff the exported PDF against the Illustrator master (page size, text positions, link annotations) with the Python toolchain. Stay under 20 exports/min and 75 per 5 min per document.",
+   "7. Hand-off: share the Canva design/folder with the director and producer from Luke's account (sharing is not exposed in the Connect scopes list read; do it in the UI). Revoke the integration token (POST /v1/oauth/revoke) when finished."
+  ],
+  "limits": [
+   "Connect cannot place text, images, rules or hyperlinks on a page, cannot add pages, and cannot set fonts \u2014 the only content it can inject is one image asset at design creation and whatever Design Import extracts from a PDF/.ai.",
+   "Private integrations are Enterprise-only; the workable route for a Pro user is a public integration left in draft (documented as allowed for 'individual usage and testing').",
+   "Autofill (Brand Templates \u2192 designs) requires Enterprise in production; Pro gets only an unquantified 'limited trial while your integration is under development'.",
+   "Create-design custom size is in pixels (max 8000 per side, 25,000,000 px\u00b2 area) \u2014 18x24 in must be expressed as 1296x1728 px (72 px/in); Canva has no inch/pt unit in this endpoint.",
+   "Export PDF has no CMYK, bleed, crop-mark or flatten options; PDF 'size' paper presets apply only to Canva Docs; 'pro' quality may fail if premium elements are present on a plan without premium features.",
+   "Asset uploads capped at 50 MB per image, 30 req/min; asset names \u2264 50 characters (unencoded).",
+   "Design Import: imports 'with a large number of pages or assets are split into multiple designs'; font substitution and link-annotation survival are not documented on canva.dev (Help Center pages returned 403).",
+   "Blank designs created via the API are auto-deleted if not edited within 7 days.",
+   "Access tokens last 4 h; refresh tokens are single-use \u2014 a lost refresh response forces re-authorization by Luke in the browser.",
+   "Get design pages (thumbnail verification) is a preview API.",
+   "Apps SDK Design Editing (the only programmatic element-level surface): all_pages is preview; sessions expire after 1 minute; image URLs passed to upload() must be public HTTPS (the agent needs a public URL, e.g. the Drive mirror or a tunnel, not localhost); findFonts returns only a subset of fonts, and Baskerville availability is unverified.",
+   "Custom MCP clients need waitlist approval; documented MCP edit operations are text replacement only."
+  ],
+  "effort_estimate": "Connect-only work (integration setup, OAuth receiver, 56 asset uploads, folder, PDF/.ai import, PDF export + diff): about half a day of agent time plus two Luke clicks (Allow in OAuth; confirm import result). Rebuilding the eleven pages with true text, fonts and 19 links requires the Apps SDK placement step: roughly 1\u20132 days to port build-epk-kit.py's operation list to addPage()/openDesign calls, run the app via Developer Portal Preview from a local dev server, resolve fonts, and iterate on pixel positions; add a day if Baskerville must be substituted and re-kerned. Browser-driven placement as fallback is slower (hours per page) and less exact.",
+  "fidelity_to_the_pdf": "Via Connect alone: low-to-medium. Design Import is the only path that yields text and images on 11 pages, and Canva rebuilds the layout with its own type engine, substitutes non-library fonts, and (undocumented) may drop PDF link annotations; splitting into multiple designs is possible. Via Apps SDK addPage driven from the existing operations list: medium-to-high \u2014 text runs with fontRef, size, colour (#efe6d6 on #0b0806 backgrounds), alignment and per-range hyperlinks are all documented, images place by asset ref at pixel coordinates, page size 1296x1728 px matches 18x24 in at 72 px/in; residual gaps are Baskerville availability/metrics, rules drawn as thin rects or shapes, and Canva's own text-box wrapping versus Illustrator's. Exported PDF quality: 'pro' export, no print-production controls."
+ },
+ {
+  "lane": "Canva Apps SDK (an app running inside the Canva editor, canva.dev/docs/apps) \u2014 feasibility of replaying the build-epk-kit.py operation list into an 18 x 24 in Canva design",
+  "claims": [
+   {
+    "claim": "Anyone with a standard (free) Canva account has full access to the Developer Portal; no separate developer account or paid plan is required. Creating an app requires agreeing to the Canva Developer Terms.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/prerequisites/ and https://www.canva.dev/docs/apps/quickstart.md",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Toolchain: the starter kit / `canva apps create` requires Node.js v24 and npm v11; `canva apps start` serves the bundle at http://localhost:8080. The app is previewed by setting App source > Development URL in the Developer Portal to that localhost URL and clicking Preview; Chrome works over plain HTTP, Safari needs `--use-https`. You cannot open localhost:8080 directly; the app only renders inside the Canva editor.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/prerequisites/ ; https://www.canva.dev/docs/apps/previewing-apps.md ; https://github.com/canva-sdks/canva-apps-sdk-starter-kit/blob/main/README.md",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "No review is needed for the owner to run the app in preview/development mode. Review is only required to release: public release goes through Canva's app review; 'team apps' (private distribution to a team) are only available to teams on an Enterprise plan and are approved by a team owner/admin instead of Canva. Consequence: Luke can run the app himself in preview; the director/producer cannot run the app (not Enterprise) but they do not need to \u2014 they edit the resulting design.",
+    "status": "documented-gated",
+    "gate": "Team-app distribution = Canva Enterprise only; public distribution = Canva review. Owner-only preview use = no gate.",
+    "source": "https://www.canva.dev/docs/apps/managing-team-apps.md ; https://www.canva.dev/docs/apps/releasing-apps.md ; https://www.canva.dev/docs/apps/previewing-apps.md ('You can't submit an app for review while the [Development URL] field contains a value')",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Whether the Preview button can open the app inside an EXISTING design (vs. a new preview design) and whether the design type/size can be chosen at preview time is not stated in the docs; the docs only say Preview 'opens the app in a preview Canva editor' in a new tab and lets you pick the intent to preview.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.dev/docs/apps/previewing-apps.md ; https://www.canva.dev/docs/apps/quickstart.md",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "`addElementAtPoint` (from @canva/design) places elements at absolute top/left (and width/height for images) in fixed-dimension designs (posters, presentations); it does NOT work in Docs/Whiteboards. Supported positioned element types: image, video, embed, text, richtext, shape, group, table. Coordinate ranges: top/left -32768..32767, width/height 0..32767, rotation -180..180. Units are pixels of the design; origin is the page's top-left.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/design-add-element-at-point/ ; https://www.canva.dev/docs/apps/elements/ (support table lists Richtext under addElementAtPoint) ; https://www.canva.dev/docs/apps/positioning-elements.md",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Plain `text` elements accept: children (one string), fontSize 1..1000 (px in API, shown as pt in UI), color (#rrggbb), textAlign start|center|end|justify, fontWeight normal|thin|extralight|light|medium|semibold|bold|ultrabold|heavy, fontStyle normal|italic, decoration none|underline, fontRef, width, rotation. They have NO letter-spacing, NO line-height, NO link property, and 'Text elements can't have a predefined height' / 'Apps can't set the line-height of text'.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/design-add-element-at-point/ ; https://www.canva.dev/docs/apps/creating-text/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "`richtext` elements (createRichtextRange + type:'richtext' with range, top, left, optional width) DO support tracking and leading and links: formatParagraph accepts fontRef, fontSize, textAlign, letterSpacingEm (range -0.2..0.8 em, default 0), lineHeightEm (0.5..2.5, default 1.4), list props; formatText (inline) accepts color, fontWeight, fontStyle, decoration, strikethrough, and `link` ('An external URL that the text links to'). letterSpacingEm/lineHeightEm went GA in @canva/design 2.11.0 on 2026-08-10. Font can only be set per paragraph, not inline.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/design-create-richtext-range/ ; https://www.canva.dev/docs/apps/examples/richtext-elements/ (shows RichtextElementAtPoint with top/left/width and formatParagraph letterSpacingEm) ; https://www.canva.dev/docs/apps/api/latest/design-changelog.md (2.11.0, 2026-08-10) ; https://www.canva.dev/docs/apps/fonts.md ('Apps can only set the font of paragraphs, not of inline text')",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Fonts are referenced by an opaque FontRef obtained either from `requestFontSelection()` (opens Canva's own font picker; returns ref, name, available weights/styles) or `findFonts()` (returns 'a subset of Canva's fonts'; also resolves specific refs via {fontRefs:[...]}). A ref can be hard-coded once discovered. Hard limits: 'Apps can't access Canva Pro fonts', 'Apps can't upload or otherwise define custom fonts', 'Apps can't download the underlying font files'.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/fonts.md ; https://www.canva.dev/docs/apps/api/latest/asset-request-font-selection/ ; https://www.canva.dev/docs/apps/api/latest/asset-find-fonts/ ; https://www.canva.dev/docs/apps/examples/fonts.md",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Whether a Brand Kit UPLOADED font (e.g. Luke's Baskerville) appears in the app's requestFontSelection picker or in findFonts, and whether such a ref can be applied to elements, is not documented anywhere in the Apps SDK docs (brand kit / uploaded fonts are never mentioned). Uploading fonts to a Brand Kit is itself gated to Pro/Teams/Business/Education/Nonprofits (OTF/TTF/WOFF, 500 fonts per kit, must be licensed for embedding). Must be tested at runtime on Luke's account.",
+    "status": "could-not-verify",
+    "gate": "Brand Kit font upload = Canva Pro or higher (help center); app access to those fonts = undocumented",
+    "source": "https://www.canva.dev/docs/apps/fonts.md (silent) ; https://www.canva.com/help/upload-fonts/ (plan list, via search snippet \u2014 page itself returned 403 to fetch)",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Canva's library does not carry Monotype Baskerville; the free look-alike is Libre Baskerville (Regular/Italic/Bold only, no SemiBold weight in the family). Both statements come from secondary sources; Canva's own 'best free business fonts' page (canva.com/learn) was returned in search as listing Libre Baskerville as free but returned 403 to fetch.",
+    "status": "could-not-verify",
+    "source": "https://8designers.com/blog/what-font-is-baskerville-in-canva (secondary) ; https://www.firtherdesignco.com/blog/the-best-free-serif-fonts-on-canva (secondary) ; https://www.canva.com/learn/the-best-free-business-fonts/ (403 on fetch)",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Images: `upload()` from @canva/asset takes type:'image', mimeType (jpeg/png/webp/svg/heic/tiff), aiDisclosure, and a `url` that is either an HTTPS URL that 'Must be publicly accessible (i.e. not a localhost URL)', 'Must not redirect', 'Must not contain an IP address', max 50MB \u2014 or a base64 data URL, 'Maximum size: 10MB (10 \u00d7 1024 \u00d7 1024 characters)'. Returns {ref, whenUploaded()}. Image elements can also be placed directly with a `dataUrl` instead of a ref. Consequence: a localhost dev server cannot be an image source; Google Drive share links redirect and so fail; the practical path is data URLs generated from Python (pre-cropped, re-encoded under 10MB).",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/asset-upload/ ; https://www.canva.dev/docs/apps/api/latest/design-add-element-at-point/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "No crop box or opacity can be set when ADDING an image via addElementAtPoint/addPage (ImageElementAtPoint has only ref/dataUrl, altText, top, left, width, height, rotation). In the Design Editing API, images are 'rects with fills'; ImageFill exposes flipX/flipY only, no crop. Element-level `transparency` is a common editable property in the Design Editing API (per the design-editing page text surfaced in search; not re-confirmed on a direct fetch). Consequence: the kit's cover-crops must be baked into the uploaded pixels, and the 16%-opacity ghost stills either baked in or set post-hoc via openDesign().transparency.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/design-add-element-at-point/ ; https://www.canva.dev/docs/apps/design-editing.md ; https://www.canva.dev/docs/apps/design-editing/ (transparency property, via search snippet)",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "`addPage(opts)` adds a page with optional title (\u2264255 chars), background (solid hex / image / video), `elements` (ElementAtPoint[] incl. richtext) and `dimensions` {width,height} in px: each side 40..8000, total area \u2264 25,000,000 px\u00b2. Returns {id, title, dimensions, type}. Custom dimensions added in 2.7.5 (2025-12-09); page IDs in 2.12.0 (2026-08-12). Canva's editor imposes the same envelope: designs min 40 x 40 px, max 8000 x 3125 px (help center).",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/design-add-page.md ; https://www.canva.dev/docs/apps/api/latest/design-changelog.md ; https://www.canva.com/help/resize/ (via search snippet; page 403 on fetch)",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Page size in Canva px for an 18 x 24 in poster: Canva help/docs do not publish the in\u2192px factor. Secondary sources say Canva converts at 96 px/in, which gives 1728 x 2304 px (area 3.98M, inside the 25M addPage cap). A 300-dpi interpretation (5400 x 7200, area 38.9M) would exceed both the addPage area cap and the editor's 8000 x 3125 max, so it cannot be what Canva stores. The agent must read the real value at runtime with getDesignMetadata().defaultPageDimensions / getCurrentPageContext().dimensions (both documented as pixels) and scale the kit's 1296 x 1728 pt layout by pagePx/1296, flipping y (PDF origin bottom-left \u2192 Canva top-left).",
+    "status": "could-not-verify",
+    "source": "https://www.canva.dev/docs/apps/api/latest/design-get-design-metadata/ ; https://www.canva.dev/docs/apps/api/latest/design-get-current-page-context/ ; https://www.canva.com/help/resize/ (8000x3125 max, via search snippet) ; 96 px/in from secondary sites only",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Reading the current design: `openDesign({type:'current_page'|'all_pages'}, cb)` from @canva/design reads and edits pages (dimensions, elements, text as richtext, rect fills, transparency); GA since 2.6.1 (2025-06-24), multi-page GA since 2.10.0 (2026-06-12) \u2014 although the narrative design-editing page still says all_pages is 'in preview', so the docs are internally inconsistent. Sessions expire after 1 minute; edits apply only on sync(). The Design Editing API 'cannot add pages'.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/design-editing.md ; https://www.canva.dev/docs/apps/api/latest/design-open-design.md ; https://www.canva.dev/docs/apps/api/latest/design-changelog.md",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Hyperlinks: via the API only on TEXT, through richtext inline `link`. There is no link property on image, shape or group elements in addElementAtPoint/addPage, and the @canva/design changelog has no entry adding one. In the editor UI, Canva lets users add links to text, elements, images and videos, and they survive PDF download (non-flattened). So any of the 19 links that sit on an image rather than on words must be added by hand (or by the browser agent) after the build.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/design-create-richtext-range/ ; https://www.canva.dev/docs/apps/api/latest/design-add-element-at-point/ ; https://www.canva.com/help/hyperlinks/ (via search snippet; 403 on fetch)",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Rules/lines: no line element; use a `shape` element (viewBox + SVG paths, 1\u201330 paths, \u22642 KB combined, \u22646 fill colours) drawn as a thin filled rectangle at exact top/left/width/height.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/apps/api/latest/design-add-page.md (shape constraints)",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Rate limits: none are published for addElementAtPoint, addPage, upload, findFonts or openDesign (each reference page was checked; only requestExport has a documented limit). A `rate_limited` CanvaError code exists ('too many requests within a certain time period'), so the replayer must await each call and back off on that code.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.dev/docs/apps/handling-errors/ ; https://www.canva.dev/docs/apps/api/latest/design-add-element-at-point.md ; https://www.canva.dev/docs/apps/api/latest/design-add-page.md ; https://www.canva.dev/docs/apps/api/latest/asset-upload/",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Element-count ceiling: a '1,000 unique elements per design' warning is reported by secondary sites; the Canva help center documents an element limit only for Whiteboards ('Too many elements'). The kit (~11 pages, several hundred text runs + ~60 images) is likely under it, but per-line text emission could approach it.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/fix-many-elements-whiteboard/ ; https://www.websitebuilderinsider.com/does-canva-have-a-limit/ (secondary)",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Local fact: 12 of the BTS JPGs are 18\u201353 MB on disk (e.g. press/assets/BTS/IMG_4616.jpg 52.9 MB), over both the 50 MB URL limit and the 10 MB data-URL limit; build-epk-kit.py already downsamples to \u22641800 px (load_rgb) and cover-crops (cover()), so the emitter should upload those derived crops, not the masters (which also honours the never-alter-delivered-assets rule: derived copies, masters untouched).",
+    "status": "documented-current",
+    "source": "ls -la on /Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/press/assets/BTS and /Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/tools/build-epk-kit.py lines 177\u2013226",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Local fact: build-epk-kit.py does not itself emit a JSON op list; it draws onto a reportlab canvas, and build-epk-ai.py obtains the operation list by replaying that layout against a 'recording canvas' (per its docstring). A Canva emitter would reuse that same recording canvas and dump JSON, so PDF, .ai and Canva share one coordinate set. Body text is drawn one line at a time (para(): simpleSplit + textOut per line), so a naive replay produces one element per line.",
+    "status": "documented-current",
+    "source": "/Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/tools/build-epk-ai.py lines 1\u201330 ; /Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/tools/build-epk-kit.py lines 255\u2013276",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   }
+  ],
+  "steps_for_this_kit": [
+   "0. Luke, in Chrome: log into canva.com; open https://www.canva.dev (Developer Portal), accept the Developer Terms once; if he is on Pro, upload Baskerville Regular/SemiBold/Bold (OTF/TTF) to his Brand Kit so the font-availability test in step 4 can be run.",
+   "1. Agent, Python: add a `--canva-json` mode to tools/build-epk-ai.py's recording canvas that dumps the op list as JSON in Canva terms: page index; text runs (string, font key, size pt, tracking pt, colour, x, y baseline, align, width for paragraphs); rules (x,y,w,h); images (path + crop box + alpha + target box); links (url + rect). Convert on emit: scale = pagePx/1296 (read pagePx at runtime, do not hardcode 1728x2304), y_canva = (1728 - y_pt - ascent)*scale, tracking_em = track_pt/size_pt, lead_em = lead/size. Group each paragraph into one richtext op (not one op per line) so the director/producer get editable paragraphs; keep one-line ops for titles/labels.",
+   "2. Agent, Python/PIL: render every image op to a derived JPEG/PNG: cover-crop to the box, downsample to \u2264 2x target px, bake the 0.16-alpha ghost + 0.55 scrim into the pixels for page 4 grounds, re-encode until the base64 data URL is < 10 MB. Never touch the masters. Write them next to the JSON.",
+   "3. Agent, Node 24: `npm i -g @canva/cli`, `canva apps create kom-epk-builder` (React starter), `canva apps start` on :8080. In the Developer Portal set App source > Development URL = http://localhost:8080 (Chrome, no HTTPS needed). The app UI: a file input to load the JSON (the browser reads it, so no public URL is required), a 'Pick font' button, and 'Build' / 'Build page N' buttons plus a log pane.",
+   "4. Font test (decides fidelity): in the preview editor, click 'Pick font' \u2192 requestFontSelection(). Check whether the Brand Kit Baskerville appears; if it does, record its ref, weights and styles; if not, search 'Libre Baskerville' and record that ref (expect normal + bold only; map SemiBold \u2192 bold and note it). Persist the ref in the app config. Also log getDesignMetadata().defaultPageDimensions to confirm the px size of the 18 x 24 in poster preset.",
+   "5. Create the target design: because it is unverified that Preview can attach to an existing design, first test it: Portal \u2192 Preview; if the editor opens a fresh design, use the editor's Resize / File > Custom size to 18 x 24 in (or let the app addPage with dimensions {width:1728,height:2304} px if the runtime confirms 96 px/in and delete the default page by hand). Fall back to opening the app from the editor's Apps panel in a design Luke created at 18 x 24 in, if it appears there.",
+   "6. Build loop, per page: (a) addPage({title, dimensions, background:{color:'#0b0806'}}); (b) for each image op: upload({type:'image', url: dataURL, mimeType, aiDisclosure:'none', width, height}) \u2192 await whenUploaded \u2192 addElementAtPoint({type:'image', ref, altText, top, left, width, height}); (c) each rule \u2192 shape element (rect path, fill #rule-colour); (d) each text op \u2192 createRichtextRange(); appendText; formatParagraph({fontRef, fontSize, textAlign, letterSpacingEm, lineHeightEm}); formatText for colour/weight and for any `link` span \u2192 addElementAtPoint({type:'richtext', range, top, left, width}); (e) await every call sequentially, catch CanvaError 'rate_limited' and retry with backoff. Log element counts per page.",
+   "7. Post-pass with openDesign({type:'all_pages'}) to (a) read back element positions and dump them for a diff against the JSON, (b) set transparency on any element that needs it instead of baked alpha, (c) confirm the page order (order not guaranteed by getDesignMetadata; use the page ids returned by addPage).",
+   "8. Links that sit on images (not on words): have the Claude-in-Chrome agent select each image and add the URL via the editor's link control, from the recorded link list; then Share > Download > PDF Standard (not flattened) and verify link annotations with pypdf against the 19 expected URLs.",
+   "9. QA: export PDF, rasterise side-by-side with press/KillerOfMen_EPK_1234_10092026_compressed.pdf page by page, diff text positions and line breaks; fix by tightening width or font size in the JSON, rebuild the affected page only. Then share the design with the director and producer as editors (their plan tier is irrelevant for editing)."
+  ],
+  "limits": [
+   "Fonts: the app cannot upload or define fonts and cannot use Canva Pro fonts; Brand Kit uploaded fonts appearing in the app's picker is undocumented and must be tested. Likely fallback is Libre Baskerville (no SemiBold weight).",
+   "Plain text elements have no tracking/leading/link; everything with tracking, leading or a link must be a richtext element (letterSpacingEm -0.2..0.8, lineHeightEm 0.5..2.5); font is per paragraph only.",
+   "Text elements cannot be given a height and Canva reflows lines with its own engine, so line breaks will not match reportlab's exactly unless each line is emitted as its own element (which hurts editability and inflates element count).",
+   "Images: no crop box and no opacity at creation; crops/ghosting must be baked into the uploaded pixels (opacity can be set afterwards via openDesign transparency). Upload source must be a public HTTPS non-redirecting URL (<50 MB) or a data URL (<10 MB); localhost and Google Drive share links do not qualify.",
+   "Hyperlinks on images/shapes cannot be set via the Apps SDK (text-only via richtext link); they must be added in the editor UI.",
+   "Page geometry: addPage sides 40..8000 px and area \u2264 25,000,000 px\u00b2; editor max 8000 x 3125 px. The exact px size Canva assigns to 18 x 24 in is unpublished (probably 1728 x 2304 at 96 px/in) \u2014 read it at runtime.",
+   "addElementAtPoint/addPage only work in fixed-dimension designs (fine for a poster); Design Editing API cannot add pages.",
+   "Distribution: the app can only be run by Luke in development/preview mode; sharing the app itself with teammates requires Canva Enterprise; public release requires Canva review. Collaborators edit the resulting design, not the app.",
+   "Whether Preview can open the app inside an existing design is undocumented; step 5 tests it.",
+   "No published rate limits for the calls used; a `rate_limited` error code exists, so the replayer must be sequential with backoff. A ~1,000-elements-per-design ceiling is reported by secondary sources only.",
+   "Toolchain: Node 24 / npm 11 required; Chrome recommended (Safari needs HTTPS dev server). Both canva.com/help pages and canva.com/sizes returned 403 to automated fetch, so help-center facts above were taken from search snippets of those pages."
+  ],
+  "effort_estimate": "Roughly 2\u20133 agent working days: 0.5 day for the JSON emitter and image derivation in Python (reusing build-epk-ai.py's recording canvas), 1 day for the React app (upload \u2192 addPage \u2192 richtext/shape/image placement, font picker, backoff, read-back), 0.5 day for the font/preview/page-size runtime tests that decide fidelity, 0.5\u20131 day for QA diffs against the PDF, manual image links, and Luke's review passes. Risk-weighted: if Brand Kit Baskerville is not exposed to apps, add a half day for a Libre Baskerville re-fit of the type (widths change).",
+  "fidelity_to_the_pdf": "Good but not pixel-identical. Positions, sizes, colours, rules, image crops and text links can all be reproduced from the same coordinates the PDF and .ai use (scaled to Canva px, y flipped). Expected deviations: (1) typeface \u2014 Baskerville only if Luke's Brand Kit upload is reachable by the app (unverified); otherwise Libre Baskerville, which is visibly different and lacks SemiBold; (2) line breaks in running text will drift because Canva reflows richtext with its own metrics, unless lines are emitted one per element; (3) tracking/leading are clamped to -0.2..0.8 em and 0.5..2.5 em (the kit's values fit); (4) the 16 % ghost stills are baked pixels rather than live opacity unless set in a second openDesign pass; (5) image-borne links are added by hand; (6) the page is stored at Canva's screen-px size for 18 x 24 in, so Canva's own 'Print PDF' export governs output resolution rather than the 300-dpi masters. Everything the collaborators would want to edit (paragraph copy, bios, credits, links on text) remains live text in Canva."
+ },
+ {
+  "lane": "BROWSER AUTOMATION of the Canva editor in Luke's logged-in Chrome (click / type / upload / read accessibility tree / run JS), assessed against Canva Help Center and Canva Terms of Use pages read 2026-09-10 via the in-app browser (canva.com returns HTTP 403 to non-browser fetchers, so every page below was read rendered, not via WebFetch/curl).",
+  "claims": [
+   {
+    "claim": "Custom-size designs accept units px, in, mm or cm; the only stated limits are 40 x 40 px minimum and 8000 x 3125 px maximum; out-of-range fields turn red.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/design-from-scratch/ (read 2026-09-10): 'Under Units, click the dropdown menu and select the unit you want to use (for example, px, in, mm, or cm)... Minimum dimensions: 40 x 40 px... Maximum dimensions: 8000 x 3125 px... If the Custom size fields turn red, it means that what you entered is outside of what's allowed.' Same limits repeated at https://www.canva.com/help/resize/.",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none (Free); Magic Resize of an existing design is Pro/Teams/Business/Enterprise/Education/Nonprofits only (resize page: 'Who can use this feature? Plan type: Pro, Business, Enterprise, Education, Higher education, Nonprofits, Teams')."
+   },
+   {
+    "claim": "Whether typing 18 x 24 with units = in passes the custom-size validator, and what pixel count Canva assigns to an inch-unit design (the in-to-px factor), is NOT stated in the help center. Canva's own size guide lists 18 x 24 in as its 'Medium' poster size, so the size is a supported preset even if the custom-size path is uncertain.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/sizes/poster/ (read 2026-09-10) lists 'Medium 18 \u00d7 24 in'; https://www.canva.com/help/design-from-scratch/ gives limits in px only and no conversion factor. No help page read states how many px an inch-unit design is.",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Designs can have up to 350 pages; new pages are added with the Add page control or Cmd+Return; pages are duplicated via Cmd+C / Cmd+V on a page thumbnail. Eleven pages is far inside every limit.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/manage-pages/ (read 2026-09-10): 'Designs can have up to 350 pages.' 'Shortcuts: After clicking on a page thumbnail, press Cmd + C (Mac)... and Cmd + V (Mac)... to paste.' https://www.canva.com/help/canva-keyboard-shortcuts/: 'Add empty page: Command \u2318 + Return', 'Delete empty page: Command \u2318 + Delete'.",
+    "load_bearing": false,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Images upload from the editor via Uploads tab > Upload files (multi-select), Upload folder, or drag-and-drop from a computer folder onto the Uploads tab. Canva itself warns that large batches may error. Per-image limits: under 50 MB and not more than 250 million total pixels; formats JPEG, PNG, HEIC/HEIF, WebP (static). Storage 5 GB Free / 100 GB Pro.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/upload-media/ (read 2026-09-10): 'Click Upload files. To upload a folder, select and select Upload folder... You can also drag them from your computer folder to the Uploads tab.' and 'Uploading large batches of files may cause errors.' https://www.canva.com/help/upload-formats-requirements/ (read 2026-09-10): 'Upload JPEG, PNG, HEIC/HEIF, WebP images: Under 50MB in size; Not more than 250 million total pixels (width x height)'; 'Canva Free users can upload up to 5GB of media. Canva Pro users can upload up to 100GB.'",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none for upload; storage quota by plan"
+   },
+   {
+    "claim": "The kit's assets fit the per-file limits: 7000 px BTS JPGs (~7000 x 4667 = ~33 MP) and 6200 px headshots are under 250 MP; the 1920 x 1080 stills are trivially inside. File sizes must be checked to be under 50 MB each (not verified here).",
+    "status": "documented-current",
+    "source": "Limits from https://www.canva.com/help/upload-formats-requirements/ (read 2026-09-10); pixel arithmetic is mine. File sizes not measured in this pass.",
+    "load_bearing": false,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "The editor exposes numeric placement: select element > Position (toolbar) > Advanced, with X, Y, Width, Height and Rotate fields. X/Y are documented as measured 'in pixels' from the top-left of the canvas; Width/Height are documented as 'pixel values', with a Ratio lock. This is the primary reliable placement mechanism for an agent (no dragging).",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/moving-elements/ (read 2026-09-10): 'X and Y values measure the distance (in pixels) from the top-left corner of the canvas... Select Position from the toolbar. Under Advanced, enter X and Y values to place the element precisely.' https://www.canva.com/help/resize-and-crop/ (read 2026-09-10): 'Click Position on the toolbar above the editor. Under Advanced, enter the pixel values in the Width and Height fields. Select Ratio to keep its proportion.' https://www.canva.com/help/flip-and-rotate/ (excerpt read on moving-elements page): 'Under Rotate, enter the value in the text box.'",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none (Free)"
+   },
+   {
+    "claim": "Whether the Position > Advanced fields switch to inches for an inch-unit design (or stay in px) is not stated; the rulers page says rulers follow the design's unit, while the Position page says pixels. The agent must read the design's real px dimensions (Resize > Custom size with units = px) before converting the kit's point coordinates (1296 x 1728 pt).",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/margins-bleed-crop-marks/ (read 2026-09-10): 'Rulers showing pixel dimensions appear at the top and left of the canvas... The ruler's unit matches the design's dimensions. For example, pixel designs show pixel rulers.' versus https://www.canva.com/help/moving-elements/: 'X and Y values measure the distance (in pixels)'.",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Advanced Width/Height resizing is documented for 'photos, shapes, and videos'; text boxes are documented as resized by dragging the white pill handles (width only; font size unaffected). Whether the Position panel's W/H fields also accept text boxes is not stated.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/resize-and-crop/ (read 2026-09-10): 'Resize photos, shapes, and videos into exact measurements'; https://www.canva.com/help/wrap-text/ (read 2026-09-10): 'Click the white pill handles... Drag left or right to make the text box wider or narrower. This won't affect the text font size.'",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Text toolbar: font (Shift+Cmd+F opens font menu), font size accepts a typed value, text colour via Text color tile, alignment via Alignment control, bold/italic. Letter spacing and line spacing are under Advanced Settings > Spacing as SLIDERS (numeric entry not documented). Kerning/Ligatures toggles live in Advanced settings > More settings > Advanced tab.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/format-text/ (read 2026-09-10): 'Choose a font size or enter a value in the field.' 'On the toolbar, select Advanced Settings. Under Spacing, adjust the line spacing and letter spacing sliders.' 'Under Typography, toggle Kerning and Ligatures on or off.'",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Hex colours: the colour panel has an 'Add a new color' (rainbow tile) where a hex code can be keyed; document colours persist per design so #efe6d6 / #0b0806 need entering once. Free tier.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/element-color/ (read 2026-09-10): 'To choose a different color, click Add a new color (the rainbow color tile) from the color panel.' Hex entry confirmed via Canva's own text-colour guidance in search results (canva.com/help/element-color and canva.com/features/add-text-to-video: 'type a specific color hex'); the element-color page itself does not print the word 'hex'.",
+    "load_bearing": false,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Hyperlinks: select element (or double-click and highlight part of the text) > More (...) on toolbar > Link, or press Cmd+K; enter URL and press Enter. Links survive only in PDF downloads (not flattened PDFs); not in PNG/JPG. Links on text with effects can fail.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/hyperlinks/ (read 2026-09-10): 'Optional: Double-click the text box and highlight the part of the text you want to add a link. Select More icon from the toolbar. Select Link. To link to another website page, enter the link and press Enter.' 'Hyperlinks will only work if you download your design as a PDF (except flattened PDFs).' https://www.canva.com/help/canva-keyboard-shortcuts/: 'Add link: Command \u2318 + K'.",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Whether mailto: URLs are accepted by the Link field is not documented on the hyperlinks page (it says 'website page' links, design pages, recent designs). The kit has mailto links; test one early.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/hyperlinks/ (read 2026-09-10) lists only website URLs, pages in this document, and recent designs.",
+    "load_bearing": false,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Documented keyboard shortcuts that make automation reliable (macOS): T add text, R rectangle, L line, Cmd+K link, Cmd+D duplicate, Cmd+G group, Option+Shift+L lock, arrows nudge small / Shift+arrows nudge large (step size not stated), Cmd+arrows resize, Option+, / Option+. rotate, Cmd+] / Cmd+[ layer order, Option+1 show layers, Shift+R rulers, Cmd+F1 focus toolbar, Cmd+F2 focus canvas, Cmd+F3 focus side panel, Cmd+F6 next surface, Shift+F10 more-actions menu, / quick actions, Cmd+0 actual size, Option+Cmd+0 zoom to fit, Shift+Cmd+, / . font size -/+1, Option+Cmd+, / . letter spacing, Option+Cmd+Up/Down line spacing, Shift+Cmd+L/C/R align, Option+Cmd+C / V copy-paste text style, Cmd+Return add page.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/canva-keyboard-shortcuts/ (read 2026-09-10), verbatim list under Basic, Element, Text, Zoom and Page view shortcuts. Nudge/spacing increment sizes are not printed on the page.",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "The canvas is keyboard- and screen-reader-navigable: Cmd+F2 focuses the canvas, Enter enters a page, Tab / Shift+Tab (or Shift+W/A/S/D) cycles elements, and the screen reader 'announces its type and details like alt text, styling, or position'. Supported: text, shape, image, video, line, table, frame, groups, grids, fixed designs (posters). This means elements ARE exposed in the accessibility tree, which the agent's read_page/find can use to select elements without pixel clicks.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/screen-reader-editor/ (read 2026-09-10): 'Press \u2318+F2... Double-press Enter to select an element within the page. Press Tab or Shift+Tab to move through elements... When you select an element... Your screen reader announces its type and details like alt text, styling, or position.' Recommended combos include 'Voiceover + Chrome'.",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none; desktop browser only"
+   },
+   {
+    "claim": "Whether the page surface is a <canvas>/WebGL element (so elements have no DOM boxes to click) or DOM-rendered is not documented and could not be inspected without a logged-in session. Must be probed in the first 15 minutes of execution (run JS: count canvas elements, check for contenteditable text, check role/aria on selected element).",
+    "status": "could-not-verify",
+    "source": "No Canva help page read describes the rendering technology; the in-app browser cannot open the editor without Luke's login.",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Layers panel: Position > Layers tab (or Option+1 'Show layers') lists every element on the current page; clicking a layer selects it; hover reveals a more-options menu. Useful as a click target when canvas hit-testing is unreliable.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/layer-group-align/ and 'Finding and arranging layers' excerpt read on https://www.canva.com/help/moving-elements/ (2026-09-10): 'Select Position... Select the Layers tab... To find or select a layer in your design, select it from the Layers panel. It will be highlighted on your page.' Shortcut 'Show layers: Option\u2325 + 1' from the shortcuts page.",
+    "load_bearing": false,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Custom font upload (Baskerville Regular/SemiBold/Bold as OTF/TTF/WOFF, each family up to 18 styles, fonts must be licensed for embedding) requires Canva Pro, Teams, Business, Education or Nonprofits and Brand Kit owner/admin/brand-designer role; then the font appears under 'Uploaded fonts' in the font menu. Not available on Free.",
+    "status": "documented-gated",
+    "source": "https://www.canva.com/help/upload-fonts/ (read 2026-09-10): 'Who can upload fonts? Team owners, administrators, and brand designers; Canva Pro, Canva Teams, Canva Business, Canva Education, and Canva for Nonprofits.' 'Canva supports OTF, TTF, and WOFF.' 'Your fonts should be licensed for embedding. Otherwise, they may not upload.' 'For each font family, you can add up to 18 styles.' 'Canva doesn't support variable fonts.'",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "Pro / Teams / Business / Education / Nonprofits"
+   },
+   {
+    "claim": "The Baskerville embedded in the current PDF is the Apple system Baskerville (subset '/CKPGNO+Baskerville'); its licence for upload to a third-party service is not established here. Libre Baskerville (a free Google font) is referenced by Canva's own Learn pages as a font available in Canva, but I could not read a primary Canva font-library listing confirming it (and its weights) in the free tier.",
+    "status": "could-not-verify",
+    "source": "Font names from pypdf over the kit PDF (2026-09-10). Canva Learn references: https://www.canva.com/learn/the-best-free-business-fonts/ and https://www.canva.com/learn/the-ultimate-guide-to-font-pairing/ (search snippets, 2026-09-10). No primary font-catalogue page found on canva.com.",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "unknown"
+   },
+   {
+    "claim": "PDF export: PDF Standard is 96 dpi; PDF Print is 300 dpi with bleed/crop-marks/RGB-or-CMYK options. Compress PDF, CMYK colour profile, transparent PNG and quality/scale controls are Pro/Teams/Education/Nonprofits only. Hyperlinks survive in non-flattened PDFs.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/download-file-types/ (read 2026-09-10): 'PDF Standard: For illustrations, text, and graphics with a resolution of 96 dpi. PDF Print: For printing with a resolution of 300 dpi, with bleed, crop marks, and color profile (RGB or CMYK) selection option. Compress PDF... available only to Canva Pro, Teams, Education, and Nonprofit.' 'Quality, file size export limit, scale, compression, CMYK color profile options, and transparent PNGs and SVGs are available to accounts with the Canva Pro, Canva for Teams, Canva Education, and Canva for Nonprofits plans.'",
+    "load_bearing": false,
+    "read_on": "2026-09-10",
+    "gate": "Pro for compress/CMYK/quality controls; PDF Standard/Print themselves are Free"
+   },
+   {
+    "claim": "Shortcut path worth a 15-minute test before any rebuild: importing the existing 11-page PDF. One help page says Canva separates text and images into editable elements (fonts may be substituted, layouts may shift, up to 500 pages / 300 MB / 1,400 elements); a second help page says imported PDF pages 'become individual images in an A4 document'. The two pages contradict each other, so the outcome must be tested on this PDF.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/import-and-edit-pdfs-canva/ (read 2026-09-10): 'Text and images may be separated into editable elements. Unsupported fonts may be replaced with similar fonts... Some layouts may shift slightly after import.' versus https://www.canva.com/help/upload-formats-requirements/ (read 2026-09-10): 'When importing a PDF document to Canva, the pages become individual images in an A4 document. It doesn't become a page of editable text like in Docs.' Illustrator .ai import: 'Only the .ai files saved as a PDF compatible format are supported. Some layers may be flattened.'",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Canva's current Terms of Use (effective 19 August 2026) prohibit 'any form of data mining, extraction, or scraping on the Service' and bypassing access-restriction measures. Searching the full rendered text for 'automated', 'robot', 'spider' and 'bot' returned no matches, so the current terms contain no explicit clause against automated UI input in the user's own session (the 2021 terms did have a robots/spiders clause). This is a reading of the text, not legal advice; an agent driving Luke's own editor at human pace to build Luke's own design is not scraping, but the prohibition on bypassing restrictions means: no header spoofing, no undocumented API calls, no rate-pushing.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/policies/terms-of-use/ (read 2026-09-10): 'These Terms of Use are effective as of 19 August 2026.' Clause (viii): 'use any form of data mining, extraction, or scraping on the Service and/or the contents available in it for any purpose'; (ix): 'bypass the measures we may use to prevent or restrict access to the Service'. Older clause via search snippet of https://www.canva.com/policies/terms-of-use-2021-11-03/.",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "UI variance is documented by Canva itself: features 'may be rolling out gradually', 'Some users may not see rulers due to the editor version', and the Position button may be hidden behind a 'more' button ('If you don't see it, click the button first'). Selectors and menu paths must be discovered per session, not hardcoded.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/element-color/ (read 2026-09-10): 'the feature may be rolling out gradually'; https://www.canva.com/help/margins-bleed-crop-marks/ (read 2026-09-10): 'Some users may not see rulers due to the editor version, device type, or design template'; https://www.canva.com/help/layer-group-align/ excerpt (read 2026-09-10): 'click Position... If you don't see it, click the button first.'",
+    "load_bearing": false,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Rate of editor UI change and any anti-automation detection are not documented anywhere I could read; treat as unknown risk.",
+    "status": "could-not-verify",
+    "source": "No Canva help or policy page read addresses release cadence or automation detection.",
+    "load_bearing": false,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   },
+   {
+    "claim": "Work quantity in the current kit (measured, not estimated): 11 pages at 1296 x 1728 pt; 18 placed images (p1 poster, p2 hero, p5-6 four headshots, p7 one, p8 ten BTS, p9 one), 19 link annotations (p3: 9, p5: 6, p6: 4), 287 text lines, fonts Baskerville Regular / SemiBold / Bold. Rules (lines) not counted.",
+    "status": "documented-current",
+    "source": "pypdf 6.18.0 run over /Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/press/KillerOfMen_EPK_1234_10092026_compressed.pdf on 2026-09-10; the ops recorder in /Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/tools/build-epk-ai.py (class with self.ops: rect / image / area / point / rule / link) can emit the exact op list with --jsx-only.",
+    "load_bearing": true,
+    "read_on": "2026-09-10",
+    "gate": "none"
+   }
+  ],
+  "steps_for_this_kit": [
+   "0. Probe (15 min, blocks everything): with Luke logged in, open any design, and run JS to (a) count <canvas> elements and whether selected text is contenteditable, (b) confirm read_page exposes element names/roles after Cmd+F2 > Enter > Tab, (c) open Position > Advanced and read the field labels and units. Record the design's px size via Resize > Custom size (units = px) to fix the pt-to-px factor for the whole build.",
+   "1. Test the shortcut path (15 min): drag KillerOfMen_EPK_1234_10092026_compressed.pdf onto the Canva homepage. If pages arrive as editable text + images at 18 x 24 in, switch the plan to a fix-up pass (re-place images, re-apply fonts, re-add 19 links) instead of a rebuild. If they arrive as flat A4 images, abandon and rebuild.",
+   "2. Create the design: Create > search 'Poster' > pick the 18 x 24 in preset (avoid the custom-size validator whose in-unit behaviour is undocumented); add pages to 11 (Cmd+Return x10); set each page background to #0b0806 via the colour panel's Add a new color once, then reuse from Document colors.",
+   "3. Fonts: if Luke is on Pro, upload Baskerville Regular/SemiBold/Bold to Brand Kit (needs licence permitting embedding; Apple's bundled Baskerville is doubtful - check the licence or use Libre Baskerville instead) and confirm 'Uploaded fonts' appears in the font menu. On Free, use Libre Baskerville and accept metric drift (re-fit copy).",
+   "4. Pre-crop in Python: for every one of the 18 placed images, use build-epk-kit.py's cover/focus logic (PIL) to export a JPG already cropped to the target box's aspect and downsampled to <=4000 px long edge. This turns each placement into a pure W/H/X/Y entry and removes drag-based Crop mode from the critical path. Upload in batches of ~10 through Uploads > Upload files (Canva warns large batches error); also upload the remaining ~40 stills/BTS/headshots so collaborators can swap. Verify count in the Uploads tab after each batch.",
+   "5. Place images: click the upload thumbnail (it lands on the current page), Position > Advanced > type W, H, X, Y (converted from the kit's pt coordinates by the factor from step 0), Enter after each field; verify via read_page/Layers panel, screenshot-diff against the PDF page render.",
+   "6. Text: for each text box press T, type the run, then set font (Shift+Cmd+F), size (type value), colour (Document colors), alignment (Shift+Cmd+L/C/R), letter-spacing via Advanced Settings > Spacing (slider; use Option+Cmd+, / . nudges and accept approximate tracking), then Position > Advanced for X/Y; set width with the pill handle or Position W if it accepts text boxes (step 0 finding). Before typing any text, confirm the caret is inside the box - a stray 'T' or 'R' keypress adds a new element.",
+   "7. Rules: R or L shortcut then Position > Advanced for W/H/X/Y and colour #efe6d6 at the kit's alpha.",
+   "8. Links (19): double-click text, select the run, Cmd+K, paste URL, Enter. Test one mailto: link on page 3 first; if rejected, link the row to the Drive folder or use a visible email string instead.",
+   "9. QA per page: export PDF Standard, render with pdftoppm/PIL, diff against the reportlab PDF at low resolution; fix deltas > 0.5% of page width. Then export PDF Print (300 dpi) for the deliverable and click every link in the exported PDF.",
+   "10. Handoff: share the design with director and producer as editors; note in the handoff that letter-spacing and text-box widths are approximate versus the Illustrator master."
+  ],
+  "limits": [
+   "Numeric placement exists only through Position > Advanced (X, Y, W, H, Rotate); documented in pixels; unit behaviour for inch-unit designs unverified; W/H documented for photos/shapes/videos, not text boxes.",
+   "Letter spacing and line spacing are sliders plus keyboard nudges of undocumented step size - exact tracking values from the kit cannot be typed.",
+   "Crop is drag-based; pre-crop in Python to avoid it.",
+   "Custom font upload is Pro/Teams/Business/Education/Nonprofits only, OTF/TTF/WOFF, must be licensed for embedding, no variable fonts; Free must use library fonts (Libre Baskerville availability not verified from a primary catalogue).",
+   "Design size limits: 40 x 40 px min, 8000 x 3125 px max; the in-to-px factor Canva applies is undocumented, so 18 x 24 in via custom size is unverified - use the Poster preset.",
+   "Uploads: <50 MB and <=250 MP per image; JPEG/PNG/HEIC/WebP/SVG(<3 MB); Canva warns large batches may error; storage 5 GB Free / 100 GB Pro.",
+   "Pages: 350 per design (PDF export limit 100 per design reported in search results, not read first-hand).",
+   "Hyperlinks only survive in non-flattened PDF exports; mailto acceptance unverified; links on text with effects can break.",
+   "The editor's rendering technology (canvas vs DOM) is undocumented; must be probed logged-in before committing to click/read strategies.",
+   "Canva documents that toolbar buttons may be hidden behind a 'more' button and that features roll out gradually - no fixed selectors.",
+   "Current Terms of Use (19 Aug 2026) forbid scraping/extraction and bypassing access measures; no clause found on automated UI input, but this is not legal advice; drive at human pace, no undocumented endpoints.",
+   "PDF import behaviour is described inconsistently across two help pages (editable elements vs flattened A4 images) - must be tested.",
+   "canva.com blocks non-browser fetchers (HTTP 403), so any agent-side verification of help pages must go through a real browser."
+  ],
+  "effort_estimate": "Rebuild path (no usable PDF import): setup incl. probe, design, 11 pages, colours, font upload 1.5-3 h; asset pre-crop + upload of ~60 files in batches with verification 1.5-2.5 h; 18 image placements at 3-6 min each 1-2 h; roughly 100-130 text boxes (287 text lines) at 4-8 min each 7-17 h; rules 1-2 h; 19 links ~1 h; per-page screenshot QA and fixes 4-6 h. Total 17-33 agent hours, realistically 25-35 wall-clock hours across several sessions given retries, focus-loss errors and UI variance. Fix-up path (if PDF import yields editable elements at 18 x 24): 5-10 h. Illustrator-to-Canva via .ai upload is the same fix-up class but 'some layers may be flattened'.",
+  "fidelity_to_the_pdf": "Medium at best. Exact: page size (if the Poster preset is 18 x 24 in), colours (#efe6d6 / #0b0806 by hex), image boxes (numeric W/H/X/Y after Python pre-crop), 19 hyperlinks (in PDF export), font size values. Approximate: letter-spacing and line-spacing (sliders/nudges, no typed value), text-box widths (pill-handle drag unless Position W accepts text), and therefore line breaks in the paragraph blocks - copy will need re-fitting. Font: identical only if Luke is on Pro and Baskerville Regular/SemiBold/Bold can legally be uploaded; otherwise Libre Baskerville substitutes with different metrics and the fit loop's line breaks will not match. Image crops will match only because they are pre-cropped outside Canva; the Illustrator clipping-mask focus points are reproduced in Python, not in Canva. Rules and alpha overlays are reproducible numerically. Expect the Canva PDF Print export to differ from the reportlab/Illustrator PDF in text flow on pages 3, 4, 9, 10, 11 (the text-dense pages)."
+ },
+ {
+  "lane": "BRAND KIT, FONTS, EXPORT AND SHARING",
+  "claims": [
+   {
+    "claim": "Uploading custom fonts to a Brand Kit is available on Canva Pro, Canva Teams, Canva Business, Canva Education and Canva for Nonprofits; not on Free. On team plans only owners/admins/brand designers can upload.",
+    "status": "documented-gated",
+    "gate": "Pro or higher (Free excluded)",
+    "source": "https://www.canva.com/help/upload-fonts/ and https://www.canva.com/help/upload-formats-requirements/ (read 2026-09-10)",
+    "load_bearing": true,
+    "read_on": "canva.com returns HTTP 403 to non-browser fetchers (WebFetch and curl); all help pages were read through the in-app browser."
+   },
+   {
+    "claim": "Accepted font upload formats are exactly OTF, TTF and WOFF. Canva explicitly rejects .ZIP, .EOT, .SVG and .WOFF2. TrueType Collection (.ttc) is not in the supported list, so the macOS Baskerville.ttc cannot be uploaded as-is; each face must be extracted to its own .ttf/.otf.",
+    "status": "documented-not-possible",
+    "source": "https://www.canva.com/help/upload-formats-requirements/ ('The following font formats are supported: .otf, .ttf, .woff') and https://www.canva.com/help/font-upload-error/ (read 2026-09-10)",
+    "load_bearing": true,
+    "read_on": ".ttc is absent from the exhaustive supported list rather than named as unsupported; treat as not accepted."
+   },
+   {
+    "claim": "Bold/italic require separate font files (no synthetic styling). Up to 18 styles per family are grouped automatically by the font's internal family-name metadata; mis-grouped fonts need metadata fixed and re-upload. Variable fonts are not supported. 'Condensed' styles always upload as a separate family.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/upload-fonts/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Per-file limit is under 15 MB; up to 500 uploaded fonts per Brand Kit. Adobe Originals fonts are refused; Font Diner fonts are accepted.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/font-upload-error/ (read 2026-09-10)",
+    "load_bearing": false
+   },
+   {
+    "claim": "Licence responsibility sits with the uploader: fonts 'should be licensed for embedding. Otherwise, they may not upload', and 'Only upload fonts that you're licensed to use' (Terms of Use \u00a74(a) User Content: you warrant you own or have secured all necessary rights).",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/upload-fonts/ and https://www.canva.com/policies/terms-of-use/ section 4 'Content and Designs' (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Local measurement: /System/Library/Fonts/Supplemental/Baskerville.ttc contains 6 TrueType (glyf) faces sharing family name 'Baskerville': Regular, Bold, Italic, Bold Italic, SemiBold, SemiBold Italic. All six have OS/2 fsType = 0 (installable embedding, no restriction bits), so technically they pass Canva's embedding check and would group as one family once split into six .ttf files.",
+    "status": "documented-current",
+    "source": "fontTools TTCollection inspection of the local file, run 2026-09-10 in the session scratchpad venv",
+    "load_bearing": true,
+    "read_on": "This is a measurement of the file, not a licence opinion."
+   },
+   {
+    "claim": "Apple's macOS Software License Agreement permits using bundled fonts 'to display and print content while running the Apple Software' and embedding only where the font's embedding restrictions allow. Whether uploading Apple-bundled Baskerville to a third-party cloud service (Canva's servers) is within that licence was not verified; Baskerville itself is a Monotype-owned design. Decision needed by Luke: use the Apple .ttc faces, buy a Monotype Baskerville licence, or fall back to Libre Baskerville.",
+    "status": "could-not-verify",
+    "source": "Apple SLA PDFs surfaced by search (https://www.apple.com/legal/sla/docs/macOSSequoia.pdf, https://www.apple.com/legal/sla/docs/macOSTahoe.pdf) - clause text seen only in search snippets, full PDFs not read (2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Canva ships Libre Baskerville natively (Canva's own 'best free business fonts' article lists it; Canva's 2020 X post promotes it). Libre Baskerville (Impallari, Google Fonts) is based on the 1941 ATF Baskerville, optimised for screen body text, and offers Regular, Italic and Bold only - no SemiBold and no Bold Italic. The KOM kit's Baskerville SemiBold therefore has no native equivalent.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/learn/the-best-free-business-fonts/ (read 2026-09-10, 'Libre Baskerville' heading present); https://x.com/canva/status/1279050159784108032; https://fonts.google.com/specimen/Libre+Baskerville (styles via search snippet, 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Whether Canva also ships other Baskerville-family fonts (Baskervville, Baskerville Old Face, Monotype Baskerville) could not be verified: Canva publishes no font inventory (canva.com/fonts/... returns 404), and the only source claiming Monotype Baskerville is absent is a third-party blog.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/fonts/libre-baskerville/ returned 404 (2026-09-10); third-party https://8designers.com/blog/what-font-is-baskerville-in-canva (404 to WebFetch, seen via snippet)",
+    "load_bearing": false,
+    "read_on": "Resolve in 2 minutes inside Luke's logged-in editor by searching the font panel for 'Baskerville'."
+   },
+   {
+    "claim": "Brand Kit is available on Canva Pro. Pro marketing page: 'create and manage up to 5 separate brands'. Team plans: up to 1,000 Brand Kits and 2,000 assets per asset category.",
+    "status": "documented-gated",
+    "gate": "Pro or higher; 5 Brand Kits on Pro",
+    "source": "https://www.canva.com/pro/brand-kit/ and https://www.canva.com/help/brand-kit/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Brand colours: Free gets 1 palette of 3 colours; Pro/Teams/Business/Education/Enterprise/Nonprofits get 100 palettes of up to 100 colours each, entered by hex; CMYK equivalents can be added per colour (Pro users, and Teams/Business admins/brand designers). Colour themes (semantic background/text/element roles) are Pro+. Brand Controls (restricting members to brand colours/fonts only) are Teams/Business/Enterprise admin features, not Pro.",
+    "status": "documented-gated",
+    "gate": "Pro+ for palettes/themes; Teams/Business/Enterprise for Brand Controls",
+    "source": "https://www.canva.com/help/color-palettes/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Brand fonts: one default font per heading level H1-H5 plus Body per Brand Kit, selectable from Canva fonts or uploaded fonts, with size/bold/italic; these heading types also carry semantic tags into exported PDFs. Available on Pro, Teams, Business, Education, Nonprofits.",
+    "status": "documented-gated",
+    "gate": "Pro or higher",
+    "source": "https://www.canva.com/help/brand-fonts/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Brand Templates are a team-scoped feature: published by admins/brand designers, shareable only to 'Brand designers and admins', 'Specific team members' or 'Your Team'; 'Only people in the same team account can access'; public/external Brand Template links are no longer supported - external people get a view-only design copy instead. Comments are deleted on publish.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/publish-team-template/ and https://www.canva.com/help/brand-templates-2/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Whether a solo Canva Pro account can publish a Brand Template at all is not stated in the Help Center; the Business marketing page text does not mention Pro. Given Pro cannot create a team ('If you're on Canva Pro, you can't invite people to your team... upgrade to Canva Business'), a Pro Brand Template would in any case be usable only by Luke himself.",
+    "status": "could-not-verify",
+    "gate": "Team plan (Business/Enterprise, or legacy Teams) for useful Brand Templates",
+    "source": "https://www.canva.com/help/collaborate-with-anyone/ and https://www.canva.com/business/features/team-templates/ (read 2026-09-10; find('Canva Pro') = no match)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Plan landscape 2026: Free; Pro US$180/yr for one person; Business US$250/yr per person (Business = the renamed Teams plan; 'Canva Teams is no longer available for new sign-ups or upgrades'); Enterprise via sales. Business is the cheapest plan that lets Luke create a team with the director and producer as members.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/pricing/ and https://www.canva.com/help/about-canva-business/ and https://www.canva.com/help/roles-and-permissions/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "PDF export presets: 'PDF Standard: 96 dpi'; 'PDF Print: 300 dpi, with bleed, crop marks, and color profile (RGB or CMYK) selection'. CMYK profile, compression, scale and quality controls are Pro/Teams/Education/Nonprofits only. 'Compress PDF' (reduced size, image quality may drop) is Pro/Teams/Education/Nonprofit only. Password protection exists for PDF Standard only.",
+    "status": "documented-gated",
+    "gate": "Pro+ for CMYK, compression, quality controls",
+    "source": "https://www.canva.com/help/download-file-types/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "'Limit size' (target KB) export applies only to PNG/JPG and only for a single page - there is no target-file-size option for PDF. No maximum PDF download file size is documented anywhere in the Help Center; the only documented size caps are for the Dropbox (150 MB, 100 pages) and Google Drive (200 MB, 100 pages) share integrations, not for direct download.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/download-file-types/ and https://www.canva.com/help/sharing-social-media-limitations/ (read 2026-09-10)",
+    "load_bearing": true,
+    "read_on": "The '100 pages for PDF/PPTX' figure that circulates online is the Dropbox/Google Drive integration limit, not a download limit."
+   },
+   {
+    "claim": "Flatten PDF (Advanced settings toggle) merges the design into a single static image: prevents editing in Acrobat, 'may increase its file size', removes accessibility tags, and kills hyperlinks. For a press kit with live links and selectable text, do NOT flatten.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/download-flattened-pdf/, https://www.canva.com/help/pdf-accessibility-features/, https://www.canva.com/help/hyperlinks/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Crop marks and bleed: bleed is fixed at 0.125 in (3.175 mm) all sides and not adjustable; added by ticking 'Crop marks and bleed' on the PDF Print download; crop marks appear only in the exported PDF. For a digital EPK they should be left off so the page stays exactly 18 x 24 in.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/margins-bleed-crop-marks/ (read 2026-09-10)",
+    "load_bearing": false
+   },
+   {
+    "claim": "Hyperlinks survive only in non-flattened PDF exports (and in Present mode); they do not survive PNG/JPG/MP4. Links can target external URLs, other pages in the same design, or other Canva designs. Known issue: links on text with effects (Lift, Neon) fail in exported PDFs.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/hyperlinks/ and https://www.canva.com/help/hyperlinks-text-effect/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "mailto: links are not mentioned in Canva's hyperlink documentation; several third-party guides report that entering 'mailto:address' works in exported PDFs (Canva strips the visible 'mailto:' prefix in the field). Needs a test export before relying on it for the kit's contact links.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/hyperlinks/ (no mailto mention, read 2026-09-10); third-party e.g. https://funnelgraphic.com/email-hyperlink-on-canva/ via search snippet",
+    "load_bearing": true
+   },
+   {
+    "claim": "Exported (non-flattened) PDFs keep text as live text: Canva embeds semantic heading tags (h1-h5), reading order, alt text and a screen-reader language in the exported PDF, which is only possible with text objects. Canva does not explicitly document 'selectable/copyable' or how fonts are embedded; a third-party Adobe forum thread reports Canva sometimes emitting Type 3 fonts. Verify selectability and font embedding on a test export (pdffonts / Acrobat).",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/pdf-accessibility-features/ (read 2026-09-10); third-party https://community.adobe.com (via search snippet)",
+    "load_bearing": true
+   },
+   {
+    "claim": "PDF exports embed the full original image for any cropped/letterboxed picture ('someone could... get the full, uncropped image from your PDF export'). With 41 stills, 10 x 7000 px BTS JPGs and 4 x 6200 px headshots this will inflate the PDF well beyond the 9.8 MB Illustrator master unless images are pre-cropped/resized before upload or Compress PDF is used.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/download-file-types/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Maximum 350 pages per design (workaround: split designs and merge PDFs externally). Eleven pages is far inside the limit. Canva recommends downloading in batches if a large multi-page design fails to export.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/manage-pages/ and https://www.canva.com/help/cant-download-design-or-video/ (read 2026-09-10)",
+    "load_bearing": false
+   },
+   {
+    "claim": "Export rate limits: 500 exports per rolling 24 h (1,000 Enterprise) and 75 per 5 minutes per user. Relevant if an agent iterates exports in a loop.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/cant-download-design-or-video/ (read 2026-09-10)",
+    "load_bearing": false
+   },
+   {
+    "claim": "Page-size limits are documented inconsistently. Minimum 40 x 40 px. 'Design from scratch' says width and height each 'not more than 8000px', but the same page, 'Resize designs' and 'Can't download' all state 'Maximum dimensions: 8000 x 3125 px (or vice versa)'. Custom size accepts px, in, mm, cm; the px equivalence Canva assigns to an inch-unit design is not documented. 18 x 24 in at 300 dpi = 5400 x 7200 px, which is inside an 8000-per-side reading but outside an 8000 x 3125 reading. Canva's own size guide lists '18 x 24 in' as its Medium poster preset, so the preset route should be accepted; the effective export resolution must be measured on a test PDF Print.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/design-from-scratch/, https://www.canva.com/help/resize/, https://www.canva.com/help/cant-download-design-or-video/, https://www.canva.com/sizes/poster/ (all read 2026-09-10)",
+    "load_bearing": true,
+    "read_on": "First agent action in the account: create the 18 x 24 in poster preset, export one page as PDF Print, and read back the page size and image resolution with pdfimages/pdfinfo."
+   },
+   {
+    "claim": "Sharing on Pro (and Free): Share > 'Anyone with the link' with Can edit / Can comment / Can view; a short link is generated. Guests can edit without a Canva account; commenting requires login; guests cannot upload files, download, print, make a copy, or change link permissions. 'Only your team' access level exists only in team workspaces. Owner can change or revoke link permission at any time.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/collaborate-with-anyone/ and https://www.canva.com/help/share-via-link-or-email/ (read 2026-09-10)",
+    "load_bearing": true
+   },
+   {
+    "claim": "Public view link: a separate view-only URL suitable for festivals/press; deletable (deleting kills the URL); visitor analytics available; creating more than one public view link per design is Pro-only. Template link (recipient gets an editable copy) is Pro/Teams/Enterprise/Education/Nonprofits.",
+    "status": "documented-gated",
+    "gate": "Multiple public view links and Template links: Pro+",
+    "source": "https://www.canva.com/help/sharing-your-design-as-a-public-view-link/ and https://www.canva.com/help/share-via-link-or-email/ (read 2026-09-10)",
+    "load_bearing": false
+   },
+   {
+    "claim": "Upload limits relevant to this kit: images under 50 MB and at most 250 million total pixels each (7000 px BTS JPGs at ~33 MP pass); storage 5 GB Free / 100 GB Pro / 500 GB per team Business. Importing the existing PDF is not a route to editable text: 'the pages become individual images in an A4 document'. .ai files upload (up to 300 MB, must be PDF-compatible) but 'some layers may be flattened'.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/upload-formats-requirements/ (read 2026-09-10)",
+    "load_bearing": true
+   }
+  ],
+  "steps_for_this_kit": [
+   "Confirm Luke's plan in the account (Settings > Billing). Pro is enough for fonts, Brand Kit colours/fonts, PDF Print/CMYK/Compress and edit-link collaboration. Only Business (US$250/yr per seat) gives a team, Brand Templates the director/producer can use, and Brand Controls.",
+   "Font licence decision (Luke, not the agent): (a) use the Apple-bundled Baskerville faces (fsType 0, technically embeddable, but Apple SLA scope for third-party cloud use unverified), (b) license Baskerville from Monotype, or (c) fall back to native Libre Baskerville, accepting there is no SemiBold (map SemiBold runs to Bold or Regular).",
+   "If (a) or (b): split the .ttc into per-face .ttf with fontTools (TTCollection(path).fonts[i].save('Baskerville-<Style>.ttf')) without renaming internal family/style names; upload Regular, SemiBold, Bold (and italics only if the kit uses them) via Brand > Fonts > Upload a font; confirm they appear grouped under one 'Baskerville' family with B/I buttons active where the style exists.",
+   "Create Brand Kit 'KILLER OF MEN': palette with cream #efe6d6 and near-black #0b0806 (optionally add CMYK equivalents); set brand fonts H1/H2/H3 to Baskerville SemiBold/Bold and Body to Baskerville Regular so text semantics carry into the PDF.",
+   "Create the design from the 'Poster 18 x 24 in' preset (or Custom size 18 x 24 with units = in). Export one page immediately as PDF Print (RGB, no crop marks, no flatten) and measure with pdfinfo/pdfimages: page size must read 1296 x 1728 pt and images ~300 dpi. If Canva rejects 18 x 24 in or downsamples, resolve the 8000 x 3125 ambiguity before building 11 pages.",
+   "Pre-process images before upload so the PDF stays small: crop letterboxed stills to their 16:9 image area, resize BTS JPGs from 7000 px to the placed size at 300 dpi, and keep headshots likewise. Canva embeds the full original of any image cropped inside Canva.",
+   "Add all 19 hyperlinks with the Link tool; test-export and click each in a PDF viewer, including the mailto links (undocumented). Avoid text effects on linked text (documented link failure).",
+   "Final export: Share > Download > PDF Print, RGB, Flatten OFF, Crop marks OFF; if over the target size, re-export with Compress PDF and compare stills visually against the 9.8 MB master. Check text is selectable and fonts are embedded (pdffonts). Confirm export count stays under 75 per 5 minutes when iterating.",
+   "Sharing: give the director and producer 'Anyone with the link > Can edit' (or invite by email); ask them to sign in with free Canva accounts so they can comment and download (guests cannot). Create one Public view link for festival/press distribution and keep the edit link private. On Business only: publish as a Brand Template and add it to the Brand Kit."
+  ],
+  "limits": [
+   "Font upload: OTF/TTF/WOFF only; .ttc, .woff2, .eot, .svg, .zip and variable fonts rejected; <15 MB per file; 500 fonts per Brand Kit; 18 styles per family; bold/italic need their own files.",
+   "Font licence is the uploader's responsibility (Canva Terms \u00a74a); Apple SLA scope for cloud upload of bundled Baskerville unverified.",
+   "Native Baskerville: only Libre Baskerville confirmed (Regular/Italic/Bold; no SemiBold, no Bold Italic).",
+   "Brand Kit: Pro = up to 5 Brand Kits, 100 palettes x 100 colours; Brand Controls not on Pro; Brand Templates team-only, external access unsupported.",
+   "Page size: min 40 x 40 px; documented max contradicts itself (8000 px per side vs 8000 x 3125 px); inch-to-px mapping undocumented; 18 x 24 in poster preset exists.",
+   "Pages: 350 per design. Exports: 500/day, 75 per 5 minutes.",
+   "PDF: Standard 96 dpi vs Print 300 dpi; CMYK/Compress Pro+; no size-limit option for PDF; no documented PDF download size cap; flattening kills links, tags and text; cropped images embed full originals.",
+   "Hyperlinks only in non-flattened PDF; fail on text with effects; mailto undocumented.",
+   "Sharing: Pro cannot create a team (Business required); guests editing via link cannot upload, download, print or copy; commenting requires login; 'Only your team' unavailable on Pro.",
+   "Uploads: images <50 MB and <=250 MP; Pro storage 100 GB; PDF import yields page images, not editable text; .ai import may flatten layers."
+  ],
+  "effort_estimate": "Lane work only (not page layout): font split, licence decision, Brand Kit setup and verification ~1-2 h of agent time plus Luke's licence call; page-size and export verification loop ~30-45 min; sharing setup ~10 min. Add ~1 h if Luke upgrades to Business and wants a Brand Template. Image pre-processing to control PDF size ~30 min scripted.",
+  "fidelity_to_the_pdf": "Typeface fidelity is achievable only if the real Baskerville faces (Regular, SemiBold, Bold) are uploaded; with native Libre Baskerville the SemiBold weight and the exact letterforms are lost. Page size 18 x 24 in and 300 dpi imagery are reachable via PDF Print provided the 18 x 24 in preset is accepted (test first; documentation is contradictory on the pixel cap). Colours reproduce exactly via hex. All 19 links survive a non-flattened PDF export (mailto unverified). Text stays live/tagged unless flattened. Expect the Canva PDF to be larger than the 9.8 MB master unless images are pre-cropped, because Canva embeds full originals of cropped images; Compress PDF trades still quality for size."
+ },
+ {
+  "lane": "IMPORT",
+  "claims": [
+   {
+    "claim": "PDF import exists as a first-class feature ('Import and edit PDFs in Canva'). Menu paths: Homepage: drag-and-drop onto Homepage; or banner Upload > Upload files; or side nav Projects > + (Add new) > Upload files. Editor: drag-and-drop; or File > Upload files; or side panel Uploads > Upload files. Also canva.com/pdf-editor 'Upload your PDF'. The imported PDF appears as a design and opens in the editor.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/import-and-edit-pdfs-canva/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "PDF import limits: up to 500 pages, up to 300 MB, up to 1,400 elements and images per file ('Larger files may import incompletely or experience performance issues'). Desktop browser recommended. Luke's file is 11 pages / 9.8 MB, well inside.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/import-and-edit-pdfs-canva/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "No plan gate is stated for PDF import on the help page (no 'Who can use this feature' block, unlike Resize). Import itself should work on Free; Pro is needed for font upload and Resize.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/import-and-edit-pdfs-canva/ (absence of gate) vs https://www.canva.com/help/resize/ and https://www.canva.com/help/upload-fonts/ (explicit gates)",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Text editability: 'Text and images may be separated into editable elements.' Only scanned PDFs / flattened (outlined) text import as a single non-editable image. Luke's PDF has real text: pdffonts shows three embedded TrueType subsets (Baskerville, Baskerville-SemiBold, Baskerville-Bold), so text boxes are expected. Canva does not document how it groups runs; the kit's letter-tracked caps (build-epk-kit.py `tracked()` helper) may import as fragmented text boxes \u2014 this is an inference, not documented.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/import-and-edit-pdfs-canva/ ; local check: pdffonts on KillerOfMen_EPK_1234_10092026_compressed.pdf",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Font substitution rule: 'Unsupported fonts may be replaced with similar fonts.' Troubleshooting: 'The original font isn't supported in Canva and was replaced with a similar font' \u2014 fix is to select affected text and pick a font from the toolbar. No documented control over which substitute is chosen.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/import-and-edit-pdfs-canva/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Whether Canva maps an imported PDF's font names onto fonts the user has uploaded to Brand Kit (so imported 'Baskerville' text lands on an uploaded Baskerville) is not documented anywhere I could find; the upload-fonts page only says uploaded fonts 'can be used the same way as fonts from the Canva library' via the font picker. Assume manual re-assignment per text box.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/upload-fonts/ ; https://www.canva.com/help/import-and-edit-pdfs-canva/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Brand Kit font upload: gated to Canva Pro, Teams, Business, Education, Nonprofits; role must be owner/admin/brand designer. Accepted formats OTF, TTF, WOFF only (not ZIP/EOT/SVG/WOFF2; TTC not listed); file under 15 MB; 'Your fonts should be licensed for embedding'; 'Canva doesn't support variable fonts'; max 500 fonts per Brand Kit, 18 styles per family; upload Regular and Bold files separately for B button to work. Path: Home side panel Brand > Fonts > Add to category > Upload a font.",
+    "status": "documented-gated",
+    "gate": "Pro / Teams / Business / Education / Nonprofits",
+    "source": "https://www.canva.com/help/upload-fonts/ ; https://www.canva.com/help/font-upload-error/ ; https://www.canva.com/help/upload-formats-requirements/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Luke's Baskerville is Apple's bundled font: build-credit-card.py line 100 registers /System/Library/Fonts/Supplemental/Baskerville.ttc (subfontIndex 0 Regular, 1 Bold, 4 SemiBold). A .ttc is not an accepted Canva upload format; it would have to be split into per-style .ttf files first. Whether Apple's macOS font license permits uploading it to Canva (Canva requires 'licensed for embedding') is not verified here \u2014 treat as a licensing question for Luke before any upload.",
+    "status": "could-not-verify",
+    "source": "local: /Users/scrogdawg/BMF Headquarters/Previous Years/2025 - SEW TO GROW/25_01 KILLER OF MEN (THESIS)/FESTIVAL CAMPAIGN/site/tools/build-credit-card.py lines 100-103 ; Canva format list at https://www.canva.com/help/upload-formats-requirements/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Libre Baskerville is reported as available in Canva's library on Free by third-party blogs; no primary Canva page enumerates library fonts. Verify in the font picker after login.",
+    "status": "could-not-verify",
+    "source": "secondary only: https://www.firtherdesignco.com/blog/the-best-free-serif-fonts-on-canva ; https://8designers.com/blog/what-font-is-baskerville-in-canva",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "A design-wide 'replace every instance of font X with font Y' tool is claimed by third-party blogs ('Change all'), but the only 'Change all' on Canva's Format text help page applies to Kerning/Ligatures under Advanced settings. Canva does document Find and replace for text content, not fonts. Plan for per-text-box font reassignment (or select-all on a page then set font).",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/format-text/ ; https://www.canva.com/help/find-replace-text-canva/ ; blog claim https://brendacadman.com/how-to-change-all-fonts-in-a-canva-design/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Hyperlinks: the PDF-import help page says nothing about link annotations; no primary source states they are preserved. Third-party blogs say imported PDF links are lost. Canva's own hyperlink docs: add via select element > More > Link (text, elements, images); links are clickable only in PDF downloads (not flattened PDFs), not PNG/JPG. Plan to re-add all 19 links manually and export as PDF (Digital/Standard, Flatten off).",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/import-and-edit-pdfs-canva/ (silent) ; https://www.canva.com/help/hyperlinks/ ; local: 19 /Link annotations counted in the PDF",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Image resolution on import is not documented. Independently: the compressed PDF already holds downsampled images (pdfimages: BTS 1663x1109 px at 200 ppi effective, stills 1920x1080 at 34 ppi effective, poster 2160x2700), so importing it caps image quality at those pixel sizes regardless of Canva's behaviour. Originals (7000 px BTS, 6200 px headshots) can be re-uploaded: Canva image upload limit is under 50 MB and under 250 million pixels (JPEG/PNG/HEIC/WebP).",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/upload-formats-requirements/ ; local: pdfimages -list on the compressed PDF",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Page size: PDF-import page says Canva 'keeps the original layout as closely as possible' but does not state that page dimensions are preserved. The upload-formats page says 'When importing a PDF document to Canva, the pages become individual images in an A4 document. It doesn't become a page of editable text like in Docs' \u2014 wording appears to describe importing into Canva Docs and contradicts the design-import page. Whether an 18 x 24 in (1296 x 1728 pt) page survives as 18 x 24 in is unverified; check Resize > Custom size after import.",
+    "status": "could-not-verify",
+    "source": "https://www.canva.com/help/import-and-edit-pdfs-canva/ ; https://www.canva.com/help/upload-formats-requirements/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "18 x 24 in is a supported Canva size: it is listed as the 'Medium' poster preset (Canva sizes wiki), and custom sizes accept in/mm/cm/px with each side between 40 px and 8000 px (help pages also print 'Maximum dimensions: 8000 x 3125 px'). Resize/Magic Resize to fix a wrong imported size is gated to Pro/Teams/Business/Enterprise/Education/Nonprofits and 'Each use of Magic Resize counts against your monthly AI usage limit'.",
+    "status": "documented-gated",
+    "gate": "Resize: Pro and above; custom size on new design: all plans",
+    "source": "https://www.canva.com/sizes/poster/ ; https://www.canva.com/help/design-from-scratch/ ; https://www.canva.com/help/resize/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "SVG route: SVG files are uploaded as graphic elements, not converted to designs. Requirements: under 3 MB, 'Between 150 to 200 pixels wide', SVG 1.1 profile, and 'Expand all strokes, paths, and text boxes' before upload (text must be outlined). Uploaded SVG shapes can only be resized/recolored. Therefore per-page SVG import yields zero editable text and no hyperlinks \u2014 not viable for this kit.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/upload-formats-requirements/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "PPTX route: 'early version (beta release)', canva.com desktop browser only. .pptx/.potx/.ppsm up to 300 MB (.ppt 100 MB), up to 300 slides, up to 1,400 elements and images per file. Charts, SmartArt, 3D objects, WordArt ignored. Fonts: 'We'll try to identify and match the text font... it's not always possible to find an exact match.' Scans import flat. Hyperlink handling and slide-size preservation are not documented.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/powerpoint-import/ ; https://www.canva.com/help/upload-formats-requirements/",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   },
+   {
+    "claim": "Illustrator (.ai) route, relevant because the kit exists as .ai: beta, desktop only; 'You can only import Illustrator designs saved as PDF compatible format'; size limit stated as 100 MB on the ai-import page but 300 MB on the formats page (conflict); up to 300 artboards per design, up to 100 fonts, 1,200 images per page; 'layers, gradients, and masks are supported, but some elements might be rasterized'; fonts matched approximately. Handling of linked (not embedded) images is not documented; PDF-compatible saving embeds a rendition, but verify visually.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/ai-import/ ; https://www.canva.com/help/upload-formats-requirements/",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Connect API design import exists: POST design import job (octet-stream body + Import-Metadata header with base64 title <=50 chars, optional mime_type), URL import job (public URL), and GET job status. Supported types include application/pdf, PPTX/PPT, .ai, .psd, Affinity, Keynote/Pages, Word, ODF. Scope design:content:write; 20 create requests/min/user; 'Imports with a large number of pages or assets are split into multiple designs.' No fidelity, font, link or size behaviour documented \u2014 it is the same converter behind the UI, as far as the docs say.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/docs/connect/api-reference/design-imports/ ; https://www.canva.dev/docs/connect/api-reference/design-imports/create-design-import-job/ ; https://www.canva.dev/docs/connect/api-reference/design-imports/create-url-import-job/",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Connect API access: creating an integration requires a Canva account with MFA enabled. 'Public integrations are available to all Canva users, but the integration must first be reviewed by Canva'; 'Private integrations can only be used by your team on a Canva Enterprise plan.' Whether a developer can authorize an unreviewed public integration against their own account (quickstart uses http://127.0.0.1:3001/oauth/redirect, implying local testing) is not explicitly stated. For an 11-page kit the UI upload is sufficient; the API adds nothing to fidelity.",
+    "status": "documented-gated",
+    "gate": "Private integrations: Enterprise only; public: Canva review; MFA required to create",
+    "source": "https://www.canva.dev/docs/connect/creating-integrations/ ; https://www.canva.dev/docs/connect/quickstart/ ; https://www.canva.dev/blog/developers/launching-to-all-connect-api/ (2024-06-18)",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Canva's Dev MCP server (blog 2026-06-09) is a developer-docs/request-validation tool; the blog does not document any import-a-PDF capability. Not an import route.",
+    "status": "documented-current",
+    "source": "https://www.canva.dev/blog/developers/canva-and-coding-agents-platforms/",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Alt text embedded in imported PDFs and PPTXs is preserved and included in exports (only import-preservation statement Canva makes about PDF metadata). Export for links: Share > Download > PDF, preset Digital, Flatten PDF unchecked.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/import-and-edit-pdfs-canva/ (PDF accessibility section)",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Storage: Free 5 GB, Pro 100 GB per the formats page (another help article says Pro/Teams 1 TB \u2014 conflicting). Irrelevant at this kit's size but noted as a doc inconsistency.",
+    "status": "documented-current",
+    "source": "https://www.canva.com/help/upload-formats-requirements/",
+    "read_on": "2026-09-10",
+    "load_bearing": false
+   },
+   {
+    "claim": "Route verdict: PDF import is the most editable path for this kit. SVG gives no text. PPTX would require first generating a PPTX from the Python layout and is documented as beta with approximate font matching and no link documentation \u2014 no advantage over PDF. .ai import is a fallback if PDF text fragments badly (it carries the same text runs but also the same font-matching caveat and no hyperlinks).",
+    "status": "documented-current",
+    "source": "synthesis of the sources above",
+    "read_on": "2026-09-10",
+    "load_bearing": true
+   }
+  ],
+  "steps_for_this_kit": [
+   "0. Decide the font question with Luke before touching Canva: (a) split Apple Baskerville.ttc into Regular/SemiBold/Bold .ttf and upload to Brand Kit (needs Pro; licensing of Apple's bundled font for upload is unverified and is Luke's call), or (b) accept Libre Baskerville from Canva's library (verify it exists in the font picker), or (c) buy/obtain a licensed Baskerville in TTF/OTF. Do not upload the .ttc as-is; Canva accepts only OTF/TTF/WOFF under 15 MB.",
+   "1. Generate an import-optimized PDF from build-epk-kit.py rather than importing the compressed one: images at full resolution (the compressed PDF already holds 1663 px BTS and 1920 px stills), keep total under 300 MB, and, if feasible, emit tracked caps as single text runs with character spacing instead of per-glyph draws so Canva has a chance to keep one text box per line. Keep 1296 x 1728 pt page size and embedded TrueType text (confirm with pdffonts).",
+   "2. In Luke's logged-in Chrome (agent-driven): Canva Home > Upload > Upload files > pick the PDF; wait for 'imported' state; open the design. Menu path per Canva help, read 2026-09-10.",
+   "3. Audit immediately, page by page, before any edits: (a) Resize > Custom size shows 18 x 24 in (if not, Resize this design to 18 x 24 in \u2014 Pro, uses an AI-usage credit); (b) count text boxes vs the 11-page text-run list from build-epk-kit.py, note fragmentation; (c) note which font Canva substituted; (d) check whether any of the 19 links survived (expect none); (e) check images were separated, not flattened with the dark ground.",
+   "4. Fonts: set every text box to the chosen Baskerville (uploaded family appears under 'Uploaded fonts'; SemiBold/Bold are separate uploaded styles). No documented font-wide replace tool; drive it per text box or per-page select-all where styles match. Re-check tracking (Advanced settings > Spacing) on the caps labels.",
+   "5. Images: upload the originals from FESTIVAL CAMPAIGN/site/press/assets (each under 50 MB / 250 MP) to Uploads and drag each onto its imported placeholder so it replaces in place; keep crops identical to the PDF.",
+   "6. Links: re-add all 19 (select text/element > More > Link > paste URL) from the link list emitted by build-epk-kit.py; mailto and https both supported as URLs.",
+   "7. Verify by export: Share > Download > PDF (Digital), Flatten PDF off, all pages; open the exported PDF and run pdffonts / link count (expect 19 /Link annots) / pdfimages against the source PDF; visually diff page renders (pdftoppm both, side by side) before handing to collaborators.",
+   "8. Share the design with the director and producer as editors (collaborator editing does not require them to be on Pro for the fonts to render in the shared design, but that is not verified here \u2014 check after sharing)."
+  ],
+  "limits": [
+   "PDF import: 300 MB, 500 pages, 1,400 elements+images per file; scanned/outlined text imports flat.",
+   "PPTX import: 300 MB (.pptx), 300 slides, 1,400 elements; beta; charts/SmartArt/3D/WordArt dropped.",
+   "SVG upload: under 3 MB, 150-200 px wide, SVG 1.1, text must be expanded \u2014 no editable text, no design import.",
+   ".ai import: PDF-compatible saves only; 100 MB (ai-import page) vs 300 MB (formats page) conflict; 300 artboards; 100 fonts; 1,200 images/page; some elements rasterized.",
+   "Fonts: upload is Pro-and-above; OTF/TTF/WOFF only, under 15 MB, no variable fonts, no TTC; must be licensed for embedding; 500 per Brand Kit; 18 styles per family.",
+   "Design size: each side 40-8000 px (help pages also print '8000 x 3125 px'); 18 x 24 in is a listed poster preset; Resize is Pro-and-above and counts against monthly AI usage.",
+   "Images: under 50 MB and under 250 million pixels each.",
+   "Hyperlinks: work only in non-flattened PDF downloads; preservation through import is undocumented (expect to re-add 19).",
+   "Canva help pages return 403 to non-browser fetchers (WebFetch, curl); all help-center reads here were via a real browser tab on 2026-09-10.",
+   "Not tested live: no import was performed against Luke's account; everything about fragmentation, substituted font, and page-size survival is documented-or-inferred, not observed."
+  ],
+  "effort_estimate": "Import itself: minutes. Cleanup is the cost: font reassignment across 11 pages (tens to low hundreds of text boxes depending on fragmentation), 19 links re-added, ~56 image replacements if originals are swapped in, plus a verification export. Agent-driven in Chrome with Luke checking pages: roughly 2-4 hours; longer if tracked caps import as per-glyph boxes and pages need partial rebuild. Add 30-60 minutes up front for the font-licence decision and building an import-optimized PDF.",
+  "fidelity_to_the_pdf": "Expect layout positions and the dark ground to survive, real text to import as editable boxes (possibly fragmented where letters are tracked), fonts to be substituted until manually reassigned (exact Baskerville only if a licensed TTF/OTF can be uploaded on Pro; otherwise Libre Baskerville, a visibly different cut), images to arrive at the PDF's embedded pixel size (so replace from originals), and all 19 hyperlinks to need re-adding. Page size survival at 18 x 24 in is unverified; correctable with Resize on Pro. Net: a faithful-looking but not pixel-identical kit, editable by collaborators, after a manual pass."
+ }
+]
