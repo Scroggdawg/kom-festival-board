@@ -1,6 +1,6 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-11T14:56:15-05:00",
+  "updated": "2026-09-11T15:01:33-05:00",
   "updated_by": "Fable session, Canva lane, preflight answered",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
@@ -125,12 +125,13 @@
     },
     {
       "n": 10,
-      "status": "FAILED in the ascending run",
-      "mode": "per-element skipped",
-      "at": "2026-09-11T19:52Z (ascending run)",
+      "status": "placed on the current page: 123/126, 3 failures (messages in the panel log, not yet read)",
+      "mode": "per-element on the selected page",
+      "at": "2026-09-11T20:00:13Z",
       "elements_attempted": 126,
-      "elements_placed": 0,
-      "note": "batch addPage rejected (exact and floored); the fallback's background-only page exists at position 10; the app's new 'Place page N on the current page' mode places the 126 elements onto it"
+      "elements_placed": 123,
+      "note": "batch addPage rejected (exact and floored); the fallback's background-only page exists at position 10; the app's new 'Place page N on the current page' mode places the 126 elements onto it",
+      "page_id": "PB0SFL2fVtVVyZZm"
     },
     {
       "n": 11,
@@ -161,8 +162,8 @@
     "edit_link_sent_to": [],
     "view_link": null
   },
-  "last_error": "page 10: new page PB0SFL2fVtVVyZZm is not the current page; per-element placement skipped (2026-09-11 19:52Z)",
-  "next_step": "Reload the panel (new bundle), Load, Read page size, pick the three fonts; select the empty page 10 in the editor; Page n = 10; Place page N on the current page; Read design (wrap check); then export PDF Print (Luke's click) and verify.",
+  "last_error": "page 10: 3 of 126 elements failed in the per-element placement (2026-09-11 20:00Z); the page reads complete by eye (CREW, both columns, the still); identify the three from the panel log before export",
+  "next_step": "Read the three page-10 failures in the panel log; Read design (wrap check over all pages); export PDF Print, RGB, Flatten off, crop marks off (Luke's click); verify with pymupdf; Drive copy; share links.",
   "app": {
     "path": "canva/kom-epk-builder",
     "commit": "4fa036b",

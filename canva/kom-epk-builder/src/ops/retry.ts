@@ -3,8 +3,11 @@
 // errors page could not be fetched at any guessed URL on 2026-09-10 (see BUILD-REPORT.md).
 import { CanvaError } from "@canva/error";
 
-export const BACKOFF_MS = [500, 1000, 2000, 4000];
-export const MAX_TRIES = 5;
+// 2026-09-11, live: addElementAtPoint has its own rate limit ("Add native element rate
+// limit exceeded"); 126 calls in a row lost 3 elements at four retries topping out at 4 s.
+export const BACKOFF_MS = [500, 1000, 2000, 4000, 8000, 16000];
+export const MAX_TRIES = 7;
+export const PACE_MS = 150; // pause between consecutive addElementAtPoint calls
 
 // Scopes per https://www.canva.dev/docs/apps/configuring-scopes/ (read 2026-09-10):
 // addPage/addElementAtPoint -> canva:design:content:write, upload -> canva:asset:private:write,

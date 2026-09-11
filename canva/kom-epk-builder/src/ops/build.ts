@@ -25,7 +25,7 @@ import {
   createRichtextRange,
   getCurrentPageMetadata,
 } from "@canva/design";
-import { errorMessage, withRetry } from "./retry";
+import { errorMessage, PACE_MS, withRetry } from "./retry";
 import type { StoredFont } from "./storage";
 import type {
   OpsDoc,
@@ -465,6 +465,7 @@ export async function placeOnCurrentPage(
       failures.push(msg);
       log(`  ${msg}`);
     }
+    await new Promise<void>((r) => setTimeout(r, PACE_MS));
   }
   log(
     `page ${page.n}: placed ${placed}/${built.length} on the current page — attempted ${page.elements.length}, failures ${failures.length}`,
