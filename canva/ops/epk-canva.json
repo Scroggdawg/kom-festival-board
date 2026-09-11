@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generated": "2026-09-11T16:02:44",
+ "generated": "2026-09-11T17:15:44",
  "source": {
-  "kit_commit": "e778b04",
+  "kit_commit": "dfd1e42",
   "epk_rev": 26
  },
  "measured_face": "Libre Baskerville 2.005 (OFL; press/assets/derived/fonts/libre-baskerville)",
@@ -2032,7 +2032,7 @@
    "n": 7,
    "name": "07 Cast",
    "background": "#0b0806",
-   "count": 23,
+   "count": 19,
    "elements": [
     {
      "type": "image",
@@ -2298,66 +2298,6 @@
      "x": 284.0,
      "y": 1411.85,
      "w": 209.87,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "SPECTATOR",
-     "font": "Bask",
-     "size_pt": 15.6,
-     "leading_pt": 18.72,
-     "tracking_pt": 1.35,
-     "color": "#b9a88c",
-     "align": "start",
-     "x": 74.0,
-     "y": 1441.18,
-     "w": 155.52,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "DANIEL KASSAR",
-     "font": "Bask",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 284.0,
-     "y": 1439.85,
-     "w": 206.97,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "SPECTATOR",
-     "font": "Bask",
-     "size_pt": 15.6,
-     "leading_pt": 18.72,
-     "tracking_pt": 1.35,
-     "color": "#b9a88c",
-     "align": "start",
-     "x": 74.0,
-     "y": 1469.18,
-     "w": 155.52,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "NIKITA KORSHUNOV",
-     "font": "Bask",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 284.0,
-     "y": 1467.85,
-     "w": 263.12,
      "links": []
     },
     {

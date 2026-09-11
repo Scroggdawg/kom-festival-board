@@ -538,8 +538,9 @@ def portrait_src(key):
     return (pn if isinstance(pn, str) else HEADSHOT(pn)), PORTRAIT_GRADE.get(key) == "mono"
 
 
-def bio_block(c, key, role, name, y, side, height):
-    """Heading, portrait on one side, text on the other. Returns the y below."""
+def bio_block(c, key, role, name, y, side, height, port_h=None):
+    """Heading, portrait on one side, text on the other. Returns the y below. `port_h`
+    overrides the portrait height (the five-on-one test page); width keeps the 0.84 aspect."""
     src, graded = portrait_src(key)
     has_img = src is not None and os.path.exists(src)
     head_text = f"{role}  |  {name}"
@@ -559,8 +560,8 @@ def bio_block(c, key, role, name, y, side, height):
         link(c, url, px - 4, y - 8, wd + 8, BODY + 12)
         px += wd + gap
     y -= 40
-    img_h = PORTRAIT_H
-    img_w = PORTRAIT_W
+    img_h = PORTRAIT_H if port_h is None else port_h
+    img_w = PORTRAIT_W if port_h is None else round(port_h * 0.84)
     text_w = W - 2 * M - img_w - 48                 # the measure every bio shares
     text = field(c._d, key)
     size, lead = fit(text, text_w, img_h - 4, 19.0, 30.0)
@@ -580,13 +581,15 @@ def bio_block(c, key, role, name, y, side, height):
     return y - para_height(text, text_w, size, lead) - lead
 
 
-def bio_height(d, key):
+def bio_height(d, key, port_h=None):
     """What bio_block() will use, so the page can distribute its spare evenly."""
     src, _ = portrait_src(key)
+    img_h = PORTRAIT_H if port_h is None else port_h
+    img_w = PORTRAIT_W if port_h is None else round(port_h * 0.84)
     if src is not None and os.path.exists(src):
-        return 40 + PORTRAIT_H
-    text_w = W - 2 * M - PORTRAIT_W - 48
-    size, lead = fit(field(d, key), text_w, PORTRAIT_H - 4, 19.0, 30.0)
+        return 40 + img_h
+    text_w = W - 2 * M - img_w - 48
+    size, lead = fit(field(d, key), text_w, img_h - 4, 19.0, 30.0)
     return 40 + para_height(field(d, key), text_w, size, lead) + lead
 
 
@@ -619,6 +622,35 @@ def page_bios(c, d, items, first, offset=0):
     c.showPage()
 
 
+BIO_GAP_SINGLE = 30.0
+
+
+def page_bios_single(c, d, items, offset=0):
+    """Test page (Luke, 2026-09-11: "a test page where all 5 filmmakers fit on a single
+    page"). Pages 5-6's law unchanged: one text edge, the lockup and its handles and the
+    prose on M, only the portrait alternating sides; the portrait height is what one page
+    allows after the title, five headings and four gaps, the last block on the foot margin,
+    and fit() sets each bio in the box beside its portrait. Not wired into main(); rendered
+    by tools/build-epk-variants.py."""
+    c._d = d
+    ground(c)
+    y = title(c, "FILMMAKERS", H - M - 30)
+    y -= 48
+    port_h = float(int((y - M - 40 * len(items) - BIO_GAP_SINGLE * (len(items) - 1)) / len(items)))
+    heights = [bio_height(d, key, port_h) for key, _, _ in items]
+    between = (y - M - sum(heights)) / max(len(items) - 1, 1)
+    sizes = []
+    for i, (key, role, name) in enumerate(items):
+        text_w = W - 2 * M - round(port_h * 0.84) - 48
+        sizes.append(fit(field(d, key), text_w, port_h - 4, 19.0, 30.0)[0])
+        y = bio_block(c, key, role, name, y, "left" if (offset + i) % 2 == 0 else "right",
+                      heights[i], port_h)
+        y -= between
+    print(f"five-on-one: portrait {port_h:.0f} x {round(port_h * 0.84)} pt (pages 5-6: {PORTRAIT_H:.0f} x {PORTRAIT_W}), "
+          f"gap {between:.0f}, bio sizes " + ", ".join(f"{s:.1f}" for s in sizes))
+    c.showPage()
+
+
 # ---- page 7: the page-3 form, mirrored. The cast column on the left edge, one figure
 # ghosted in the right third. Still 1.1.17 (Mace at the cabin, daylight) at focus 0.12
 # puts his face in the upper right looking into the column, the Elder's gesture on page 3.
@@ -645,6 +677,12 @@ def cast_blocks(text):
         else:
             notes.append(b)
     return bios, notes
+
+
+# Roles the cast page does not bill under ALSO BILLED (Luke, 2026-09-11: "lose the two
+# spectator billings"). Pages 3 (the programmer's CAST block) and 9 (CREDITS) still carry
+# them from the same fields; drop them there too only on Luke's word.
+CAST_PAGE_DROP = ("spectator",)
 
 
 def page_cast(c, d):
@@ -679,7 +717,8 @@ def page_cast(c, d):
             # labels, never a line of running text, and each title is in the paragraph
             y -= 48
         with_bio = {b[0].lower() for b in bios}
-        rest = [(r, n) for r, n in billed if r.lower() not in with_bio]
+        rest = [(r, n) for r, n in billed if r.lower() not in with_bio
+                and not any(k in r.lower() for k in CAST_PAGE_DROP)]
         if rest:
             y -= 8
             label(c, x, y, "ALSO BILLED")
