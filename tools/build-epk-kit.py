@@ -245,9 +245,15 @@ def mono(im, target_l=20.0):
     return grade_mono_pixels(im, target_l)
 
 
+GHOST_ALPHA, GHOST_SCRIM = 0.48, 0.32   # the ghost family (pages 3, 4, 7): Luke, 2026-09-11,
+                                        # from four rendered strengths; was 0.22 / 0.50
+
+
 def ground(c, still_n=None, alpha=0.16, scrim=0.55, focus=(0.5, 0.5)):
-    """A ghost at 0.16 under 0.55 only reads when the still's centre crop has a mean
-    luminance of about 70 or more; darker frames vanish into the ground."""
+    """The page ground, with a still ghosted under a scrim when still_n is given. The
+    ghost family draws at GHOST_ALPHA / GHOST_SCRIM (page 3's Elder measures face L 24,
+    left third L 29; the type's ground stays under L 30). The old 0.16 / 0.55 defaults
+    remain for any caller that asks for them."""
     c.setFillColor(GROUND)
     c.rect(0, 0, W, H, fill=1, stroke=0)
     if still_n is not None:
@@ -425,7 +431,7 @@ def programmer_rows(d):
 
 
 def page_programmer(c, d):
-    ground(c, 41, alpha=0.22, scrim=0.50)
+    ground(c, 41, alpha=GHOST_ALPHA, scrim=GHOST_SCRIM)
     xr = W - M                      # everything right-aligned to this edge
     y = title(c, "KILLER OF MEN", H - M - 30, align="right", x=xr)
     rows = programmer_rows(d)
@@ -504,7 +510,7 @@ def page_statement(c, d):
     # focus 0.83 stands Mace's back whole in the left third of the crop of still 10; the
     # owner leaves the frame and his hand on the shoulder enters from the edge (Luke's
     # call, handoff-113). 0.62 kept both silhouettes and ran the column across both (P4-02).
-    ground(c, 10, alpha=0.20, scrim=0.50, focus=(0.83, 0.5))
+    ground(c, 10, alpha=GHOST_ALPHA, scrim=GHOST_SCRIM, focus=(0.83, 0.5))
     xr = W - M
     y = title(c, "DIRECTOR'S STATEMENT", H - M - 30, align="right", x=xr)
     # Single newlines in 4.1 are the director's own paragraph turns; para() would fold them
@@ -660,7 +666,7 @@ def page_cast(c, d):
 
     if bios:
         n, focus = CAST_GHOST
-        ground(c, n, alpha=0.22, scrim=0.50, focus=focus)
+        ground(c, n, alpha=GHOST_ALPHA, scrim=GHOST_SCRIM, focus=focus)
         y = title(c, "CAST", H - M - 30, align="left", x=x)
         y -= 44
         for role, name, body, prior in bios:
@@ -762,7 +768,7 @@ def page_credits_variant(c, d):
     under the recipe) at focus 0.30; 1.1.16 was measured and cuts Mace's face at the crop's
     edge at any focus that keeps him in one third. The key credits, the 9.1 tail, the cast
     and the extras in one right-aligned column at xr with DIM roles and CREAM names."""
-    ground(c, 13, alpha=0.22, scrim=0.50, focus=(0.30, 0.5))
+    ground(c, 13, alpha=GHOST_ALPHA, scrim=GHOST_SCRIM, focus=(0.30, 0.5))
     xr = W - M
     y = title(c, "CREDITS", H - M - 30, align="right", x=xr)
     size, step = COL_SIZE, COL_STEP

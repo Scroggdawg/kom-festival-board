@@ -6,11 +6,11 @@ Before: `KillerOfMen_EPK_1544_10092026_compressed.pdf` (11 pages). After: `Kille
 |---|---|---|---|---|
 | 1 | unchanged | 0 → 0 | 0 → 0 | 0 |
 | 2 | adjusted | 877 → 879 | 0 → 0 | 2 |
-| 3 | unchanged | 975 → 975 | 10 → 10 | 5 |
-| 4 | redesigned | 2620 → 2591 | 0 → 0 | 1 |
+| 3 | adjusted | 975 → 975 | 10 → 10 | 5 |
+| 4 | redesigned | 2620 → 2591 | 0 → 0 | 3 |
 | 5 | adjusted | 1613 → 1716 | 6 → 6 | 5 |
 | 6 | adjusted | 1192 → 1209 | 4 → 4 | 2 |
-| 7 | redesigned | 3307 → 2438 | 0 → 0 | 6 |
+| 7 | redesigned | 3307 → 2438 | 0 → 0 | 7 |
 | 8 | adjusted | 51 → 51 | 0 → 0 | 5 |
 | 9 | adjusted | 557 → 557 | 0 → 0 | 7 |
 | 10 | adjusted | 1931 → 1880 | 0 → 0 | 4 |
@@ -26,13 +26,14 @@ Before: `KillerOfMen_EPK_1544_10092026_compressed.pdf` (11 pages). After: `Kille
 - CONFIRM: The man at the left edge of the hero is Master Kenner (inference from costume and the synopsis).
 
 **Page 3**
-- No change: the north star. Every other change on these pages is measured against it (one figure in the left third looking into the column, one alignment edge, DIM keys and CREAM values, the tracked title with its hairline, the footer anchored).
+- The ghost recipe, ratified by Luke from four rendered strengths during the Canva pilot: the still at alpha 0.48 under a 0.32 scrim (was 0.22 / 0.50). The Elder's face measures L 24 (was 13); the ground under the column stays under L 50, cream above 9:1. Nothing else on the page moves.
 - CONFIRM: EXHIBITION FORMAT (field 3.12) is empty; the row draws itself when it is filled. Which formats exist today is You Wu's answer (the delivery skeleton names a 2K 422HQ ProRes and a DCP); nothing was pre-filled.
 
 **Page 4**
 - Page 3's armature: still 1.1.10 at focus 0.83 stands Mace's back whole in the left third (the owner leaves the frame); the title right-aligned to xr = 1222; a 686 pt left-aligned column at 536-1222, 25 pt clear of the figure; the signature on the column's edge. Ghost recipe, sizes and fit() guard unchanged.
 - The statement's own paragraph turns restored: field 4.1 carries single newlines at seven topic turns that para() folded into one seventeen-line block; they are promoted to paragraph breaks.
 - fit() lands the statement at 21.5 / 33.8 in 34 lines on the 686 pt measure; recorded as the accepted size, and the Bible's 23 / 36.5 row carries it as PROPOSED.
+- The same ghost recipe (0.48 / 0.32): Mace's silhouette reads as a figure; the ground under the column measures L 53.
 - CONFIRM: At focus 0.83 the owner's hand on Mace's shoulder enters from the crop's left edge. Accept it, pick a different single-figure still for page 4, or keep both figures with the old centred column.
 - CONFIRM: The statement runs 436 words against the spec's 300-350; whether it is cut is Jordan's.
 
@@ -56,6 +57,7 @@ Before: `KillerOfMen_EPK_1544_10092026_compressed.pdf` (11 pages). After: `Kille
 - Field 7.1 is parsed: blocks whose first line carries a pipe are bios; the provenance notes (DRAFTS, NOT YET APPROVED, the McDaniels note, the TO CONFIRM list, the GitHub link) no longer print as copy. While they exist in the field the page carries a PROOF slug, as page 2 does.
 - The five billed names without a bio in the two-tone rows under a label; the four with bios are not repeated. Column ends about 190 pt above the foot; no fit() step needed.
 - A four-frame grid (one in-character still per actor) was built and rejected by the pass as a fourth image treatment; it is in the session's scratch renders, not in the draft.
+- The same ghost recipe (0.48 / 0.32): Mace's face in the right third reads at L 40; the ground under the column measures L 27.
 - CONFIRM: Still 1.1.17 (face into the column) or 1.1.15 (figure at the oak) as page 7's ghost; is the man in each frame Mace (Erik Orjiako)?
 - CONFIRM: The label word over the five names: the draft says ALSO BILLED.
 - CONFIRM: Whether the DIM 'Prior credits' line stays (a caption-class line under BRAND's DIM row) or goes; each title already appears in its paragraph.

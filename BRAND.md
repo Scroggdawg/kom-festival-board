@@ -191,6 +191,7 @@ The question these rows raise is larger than any row: pages 1–8 of the EPK are
 
 ## Amendments
 
+- 2026-09-11 (later) — **RATIFIED by Luke, from four rendered strengths of page 3 in the Canva pilot:** the ghost family (pages 3, 4, 7) draws the still at alpha 0.48 under a 0.32 GROUND scrim (`GHOST_ALPHA`, `GHOST_SCRIM` in the kit), replacing 0.22 / 0.50. Page 3's Elder now measures face L 24 and left third L 29; the type's ground stays under L 30. Chapter 3's ghost row and the programmer-page row follow.
 - 2026-09-11 — Taste pass (handoff-113-epk; the draft and its review sheet in `press/drafts/2026-09-11/`). PROPOSED, for Luke: chapter 8 records the kit's crop-at-draw-time practice (masters untouched); the director's statement lands at 21.5 / 33.8 on a 686 pt measure; page 7's lockups take the heading class and the billed-lead row is unused; prose on pages 2, 4, 5, 6 and 7 is set flush-left on one hard edge, right alignment kept for one-line key / value rows only (page 3); a two-position title rule, a column page carries its title over its column (page 3 right, page 7 left), a full-measure page centres it (pages 4, 5 are the exceptions that keep page 3's right edge); the RULE row's "never running text" on DIM holds, the page-7 prior-credits line was dropped for it. Chapter 5's geometry gains the page-4 and page-7 columns (686 pt at 536, 600 pt at 74).
 
 - 2026-09-09 — v0.1 DRAFT written from the artifacts. Awaiting Luke's ratification.

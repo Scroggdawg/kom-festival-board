@@ -281,6 +281,10 @@ export const App = () => {
     emptyProgress(""),
   );
   const [pageN, setPageN] = useState<number | undefined>(1);
+  // addPage() inserts after the CURRENT page and the new page does not become current
+  // (pilot 2026-09-11: page_is_current false every time), so a run of pages inserted in
+  // ascending order reads backwards. Build all therefore runs 11 down to 1 by default.
+  const [reverseOrder, setReverseOrder] = useState(true);
   const [building, setBuilding] = useState(false);
   const [lastError, setLastError] = useState<string | undefined>();
 
@@ -392,9 +396,12 @@ export const App = () => {
     const remaining = doc.pages
       .map((p) => p.n)
       .filter((n) => !progress.done[String(n)]);
+    if (reverseOrder) {
+      remaining.reverse();
+    }
     const retry = remaining.filter((n) => progress.failed[String(n)]);
     appendLog(
-      `build all: ${remaining.length} of ${doc.pages.length} pages remaining (${retry.length} recorded as failed will be retried — delete their partial pages in the editor first)`,
+      `build all: ${remaining.length} of ${doc.pages.length} pages remaining, order ${remaining.join(",")} (${retry.length} recorded as failed will be retried — delete their partial pages in the editor first)`,
     );
     void runPages(remaining);
   };
@@ -675,6 +682,15 @@ export const App = () => {
           }
         >
           Build all pages (skips recorded)
+        </Button>
+        <Button
+          variant="tertiary"
+          onClick={() => setReverseOrder((v) => !v)}
+          disabled={building}
+        >
+          {reverseOrder
+            ? "Order: last page first (new pages land after the current page)"
+            : "Order: first page first"}
         </Button>
         <Button
           variant="tertiary"
