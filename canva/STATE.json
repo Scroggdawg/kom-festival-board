@@ -30,7 +30,7 @@
   ],
   "scale_px_per_pt": 1.333333,
   "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL",
-  "pages": "11 pages in order; page 7 still the 23-element cast page with the two Spectator rows (contract now 19 elements there); page 2 deleted by a stray Backspace and restored by Undo 2026-09-11",
+  "pages": "11 pages in order, every element placed; page 7 rebuilt 2026-09-11 from the 395-element contract (Spectator rows gone)",
   "rebuilds": [
    "2026-09-11 19:52-20:06Z first full build (Baskerville-measured contract); Luke's five notes",
    "2026-09-11 21:10-21:13Z rebuild from the Libre-measured contract (commit ffc96ca): all 11 pages deleted in the grid view one by one (Delete on page 1, eleven times, after '+' added a blank page to keep), Reset, Load, Build all ascending, Place page 10, blank page deleted"
@@ -58,11 +58,11 @@
   }
  },
  "ops": {
-  "generated": "2026-09-11T16:02:44",
-  "kit_commit": "ffc96ca",
+  "generated": "2026-09-11T17:15:44",
+  "kit_commit": "916cf12",
   "epk_rev": 26,
   "measured_face": "Libre Baskerville 2.005 (OFL)",
-  "elements": 399,
+  "elements": 395,
   "images": 23,
   "paragraphs": 19,
   "links": 20,
@@ -134,10 +134,11 @@
    "name": "07 Cast",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T21:10:34Z (rebuild from the Libre-measured contract, generated 16:02:44)",
-   "elements_attempted": 23,
-   "elements_placed": 23,
-   "page_id": "PBSKRLf2h3nkD44z"
+   "at": "2026-09-11T~17:55 local (rebuilt alone: old page deleted, page 6 selected, Build page 7 landed after it)",
+   "elements_attempted": 19,
+   "elements_placed": 19,
+   "page_id": "PByp6bRzmnfzd0gT",
+   "note": "contract generated 2026-09-11T17:15:44 (395 elements): the two Spectator rows are gone from ALSO BILLED (Luke, 2026-09-11)"
   },
   {
    "n": 8,
@@ -204,7 +205,7 @@
   "view_link": null
  },
  "last_error": null,
- "next_step": "With the app's tab in front (Luke closes or leaves his duplicate tab): Load the 395-element contract (generated 2026-09-11T17:15:44), pick the three fonts, delete page 7, select page 6, Build page 7 (cast page without the two Spectator rows), read back; then Luke's ruling on the five-on-one filmmakers page; export; Drive; share.",
+ "next_step": "Luke rules on the five-on-one filmmakers page (press/drafts/2026-09-11/p05-variant-five-on-one.pdf) and whether the Spectators also leave pages 3 and 9; then export (Luke's click: Share > Download > PDF Print, RGB, Flatten off, crop marks off), verify with tools/check-canva-export.py, Drive EPK BUILDS/CANVA, rename the design, share.",
  "app": {
   "path": "canva/kom-epk-builder",
   "commit": "4fa036b",
