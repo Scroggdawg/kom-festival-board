@@ -375,10 +375,13 @@ async function checkCurrent(
   }
 }
 
-export async function buildPage(
+type Prepared = { built: Built[]; failures: string[]; flooredRules: string[] };
+
+/** Upload images and build every element of a page (rules exact, with a floored twin). */
+async function prepareElements(
   ctx: BuildContext,
   page: OpsPage,
-): Promise<BuildResult> {
+): Promise<Prepared> {
   const { log, s } = ctx;
   const failures: string[] = [];
   const built: Built[] = [];
@@ -422,6 +425,68 @@ export async function buildPage(
       log(`  ${msg}`);
     }
   }
+  return { built, failures, flooredRules };
+}
+
+/**
+ * Place a page's elements on the page currently selected in the editor, with no addPage.
+ * For a page whose batch addPage is rejected (page 10, 126 elements, 2026-09-11): the
+ * per-element fallback cannot run on the page it creates, because a new page is never
+ * reported as current, so the operator selects that empty page (it already carries the
+ * background) and presses this. addElementAtPoint targets the current page.
+ */
+export async function placeOnCurrentPage(
+  ctx: BuildContext,
+  page: OpsPage,
+): Promise<BuildResult> {
+  const { log } = ctx;
+  const { built, failures, flooredRules } = await prepareElements(ctx, page);
+  flooredRules.forEach((m) => log(`  ${m}`));
+  let id: string | undefined;
+  try {
+    id = pageIdOf(await getCurrentPageMetadata());
+  } catch (e) {
+    log(`page ${page.n}: getCurrentPageMetadata failed: ${errorMessage(e)}`);
+  }
+  log(
+    `page ${page.n} "${page.name}": placing ${built.length} elements on the current page ${id ?? "n/a"} (no addPage)`,
+  );
+  let placed = 0;
+  for (const b of built) {
+    try {
+      await withRetry(
+        `${b.label} addElementAtPoint`,
+        () => addElementAtPoint(b.floored ?? b.el),
+        log,
+      );
+      placed += 1;
+    } catch (e) {
+      const msg = `${b.label}: addElementAtPoint failed: ${errorMessage(e)}`;
+      failures.push(msg);
+      log(`  ${msg}`);
+    }
+  }
+  log(
+    `page ${page.n}: placed ${placed}/${built.length} on the current page — attempted ${page.elements.length}, failures ${failures.length}`,
+  );
+  return {
+    n: page.n,
+    name: page.name,
+    attempted: page.elements.length,
+    placed,
+    failures,
+    mode: "per-element",
+    page_id: id,
+    page_is_current: true,
+  };
+}
+
+export async function buildPage(
+  ctx: BuildContext,
+  page: OpsPage,
+): Promise<BuildResult> {
+  const { log, s } = ctx;
+  const { built, failures, flooredRules } = await prepareElements(ctx, page);
 
   const dims = {
     width: px(ctx.doc.page.width_pt * s),

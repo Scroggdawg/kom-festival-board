@@ -24,7 +24,7 @@ import type { CSSProperties } from "react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import * as styles from "styles/components.css";
 import type { BuildContext } from "../../ops/build";
-import { buildPage } from "../../ops/build";
+import { buildPage, placeOnCurrentPage } from "../../ops/build";
 import type { ReadPage, WrapFlag } from "../../ops/readback";
 import { flagWrapped, matchOpsPage, readBack } from "../../ops/readback";
 import { errorMessage } from "../../ops/retry";
@@ -335,7 +335,7 @@ export const App = () => {
     };
   };
 
-  const runPages = async (ns: number[]) => {
+  const runPages = async (ns: number[], onCurrent = false) => {
     const ctx = makeCtx();
     if (!ctx) {
       return;
@@ -349,7 +349,9 @@ export const App = () => {
           continue;
         }
         try {
-          const r = await buildPage(ctx, page);
+          const r = onCurrent
+            ? await placeOnCurrentPage(ctx, page)
+            : await buildPage(ctx, page);
           const rec: PageProgress = {
             n: r.n,
             name: r.name,
@@ -386,6 +388,14 @@ export const App = () => {
       return;
     }
     void runPages([pageN]);
+  };
+
+  const onPlaceCurrent = () => {
+    if (pageN === undefined) {
+      appendLog("place: enter a page number");
+      return;
+    }
+    void runPages([pageN], true);
   };
 
   const onBuildAll = () => {
@@ -674,6 +684,15 @@ export const App = () => {
           loading={building}
         >
           Build page N
+        </Button>
+        <Button
+          variant="secondary"
+          onClick={onPlaceCurrent}
+          disabled={
+            building || !doc || s === undefined || !canAddElement || !fontsFresh
+          }
+        >
+          Place page N on the current page (select it first; no addPage)
         </Button>
         <Button
           variant="secondary"

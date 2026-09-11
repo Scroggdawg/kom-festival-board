@@ -1,6 +1,6 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-11T14:53:37-05:00",
+  "updated": "2026-09-11T14:56:15-05:00",
   "updated_by": "Fable session, Canva lane, preflight answered",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
@@ -125,9 +125,12 @@
     },
     {
       "n": 10,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)"
+      "status": "FAILED in the ascending run",
+      "mode": "per-element skipped",
+      "at": "2026-09-11T19:52Z (ascending run)",
+      "elements_attempted": 126,
+      "elements_placed": 0,
+      "note": "batch addPage rejected (exact and floored); the fallback's background-only page exists at position 10; the app's new 'Place page N on the current page' mode places the 126 elements onto it"
     },
     {
       "n": 11,
@@ -158,8 +161,8 @@
     "edit_link_sent_to": [],
     "view_link": null
   },
-  "last_error": null,
-  "next_step": "Read design (wrap check over all pages); export PDF Print, RGB, Flatten off, crop marks off (Luke's click); verify with pymupdf (11 pages 1296 x 1728 pt, text on every page, 18 live links); put the PDF on the Drive under 05 MARKETING/00 PRESS/EPK BUILDS/CANVA; share links (step 9).",
+  "last_error": "page 10: new page PB0SFL2fVtVVyZZm is not the current page; per-element placement skipped (2026-09-11 19:52Z)",
+  "next_step": "Reload the panel (new bundle), Load, Read page size, pick the three fonts; select the empty page 10 in the editor; Page n = 10; Place page N on the current page; Read design (wrap check); then export PDF Print (Luke's click) and verify.",
   "app": {
     "path": "canva/kom-epk-builder",
     "commit": "4fa036b",
