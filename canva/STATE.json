@@ -1,219 +1,221 @@
 {
-  "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-11T15:20:28-05:00",
-  "updated_by": "Fable session, Canva lane, preflight answered",
-  "decisions": {
-    "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
-    "typeface": "Build in Libre Baskerville (apps cannot use uploaded fonts). Optional afterwards, Luke's call: split /System/Library/Fonts/Supplemental/Baskerville.ttc into Regular, SemiBold, Bold .ttf with fontTools, upload to Brand > Fonts, swap in the editor. Not required; the kit must be right for KILLER OF MEN, not match Night Feeds.",
-    "master_after_build": "Canva becomes the master once the design is built and accepted. The worksheet (press/epk.json) and the kit remain the source for the PDF and the .ai until Luke says otherwise; rebuilding a Canva page replaces it and discards edits made in Canva on that page.",
-    "email": "killerofmenmovie@gmail.com, worksheet field 3.20, drawn on page 3's footer as a mailto link. If Canva's export drops mailto links, show the address as plain text. The app itself places both mailto rows as plain text (richtext links document http(s) only), so the Canva build carries 18 live links, not 20.",
-    "line_breaks": "Editable paragraphs that Canva reflows (collaborators can edit words); tracked headings and labels are one element per line so their breaks hold.",
-    "editor_driving": "Luke gave blanket OK (2026-09-10) for an agent to drive his logged-in Canva editor for this build, at human pace, through the documented UI. Accepting Canva's Developer Terms is Luke's own click.",
-    "ghost": "Ratified by Luke 2026-09-11 from four rendered strengths of page 3: the ghost family (pages 3, 4, 7) draws the still at alpha 0.48 under a 0.32 scrim (GHOST_ALPHA / GHOST_SCRIM in the kit; was 0.22 / 0.50). Luke on the pilot: 'i think the image in the background is too dark but i like the rest'.",
-    "build_order": "Each addPage lands after the previously added page (the insertion point follows the new page) although getCurrentPageMetadata() reports the new page as not current; Build all runs 1 to 11 into a design holding one blank page, then the blank page is deleted. A reverse run was tried first on the strength of the pilot's 'current false' reading and came out backwards (2026-09-11 14:50); the pages were deleted in the grid view and rebuilt ascending (14:52)."
-  },
-  "canva_account": {
-    "owner": "Luke Scroggins (camerawrap@gmail.com)",
-    "developer_terms_accepted": "2026-09-11, Luke's own click",
-    "app_created_in_developer_portal": "2026-09-11, Public, draft, version 1",
-    "app_id": "AAHOGBCMC4A",
-    "development_url": "http://localhost:8080",
-    "portal_url": "https://www.canva.com/developers/app/AAHOGBCMC4A/version/1/code-upload"
-  },
-  "design": {
-    "url": "https://www.canva.com/design/DAHU6a7HKPs/IoGNd4lGSEhtiq4phlGwCg/edit",
-    "id": "DAHU6a7HKPs",
-    "page_px": [
-      1728,
-      2304
-    ],
-    "scale_px_per_pt": 1.333333,
-    "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL",
-    "pages": "11 pages in order, every element placed (2026-09-11 20:06Z)"
-  },
-  "probes": {
-    "pdf_import": {
-      "done": false,
-      "result": "not run; the app route worked first time, so the import comparison was skipped"
-    },
-    "fonts": {
-      "done": true,
-      "Bask": "Libre Baskerville · ref YACgEUFdPdA:0 · weights normal,bold (picked per session; refs are short-lived)",
-      "Bask-SB": "no semibold in Libre Baskerville; the contract's fallback_weight bold applies",
-      "Bask-B": "Libre Baskerville bold",
-      "uploaded_baskerville_visible_to_app": "not tested (no upload made)"
-    },
-    "page_size": {
-      "done": true,
-      "width_px": 1728,
-      "height_px": 2304,
-      "scratch_800x600_design": "getDesignMetadata().defaultPageDimensions 800 x 600, s = 0.617284 (the Preview button's own fresh design; not the build target)",
-      "source": "getDesignMetadata().defaultPageDimensions on the 18 x 24 in design DAHU6a7HKPs",
-      "scale_px_per_pt": 1.333333
-    }
-  },
-  "ops": {
-    "file": "canva/ops/epk-canva.json",
-    "url": "https://scroggdawg.github.io/kom-festival-board/canva/ops/epk-canva.json",
-    "regenerate": "venv/bin/python tools/build-epk-canva.py",
-    "epk_rev_built_from": 24,
-    "served": "GitHub Pages served the colour-runs contract (382 elements, 23 images, 20 links) from 13:13 PDT on 2026-09-11",
-    "generated": "2026-09-11T13:11:09",
-    "kit_commit": "e44b45e",
-    "contract_commit": "4fa036b"
-  },
-  "pages_built": [
-    {
-      "n": 1,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)",
-      "elements_attempted": 1,
-      "elements_placed": 1
-    },
-    {
-      "n": 2,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)",
-      "elements_attempted": 6,
-      "elements_placed": 6
-    },
-    {
-      "n": 3,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)",
-      "elements_attempted": 53,
-      "elements_placed": 53
-    },
-    {
-      "n": 4,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)"
-    },
-    {
-      "n": 5,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)"
-    },
-    {
-      "n": 6,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)"
-    },
-    {
-      "n": 7,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)"
-    },
-    {
-      "n": 8,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)"
-    },
-    {
-      "n": 9,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)"
-    },
-    {
-      "n": 10,
-      "status": "done",
-      "mode": "per-element on the selected page (paced)",
-      "at": "2026-09-11T20:06Z",
-      "elements_attempted": 126,
-      "elements_placed": 126,
-      "note": "first placement 123/126: addElementAtPoint rate limit ('Add native element rate limit exceeded') exhausted four retries on #30 SCRIPT SUPERVISORS, #62 FERNANDO ACUNA, #94 HAZEL YUNTONG DAI; commit b7e188d lengthens the backoff to 16 s over 7 tries and paces placements 150 ms apart; page cleared and re-placed",
-      "page_id": "PB0SFL2fVtVVyZZm"
-    },
-    {
-      "n": 11,
-      "status": "done",
-      "mode": "batch",
-      "at": "2026-09-11T19:52Z (ascending run)"
-    }
+ "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
+ "updated": "2026-09-11T15:20:28-05:00",
+ "updated_by": "Fable session, Canva lane, preflight answered",
+ "decisions": {
+  "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
+  "typeface": "Build in Libre Baskerville (apps cannot use uploaded fonts). Optional afterwards, Luke's call: split /System/Library/Fonts/Supplemental/Baskerville.ttc into Regular, SemiBold, Bold .ttf with fontTools, upload to Brand > Fonts, swap in the editor. Not required; the kit must be right for KILLER OF MEN, not match Night Feeds.",
+  "master_after_build": "Canva becomes the master once the design is built and accepted. The worksheet (press/epk.json) and the kit remain the source for the PDF and the .ai until Luke says otherwise; rebuilding a Canva page replaces it and discards edits made in Canva on that page.",
+  "email": "killerofmenmovie@gmail.com, worksheet field 3.20, drawn on page 3's footer as a mailto link. If Canva's export drops mailto links, show the address as plain text. The app itself places both mailto rows as plain text (richtext links document http(s) only), so the Canva build carries 18 live links, not 20.",
+  "line_breaks": "Editable paragraphs that Canva reflows (collaborators can edit words); tracked headings and labels are one element per line so their breaks hold.",
+  "editor_driving": "Luke gave blanket OK (2026-09-10) for an agent to drive his logged-in Canva editor for this build, at human pace, through the documented UI. Accepting Canva's Developer Terms is Luke's own click.",
+  "ghost": "Ratified by Luke 2026-09-11 from four rendered strengths of page 3: the ghost family (pages 3, 4, 7) draws the still at alpha 0.48 under a 0.32 scrim (GHOST_ALPHA / GHOST_SCRIM in the kit; was 0.22 / 0.50). Luke on the pilot: 'i think the image in the background is too dark but i like the rest'.",
+  "build_order": "Each addPage lands after the previously added page (the insertion point follows the new page) although getCurrentPageMetadata() reports the new page as not current; Build all runs 1 to 11 into a design holding one blank page, then the blank page is deleted. A reverse run was tried first on the strength of the pilot's 'current false' reading and came out backwards (2026-09-11 14:50); the pages were deleted in the grid view and rebuilt ascending (14:52).",
+  "measured_face": "Since 2026-09-11 the contract is measured in Libre Baskerville (the face Canva draws), not macOS Baskerville: Luke's review of the first full build (statement clipped at the foot, cast gaps eaten, handles on their lockups) had that one cause. Running text is one element per paragraph; the credit card runs at scale 0.96 in Libre (CREDITS would overflow at 1.0). The design built 2026-09-11 19:52-20:06Z carries the Baskerville-measured contract and is to be rebuilt page by page from the new one."
+ },
+ "canva_account": {
+  "owner": "Luke Scroggins (camerawrap@gmail.com)",
+  "developer_terms_accepted": "2026-09-11, Luke's own click",
+  "app_created_in_developer_portal": "2026-09-11, Public, draft, version 1",
+  "app_id": "AAHOGBCMC4A",
+  "development_url": "http://localhost:8080",
+  "portal_url": "https://www.canva.com/developers/app/AAHOGBCMC4A/version/1/code-upload"
+ },
+ "design": {
+  "url": "https://www.canva.com/design/DAHU6a7HKPs/IoGNd4lGSEhtiq4phlGwCg/edit",
+  "id": "DAHU6a7HKPs",
+  "page_px": [
+   1728,
+   2304
   ],
-  "pilot": {
-    "page": 3,
-    "status": "GO from Luke (typeface, breaks, plain-text email rows); ghost brightened at his request; export verified",
-    "luke_verdict": "'export check good' and 'i like the rest' (2026-09-11); the ghost recipe changed to 0.48 / 0.32 at his pick",
-    "round_1": "2026-09-11 18:03Z: 81/81 elements placed in one addPage batch, page id PBY4znSzzWRWLD3Z, page_is_current false (the new page landed after the default blank page, as documented); still placed; 10 links attached; read-back wrap check: 63 of 70 lines WRAPPED because Libre Baskerville runs wider than the Baskerville the boxes were measured with; the page was deleted and the record forgotten",
-    "fix": "commit e44b45e: the emitter gives every line a box width*1.35+24 anchored on its own alignment edge (right-aligned lines keep the 1222 spine and grow leftward); Illustrator ops carry align and ax",
-    "fonts_note": "Canva's picker also lists ITC New Baskerville (Pro, crown) and Baskerville Display PT: a real Baskerville is available in the editor without uploading Apple's font; Luke's call whether to swap after the build",
-    "round_2": "anchored boxes: 81/81 placed, no wrapped lines, but the two-tone rows overlapped: each key was anchored at its value's Baskerville-measured edge and the wider face slid the value under the key",
-    "round_3": "commit 4fa036b: a key and a value that abut on one baseline are emitted as ONE line with two colour runs (contract field `runs`, applied by the app); page 3 is 53 elements; 53/53 placed, wrap check clean, the two-tone rows read as on the PDF",
-    "export_check": "~/Downloads/03 Programmer.pdf (Canva names the file after the page title): 1 page, 1296 x 1728 pt, 947 chars live text, fonts LibreBaskerville-Regular and -Bold embedded, 10 link annotations over 4 URLs (Drive press folder, site, Instagram, IMDb); the two mailto rows are plain text by design; the letterspaced title is not phrase-searchable (the kit's tracking idiom, same in the PDF)"
+  "scale_px_per_pt": 1.333333,
+  "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL",
+  "pages": "11 pages in order, every element placed (2026-09-11 20:06Z)"
+ },
+ "probes": {
+  "pdf_import": {
+   "done": false,
+   "result": "not run; the app route worked first time, so the import comparison was skipped"
   },
-  "export": {
-    "last_pdf": "~/Downloads/Untitled design.pdf (full kit, PDF Print, RGB, Flatten off, crop marks off, 2026-09-11 15:10)",
-    "pages": 1,
-    "links": 10,
-    "size_mb": 0.33,
-    "verdicts": "see handoff-114-epk; not yet on the Drive"
+  "fonts": {
+   "done": true,
+   "Bask": "Libre Baskerville · ref YACgEUFdPdA:0 · weights normal,bold (picked per session; refs are short-lived)",
+   "Bask-SB": "no semibold in Libre Baskerville; the contract's fallback_weight bold applies",
+   "Bask-B": "Libre Baskerville bold",
+   "uploaded_baskerville_visible_to_app": "not tested (no upload made)"
   },
-  "sharing": {
-    "edit_link_sent_to": [],
-    "view_link": null
+  "page_size": {
+   "done": true,
+   "width_px": 1728,
+   "height_px": 2304,
+   "scratch_800x600_design": "getDesignMetadata().defaultPageDimensions 800 x 600, s = 0.617284 (the Preview button's own fresh design; not the build target)",
+   "source": "getDesignMetadata().defaultPageDimensions on the 18 x 24 in design DAHU6a7HKPs",
+   "scale_px_per_pt": 1.333333
+  }
+ },
+ "ops": {
+  "generated": "2026-09-11T16:02:44",
+  "kit_commit": "ffc96ca",
+  "epk_rev": 26,
+  "measured_face": "Libre Baskerville 2.005 (OFL)",
+  "elements": 399,
+  "images": 23,
+  "paragraphs": 19,
+  "links": 20,
+  "check": "tools/check-canva-contract.py: 0 problems (no baseline overlaps, no paragraph past the foot margin; p04 last paragraph ends at 1503, signature 56 pt below; p07 gaps 40 pt)"
+ },
+ "pages_built": [
+  {
+   "n": 1,
+   "status": "done",
+   "mode": "batch",
+   "at": "2026-09-11T19:52Z (ascending run)",
+   "elements_attempted": 1,
+   "elements_placed": 1
   },
-  "last_error": null,
-  "next_step": "After the context compact: execute handoff-114-epk 'After the compact' A-F: the logline into 2.1 via tools/epk.py; lay the Canva contract out with Libre Baskerville metrics (--face libre) to fix the statement clip, the handle overlap and the cast gaps; Jordan's real headshot from Luke; rebuild all pages in Canva; export; Drive; share.",
-  "app": {
-    "path": "canva/kom-epk-builder",
-    "commit": "4fa036b",
-    "typecheck": "tsc zero errors, eslint clean, npm run build ok (2026-09-11, after runs)",
-    "run": "npm --prefix canva/kom-epk-builder run start  (or the launch.json entry canva-app); serves http://localhost:8080",
-    "notes": [
-      "mailto: links are shown as plain text by the app (richtext link documents http(s) only); the two mailto rows keep their text",
-      "after the first addPage the app checks the new page is the current page before any per-element fallback",
-      "page order from getDesignMetadata is documented as not guaranteed; confirm by eye after page 1",
-      "fonts: only refs resolved in the current panel session are used; Build stays disabled until every key is picked; a missing ref fails the element (Codex finding 2)",
-      "images: whenUploaded() is awaited per image; a failed upload fails the element (Codex finding 8)",
-      "the Preview button opens a fresh 800 x 600 px design; the app is opened inside another design by appending that tab's ui= query parameter to the design's edit URL (worked 2026-09-11)",
-      "contract `runs` (start, end, color) on a text element: the whole range takes `color`, then each run its own; the emitter merges abutting same-baseline point runs into one line so a wider substitute face cannot slide a value under its key",
-      "the panel reloads when the dev server rebuilds only if the tab is reloaded; a reload clears the session's font refs, so re-pick before building (by design)"
-    ]
+  {
+   "n": 2,
+   "status": "done",
+   "mode": "batch",
+   "at": "2026-09-11T19:52Z (ascending run)",
+   "elements_attempted": 6,
+   "elements_placed": 6
   },
-  "blockers": [],
-  "fresh_clone_test": {
-    "at": "2026-09-10",
-    "commit": "8fe4d38",
-    "result": "pass: files present, venv from requirements.txt, emitter 405 elements / 20 links, npm ci + tsc + build clean",
-    "not_covered": "everything inside Canva (steps 3-9)"
+  {
+   "n": 3,
+   "status": "done",
+   "mode": "batch",
+   "at": "2026-09-11T19:52Z (ascending run)",
+   "elements_attempted": 53,
+   "elements_placed": 53
   },
-  "research": {
-    "path": "canva/research/",
-    "files": [
-      "research-lanes-2026-09-10.json",
-      "verification-verdicts-2026-09-10.json",
-      "workflow-synthesis-2026-09-10.md"
-    ]
+  {
+   "n": 4,
+   "status": "done",
+   "mode": "batch",
+   "at": "2026-09-11T19:52Z (ascending run)"
   },
-  "handover_note": "Luke may run the Canva steps from a different Claude account. That account needs: this repo (clone), the Claude in Chrome extension signed in to it, Luke logged in to Canva Pro in that Chrome, Node 24, Python 3. It does not need anything from the first session's memory; everything is in canva/README.md, STATE.json, research/, and the app's BUILD-REPORT.md. Font refs never carry across browsers or sessions: the app refuses to build until every font key is picked in the current panel session (Codex finding 2, fixed 2026-09-11). The layout was revised on 2026-09-11 (taste pass); the Canva contract must be regenerated from it after Luke accepts the draft.",
-  "audits": {
-    "codex_2026-09-11": {
-      "verdict": "UNSOUND",
-      "findings": 8,
-      "sdk_calls": "none invented or type-invalid",
-      "response": "all eight answered the same day; table in canva/kom-epk-builder/BUILD-REPORT.md; runbook, plan and this file corrected",
-      "unverified": "the manual page-width fallback (finding 3) has not run inside Canva",
-      "strongest_risk": "a resumed build could silently use stale FontRefs; the app now refuses to build until every font key is resolved in the current panel session"
-    }
+  {
+   "n": 5,
+   "status": "done",
+   "mode": "batch",
+   "at": "2026-09-11T19:52Z (ascending run)"
   },
-  "preflight": {
-    "answered": "2026-09-11T12:40:23-05:00",
-    "by": "Luke, in chat",
-    "extension_signed_in": true,
-    "chrome": "one Chrome open, signed in to Canva Pro",
-    "at_keyboard_for_terms": true,
-    "decisions_hold": "yes ('if that refers to the canva project being editable')",
-    "draft": "Luke on the 2026-09-11 taste-pass draft: 'it looks great'; the contract is regenerated from that layout"
+  {
+   "n": 6,
+   "status": "done",
+   "mode": "batch",
+   "at": "2026-09-11T19:52Z (ascending run)"
   },
-  "wrap_check": "2026-09-11 20:07Z, all_pages read-back after the page 10 re-placement: every page matches its ops page by count; no wrapped lines on any page"
+  {
+   "n": 7,
+   "status": "done",
+   "mode": "batch",
+   "at": "2026-09-11T19:52Z (ascending run)"
+  },
+  {
+   "n": 8,
+   "status": "done",
+   "mode": "batch",
+   "at": "2026-09-11T19:52Z (ascending run)"
+  },
+  {
+   "n": 9,
+   "status": "done",
+   "mode": "batch",
+   "at": "2026-09-11T19:52Z (ascending run)"
+  },
+  {
+   "n": 10,
+   "status": "done",
+   "mode": "per-element on the selected page (paced)",
+   "at": "2026-09-11T20:06Z",
+   "elements_attempted": 126,
+   "elements_placed": 126,
+   "note": "first placement 123/126: addElementAtPoint rate limit ('Add native element rate limit exceeded') exhausted four retries on #30 SCRIPT SUPERVISORS, #62 FERNANDO ACUNA, #94 HAZEL YUNTONG DAI; commit b7e188d lengthens the backoff to 16 s over 7 tries and paces placements 150 ms apart; page cleared and re-placed",
+   "page_id": "PB0SFL2fVtVVyZZm"
+  },
+  {
+   "n": 11,
+   "status": "done",
+   "mode": "batch",
+   "at": "2026-09-11T19:52Z (ascending run)"
+  }
+ ],
+ "pilot": {
+  "page": 3,
+  "status": "GO from Luke (typeface, breaks, plain-text email rows); ghost brightened at his request; export verified",
+  "luke_verdict": "'export check good' and 'i like the rest' (2026-09-11); the ghost recipe changed to 0.48 / 0.32 at his pick",
+  "round_1": "2026-09-11 18:03Z: 81/81 elements placed in one addPage batch, page id PBY4znSzzWRWLD3Z, page_is_current false (the new page landed after the default blank page, as documented); still placed; 10 links attached; read-back wrap check: 63 of 70 lines WRAPPED because Libre Baskerville runs wider than the Baskerville the boxes were measured with; the page was deleted and the record forgotten",
+  "fix": "commit e44b45e: the emitter gives every line a box width*1.35+24 anchored on its own alignment edge (right-aligned lines keep the 1222 spine and grow leftward); Illustrator ops carry align and ax",
+  "fonts_note": "Canva's picker also lists ITC New Baskerville (Pro, crown) and Baskerville Display PT: a real Baskerville is available in the editor without uploading Apple's font; Luke's call whether to swap after the build",
+  "round_2": "anchored boxes: 81/81 placed, no wrapped lines, but the two-tone rows overlapped: each key was anchored at its value's Baskerville-measured edge and the wider face slid the value under the key",
+  "round_3": "commit 4fa036b: a key and a value that abut on one baseline are emitted as ONE line with two colour runs (contract field `runs`, applied by the app); page 3 is 53 elements; 53/53 placed, wrap check clean, the two-tone rows read as on the PDF",
+  "export_check": "~/Downloads/03 Programmer.pdf (Canva names the file after the page title): 1 page, 1296 x 1728 pt, 947 chars live text, fonts LibreBaskerville-Regular and -Bold embedded, 10 link annotations over 4 URLs (Drive press folder, site, Instagram, IMDb); the two mailto rows are plain text by design; the letterspaced title is not phrase-searchable (the kit's tracking idiom, same in the PDF)"
+ },
+ "export": {
+  "last_pdf": "~/Downloads/Untitled design.pdf (full kit, PDF Print, RGB, Flatten off, crop marks off, 2026-09-11 15:10)",
+  "pages": 1,
+  "links": 10,
+  "size_mb": 0.33,
+  "verdicts": "see handoff-114-epk; not yet on the Drive"
+ },
+ "sharing": {
+  "edit_link_sent_to": [],
+  "view_link": null
+ },
+ "last_error": null,
+ "next_step": "Rebuild all 11 pages in Canva from the Libre-measured contract (commit ffc96ca, epk rev 26): grid view delete pages 1-11, Reset, Load, pick fonts, Build all ascending into the blank page, Place page 10 on the selected empty page, delete the blank page, read back all pages (lines and paragraphs), Luke exports (PDF Print, RGB, Flatten off), verify with pymupdf, copy to the Drive EPK BUILDS/CANVA, rename the design, share; then handoff-115.",
+ "app": {
+  "path": "canva/kom-epk-builder",
+  "commit": "4fa036b",
+  "typecheck": "tsc zero errors, eslint clean, npm run build ok (2026-09-11, after runs)",
+  "run": "npm --prefix canva/kom-epk-builder run start  (or the launch.json entry canva-app); serves http://localhost:8080",
+  "notes": [
+   "mailto: links are shown as plain text by the app (richtext link documents http(s) only); the two mailto rows keep their text",
+   "after the first addPage the app checks the new page is the current page before any per-element fallback",
+   "page order from getDesignMetadata is documented as not guaranteed; confirm by eye after page 1",
+   "fonts: only refs resolved in the current panel session are used; Build stays disabled until every key is picked; a missing ref fails the element (Codex finding 2)",
+   "images: whenUploaded() is awaited per image; a failed upload fails the element (Codex finding 8)",
+   "the Preview button opens a fresh 800 x 600 px design; the app is opened inside another design by appending that tab's ui= query parameter to the design's edit URL (worked 2026-09-11)",
+   "contract `runs` (start, end, color) on a text element: the whole range takes `color`, then each run its own; the emitter merges abutting same-baseline point runs into one line so a wider substitute face cannot slide a value under its key",
+   "the panel reloads when the dev server rebuilds only if the tab is reloaded; a reload clears the session's font refs, so re-pick before building (by design)"
+  ]
+ },
+ "blockers": [],
+ "fresh_clone_test": {
+  "at": "2026-09-10",
+  "commit": "8fe4d38",
+  "result": "pass: files present, venv from requirements.txt, emitter 405 elements / 20 links, npm ci + tsc + build clean",
+  "not_covered": "everything inside Canva (steps 3-9)"
+ },
+ "research": {
+  "path": "canva/research/",
+  "files": [
+   "research-lanes-2026-09-10.json",
+   "verification-verdicts-2026-09-10.json",
+   "workflow-synthesis-2026-09-10.md"
+  ]
+ },
+ "handover_note": "Luke may run the Canva steps from a different Claude account. That account needs: this repo (clone), the Claude in Chrome extension signed in to it, Luke logged in to Canva Pro in that Chrome, Node 24, Python 3. It does not need anything from the first session's memory; everything is in canva/README.md, STATE.json, research/, and the app's BUILD-REPORT.md. Font refs never carry across browsers or sessions: the app refuses to build until every font key is picked in the current panel session (Codex finding 2, fixed 2026-09-11). The layout was revised on 2026-09-11 (taste pass); the Canva contract must be regenerated from it after Luke accepts the draft.",
+ "audits": {
+  "codex_2026-09-11": {
+   "verdict": "UNSOUND",
+   "findings": 8,
+   "sdk_calls": "none invented or type-invalid",
+   "response": "all eight answered the same day; table in canva/kom-epk-builder/BUILD-REPORT.md; runbook, plan and this file corrected",
+   "unverified": "the manual page-width fallback (finding 3) has not run inside Canva",
+   "strongest_risk": "a resumed build could silently use stale FontRefs; the app now refuses to build until every font key is resolved in the current panel session"
+  }
+ },
+ "preflight": {
+  "answered": "2026-09-11T12:40:23-05:00",
+  "by": "Luke, in chat",
+  "extension_signed_in": true,
+  "chrome": "one Chrome open, signed in to Canva Pro",
+  "at_keyboard_for_terms": true,
+  "decisions_hold": "yes ('if that refers to the canva project being editable')",
+  "draft": "Luke on the 2026-09-11 taste-pass draft: 'it looks great'; the contract is regenerated from that layout"
+ },
+ "wrap_check": "2026-09-11 20:07Z, all_pages read-back after the page 10 re-placement: every page matches its ops page by count; no wrapped lines on any page"
 }
