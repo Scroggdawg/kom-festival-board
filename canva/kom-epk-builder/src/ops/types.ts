@@ -37,6 +37,8 @@ export type OpsText = {
   font: FontKey;
   size_pt: number;
   leading_pt: number;
+  /** paragraph only: the line count the kit measured in the contract's face */
+  lines?: number;
   tracking_pt: number;
   color: string;
   align: "start" | "center" | "end" | "justify";

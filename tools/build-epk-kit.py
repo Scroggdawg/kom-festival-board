@@ -28,9 +28,10 @@ press/logline-final-three.md (version A, the recommended one) and the synopsis f
 press/synopsis-draft.md (version C, the recommended one). Both are DRAFTS awaiting
 Jordan's pick. The moment 2.1 or 2.2 is filled in the worksheet, the worksheet wins.
 
-Portraits on pages 5-6: four headshots exist for five bios and nobody has said which
-file is which person. PORTRAITS below is the mapping. Until PORTRAITS_CONFIRMED is
-True the pages carry a small PROOF slug so the kit cannot be mistaken for final.
+Portraits on pages 5-6: five headshots, one per bio. PORTRAITS below is the mapping,
+settled by checksum against the Drive's named copies (the director's, KOM Headshots-1,
+found on the Drive 2026-09-11). Were PORTRAITS_CONFIRMED False the pages would carry a
+small PROOF slug so the kit could not be mistaken for final.
 
 Fonts, colours and measurements are the credit card's, so the kit reads as one object.
 """
@@ -68,6 +69,7 @@ STILL = lambda n: os.path.join(ASSETS, "STILLS", f"Still 2026-09-08 210640_1.1.{
 BTS = lambda name: os.path.join(ASSETS, "BTS", name)
 POSTER = os.path.join(ASSETS, "POSTER", "KillerOfMen_Poster_2160x2700.jpg")
 HEADSHOT = lambda n: os.path.join(ASSETS, "HEADSHOTS", f"KOM Headshots v3-{n}.jpg")
+HEADSHOT_FILE = lambda name: os.path.join(ASSETS, "HEADSHOTS", name)
 
 # ---- page 3: where the five links go. The press folder holds the five subfolders;
 # per-subfolder share URLs live in the EPK LINKS doc and are not in the worksheet yet.
@@ -75,19 +77,20 @@ PRESS_FOLDER = "https://drive.google.com/drive/folders/1utGEFQb5gDuUOC9JU7zvuslw
 LINKS = [("BTS", PRESS_FOLDER), ("STILLS", PRESS_FOLDER), ("POSTER", PRESS_FOLDER),
          ("TRAILER", PRESS_FOLDER), ("HEADSHOTS", PRESS_FOLDER)]
 
-# ---- pages 5-6: portrait mapping. File number per bio slot, or None for no portrait.
-# Settled Sep 9 by checksum against the named copies Luke put on the Drive
-# (05 MARKETING/00 PRESS/HEADSHOTS): v3-1 You Wu, v3-2 Ruoxiao Li, v3-3 RJ Ragampudi,
-# v3-4 Luke Scroggins. There is no portrait of the director.
+# ---- pages 5-6: portrait mapping. Per bio slot: a headshot number, a file name in
+# HEADSHOTS, or None for no portrait. Settled Sep 9 by checksum against the named copies
+# Luke put on the Drive (05 MARKETING/00 PRESS/HEADSHOTS): v3-1 You Wu, v3-2 Ruoxiao Li,
+# v3-3 RJ Ragampudi, v3-4 Luke Scroggins.
 PORTRAITS_CONFIRMED = True
-# 5.1 is a set photograph (Jedidiah Woods, Day 3): the director at the monitor, alone in
-# profile, graded at draw time to sit beside the studio headshots (mono(), value only).
-# Luke confirms the man in the frame is Jordan Betine before it ships; until then page 5
-# carries a PROOF slug (DIRECTOR_PORTRAIT_CONFIRMED). Taste pass 2026-09-11, P5-01.
-DIRECTOR_PORTRAIT_CONFIRMED = False
-PORTRAITS = {"5.1": BTS("KOM_Day3_TheFarm-43.jpg"), "5.2": 2, "5.3": 4, "5.4": 3, "5.5": 1}
-PORTRAIT_FOCUS = {"5.1": (0.36, 0.28)}          # default (0.5, 0.40)
-PORTRAIT_ZOOM = {"5.1": 1.15}                    # crop only; masters untouched
+# 5.1, the director: the fifth frame of the same session (Hasselblad X1D II 50C, 14 Sep
+# 2024), KOM Headshots-1.jpg, found on the Drive 2026-09-11 and matched to the portrait
+# Luke sent ("use the attached photo"); its Drive twin is Director_Jordan_Betine.jpg. It
+# replaces the value-graded set photograph Day3-43 that stood in from the taste pass.
+DIRECTOR_PORTRAIT_CONFIRMED = True
+PORTRAITS = {"5.1": HEADSHOT_FILE("KOM Headshots-1.jpg"), "5.2": 2, "5.3": 4, "5.4": 3, "5.5": 1}
+PORTRAIT_GRADE = {}                              # key -> "mono": a set photograph graded to sit with the studio heads
+PORTRAIT_FOCUS = {}                              # default (0.5, 0.40)
+PORTRAIT_ZOOM = {}                               # crop only; masters untouched
 # Ruoxiao Li's head fills ~28% of her box against ~40% for the other three; the fix is one
 # entry each, PORTRAIT_FOCUS["5.2"] = (0.5, 0.42) and PORTRAIT_ZOOM["5.2"] = 1.25, and it
 # re-crops a delivered headshot, so it ships only on Luke's yes (sexy-pass question 2).
@@ -527,13 +530,12 @@ def page_statement(c, d):
 
 
 def portrait_src(key):
-    """(path, graded): a headshot by number, or a set photograph by path that mono() grades."""
+    """(path, graded): a headshot by number or by path; PORTRAIT_GRADE marks a set
+    photograph that mono() grades to sit beside the studio headshots."""
     pn = PORTRAITS.get(key)
     if pn is None:
         return None, False
-    if isinstance(pn, str):
-        return pn, True
-    return HEADSHOT(pn), False
+    return (pn if isinstance(pn, str) else HEADSHOT(pn)), PORTRAIT_GRADE.get(key) == "mono"
 
 
 def bio_block(c, key, role, name, y, side, height):
@@ -612,7 +614,7 @@ def page_bios(c, d, items, first, offset=0):
         y -= between
     if not PORTRAITS_CONFIRMED:
         proof_slug(c, "PROOF — PORTRAITS NOT YET ASSIGNED TO NAMES")
-    elif first and not DIRECTOR_PORTRAIT_CONFIRMED and isinstance(PORTRAITS.get("5.1"), str):
+    elif first and not DIRECTOR_PORTRAIT_CONFIRMED and PORTRAIT_GRADE.get("5.1") == "mono":
         proof_slug(c, "PROOF — THE DIRECTOR'S PORTRAIT IS A SET PHOTOGRAPH, IDENTITY TO CONFIRM")
     c.showPage()
 
@@ -724,7 +726,8 @@ def credit_pages(c, d):
     """Pages 9-11, drawn by the credit card's own functions on this canvas. press=True:
     a name that is still a placeholder (SOUND DESIGNER | STILL UNKNOWN) is not printed
     as a credit; the card marks the CREW page with a PROOF slug instead (C10 as amended)."""
-    z = card.Sz(1.0, card.Opts(press=True, proof_slug=True))
+    opts = card.Opts(press=True, proof_slug=True)
+    z = card.Sz(1.0, opts)
 
     def stills_for(nums):
         """Still numbers become paths; (path, alpha, anchor) tuples pass through as the
@@ -754,8 +757,23 @@ def credit_pages(c, d):
     # CREW 0.45 passes (32); THANKS 0.35 passes (40).
     CREDIT_STILLS = {"CREDITS": (STILL(2), 0.75, 0.35), "CREW": (STILL(27), 0.45, 0.50),
                      "THANKS": (STILL(25), 0.35, 0.50)}
-    card.one_col_pages(c, "C A S T", [cast, key] + ([extras] if extras else []),
-                       z, stills_for([CREDIT_STILLS["CREDITS"]]), False)
+    # The card is one object: one scale moves all three pages. At 1.0 the CREDITS page is
+    # one page in Baskerville; measured in a wider face (the Canva contract is measured in
+    # Libre Baskerville, 2026-09-11) the poster names wrap and it overflows, so the scale
+    # steps down until CREDITS is one page again, and CREW and THANKS take the same scale.
+    # one_col_pages asserts before it draws, so a failed step leaves nothing on the canvas.
+    for scale in (1.0, 0.98, 0.96, 0.94, 0.92, 0.90, 0.88, 0.86, 0.84):
+        z = card.Sz(scale, opts)
+        try:
+            card.one_col_pages(c, "C A S T", [cast, key] + ([extras] if extras else []),
+                               z, stills_for([CREDIT_STILLS["CREDITS"]]), False)
+            break
+        except AssertionError as e:
+            if scale == 0.84:
+                raise
+            print(f"  CREDITS at scale {scale:.2f}: {e}; stepping the card down")
+    if scale != 1.0:
+        print(f"  credit pages at scale {scale:.2f}")
     card.two_col_pages(c, "C R E W", pairs(field(d, "10.1")), z,
                        stills_for([CREDIT_STILLS["CREW"]]), False)
     card.page_thanks(c, d, z, stills_for([CREDIT_STILLS["THANKS"]]), False)

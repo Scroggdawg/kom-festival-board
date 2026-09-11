@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 24,
- "updated": "2026-09-10T15:42:23-05:00",
- "updatedBy": "Luke, Sep 10 (Canva plan answers)",
+ "rev": 26,
+ "updated": "2026-09-11T16:01:21-05:00",
+ "updatedBy": "epk.py set",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -67,13 +67,8 @@
      "id": "p2-logline",
      "n": "2.1",
      "label": "Logline",
-     "value": "",
+     "value": "Killer of Men follows Mace, an enslaved man forced into mandingo fights. After killing an opponent, he stumbles upon the burial of the man he killed, igniting a reckoning with guilt, faith, and the violence shaping his life and identity.",
      "history": [
-      {
-       "at": "2026-09-08T13:37:26-07:00",
-       "by": "festival lane — Luke locked it Sep 8",
-       "value": "In 1834 South Carolina, an enslaved man is forced to fight for spectacle. But with every victory, he must take the life of one of his own. He stumbles upon the burial ceremony of his fallen opponent, and finds it being held in the ancient Faith of their shared ancestors, who he must now face to decide whether he will kill again."
-      },
       {
        "at": "2026-09-08T14:08:05-07:00",
        "by": "festival lane — superseded by the two-version lock",
@@ -98,6 +93,11 @@
        "at": "2026-09-09T00:43:41-07:00",
        "by": "Luke, in chat",
        "value": ""
+      },
+      {
+       "at": "2026-09-11T15:51:46-05:00",
+       "by": "epk.py",
+       "value": "Killer of Men follows Mace, an enslaved man forced into mandingo fights. After killing an opponent, he stumbles upon the burial of the man he killed, igniting a reckoning with guilt, faith, and the violence shaping his life and identity."
       }
      ],
      "options": [
@@ -581,7 +581,7 @@
      "id": "p5-headshots",
      "n": "5.6",
      "label": "Headshots",
-     "value": "FOUR headshots in, full resolution, unmodified. THESE ARE THE MASTERS — Luke confirmed Sep 9: there are no other copies and no higher-resolution set. Shot September 2024, source Headshots/Edits.\n  KOM Headshots v3-1.jpg   6200 × 7134\n  KOM Headshots v3-2.jpg   6200 × 7033\n  KOM Headshots v3-3.jpg   6200 × 6713\n  KOM Headshots v3-4.jpg   6200 × 6372\nOn the Drive at 05 MARKETING/00 PRESS/HEADSHOTS and in the repo at press/assets/HEADSHOTS — both checked byte for byte against the source. Nothing resized or re-encoded. They carry the film's own lighting: hard side key, deep falloff, sepia-black.\nFOUR IS THE COMPLETE SET. Luke: there is no headshot for the writer, and one was never taken. So four files against five bio slots is not a missing file to chase — it is the true state. Whoever lays out pages 5 and 6 should plan for one bio without a portrait rather than waiting on one.\nNOT RENAMED. epk-spec.md wants KILLER_OF_MEN_First_Last_Role.jpg, which means deciding which file is which person. Not guessed. Luke maps number to name and the rename is a second's work — the last thing this field needs.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/HEADSHOTS",
+     "value": "FIVE headshots in, full resolution, unmodified. THESE ARE THE MASTERS. Shot 14 September 2024 (Hasselblad X1D II 50C), source Headshots/Edits.\n  KOM Headshots v3-1.jpg   6200 × 7134   You Wu, editor\n  KOM Headshots v3-2.jpg   6200 × 7033   Ruoxiao Li, producer\n  KOM Headshots v3-3.jpg   6200 × 6713   RJ Ragampudi, production designer\n  KOM Headshots v3-4.jpg   6200 × 6372   Luke Scroggins, cinematographer\n  KOM Headshots-1.jpg      6200 × 6667   Jordan Betine, writer-director\nOn the Drive at 05 MARKETING/00 PRESS/HEADSHOTS, each with a named copy there (Editor_You_Wu.jpg, Producer_Ruoxiao_Li .jpg, Production_Designer_Rajarajeshwari_aka_RJ_Ragampudi.jpg, Cinematographer_Luke_Scroggins.jpg, Director_Jordan_Betine.jpg), and in the repo at press/assets/HEADSHOTS — checked byte for byte. Nothing resized or re-encoded. They carry the film's own lighting: hard side key, deep falloff, sepia-black.\nThe Sep 9 note that four was the complete set is superseded: the director's file was on the Drive the whole time under the session's own name, KOM Headshots-1.jpg, dated 14 Sep 2024 like the other four. It is the portrait Luke sent on 2026-09-11 (\"use the attached photo\"); md5 62cb6ea73071ea5e2fc40020c4306e7c on the Drive and in the repo.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/HEADSHOTS",
      "history": [
       {
        "at": "2026-09-09T00:44:03-07:00",
@@ -592,6 +592,11 @@
        "at": "2026-09-09T01:40:40-07:00",
        "by": "Luke, Sep 9 — confirmed these are the masters",
        "value": "FOUR headshots in, full resolution, unmodified. THESE ARE THE MASTERS — Luke confirmed Sep 9: there are no other copies and no higher-resolution set. Shot September 2024, source Headshots/Edits.\n  KOM Headshots v3-1.jpg   6200 × 7134\n  KOM Headshots v3-2.jpg   6200 × 7033\n  KOM Headshots v3-3.jpg   6200 × 6713\n  KOM Headshots v3-4.jpg   6200 × 6372\nOn the Drive at 05 MARKETING/00 PRESS/HEADSHOTS and in the repo at press/assets/HEADSHOTS — both checked byte for byte against the source. Nothing resized or re-encoded. They carry the film's own lighting: hard side key, deep falloff, sepia-black.\nFOUR IS THE COMPLETE SET. Luke: there is no headshot for the writer, and one was never taken. So four files against five bio slots is not a missing file to chase — it is the true state. Whoever lays out pages 5 and 6 should plan for one bio without a portrait rather than waiting on one.\nNOT RENAMED. epk-spec.md wants KILLER_OF_MEN_First_Last_Role.jpg, which means deciding which file is which person. Not guessed. Luke maps number to name and the rename is a second's work — the last thing this field needs.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/HEADSHOTS"
+      },
+      {
+       "at": "2026-09-11T16:01:21-05:00",
+       "by": "epk.py",
+       "value": "FIVE headshots in, full resolution, unmodified. THESE ARE THE MASTERS. Shot 14 September 2024 (Hasselblad X1D II 50C), source Headshots/Edits.\n  KOM Headshots v3-1.jpg   6200 × 7134   You Wu, editor\n  KOM Headshots v3-2.jpg   6200 × 7033   Ruoxiao Li, producer\n  KOM Headshots v3-3.jpg   6200 × 6713   RJ Ragampudi, production designer\n  KOM Headshots v3-4.jpg   6200 × 6372   Luke Scroggins, cinematographer\n  KOM Headshots-1.jpg      6200 × 6667   Jordan Betine, writer-director\nOn the Drive at 05 MARKETING/00 PRESS/HEADSHOTS, each with a named copy there (Editor_You_Wu.jpg, Producer_Ruoxiao_Li .jpg, Production_Designer_Rajarajeshwari_aka_RJ_Ragampudi.jpg, Cinematographer_Luke_Scroggins.jpg, Director_Jordan_Betine.jpg), and in the repo at press/assets/HEADSHOTS — checked byte for byte. Nothing resized or re-encoded. They carry the film's own lighting: hard side key, deep falloff, sepia-black.\nThe Sep 9 note that four was the complete set is superseded: the director's file was on the Drive the whole time under the session's own name, KOM Headshots-1.jpg, dated 14 Sep 2024 like the other four. It is the portrait Luke sent on 2026-09-11 (\"use the attached photo\"); md5 62cb6ea73071ea5e2fc40020c4306e7c on the Drive and in the repo.\nhttps://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/HEADSHOTS"
       }
      ]
     },

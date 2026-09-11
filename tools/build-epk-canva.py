@@ -3,7 +3,7 @@
 (canva/kom-epk-builder) replays into an 18 x 24 in design, plus the flattened images it
 places.
 
-    <venv>/bin/python tools/build-epk-canva.py [--no-images] [--check]
+    <venv>/bin/python tools/build-epk-canva.py [--no-images] [--face libre|baskerville]
 
 Writes
     canva/ops/epk-canva.json                 the contract (schema 1, see canva/README.md)
@@ -16,7 +16,10 @@ project uses) and translates the recorded operations into Canva terms:
   * y measured DOWN from the page top, in pt of the 1296 x 1728 page; the app scales by
     the design's real pixel width, read at runtime
   * point text (a tracked heading or label) -> a "line": one richtext that must not wrap
-  * area text (running copy) -> a "paragraph": a richtext with a width, Canva wraps it
+  * area text (running copy) -> one "paragraph" richtext PER PARAGRAPH, each at the top
+    the kit gave it, with a width; Canva wraps it. (As one richtext, every blank line
+    between paragraphs became a full empty line, 0.4 of a lead taller than the kit's gap:
+    six of them on the statement page, 2026-09-11.)
   * a rule -> a filled rectangle of the rule's weight
   * an image -> a derivative JPEG already cover-cropped to its box, with any ghost
     opacity and scrim baked in over the page ground, so the app places it opaque at x,y,w,h
@@ -27,9 +30,10 @@ Derivatives are served by GitHub Pages once pushed (the repo is public), which i
 Canva's upload() needs: a public HTTPS URL that does not redirect. The masters in
 press/assets are never modified.
 """
-import datetime, importlib.util, json, os, subprocess, sys
+import datetime, importlib.util, json, os, re, subprocess, sys
 
 from PIL import Image
+from reportlab.lib.utils import simpleSplit
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OPS_OUT = os.path.join(ROOT, "canva", "ops", "epk-canva.json")
@@ -39,6 +43,12 @@ MAX_LONG_EDGE = 2400          # Canva renders at screen px; PDF Print upsamples 
 JPEG_Q = 84
 
 
+LIBRE_DIR = os.path.join(ROOT, "press", "assets", "derived", "fonts", "libre-baskerville")
+FACE = sys.argv[sys.argv.index("--face") + 1] if "--face" in sys.argv else "libre"
+if FACE not in ("libre", "baskerville"):
+    sys.exit(f"--face must be libre or baskerville, not {FACE!r}")
+
+
 def _load(name, path):
     spec = importlib.util.spec_from_file_location(name, path)
     m = importlib.util.module_from_spec(spec)
@@ -46,6 +56,28 @@ def _load(name, path):
     return m
 
 
+def register_face(face):
+    """Canva draws Libre Baskerville (an app cannot use an uploaded font), so the contract
+    is MEASURED in it: every fit(), wrap, width and anchor the kit computes goes through
+    reportlab's registered Bask faces, and the kit registers macOS Baskerville under those
+    names at import. reportlab keeps the first registration of a name, so registering the
+    Libre files first wins. Regular -> Bask; Bold -> Bask-SB (the weight the app falls back
+    to for semibold) and Bask-B. The PDF and the .ai keep Baskerville. Laid out in
+    Baskerville, Libre's wider glyphs reflowed the statement off the page foot, ate the cast
+    page's gaps and put every handle on its lockup (Luke's notes, 2026-09-11)."""
+    if face != "libre":
+        return
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.ttfonts import TTFont
+    for name, fn in (("Bask", "LibreBaskerville-Regular.ttf"), ("Bask-SB", "LibreBaskerville-Bold.ttf"),
+                     ("Bask-B", "LibreBaskerville-Bold.ttf")):
+        path = os.path.join(LIBRE_DIR, fn)
+        if not os.path.exists(path):
+            sys.exit(f"missing {path}: see press/assets/derived/fonts/libre-baskerville/README.md")
+        pdfmetrics.registerFont(TTFont(name, path))
+
+
+register_face(FACE)
 ai = _load("ai", os.path.join(ROOT, "tools", "build-epk-ai.py"))
 kit, card = ai.kit, ai.card
 W, H = ai.W, ai.H
@@ -57,8 +89,11 @@ FONTS = {
     "Bask-B":  {"family": "Baskerville", "weight": "bold",     "fallback_family": "Libre Baskerville", "fallback_weight": "bold"},
 }
 ASCENT = 0.95                 # baseline to richtext box top, in em; tuned on the pilot page
-LINE_SLACK = 1.35             # a line's box is this much wider than its Baskerville measure, plus
-LINE_PAD = 24.0               # LINE_PAD pt: Libre Baskerville runs wider and must never wrap a line
+# A line's box is LINE_SLACK times its measure plus LINE_PAD pt, so Canva's own composer
+# (kerning, rounding) never wraps it. Measured in Libre the slack is a margin; measured in
+# Baskerville it had to cover Libre's wider glyphs as well (63 of 70 lines wrapped without it).
+LINE_SLACK = 1.10 if FACE == "libre" else 1.35
+LINE_PAD = 24.0
 
 
 def hexcolor(rgb):
@@ -162,12 +197,23 @@ def convert(o, write_images=True):
                 i += 1
                 continue
             if op["op"] == "area":
-                size = op["size"]
-                elements.append({"type": "text", "kind": "paragraph", "text": op["text"].replace("\r", "\n"),
-                                 "font": FONT_KEY[op["font"]], "size_pt": round(size, 2), "leading_pt": round(op["lead"], 2),
-                                 "tracking_pt": 0.0, "color": hexcolor(op["fill"]),
-                                 "align": {"left": "start", "center": "center", "right": "end"}[op["align"]],
-                                 "x": round(op["x"], 2), "y": round(H - op["top"], 2), "w": round(op["w"], 2), "links": []})
+                # One element per paragraph, each at the top the kit's para() gave it: the
+                # first line's box top, then n lines of lead and the kit's gap per paragraph.
+                # "lines" is the wrap the kit measured in the contract's face; the app's read
+                # back flags a paragraph Canva set longer.
+                size, lead, gap = op["size"], op["lead"], op["gap"]
+                rl_font = {v: k for k, v in ai.FONT.items()}[op["font"]]
+                top = op["top"]
+                text = op["text"].replace("\r", "\n")
+                for ptxt in [q for q in re.split(r"\n\s*\n", text.strip()) if q.strip()]:
+                    ptxt = " ".join(ptxt.split())
+                    n = len(simpleSplit(ptxt, rl_font, size, op["w"]))
+                    elements.append({"type": "text", "kind": "paragraph", "text": ptxt, "lines": n,
+                                     "font": FONT_KEY[op["font"]], "size_pt": round(size, 2), "leading_pt": round(lead, 2),
+                                     "tracking_pt": 0.0, "color": hexcolor(op["fill"]),
+                                     "align": {"left": "start", "center": "center", "right": "end"}[op["align"]],
+                                     "x": round(op["x"], 2), "y": round(H - top, 2), "w": round(op["w"], 2), "links": []})
+                    top -= n * lead + gap
                 i += 1
                 continue
             if op["op"] == "point":
@@ -272,6 +318,8 @@ def main():
         sha = ""
     doc = {"schema": 1, "generated": datetime.datetime.now().isoformat(timespec="seconds"),
            "source": {"kit_commit": sha, "epk_rev": d.get("rev")},
+           "measured_face": ("Libre Baskerville 2.005 (OFL; press/assets/derived/fonts/libre-baskerville)"
+                             if FACE == "libre" else "Baskerville (macOS Supplemental)"),
            "page": {"width_pt": W, "height_pt": H}, "fonts": FONTS, "pages": pages}
     os.makedirs(os.path.dirname(OPS_OUT), exist_ok=True)
     json.dump(doc, open(OPS_OUT, "w"), indent=1, ensure_ascii=False)
@@ -279,8 +327,10 @@ def main():
     n_img = sum(1 for p in pages for e in p["elements"] if e["type"] == "image")
     n_links = sum(len(e["links"]) for p in pages for e in p["elements"] if e["type"] == "text")
     n_un = sum(len(p["unattached_links"]) for p in pages)
+    n_para = sum(1 for p in pages for e in p["elements"] if e["type"] == "text" and e["kind"] == "paragraph")
     print(f"wrote {os.path.relpath(OPS_OUT, ROOT)}: {len(pages)} pages, {n_el} elements, {n_img} images, "
-          f"{n_links} links attached, {n_un} unattached; epk rev {d.get('rev')}, kit {sha}")
+          f"{n_para} paragraphs, {n_links} links attached, {n_un} unattached; epk rev {d.get('rev')}, kit {sha}; "
+          f"measured in {doc['measured_face']}")
     if write_images:
         total = sum(os.path.getsize(os.path.join(DERIVED, f)) for f in os.listdir(DERIVED) if f.endswith(".jpg"))
         print(f"derived images in {os.path.relpath(DERIVED, ROOT)}: {total/1e6:.1f} MB")

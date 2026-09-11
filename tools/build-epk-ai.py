@@ -17,7 +17,7 @@ as a JavaScript literal, and handed to Illustrator through osascript. So the .ai
 and the reportlab PDF come out of one set of coordinates and cannot disagree.
 
 Illustrator places each image as a link to the Drive path (the repo path the kit uses is
-mapped to its Drive twin; the four headshots map to the named copies Luke made), crops it
+mapped to its Drive twin; the five headshots map to the named copies on the Drive), crops it
 with a clipping mask, sets the type in Baskerville with a fit loop as a second guard, saves
 the .ai, then saves a PDF. Illustrator has no hyperlinks, so the recorded link rectangles
 are written into the PDF as annotations with pypdf.
@@ -66,6 +66,7 @@ HEADSHOT_DRIVE = {
     "KOM Headshots v3-2.jpg": "Producer_Ruoxiao_Li .jpg",
     "KOM Headshots v3-3.jpg": "Production_Designer_Rajarajeshwari_aka_RJ_Ragampudi.jpg",
     "KOM Headshots v3-4.jpg": "Cinematographer_Luke_Scroggins.jpg",
+    "KOM Headshots-1.jpg": "Director_Jordan_Betine.jpg",      # the fifth, found 2026-09-11
 }
 
 

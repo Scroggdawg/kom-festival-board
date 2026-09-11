@@ -113,7 +113,9 @@ export function matchOpsPage(
   return undefined;
 }
 
-/** Elements paired by index; a `line` whose read height exceeds leading*s*WRAP_FACTOR is flagged. */
+/** Elements paired by index. A `line` whose read height exceeds leading*s*WRAP_FACTOR is
+ * flagged; a `paragraph` is flagged when its read height runs at least half a line past
+ * lines*leading*s, the wrap the kit measured in the contract's face. */
 export function flagWrapped(
   ops: OpsPage,
   read: ReadPage,
@@ -122,11 +124,15 @@ export function flagWrapped(
   const flags: WrapFlag[] = [];
   ops.elements.forEach((el, i) => {
     const r = read.elements[i];
-    if (!r || el.type !== "text" || el.kind !== "line") {
+    if (!r || el.type !== "text") {
       return;
     }
-    const expected = el.leading_pt * s;
-    if (r.height > expected * WRAP_FACTOR) {
+    const line = el.leading_pt * s;
+    const expected =
+      el.kind === "line" ? line : line * Math.max(el.lines ?? 1, 1);
+    const limit =
+      el.kind === "line" ? expected * WRAP_FACTOR : expected + line * 0.5;
+    if (r.height > limit) {
       flags.push({
         page_n: ops.n,
         index: i,
