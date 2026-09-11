@@ -1,6 +1,6 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-11T15:01:33-05:00",
+  "updated": "2026-09-11T15:04:20-05:00",
   "updated_by": "Fable session, Canva lane, preflight answered",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
@@ -130,7 +130,7 @@
       "at": "2026-09-11T20:00:13Z",
       "elements_attempted": 126,
       "elements_placed": 123,
-      "note": "batch addPage rejected (exact and floored); the fallback's background-only page exists at position 10; the app's new 'Place page N on the current page' mode places the 126 elements onto it",
+      "note": "first placement 123/126: addElementAtPoint rate limit ('Add native element rate limit exceeded') exhausted four retries on #30 SCRIPT SUPERVISORS, #62 FERNANDO ACUNA, #94 HAZEL YUNTONG DAI; commit b7e188d lengthens the backoff to 16 s over 7 tries and paces placements 150 ms apart; page cleared and re-placed",
       "page_id": "PB0SFL2fVtVVyZZm"
     },
     {
@@ -162,7 +162,7 @@
     "edit_link_sent_to": [],
     "view_link": null
   },
-  "last_error": "page 10: 3 of 126 elements failed in the per-element placement (2026-09-11 20:00Z); the page reads complete by eye (CREW, both columns, the still); identify the three from the panel log before export",
+  "last_error": null,
   "next_step": "Read the three page-10 failures in the panel log; Read design (wrap check over all pages); export PDF Print, RGB, Flatten off, crop marks off (Luke's click); verify with pymupdf; Drive copy; share links.",
   "app": {
     "path": "canva/kom-epk-builder",
@@ -214,5 +214,6 @@
     "at_keyboard_for_terms": true,
     "decisions_hold": "yes ('if that refers to the canva project being editable')",
     "draft": "Luke on the 2026-09-11 taste-pass draft: 'it looks great'; the contract is regenerated from that layout"
-  }
+  },
+  "wrap_check": "2026-09-11 20:01Z, all_pages read-back: pages 1-9 and 11 match their ops pages with 0 wrapped lines; page 10 re-placed after the rate-limit fix"
 }
