@@ -69,7 +69,7 @@ It checks what a machine can check (Node, the venv, the app's dependencies, the 
 venv/bin/python tools/build-epk-canva.py
 ```
 
-Check: it prints `11 pages, N elements, 22 images, 20 links attached, 0 unattached`, and `press/assets/derived/canva/` holds 22 JPEGs. If links are unattached it exits non-zero; fix the layout, not the JSON. Commit `canva/ops/epk-canva.json` and the derived images by explicit path and push, then wait about a minute and confirm `curl -sI https://scroggdawg.github.io/kom-festival-board/canva/ops/epk-canva.json` returns 200. The app cannot see uncommitted files.
+Check: it prints `11 pages, N elements, 22 images, 20 links attached, 0 unattached` (two of the twenty are the `mailto:` rows, which the app places as plain text, so the Canva build carries 18 live links), and `press/assets/derived/canva/` holds 22 JPEGs. If links are unattached it exits non-zero; fix the layout, not the JSON. Commit `canva/ops/epk-canva.json` and the derived images by explicit path and push, then wait about a minute and confirm `curl -sI https://scroggdawg.github.io/kom-festival-board/canva/ops/epk-canva.json` returns 200. The app cannot see uncommitted files.
 
 ### 2. Run the app locally
 
@@ -81,7 +81,7 @@ Check: the dev server answers on http://localhost:8080. Leave it running while t
 
 ### 3. Create the app in the Developer Portal (once per Canva account)
 
-Luke, or an agent in his Chrome with his OK: https://www.canva.dev/ › Your apps › Create an app › name `kom-epk-builder` › App source › Development URL `http://localhost:8080` › Preview. Accepting the Developer Terms is Luke's own click. Record the app id in `STATE.json`.
+Luke, or an agent in his Chrome with his OK: https://www.canva.dev/ › Your apps › Create an app › name `kom-epk-builder` › App source › Development URL `http://localhost:8080` › Scopes: enable `canva:design:content:write`, `canva:asset:private:write` and `canva:design:content:read` › Preview. Accepting the Developer Terms is Luke's own click. Record the app id in `STATE.json`.
 
 Check: the Preview button opens a Canva editor with the app's panel on the left.
 
@@ -93,11 +93,11 @@ Check: the Preview button opens a Canva editor with the app's panel on the left.
 | Fonts | In the app panel: "Find Libre Baskerville" and, for each font key, "Pick font" | the FontRef, name and weights per key; whether an uploaded Baskerville appeared (expect no) |
 | Page size | Open a design from the 18 × 24 in poster preset (Create a design › Poster › Custom size 18 × 24 in) with the app open; press "Probe: page size" | width and height in px; the scale `s` = width / 1296 |
 
-If the Preview button will only open a fresh design and the app cannot be opened inside the poster, use the app's build with explicit dimensions in the fresh design and delete its default page.
+If the Preview button will only open a fresh design and the app cannot be opened inside the poster: the app takes its scale from the open design's own width, so in section 2 of the panel type the target page width in px by hand and press "Use this width" (every page is then added at that width with the kit's 3:4 proportion), and delete the design's default page. Whether Canva honours page dimensions that differ from the design's default is undocumented: check the first built page in Resize › Custom before building more. The safe route is to open the app inside the 18 × 24 in poster design.
 
 ### 5. Pilot: page 3 only
 
-In the app: Load operations (the default URL), then Build page 3. Export the design as PDF Standard with Flatten OFF (Share › Download › PDF Standard).
+In the app: Load operations (the default URL); in section 3 pick every font key (the Build buttons stay disabled until each key is resolved in this panel session, because Canva's font refs are short-lived and refs stored by an earlier session are not used); then Build page 3. Delete the design's default blank page so the export holds only the pilot. Export the design as PDF Standard with Flatten OFF (Share › Download › PDF Standard).
 
 Check with the venv:
 
@@ -105,16 +105,16 @@ Check with the venv:
 venv/bin/python - <<'EOF'
 import pymupdf, sys
 d = pymupdf.open("/path/to/downloaded.pdf")
-p = d[0]; print(p.rect, len(p.get_text()), "chars", len(p.get_links()), "links")
+p = d[-1]; print(len(d), "pages;", p.rect, len(p.get_text()), "chars", len(p.get_links()), "links")   # the built page is last if the blank page was kept
 print(sorted({l.get("uri") for l in p.get_links()}))
 EOF
 ```
 
-Expect 10 links on page 3 (nine plus the email), live text, the right substituted font. Compare the render against `press/KillerOfMen_EPK_<latest>.pdf` page 3 side by side. Luke gives a go or no-go on typeface, line breaks and the mailto link. Any tweak goes into `tools/build-epk-kit.py` or the emitter and the JSON is regenerated; nothing is hand-edited in Canva before the go.
+Expect 8 live links on page 3 (the AFI contact email and the production email are placed as plain text: richtext links document http(s) only, and the recorded decision is plain text if Canva drops `mailto:`), live text, the right substituted font. Compare the render against `press/KillerOfMen_EPK_<latest>.pdf` page 3 side by side. Luke gives a go or no-go on typeface, line breaks and the mailto link. Any tweak goes into `tools/build-epk-kit.py` or the emitter and the JSON is regenerated; nothing is hand-edited in Canva before the go.
 
 ### 6. Full build
 
-In the app: Build all pages (or page by page). The app records each built page in the browser's localStorage and shows an "Export STATE" block; paste that block's values into `STATE.json` (`probes`, `pages_built`, `design.url`).
+In the app: Build all pages (or page by page). The app records each built page in the browser's localStorage and shows an "Export STATE" block; paste that block's values into `STATE.json` (`probes`, `pages_built`, `design.page_px`, `design.scale_px_per_pt`). `design.url` is copied by hand from the editor's address bar; the app cannot read it.
 
 Check: eleven pages in order; per-page element counts equal `count` in the JSON; pages 3, 5, 8 and 9 screenshotted and compared to the PDF.
 
@@ -131,7 +131,7 @@ print(sum(len(p.get_text()) for p in d), "chars;", sum(len(p.get_links()) for p 
 EOF
 ```
 
-Expect 11 pages at 1296 × 1728 pt, text on every page, 20 links. Record size and verdicts in `STATE.json`. Put the exported PDF on the Drive under `05 MARKETING / 00 PRESS / EPK BUILDS / CANVA`.
+Expect 11 pages at 1296 × 1728 pt, text on every page, 18 links (the contract carries 20; the two `mailto:` rows are plain text by design). Record size and verdicts in `STATE.json`. Put the exported PDF on the Drive under `05 MARKETING / 00 PRESS / EPK BUILDS / CANVA`.
 
 ### 8. Optional: real Baskerville (Pro)
 
@@ -168,8 +168,12 @@ Not covered by this test, because it needs Luke's Canva login: creating the app 
 
 1. Read `STATE.json`. `next_step` says where to go; `pages_built` says which pages exist.
 2. If the JSON's `source.epk_rev` is older than `press/epk.json`'s `rev`, decide with Luke whether to rebuild (Canva is the master after acceptance; a rebuild discards Canva-side edits on the pages it replaces).
-3. The app's localStorage progress lives in the browser that ran it. A different browser starts from `STATE.json` alone: open the existing design by its URL and build only the pages not listed in `pages_built`.
+3. The app's localStorage progress lives in the browser that ran it. A different browser starts from `STATE.json` alone: open the existing design by its URL and build only the pages not listed in `pages_built`. Font refs do not carry over either (Canva documents them as short-lived): the new browser picks every font key again in section 3 before the Build buttons enable.
 4. The Developer Portal app belongs to the Canva account, not to the machine. Another machine only needs the repo, Node, and Luke logged in.
+
+## Codex audit (2026-09-11)
+
+A cross-family read-only audit of this runbook, `STATE.json`, `press/canva-plan.md` and the app source returned **UNSOUND** with eight findings and no invented SDK call. All eight were answered the same day (the table is in `kom-epk-builder/BUILD-REPORT.md`): the link expectations above now say 18 live links (the two `mailto:` rows are text); the app refuses to build until every font key is resolved in the current panel session and fails an element rather than fall back to Canva's default font; the fresh-design fallback is a typed page width, unverified; step 3 names the three scopes and the app's hint fires on both `missing_permission` and `permission_denied`; the plan carries a superseded banner; the pilot check reads the last page; `design.url` is copied by hand; every image upload is awaited. What no audit can settle from disk: the first run inside Canva.
 
 ## Rules that hold here
 

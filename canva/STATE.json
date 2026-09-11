@@ -1,12 +1,12 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-10T22:47:25-05:00",
-  "updated_by": "Fable session, Illustrator/Canva lane",
+  "updated": "2026-09-11T11:23:07-05:00",
+  "updated_by": "Fable session, EPK taste pass and Codex audit fixes",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
     "typeface": "Build in Libre Baskerville (apps cannot use uploaded fonts). Optional afterwards, Luke's call: split /System/Library/Fonts/Supplemental/Baskerville.ttc into Regular, SemiBold, Bold .ttf with fontTools, upload to Brand > Fonts, swap in the editor. Not required; the kit must be right for KILLER OF MEN, not match Night Feeds.",
     "master_after_build": "Canva becomes the master once the design is built and accepted. The worksheet (press/epk.json) and the kit remain the source for the PDF and the .ai until Luke says otherwise; rebuilding a Canva page replaces it and discards edits made in Canva on that page.",
-    "email": "killerofmenmovie@gmail.com, worksheet field 3.20, drawn on page 3's footer as a mailto link. If Canva's export drops mailto links, show the address as plain text.",
+    "email": "killerofmenmovie@gmail.com, worksheet field 3.20, drawn on page 3's footer as a mailto link. If Canva's export drops mailto links, show the address as plain text. The app itself places both mailto rows as plain text (richtext links document http(s) only), so the Canva build carries 18 live links, not 20.",
     "line_breaks": "Editable paragraphs that Canva reflows (collaborators can edit words); tracked headings and labels are one element per line so their breaks hold.",
     "editor_driving": "Luke gave blanket OK (2026-09-10) for an agent to drive his logged-in Canva editor for this build, at human pace, through the documented UI. Accepting Canva's Developer Terms is Luke's own click."
   },
@@ -67,20 +67,23 @@
     "view_link": null
   },
   "last_error": null,
-  "next_step": "Step 0 of canva/README.md: run `bash canva/preflight.sh`, fix every MISSING line, then ask Luke its four questions and wait for the answers. Only then step 3 (Developer Portal app) and step 4 (probes).",
+  "next_step": "Luke answers the four pre-flight questions (handoff-113-epk). Then step 3 of canva/README.md (Developer Portal app, with the three scopes) and step 4 (probes). Note: tools/build-epk-kit.py is being revised in a taste pass (press/drafts/2026-09-11); once Luke accepts that draft, re-run tools/build-epk-canva.py and push the contract and derivatives before any Canva build, or the app will build the superseded layout.",
   "app": {
     "path": "canva/kom-epk-builder",
     "commit": "c9fba15",
-    "typecheck": "tsc zero errors, eslint clean, npm run build ok (2026-09-10)",
+    "typecheck": "tsc zero errors, eslint clean, npm run build ok (2026-09-11, after the Codex fixes)",
     "run": "npm --prefix canva/kom-epk-builder run start  (or the launch.json entry canva-app); serves http://localhost:8080",
     "notes": [
       "mailto: links are shown as plain text by the app (richtext link documents http(s) only); the two mailto rows keep their text",
       "after the first addPage the app checks the new page is the current page before any per-element fallback",
-      "page order from getDesignMetadata is documented as not guaranteed; confirm by eye after page 1"
+      "page order from getDesignMetadata is documented as not guaranteed; confirm by eye after page 1",
+      "fonts: only refs resolved in the current panel session are used; Build stays disabled until every key is picked; a missing ref fails the element (Codex finding 2)",
+      "images: whenUploaded() is awaited per image; a failed upload fails the element (Codex finding 8)"
     ]
   },
   "blockers": [
-    "Browser pairing: the Connect prompt sent to both Chromes timed out (no click within 2 min). Developer Portal app creation and the probes wait on Luke clicking Connect in the Chrome that is logged in to Canva."
+    "Browser pairing: two Chromes are connected to this Claude account (Browser 1, Browser 2). Driving one needs Luke to pick it in chat or click Connect in the extension; the Connect prompt timed out twice on 2026-09-10. Developer Portal app creation and the probes wait on that and on his Developer Terms click.",
+    "Pre-flight machine checks passed on 2026-09-11 with zero MISSING lines; the four questions were put to Luke in handoff-113-epk and await his answers."
   ],
   "fresh_clone_test": {
     "at": "2026-09-10",
@@ -96,5 +99,15 @@
       "workflow-synthesis-2026-09-10.md"
     ]
   },
-  "handover_note": "Luke may run the Canva steps from a different Claude account. That account needs: this repo (clone), the Claude in Chrome extension signed in to it, Luke logged in to Canva Pro in that Chrome, Node 24, Python 3. It does not need anything from the first session's memory; everything is in canva/README.md, STATE.json, research/, and the app's BUILD-REPORT.md."
+  "handover_note": "Luke may run the Canva steps from a different Claude account. That account needs: this repo (clone), the Claude in Chrome extension signed in to it, Luke logged in to Canva Pro in that Chrome, Node 24, Python 3. It does not need anything from the first session's memory; everything is in canva/README.md, STATE.json, research/, and the app's BUILD-REPORT.md. Font refs never carry across browsers or sessions: the app refuses to build until every font key is picked in the current panel session (Codex finding 2, fixed 2026-09-11).",
+  "audits": {
+    "codex_2026-09-11": {
+      "verdict": "UNSOUND",
+      "findings": 8,
+      "sdk_calls": "none invented or type-invalid",
+      "response": "all eight answered the same day; table in canva/kom-epk-builder/BUILD-REPORT.md; runbook, plan and this file corrected",
+      "unverified": "the manual page-width fallback (finding 3) has not run inside Canva",
+      "strongest_risk": "a resumed build could silently use stale FontRefs; the app now refuses to build until every font key is resolved in the current panel session"
+    }
+  }
 }

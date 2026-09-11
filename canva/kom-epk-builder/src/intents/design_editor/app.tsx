@@ -194,12 +194,37 @@ export const App = () => {
     }
   };
 
+  // A fresh Preview design has its own size; when the app cannot be opened inside the
+  // 18 x 24 in poster, the operator types the target width and every page is added at that
+  // width with the kit's 3:4 proportion (Codex audit 2026-09-11, finding 3). Whether Canva
+  // honours addPage dimensions that differ from the design's default is undocumented; check
+  // the first built page in Resize > Custom before building more.
+  const [manualWidth, setManualWidth] = useState<number | undefined>();
+  const onManualPage = () => {
+    if (manualWidth === undefined || !doc) {
+      appendLog("manual page size: load ops and enter a width first");
+      return;
+    }
+    const height = Math.round(
+      (manualWidth * doc.page.height_pt) / doc.page.width_pt,
+    );
+    setPagePx({ source: "manual override", width: manualWidth, height });
+    appendLog(`page size (manual override): ${manualWidth} x ${height} px`);
+  };
+
   // 3. Probe: fonts
+  // Stored refs are shown for reference only: Canva documents font refs as short-lived
+  // (https://www.canva.dev/docs/apps/fonts/), so a build uses only refs resolved in THIS panel
+  // session (`fresh`). Codex audit 2026-09-11, finding 2.
   const [fonts, setFonts] = useState<Record<string, StoredFont>>(() =>
     loadFonts(),
   );
+  const [fresh, setFresh] = useState<Set<string>>(() => new Set());
   const [libreMatches, setLibreMatches] = useState<StoredFont[]>([]);
   const fontKeys = useMemo(() => Object.keys(doc?.fonts ?? {}), [doc]);
+  const fontsFresh =
+    fontKeys.length > 0 && fontKeys.every((k) => fresh.has(k) && !!fonts[k]);
+  const staleKeys = fontKeys.filter((k) => !!fonts[k] && !fresh.has(k));
 
   const storeFont = (key: string, font: StoredFont) => {
     setFonts((prev) => {
@@ -207,6 +232,7 @@ export const App = () => {
       saveFonts(next);
       return next;
     });
+    setFresh((prev) => new Set(prev).add(key));
   };
 
   const onPickFont = async (key: string) => {
@@ -282,7 +308,26 @@ export const App = () => {
       appendLog("build: probe page size first (s is undefined)");
       return undefined;
     }
-    return { doc, s, fonts, libre: fonts[LIBRE_KEY], log: appendLog };
+    if (!fontsFresh) {
+      appendLog(
+        `build: pick every font in this session first (${fontKeys.filter((k) => !fresh.has(k)).join(", ") || "none listed"}); refs stored by an earlier session are not used`,
+      );
+      return undefined;
+    }
+    const sessionFonts: Record<string, StoredFont> = {};
+    for (const k of fontKeys) {
+      const f = fonts[k];
+      if (f && fresh.has(k)) {
+        sessionFonts[k] = f;
+      }
+    }
+    return {
+      doc,
+      s,
+      fonts: sessionFonts,
+      libre: fresh.has(LIBRE_KEY) ? fonts[LIBRE_KEY] : undefined,
+      log: appendLog,
+    };
   };
 
   const runPages = async (ns: number[]) => {
@@ -382,6 +427,7 @@ export const App = () => {
         : null;
     const fontsOut: Record<string, unknown> = {
       done: fontKeys.length > 0 && fontKeys.every((k) => !!fonts[k]),
+      resolved_this_session: fontsFresh,
     };
     for (const k of fontKeys) {
       fontsOut[k] = fontOut(fonts[k]);
@@ -400,6 +446,7 @@ export const App = () => {
         fonts: fontsOut,
       },
       design: {
+        url: null, // not readable by the app: copy it from the editor's address bar
         page_px: havePx ? [pagePx.width, pagePx.height] : null,
         scale_px_per_pt: s ?? null,
       },
@@ -539,6 +586,26 @@ export const App = () => {
               : `page px: ${pagePx.width} x ${pagePx.height} (${pagePx.source}) · width_pt ${widthPt} · s = ${s?.toFixed(6)}`}
           </Text>
         )}
+        <FormField
+          label="Or type the page width in px (fresh design only; unverified)"
+          value={manualWidth}
+          control={(props) => (
+            <NumberInput
+              {...props}
+              min={40}
+              max={8000}
+              step={1}
+              onChange={(v) => setManualWidth(v)}
+            />
+          )}
+        />
+        <Button
+          variant="tertiary"
+          onClick={onManualPage}
+          disabled={manualWidth === undefined || !doc}
+        >
+          Use this width
+        </Button>
 
         <Title size="xsmall">3. Probe: fonts</Title>
         {fontKeys.length === 0 && (
@@ -554,12 +621,17 @@ export const App = () => {
               </Button>
               <Text size="xsmall">
                 {chosen
-                  ? `${chosen.name} · ${chosen.ref} · ${chosen.weights.map((w) => w.weight).join(",")}`
+                  ? `${chosen.name} · ${chosen.ref} · ${chosen.weights.map((w) => w.weight).join(",")} · ${fresh.has(key) ? "resolved this session" : "stored earlier, stale: pick again before building"}`
                   : "not chosen"}
               </Text>
             </Rows>
           );
         })}
+        {staleKeys.length > 0 && (
+          <Alert tone="warn">
+            {`${staleKeys.length} font ref(s) come from an earlier session and will not be used: ${staleKeys.join(", ")}. Pick each again; Build enables when every key is resolved here.`}
+          </Alert>
+        )}
         <Button variant="secondary" onClick={() => void onFindLibre()}>
           Find Libre Baskerville
         </Button>
@@ -588,7 +660,9 @@ export const App = () => {
         <Button
           variant="primary"
           onClick={onBuildOne}
-          disabled={building || !doc || s === undefined || !canAddPage}
+          disabled={
+            building || !doc || s === undefined || !canAddPage || !fontsFresh
+          }
           loading={building}
         >
           Build page N
@@ -596,7 +670,9 @@ export const App = () => {
         <Button
           variant="secondary"
           onClick={onBuildAll}
-          disabled={building || !doc || s === undefined || !canAddPage}
+          disabled={
+            building || !doc || s === undefined || !canAddPage || !fontsFresh
+          }
         >
           Build all pages (skips recorded)
         </Button>

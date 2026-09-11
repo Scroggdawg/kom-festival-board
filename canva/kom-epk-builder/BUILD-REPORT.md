@@ -31,7 +31,7 @@ Names in the brief that do not exist as given:
   the doc lives at `.../api/design-get-design-metadata/` (the `platform-...` URL is a 404). Return shape is
   `{ title?, defaultPageDimensions?: {width,height}, pageMetadata, durationInSeconds }`.
 - `design-editing (openDesign)`: the API page is `.../api/design-open-design/`; the guide is `.../design-editing/`.
-  `all_pages` is documented as preview; the app tries it and falls back to `current_page`.
+  `all_pages` is documented as preview on the guide page but GA in the `@canva/design` 2.10.0 changelog (2026-06-12); the app tries it and falls back to `current_page`.
 - Errors doc: `.../api/error-canva-error/`, `.../errors/`, `.../rate-limits/` all returned 404. The `ErrorCode`
   union in the installed `@canva/error` typings is: bad_external_service_response, bad_request,
   failed_precondition, internal_error, not_found, not_allowed, permission_denied, missing_permission,
@@ -167,3 +167,22 @@ exit 0. The BACKEND_HOST line is the only diagnostic (see finding 3).
 Files changed in this pass: `src/ops/build.ts`, `src/ops/readback.ts`, `src/ops/storage.ts`, `src/ops/retry.ts`,
 `src/ops/types.ts`, `src/intents/design_editor/app.tsx`, `package.json`, `package-lock.json`, `README-APP.md`,
 `BUILD-REPORT.md`.
+
+## Codex audit, 2026-09-11 (cross-family, read-only; verdict UNSOUND)
+
+Eight findings against the runbook, STATE, the plan and this source; no invented or type-invalid SDK call was found
+(`addPage`, `addElementAtPoint`, richtext formatting, `upload`, font selection, metadata calls and `openDesign` all
+exist in the current GA references). What changed in response, the same day:
+
+| # | Finding | Response |
+|---|---|---|
+| 1 | Link acceptance tests asked for 20 links (10 on page 3); the app drops the two `mailto:` rows as text, so 18 / 8 is the most it can produce | README expectations corrected to 18 live links, 8 on page 3, the two email rows as plain text (the recorded decision in STATE) |
+| 2 | Fonts loaded from localStorage; a resumed session could build in Canva's default font and be recorded complete | `resolveFont` throws when no ref was resolved; the panel passes only refs picked in the current session (`fresh`), shows stored refs as stale, and keeps Build disabled until every key is fresh |
+| 3 | The "build with explicit dimensions" fallback did not exist in the app | Manual page-width control in section 2 (`Use this width`), unverified against Canva; README says so |
+| 4 | Scopes absent from the runbook's step 3; the hint keyed on `missing_permission` only, while the errors guide documents `permission_denied` | Scopes named in step 3; hint fires on both codes |
+| 5 | `press/canva-plan.md` stale (Free, `canva apps create`, transparency post-pass, worksheet as master) | Superseded banner with the four corrections |
+| 6 | Pilot check read `d[0]`, the default blank page | Delete the blank page first; the check reads `d[-1]` |
+| 7 | Export STATE was said to supply `design.url` | `url: null` in the export with a note; README says copy it from the address bar |
+| 8 | `whenUploaded()` never awaited | Awaited per image; a failed upload fails the element and the page is recorded failed |
+
+Typecheck, lint and build after these fixes (2026-09-11): `npx prettier --write src`, `npx tsc --noEmit` exit 0, `npx eslint .` exit 0, `npm run build` completed (`dist/app.js` 1.26 MB).

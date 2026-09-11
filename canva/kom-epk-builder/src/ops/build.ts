@@ -141,10 +141,13 @@ export function resolveFont(
       note: `font ${key}: no chosen ref, using Libre Baskerville`,
     };
   }
-  return {
-    fontWeight: asFontWeight(wanted),
-    note: `font ${key}: no ref available, Canva default font will be used`,
-  };
+  // No ref at all: fail the element rather than let Canva's default font in silently. Font
+  // refs are short-lived per https://www.canva.dev/docs/apps/fonts/, so a ref stored by an
+  // earlier session is not accepted either: the panel passes only refs resolved this session
+  // (Codex audit 2026-09-11, finding 2).
+  throw new Error(
+    `font ${key}: no font ref resolved in this session (pick the font or find Libre Baskerville, then build)`,
+  );
 }
 
 // --- element builders ---------------------------------------------------------
@@ -174,6 +177,14 @@ export async function uploadImage(
       }),
     ctx.log,
   );
+  // The ref may be used while the upload is in flight, but a delayed failure only surfaces
+  // through whenUploaded(); awaiting it here means a page is never recorded complete with an
+  // image that then fails (Codex audit 2026-09-11, finding 8).
+  try {
+    await queued.whenUploaded();
+  } catch (e) {
+    throw new Error(`${label}: upload did not complete: ${errorMessage(e)}`);
+  }
   return queued.ref;
 }
 

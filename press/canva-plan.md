@@ -2,6 +2,8 @@
 
 *2026-09-10. Research: five lanes over canva.dev and canva.com/help, read in a real browser the same day (canva.com returns 403 to non-browser fetchers), 175 verification passes on the load-bearing claims. Nothing below was tested against Luke's account yet; the first hour of execution is tests.*
 
+> **Superseded for execution on 2026-09-11.** `canva/README.md` and `canva/STATE.json` govern the build; this file remains the research record and the route comparison. Where they differ, a cross-family audit (Codex, read-only, 2026-09-11) found this file stale on four points, corrected here: the account is **Canva Pro** (Luke upgraded 2026-09-10); the app already exists in `canva/kom-epk-builder/`, so step 3's `canva apps create` is not run; there is no transparency post-pass, ghost opacity is baked into the derivative JPEGs by the emitter; and **Canva becomes the master after acceptance** (decision 3 below was answered that way). The link count is 18 live plus the two email rows as plain text, because the app places `mailto:` as text by design.
+
 ## Recommendation
 
 **Build a small Canva app that replays the kit's own operation list into an 18 × 24 in design, page by page.** It is the same architecture the Illustrator project uses (one layout in `tools/build-epk-kit.py`, replayed through a recording canvas), pointed at a third target. It is the only route that is repeatable when the worksheet changes, keeps every text run live, places at exact coordinates, and carries all nineteen links, because every link in this kit sits on text and Canva's richtext API sets links on text.

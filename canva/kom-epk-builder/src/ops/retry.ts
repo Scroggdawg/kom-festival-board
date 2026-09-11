@@ -8,14 +8,20 @@ export const MAX_TRIES = 5;
 
 // Scopes per https://www.canva.dev/docs/apps/configuring-scopes/ (read 2026-09-10):
 // addPage/addElementAtPoint -> canva:design:content:write, upload -> canva:asset:private:write,
-// getCurrentPageContext -> canva:design:content:read. A missing_permission error therefore
-// almost always means one of those is off on the app's Scopes page in the Developer Portal.
+// getCurrentPageContext -> canva:design:content:read. The installed @canva/error typings carry
+// two codes for this: missing_permission (scope not set in the app config) and permission_denied
+// (scope not accepted); https://www.canva.dev/docs/apps/handling-errors/ documents insufficient
+// scopes as permission_denied (Codex audit 2026-09-11, finding 4). Both get the hint.
 export const MISSING_PERMISSION_HINT =
   "(enable canva:design:content:write, canva:asset:private:write and canva:design:content:read on the app's Scopes page in the Developer Portal, then reload)";
+export const PERMISSION_CODES: readonly string[] = [
+  "missing_permission",
+  "permission_denied",
+];
 
 function withHint(code: unknown, message: unknown): string {
   const base = `${String(code)}: ${String(message)}`;
-  return code === "missing_permission"
+  return typeof code === "string" && PERMISSION_CODES.includes(code)
     ? `${base} ${MISSING_PERMISSION_HINT}`
     : base;
 }
