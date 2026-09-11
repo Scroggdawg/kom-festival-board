@@ -481,11 +481,20 @@ export async function placeOnCurrentPage(
   };
 }
 
+// Observed 2026-09-11 (undocumented): addPage rejects a batch of more than 100 elements
+// with bad_request "Please specify up to a maximum of 100 elements".
+export const ADD_PAGE_MAX_ELEMENTS = 100;
+
 export async function buildPage(
   ctx: BuildContext,
   page: OpsPage,
 ): Promise<BuildResult> {
   const { log, s } = ctx;
+  if (page.elements.length > ADD_PAGE_MAX_ELEMENTS) {
+    log(
+      `page ${page.n}: ${page.elements.length} elements is over addPage's ${ADD_PAGE_MAX_ELEMENTS}-element cap; the batch will be rejected and a background-only page created. Select that page in the editor and use "Place page N on the current page".`,
+    );
+  }
   const { built, failures, flooredRules } = await prepareElements(ctx, page);
 
   const dims = {
