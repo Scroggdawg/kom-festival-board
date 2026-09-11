@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generated": "2026-09-10T15:42:29",
+ "generated": "2026-09-11T12:40:29",
  "source": {
-  "kit_commit": "e47a97c",
+  "kit_commit": "b6e38d0",
   "epk_rev": 24
  },
  "page": {
@@ -65,12 +65,12 @@
      "file": "press/assets/derived/canva/p02-e01.jpg",
      "px": [
       2400,
-      1593
+      1333
      ],
      "x": 0,
      "y": 0.0,
      "w": 1296.0,
-     "h": 860.0,
+     "h": 720.0,
      "alt": "Still 2026-09-08 210640_1.1.5"
     },
     {
@@ -84,7 +84,7 @@
      "color": "#b9a88c",
      "align": "start",
      "x": 74.0,
-     "y": 935.18,
+     "y": 862.79,
      "w": 88.78,
      "links": []
     },
@@ -99,8 +99,8 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 981.72,
-     "w": 900.0,
+     "y": 909.33,
+     "w": 820.0,
      "links": []
     },
     {
@@ -114,7 +114,7 @@
      "color": "#b9a88c",
      "align": "start",
      "x": 74.0,
-     "y": 1195.18,
+     "y": 1122.79,
      "w": 95.19,
      "links": []
     },
@@ -129,8 +129,8 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1244.84,
-     "w": 900.0,
+     "y": 1172.45,
+     "w": 820.0,
      "links": []
     },
     {
@@ -1394,14 +1394,14 @@
      "tracking_pt": 6.0,
      "color": "#efe6d6",
      "align": "start",
-     "x": 186.11,
+     "x": 298.22,
      "y": 66.0,
      "w": 927.78,
      "links": []
     },
     {
      "type": "rule",
-     "x": 530.0,
+     "x": 986.0,
      "y": 125.65,
      "w": 236.0,
      "h": 0.7,
@@ -1410,16 +1410,16 @@
     {
      "type": "text",
      "kind": "paragraph",
-     "text": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class. I was often one of the biggest in the room. As I got older, I started noticing how my mere presence was often seen as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys—even those bigger and stronger than I was. It’s never anything overt, but small, incessant microaggressions. Death by a 1000 needles. It’s a plight that’s shaped me throughout my life, leaving me hyper-aware of myself in spaces. This experience, this reality, is tied to the plight of the Black man in America.\n\nThe concept of Mandingo fighting has always fascinated me. It’s a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history, and the media. It’s always been used to showcase the “Black brute,” but it has never been shown subjectively from the perspective of those involved. What are their lives like? What do they hold dear? What keeps a man going when he’s put in a situation like that?\nSetting this film in slavery times, rather than in the present day or during the 1960s, allows me to examine the deep-rooted history of this aggression. Visually, I want the fight scenes to reflect the physical sports Black men often participate in—body slams, boxing, football tackles—to show history repeating itself through various forms of expression.\nBy setting the story in the 1800s, I also had the chance to explore my heritage. With slavery still in full force and new enslaved people being brought in from Africa, I can examine the past in different ways.\nI want to delve into the spirituality of the enslaved at the time, capturing the mix of cultures, beliefs, and religions that slowly formed what we now know as Black culture.\n\nKiller of Men is an expression of pain—absolute brutality and suffering. But it’s also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I’m putting on the screen.\nKiller of Men has been a grueling process—one that’s forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won’t shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do.",
+     "text": "Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class. I was often one of the biggest in the room. As I got older, I started noticing how my mere presence was often seen as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys—even those bigger and stronger than I was. It’s never anything overt, but small, incessant microaggressions. Death by a 1000 needles. It’s a plight that’s shaped me throughout my life, leaving me hyper-aware of myself in spaces. This experience, this reality, is tied to the plight of the Black man in America.\n\nThe concept of Mandingo fighting has always fascinated me. It’s a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history, and the media. It’s always been used to showcase the “Black brute,” but it has never been shown subjectively from the perspective of those involved. What are their lives like? What do they hold dear? What keeps a man going when he’s put in a situation like that?\n\nSetting this film in slavery times, rather than in the present day or during the 1960s, allows me to examine the deep-rooted history of this aggression. Visually, I want the fight scenes to reflect the physical sports Black men often participate in—body slams, boxing, football tackles—to show history repeating itself through various forms of expression.\n\nBy setting the story in the 1800s, I also had the chance to explore my heritage. With slavery still in full force and new enslaved people being brought in from Africa, I can examine the past in different ways.\n\nI want to delve into the spirituality of the enslaved at the time, capturing the mix of cultures, beliefs, and religions that slowly formed what we now know as Black culture.\n\nKiller of Men is an expression of pain—absolute brutality and suffering. But it’s also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I’m putting on the screen.\n\nKiller of Men has been a grueling process—one that’s forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won’t shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do.",
      "font": "Bask",
-     "size_pt": 23.0,
-     "leading_pt": 36.5,
+     "size_pt": 21.5,
+     "leading_pt": 33.77,
      "tracking_pt": 0.0,
      "color": "#efe6d6",
-     "align": "center",
-     "x": 288.0,
-     "y": 192.06,
-     "w": 720.0,
+     "align": "start",
+     "x": 536.0,
+     "y": 193.23,
+     "w": 686.0,
      "links": []
     },
     {
@@ -1432,8 +1432,8 @@
      "tracking_pt": 2.35,
      "color": "#b9a88c",
      "align": "start",
-     "x": 474.53,
-     "y": 1536.36,
+     "x": 536.0,
+     "y": 1521.16,
      "w": 350.94,
      "links": []
     }
@@ -1444,7 +1444,7 @@
    "n": 5,
    "name": "05 Filmmakers",
    "background": "#0b0806",
-   "count": 16,
+   "count": 24,
    "elements": [
     {
      "type": "text",
@@ -1480,7 +1480,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 245.05,
+     "y": 194.05,
      "w": 492.22,
      "links": []
     },
@@ -1489,14 +1489,14 @@
      "kind": "line",
      "text": "@jordanbetine",
      "font": "Bask",
-     "size_pt": 14.2,
-     "leading_pt": 17.04,
-     "tracking_pt": 1.35,
+     "size_pt": 15.6,
+     "leading_pt": 18.72,
+     "tracking_pt": 2.35,
      "color": "#b9a88c",
      "align": "start",
      "x": 590.22,
-     "y": 251.51,
-     "w": 105.7,
+     "y": 199.18,
+     "w": 126.13,
      "links": [
       {
        "url": "https://www.instagram.com/jordanbetine/",
@@ -1506,18 +1506,26 @@
      ]
     },
     {
+     "type": "rule",
+     "x": 590.22,
+     "y": 219.75,
+     "w": 122.13,
+     "h": 0.5,
+     "color": "#b9a88c"
+    },
+    {
      "type": "text",
      "kind": "line",
      "text": "IMDB",
      "font": "Bask",
-     "size_pt": 14.2,
-     "leading_pt": 17.04,
-     "tracking_pt": 1.35,
+     "size_pt": 15.6,
+     "leading_pt": 18.72,
+     "tracking_pt": 2.35,
      "color": "#b9a88c",
      "align": "start",
-     "x": 719.91,
-     "y": 251.51,
-     "w": 45.77,
+     "x": 740.34,
+     "y": 199.18,
+     "w": 52.49,
      "links": [
       {
        "url": "https://www.imdb.com/name/nm17461892/",
@@ -1525,6 +1533,28 @@
        "end": 4
       }
      ]
+    },
+    {
+     "type": "rule",
+     "x": 740.34,
+     "y": 219.75,
+     "w": 48.49,
+     "h": 0.5,
+     "color": "#b9a88c"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva/p05-e01.jpg",
+     "file": "press/assets/derived/canva/p05-e01.jpg",
+     "px": [
+      1332,
+      1584
+     ],
+     "x": 74.0,
+     "y": 254.0,
+     "w": 333,
+     "h": 396.0,
+     "alt": "KOM_Day3_TheFarm-43"
     },
     {
      "type": "text",
@@ -1536,8 +1566,8 @@
      "tracking_pt": 0.0,
      "color": "#efe6d6",
      "align": "start",
-     "x": 74.0,
-     "y": 315.68,
+     "x": 455.0,
+     "y": 264.68,
      "w": 767.0,
      "links": []
     },
@@ -1551,45 +1581,24 @@
      "tracking_pt": 2.2,
      "color": "#efe6d6",
      "align": "start",
-     "x": 884.79,
-     "y": 574.05,
+     "x": 74.0,
+     "y": 696.05,
      "w": 341.21,
      "links": []
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "IMDB",
-     "font": "Bask",
-     "size_pt": 14.2,
-     "leading_pt": 17.04,
-     "tracking_pt": 1.35,
-     "color": "#b9a88c",
-     "align": "start",
-     "x": 815.02,
-     "y": 580.51,
-     "w": 45.77,
-     "links": [
-      {
-       "url": "https://www.imdb.com/name/nm15376948/",
-       "start": 0,
-       "end": 4
-      }
-     ]
-    },
-    {
-     "type": "text",
-     "kind": "line",
      "text": "@smile_xiao624",
      "font": "Bask",
-     "size_pt": 14.2,
-     "leading_pt": 17.04,
-     "tracking_pt": 1.35,
+     "size_pt": 15.6,
+     "leading_pt": 18.72,
+     "tracking_pt": 2.35,
      "color": "#b9a88c",
      "align": "start",
-     "x": 674.65,
-     "y": 580.51,
-     "w": 116.37,
+     "x": 439.21,
+     "y": 701.18,
+     "w": 138.72,
      "links": [
       {
        "url": "https://www.instagram.com/smile_xiao624/",
@@ -1599,15 +1608,52 @@
      ]
     },
     {
+     "type": "rule",
+     "x": 439.21,
+     "y": 721.75,
+     "w": 134.72,
+     "h": 0.5,
+     "color": "#b9a88c"
+    },
+    {
+     "type": "text",
+     "kind": "line",
+     "text": "IMDB",
+     "font": "Bask",
+     "size_pt": 15.6,
+     "leading_pt": 18.72,
+     "tracking_pt": 2.35,
+     "color": "#b9a88c",
+     "align": "start",
+     "x": 601.93,
+     "y": 701.18,
+     "w": 52.49,
+     "links": [
+      {
+       "url": "https://www.imdb.com/name/nm15376948/",
+       "start": 0,
+       "end": 4
+      }
+     ]
+    },
+    {
+     "type": "rule",
+     "x": 601.93,
+     "y": 721.75,
+     "w": 48.49,
+     "h": 0.5,
+     "color": "#b9a88c"
+    },
+    {
      "type": "image",
-     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva/p05-e01.jpg",
-     "file": "press/assets/derived/canva/p05-e01.jpg",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva/p05-e02.jpg",
+     "file": "press/assets/derived/canva/p05-e02.jpg",
      "px": [
       1332,
       1584
      ],
      "x": 889.0,
-     "y": 634.0,
+     "y": 756.0,
      "w": 333,
      "h": 396.0,
      "alt": "Producer_Ruoxiao_Li "
@@ -1621,9 +1667,9 @@
      "leading_pt": 30.0,
      "tracking_pt": 0.0,
      "color": "#efe6d6",
-     "align": "end",
+     "align": "start",
      "x": 74.0,
-     "y": 644.68,
+     "y": 766.68,
      "w": 767.0,
      "links": []
     },
@@ -1638,7 +1684,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1089.05,
+     "y": 1198.05,
      "w": 529.93,
      "links": []
     },
@@ -1647,14 +1693,14 @@
      "kind": "line",
      "text": "@Luscroggs",
      "font": "Bask",
-     "size_pt": 14.2,
-     "leading_pt": 17.04,
-     "tracking_pt": 1.35,
+     "size_pt": 15.6,
+     "leading_pt": 18.72,
+     "tracking_pt": 2.35,
      "color": "#b9a88c",
      "align": "start",
      "x": 627.93,
-     "y": 1095.51,
-     "w": 86.27,
+     "y": 1203.18,
+     "w": 102.18,
      "links": [
       {
        "url": "https://www.instagram.com/Luscroggs/",
@@ -1664,18 +1710,26 @@
      ]
     },
     {
+     "type": "rule",
+     "x": 627.93,
+     "y": 1223.75,
+     "w": 98.18,
+     "h": 0.5,
+     "color": "#b9a88c"
+    },
+    {
      "type": "text",
      "kind": "line",
      "text": "IMDB",
      "font": "Bask",
-     "size_pt": 14.2,
-     "leading_pt": 17.04,
-     "tracking_pt": 1.35,
+     "size_pt": 15.6,
+     "leading_pt": 18.72,
+     "tracking_pt": 2.35,
      "color": "#b9a88c",
      "align": "start",
-     "x": 738.19,
-     "y": 1095.51,
-     "w": 45.77,
+     "x": 754.11,
+     "y": 1203.18,
+     "w": 52.49,
      "links": [
       {
        "url": "https://www.imdb.com/name/nm3596666/",
@@ -1685,15 +1739,23 @@
      ]
     },
     {
+     "type": "rule",
+     "x": 754.11,
+     "y": 1223.75,
+     "w": 48.49,
+     "h": 0.5,
+     "color": "#b9a88c"
+    },
+    {
      "type": "image",
-     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva/p05-e02.jpg",
-     "file": "press/assets/derived/canva/p05-e02.jpg",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva/p05-e03.jpg",
+     "file": "press/assets/derived/canva/p05-e03.jpg",
      "px": [
       1332,
       1584
      ],
      "x": 74.0,
-     "y": 1149.0,
+     "y": 1258.0,
      "w": 333,
      "h": 396.0,
      "alt": "Cinematographer_Luke_Scroggins"
@@ -1709,8 +1771,23 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 455.0,
-     "y": 1159.68,
+     "y": 1268.68,
      "w": 767.0,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "line",
+     "text": "PROOF — THE DIRECTOR'S PORTRAIT IS A SET PHOTOGRAPH, IDENTITY TO CONFIRM",
+     "font": "Bask",
+     "size_pt": 9.5,
+     "leading_pt": 11.4,
+     "tracking_pt": 1.4,
+     "color": "#b9a88c",
+     "align": "start",
+     "x": 393.97,
+     "y": 1685.67,
+     "w": 512.06,
      "links": []
     }
    ],
@@ -1720,7 +1797,7 @@
    "n": 6,
    "name": "06 Filmmakers",
    "background": "#0b0806",
-   "count": 10,
+   "count": 14,
    "elements": [
     {
      "type": "text",
@@ -1733,7 +1810,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 300.05,
+     "y": 359.45,
      "w": 799.97,
      "links": []
     },
@@ -1742,14 +1819,14 @@
      "kind": "line",
      "text": "@itsrjactually",
      "font": "Bask",
-     "size_pt": 14.2,
-     "leading_pt": 17.04,
-     "tracking_pt": 1.35,
+     "size_pt": 15.6,
+     "leading_pt": 18.72,
+     "tracking_pt": 2.35,
      "color": "#b9a88c",
      "align": "start",
      "x": 897.97,
-     "y": 306.51,
-     "w": 99.96,
+     "y": 364.58,
+     "w": 120.69,
      "links": [
       {
        "url": "https://www.instagram.com/itsrjactually/",
@@ -1759,18 +1836,26 @@
      ]
     },
     {
+     "type": "rule",
+     "x": 897.97,
+     "y": 385.15,
+     "w": 116.69,
+     "h": 0.5,
+     "color": "#b9a88c"
+    },
+    {
      "type": "text",
      "kind": "line",
      "text": "IMDB",
      "font": "Bask",
-     "size_pt": 14.2,
-     "leading_pt": 17.04,
-     "tracking_pt": 1.35,
+     "size_pt": 15.6,
+     "leading_pt": 18.72,
+     "tracking_pt": 2.35,
      "color": "#b9a88c",
      "align": "start",
-     "x": 1021.92,
-     "y": 306.51,
-     "w": 45.77,
+     "x": 1042.65,
+     "y": 364.58,
+     "w": 52.49,
      "links": [
       {
        "url": "https://www.imdb.com/name/nm15956329/",
@@ -1780,6 +1865,14 @@
      ]
     },
     {
+     "type": "rule",
+     "x": 1042.65,
+     "y": 385.15,
+     "w": 48.49,
+     "h": 0.5,
+     "color": "#b9a88c"
+    },
+    {
      "type": "image",
      "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva/p06-e01.jpg",
      "file": "press/assets/derived/canva/p06-e01.jpg",
@@ -1787,8 +1880,8 @@
       1332,
       1584
      ],
-     "x": 74.0,
-     "y": 360.0,
+     "x": 889.0,
+     "y": 419.4,
      "w": 333,
      "h": 396.0,
      "alt": "Production_Designer_Rajarajeshwari_aka_RJ_Ragampudi"
@@ -1803,8 +1896,8 @@
      "tracking_pt": 0.0,
      "color": "#efe6d6",
      "align": "start",
-     "x": 455.0,
-     "y": 370.68,
+     "x": 74.0,
+     "y": 430.08,
      "w": 767.0,
      "links": []
     },
@@ -1818,45 +1911,24 @@
      "tracking_pt": 2.2,
      "color": "#efe6d6",
      "align": "start",
-     "x": 978.56,
-     "y": 952.05,
+     "x": 74.0,
+     "y": 861.45,
      "w": 247.44,
      "links": []
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "IMDB",
-     "font": "Bask",
-     "size_pt": 14.2,
-     "leading_pt": 17.04,
-     "tracking_pt": 1.35,
-     "color": "#b9a88c",
-     "align": "start",
-     "x": 908.79,
-     "y": 958.51,
-     "w": 45.77,
-     "links": [
-      {
-       "url": "https://www.imdb.com/name/nm17461889/",
-       "start": 0,
-       "end": 4
-      }
-     ]
-    },
-    {
-     "type": "text",
-     "kind": "line",
      "text": "@ywu.0125",
      "font": "Bask",
-     "size_pt": 14.2,
-     "leading_pt": 17.04,
-     "tracking_pt": 1.35,
+     "size_pt": 15.6,
+     "leading_pt": 18.72,
+     "tracking_pt": 2.35,
      "color": "#b9a88c",
      "align": "start",
-     "x": 801.5,
-     "y": 958.51,
-     "w": 83.29,
+     "x": 345.44,
+     "y": 866.58,
+     "w": 98.04,
      "links": [
       {
        "url": "https://www.instagram.com/ywu.0125/",
@@ -1866,6 +1938,43 @@
      ]
     },
     {
+     "type": "rule",
+     "x": 345.44,
+     "y": 887.15,
+     "w": 94.04,
+     "h": 0.5,
+     "color": "#b9a88c"
+    },
+    {
+     "type": "text",
+     "kind": "line",
+     "text": "IMDB",
+     "font": "Bask",
+     "size_pt": 15.6,
+     "leading_pt": 18.72,
+     "tracking_pt": 2.35,
+     "color": "#b9a88c",
+     "align": "start",
+     "x": 467.48,
+     "y": 866.58,
+     "w": 52.49,
+     "links": [
+      {
+       "url": "https://www.imdb.com/name/nm17461889/",
+       "start": 0,
+       "end": 4
+      }
+     ]
+    },
+    {
+     "type": "rule",
+     "x": 467.48,
+     "y": 887.15,
+     "w": 48.49,
+     "h": 0.5,
+     "color": "#b9a88c"
+    },
+    {
      "type": "image",
      "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva/p06-e02.jpg",
      "file": "press/assets/derived/canva/p06-e02.jpg",
@@ -1873,8 +1982,8 @@
       1332,
       1584
      ],
-     "x": 889.0,
-     "y": 1012.0,
+     "x": 74.0,
+     "y": 921.4,
      "w": 333,
      "h": 396.0,
      "alt": "Editor_You_Wu"
@@ -1888,9 +1997,9 @@
      "leading_pt": 30.0,
      "tracking_pt": 0.0,
      "color": "#efe6d6",
-     "align": "end",
-     "x": 74.0,
-     "y": 1022.68,
+     "align": "start",
+     "x": 455.0,
+     "y": 932.08,
      "w": 767.0,
      "links": []
     }
@@ -1901,56 +2010,169 @@
    "n": 7,
    "name": "07 Cast",
    "background": "#0b0806",
-   "count": 22,
+   "count": 23,
    "elements": [
     {
      "type": "image",
      "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva/p07-e01.jpg",
      "file": "press/assets/derived/canva/p07-e01.jpg",
      "px": [
-      2400,
-      1852
+      1800,
+      2400
      ],
      "x": 0,
      "y": 0.0,
      "w": 1296.0,
-     "h": 1000.0,
-     "alt": "Still 2026-09-08 210640_1.1.40"
+     "h": 1728.0,
+     "alt": "Still 2026-09-08 210640_1.1.17"
+    },
+    {
+     "type": "text",
+     "kind": "line",
+     "text": "C A S T",
+     "font": "Bask",
+     "size_pt": 40.0,
+     "leading_pt": 48.0,
+     "tracking_pt": 6.0,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 66.0,
+     "w": 175.41,
+     "links": []
+    },
+    {
+     "type": "rule",
+     "x": 74.0,
+     "y": 125.65,
+     "w": 236.0,
+     "h": 0.7,
+     "color": "#6b5942"
     },
     {
      "type": "text",
      "kind": "line",
      "text": "MACE  |  ERIK ORJIAKO",
      "font": "Bask-SB",
-     "size_pt": 24.0,
-     "leading_pt": 28.8,
-     "tracking_pt": 2.4,
+     "size_pt": 21.0,
+     "leading_pt": 25.2,
+     "tracking_pt": 2.2,
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1067.2,
-     "w": 341.57,
+     "y": 190.05,
+     "w": 301.37,
      "links": []
     },
     {
      "type": "text",
      "kind": "paragraph",
-     "text": "Mace | Erik Orjiako\nErik Orjiako is a Swedish-born Nigerian American actor and writer based in Los Angeles. He studied English and communications at UMass Amherst and earned an MFA in screenwriting at the New York Film Academy. A graduate of Second City Hollywood's improv program, he has performed with its sketch team and written shows there. His credits include the series Minx, the short film Al Davis: Just Win Baby and the podcast series The Imperfection. He has also worked as a script reader and creative executive. In Killer of Men he plays Mace.\nPrior credits: Minx, Al Davis: Just Win Baby, The Imperfection\n\nMaster Kenner | Eric Pargac\nEric Pargac is a Los Angeles-based actor and filmmaker who grew up in Texas. He was a founding artistic director of Furious Theatre Company in Los Angeles, where he performed in ten productions and shared StageSceneLA's 2006-2007 Lead Actor of the Year (Drama) award for An Impending Rupture of the Belly. He has also performed at Artists Repertory Theatre in Portland, Intiman Theatre in Seattle and the IRT Theater in New York. His television credits include The Late Show with Stephen Colbert and HBO's Succession. He starred in, co-directed and co-produced the web series The Digressions. He is a member of SAG-AFTRA and Actors' Equity. In Killer of Men he plays Master Kenner.\nPrior credits: Succession, The Digressions\n\nKojo | Jamal Dennis\nJamal Dennis is a Los Angeles-based actor and stunt performer. His training includes technique and scene study at the Royal Academy of Dramatic Art and scene study with Lesly Kahn and Craig Archibald. He holds a black belt in martial arts and has trained in Kyokushin, Wushu, Ninjutsu and Shotokan. He played the lead, Lavelle Sanders, in the series Be Someone. His screen credits include The Young and the Restless, S.W.A.T., Marvel's Runaways, Zoo, Mississippi Grind and Glory Road, and he has performed stunts on Sinners, Emancipation and Grudge Match. He is a member of SAG-AFTRA. In Killer of Men he plays Kojo.\nPrior credits: Mississippi Grind, S.W.A.T., The Young and the Restless, Sinners (stunts)\n\nElder | Sandra McDaniels\nSandra McDaniels is a Los Angeles-based actress and a member of SAG-AFTRA. Her screen credits include the Apple TV+ series Truth Be Told, the short films Providence and 172 Push-Ups, and the film Gingersnap Christmas, in which she plays Gramma Belle. In Killer of Men she plays the Elder.\nPrior credits: Truth Be Told, Gingersnap Christmas, Providence\n\nDRAFTS, NOT YET APPROVED. Written Sep 10 from IMDb, Backstage and the actors' own sites, then fact-checked claim by claim by eight independent checkers. Each actor should approve their bio before print. Order follows the crawl, as in 3.15.\nSANDRA McDANIELS HAS NO BIO OF HER OWN ANYWHERE ONLINE. Hers is built from her credits only. Ask her, or NTA Talent Agency, for her own.\nTO CONFIRM WITH THE ACTORS: Erik's MFA, birthplace and creative-executive work each rest on one profile he wrote himself. Eric's union membership comes from 2018 to 2020 material, Jamal's from his own resume. IMDb credits Jamal's role as \"Fighter2 Kojo\"; the end credits say Kojo.\nSources, credit tables and the fact-check: https://github.com/Scroggdawg/kom-festival-board/blob/main/press/cast-bios.md",
+     "text": "Erik Orjiako is a Swedish-born Nigerian American actor and writer based in Los Angeles. He studied English and communications at UMass Amherst and earned an MFA in screenwriting at the New York Film Academy. A graduate of Second City Hollywood's improv program, he has performed with its sketch team and written shows there. His credits include the series Minx, the short film Al Davis: Just Win Baby and the podcast series The Imperfection. He has also worked as a script reader and creative executive. In Killer of Men he plays Mace.",
      "font": "Bask",
-     "size_pt": 15.0,
-     "leading_pt": 23.0,
+     "size_pt": 15.6,
+     "leading_pt": 24.5,
      "tracking_pt": 0.0,
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1128.3,
-     "w": 1148.0,
+     "y": 233.83,
+     "w": 600.0,
      "links": []
     },
     {
      "type": "text",
      "kind": "line",
-     "text": "BILLED CAST",
+     "text": "MASTER KENNER  |  ERIC PARGAC",
+     "font": "Bask-SB",
+     "size_pt": 21.0,
+     "leading_pt": 25.2,
+     "tracking_pt": 2.2,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 421.05,
+     "w": 434.05,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "paragraph",
+     "text": "Eric Pargac is a Los Angeles-based actor and filmmaker who grew up in Texas. He was a founding artistic director of Furious Theatre Company in Los Angeles, where he performed in ten productions and shared StageSceneLA's 2006-2007 Lead Actor of the Year (Drama) award for An Impending Rupture of the Belly. He has also performed at Artists Repertory Theatre in Portland, Intiman Theatre in Seattle and the IRT Theater in New York. His television credits include The Late Show with Stephen Colbert and HBO's Succession. He starred in, co-directed and co-produced the web series The Digressions. He is a member of SAG-AFTRA and Actors' Equity. In Killer of Men he plays Master Kenner.",
+     "font": "Bask",
+     "size_pt": 15.6,
+     "leading_pt": 24.5,
+     "tracking_pt": 0.0,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 464.83,
+     "w": 600.0,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "line",
+     "text": "KOJO  |  JAMAL DENNIS",
+     "font": "Bask-SB",
+     "size_pt": 21.0,
+     "leading_pt": 25.2,
+     "tracking_pt": 2.2,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 701.05,
+     "w": 298.04,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "paragraph",
+     "text": "Jamal Dennis is a Los Angeles-based actor and stunt performer. His training includes technique and scene study at the Royal Academy of Dramatic Art and scene study with Lesly Kahn and Craig Archibald. He holds a black belt in martial arts and has trained in Kyokushin, Wushu, Ninjutsu and Shotokan. He played the lead, Lavelle Sanders, in the series Be Someone. His screen credits include The Young and the Restless, S.W.A.T., Marvel's Runaways, Zoo, Mississippi Grind and Glory Road, and he has performed stunts on Sinners, Emancipation and Grudge Match. He is a member of SAG-AFTRA. In Killer of Men he plays Kojo.",
+     "font": "Bask",
+     "size_pt": 15.6,
+     "leading_pt": 24.5,
+     "tracking_pt": 0.0,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 744.83,
+     "w": 600.0,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "line",
+     "text": "ELDER  |  SANDRA MCDANIELS",
+     "font": "Bask-SB",
+     "size_pt": 21.0,
+     "leading_pt": 25.2,
+     "tracking_pt": 2.2,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 956.55,
+     "w": 388.28,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "paragraph",
+     "text": "Sandra McDaniels is a Los Angeles-based actress and a member of SAG-AFTRA. Her screen credits include the Apple TV+ series Truth Be Told, the short films Providence and 172 Push-Ups, and the film Gingersnap Christmas, in which she plays Gramma Belle. In Killer of Men she plays the Elder.",
+     "font": "Bask",
+     "size_pt": 15.6,
+     "leading_pt": 24.5,
+     "tracking_pt": 0.0,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 1000.33,
+     "w": 600.0,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "line",
+     "text": "ALSO BILLED",
      "font": "Bask",
      "size_pt": 15.6,
      "leading_pt": 18.72,
@@ -1958,98 +2180,8 @@
      "color": "#b9a88c",
      "align": "start",
      "x": 74.0,
-     "y": 1693.38,
-     "w": 128.08,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "MACE",
-     "font": "Bask",
-     "size_pt": 15.6,
-     "leading_pt": 18.72,
-     "tracking_pt": 1.35,
-     "color": "#b9a88c",
-     "align": "start",
-     "x": 74.0,
-     "y": 1727.38,
-     "w": 54.04,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "ERIK ORJIAKO",
-     "font": "Bask",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 284.0,
-     "y": 1726.05,
-     "w": 138.21,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "MASTER KENNER",
-     "font": "Bask",
-     "size_pt": 15.6,
-     "leading_pt": 18.72,
-     "tracking_pt": 1.35,
-     "color": "#b9a88c",
-     "align": "start",
-     "x": 74.0,
-     "y": 1755.38,
-     "w": 156.04,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "ERIC PARGAC",
-     "font": "Bask",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 284.0,
-     "y": 1754.05,
-     "w": 129.31,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "KOJO",
-     "font": "Bask",
-     "size_pt": 15.6,
-     "leading_pt": 18.72,
-     "tracking_pt": 1.35,
-     "color": "#b9a88c",
-     "align": "start",
-     "x": 74.0,
-     "y": 1783.38,
-     "w": 51.43,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "JAMAL DENNIS",
-     "font": "Bask",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 284.0,
-     "y": 1782.05,
-     "w": 138.05,
+     "y": 1151.68,
+     "w": 128.24,
      "links": []
     },
     {
@@ -2063,7 +2195,7 @@
      "color": "#b9a88c",
      "align": "start",
      "x": 74.0,
-     "y": 1811.38,
+     "y": 1185.68,
      "w": 144.18,
      "links": []
     },
@@ -2078,7 +2210,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 284.0,
-     "y": 1810.05,
+     "y": 1184.35,
      "w": 121.99,
      "links": []
     },
@@ -2093,7 +2225,7 @@
      "color": "#b9a88c",
      "align": "start",
      "x": 74.0,
-     "y": 1839.38,
+     "y": 1213.68,
      "w": 49.65,
      "links": []
     },
@@ -2108,38 +2240,8 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 284.0,
-     "y": 1838.05,
+     "y": 1212.35,
      "w": 296.07,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "ELDER",
-     "font": "Bask",
-     "size_pt": 15.6,
-     "leading_pt": 18.72,
-     "tracking_pt": 1.35,
-     "color": "#b9a88c",
-     "align": "start",
-     "x": 648.0,
-     "y": 1727.38,
-     "w": 61.55,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "SANDRA MCDANIELS",
-     "font": "Bask",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 0.95,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 858.0,
-     "y": 1726.05,
-     "w": 194.09,
      "links": []
     },
     {
@@ -2152,8 +2254,8 @@
      "tracking_pt": 1.35,
      "color": "#b9a88c",
      "align": "start",
-     "x": 648.0,
-     "y": 1755.38,
+     "x": 74.0,
+     "y": 1241.68,
      "w": 46.39,
      "links": []
     },
@@ -2167,8 +2269,8 @@
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "start",
-     "x": 858.0,
-     "y": 1754.05,
+     "x": 284.0,
+     "y": 1240.35,
      "w": 150.08,
      "links": []
     },
@@ -2182,8 +2284,8 @@
      "tracking_pt": 1.35,
      "color": "#b9a88c",
      "align": "start",
-     "x": 648.0,
-     "y": 1783.38,
+     "x": 74.0,
+     "y": 1269.68,
      "w": 109.53,
      "links": []
     },
@@ -2197,8 +2299,8 @@
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "start",
-     "x": 858.0,
-     "y": 1782.05,
+     "x": 284.0,
+     "y": 1268.35,
      "w": 150.86,
      "links": []
     },
@@ -2212,8 +2314,8 @@
      "tracking_pt": 1.35,
      "color": "#b9a88c",
      "align": "start",
-     "x": 648.0,
-     "y": 1811.38,
+     "x": 74.0,
+     "y": 1297.68,
      "w": 109.53,
      "links": []
     },
@@ -2227,9 +2329,24 @@
      "tracking_pt": 0.95,
      "color": "#efe6d6",
      "align": "start",
-     "x": 858.0,
-     "y": 1810.05,
+     "x": 284.0,
+     "y": 1296.35,
      "w": 198.68,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "line",
+     "text": "PROOF — CAST BIOS ARE DRAFTS, NOT YET APPROVED BY THE ACTORS",
+     "font": "Bask",
+     "size_pt": 9.5,
+     "leading_pt": 11.4,
+     "tracking_pt": 1.4,
+     "color": "#b9a88c",
+     "align": "start",
+     "x": 436.7,
+     "y": 1685.67,
+     "w": 426.6,
      "links": []
     }
    ],
@@ -2253,7 +2370,7 @@
      "y": 0.0,
      "w": 428.0,
      "h": 399,
-     "alt": "KOM_Day3_TheFarm-18"
+     "alt": "KOM_Day3_TheFarm-84"
     },
     {
      "type": "image",
@@ -2281,7 +2398,7 @@
      "y": 0.0,
      "w": 428.0,
      "h": 399,
-     "alt": "KOM_Day3_TheFarm-149"
+     "alt": "KOM_Day3_TheFarm-152"
     },
     {
      "type": "image",
@@ -2295,7 +2412,7 @@
      "y": 405.0,
      "w": 428.0,
      "h": 399,
-     "alt": "KOM_Day3_TheFarm-152"
+     "alt": "KOM_Day3_TheFarm-194"
     },
     {
      "type": "image",
@@ -2309,7 +2426,7 @@
      "y": 405.0,
      "w": 428.0,
      "h": 399,
-     "alt": "KOM_Day4_Soundstage-81"
+     "alt": "KOM_Day3_TheFarm-185"
     },
     {
      "type": "image",
@@ -2323,7 +2440,7 @@
      "y": 405.0,
      "w": 428.0,
      "h": 399,
-     "alt": "KOM_Day3_TheFarm-185"
+     "alt": "KOM_Day3_TheFarm-220"
     },
     {
      "type": "image",
@@ -2337,7 +2454,7 @@
      "y": 810.0,
      "w": 428.0,
      "h": 399,
-     "alt": "KOM_Day3_TheFarm-220"
+     "alt": "KOM_Day4_Soundstage-76"
     },
     {
      "type": "image",
@@ -2351,7 +2468,7 @@
      "y": 810.0,
      "w": 428.0,
      "h": 399,
-     "alt": "KOM_Day4_Soundstage-32"
+     "alt": "KOM_Day4_Soundstage-81"
     },
     {
      "type": "image",
@@ -2417,21 +2534,21 @@
      "y": 0.0,
      "w": 1296.0,
      "h": 1728.0,
-     "alt": "Still 2026-09-08 210640_1.1.29"
+     "alt": "Still 2026-09-08 210640_1.1.2"
     },
     {
      "type": "text",
      "kind": "line",
      "text": "CREDITS",
      "font": "Bask-B",
-     "size_pt": 60.0,
-     "leading_pt": 72.0,
+     "size_pt": 56.0,
+     "leading_pt": 67.2,
      "tracking_pt": 2.0,
      "color": "#efe6d6",
      "align": "start",
-     "x": 194.31,
-     "y": 77.0,
-     "w": 295.38,
+     "x": 203.62,
+     "y": 80.8,
+     "w": 276.75,
      "links": []
     },
     {
@@ -3056,7 +3173,7 @@
    "n": 10,
    "name": "10 Crew",
    "background": "#0b0806",
-   "count": 131,
+   "count": 126,
    "elements": [
     {
      "type": "image",
@@ -3285,36 +3402,6 @@
     {
      "type": "text",
      "kind": "line",
-     "text": "SOUND DESIGNER",
-     "font": "Bask-B",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 1.0,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 167.88,
-     "y": 355.85,
-     "w": 177.26,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "STILL UNKNOWN",
-     "font": "Bask-B",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 1.0,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 365.14,
-     "y": 355.85,
-     "w": 166.52,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
      "text": "CAMERA OPERATOR",
      "font": "Bask-B",
      "size_pt": 17.0,
@@ -3323,7 +3410,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 148.65,
-     "y": 411.85,
+     "y": 383.85,
      "w": 196.49,
      "links": []
     },
@@ -3338,7 +3425,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 411.85,
+     "y": 383.85,
      "w": 227.66,
      "links": []
     },
@@ -3353,7 +3440,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 228.31,
-     "y": 439.85,
+     "y": 411.85,
      "w": 116.83,
      "links": []
     },
@@ -3368,7 +3455,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 439.85,
+     "y": 411.85,
      "w": 148.34,
      "links": []
     },
@@ -3383,7 +3470,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 90.12,
-     "y": 467.85,
+     "y": 439.85,
      "w": 255.02,
      "links": []
     },
@@ -3398,7 +3485,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 467.85,
+     "y": 439.85,
      "w": 139.48,
      "links": []
     },
@@ -3413,7 +3500,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 65.74,
-     "y": 495.85,
+     "y": 467.85,
      "w": 279.4,
      "links": []
     },
@@ -3428,7 +3515,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 495.85,
+     "y": 467.85,
      "w": 256.62,
      "links": []
     },
@@ -3443,7 +3530,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 306.38,
-     "y": 523.85,
+     "y": 495.85,
      "w": 38.76,
      "links": []
     },
@@ -3458,38 +3545,8 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 523.85,
+     "y": 495.85,
      "w": 171.4,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "STILL PHOTOGRAPHER",
-     "font": "Bask-B",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 1.0,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 117.67,
-     "y": 551.85,
-     "w": 227.47,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "JEDIDIAH WOODS",
-     "font": "Bask-B",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 1.0,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 365.14,
-     "y": 551.85,
-     "w": 172.84,
      "links": []
     },
     {
@@ -3503,7 +3560,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 120.14,
-     "y": 579.85,
+     "y": 523.85,
      "w": 225.0,
      "links": []
     },
@@ -3518,7 +3575,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 579.85,
+     "y": 523.85,
      "w": 137.96,
      "links": []
     },
@@ -3533,7 +3590,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 607.85,
+     "y": 551.85,
      "w": 134.41,
      "links": []
     },
@@ -3548,7 +3605,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 181.28,
-     "y": 663.85,
+     "y": 607.85,
      "w": 163.86,
      "links": []
     },
@@ -3563,7 +3620,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 663.85,
+     "y": 607.85,
      "w": 127.39,
      "links": []
     },
@@ -3578,7 +3635,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 132.36,
-     "y": 691.85,
+     "y": 635.85,
      "w": 212.78,
      "links": []
     },
@@ -3593,7 +3650,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 691.85,
+     "y": 635.85,
      "w": 143.91,
      "links": []
     },
@@ -3608,7 +3665,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 719.85,
+     "y": 663.85,
      "w": 116.59,
      "links": []
     },
@@ -3623,7 +3680,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 54.5,
-     "y": 747.85,
+     "y": 691.85,
      "w": 290.64,
      "links": []
     },
@@ -3638,7 +3695,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 747.85,
+     "y": 691.85,
      "w": 126.09,
      "links": []
     },
@@ -3653,7 +3710,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 217.03,
-     "y": 775.85,
+     "y": 719.85,
      "w": 128.11,
      "links": []
     },
@@ -3668,7 +3725,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 775.85,
+     "y": 719.85,
      "w": 220.15,
      "links": []
     },
@@ -3683,7 +3740,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 128.46,
-     "y": 803.85,
+     "y": 747.85,
      "w": 216.67,
      "links": []
     },
@@ -3698,7 +3755,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 267.96,
-     "y": 859.85,
+     "y": 803.85,
      "w": 77.17,
      "links": []
     },
@@ -3713,7 +3770,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 859.85,
+     "y": 803.85,
      "w": 127.75,
      "links": []
     },
@@ -3728,7 +3785,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 106.11,
-     "y": 887.85,
+     "y": 831.85,
      "w": 239.03,
      "links": []
     },
@@ -3743,7 +3800,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 887.85,
+     "y": 831.85,
      "w": 155.25,
      "links": []
     },
@@ -3758,7 +3815,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 243.3,
-     "y": 915.85,
+     "y": 859.85,
      "w": 101.84,
      "links": []
     },
@@ -3773,7 +3830,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 915.85,
+     "y": 859.85,
      "w": 152.24,
      "links": []
     },
@@ -3788,7 +3845,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 943.85,
+     "y": 887.85,
      "w": 137.96,
      "links": []
     },
@@ -3803,7 +3860,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 971.85,
+     "y": 915.85,
      "w": 83.66,
      "links": []
     },
@@ -3818,7 +3875,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 250.03,
-     "y": 1027.85,
+     "y": 971.85,
      "w": 95.1,
      "links": []
     },
@@ -3833,7 +3890,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1027.85,
+     "y": 971.85,
      "w": 152.94,
      "links": []
     },
@@ -3848,7 +3905,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 157.03,
-     "y": 1055.85,
+     "y": 999.85,
      "w": 188.1,
      "links": []
     },
@@ -3863,7 +3920,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1055.85,
+     "y": 999.85,
      "w": 131.93,
      "links": []
     },
@@ -3878,7 +3935,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 222.88,
-     "y": 1083.85,
+     "y": 1027.85,
      "w": 122.25,
      "links": []
     },
@@ -3893,7 +3950,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1083.85,
+     "y": 1027.85,
      "w": 223.27,
      "links": []
     },
@@ -3908,7 +3965,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 191.66,
-     "y": 1111.85,
+     "y": 1055.85,
      "w": 153.47,
      "links": []
     },
@@ -3923,7 +3980,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1111.85,
+     "y": 1055.85,
      "w": 216.84,
      "links": []
     },
@@ -3938,7 +3995,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1139.85,
+     "y": 1083.85,
      "w": 119.6,
      "links": []
     },
@@ -3953,7 +4010,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1167.85,
+     "y": 1111.85,
      "w": 191.61,
      "links": []
     },
@@ -3968,7 +4025,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 62.82,
-     "y": 1223.85,
+     "y": 1167.85,
      "w": 282.32,
      "links": []
     },
@@ -3983,7 +4040,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1223.85,
+     "y": 1167.85,
      "w": 140.01,
      "links": []
     },
@@ -3998,7 +4055,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 169.05,
-     "y": 1251.85,
+     "y": 1195.85,
      "w": 176.09,
      "links": []
     },
@@ -4013,7 +4070,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1251.85,
+     "y": 1195.85,
      "w": 104.67,
      "links": []
     },
@@ -4028,7 +4085,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 183.04,
-     "y": 1307.85,
+     "y": 1251.85,
      "w": 162.09,
      "links": []
     },
@@ -4043,7 +4100,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1307.85,
+     "y": 1251.85,
      "w": 141.85,
      "links": []
     },
@@ -4058,7 +4115,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1335.85,
+     "y": 1279.85,
      "w": 181.16,
      "links": []
     },
@@ -4073,7 +4130,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 73.88,
-     "y": 1363.85,
+     "y": 1307.85,
      "w": 271.25,
      "links": []
     },
@@ -4088,7 +4145,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1363.85,
+     "y": 1307.85,
      "w": 149.22,
      "links": []
     },
@@ -4103,7 +4160,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 365.14,
-     "y": 1391.85,
+     "y": 1335.85,
      "w": 156.42,
      "links": []
     },
@@ -4545,36 +4602,6 @@
     {
      "type": "text",
      "kind": "line",
-     "text": "COLORIST",
-     "font": "Bask-B",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 1.0,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 829.43,
-     "y": 775.85,
-     "w": 104.33,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "WALTER VOLPATTO",
-     "font": "Bask-B",
-     "size_pt": 17.0,
-     "leading_pt": 20.4,
-     "tracking_pt": 1.0,
-     "color": "#efe6d6",
-     "align": "start",
-     "x": 953.75,
-     "y": 775.85,
-     "w": 193.3,
-     "links": []
-    },
-    {
-     "type": "text",
-     "kind": "line",
      "text": "PYROTECHNIC DESIGNER",
      "font": "Bask-B",
      "size_pt": 17.0,
@@ -4583,7 +4610,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 681.26,
-     "y": 831.85,
+     "y": 803.85,
      "w": 252.49,
      "links": []
     },
@@ -4598,7 +4625,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 831.85,
+     "y": 803.85,
      "w": 140.6,
      "links": []
     },
@@ -4613,7 +4640,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 706.4,
-     "y": 859.85,
+     "y": 831.85,
      "w": 227.36,
      "links": []
     },
@@ -4628,7 +4655,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 859.85,
+     "y": 831.85,
      "w": 210.25,
      "links": []
     },
@@ -4643,7 +4670,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 887.85,
+     "y": 859.85,
      "w": 113.11,
      "links": []
     },
@@ -4658,7 +4685,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 915.85,
+     "y": 887.85,
      "w": 140.26,
      "links": []
     },
@@ -4673,7 +4700,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 753.5,
-     "y": 943.85,
+     "y": 915.85,
      "w": 180.25,
      "links": []
     },
@@ -4688,7 +4715,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 943.85,
+     "y": 915.85,
      "w": 138.48,
      "links": []
     },
@@ -4703,7 +4730,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 786.65,
-     "y": 971.85,
+     "y": 943.85,
      "w": 147.11,
      "links": []
     },
@@ -4718,7 +4745,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 971.85,
+     "y": 943.85,
      "w": 134.93,
      "links": []
     },
@@ -4733,7 +4760,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 844.77,
-     "y": 1027.85,
+     "y": 999.85,
      "w": 88.98,
      "links": []
     },
@@ -4748,7 +4775,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1027.85,
+     "y": 999.85,
      "w": 146.39,
      "links": []
     },
@@ -4763,7 +4790,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1055.85,
+     "y": 1027.85,
      "w": 295.11,
      "links": []
     },
@@ -4778,7 +4805,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1083.85,
+     "y": 1055.85,
      "w": 127.39,
      "links": []
     },
@@ -4793,7 +4820,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 720.72,
-     "y": 1111.85,
+     "y": 1083.85,
      "w": 213.03,
      "links": []
     },
@@ -4808,7 +4835,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1111.85,
+     "y": 1083.85,
      "w": 138.48,
      "links": []
     },
@@ -4823,7 +4850,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 816.28,
-     "y": 1139.85,
+     "y": 1111.85,
      "w": 117.47,
      "links": []
     },
@@ -4838,7 +4865,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1139.85,
+     "y": 1111.85,
      "w": 120.38,
      "links": []
     },
@@ -4853,7 +4880,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1167.85,
+     "y": 1139.85,
      "w": 295.11,
      "links": []
     },
@@ -4868,7 +4895,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1195.85,
+     "y": 1167.85,
      "w": 228.66,
      "links": []
     },
@@ -4883,7 +4910,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 677.24,
-     "y": 1223.85,
+     "y": 1195.85,
      "w": 256.51,
      "links": []
     },
@@ -4898,7 +4925,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1223.85,
+     "y": 1195.85,
      "w": 260.41,
      "links": []
     },
@@ -4913,7 +4940,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1251.85,
+     "y": 1223.85,
      "w": 223.22,
      "links": []
     },
@@ -4928,7 +4955,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1279.85,
+     "y": 1251.85,
      "w": 142.85,
      "links": []
     },
@@ -4943,7 +4970,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1307.85,
+     "y": 1279.85,
      "w": 194.13,
      "links": []
     },
@@ -4958,7 +4985,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1335.85,
+     "y": 1307.85,
      "w": 181.16,
      "links": []
     },
@@ -4973,7 +5000,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1363.85,
+     "y": 1335.85,
      "w": 169.99,
      "links": []
     },
@@ -4988,7 +5015,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1391.85,
+     "y": 1363.85,
      "w": 267.23,
      "links": []
     },
@@ -5003,7 +5030,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 829.26,
-     "y": 1419.85,
+     "y": 1391.85,
      "w": 104.49,
      "links": []
     },
@@ -5018,8 +5045,23 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 953.75,
-     "y": 1419.85,
+     "y": 1391.85,
      "w": 181.97,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "line",
+     "text": "PROOF — SOUND DESIGNER NOT YET NAMED",
+     "font": "Bask",
+     "size_pt": 9.5,
+     "leading_pt": 11.4,
+     "tracking_pt": 1.4,
+     "color": "#b9a88c",
+     "align": "start",
+     "x": 515.2,
+     "y": 1685.67,
+     "w": 269.61,
      "links": []
     }
    ],
@@ -5029,7 +5071,7 @@
    "n": 11,
    "name": "11 Thanks",
    "background": "#0b0806",
-   "count": 79,
+   "count": 76,
    "elements": [
     {
      "type": "image",
@@ -5779,37 +5821,6 @@
      "y": 641.0,
      "w": 192.16,
      "links": []
-    },
-    {
-     "type": "rule",
-     "x": 90.0,
-     "y": 719.65,
-     "w": 1116.0,
-     "h": 0.7,
-     "color": "#6b5942"
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "PARTNER LOGOS",
-     "font": "Bask",
-     "size_pt": 13,
-     "leading_pt": 15.6,
-     "tracking_pt": 1.6,
-     "color": "#b9a88c",
-     "align": "start",
-     "x": 582.61,
-     "y": 756.65,
-     "w": 134.77,
-     "links": []
-    },
-    {
-     "type": "rule",
-     "x": 90.0,
-     "y": 809.65,
-     "w": 1116.0,
-     "h": 0.7,
-     "color": "#6b5942"
     },
     {
      "type": "text",

@@ -1,7 +1,7 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-11T12:00:59-05:00",
-  "updated_by": "Fable session, EPK taste pass and Codex audit fixes",
+  "updated": "2026-09-11T12:40:23-05:00",
+  "updated_by": "Fable session, Canva lane, preflight answered",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
     "typeface": "Build in Libre Baskerville (apps cannot use uploaded fonts). Optional afterwards, Luke's call: split /System/Library/Fonts/Supplemental/Baskerville.ttc into Regular, SemiBold, Bold .ttf with fontTools, upload to Brand > Fonts, swap in the editor. Not required; the kit must be right for KILLER OF MEN, not match Night Feeds.",
@@ -67,7 +67,7 @@
     "view_link": null
   },
   "last_error": null,
-  "next_step": "Luke answers the four pre-flight questions and the draft's CONFIRM list (handoffs/handoff-113-epk.md; press/drafts/2026-09-11/). Then step 3 of canva/README.md (Developer Portal app, with the three scopes) and step 4 (probes). Before any Canva build: once Luke accepts the draft, re-run tools/build-epk-canva.py and push the contract and derivatives; the served contract is still rev 24 of the superseded layout.",
+  "next_step": "Runbook step 1 done when the contract is pushed and Pages answers 200; step 2 the dev server; step 3 the Developer Portal app in Luke's Chrome (his Developer Terms click); step 4 probes; step 5 the page 3 pilot.",
   "app": {
     "path": "canva/kom-epk-builder",
     "commit": "49717db (Codex fixes, 2026-09-11)",
@@ -81,10 +81,7 @@
       "images: whenUploaded() is awaited per image; a failed upload fails the element (Codex finding 8)"
     ]
   },
-  "blockers": [
-    "Browser pairing: two Chromes are connected to this Claude account (Browser 1, Browser 2). Driving one needs Luke to pick it in chat or click Connect in the extension; the Connect prompt timed out twice on 2026-09-10. Developer Portal app creation and the probes wait on that and on his Developer Terms click.",
-    "Pre-flight machine checks passed on 2026-09-11 with zero MISSING lines; the four questions were put to Luke in handoff-113-epk and await his answers."
-  ],
+  "blockers": [],
   "fresh_clone_test": {
     "at": "2026-09-10",
     "commit": "8fe4d38",
@@ -109,5 +106,14 @@
       "unverified": "the manual page-width fallback (finding 3) has not run inside Canva",
       "strongest_risk": "a resumed build could silently use stale FontRefs; the app now refuses to build until every font key is resolved in the current panel session"
     }
+  },
+  "preflight": {
+    "answered": "2026-09-11T12:40:23-05:00",
+    "by": "Luke, in chat",
+    "extension_signed_in": true,
+    "chrome": "one Chrome open, signed in to Canva Pro",
+    "at_keyboard_for_terms": true,
+    "decisions_hold": "yes ('if that refers to the canva project being editable')",
+    "draft": "Luke on the 2026-09-11 taste-pass draft: 'it looks great'; the contract is regenerated from that layout"
   }
 }
