@@ -115,11 +115,14 @@ class Ops:
             op["opacity"] = opacity
         self.ops.append(op)
 
-    def image(self, path, box, region=(0, 0, 1, 1), focus=(0.5, 0.5), opacity=1.0, fit="cover"):
+    def image(self, path, box, region=(0, 0, 1, 1), focus=(0.5, 0.5), opacity=1.0, fit="cover",
+              grade=None):
         x, top, w, h = box
-        self.ops.append({"op": "image", "p": self.page, "file": path, "x": x, "top": top, "w": w,
-                         "h": h, "region": list(region), "focus": list(focus),
-                         "opacity": opacity, "fit": fit})
+        op = {"op": "image", "p": self.page, "file": path, "x": x, "top": top, "w": w,
+              "h": h, "region": list(region), "focus": list(focus), "opacity": opacity, "fit": fit}
+        if grade:
+            op["grade"] = grade             # a draw-time value grade the Canva emitter bakes;
+        self.ops.append(op)                 # Illustrator links the master ungraded
 
     def area(self, text, x, top, w, h, font, size, lead, fill, align, gap):
         self.ops.append({"op": "area", "p": self.page, "text": text, "x": x, "top": top, "w": w,
@@ -200,8 +203,24 @@ def install(o):
     def reader(im, q=84):
         return im
 
-    def cover(c, im, x, y, w, h, alpha=1.0, focus=(0.5, 0.5), q=84):
-        o.image(to_drive(im.path), (x, y + h, w, h), region=im.region, focus=focus, opacity=alpha)
+    def cover(c, im, x, y, w, h, alpha=1.0, focus=(0.5, 0.5), q=84, zoom=1.0):
+        region = im.region
+        if zoom != 1.0:
+            # the kit's crop-only zoom becomes a tighter region, so Illustrator and the
+            # Canva emitter crop exactly what the PDF shows (taste pass 2026-09-11)
+            iw, ih = im.size
+            rx0, ry0 = region[0] * iw, region[1] * ih
+            rw, rh = (region[2] - region[0]) * iw, (region[3] - region[1]) * ih
+            sc = max(w / rw, h / rh) * zoom
+            cw, ch = w / sc, h / sc
+            cx, cy = rx0 + (rw - cw) * focus[0], ry0 + (rh - ch) * focus[1]
+            region, focus = (cx / iw, cy / ih, (cx + cw) / iw, (cy + ch) / ih), (0.5, 0.5)
+        o.image(to_drive(im.path), (x, y + h, w, h), region=region, focus=focus, opacity=alpha,
+                grade=getattr(im, "grade", None))
+
+    def mono(im, target_l=20.0):
+        im.grade = "mono"                   # recorded, not computed: the emitter grades its
+        return im                           # derivative; the .ai links the master
 
     def ground(c, still_n=None, alpha=0.16, scrim=0.55, focus=(0.5, 0.5)):
         o.new_page()
@@ -245,7 +264,7 @@ def install(o):
         return y - h
 
     kit.load_rgb, kit.unletterbox, kit.reader = load_rgb, unletterbox, reader
-    kit.cover, kit.ground, kit.tracked, kit.para = cover, ground, tracked, para
+    kit.cover, kit.ground, kit.tracked, kit.para, kit.mono = cover, ground, tracked, para, mono
     card.tracked = tracked
     # A card that publishes its ground recipe draws its own ground through the Recorder;
     # the older card gets the stand-in that knows its one recipe.
@@ -262,7 +281,7 @@ def record():
     kit.page_programmer(c, d)
     kit.page_statement(c, d)
     kit.page_bios(c, d, kit.BIOS[:3], first=True)
-    kit.page_bios(c, d, kit.BIOS[3:], first=False)
+    kit.page_bios(c, d, kit.BIOS[3:], first=False, offset=3)
     kit.page_cast(c, d)
     kit.page_bts(c)
     kit.credit_pages(c, d)
@@ -425,6 +444,11 @@ def main():
     pdf_name = f"KillerOfMen_EPK_{now:%H%M}_{now:%d%m%Y}_compressed.pdf"
     pdf_path = os.path.join(OUT_DIR, pdf_name)
     o = record()
+    graded = [op for op in o.ops if op.get("grade")]
+    if graded:
+        print("NOTE: %d image(s) carry a draw-time value grade in the PDF and the Canva derivative; "
+              "the .ai links the ungraded master by this tool's contract: %s" % (
+                  len(graded), ", ".join(sorted({os.path.basename(op["file"]) for op in graded}))))
     kinds = {}
     for op in o.ops:
         kinds[op["op"]] = kinds.get(op["op"], 0) + 1

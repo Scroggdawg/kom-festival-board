@@ -40,7 +40,7 @@ The only mark is the hand-lettered title on the poster (`press/assets/POSTER/Kil
 
 ## 3. Colour — DEFINED (print), DEFINED (paint, as reference), PROPOSED (emphasis)
 
-Two palettes and one material. **PRINT** is every document surface: EPK pages 2–11, credit cards, one-sheets, cover letters, readouts. **PAINT** is the poster and only things that are the poster: laurelled variants, social tiles cut from it, EPK page 1 where the poster is a placed image on the print ground (p01 corners sample `#0a0805`; the spec says full-bleed, the render is not — for Luke). **FILM** is the stills: placed whole, never a source of type or fill colour.
+Two palettes and one material. **PRINT** is every document surface: EPK pages 2–11, credit cards, one-sheets, cover letters, readouts. **PAINT** is the poster and only things that are the poster: laurelled variants, social tiles cut from it, EPK page 1 where the poster is a placed image on the print ground (p01 corners sample `#0a0805`; fitted whole with 54 pt GROUND bands, never cropped; the spec's full-bleed row was amended to match on 2026-09-11). **FILM** is the stills: placed whole, never a source of type or fill colour.
 
 Law: PAINT hues never appear as type, rule, or fill on a document. PRINT tokens never overpaint the poster. They share no hex; the grounds are neighbours (`#100100` poster darkest 5%, `#0b0806` print).
 
@@ -100,14 +100,14 @@ Sizes and tracking at scale 1.0, in points, from `tools/build-credit-card.py` an
 | Programmer-page column (specs, team, cast, rights, links, footer) | Regular | 19 / 28 | 0.95 | caps | key DIM, value CREAM; links underlined 0.5 pt DIM |
 | Programmer-page section head | SemiBold | 24 | 2.2 | caps | CREAM |
 | Section / person heading | SemiBold | 21 | 2.2 | caps | CREAM |
-| Billed lead line | SemiBold | 24 | 2.2 | caps | CREAM |
+| Billed lead line | SemiBold | 24 | 2.2 | caps | CREAM — unused since the 2026-09-11 draft: page 7's lockups take the section / person heading class |
 | Department heading | SemiBold | 14.2 | 2.05 | caps | RULE |
 | Role label | Regular | 14.2 | 1.35 | caps | DIM |
 | Name | Regular | 15.6 / 21 | 0.95 | caps | CREAM |
 | Running text | Regular | 15.6 / 24.5 | 0 | sentence | CREAM |
 | Logline | Regular | 26 / 40 | 0 | sentence | CREAM |
 | Synopsis | Regular | 22 / 34.5, fit-down | 0 | sentence | CREAM |
-| Director's statement | Regular | 23 / 36.5, fit-down to 9 minimum | 0 | sentence | CREAM |
+| Director's statement | Regular | 23 / 36.5, fit-down to 9 minimum; the 2026-09-11 draft lands at 21.5 / 33.8 on a 686 pt measure (PROPOSED) | 0 | sentence | CREAM |
 | Small text | Regular | 12.4 / 18 | 0 | sentence | CREAM |
 | AFI boilerplate | Regular | 11.4 / 17 | 0.95 | caps | CREAM |
 | Provenance footer (proof slug) | Regular | 9.5 | 1.4 | caps | DIM |
@@ -133,7 +133,7 @@ None in use. `press/epk-spec.md` calls for Instagram and IMDb glyphs on bio page
 
 ## 8. Texture and material — DEFINED (measured)
 
-- Stills: 41 PNG frames, 1920 × 1080, picture rows 137–943 (2.38:1 inside 16:9), letterbox `#000000`. Placed whole, bars intact. The credit card un-letterboxes only its own 16% backdrop copy; delivered stills are never altered.
+- Stills: 41 PNG frames, 1920 × 1080, picture rows 137–943 (2.38:1 inside 16:9), letterbox `#000000`. Placed whole, bars intact, as delivered files; on a page the kit crops and ghosts a frame at draw time (`cover()`, `unletterbox()`, `ground()`) and the master is never modified (amended 2026-09-11, PROPOSED). The credit card un-letterboxes only its own 16% backdrop copy; delivered stills are never altered.
 - Grade: low-key, warm. Mean luminance 42/255 (median 34); 25 of 41 stills below 40, one above 100; warm midtone `#69401d`, hue 28°.
 - Ghosting, the approved family: a still at 16–22% on GROUND under a 50–55% GROUND scrim. In use: 0.16/0.55 (pages 9–11), 0.22/0.50 (page 3), 0.20/0.50 with focus 0.62 (page 4). Measured result on page 3 `#0e0e0a`. Only stills whose centre crop averages about L 70 or more are used as ghosts; darker frames disappear.
 - Grain is in the ALEXA 35 material, unmeasured here. No synthetic grain, paper, or vignette on any surface.
@@ -190,6 +190,8 @@ On 2026-09-09 Luke redirected the credit cards to the Night Feeds EPK as the gui
 The question these rows raise is larger than any row: pages 1–8 of the EPK are cream Baskerville Regular on warm near-black with ghosted stills, pages 9–11 are now the Night Feeds form. **Either the whole kit follows the redirect or the credit pages stand apart as a second object.** That is Luke's ruling, and it settles every row above at once. `tokens.css` is untouched until he rules.
 
 ## Amendments
+
+- 2026-09-11 — Taste pass (handoff-113-epk; the draft and its review sheet in `press/drafts/2026-09-11/`). PROPOSED, for Luke: chapter 8 records the kit's crop-at-draw-time practice (masters untouched); the director's statement lands at 21.5 / 33.8 on a 686 pt measure; page 7's lockups take the heading class and the billed-lead row is unused; prose on pages 2, 4, 5, 6 and 7 is set flush-left on one hard edge, right alignment kept for one-line key / value rows only (page 3); a two-position title rule, a column page carries its title over its column (page 3 right, page 7 left), a full-measure page centres it (pages 4, 5 are the exceptions that keep page 3's right edge); the RULE row's "never running text" on DIM holds, the page-7 prior-credits line was dropped for it. Chapter 5's geometry gains the page-4 and page-7 columns (686 pt at 536, 600 pt at 74).
 
 - 2026-09-09 — v0.1 DRAFT written from the artifacts. Awaiting Luke's ratification.
 - 2026-09-10 — Credit-card redesign contradictions appended as PROPOSED (rows a–h, from the builder's deviations report via the card session, handoff-105-epk); the DEFINED rows they touch marked CONTESTED for pages 9–11.

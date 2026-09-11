@@ -159,9 +159,10 @@ SECTIONS = ("CREDITS", "CREW", "THANKS", "ENLARGED")
 class Opts:
     """The flags. build(c, z, opts) reads them; Sz carries a copy for the page functions."""
     def __init__(self, headings=False, label_gold=False, crew_size=17, press=False,
-                 ground_only=False, transparent=False, stills=None):
+                 ground_only=False, transparent=False, stills=None, proof_slug=False):
         self.headings, self.label_gold, self.crew_size = headings, label_gold, int(crew_size)
         self.press, self.ground_only, self.transparent = press, ground_only, transparent
+        self.proof_slug = proof_slug            # the kit: a PROOF mark on CREW for what --press dropped
         self.stills = dict(stills or {})        # section -> (still n, alpha, anchor) overrides
         if self.crew_size not in CREW_SIZES:
             sys.exit(f"--crew-size must be one of {sorted(CREW_SIZES)}")
@@ -197,7 +198,7 @@ class Sz:
         # p1. Poster roles and names share ONE size, as the reference sets them (its
         # 'WRITTEN & DIRECTED BY' and 'RANA ROY' both measure cap ~18-19); the role's
         # slightly wider tracking is the only distinction besides position.
-        self.title1 = ("Bask-B", 60 * ts, 2.0, CREAM)
+        self.title1 = ("Bask-B", 56 * ts, 2.0, CREAM)     # one size with CREW (2026-09-11)
         self.poster_role = ("Bask-B", 26 * s, 1.6, CREAM)
         self.poster_name = ("Bask-B", 26 * s, 1.2, CREAM)
         self.poster_pitch = 36 * s
@@ -285,6 +286,9 @@ def split_at_ep(rows):
     return rows, []
 
 
+PRESS_DROPPED = []              # roles --press dropped, for the kit's PROOF mark on CREW
+
+
 def press_filter(rows, opts):
     """--press drops rows whose name is exactly STILL UNKNOWN, audibly. Never silent."""
     if not opts.press:
@@ -293,6 +297,8 @@ def press_filter(rows, opts):
     for e in rows:
         if e[0] and [n.upper() for n in e[1]] == ["STILL UNKNOWN"]:
             print(f"--press: dropping '{e[0]} | {e[1][0]}'")
+            if e[0] not in PRESS_DROPPED:
+                PRESS_DROPPED.append(e[0])
             continue
         kept.append(e)
     return kept
@@ -759,7 +765,19 @@ def two_col_pages(c, title, entries, z, stills, transparent):
     if entries and entries[0][0] is None:
         _, tail = split_at_ep(pairs(field(load(), "9.1")))
         entries = tail + list(entries)
-    entries = press_filter(entries, z.opts)
+    # A row that is an exact role-and-names copy of an earlier row is printed once, on both
+    # paths (the kit's fetch above and the card's pre-joined list), audibly; nothing is
+    # sorted or deduplicated by inference (taste pass 2026-09-11, C10.3 as amended).
+    seen, once = [], []
+    for e in entries:
+        k = (e[0], list(e[1])) if e[0] else None
+        if k is not None and k in seen:
+            print(f"  CREW: '{e[0]} | {' · '.join(e[1])}' listed twice in the data; printed once")
+            continue
+        if k is not None:
+            seen.append(k)
+        once.append(e)
+    entries = press_filter(once, z.opts)
     s, opts = z.s, z.opts
     ty = P2_TITLE_Y * min(s, 1.25)
 
@@ -871,10 +889,18 @@ def two_col_pages(c, title, entries, z, stills, transparent):
                 if kind == "role":
                     put(c, axis, y, s_, z.crew, "right")
                 elif kind == "name":
-                    put(c, names_x, y, s_, z.crew, "left")
+                    # a data gap keeps its slot but reads as a query, in the card's own
+                    # not-yet colour (the slot labels, the CONTINUED tag) (C10.2)
+                    st = (z.crew[0], z.crew[1], z.crew[2], DIM) if s_.upper() == "STILL UNKNOWN" else z.crew
+                    put(c, names_x, y, s_, st, "left")
                 else:
                     w = put(c, axis + G / 2, y, s_, z.crew_head, "center")
                     ui_word(s_, axis + G / 2, y, w, z.crew_head)
+    if opts.proof_slug and PRESS_DROPPED:
+        # provenance is data, never copy: the dropped row surfaces as the kit's one proof
+        # class (9.5 pt DIM on the 33 pt mark line), as on pages 2, 5 and 7
+        tracked(c, W / 2, M * 0.45, "PROOF — " + " · ".join(f"{r.upper()} NOT YET NAMED" for r in PRESS_DROPPED),
+                "Bask", 9.5, 1.4, DIM, "center")
     c.showPage()
 
 
@@ -966,9 +992,13 @@ def page_thanks(c, d, z, stills, transparent):
     # paragraph gaps 56 (2P), boilerplate -> fellows 84 (3P), fellows -> copyright
     # 112 (4P); the copyright then sits AFI_GAP above the slot at 1x.
     bp = z.boiler_pitch
-    tail = [([("rule",) + BAND_X], 49.0),
-            ([T("PARTNER LOGOS", z.slot_partner, W / 2, "center", ui=True)], 41.0),
-            ([("rule",) + BAND_X], 58 * min(s, 1.3))]
+    # The PARTNER LOGOS band is drawn only when 11.2 holds logos to place; an empty field
+    # earns no 148 pt of rules on the end card (C10.4). The AFI box below is unconditional.
+    tail = []
+    if field(d, "11.2").strip():
+        tail = [([("rule",) + BAND_X], 49.0),
+                ([T("PARTNER LOGOS", z.slot_partner, W / 2, "center", ui=True)], 41.0),
+                ([("rule",) + BAND_X], 58 * min(s, 1.3))]
     tail.append(([T(items[3].upper(), z.boiler3, W / 2, "center")], 56 * min(s, 1.3)))
     for k, para in enumerate(items[:3]):
         ls = greedy_wrap(c, para.upper(), z.boiler3, BOILER_MEASURE)

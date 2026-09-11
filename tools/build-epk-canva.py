@@ -91,6 +91,8 @@ def flatten_image(op, scrim, out_path, write):
     cy = ry0 + (rh - ch) * fy
     crop = im.crop((int(round(cx)), int(round(cy)), int(round(cx + cw)), int(round(cy + ch))))
     crop = crop.resize((tw, th), Image.LANCZOS)
+    if op.get("grade") == "mono":                            # the kit's value-only grade
+        crop = kit.grade_mono_pixels(crop)
     ground = Image.new("RGB", (tw, th), tuple(kit_ground_rgb()))
     alpha = float(op.get("opacity", 1.0))
     out = Image.blend(ground, crop, alpha) if alpha < 1.0 else crop

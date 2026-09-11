@@ -8,14 +8,14 @@ Page order follows press/epk-spec.md, which was modelled on a strong AFI thesis 
      1  Poster                 full-bleed key art
      2  Logline + synopsis     hero still, then the two paragraphs
      3  The programmer page    specs, team, cast, rights, links, contact
-     4  Director's statement   single centred column over a ghosted still
+     4  Director's statement   page 3's armature: figure left, flush-left column right
      5  Filmmaker bios         director, producer, cinematographer
      6  Filmmaker bios         production designer, editor
-     7  Cast                   a still in character, the billed cast
+     7  Cast                   the cast column on the left edge, one figure ghosted right
      8  Behind the scenes      twelve set photographs, no captions
      9  Cast + key credits     )
-    10  Crew                   ) drawn by tools/build-credit-card.py, unchanged
-    11  Thanks + AFI end card  )
+    10  Crew                   ) drawn by tools/build-credit-card.py; stills per page and
+    11  Thanks + AFI end card  ) press mode set from credit_pages()
 
 Text is selectable on every page, and the links are real PDF link annotations. The
 model kit (built in Canva, per its PDF metadata) has live text only on pages 2-4 and
@@ -80,7 +80,18 @@ LINKS = [("BTS", PRESS_FOLDER), ("STILLS", PRESS_FOLDER), ("POSTER", PRESS_FOLDE
 # (05 MARKETING/00 PRESS/HEADSHOTS): v3-1 You Wu, v3-2 Ruoxiao Li, v3-3 RJ Ragampudi,
 # v3-4 Luke Scroggins. There is no portrait of the director.
 PORTRAITS_CONFIRMED = True
-PORTRAITS = {"5.1": None, "5.2": 2, "5.3": 4, "5.4": 3, "5.5": 1}
+# 5.1 is a set photograph (Jedidiah Woods, Day 3): the director at the monitor, alone in
+# profile, graded at draw time to sit beside the studio headshots (mono(), value only).
+# Luke confirms the man in the frame is Jordan Betine before it ships; until then page 5
+# carries a PROOF slug (DIRECTOR_PORTRAIT_CONFIRMED). Taste pass 2026-09-11, P5-01.
+DIRECTOR_PORTRAIT_CONFIRMED = False
+PORTRAITS = {"5.1": BTS("KOM_Day3_TheFarm-43.jpg"), "5.2": 2, "5.3": 4, "5.4": 3, "5.5": 1}
+PORTRAIT_FOCUS = {"5.1": (0.36, 0.28)}          # default (0.5, 0.40)
+PORTRAIT_ZOOM = {"5.1": 1.15}                    # crop only; masters untouched
+# Ruoxiao Li's head fills ~28% of her box against ~40% for the other three; the fix is one
+# entry each, PORTRAIT_FOCUS["5.2"] = (0.5, 0.42) and PORTRAIT_ZOOM["5.2"] = 1.25, and it
+# re-crops a delivered headshot, so it ships only on Luke's yes (sexy-pass question 2).
+BIO_GAP = 66.0                                   # between bio blocks, both pages
 # Instagram / IMDb per filmmaker come from field 5.7 at build time (Luke, Sep 10):
 # "Role | Name | @handle | https://www.imdb.com/name/nmNNN/", one line each. Matched to
 # a bio slot by the role word; handles are shown exactly as typed.
@@ -121,12 +132,16 @@ BIOS = [  # field, heading role, name
 # ---- page 8: ten set photographs on a held thirds grid, with one size break: the crew
 # photograph runs the full width on the last row. Cells are (file, relative width).
 # Row heights + 3 gaps + the 74 pt credit strip sum to exactly 1728.
+# Rows read as the shoot did: the farm by day, the barn and the fight, the soundstage and
+# the burial, then the unit. An optional third element is the cover focus (taste pass
+# 2026-09-11, P8-A/B/C: -149 and Soundstage-32 read as nothing at cell size; -84 opens
+# with the barn yard, the truck, the dolly and six crew, render-checked at cell size).
 MOSAIC = [
-    (399, [("KOM_Day3_TheFarm-18.jpg", 432), ("KOM_Day3_TheFarm-59.jpg", 432),
-           ("KOM_Day3_TheFarm-149.jpg", 432)]),
-    (399, [("KOM_Day3_TheFarm-152.jpg", 432), ("KOM_Day4_Soundstage-81.jpg", 432),
-           ("KOM_Day3_TheFarm-185.jpg", 432)]),
-    (399, [("KOM_Day3_TheFarm-220.jpg", 432), ("KOM_Day4_Soundstage-32.jpg", 432),
+    (399, [("KOM_Day3_TheFarm-84.jpg", 432, (0.45, 0.5)), ("KOM_Day3_TheFarm-59.jpg", 432),
+           ("KOM_Day3_TheFarm-152.jpg", 432)]),
+    (399, [("KOM_Day3_TheFarm-194.jpg", 432), ("KOM_Day3_TheFarm-185.jpg", 432),
+           ("KOM_Day3_TheFarm-220.jpg", 432)]),
+    (399, [("KOM_Day4_Soundstage-76.jpg", 432, (0.5, 0.62)), ("KOM_Day4_Soundstage-81.jpg", 432),
            ("KOM_Day4_Soundstage-93.jpg", 432)]),
     (439, [("KOM_Day3_TheFarm-237.jpg", 1296)]),
 ]
@@ -196,10 +211,11 @@ def reader(im, q=84):
     return ImageReader(buf)
 
 
-def cover(c, im, x, y, w, h, alpha=1.0, focus=(0.5, 0.5), q=84):
-    """Draw im to fill the box, cropping. focus is where in the image to keep."""
+def cover(c, im, x, y, w, h, alpha=1.0, focus=(0.5, 0.5), q=84, zoom=1.0):
+    """Draw im to fill the box, cropping. focus is where in the image to keep; zoom > 1
+    crops tighter around it (the master is never resampled on disk)."""
     iw, ih = im.size
-    sc = max(w / iw, h / ih)
+    sc = max(w / iw, h / ih) * zoom
     cw, ch = w / sc, h / sc
     cx = (iw - cw) * focus[0]
     cy = (ih - ch) * focus[1]
@@ -209,6 +225,24 @@ def cover(c, im, x, y, w, h, alpha=1.0, focus=(0.5, 0.5), q=84):
         c.setFillAlpha(alpha)
     c.drawImage(reader(crop, q), x, y, w, h)
     c.restoreState()
+
+
+def grade_mono_pixels(im, target_l=20.0):
+    """Value-only grade for a set photograph that stands beside the studio headshots:
+    grayscale, gamma 1.9, a GROUND-to-CREAM ramp (no hue the palette does not own), then
+    brightness to a mean L near the headshots'. Draw time only; the master is untouched."""
+    from PIL import ImageEnhance, ImageStat
+    g = ImageOps.grayscale(im).point(lambda v: int(255 * (v / 255) ** 1.9))
+    t = ImageOps.colorize(g, black=(11, 8, 6), white=(239, 230, 214))
+    mean = ImageStat.Stat(t.convert("L")).mean[0]
+    return ImageEnhance.Brightness(t).enhance(target_l / mean) if mean > 0 else t
+
+
+def mono(im, target_l=20.0):
+    """The primitive the page calls; the replays (build-epk-ai.py) patch this one to mark
+    the image `grade = "mono"` instead, and the Canva emitter grades its derivative with
+    grade_mono_pixels(). Illustrator links the master ungraded."""
+    return grade_mono_pixels(im, target_l)
 
 
 def ground(c, still_n=None, alpha=0.16, scrim=0.55, focus=(0.5, 0.5)):
@@ -320,13 +354,23 @@ def page_poster(c):
 
 def page_logline(c, d):
     ground(c)
-    hero_h = 860.0
+    # 720 pt keeps 76% of the frame's width from its left edge, so the owner watching from
+    # the doorway stays in the picture; at 860 centred the crop kept 63% and lost him, and
+    # what remained was a physique shot, not the story. 700 is the floor (P2-1).
+    hero_h = 720.0
     im = unletterbox(load_rgb(STILL(5), 2000))
-    cover(c, im, 0, H - hero_h, W, hero_h, focus=(0.5, 0.5), q=88)
+    cover(c, im, 0, H - hero_h, W, hero_h, focus=(0.0, 0.5), q=88)
     lg, lg_draft = logline(d)
     sy, sy_draft = synopsis(d)
-    x, w = M, 900.0                                # the page margin, and a measure that
-    y = H - hero_h - 90                            # holds 75-90 characters a line
+    x, w = M, 820.0                                # the page margin; 80-94 characters a line
+    # The block is placed, not hung: the spare in the band under the hero splits 3:5 above
+    # and below, the proportion the page already had, so a change of hero height never
+    # leaves the copy as remainder (P2-2).
+    lg_h = para_height(lg, w, 26.0, 40.0)
+    band = H - hero_h - M
+    sz, ld = fit(sy, w, band - (BODY + 52 + lg_h + 48 + 52) - 44, 22.0, 34.5)
+    block = BODY + 52 + lg_h + 48 + 52 + para_height(sy, w, sz, ld)
+    y = H - hero_h - 0.375 * max(band - block, 0) - BODY
     label(c, x, y, "LOGLINE")
     y -= 52
     y = para(c, lg, x, y, w, 26.0, 40.0)
@@ -456,44 +500,56 @@ def page_programmer(c, d):
 
 
 def page_statement(c, d):
-    # focus 0.62 keeps both doorway silhouettes whole in the 3:4 crop of still 10
-    ground(c, 10, alpha=0.20, scrim=0.50, focus=(0.62, 0.5))
-    y = title(c, "DIRECTOR'S STATEMENT", H - M - 30)
-    text = field(d, "4.1")
-    x, w = (W - 720) / 2, 720.0                     # a letter's measure: 75-84 characters
+    # Page 3's armature: the figure in the left third, one alignment edge at xr = 1222.
+    # focus 0.83 stands Mace's back whole in the left third of the crop of still 10; the
+    # owner leaves the frame and his hand on the shoulder enters from the edge (Luke's
+    # call, handoff-113). 0.62 kept both silhouettes and ran the column across both (P4-02).
+    ground(c, 10, alpha=0.20, scrim=0.50, focus=(0.83, 0.5))
+    xr = W - M
+    y = title(c, "DIRECTOR'S STATEMENT", H - M - 30, align="right", x=xr)
+    # Single newlines in 4.1 are the director's own paragraph turns; para() would fold them
+    # into one seventeen-line block, so they are promoted to paragraph breaks (P4-03).
+    text = re.sub(r"\n+", "\n\n", field(d, "4.1").strip())
+    x, w = xr - 686, 686.0                          # 536..1222, 25 pt clear of the figure
     top = y - 44
     room = top - (M + 76) - 56                      # the signature lives inside the box
     size, lead = fit(text, w, room, 23.0, 36.5)     # fit() steps down until it fits
-    y_end = para(c, text, x, top, w, size, lead, align="center")
-    tracked(c, W / 2, y_end - 56, "JORDAN BETINE, WRITER-DIRECTOR", "Bask", Z.role + 1,
-            Z.track_r + 1.0, DIM, "center")       # closes the letter, not the page
+    y_end = para(c, text, x, top, w, size, lead)
+    tracked(c, x, y_end - 56, "JORDAN BETINE, WRITER-DIRECTOR", "Bask", Z.role + 1,
+            Z.track_r + 1.0, DIM)                 # closes the letter, on the column's edge
     c.showPage()
+
+
+def portrait_src(key):
+    """(path, graded): a headshot by number, or a set photograph by path that mono() grades."""
+    pn = PORTRAITS.get(key)
+    if pn is None:
+        return None, False
+    if isinstance(pn, str):
+        return pn, True
+    return HEADSHOT(pn), False
 
 
 def bio_block(c, key, role, name, y, side, height):
     """Heading, portrait on one side, text on the other. Returns the y below."""
-    pn = PORTRAITS.get(key)
-    has_img = pn is not None and os.path.exists(HEADSHOT(pn))
+    src, graded = portrait_src(key)
+    has_img = src is not None and os.path.exists(src)
     head_text = f"{role}  |  {name}"
-    hx = M if side == "left" else W - M
-    tracked(c, hx, y, head_text, "Bask-SB", SUB, 2.2, CREAM, "left" if side == "left" else "right")
-    # Instagram handle and IMDB, on the heading baseline, in the label tone, each a live
-    # link: after the heading when it sits left, before it when it sits right.
+    # Page 3's law on a bio block: one text edge, the image in the opposite third. The
+    # lockup, its handles and the prose all sit on M; only the portrait alternates sides
+    # (taste pass 2026-09-11, C06 as amended). Handles in the label class with page 3's
+    # 0.5 pt DIM underline, each a live link (C07).
+    tracked(c, M, y, head_text, "Bask-SB", SUB, 2.2, CREAM)
     links = person_links(c._d).get(key, [])
     hw = text_width(c, head_text, "Bask-SB", SUB, 2.2)
     gap = 28
-    if side == "left":
-        px = hx + hw + gap
-        for lab, url in links:
-            wd = tracked(c, px, y, lab, "Bask", Z.role, Z.track_r, DIM)
-            link(c, url, px - 4, y - 6, wd + 8, Z.role + 10)
-            px += wd + gap
-    else:
-        px = hx - hw - gap
-        for lab, url in reversed(links):
-            wd = tracked(c, px, y, lab, "Bask", Z.role, Z.track_r, DIM, "right")
-            link(c, url, px - wd - 4, y - 6, wd + 8, Z.role + 10)
-            px -= wd + gap
+    c.setStrokeColor(DIM); c.setLineWidth(0.5)
+    px = M + hw + gap
+    for lab, url in links:
+        wd = tracked(c, px, y, lab, "Bask", BODY, LABEL_TRACK, DIM)
+        c.line(px, y - 6, px + wd, y - 6)
+        link(c, url, px - 4, y - 8, wd + 8, BODY + 12)
+        px += wd + gap
     y -= 40
     img_h = PORTRAIT_H
     img_w = PORTRAIT_W
@@ -501,12 +557,14 @@ def bio_block(c, key, role, name, y, side, height):
     text = field(c._d, key)
     size, lead = fit(text, text_w, img_h - 4, 19.0, 30.0)
     if has_img:
-        im = load_rgb(HEADSHOT(pn), 1200)
+        im = load_rgb(src, 1200)
+        if graded:
+            im = mono(im)
         ix = M if side == "left" else W - M - img_w
-        cover(c, im, ix, y - img_h, img_w, img_h, focus=(0.5, 0.40), q=86)
+        cover(c, im, ix, y - img_h, img_w, img_h, focus=PORTRAIT_FOCUS.get(key, (0.5, 0.40)),
+              q=86, zoom=PORTRAIT_ZOOM.get(key, 1.0))
         tx = M + img_w + 48 if side == "left" else M
-        para(c, text, tx, y - lead * 0.85, text_w, size, lead,
-             align="left" if side == "left" else "right")
+        para(c, text, tx, y - lead * 0.85, text_w, size, lead)
         return y - img_h
     # No portrait: the text keeps the shared measure under its own heading and the
     # block is only as tall as the words, so no empty slot is reserved (F01 fallback).
@@ -516,77 +574,137 @@ def bio_block(c, key, role, name, y, side, height):
 
 def bio_height(d, key):
     """What bio_block() will use, so the page can distribute its spare evenly."""
-    pn = PORTRAITS.get(key)
-    if pn is not None and os.path.exists(HEADSHOT(pn)):
+    src, _ = portrait_src(key)
+    if src is not None and os.path.exists(src):
         return 40 + PORTRAIT_H
     text_w = W - 2 * M - PORTRAIT_W - 48
     size, lead = fit(field(d, key), text_w, PORTRAIT_H - 4, 19.0, 30.0)
     return 40 + para_height(field(d, key), text_w, size, lead) + lead
 
 
-def page_bios(c, d, items, first):
+def page_bios(c, d, items, first, offset=0):
+    """Portrait sides alternate by a running index across the spread (offset), so the page
+    turn never meets two left-hand portraits. The titled page anchors its first block under
+    the title and its last on the foot margin, like page 3's footer; the untitled page
+    carries its blocks as one group with the same gap, set a little above centre
+    (taste pass 2026-09-11, P5-02, P6-01, P56-01; replaces F08's even split)."""
     c._d = d
     ground(c)
     y = H - M - 30
+    heights = [bio_height(d, key) for key, _, _ in items]
     if first:
         y = title(c, "FILMMAKERS", y)
-        y -= 20
-    avail = y - M - 30
-    heights = [bio_height(d, key) for key, _, _ in items]
-    # The spare splits evenly above, between and below the blocks, so a two-bio page
-    # sits in its frame instead of stacking at the top (F08).
-    between = (avail - sum(heights)) / (len(items) + 1)
-    y -= between
+        y -= 48
+        between = (y - M - sum(heights)) / max(len(items) - 1, 1)
+    else:
+        between = BIO_GAP
+        group = sum(heights) + between * (len(items) - 1)
+        y -= 0.45 * max((y - M) - group, 0)
     for i, (key, role, name) in enumerate(items):
-        y = bio_block(c, key, role, name, y, "left" if i % 2 == 0 else "right", heights[i])
+        y = bio_block(c, key, role, name, y, "left" if (offset + i) % 2 == 0 else "right",
+                      heights[i])
         y -= between
     if not PORTRAITS_CONFIRMED:
         proof_slug(c, "PROOF — PORTRAITS NOT YET ASSIGNED TO NAMES")
+    elif first and not DIRECTOR_PORTRAIT_CONFIRMED and isinstance(PORTRAITS.get("5.1"), str):
+        proof_slug(c, "PROOF — THE DIRECTOR'S PORTRAIT IS A SET PHOTOGRAPH, IDENTITY TO CONFIRM")
     c.showPage()
+
+
+# ---- page 7: the page-3 form, mirrored. The cast column on the left edge, one figure
+# ghosted in the right third. Still 1.1.17 (Mace at the cabin, daylight) at focus 0.12
+# puts his face in the upper right looking into the column, the Elder's gesture on page 3.
+# The pass's other candidate, 1.1.15 at 0.48 (his figure at the oak), loses the head in
+# the page-shaped crop; Luke rules (handoff-113). No hero: still 40 over the lead's lockup
+# read as the lead's face, and it is Kojo's. Taste pass 2026-09-11, C01.
+CAST_GHOST = (17, (0.12, 0.5))
+CAST_COL_W = 600.0                              # 75-80 characters at 15.6
+
+
+def cast_blocks(text):
+    """Field 7.1 as (bios, notes). A block whose first line carries a pipe is a bio: 'role |
+    name', the paragraph, and a 'Prior credits:' line. Every other block is provenance (drafts,
+    what to confirm, sources) and is never printed as copy; while any exists the page carries
+    a PROOF slug. This is pairs()'s rule, a line with no pipe ends the run, at block level."""
+    bios, notes = [], []
+    for b in [b for b in re.split(r"\n\s*\n", text.strip()) if b.strip()]:
+        lines = [l.strip() for l in b.split("\n") if l.strip()]
+        if "|" in lines[0] and len(lines) > 1:
+            role, _, name = lines[0].partition("|")
+            body = " ".join(l for l in lines[1:] if not l.lower().startswith("prior credits:"))
+            prior = next((l for l in lines[1:] if l.lower().startswith("prior credits:")), "")
+            bios.append((role.strip(), name.strip(), body, prior))
+        else:
+            notes.append(b)
+    return bios, notes
 
 
 def page_cast(c, d):
-    ground(c)
-    bios = field(d, "7.1").strip()
-    hero_h = 1000.0 if bios else 1230.0            # the still takes the room a bio would
-    im = unletterbox(load_rgb(STILL(40), 2000))
-    cover(c, im, 0, H - hero_h, W, hero_h, focus=(0.5, 0.35), q=88)
-    x = M
-    y = H - hero_h - 90
+    """Page 7. With bios in 7.1: the title law at the left edge, then each ROLE | NAME lockup
+    (the pages 5-6 class) over its bio, flush-left on a 600 pt measure; the billed names without a bio in the two-tone rows under a label (the label
+    word is Luke's call); a PROOF slug while 7.1 carries provenance. Without bios: still 40
+    as a tall hero over the whole billed list, as before."""
+    bios, notes = cast_blocks(field(d, "7.1"))
     billed = [(r, n) for r, n in pairs(field(d, "3.15")) if r and "coordinator" not in r.lower()]
-    lead_role, lead_names = billed[0]
-    tracked(c, x, y, f"{lead_role}  |  {' · '.join(lead_names)}".upper(), "Bask-SB", SUB + 3,
-            2.4, CREAM)
-    y -= 50
-    if bios:
-        y = para(c, bios, x, y, W - 2 * M, BODY - 0.6, BODY_LEAD - 1.5) - 30
-    else:
-        y -= 6
-    label(c, x, y, "BILLED CAST")
-    y -= 34
-    col_x = [x, x + (W - 2 * M) / 2]
-    half = (len(billed) + 1) // 2
-    for ci, chunk in enumerate([billed[:half], billed[half:]]):
-        yy = y
-        for role, names in chunk:
-            tracked(c, col_x[ci], yy, role.upper(), "Bask", BODY, Z.track_r, DIM)
-            tracked(c, col_x[ci] + 210, yy, " · ".join(names).upper(), "Bask", 17.0,
-                    Z.track_n, CREAM)
-            yy -= 28
-    c.showPage()
+    x = M
 
+    def two_tone_rows(y, rows, cols):
+        half = (len(rows) + 1) // 2 if len(cols) > 1 else len(rows)
+        for ci, chunk in enumerate([rows[:half], rows[half:]][:len(cols)]):
+            yy = y
+            for role, names in chunk:
+                tracked(c, cols[ci], yy, role.upper(), "Bask", BODY, Z.track_r, DIM)
+                tracked(c, cols[ci] + 210, yy, " · ".join(names).upper(), "Bask", 17.0,
+                        Z.track_n, CREAM)
+                yy -= 28
+
+    if bios:
+        n, focus = CAST_GHOST
+        ground(c, n, alpha=0.22, scrim=0.50, focus=focus)
+        y = title(c, "CAST", H - M - 30, align="left", x=x)
+        y -= 44
+        for role, name, body, prior in bios:
+            tracked(c, x, y, f"{role}  |  {name}".upper(), "Bask-SB", SUB, 2.2, CREAM)
+            y -= 36
+            y = para(c, body, x, y, CAST_COL_W, BODY, BODY_LEAD)
+            # the field's 'Prior credits:' line is parsed out and not drawn: DIM is for
+            # labels, never a line of running text, and each title is in the paragraph
+            y -= 48
+        with_bio = {b[0].lower() for b in bios}
+        rest = [(r, n) for r, n in billed if r.lower() not in with_bio]
+        if rest:
+            y -= 8
+            label(c, x, y, "ALSO BILLED")
+            two_tone_rows(y - 34, rest, [x])
+        if notes:
+            proof_slug(c, "PROOF — CAST BIOS ARE DRAFTS, NOT YET APPROVED BY THE ACTORS")
+    else:
+        ground(c)
+        hero_h = 1230.0                             # the still takes the room a bio would
+        im = unletterbox(load_rgb(STILL(40), 2000))
+        cover(c, im, 0, H - hero_h, W, hero_h, focus=(0.5, 0.35), q=88)
+        y = H - hero_h - 90
+        lead_role, lead_names = billed[0]
+        tracked(c, x, y, f"{lead_role}  |  {' · '.join(lead_names)}".upper(), "Bask-SB",
+                SUB + 3, 2.4, CREAM)
+        y -= 56
+        label(c, x, y, "BILLED CAST")
+        two_tone_rows(y - 34, billed, [x, x + (W - 2 * M) / 2])
+    c.showPage()
 
 def page_bts(c):
     ground(c)
     y = H
     for row_h, cells in MOSAIC:
         # cells share the width minus the gutters, so the last one lands on 1296 exactly
-        scale = (W - GAP * (len(cells) - 1)) / sum(w for _, w in cells)
+        scale = (W - GAP * (len(cells) - 1)) / sum(cell[1] for cell in cells)
         x = 0.0
-        for f, w in cells:
+        for cell in cells:
+            f, w = cell[0], cell[1]
+            focus = cell[2] if len(cell) > 2 else (0.5, 0.5)
             cw = w * scale
             im = load_rgb(BTS(f), 1500)
-            cover(c, im, x, y - row_h, cw, row_h, q=84)
+            cover(c, im, x, y - row_h, cw, row_h, focus=focus, q=84)
             x += cw + GAP
         y -= row_h + GAP
     y += GAP                                        # the loop pays a gap after the last row too
@@ -597,13 +715,17 @@ def page_bts(c):
 
 
 def credit_pages(c, d):
-    """Pages 9-11, drawn by the credit card's own functions on this canvas."""
-    z = card.Sz(1.0)
+    """Pages 9-11, drawn by the credit card's own functions on this canvas. press=True:
+    a name that is still a placeholder (SOUND DESIGNER | STILL UNKNOWN) is not printed
+    as a credit; the card marks the CREW page with a PROOF slug instead (C10 as amended)."""
+    z = card.Sz(1.0, card.Opts(press=True, proof_slug=True))
 
     def stills_for(nums):
+        """Still numbers become paths; (path, alpha, anchor) tuples pass through as the
+        card's override form; None lets the card's own recipe rule."""
         while True:
             for n in nums:
-                yield STILL(n)
+                yield n if (n is None or isinstance(n, tuple)) else STILL(n)
 
     billed = pairs(field(d, "9.2"))
     cast = [e for e in billed if e[0] and e[0].lower() != "extras"]
@@ -613,10 +735,77 @@ def credit_pages(c, d):
     # Since handoff-105 the card chooses its own still, opacity and anchor per page from
     # its GROUND_RECIPE; a bare path passed here is ignored with a notice. None lets the
     # recipe rule. To override, pass (path, alpha, anchor) tuples instead.
+    # Taste pass 2026-09-11 (C1, C2, C6): still, alpha and anchor per page are passed as
+    # tuples, so the standalone card keeps its own GROUND_RECIPE. CREDITS: still 1.1.2, the
+    # cupped hands with the shells, at anchor 0.35 the hands land right of the column (the
+    # spirit blur of 1.1.29 read as a light leak). CREW: 1.1.27 down to 0.45, the file's own
+    # floor, because its bright streak sat under the lower-left names. THANKS: the lantern
+    # in frame at 0.35 behind the middle column. Pass stills_for([None]) to take the card's
+    # recipe again.
+    # Gated 2026-09-11 (card.gate, worst 300 pt window per cream span, p95 against the
+    # section limits 60 / 65 / 75): CREDITS 1.1.2 at 1.0 fails (p95 72, JORDAN BETINE under
+    # the lit knuckles), 0.85 fails (63), 0.80 scrapes (59.9), 0.75 passes with margin (56);
+    # CREW 0.45 passes (32); THANKS 0.35 passes (40).
+    CREDIT_STILLS = {"CREDITS": (STILL(2), 0.75, 0.35), "CREW": (STILL(27), 0.45, 0.50),
+                     "THANKS": (STILL(25), 0.35, 0.50)}
     card.one_col_pages(c, "C A S T", [cast, key] + ([extras] if extras else []),
-                       z, stills_for([None]), False)
-    card.two_col_pages(c, "C R E W", pairs(field(d, "10.1")), z, stills_for([None]), False)
-    card.page_thanks(c, d, z, stills_for([None]), False)
+                       z, stills_for([CREDIT_STILLS["CREDITS"]]), False)
+    card.two_col_pages(c, "C R E W", pairs(field(d, "10.1")), z,
+                       stills_for([CREDIT_STILLS["CREW"]]), False)
+    card.page_thanks(c, d, z, stills_for([CREDIT_STILLS["THANKS"]]), False)
+
+
+def page_credits_variant(c, d):
+    """Page 9 in the page-3 idiom, for Luke's one-object-or-two ruling (handoff-113). Not
+    wired into main(); rendered beside page 9 in the review sheet. Still 1.1.13 (the oaks
+    and the field, the lone figure walking in the left third; thirds L 14.1 / 16.0 / 14.6
+    under the recipe) at focus 0.30; 1.1.16 was measured and cuts Mace's face at the crop's
+    edge at any focus that keeps him in one third. The key credits, the 9.1 tail, the cast
+    and the extras in one right-aligned column at xr with DIM roles and CREAM names."""
+    ground(c, 13, alpha=0.22, scrim=0.50, focus=(0.30, 0.5))
+    xr = W - M
+    y = title(c, "CREDITS", H - M - 30, align="right", x=xr)
+    size, step = COL_SIZE, COL_STEP
+    room = W - 2 * M - 300
+
+    def row(key, value):
+        nonlocal y
+        s_, tr = card.condense(c, f"{key}{value}".upper(), "Bask", size, Z.track_n, room)
+        wv = tracked(c, xr, y, value.upper(), "Bask", s_, tr, CREAM, "right")
+        if key:
+            tracked(c, xr - wv, y, key.upper(), "Bask", s_, tr, DIM, "right")
+        y -= step
+
+    def head(text):
+        nonlocal y
+        y -= 34
+        tracked(c, xr, y, text, "Bask-SB", 24.0, 2.2, CREAM, "right")
+        y -= 34
+
+    all_key = [e for e in pairs(field(d, "9.1")) if e[0]]
+    key = [e for e in all_key if "unknown" not in " ".join(e[1]).lower()]
+    poster, tail = card.split_at_ep(key)
+    for role, names in poster:
+        row(f"{role}  |  ", names[0])
+        for n in names[1:]:
+            row("", n)
+    y -= step
+    for role, names in tail:
+        row(f"{role}  |  ", " · ".join(names))
+    head("CAST")
+    for role, names in pairs(field(d, "9.2")):
+        if not role:
+            continue
+        if role.lower() == "extras":
+            head("EXTRAS")
+            for n in names:
+                row("", n)
+        else:
+            row(f"{role}  |  ", " · ".join(names))
+    if len(key) < len(all_key):
+        proof_slug(c, "PROOF — SOUND DESIGNER NOT YET NAMED")
+    print(f"page 9 variant: column ends {y:.0f} pt from the foot")
+    c.showPage()
 
 
 def main():
@@ -635,7 +824,7 @@ def main():
     page_programmer(c, d)                           # 3
     page_statement(c, d)                            # 4
     page_bios(c, d, BIOS[:3], first=True)           # 5
-    page_bios(c, d, BIOS[3:], first=False)          # 6
+    page_bios(c, d, BIOS[3:], first=False, offset=3)   # 6
     page_cast(c, d)                                 # 7
     page_bts(c)                                     # 8
     credit_pages(c, d)                              # 9-11

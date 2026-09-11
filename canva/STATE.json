@@ -1,6 +1,6 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-11T11:23:07-05:00",
+  "updated": "2026-09-11T12:00:59-05:00",
   "updated_by": "Fable session, EPK taste pass and Codex audit fixes",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
@@ -67,10 +67,10 @@
     "view_link": null
   },
   "last_error": null,
-  "next_step": "Luke answers the four pre-flight questions (handoff-113-epk). Then step 3 of canva/README.md (Developer Portal app, with the three scopes) and step 4 (probes). Note: tools/build-epk-kit.py is being revised in a taste pass (press/drafts/2026-09-11); once Luke accepts that draft, re-run tools/build-epk-canva.py and push the contract and derivatives before any Canva build, or the app will build the superseded layout.",
+  "next_step": "Luke answers the four pre-flight questions and the draft's CONFIRM list (handoffs/handoff-113-epk.md; press/drafts/2026-09-11/). Then step 3 of canva/README.md (Developer Portal app, with the three scopes) and step 4 (probes). Before any Canva build: once Luke accepts the draft, re-run tools/build-epk-canva.py and push the contract and derivatives; the served contract is still rev 24 of the superseded layout.",
   "app": {
     "path": "canva/kom-epk-builder",
-    "commit": "c9fba15",
+    "commit": "49717db (Codex fixes, 2026-09-11)",
     "typecheck": "tsc zero errors, eslint clean, npm run build ok (2026-09-11, after the Codex fixes)",
     "run": "npm --prefix canva/kom-epk-builder run start  (or the launch.json entry canva-app); serves http://localhost:8080",
     "notes": [
@@ -99,7 +99,7 @@
       "workflow-synthesis-2026-09-10.md"
     ]
   },
-  "handover_note": "Luke may run the Canva steps from a different Claude account. That account needs: this repo (clone), the Claude in Chrome extension signed in to it, Luke logged in to Canva Pro in that Chrome, Node 24, Python 3. It does not need anything from the first session's memory; everything is in canva/README.md, STATE.json, research/, and the app's BUILD-REPORT.md. Font refs never carry across browsers or sessions: the app refuses to build until every font key is picked in the current panel session (Codex finding 2, fixed 2026-09-11).",
+  "handover_note": "Luke may run the Canva steps from a different Claude account. That account needs: this repo (clone), the Claude in Chrome extension signed in to it, Luke logged in to Canva Pro in that Chrome, Node 24, Python 3. It does not need anything from the first session's memory; everything is in canva/README.md, STATE.json, research/, and the app's BUILD-REPORT.md. Font refs never carry across browsers or sessions: the app refuses to build until every font key is picked in the current panel session (Codex finding 2, fixed 2026-09-11). The layout was revised on 2026-09-11 (taste pass); the Canva contract must be regenerated from it after Luke accepts the draft.",
   "audits": {
     "codex_2026-09-11": {
       "verdict": "UNSOUND",

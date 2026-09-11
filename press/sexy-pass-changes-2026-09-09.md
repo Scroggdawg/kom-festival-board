@@ -88,6 +88,8 @@ No other change on page 9; its title rule and group dividers are already the two
 
 ## Do not change
 
+*Superseded in part. The rows below for pages 9–11 (ghosts at 0.16 / 0.55, still 15 on page 11, "do not enlarge or restyle" the card rhythm) were overtaken on 2026-09-10 by the Night Feeds-guided card redesign (handoff-105-epk), and the rows for pages 2, 4, 7 and the bio pages by the taste pass of 2026-09-11 (handoff-113-epk, `press/drafts/2026-09-11/`). Read those before treating any row here as live.*
+
 - Palette and its value-only hierarchy: CREAM #efe6d6, DIM #b9a88c, RULE #6b5942 on #0b0806; Baskerville throughout; no second face, no accent colour; every page passes the grayscale test.
 - Page 1: poster fitted whole at min(W/iw, H/ih) with 54 pt bands of kit ground above and below; nothing cropped, billing block intact; never fit-to-height or cover-crop the key art.
 - Page order 1-2-3 (poster, hero + logline/synopsis, specs/contact/links).

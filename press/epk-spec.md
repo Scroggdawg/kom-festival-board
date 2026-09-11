@@ -8,8 +8,8 @@ The EPK is a **link hub**, not a container. Every asset category on page 3 is a 
 
 | Page | Section | Contents | Links |
 |---|---|---|---|
-| 1 | Poster | Full-bleed key art. Billing block. Website URL printed | — |
-| 2 | Logline + synopsis | One hero still (top ~60%). LOGLINE ~50 words. SYNOPSIS ~100 words. One page | — |
+| 1 | Poster | Key art fitted whole, 54 pt GROUND bands above and below; billing block intact; no URL on the art (the site URL is a live link on page 3). Never cover-cropped: 43 pt a side would take the ragged frame and the billing block's outer letters (amended 2026-09-11) | — |
+| 2 | Logline + synopsis | One hero still (top ~42%: hero_h 720 pt, the frame cropped from its left edge so the owner in the doorway stays in). LOGLINE ~50 words. SYNOPSIS ~100 words. One page (amended 2026-09-11) | — |
 | 3 | Specs · team · cast · rights · links · contact | **The programmer page.** See spec block below. THE TEAM: five HoD roles. CAST: principals. RIGHTS: AFI Conservatory + named contact. LINKS: BTS · STILLS · POSTER · TRAILER · HEADSHOTS. Footer: email · website · Instagram | every LINK → Drive folder; site; IG |
 | 4 | Director's statement | ~300–350 words, signed "Jordan Betine, director", personal-to-thematic arc, photo ghosted behind | — |
 | 5–6 | Filmmaker bios | `ROLE | NAME` + Instagram/IMDb/website icons, headshot alternating sides, ~150 words each, max three per page. Director, producer, DP, production designer, editor | IG, IMDb per person |
@@ -102,4 +102,4 @@ Names are explicit suffixes. Log which upload each festival received, and the vi
 
 ## Credit pages 9–11 — build note (2026-09-09)
 
-`tools/build-credit-card.py` now draws each credit page over one full-bleed still at the alpha and horizontal anchor in its `GROUND_RECIPE` (no scrim, no gradient; backdrops derived at build time in `unletterbox()` from `press/assets/STILLS`, which is never modified). The backdrop is the page-shaped crop at native resolution, JPEG q90, so the three-page card is 0.29 MB (was 0.45 MB) and the kit's pages 9–11 add about 70 KB each. Text stays selectable on all three pages. Two logo positions (partner logos, AFI Conservatory logo) are reserved as labelled hairline slots until the files arrive from AFI's SDAC portal.
+`tools/build-credit-card.py` now draws each credit page over one full-bleed still at the alpha and horizontal anchor in its `GROUND_RECIPE` (no scrim, no gradient; backdrops derived at build time in `unletterbox()` from `press/assets/STILLS`, which is never modified). The backdrop is the page-shaped crop at native resolution, JPEG q90, so the three-page card is 0.29 MB (was 0.45 MB) and the kit's pages 9–11 add about 70 KB each. Text stays selectable on all three pages. The AFI Conservatory logo position is reserved as a labelled hairline slot until the file arrives from AFI's SDAC portal; the partner-logos band is drawn only when field 11.2 holds logos to place (amended 2026-09-11).
