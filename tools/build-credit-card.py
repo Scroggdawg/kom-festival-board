@@ -317,6 +317,15 @@ def thanks_list(d):
     return heading, names
 
 
+def dedication_line(d):
+    """The crawl's opening card, 'In loving memory of ...', if 11.1 carries such a line
+    (Luke, 2026-09-14: yes). Drawn over the thanks heading in the heading's own class."""
+    for l in field(d, "11.1").split("\n"):
+        if l.strip().lower().startswith("in loving memory"):
+            return l.strip().rstrip(".")
+    return ""
+
+
 def fellows_list(d):
     """[(name, 'AFI ... Fellow')] from 11.3, split at ', AFI ' at draw time."""
     out = []
@@ -1000,6 +1009,7 @@ def page_thanks(c, d, z, stills, transparent):
     pitch = z.pitch3
     extras = [e for e in pairs(field(d, "9.2")) if e[0] and e[0].lower() == "extras"]
     heading, thanks = thanks_list(d)
+    dedication = dedication_line(d)
     fellows = fellows_list(d)
     items, copy = boilerplate(d)
 
@@ -1015,8 +1025,14 @@ def page_thanks(c, d, z, stills, transparent):
             blocks.append((0, [([T(role.upper(), z.gold(z.extras_label), W / 2, "center", ui=True)], 40 * s)], True))
             blocks += column_block(c, [[n.upper()] for n in names], columns_for(z), z.body3, pitch, 0)
         # (2) the heading as 11.1 writes it, (3) the thanks in data order, '&'-wrapped
-        blocks.append((76 * s - pitch, [([T(heading.upper(), z.gold(z.thanks_head), W / 2, "center", ui=True)],
-                                        56 * s)], True))
+        # The dedication, when 11.1 carries one, opens the thanks in the heading's class, one
+        # heading pitch above it; the page pays for it below (the legal gaps drop one pitch
+        # each, 3P -> 2P and 4P -> 3P, still on the 28 grid) so 53 names and the mark still fit.
+        if dedication:
+            blocks.append((76 * s - pitch, [([T(dedication.upper(), z.gold(z.thanks_head), W / 2, "center", ui=True)],
+                                            56 * s)], True))
+        blocks.append((0 if dedication else 76 * s - pitch,
+                       [([T(heading.upper(), z.gold(z.thanks_head), W / 2, "center", ui=True)], 56 * s)], True))
         wrap_at = 350.0 if len(cols) == 3 else cols[0][2]
         entries = [amp_wrap(c, n.upper(), z.body3, wrap_at) for n in thanks]
         blocks += column_block(c, entries, cols, z.body3, pitch, 0)
@@ -1038,14 +1054,14 @@ def page_thanks(c, d, z, stills, transparent):
             ls = greedy_wrap(c, para.upper(), z.boiler3, BOILER_MEASURE)
             for j, ln in enumerate(ls):
                 tail.append(([T(ln, z.boiler3, W / 2, "center")],
-                             bp if j < len(ls) - 1 else (56 * min(s, 1.3) if k < 2 else 84 * s)))
+                             bp if j < len(ls) - 1 else (56 * min(s, 1.3) if k < 2 else (56 if dedication else 84) * s)))
         gutter = 16 * s
         fst = step_down(c, [(n.upper(), W / 2 - gutter - M) for n, _ in fellows]
                         + [(t.upper(), W / 2 - gutter - M) for _, t in fellows], z.body3)
         for j, (name, ttl) in enumerate(fellows):
             tail.append(([T(name.upper(), fst, W / 2 - gutter, "right"),
                           T(ttl.upper(), fst, W / 2 + gutter, "left")],
-                         pitch if j < len(fellows) - 1 else 112 * s))
+                         pitch if j < len(fellows) - 1 else (84 if dedication else 112) * s))
         tail.append(([T(copy[0].upper(), z.body3, W / 2, "center")], pitch))
         tail.append(([T(copy[1].upper(), z.body3, W / 2, "center")], pitch))
         blocks.append((60 * s - pitch, tail, False))

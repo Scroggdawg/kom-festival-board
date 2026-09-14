@@ -561,9 +561,8 @@ def portrait_src(key):
     return (pn if isinstance(pn, str) else HEADSHOT(pn)), PORTRAIT_GRADE.get(key) == "mono"
 
 
-def bio_block(c, key, role, name, y, side, height, port_h=None):
-    """Heading, portrait on one side, text on the other. Returns the y below. `port_h`
-    overrides the portrait height (the five-on-one test page); width keeps the 0.84 aspect."""
+def bio_block(c, key, role, name, y, side, height):
+    """Heading, portrait on one side, text on the other. Returns the y below."""
     src, graded = portrait_src(key)
     has_img = src is not None and os.path.exists(src)
     head_text = f"{role}  |  {name}"
@@ -583,8 +582,8 @@ def bio_block(c, key, role, name, y, side, height, port_h=None):
         link(c, url, px - 4, y - 8, wd + 8, BODY + 12)
         px += wd + gap
     y -= 40
-    img_h = PORTRAIT_H if port_h is None else port_h
-    img_w = PORTRAIT_W if port_h is None else round(port_h * 0.84)
+    img_h = PORTRAIT_H
+    img_w = PORTRAIT_W
     text_w = W - 2 * M - img_w - 48                 # the measure every bio shares
     text = field(c._d, key)
     size, lead = fit(text, text_w, img_h - 4, 19.0, 30.0)
@@ -604,15 +603,13 @@ def bio_block(c, key, role, name, y, side, height, port_h=None):
     return y - para_height(text, text_w, size, lead) - lead
 
 
-def bio_height(d, key, port_h=None):
+def bio_height(d, key):
     """What bio_block() will use, so the page can distribute its spare evenly."""
     src, _ = portrait_src(key)
-    img_h = PORTRAIT_H if port_h is None else port_h
-    img_w = PORTRAIT_W if port_h is None else round(port_h * 0.84)
     if src is not None and os.path.exists(src):
-        return 40 + img_h
-    text_w = W - 2 * M - img_w - 48
-    size, lead = fit(field(d, key), text_w, img_h - 4, 19.0, 30.0)
+        return 40 + PORTRAIT_H
+    text_w = W - 2 * M - PORTRAIT_W - 48
+    size, lead = fit(field(d, key), text_w, PORTRAIT_H - 4, 19.0, 30.0)
     return 40 + para_height(field(d, key), text_w, size, lead) + lead
 
 
@@ -642,35 +639,6 @@ def page_bios(c, d, items, first, offset=0):
         proof_slug(c, "PROOF — PORTRAITS NOT YET ASSIGNED TO NAMES")
     elif first and not DIRECTOR_PORTRAIT_CONFIRMED and PORTRAIT_GRADE.get("5.1") == "mono":
         proof_slug(c, "PROOF — THE DIRECTOR'S PORTRAIT IS A SET PHOTOGRAPH, IDENTITY TO CONFIRM")
-    c.showPage()
-
-
-BIO_GAP_SINGLE = 30.0
-
-
-def page_bios_single(c, d, items, offset=0):
-    """Test page (Luke, 2026-09-11: "a test page where all 5 filmmakers fit on a single
-    page"). Pages 5-6's law unchanged: one text edge, the lockup and its handles and the
-    prose on M, only the portrait alternating sides; the portrait height is what one page
-    allows after the title, five headings and four gaps, the last block on the foot margin,
-    and fit() sets each bio in the box beside its portrait. Not wired into main(); rendered
-    by tools/build-epk-variants.py."""
-    c._d = d
-    ground(c)
-    y = title(c, "FILMMAKERS", H - M - 30)
-    y -= 48
-    port_h = float(int((y - M - 40 * len(items) - BIO_GAP_SINGLE * (len(items) - 1)) / len(items)))
-    heights = [bio_height(d, key, port_h) for key, _, _ in items]
-    between = (y - M - sum(heights)) / max(len(items) - 1, 1)
-    sizes = []
-    for i, (key, role, name) in enumerate(items):
-        text_w = W - 2 * M - round(port_h * 0.84) - 48
-        sizes.append(fit(field(d, key), text_w, port_h - 4, 19.0, 30.0)[0])
-        y = bio_block(c, key, role, name, y, "left" if (offset + i) % 2 == 0 else "right",
-                      heights[i], port_h)
-        y -= between
-    print(f"five-on-one: portrait {port_h:.0f} x {round(port_h * 0.84)} pt (pages 5-6: {PORTRAIT_H:.0f} x {PORTRAIT_W}), "
-          f"gap {between:.0f}, bio sizes " + ", ".join(f"{s:.1f}" for s in sizes))
     c.showPage()
 
 
@@ -706,6 +674,7 @@ def cast_blocks(text):
 # spectator billings"). Pages 3 (the programmer's CAST block) and 9 (CREDITS) still carry
 # them from the same fields; drop them there too only on Luke's word.
 CAST_PAGE_DROP = ("spectator",)
+CREDITS_DROP = ("spectator",)           # page 9 likewise (Luke, 2026-09-14); page 3 keeps them
 
 
 def page_cast(c, d):
@@ -799,7 +768,9 @@ def credit_pages(c, d):
                 yield n if (n is None or isinstance(n, tuple)) else STILL(n)
 
     billed = pairs(field(d, "9.2"))
-    cast = [e for e in billed if e[0] and e[0].lower() != "extras"]
+    # Luke, 2026-09-14: the Spectators stay on page 3's CAST block and leave the CREDITS page
+    cast = [e for e in billed if e[0] and e[0].lower() != "extras"
+            and not any(k in e[0].lower() for k in CREDITS_DROP)]
     extras = [e for e in billed if e[0] and e[0].lower() == "extras"]
     key = [e for e in pairs(field(d, "9.1"))
            if e[0] and "unknown" not in " ".join(e[1]).lower()]

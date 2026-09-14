@@ -5,7 +5,6 @@
 
 Writes DIR/<name>.pdf and DIR/<name>.png (one page, 1 px per pt) for each variant, default
 all, DIR default press/drafts/<today>/. The variants:
-    p05-variant-five-on-one   all five filmmakers on one page (page_bios_single)
     p09-variant-kit-idiom     page 9 in page 3's idiom (page_credits_variant)
 """
 import datetime, importlib.util, os, sys
@@ -22,7 +21,6 @@ def _load(name, path):
 
 kit = _load("kit", os.path.join(ROOT, "tools", "build-epk-kit.py"))
 VARIANTS = {
-    "p05-variant-five-on-one": lambda c, d: kit.page_bios_single(c, d, kit.BIOS),
     "p09-variant-kit-idiom": lambda c, d: kit.page_credits_variant(c, d),
 }
 
