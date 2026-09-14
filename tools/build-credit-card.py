@@ -1025,18 +1025,18 @@ def page_thanks(c, d, z, stills, transparent):
             blocks.append((0, [([T(role.upper(), z.gold(z.extras_label), W / 2, "center", ui=True)], 40 * s)], True))
             blocks += column_block(c, [[n.upper()] for n in names], columns_for(z), z.body3, pitch, 0)
         # (2) the heading as 11.1 writes it, (3) the thanks in data order, '&'-wrapped
-        # The dedication, when 11.1 carries one, opens the thanks in the heading's class, one
-        # heading pitch above it; the page pays for it below (the legal gaps drop one pitch
-        # each, 3P -> 2P and 4P -> 3P, still on the 28 grid) so 53 names and the mark still fit.
-        if dedication:
-            blocks.append((76 * s - pitch, [([T(dedication.upper(), z.gold(z.thanks_head), W / 2, "center", ui=True)],
-                                            56 * s)], True))
-        blocks.append((0 if dedication else 76 * s - pitch,
-                       [([T(heading.upper(), z.gold(z.thanks_head), W / 2, "center", ui=True)], 56 * s)], True))
+        blocks.append((76 * s - pitch, [([T(heading.upper(), z.gold(z.thanks_head), W / 2, "center", ui=True)],
+                                        56 * s)], True))
         wrap_at = 350.0 if len(cols) == 3 else cols[0][2]
         entries = [amp_wrap(c, n.upper(), z.body3, wrap_at) for n in thanks]
         blocks += column_block(c, entries, cols, z.body3, pitch, 0)
         nwrap = sum(1 for e in entries if len(e) > 1)
+        # The dedication, when 11.1 carries one, closes the thanks on its own line in the
+        # heading's class, one pitch of air above it (Luke, 2026-09-14: "after the thank yous,
+        # its own line"); the page pays for it below: the legal gaps drop one pitch each,
+        # 3P -> 2P and 4P -> 3P, still on the 28 grid, so 52 names and the mark still fit.
+        if dedication:
+            blocks.append((pitch, [([T(dedication.upper(), z.gold(z.thanks_head), W / 2, "center", ui=True)], pitch)], False))
         # (4)-(8): one atomic block from the PARTNER LOGOS band to the copyright, so they
         # always share a page with each other and with the AFI slot. On the 28 grid:
         # paragraph gaps 56 (2P), boilerplate -> fellows 84 (3P), fellows -> copyright
