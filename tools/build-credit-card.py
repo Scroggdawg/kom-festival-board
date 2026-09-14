@@ -510,7 +510,11 @@ def amp_wrap(c, text, st, measure):
         return [text]
     i = text.rfind(" & ")
     if i > 0:
-        return [text[:i], "& " + text[i + 3:]]
+        parts = [text[:i], "& " + text[i + 3:]]
+        if all(width(c, q, st) <= measure for q in parts):
+            return parts
+        # '& KANCHAN DEVARAKONDA' is wider than a four-column measure: break at the last
+        # space instead ('RAGHURAM & KANCHAN' / 'DEVARAKONDA') rather than step the block down
     j = text.rfind(" ")
     if j > 0 and text[j + 1:] in ("JR.", "SR.", "II", "III", "IV"):
         j = text.rfind(" ", 0, j)          # 'GEORGE DEWEY / STANYARD JR.', never 'JR.' alone
@@ -913,6 +917,7 @@ COLS3 = ((400.0, "right", 340.0), (648.0, "center", 480.0), (896.0, "left", 340.
 # same mirrored idiom, two columns hanging off each side of the centre gutter, inside
 # the CREW page's 48 pt side margins.
 COLS4 = ((338.0, "right", 290.0), (638.0, "right", 290.0), (658.0, "left", 290.0), (958.0, "left", 290.0))
+THANKS_FOUR_COLS_FROM = 36              # more thanks than this set in four columns whatever the face
 COLS2 = ((628.0, "right", 560.0), (668.0, "left", 560.0))
 COLS1 = ((648.0, "center", 1100.0),)
 BAND_X = (90.0, 1206.0)
@@ -1032,9 +1037,12 @@ def page_thanks(c, d, z, stills, transparent):
     cols = columns_for(z)
     blocks, nwrap = build_blocks(cols)
     pages = paginate(blocks, top, P3_BOTTOM)
-    if not z.stacked and len(pages) > 1 and cols is COLS3:
+    if not z.stacked and cols is COLS3 and (len(pages) > 1 or len(thanks) > THANKS_FOUR_COLS_FROM):
         # The film's crawl thanks fifty-three (2026-09-14); three columns overflow the page
-        # at 1x, four hold them with the legal block still above the AFI slot.
+        # at 1x in Baskerville, four hold them with the legal block still above the AFI slot.
+        # The count rule, not only the overflow, so the Canva contract (measured in the
+        # narrower-setting scale 0.96 Libre, where three columns just fit) keeps the PDF's
+        # column count: one object, two outputs.
         cols = COLS4
         blocks, nwrap = build_blocks(cols)
         pages = paginate(blocks, top, P3_BOTTOM)
