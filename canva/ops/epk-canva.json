@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generated": "2026-09-14T10:08:46",
+ "generated": "2026-09-14T10:54:33",
  "source": {
-  "kit_commit": "ef3d01c",
+  "kit_commit": "ddf42ae",
   "epk_rev": 27
  },
  "measured_face": "Libre Baskerville 2.005 (OFL; press/assets/derived/fonts/libre-baskerville)",
@@ -5187,7 +5187,7 @@
    "n": 11,
    "name": "11 Thanks",
    "background": "#0b0806",
-   "count": 105,
+   "count": 101,
    "elements": [
     {
      "type": "image",
@@ -6689,51 +6689,18 @@
      "links": []
     },
     {
-     "type": "rule",
-     "x": 538.0,
-     "y": 1601.65,
-     "w": 220.0,
-     "h": 0.7,
-     "color": "#6b5942"
-    },
-    {
-     "type": "rule",
-     "x": 538.0,
-     "y": 1657.65,
-     "w": 220.0,
-     "h": 0.7,
-     "color": "#6b5942"
-    },
-    {
-     "type": "rule",
-     "x": 538.0,
-     "y": 1601.65,
-     "w": 0.0,
-     "h": 0.7,
-     "color": "#6b5942"
-    },
-    {
-     "type": "rule",
-     "x": 758.0,
-     "y": 1601.65,
-     "w": 0.0,
-     "h": 0.7,
-     "color": "#6b5942"
-    },
-    {
-     "type": "text",
-     "kind": "line",
-     "text": "AFI CONSERVATORY LOGO",
-     "font": "Bask",
-     "size_pt": 11,
-     "leading_pt": 13.2,
-     "tracking_pt": 1.4,
-     "color": "#b9a88c",
-     "align": "center",
-     "x": 526.49,
-     "y": 1623.55,
-     "w": 243.02,
-     "links": []
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva/p11-e02.jpg",
+     "file": "press/assets/derived/canva/p11-e02.jpg",
+     "px": [
+      1320,
+      110
+     ],
+     "x": 483.0,
+     "y": 1616.21,
+     "w": 330.0,
+     "h": 27.59,
+     "alt": "AFIC-logo-cream"
     }
    ],
    "unattached_links": []

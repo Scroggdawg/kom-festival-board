@@ -113,7 +113,14 @@ def flatten_image(op, scrim, out_path, write):
     tw, th = max(1, round(w * scale_px)), max(1, round(h * scale_px))
     if not write:
         return tw, th
-    im = Image.open(op["file"]).convert("RGB")
+    im = Image.open(op["file"])
+    if im.mode in ("RGBA", "LA", "P") and (im.mode != "P" or "transparency" in im.info):
+        # a transparent PNG (the AFI wordmark) composites over the page ground; convert("RGB")
+        # alone would fill the transparent field with the file's hidden colour
+        base = Image.new("RGBA", im.size, tuple(kit_ground_rgb()) + (255,))
+        im = Image.alpha_composite(base, im.convert("RGBA")).convert("RGB")
+    else:
+        im = im.convert("RGB")
     iw, ih = im.size
     r = op["region"]
     rx0, ry0, rx1, ry1 = r[0] * iw, r[1] * ih, r[2] * iw, r[3] * ih
@@ -130,6 +137,8 @@ def flatten_image(op, scrim, out_path, write):
     crop = crop.resize((tw, th), Image.LANCZOS)
     if op.get("grade") == "mono":                            # the kit's value-only grade
         crop = kit.grade_mono_pixels(crop)
+    if op.get("fade"):                                       # the kit's bottom fade (page 2)
+        crop = kit.fade_bottom_pixels(crop, op["fade"])
     ground = Image.new("RGB", (tw, th), tuple(kit_ground_rgb()))
     alpha = float(op.get("opacity", 1.0))
     out = Image.blend(ground, crop, alpha) if alpha < 1.0 else crop

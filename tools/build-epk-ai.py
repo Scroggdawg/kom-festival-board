@@ -117,12 +117,14 @@ class Ops:
         self.ops.append(op)
 
     def image(self, path, box, region=(0, 0, 1, 1), focus=(0.5, 0.5), opacity=1.0, fit="cover",
-              grade=None):
+              grade=None, fade=None):
         x, top, w, h = box
         op = {"op": "image", "p": self.page, "file": path, "x": x, "top": top, "w": w,
               "h": h, "region": list(region), "focus": list(focus), "opacity": opacity, "fit": fit}
         if grade:
             op["grade"] = grade             # a draw-time value grade the Canva emitter bakes;
+        if fade:
+            op["fade"] = fade               # a draw-time bottom fade, likewise baked
         self.ops.append(op)                 # Illustrator links the master ungraded
 
     def area(self, text, x, top, w, h, font, size, lead, fill, align, gap):
@@ -208,7 +210,7 @@ def install(o):
     def reader(im, q=84):
         return im
 
-    def cover(c, im, x, y, w, h, alpha=1.0, focus=(0.5, 0.5), q=84, zoom=1.0):
+    def cover(c, im, x, y, w, h, alpha=1.0, focus=(0.5, 0.5), q=84, zoom=1.0, fade=None):
         region = im.region
         if zoom != 1.0:
             # the kit's crop-only zoom becomes a tighter region, so Illustrator and the
@@ -221,7 +223,18 @@ def install(o):
             cx, cy = rx0 + (rw - cw) * focus[0], ry0 + (rh - ch) * focus[1]
             region, focus = (cx / iw, cy / ih, (cx + cw) / iw, (cy + ch) / ih), (0.5, 0.5)
         o.image(to_drive(im.path), (x, y + h, w, h), region=region, focus=focus, opacity=alpha,
-                grade=getattr(im, "grade", None))
+                grade=getattr(im, "grade", None), fade=fade)
+
+    def contain_image(c, path, x0, y0, x1, y1):
+        """The card's logo primitive: the same contained rectangle, recorded as a contain-fit
+        image (the emitter composites the PNG's alpha over the ground)."""
+        im = Image.open(path)
+        iw, ih = im.size
+        bw, bh = x1 - x0, y1 - y0
+        s = min(bw / iw, bh / ih)
+        w, h = iw * s, ih * s
+        x, top = x0 + (bw - w) / 2, y0 + (bh - h) / 2
+        o.image(to_drive(path), (x, H - top, w, h), fit="contain")
 
     def mono(im, target_l=20.0):
         im.grade = "mono"                   # recorded, not computed: the emitter grades its
@@ -271,6 +284,7 @@ def install(o):
     kit.load_rgb, kit.unletterbox, kit.reader = load_rgb, unletterbox, reader
     kit.cover, kit.ground, kit.tracked, kit.para, kit.mono = cover, ground, tracked, para, mono
     card.tracked = tracked
+    card.contain_image = contain_image
     # A card that publishes its ground recipe draws its own ground through the Recorder;
     # the older card gets the stand-in that knows its one recipe.
     card.ground = card_ground_native if hasattr(card, "GROUND_RECIPE") else card_ground

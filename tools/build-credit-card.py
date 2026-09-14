@@ -922,6 +922,11 @@ COLS2 = ((628.0, "right", 560.0), (668.0, "left", 560.0))
 COLS1 = ((648.0, "center", 1100.0),)
 BAND_X = (90.0, 1206.0)
 AFI_BOX = (538.0, 1602.0, 758.0, 1658.0)        # x0, y0, x1, y1 from the top; 220 x 56
+# The AFI Conservatory wordmark (Luke, 2026-09-14: AFIC-logo-blk.webp, 622 x 52, dark on
+# transparent; the cream recolour beside it is the page's derivative, alpha kept) sits
+# contained in a box centred on the slot but wider, since the mark is a 12:1 wordmark.
+AFI_LOGO = os.path.join(ROOT, "press", "assets", "LOGOS", "AFIC-logo-cream.png")
+LOGO_BOX = (483.0, 1602.0, 813.0, 1658.0)       # 330 x 56 from the top; the mark draws 330 x 28
 AFI_GAP = 90.0                                  # air between the copyright baseline and the slot
 AFI_SLACK = 200.0                               # more than this above the slot pushes the legal block down
 
@@ -971,6 +976,20 @@ def column_block(c, items, cols, st, pitch, gap_before):
                 keep = keep or flat[r][1]
         blocks.append((gap_before if r == 0 else 0, [(segs, pitch)], keep))
     return blocks
+
+
+def contain_image(c, path, x0, y0, x1, y1):
+    """A transparent PNG drawn contained in the box (from the top), centred, aspect kept,
+    alpha honoured. The replays patch this: the Canva emitter places the derivative at the
+    same rectangle; Illustrator links the file."""
+    from PIL import Image as _Image
+    im = _Image.open(path)
+    iw, ih = im.size
+    bw, bh = x1 - x0, y1 - y0
+    s = min(bw / iw, bh / ih)
+    w, h = iw * s, ih * s
+    x, top = x0 + (bw - w) / 2, y0 + (bh - h) / 2
+    c.drawImage(ImageReader(im), x, H - top - h, w, h, mask="auto")
 
 
 def page_thanks(c, d, z, stills, transparent):
@@ -1067,7 +1086,9 @@ def page_thanks(c, d, z, stills, transparent):
         if i and not (is_last and len(page) == 1):
             continued(c, z, 40.0)
         draw_page_lines(c, page)
-        if is_last:
+        if is_last and os.path.exists(AFI_LOGO):
+            contain_image(c, AFI_LOGO, *LOGO_BOX)
+        elif is_last:
             x0, y0, x1, y1 = AFI_BOX
             hairline(c, x0, y0, x1, y0)
             hairline(c, x0, y1, x1, y1)

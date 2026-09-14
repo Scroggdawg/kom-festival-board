@@ -214,15 +214,18 @@ def reader(im, q=84):
     return ImageReader(buf)
 
 
-def cover(c, im, x, y, w, h, alpha=1.0, focus=(0.5, 0.5), q=84, zoom=1.0):
+def cover(c, im, x, y, w, h, alpha=1.0, focus=(0.5, 0.5), q=84, zoom=1.0, fade=None):
     """Draw im to fill the box, cropping. focus is where in the image to keep; zoom > 1
-    crops tighter around it (the master is never resampled on disk)."""
+    crops tighter around it (the master is never resampled on disk). fade: the bottom
+    fraction of the box blended into the page ground (fade_bottom_pixels)."""
     iw, ih = im.size
     sc = max(w / iw, h / ih) * zoom
     cw, ch = w / sc, h / sc
     cx = (iw - cw) * focus[0]
     cy = (ih - ch) * focus[1]
     crop = im.crop((int(cx), int(cy), int(cx + cw), int(cy + ch)))
+    if fade:
+        crop = fade_bottom_pixels(crop, fade)
     c.saveState()
     if alpha < 1.0:
         c.setFillAlpha(alpha)
@@ -239,6 +242,23 @@ def grade_mono_pixels(im, target_l=20.0):
     t = ImageOps.colorize(g, black=(11, 8, 6), white=(239, 230, 214))
     mean = ImageStat.Stat(t.convert("L")).mean[0]
     return ImageEnhance.Brightness(t).enhance(target_l / mean) if mean > 0 else t
+
+
+def fade_bottom_pixels(im, frac):
+    """Blend the bottom `frac` of the image into the page ground on an eased ramp, so a
+    hero photograph meets the page without a hard edge (page 2: the director's note,
+    2026-09-14, "the line at the bottom of the photo is too hard"). Draw time only; the
+    master is untouched; the Canva emitter applies the same ramp to its derivative."""
+    import numpy as np
+    w, h = im.size
+    n = max(1, int(round(h * frac)))
+    t = np.zeros(h, dtype=np.float32)
+    u = np.linspace(0.0, 1.0, n, dtype=np.float32)
+    t[h - n:] = u * u * (3.0 - 2.0 * u)                    # smoothstep: no visible start line
+    g = np.array([GROUND.red * 255, GROUND.green * 255, GROUND.blue * 255], dtype=np.float32)
+    a = np.asarray(im.convert("RGB"), dtype=np.float32)
+    out = a * (1.0 - t)[:, None, None] + g[None, None, :] * t[:, None, None]
+    return Image.fromarray(np.clip(out + 0.5, 0, 255).astype(np.uint8), "RGB")
 
 
 def mono(im, target_l=20.0):
@@ -361,6 +381,9 @@ def page_poster(c):
     c.showPage()
 
 
+HERO_FADE = 0.16      # the bottom 16% of page 2's hero eases into the ground (director, 2026-09-14)
+
+
 def page_logline(c, d):
     ground(c)
     # 720 pt keeps 76% of the frame's width from its left edge, so the owner watching from
@@ -368,7 +391,7 @@ def page_logline(c, d):
     # what remained was a physique shot, not the story. 700 is the floor (P2-1).
     hero_h = 720.0
     im = unletterbox(load_rgb(STILL(5), 2000))
-    cover(c, im, 0, H - hero_h, W, hero_h, focus=(0.0, 0.5), q=88)
+    cover(c, im, 0, H - hero_h, W, hero_h, focus=(0.0, 0.5), q=88, fade=HERO_FADE)
     lg, lg_draft = logline(d)
     sy, sy_draft = synopsis(d)
     x, w = M, 820.0                                # the page margin; 80-94 characters a line

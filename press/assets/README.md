@@ -10,6 +10,8 @@ Delivered EPK materials, named to the Drive and delivery skeletons in `press/epk
 | `STILLS/Still 2026-09-08 210640_1.1.N.png` | 41 frame grabs, PNG 1920×1080 letterboxed, picture in rows 138–941 (2.39:1). `1.1.25` and `1.1.26` are the same frame | `FINAL/KOM Stills (Additional)`, Resolve export 210640 | 2026-09-08 |
 | `BTS/*.jpg`, `BTS/*.JPG` | 102 behind-the-scenes photographs, camera originals, unmodified, 714 MB | `FINAL/BTS Selects`, same files as the shared Drive folder | 2026-09-08 |
 | `HEADSHOTS/KOM Headshots v3-N.jpg`, `HEADSHOTS/KOM Headshots-1.jpg` | 5 headshots, 6200 px wide, unmodified: v3-1 You Wu, v3-2 Ruoxiao Li, v3-3 RJ Ragampudi, v3-4 Luke Scroggins, and `KOM Headshots-1.jpg` Jordan Betine (the same 14 Sep 2024 session, found on the Drive 2026-09-11; the portrait Luke sent that day). Camera names kept; each has a named copy on the Drive (`Director_Jordan_Betine.jpg` and the four Luke made) | `Headshots/Edits`, shot Sept 2024 | 2026-09-09, 2026-09-11 |
+| `LOGOS/AFIC-logo-blk.webp` | The AFI Conservatory wordmark, 622 × 52, dark on transparent, as Luke supplied it (his Downloads, 2026-09-14). Page 11's slot draws it | Luke, from AFI | 2026-09-14 |
+| `LOGOS/AFIC-logo-cream.png` | **Derivative**: the same alpha recoloured to the page's cream (239, 230, 214) so the wordmark reads on the dark ground; AFI's own white version, if one comes, replaces it | built from the webp | 2026-09-14 |
 | `STILLS/contact-sheet.jpg`, `BTS/contact-sheet.jpg` | Every frame, numbered or named. **Derivatives**, for choosing | built from the sets | 2026-09-08 |
 
 Resolve gallery names and camera filenames are kept, because they are how a frame is found again in the project.
