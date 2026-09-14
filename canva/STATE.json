@@ -30,7 +30,7 @@
   ],
   "scale_px_per_pt": 1.333333,
   "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL",
-  "pages": "11 pages in order, every element placed; page 7 rebuilt 2026-09-11 from the 395-element contract (Spectator rows gone)",
+  "pages": "11 pages in order, every element placed; page 11 rebuilt 2026-09-14 from the 423-element contract (53 thanks, four columns)",
   "rebuilds": [
    "2026-09-11 19:52-20:06Z first full build (Baskerville-measured contract); Luke's five notes",
    "2026-09-11 21:10-21:13Z rebuild from the Libre-measured contract (commit ffc96ca): all 11 pages deleted in the grid view one by one (Delete on page 1, eleven times, after '+' added a blank page to keep), Reset, Load, Build all ascending, Place page 10, blank page deleted"
@@ -177,11 +177,12 @@
    "n": 11,
    "name": "11 Thanks",
    "status": "done",
-   "mode": "batch",
-   "at": "2026-09-11T21:10:56Z (rebuild from the Libre-measured contract, generated 16:02:44)",
-   "elements_attempted": 77,
-   "elements_placed": 77,
-   "page_id": "PBK68Mp87t11JtWM"
+   "mode": "per-element fallback (batch rejected: 105 elements > the 100-element addPage cap)",
+   "at": "2026-09-14T15:27:59Z (rebuilt alone: old page deleted, page 10 current, Build page 11 landed after it)",
+   "elements_attempted": 105,
+   "elements_placed": 105,
+   "page_id": "PBxcCj2L32qhQBrr",
+   "note": "the film's 53-name thanks list in four columns; the per-element run met the addElementAtPoint rate limit once (Canva's Dev Toolkit opened on the alert) and the backoff carried it to 105/105"
   }
  ],
  "pilot": {
@@ -207,7 +208,7 @@
   "view_link": null
  },
  "last_error": null,
- "next_step": "Rebuild page 11 in Canva from the 423-element contract (generated 2026-09-14T10:08:46): with the app's tab IN FRONT, Load, fonts if stale, delete page 11, select page 10, Build page 11, read back. Then Luke's rulings (dedication line on page 11; five-on-one filmmakers page; Spectators off pages 3 and 9), export, Drive, share.",
+ "next_step": "Luke's rulings: the dedication line on page 11 ('In Loving Memory of George Dewey Stanyard Jr.'); the five-on-one filmmakers page; Spectators off pages 3 and 9. Then export (Luke's click), verify with tools/check-canva-export.py, Drive EPK BUILDS/CANVA, share.",
  "app": {
   "path": "canva/kom-epk-builder",
   "commit": "4fa036b",
