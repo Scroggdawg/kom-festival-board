@@ -322,7 +322,7 @@ def dedication_line(d):
     (Luke, 2026-09-14: yes). Drawn over the thanks heading in the heading's own class."""
     for l in field(d, "11.1").split("\n"):
         if l.strip().lower().startswith("in loving memory"):
-            return l.strip().rstrip(".")
+            return l.strip()                # 'Jr.' keeps its period, as the crawl writes it
     return ""
 
 

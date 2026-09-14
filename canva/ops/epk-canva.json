@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generated": "2026-09-14T11:08:25",
+ "generated": "2026-09-14T11:09:51",
  "source": {
-  "kit_commit": "6210d37",
+  "kit_commit": "8a879f8",
   "epk_rev": 29
  },
  "measured_face": "Libre Baskerville 2.005 (OFL; press/assets/derived/fonts/libre-baskerville)",
@@ -5386,16 +5386,16 @@
     {
      "type": "text",
      "kind": "line",
-     "text": "IN LOVING MEMORY OF GEORGE DEWEY STANYARD JR",
+     "text": "IN LOVING MEMORY OF GEORGE DEWEY STANYARD JR.",
      "font": "Bask-B",
      "size_pt": 25.48,
      "leading_pt": 30.58,
      "tracking_pt": 2.0,
      "color": "#efe6d6",
      "align": "center",
-     "x": 134.38,
+     "x": 129.64,
      "y": 295.23,
-     "w": 1027.24,
+     "w": 1036.73,
      "links": []
     },
     {
