@@ -10,6 +10,8 @@
 
 4. Before this: page 7 rebuilt without the Spectator rows, the five-on-one test page, the Libre-measured rebuild (handoffs 115–116). Luke has been editing links and verbiage himself; the design's title in Canva now reads "STILLS".
 
+**Seen on the read-back after the rebuild (2026-09-14):** page 3's genre line in Canva now reads "SOUTHERN GOTHIC, ACTION" (Luke's own edit in the editor; the worksheet still says historical drama, Southern gothic). The line reads 60 px tall to the app, two lines' worth, though it draws as one; it is his edit and was left alone. If the genre has changed, the worksheet field should say so too (`tools/epk.py set`), or the PDF and any future rebuild of page 3 will carry the old wording.
+
 ## Next
 
 1. Luke: the dedication line on page 11, yes or no; the five-on-one filmmakers page, yes or no; Spectators off pages 3 and 9, yes or no.
