@@ -59,16 +59,16 @@
   }
  },
  "ops": {
-  "generated": "2026-09-14T11:09:51",
-  "kit_commit": "34ae6e0",
-  "epk_rev": 29,
+  "generated": "2026-09-14T11:36:06",
+  "kit_commit": "5585485",
+  "epk_rev": 30,
   "measured_face": "Libre Baskerville 2.005 (OFL)",
-  "elements": 418,
+  "elements": 416,
   "images": 24,
   "paragraphs": 19,
   "links": 20,
   "check": "tools/check-canva-contract.py: 0 problems (no baseline overlaps, no paragraph past the foot margin; p04 last paragraph ends at 1503, signature 56 pt below; p07 gaps 40 pt)",
-  "note": "dedication line on page 11; genre 3.1 follows Luke's Canva edit; Spectators off page 9 (page 3 keeps them); five-on-one page cancelled"
+  "note": "52 thanks + the dedication line after them; genre 3.1 follows Luke's Canva edit; Spectators off page 9; five-on-one cancelled"
  },
  "pages_built": [
   {
@@ -209,7 +209,7 @@
   "view_link": null
  },
  "last_error": null,
- "next_step": "With the app's tab in front: Load (418 elements); delete page 9, select page 8, Build page 9; delete page 11, select page 10, Build page 11 (per-element); read back. Then export (Luke's click), verify with tools/check-canva-export.py, Drive EPK BUILDS/CANVA, share.",
+ "next_step": "With the app's tab in front: Load (416 elements); delete page 9, select page 8, Build page 9; delete page 11, select page 10, Build page 11 (per-element); read back. Then export (Luke's click), verify with tools/check-canva-export.py, Drive EPK BUILDS/CANVA, share.",
  "app": {
   "path": "canva/kom-epk-builder",
   "commit": "4fa036b",
