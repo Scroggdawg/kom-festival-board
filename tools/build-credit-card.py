@@ -512,6 +512,8 @@ def amp_wrap(c, text, st, measure):
     if i > 0:
         return [text[:i], "& " + text[i + 3:]]
     j = text.rfind(" ")
+    if j > 0 and text[j + 1:] in ("JR.", "SR.", "II", "III", "IV"):
+        j = text.rfind(" ", 0, j)          # 'GEORGE DEWEY / STANYARD JR.', never 'JR.' alone
     if j > 0:
         return [text[:j], text[j + 1:]]
     return [text]
@@ -907,6 +909,10 @@ def two_col_pages(c, title, entries, z, stills, transparent):
 # ---------- page 3: THANKS + AFI ----------
 P3_LABEL_Y, P3_BOTTOM = 96.0, 1560.0
 COLS3 = ((400.0, "right", 340.0), (648.0, "center", 480.0), (896.0, "left", 340.0))
+# Four columns for a long thanks list (the film's crawl thanks fifty-three, 2026-09-14): the
+# same mirrored idiom, two columns hanging off each side of the centre gutter, inside
+# the CREW page's 48 pt side margins.
+COLS4 = ((338.0, "right", 290.0), (638.0, "right", 290.0), (658.0, "left", 290.0), (958.0, "left", 290.0))
 COLS2 = ((628.0, "right", 560.0), (668.0, "left", 560.0))
 COLS1 = ((648.0, "center", 1100.0),)
 BAND_X = (90.0, 1206.0)
@@ -967,57 +973,72 @@ def page_thanks(c, d, z, stills, transparent):
     AFI CONSERVATORY LOGO slot: the reference's p11 order with our extras in its
     overflow position. Everything from d (9.2, 11.1, 11.3)."""
     s = z.s
-    cols = columns_for(z)
     pitch = z.pitch3
     extras = [e for e in pairs(field(d, "9.2")) if e[0] and e[0].lower() == "extras"]
     heading, thanks = thanks_list(d)
     fellows = fellows_list(d)
     items, copy = boilerplate(d)
-    blocks = []
-    # (1) the extras band: the label keeps with the first row; rows may break across
-    # pages in the enlarged modes only (at 1x the page asserts it holds everything)
-    if extras:
-        role, names = extras[0]
-        blocks.append((0, [([T(role.upper(), z.gold(z.extras_label), W / 2, "center", ui=True)], 40 * s)], True))
-        blocks += column_block(c, [[n.upper()] for n in names], cols, z.body3, pitch, 0)
-    # (2) the heading as 11.1 writes it, (3) the thanks in data order, '&'-wrapped
-    blocks.append((76 * s - pitch, [([T(heading.upper(), z.gold(z.thanks_head), W / 2, "center", ui=True)],
-                                    56 * s)], True))
-    wrap_at = 350.0 if len(cols) == 3 else cols[0][2]
-    entries = [amp_wrap(c, n.upper(), z.body3, wrap_at) for n in thanks]
-    blocks += column_block(c, entries, cols, z.body3, pitch, 0)
-    nwrap = sum(1 for e in entries if len(e) > 1)
-    # (4)-(8): one atomic block from the PARTNER LOGOS band to the copyright, so they
-    # always share a page with each other and with the AFI slot. On the 28 grid:
-    # paragraph gaps 56 (2P), boilerplate -> fellows 84 (3P), fellows -> copyright
-    # 112 (4P); the copyright then sits AFI_GAP above the slot at 1x.
-    bp = z.boiler_pitch
-    # The PARTNER LOGOS band is drawn only when 11.2 holds logos to place; an empty field
-    # earns no 148 pt of rules on the end card (C10.4). The AFI box below is unconditional.
-    tail = []
-    if field(d, "11.2").strip():
-        tail = [([("rule",) + BAND_X], 49.0),
-                ([T("PARTNER LOGOS", z.slot_partner, W / 2, "center", ui=True)], 41.0),
-                ([("rule",) + BAND_X], 58 * min(s, 1.3))]
-    tail.append(([T(items[3].upper(), z.boiler3, W / 2, "center")], 56 * min(s, 1.3)))
-    for k, para in enumerate(items[:3]):
-        ls = greedy_wrap(c, para.upper(), z.boiler3, BOILER_MEASURE)
-        for j, ln in enumerate(ls):
-            tail.append(([T(ln, z.boiler3, W / 2, "center")],
-                         bp if j < len(ls) - 1 else (56 * min(s, 1.3) if k < 2 else 84 * s)))
-    gutter = 16 * s
-    fst = step_down(c, [(n.upper(), W / 2 - gutter - M) for n, _ in fellows]
-                    + [(t.upper(), W / 2 - gutter - M) for _, t in fellows], z.body3)
-    for j, (name, ttl) in enumerate(fellows):
-        tail.append(([T(name.upper(), fst, W / 2 - gutter, "right"),
-                      T(ttl.upper(), fst, W / 2 + gutter, "left")],
-                     pitch if j < len(fellows) - 1 else 112 * s))
-    tail.append(([T(copy[0].upper(), z.body3, W / 2, "center")], pitch))
-    tail.append(([T(copy[1].upper(), z.body3, W / 2, "center")], pitch))
-    blocks.append((60 * s - pitch, tail, False))
+
+    def build_blocks(cols):
+        """The page's blocks with the thanks in `cols`; the extras band keeps the page's
+        own three columns (four would step its 20 pt down to 16 for the longest name).
+        nwrap counts the '&'-wrapped thanks entries."""
+        blocks = []
+        # (1) the extras band: the label keeps with the first row; rows may break across
+        # pages in the enlarged modes only (at 1x the page asserts it holds everything)
+        if extras:
+            role, names = extras[0]
+            blocks.append((0, [([T(role.upper(), z.gold(z.extras_label), W / 2, "center", ui=True)], 40 * s)], True))
+            blocks += column_block(c, [[n.upper()] for n in names], columns_for(z), z.body3, pitch, 0)
+        # (2) the heading as 11.1 writes it, (3) the thanks in data order, '&'-wrapped
+        blocks.append((76 * s - pitch, [([T(heading.upper(), z.gold(z.thanks_head), W / 2, "center", ui=True)],
+                                        56 * s)], True))
+        wrap_at = 350.0 if len(cols) == 3 else cols[0][2]
+        entries = [amp_wrap(c, n.upper(), z.body3, wrap_at) for n in thanks]
+        blocks += column_block(c, entries, cols, z.body3, pitch, 0)
+        nwrap = sum(1 for e in entries if len(e) > 1)
+        # (4)-(8): one atomic block from the PARTNER LOGOS band to the copyright, so they
+        # always share a page with each other and with the AFI slot. On the 28 grid:
+        # paragraph gaps 56 (2P), boilerplate -> fellows 84 (3P), fellows -> copyright
+        # 112 (4P); the copyright then sits AFI_GAP above the slot at 1x.
+        bp = z.boiler_pitch
+        # The PARTNER LOGOS band is drawn only when 11.2 holds logos to place; an empty field
+        # earns no 148 pt of rules on the end card (C10.4). The AFI box below is unconditional.
+        tail = []
+        if field(d, "11.2").strip():
+            tail = [([("rule",) + BAND_X], 49.0),
+                    ([T("PARTNER LOGOS", z.slot_partner, W / 2, "center", ui=True)], 41.0),
+                    ([("rule",) + BAND_X], 58 * min(s, 1.3))]
+        tail.append(([T(items[3].upper(), z.boiler3, W / 2, "center")], 56 * min(s, 1.3)))
+        for k, para in enumerate(items[:3]):
+            ls = greedy_wrap(c, para.upper(), z.boiler3, BOILER_MEASURE)
+            for j, ln in enumerate(ls):
+                tail.append(([T(ln, z.boiler3, W / 2, "center")],
+                             bp if j < len(ls) - 1 else (56 * min(s, 1.3) if k < 2 else 84 * s)))
+        gutter = 16 * s
+        fst = step_down(c, [(n.upper(), W / 2 - gutter - M) for n, _ in fellows]
+                        + [(t.upper(), W / 2 - gutter - M) for _, t in fellows], z.body3)
+        for j, (name, ttl) in enumerate(fellows):
+            tail.append(([T(name.upper(), fst, W / 2 - gutter, "right"),
+                          T(ttl.upper(), fst, W / 2 + gutter, "left")],
+                         pitch if j < len(fellows) - 1 else 112 * s))
+        tail.append(([T(copy[0].upper(), z.body3, W / 2, "center")], pitch))
+        tail.append(([T(copy[1].upper(), z.body3, W / 2, "center")], pitch))
+        blocks.append((60 * s - pitch, tail, False))
+        return blocks, nwrap
+
     # later pages of an enlarged stack open lower, under a CONTINUED tag at baseline 40
     top = P3_LABEL_Y if not z.stacked else (P3_LABEL_Y, P3_LABEL_Y + 30 * s)
+    cols = columns_for(z)
+    blocks, nwrap = build_blocks(cols)
     pages = paginate(blocks, top, P3_BOTTOM)
+    if not z.stacked and len(pages) > 1 and cols is COLS3:
+        # The film's crawl thanks fifty-three (2026-09-14); three columns overflow the page
+        # at 1x, four hold them with the legal block still above the AFI slot.
+        cols = COLS4
+        blocks, nwrap = build_blocks(cols)
+        pages = paginate(blocks, top, P3_BOTTOM)
+        print(f"  THANKS: four columns (three overflowed the page at 1x)")
     if not z.stacked:
         assert len(pages) == 1, f"THANKS overflowed one page at 1x ({len(pages)})"
     # the AFI slot is a foot anchor: if the legal block ends more than AFI_SLACK above
