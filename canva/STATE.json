@@ -30,7 +30,7 @@
   ],
   "scale_px_per_pt": 1.333333,
   "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL",
-  "pages": "11 pages in order, every element placed; pages 2 and 11 rebuilt 2026-09-14 16:00-16:02Z (hero fade, AFI wordmark)",
+  "pages": "TEN pages: page 11 (Thanks) is deleted and awaits its rebuild; do not export until it is back",
   "rebuilds": [
    "2026-09-11 19:52-20:06Z first full build (Baskerville-measured contract); Luke's five notes",
    "2026-09-11 21:10-21:13Z rebuild from the Libre-measured contract (commit ffc96ca): all 11 pages deleted in the grid view one by one (Delete on page 1, eleven times, after '+' added a blank page to keep), Reset, Load, Build all ascending, Place page 10, blank page deleted"
@@ -158,10 +158,11 @@
    "name": "09 Cast credits",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T21:10:53Z (rebuild from the Libre-measured contract, generated 16:02:44)",
-   "elements_attempted": 44,
-   "elements_placed": 44,
-   "page_id": "PB3HksJvtsdW6xjn"
+   "at": "2026-09-14T17:44:14Z (rebuilt alone after page 8)",
+   "elements_attempted": 40,
+   "elements_placed": 40,
+   "page_id": "PB0mLqlDpL4JcxLQ",
+   "note": "the two Spectator rows gone; four executive producers as the worksheet has them (the earlier page showed three)"
   },
   {
    "n": 10,
@@ -177,13 +178,12 @@
   {
    "n": 11,
    "name": "11 Thanks",
-   "status": "done",
-   "mode": "per-element fallback (batch rejected: 101 elements > the 100-element addPage cap)",
-   "at": "2026-09-14T16:02:08Z (rebuilt alone after page 10)",
-   "elements_attempted": 101,
-   "elements_placed": 101,
-   "page_id": "PBfFVhgdjlrtgm4R",
-   "note": "the AFI Conservatory wordmark (p11-e02.jpg, cream recolour composited over the ground) replaces the hairline slot; 53 thanks in four columns"
+   "status": "MISSING — old page deleted 2026-09-14 ~17:47Z, the rebuild did not start (the app's tab went to the background; its panel stopped taking input)",
+   "mode": "per-element (102 elements, over the addPage cap)",
+   "elements_attempted": 0,
+   "elements_placed": 0,
+   "page_id": null,
+   "note": "contract generated 2026-09-14T11:36:06: 52 thanks, the dedication line after them, the AFI wordmark"
   }
  ],
  "pilot": {
@@ -209,7 +209,7 @@
   "view_link": null
  },
  "last_error": null,
- "next_step": "With the app's tab in front: Load (416 elements); delete page 9, select page 8, Build page 9; delete page 11, select page 10, Build page 11 (per-element); read back. Then export (Luke's click), verify with tools/check-canva-export.py, Drive EPK BUILDS/CANVA, share.",
+ "next_step": "With the app's tab in front: select page 10, set Page n = 11, Build page 11 (per-element, ~2 min), read back. Then export (Luke's click), verify with tools/check-canva-export.py, Drive EPK BUILDS/CANVA, share.",
  "app": {
   "path": "canva/kom-epk-builder",
   "commit": "4fa036b",
