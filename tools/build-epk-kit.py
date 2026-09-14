@@ -363,8 +363,17 @@ def link(c, url, x, y, w, h):
     c.linkURL(url, (x, y, x + w, y + h), relative=0, thickness=0)
 
 
+# Luke deleted the three PROOF marks (pages 2, 7, 10) in the Canva design on 2026-09-14; the
+# design is the master, so the proof class is retired for this kit and a rebuild never puts
+# them back. The conditions that raised them still print to the console.
+PROOF_SLUGS = False
+
+
 def proof_slug(c, text):
     """The one mark whose job is to be read, so DIM (8.6:1), not RULE (3:1)."""
+    if not PROOF_SLUGS:
+        print(f"  (proof mark not drawn: {text})")
+        return
     tracked(c, W / 2, M * 0.45, text, "Bask", 9.5, 1.4, DIM, "center")
 
 
@@ -757,7 +766,7 @@ def credit_pages(c, d):
     """Pages 9-11, drawn by the credit card's own functions on this canvas. press=True:
     a name that is still a placeholder (SOUND DESIGNER | STILL UNKNOWN) is not printed
     as a credit; the card marks the CREW page with a PROOF slug instead (C10 as amended)."""
-    opts = card.Opts(press=True, proof_slug=True)
+    opts = card.Opts(press=True, proof_slug=PROOF_SLUGS)
     z = card.Sz(1.0, opts)
 
     def stills_for(nums):

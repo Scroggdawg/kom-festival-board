@@ -170,6 +170,15 @@ A `git clone --depth 1` of commit 8fe4d38 into an empty folder, on a Mac with No
 
 Not covered by this test, because it needs Luke's Canva login: creating the app in the Developer Portal, the three probes, the pilot, the build, the export. Those are steps 3 to 9.
 
+## Mirroring the design back into the worksheet
+
+Luke edits the design directly and his edits win (2026-09-14). To bring `press/epk.json` up to the design without touching it:
+
+1. `python3 tools/canva-readback-server.py` (localhost:8787, writes `canva/readback/<UTC>.json` and `latest.json`).
+2. In the app panel, with its tab in front: Load, then **Read design (openDesign)**. The app posts the read-back, each text element with its plain text, to the receiver (read-only session; nothing is written to the design).
+3. `venv/bin/python tools/canva-readback-diff.py`: per page, text only in the design (his edits) and text only in the contract (his deletions).
+4. Write the design's wording into the worksheet with `tools/epk.py set`, rebuild the kit and the contract, and say what changed. Do not rebuild Canva pages from the new contract unless he asks: the design may be ahead of the kit on layout as well.
+
 ## Resuming
 
 1. Read `STATE.json`. `next_step` says where to go; `pages_built` says which pages exist.

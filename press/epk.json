@@ -1,7 +1,7 @@
 {
  "schema": 3,
- "rev": 30,
- "updated": "2026-09-14T11:35:56-05:00",
+ "rev": 32,
+ "updated": "2026-09-14T12:56:28-05:00",
  "updatedBy": "epk.py set",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
@@ -122,7 +122,7 @@
      "id": "p2-synopsis",
      "n": "2.2",
      "label": "Synopsis",
-     "value": "",
+     "value": "Mace fights because the alternative is the field, and then the ground. On a South Carolina plantation in 1834 his owner stages bouts against other enslaved men and takes the wagers; Mace has never lost, and every win buys him another season.\n\nThen a fight ends in a death, and he follows the body to a burial held in secret in the Yoruba faith he was born to. The rites are for a man he killed. An elder tells him what he would have been across the water, and he sees, for the first time, what he has become.",
      "history": [
       {
        "at": "2026-09-08T22:41:58-07:00",
@@ -133,6 +133,11 @@
        "at": "2026-09-09T00:43:41-07:00",
        "by": "Luke, in chat",
        "value": ""
+      },
+      {
+       "at": "2026-09-14T12:56:28-05:00",
+       "by": "epk.py",
+       "value": "Mace fights because the alternative is the field, and then the ground. On a South Carolina plantation in 1834 his owner stages bouts against other enslaved men and takes the wagers; Mace has never lost, and every win buys him another season.\n\nThen a fight ends in a death, and he follows the body to a burial held in secret in the Yoruba faith he was born to. The rites are for a man he killed. An elder tells him what he would have been across the water, and he sees, for the first time, what he has become."
       }
      ],
      "options": [
@@ -763,7 +768,7 @@
      "id": "p11-thanks",
      "n": "11.1",
      "label": "Thanks list",
-     "value": "THE FILMMAKERS WISH TO THANK\n\nKay Ann Scroggins · Elijah Anglin · Tracey Belizaire · Alex Benton · Phillip Brooks · Ayanna Carrington · Elijah Catalan · Byron Chang\nSriram Chintalapati · Padma Chitrapu · Derrick Clarke · Zaire Davis · Raghuram & Kanchan Devarakonda · Roxanne Elliott · Kevin Fobes · Cecil Gao · Xuanfang Gao\nJillian Green · Ping Guo & Baozhen Ling · Lina Hu · Abdullah Jeffers · Farzana Khan · Salaar Khan · Akshay Kumar · Yuhong Lai & Chunhui Wu · Qing Liao\nXie Linchen · Pervis Louder · Dawn & J. Martin · Randy McKinnon · Joshua Montrel · Gage Phillips · Indu Radhakrishnan · Mallik & Preethi Ragampudi · Libby Richman\nIsaac Richter · Toluwani Roberts · Camille Ryan · Ibukunoluwa Soyebo · Nellai Subramaniam & Shaila Nellai · Sairam Tadigadapa · Corey Taylor · Srini Tipirneni · Osewanne Uwadiale\nSantos Velazquez & Anadelis Figueroa · Dongpo Xu · Weiwei Xu · Lin Yi · Kuai Yu · Shiqi Sukia Zhang · Xiaomin Zhang · Xuanning Zhang\n\nIn loving memory of George Dewey Stanyard Jr.\n\nFifty-two names: the film's end-credit list from Luke's screenshot of the crawl (2026-09-14), in the crawl's order: Kay Ann Scroggins first, then alphabetical by surname, as AFI asks. George Dewey Stanyard Jr. is not in the list (Luke, 2026-09-14): he has the dedication line instead, drawn on its own after the thanks.\nTHE DEDICATION LINE above is the crawl's opening card; the crawl spells the surname Stanyard.\nTWENTY-FOUR were not on the earlier sheet of thirty (which listed Padma Chitrapu twice): Scroggins, Anglin, Benton, Carrington, Catalan, Clarke, Davis, Elliott, Fobes, Green, Jeffers, Farzana Khan, Louder, McKinnon, Montrel, Phillips, Radhakrishnan, Richman, Richter, Roberts, Ryan, Soyebo, Taylor, Uwadiale.\nTHE SHEET'S 'Tracey B' is the crawl's Tracey Belizaire; its 'Dawn and J. Martin' is the crawl's 'Dawn & J. Martin'. The crawl's 'Baozhen ling' is kept as Ling.",
+     "value": "THE FILMMAKERS WISH TO THANK\n\nKay Ann Scroggins · Elijah Anglin · Tracey Belizaire · Alex Benton · Phillip Brooks · Ayanna Carrington · Elijah Catalan · Byron Chang\nSriram Chintalapati · Padma Chitrapu · Derrick Clarke · Zaire Davis · Raghuram Devaraonda · Kanchan Devaraonda · Roxanne Elliott\nKevin Fobes · Cecil Gao · Xuanfang Gao · Jillian Green · Ping Guo · Baozhen Ling · Lina Hu · Abdullah Jeffers · Farzana Khan · Salaar Khan · Akshay Kumar · Yuhong Lai · Chunhui Wu · Qing Liao\nDawn & J. Martin · Randy McKinnon · Joshua Montrel · Gage Phillips · Indu Radhakrishnan · Mallik Ragampudi · Preethi Ragampudi · Libby Richman · Isaac Richter · Toluwani Roberts · Camille Ryan · Ibukunoluwa Soyebo · Nellai Subramaniam · Shaila Nellai\nSairam Tadigadapa · Corey Taylor · Srini Tipirneni · Osewanne Uwadiale · Santos Velazquez · Anadelis Figueroa · Dongpo Xu · Weiwei Xu · Lin Yi · Kuai Yu · Shiqi Sukia Zhang · Xiaomin Zhang · Xuanning Zhang · Xie Linchen · Pervis Louder\n\nIn loving memory of George Dewey Stanyard Jr.\n\nFifty-eight lines, MIRRORED FROM THE CANVA DESIGN (read back 2026-09-14 17:51Z, canva/readback/latest.json) after Luke edited the page there; his edits win and the worksheet follows. In the design's order: four columns read top to bottom, left to right.\nLUKE'S EDITS 2026-09-14: every couple is now two lines of their own (Ping Guo / Baozhen Ling; Mallik Ragampudi / Preethi Ragampudi; Raghuram / Kanchan; Nellai Subramaniam / Shaila Nellai; Yuhong Lai / Chunhui Wu; Santos Velazquez / Anadelis Figueroa); Dawn & J. Martin stays one line. Xie Linchen and Pervis Louder sit at the end of the last column, after Xuanning Zhang.\nAS TYPED IN THE DESIGN: 'Devaraonda' (both lines). The crawl spells the surname Devarakonda. Not corrected here; flagged to Luke.\nGeorge Dewey Stanyard Jr. is not in the list: he has the dedication line, drawn on its own after the thanks. The crawl spells the surname Stanyard.\nEarlier provenance: the film's end-credit crawl (Luke's screenshot, 2026-09-14) had 53 names; the sheet before it had 30 with Padma Chitrapu twice; 'Tracey B' is Tracey Belizaire, 'Dawn and J. Martin' is 'Dawn & J. Martin'.",
      "history": [
       {
        "at": "2026-09-08T22:48:26-07:00",
@@ -784,6 +789,11 @@
        "at": "2026-09-14T11:35:56-05:00",
        "by": "epk.py",
        "value": "THE FILMMAKERS WISH TO THANK\n\nKay Ann Scroggins · Elijah Anglin · Tracey Belizaire · Alex Benton · Phillip Brooks · Ayanna Carrington · Elijah Catalan · Byron Chang\nSriram Chintalapati · Padma Chitrapu · Derrick Clarke · Zaire Davis · Raghuram & Kanchan Devarakonda · Roxanne Elliott · Kevin Fobes · Cecil Gao · Xuanfang Gao\nJillian Green · Ping Guo & Baozhen Ling · Lina Hu · Abdullah Jeffers · Farzana Khan · Salaar Khan · Akshay Kumar · Yuhong Lai & Chunhui Wu · Qing Liao\nXie Linchen · Pervis Louder · Dawn & J. Martin · Randy McKinnon · Joshua Montrel · Gage Phillips · Indu Radhakrishnan · Mallik & Preethi Ragampudi · Libby Richman\nIsaac Richter · Toluwani Roberts · Camille Ryan · Ibukunoluwa Soyebo · Nellai Subramaniam & Shaila Nellai · Sairam Tadigadapa · Corey Taylor · Srini Tipirneni · Osewanne Uwadiale\nSantos Velazquez & Anadelis Figueroa · Dongpo Xu · Weiwei Xu · Lin Yi · Kuai Yu · Shiqi Sukia Zhang · Xiaomin Zhang · Xuanning Zhang\n\nIn loving memory of George Dewey Stanyard Jr.\n\nFifty-two names: the film's end-credit list from Luke's screenshot of the crawl (2026-09-14), in the crawl's order: Kay Ann Scroggins first, then alphabetical by surname, as AFI asks. George Dewey Stanyard Jr. is not in the list (Luke, 2026-09-14): he has the dedication line instead, drawn on its own after the thanks.\nTHE DEDICATION LINE above is the crawl's opening card; the crawl spells the surname Stanyard.\nTWENTY-FOUR were not on the earlier sheet of thirty (which listed Padma Chitrapu twice): Scroggins, Anglin, Benton, Carrington, Catalan, Clarke, Davis, Elliott, Fobes, Green, Jeffers, Farzana Khan, Louder, McKinnon, Montrel, Phillips, Radhakrishnan, Richman, Richter, Roberts, Ryan, Soyebo, Taylor, Uwadiale.\nTHE SHEET'S 'Tracey B' is the crawl's Tracey Belizaire; its 'Dawn and J. Martin' is the crawl's 'Dawn & J. Martin'. The crawl's 'Baozhen ling' is kept as Ling."
+      },
+      {
+       "at": "2026-09-14T12:56:28-05:00",
+       "by": "epk.py",
+       "value": "THE FILMMAKERS WISH TO THANK\n\nKay Ann Scroggins · Elijah Anglin · Tracey Belizaire · Alex Benton · Phillip Brooks · Ayanna Carrington · Elijah Catalan · Byron Chang\nSriram Chintalapati · Padma Chitrapu · Derrick Clarke · Zaire Davis · Raghuram Devaraonda · Kanchan Devaraonda · Roxanne Elliott\nKevin Fobes · Cecil Gao · Xuanfang Gao · Jillian Green · Ping Guo · Baozhen Ling · Lina Hu · Abdullah Jeffers · Farzana Khan · Salaar Khan · Akshay Kumar · Yuhong Lai · Chunhui Wu · Qing Liao\nDawn & J. Martin · Randy McKinnon · Joshua Montrel · Gage Phillips · Indu Radhakrishnan · Mallik Ragampudi · Preethi Ragampudi · Libby Richman · Isaac Richter · Toluwani Roberts · Camille Ryan · Ibukunoluwa Soyebo · Nellai Subramaniam · Shaila Nellai\nSairam Tadigadapa · Corey Taylor · Srini Tipirneni · Osewanne Uwadiale · Santos Velazquez · Anadelis Figueroa · Dongpo Xu · Weiwei Xu · Lin Yi · Kuai Yu · Shiqi Sukia Zhang · Xiaomin Zhang · Xuanning Zhang · Xie Linchen · Pervis Louder\n\nIn loving memory of George Dewey Stanyard Jr.\n\nFifty-eight lines, MIRRORED FROM THE CANVA DESIGN (read back 2026-09-14 17:51Z, canva/readback/latest.json) after Luke edited the page there; his edits win and the worksheet follows. In the design's order: four columns read top to bottom, left to right.\nLUKE'S EDITS 2026-09-14: every couple is now two lines of their own (Ping Guo / Baozhen Ling; Mallik Ragampudi / Preethi Ragampudi; Raghuram / Kanchan; Nellai Subramaniam / Shaila Nellai; Yuhong Lai / Chunhui Wu; Santos Velazquez / Anadelis Figueroa); Dawn & J. Martin stays one line. Xie Linchen and Pervis Louder sit at the end of the last column, after Xuanning Zhang.\nAS TYPED IN THE DESIGN: 'Devaraonda' (both lines). The crawl spells the surname Devarakonda. Not corrected here; flagged to Luke.\nGeorge Dewey Stanyard Jr. is not in the list: he has the dedication line, drawn on its own after the thanks. The crawl spells the surname Stanyard.\nEarlier provenance: the film's end-credit crawl (Luke's screenshot, 2026-09-14) had 53 names; the sheet before it had 30 with Padma Chitrapu twice; 'Tracey B' is Tracey Belizaire, 'Dawn and J. Martin' is 'Dawn & J. Martin'."
       }
      ]
     },

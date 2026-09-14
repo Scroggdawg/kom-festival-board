@@ -13,6 +13,9 @@ export type ReadElement = {
   left: number;
   width: number;
   height: number;
+  /** text elements only: the richtext as plain text, so the design's wording (which Luke
+   * edits in the editor; his edits win) can be mirrored back into the worksheet */
+  text?: string;
 };
 
 export type ReadPage = {
@@ -33,6 +36,7 @@ function snapshot(page: DesignEditing.Page, index: number): ReadPage {
     left: Math.round(el.left * 100) / 100,
     width: Math.round(el.width * 100) / 100,
     height: Math.round(el.height * 100) / 100,
+    ...(el.type === "text" ? { text: el.text.readPlaintext() } : {}),
   }));
   return {
     index,

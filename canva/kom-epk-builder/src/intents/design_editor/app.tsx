@@ -497,6 +497,20 @@ export const App = () => {
     try {
       const r = await readBack(appendLog);
       setReadPages(r.pages);
+      // The read-back (with each text element's plain text) is also posted to a local
+      // receiver, tools/canva-readback-server.py, so it lands on disk as JSON: the panel's
+      // iframe is cross-origin and its <pre> cannot be read from outside, and the worksheet
+      // must mirror the editor's wording (Luke's edits win, 2026-09-14).
+      try {
+        const res = await fetch("http://localhost:8787/readback", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ scope: r.scope, at: new Date().toISOString(), pages: r.pages }),
+        });
+        appendLog(`read back posted to localhost:8787 (${res.status})`);
+      } catch (e) {
+        appendLog(`read back not posted: ${String(e)} (run tools/canva-readback-server.py to receive it)`);
+      }
       appendLog(
         `read back (${r.scope}): ${r.pages.map((p) => `p${p.index + 1}=${p.count}`).join(" ")}`,
       );

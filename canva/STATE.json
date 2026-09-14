@@ -35,7 +35,7 @@
    "2026-09-11 19:52-20:06Z first full build (Baskerville-measured contract); Luke's five notes",
    "2026-09-11 21:10-21:13Z rebuild from the Libre-measured contract (commit ffc96ca): all 11 pages deleted in the grid view one by one (Delete on page 1, eleven times, after '+' added a blank page to keep), Reset, Load, Build all ascending, Place page 10, blank page deleted"
   ],
-  "title": "STILLS (renamed by Luke in Canva before 2026-09-14; was Untitled design)"
+  "title": "EPK _ KoM 2026 (Luke renamed it 2026-09-14; was STILLS, before that Untitled design)"
  },
  "probes": {
   "pdf_import": {
@@ -266,5 +266,11 @@
   "at": "2026-09-11T22:59Z (after the page 7 rebuild)",
   "result": "all-pages read back, pages paired by position (readback.ts, commit dfd1e42): no wrapped lines, no paragraph longer than its measured lines",
   "note": "the earlier count-based pairing produced false flags for pages 4/8 and 5/7 (equal element counts); a 15.6 pt handle reads 33 px in Canva's box against 24.96 px of leading, which is not a wrap"
+ },
+ "readback": {
+  "latest": "canva/readback/latest.json",
+  "at": "2026-09-14T17:51:38Z",
+  "how": "the app's Read design posts the read-back (with each text element's plain text) to tools/canva-readback-server.py; tools/canva-readback-diff.py diffs it against the contract",
+  "found": "Luke's edits: the three PROOF marks deleted (pages 2, 7, 10); page 9's OLAOLUWA OLUWASEUN OGUNSEYE joined on one line; page 11's couples split into single lines, Xie Linchen and Pervis Louder moved to the end, 'Devaraonda' as typed"
  }
 }
