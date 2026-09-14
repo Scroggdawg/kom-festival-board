@@ -34,7 +34,8 @@
   "rebuilds": [
    "2026-09-11 19:52-20:06Z first full build (Baskerville-measured contract); Luke's five notes",
    "2026-09-11 21:10-21:13Z rebuild from the Libre-measured contract (commit ffc96ca): all 11 pages deleted in the grid view one by one (Delete on page 1, eleven times, after '+' added a blank page to keep), Reset, Load, Build all ascending, Place page 10, blank page deleted"
-  ]
+  ],
+  "title": "STILLS (renamed by Luke in Canva before 2026-09-14; was Untitled design)"
  },
  "probes": {
   "pdf_import": {
@@ -58,15 +59,16 @@
   }
  },
  "ops": {
-  "generated": "2026-09-11T17:15:44",
-  "kit_commit": "916cf12",
-  "epk_rev": 26,
+  "generated": "2026-09-14T10:08:46",
+  "kit_commit": "5749143",
+  "epk_rev": 27,
   "measured_face": "Libre Baskerville 2.005 (OFL)",
-  "elements": 395,
+  "elements": 423,
   "images": 23,
   "paragraphs": 19,
   "links": 20,
-  "check": "tools/check-canva-contract.py: 0 problems (no baseline overlaps, no paragraph past the foot margin; p04 last paragraph ends at 1503, signature 56 pt below; p07 gaps 40 pt)"
+  "check": "tools/check-canva-contract.py: 0 problems (no baseline overlaps, no paragraph past the foot margin; p04 last paragraph ends at 1503, signature 56 pt below; p07 gaps 40 pt)",
+  "note": "11.1 is the film's crawl list, 53 names (25 added 2026-09-14); page 11 sets them in four columns (COLS4)"
  },
  "pages_built": [
   {
@@ -205,7 +207,7 @@
   "view_link": null
  },
  "last_error": null,
- "next_step": "Luke rules on the five-on-one filmmakers page (press/drafts/2026-09-11/p05-variant-five-on-one.pdf) and whether the Spectators also leave pages 3 and 9; then export (Luke's click: Share > Download > PDF Print, RGB, Flatten off, crop marks off), verify with tools/check-canva-export.py, Drive EPK BUILDS/CANVA, rename the design, share.",
+ "next_step": "Rebuild page 11 in Canva from the 423-element contract (generated 2026-09-14T10:08:46): with the app's tab IN FRONT, Load, fonts if stale, delete page 11, select page 10, Build page 11, read back. Then Luke's rulings (dedication line on page 11; five-on-one filmmakers page; Spectators off pages 3 and 9), export, Drive, share.",
  "app": {
   "path": "canva/kom-epk-builder",
   "commit": "4fa036b",
