@@ -30,7 +30,7 @@
   ],
   "scale_px_per_pt": 1.333333,
   "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL",
-  "pages": "TEN pages: page 11 (Thanks) is deleted and awaits its rebuild; do not export until it is back",
+  "pages": "11 pages in order, every element placed; pages 9 and 11 rebuilt 2026-09-14 (Spectators off 9; dedication after the thanks on 11)",
   "rebuilds": [
    "2026-09-11 19:52-20:06Z first full build (Baskerville-measured contract); Luke's five notes",
    "2026-09-11 21:10-21:13Z rebuild from the Libre-measured contract (commit ffc96ca): all 11 pages deleted in the grid view one by one (Delete on page 1, eleven times, after '+' added a blank page to keep), Reset, Load, Build all ascending, Place page 10, blank page deleted"
@@ -178,12 +178,13 @@
   {
    "n": 11,
    "name": "11 Thanks",
-   "status": "MISSING — old page deleted 2026-09-14 ~17:47Z, the rebuild did not start (the app's tab went to the background; its panel stopped taking input)",
-   "mode": "per-element (102 elements, over the addPage cap)",
-   "elements_attempted": 0,
-   "elements_placed": 0,
-   "page_id": null,
-   "note": "contract generated 2026-09-14T11:36:06: 52 thanks, the dedication line after them, the AFI wordmark"
+   "status": "done",
+   "mode": "per-element fallback (batch rejected: 102 elements > the 100-element addPage cap)",
+   "at": "2026-09-14T17:28:09Z (rebuilt alone after page 10, once Luke put the app's tab in front)",
+   "elements_attempted": 102,
+   "elements_placed": 102,
+   "page_id": "PBtTg5xsJ1DjZPC3",
+   "note": "52 thanks in four columns, the dedication line after them, the AFI wordmark at the foot"
   }
  ],
  "pilot": {
@@ -209,7 +210,7 @@
   "view_link": null
  },
  "last_error": null,
- "next_step": "With the app's tab in front: select page 10, set Page n = 11, Build page 11 (per-element, ~2 min), read back. Then export (Luke's click), verify with tools/check-canva-export.py, Drive EPK BUILDS/CANVA, share.",
+ "next_step": "Export (Luke's click: Share > Download > PDF Print, RGB, All pages, crop marks off, Flatten off), verify with tools/check-canva-export.py, copy to the Drive EPK BUILDS/CANVA, share.",
  "app": {
   "path": "canva/kom-epk-builder",
   "commit": "4fa036b",
