@@ -30,7 +30,7 @@
   ],
   "scale_px_per_pt": 1.333333,
   "created_how": "Canva home > Create a design > Custom size 18 x 24 in (2026-09-11); the app is opened in it by appending the Preview tab's ui= parameter (app id AAHOGBCMC4A, preview mode) to the edit URL",
-  "pages": "11 pages in order, every element placed; page 11 rebuilt 2026-09-14 from the 423-element contract (53 thanks, four columns)",
+  "pages": "11 pages in order, every element placed; pages 2 and 11 rebuilt 2026-09-14 16:00-16:02Z (hero fade, AFI wordmark)",
   "rebuilds": [
    "2026-09-11 19:52-20:06Z first full build (Baskerville-measured contract); Luke's five notes",
    "2026-09-11 21:10-21:13Z rebuild from the Libre-measured contract (commit ffc96ca): all 11 pages deleted in the grid view one by one (Delete on page 1, eleven times, after '+' added a blank page to keep), Reset, Load, Build all ascending, Place page 10, blank page deleted"
@@ -59,16 +59,16 @@
   }
  },
  "ops": {
-  "generated": "2026-09-14T10:08:46",
-  "kit_commit": "5749143",
+  "generated": "2026-09-14T10:54:33",
+  "kit_commit": "3fd2901",
   "epk_rev": 27,
   "measured_face": "Libre Baskerville 2.005 (OFL)",
-  "elements": 423,
-  "images": 23,
+  "elements": 419,
+  "images": 24,
   "paragraphs": 19,
   "links": 20,
   "check": "tools/check-canva-contract.py: 0 problems (no baseline overlaps, no paragraph past the foot margin; p04 last paragraph ends at 1503, signature 56 pt below; p07 gaps 40 pt)",
-  "note": "11.1 is the film's crawl list, 53 names (25 added 2026-09-14); page 11 sets them in four columns (COLS4)"
+  "note": "11.1 is the film's crawl list (53); page 11 has the AFI wordmark; page 2's hero fades into the ground"
  },
  "pages_built": [
   {
@@ -86,10 +86,11 @@
    "name": "02 Logline",
    "status": "done",
    "mode": "batch",
-   "at": "2026-09-11T21:10:20Z (rebuild from the Libre-measured contract, generated 16:02:44)",
+   "at": "2026-09-14T16:00:44Z (rebuilt alone: old page deleted, page 1 current, Build page 2 landed after it)",
    "elements_attempted": 7,
    "elements_placed": 7,
-   "page_id": "PBV2Df2LxzxspwMb"
+   "page_id": "PB3mndGH40zlgFy2",
+   "note": "hero derivative p02-e01.jpg carries the bottom fade (HERO_FADE 0.16, the director's note 2026-09-14)"
   },
   {
    "n": 3,
@@ -177,12 +178,12 @@
    "n": 11,
    "name": "11 Thanks",
    "status": "done",
-   "mode": "per-element fallback (batch rejected: 105 elements > the 100-element addPage cap)",
-   "at": "2026-09-14T15:27:59Z (rebuilt alone: old page deleted, page 10 current, Build page 11 landed after it)",
-   "elements_attempted": 105,
-   "elements_placed": 105,
-   "page_id": "PBxcCj2L32qhQBrr",
-   "note": "the film's 53-name thanks list in four columns; the per-element run met the addElementAtPoint rate limit once (Canva's Dev Toolkit opened on the alert) and the backoff carried it to 105/105"
+   "mode": "per-element fallback (batch rejected: 101 elements > the 100-element addPage cap)",
+   "at": "2026-09-14T16:02:08Z (rebuilt alone after page 10)",
+   "elements_attempted": 101,
+   "elements_placed": 101,
+   "page_id": "PBfFVhgdjlrtgm4R",
+   "note": "the AFI Conservatory wordmark (p11-e02.jpg, cream recolour composited over the ground) replaces the hairline slot; 53 thanks in four columns"
   }
  ],
  "pilot": {
@@ -208,7 +209,7 @@
   "view_link": null
  },
  "last_error": null,
- "next_step": "Luke's rulings: the dedication line on page 11 ('In Loving Memory of George Dewey Stanyard Jr.'); the five-on-one filmmakers page; Spectators off pages 3 and 9. Then export (Luke's click), verify with tools/check-canva-export.py, Drive EPK BUILDS/CANVA, share.",
+ "next_step": "Luke's rulings: the dedication line on page 11; the five-on-one filmmakers page; Spectators off pages 3 and 9; the genre wording (Canva says Southern Gothic, Action; the worksheet says historical drama, Southern gothic). Then export (Luke's click), verify with tools/check-canva-export.py, Drive EPK BUILDS/CANVA, share.",
  "app": {
   "path": "canva/kom-epk-builder",
   "commit": "4fa036b",
