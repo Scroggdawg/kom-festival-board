@@ -1,0 +1,1047 @@
+[
+ {
+  "agentId": "a730e859fc8f0b557",
+  "result": {
+   "actor": "Erik Orjiako (Mace)",
+   "claims": [
+    {
+     "claim": "Erik Orjiako is an actor",
+     "verdict": "supported",
+     "evidence": "Second City bio (self-written): \"Erik Orjiako, a Swedish born Nigerian American actor\". Backstage profile headline is Actor, and he is SAG-AFTRA (from the page captured by the main session, and echoed in search snippets).",
+     "source_url": "https://www.secondcity.com/people/hollywood/erik-ojiako/",
+     "fix": ""
+    },
+    {
+     "claim": "He is a writer",
+     "verdict": "supported",
+     "evidence": "NetworkISA profile headline reads \"Screenwriter | Actor\". His IMDb name page title, per search snippet, is \"Erik Orjiako | Actor, Writer, Producer\".",
+     "source_url": "https://www.networkisa.org/profile/erik-orjiako",
+     "fix": ""
+    },
+    {
+     "claim": "He is Swedish-born",
+     "verdict": "supported",
+     "evidence": "Second City bio: \"a Swedish born Nigerian American actor\". Only one source, and he wrote it himself. No other source states a birthplace.",
+     "source_url": "https://www.secondcity.com/people/hollywood/erik-ojiako/",
+     "fix": ""
+    },
+    {
+     "claim": "He is Nigerian American",
+     "verdict": "supported",
+     "evidence": "Second City bio: \"a Swedish born Nigerian American actor\". Only one source, and he wrote it himself.",
+     "source_url": "https://www.secondcity.com/people/hollywood/erik-ojiako/",
+     "fix": ""
+    },
+    {
+     "claim": "He is based in Los Angeles",
+     "verdict": "supported",
+     "evidence": "Backstage profile location: Los Angeles, CA (captured page). A search snippet of the same profile says he is based in Los Angeles, California. NetworkISA mentions a web series he made during the lockdown \"in Los Angeles\". The one conflicting source is an older Stage 32 profile listing \"Boston, Massachusetts\", which looks out of date.",
+     "source_url": "https://www.backstage.com/u/erik-orjiako/",
+     "fix": ""
+    },
+    {
+     "claim": "He studied English and communications at UMass Amherst",
+     "verdict": "supported",
+     "evidence": "The Backstage education field captured by the main session reads \"Umass Amherst English/Communications\", with no degree listed, so \"studied\" is the right strength. Backstage returns 403 to WebFetch, so I could not re-open it, and no search snippet repeated the UMass line. No other source confirms or contradicts it.",
+     "source_url": "https://www.backstage.com/u/erik-orjiako/",
+     "fix": ""
+    },
+    {
+     "claim": "He earned an MFA in screenwriting at the New York Film Academy",
+     "verdict": "supported",
+     "evidence": "NetworkISA (self-written): \"he decided to get an MFA in screenwriting from the New York Film Academy\". The next sentence says he \"has since gone on\" to work in the industry. Backstage lists only \"New York Film Acadmey Screenwriting\", with no degree. Possible corroboration (an inference, identity not confirmed): NYFA's 2017 Winter Graduation post (Los Angeles, Jan 28, 2017) lists a \"Chiedozie Orjiako\" under MFA Screenwriting.",
+     "source_url": "https://www.networkisa.org/profile/erik-orjiako",
+     "fix": ""
+    },
+    {
+     "claim": "He is a graduate of Second City Hollywood's improv program",
+     "verdict": "supported",
+     "evidence": "Backstage highlight: \"Graduated Second City Hollywood's improv program\" (captured page, echoed in search snippets). The Backstage education field also lists \"Second City Improv Hollywood Ca 2018\".",
+     "source_url": "https://www.backstage.com/u/erik-orjiako/",
+     "fix": ""
+    },
+    {
+     "claim": "He has performed with Second City Hollywood's sketch team",
+     "verdict": "supported",
+     "evidence": "Second City bio: \"Ecstatic to be performing with Second City's sketch team and Grad Revue\". The page sits under /people/hollywood/. It is written in the present tense and undated, so \"has performed\" is correct and a claim of current membership would not be.",
+     "source_url": "https://www.secondcity.com/people/hollywood/erik-ojiako/",
+     "fix": ""
+    },
+    {
+     "claim": "He has written with Second City Hollywood's sketch team",
+     "verdict": "overstated",
+     "evidence": "No source says he wrote with the sketch team. NetworkISA says only \"writing shows at the Second City in Hollywood\". The Second City bio says he performed with the sketch team but says nothing about writing for it. The draft merges two separate claims into one.",
+     "source_url": "https://www.networkisa.org/profile/erik-orjiako",
+     "fix": "he has performed with its sketch team and written shows there."
+    },
+    {
+     "claim": "His credits include the series Minx",
+     "verdict": "supported",
+     "evidence": "IMDb nm8803339 (captured 2026-09-10): Minx (TV Series, 2022), Male Model, 1 episode. It is a one-episode role, but the draft's wording \"credits include\" does not overstate it.",
+     "source_url": "https://www.imdb.com/name/nm8803339/",
+     "fix": ""
+    },
+    {
+     "claim": "His credits include the television special Al Davis: Just Win Baby",
+     "verdict": "supported",
+     "evidence": "IMDb nm8803339 (captured): Al Davis: Just Win Baby (TV Special, 2024), Raider #1.",
+     "source_url": "https://www.imdb.com/name/nm8803339/",
+     "fix": ""
+    },
+    {
+     "claim": "His credits include the podcast series The Imperfection",
+     "verdict": "supported",
+     "evidence": "IMDb nm8803339 (captured): The Imperfection (Podcast Series, 2021), Legs (voice), 9 episodes.",
+     "source_url": "https://www.imdb.com/name/nm8803339/",
+     "fix": ""
+    },
+    {
+     "claim": "He has worked as a script reader",
+     "verdict": "supported",
+     "evidence": "NetworkISA: \"work as both a script reader, and a creative executive\".",
+     "source_url": "https://www.networkisa.org/profile/erik-orjiako",
+     "fix": ""
+    },
+    {
+     "claim": "He has worked as a creative executive",
+     "verdict": "supported",
+     "evidence": "NetworkISA: \"work as both a script reader, and a creative executive\". He wrote this himself, and no employer is named anywhere.",
+     "source_url": "https://www.networkisa.org/profile/erik-orjiako",
+     "fix": ""
+    },
+    {
+     "claim": "In Killer of Men he plays Mace",
+     "verdict": "supported",
+     "evidence": "IMDb nm8803339 (captured): Killer of Men (Short, 2026), Mace. The title page tt37523933 links to this profile.",
+     "source_url": "https://www.imdb.com/name/nm8803339/",
+     "fix": ""
+    }
+   ],
+   "rewritten_bio": "Erik Orjiako is a Swedish-born Nigerian American actor and writer based in Los Angeles. He studied English and communications at UMass Amherst and earned an MFA in screenwriting at the New York Film Academy. A graduate of Second City Hollywood's improv program, he has performed with its sketch team and written shows there. His credits include the series Minx, the television special Al Davis: Just Win Baby and the podcast series The Imperfection. He has also worked as a script reader and creative executive. In Killer of Men he plays Mace."
+  }
+ },
+ {
+  "agentId": "a63d4f1a0f38f8b22",
+  "result": {
+   "actor": "Jamal Dennis",
+   "claims": [
+    {
+     "claim": "Jamal Dennis is Los Angeles-based",
+     "verdict": "supported",
+     "evidence": "IMDb bio (self-written, signed \"JD\", captured by the main session 2026-09-10) says he is a professional actor \"based in Los Angeles\". Actors Access lists his management as \"Open Range Management (LA)\". The IMDb bio also says he spends time in Atlanta and New Orleans, but that doesn't contradict LA as his base.",
+     "source_url": "https://www.imdb.com/name/nm2156703/bio/",
+     "fix": ""
+    },
+    {
+     "claim": "He is an actor and stunt performer",
+     "verdict": "supported",
+     "evidence": "Actors Access bio: \"Jamal Dennis is a professional Actor and Stunt Performer\". IMDb lists him under Actor, Stunts and Additional Crew.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "He studied at the Royal Academy of Dramatic Art",
+     "verdict": "supported",
+     "evidence": "Actors Access bio: \"recently studied at RADA\". The Training section spells it \"Royal Academy Of Dramatic Arts\" (the resume's spelling, not the school's official name). The IMDb bio also says he \"recently studied at RADA\". No source claims a degree, only study, which matches the draft's wording.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "He studied with Lesly Kahn and Craig Archibald",
+     "verdict": "supported",
+     "evidence": "IMDb bio: \"studying with Craig Archibald and Lesly Kahn\". Both teachers also appear in the Actors Access Training section, along with Caitlin Adams and Second City.",
+     "source_url": "https://www.imdb.com/name/nm2156703/bio/",
+     "fix": ""
+    },
+    {
+     "claim": "He holds a black belt in martial arts",
+     "verdict": "supported",
+     "evidence": "IMDb bio: he is \"a black belt in martial arts and weapons training\". This is the only source. The claim is self-reported, and the Actors Access resume does not contain the words \"black belt\". Neither source says which style the belt is in.",
+     "source_url": "https://www.imdb.com/name/nm2156703/bio/",
+     "fix": ""
+    },
+    {
+     "claim": "He has training in Kyokushin, Wushu, Ninjutsu and Shotokan",
+     "verdict": "supported",
+     "evidence": "IMDb bio lists \"Kyokushin, Wu-Shu, Ninjitsu, Shotokan\". Actors Access skills list: \"Karate(Shotokan), Kick Boxing, Kung Fu (WuShu), Kyokushin Karate\", and \"Ninjitsu\" also appears there. \"Ninjutsu\" is the standard spelling of the sources' \"Ninjitsu\".",
+     "source_url": "https://www.imdb.com/name/nm2156703/bio/",
+     "fix": ""
+    },
+    {
+     "claim": "He played the lead in the series Be Someone",
+     "verdict": "supported",
+     "evidence": "Actors Access TV credit: \"Be Someone (Lead, Tubi)\". IMDb bio: \"the lead role on the show Be Someone\". Tubi's series page lists him first in the cast.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "His Be Someone character is Lavelle Sanders",
+     "verdict": "supported",
+     "evidence": "IMDb credits (captured): Be Someone (TV Series 2023), Lavelle Sanders, 4 episodes. Apple TV's show description centres on \"Ex High School Football Superstar Lavelle Sanders\". One discrepancy: Apple TV's cast list gives his character as \"J.D.\", which looks like a metadata error. IMDb, the primary source, says Lavelle Sanders.",
+     "source_url": "https://www.imdb.com/name/nm2156703/",
+     "fix": ""
+    },
+    {
+     "claim": "Screen credit: The Young and the Restless",
+     "verdict": "supported",
+     "evidence": "IMDb: The Young and the Restless (2024), Fireman, 1 episode. Actors Access: \"Principle\" (sic), CBS. TV Guide also lists it.",
+     "source_url": "https://www.imdb.com/name/nm2156703/",
+     "fix": ""
+    },
+    {
+     "claim": "Screen credit: S.W.A.T.",
+     "verdict": "supported",
+     "evidence": "IMDb: S.W.A.T. (2022), Henchman, 1 episode. Actors Access: \"S.W.A.T\" (Co-star, CBS). TMDB: S.W.A.T. (2022, Henchman).",
+     "source_url": "https://www.imdb.com/name/nm2156703/",
+     "fix": ""
+    },
+    {
+     "claim": "Screen credit: Marvel's Runaways",
+     "verdict": "supported",
+     "evidence": "Actors Access: \"Marvel's Runaways\" (Co-Star, Hulu). IMDb: Runaways (TV Series 2019), Security Guard, 1 episode. TMDB: Marvel's Runaways (2019, Security Guard).",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "Screen credit: Zoo",
+     "verdict": "supported",
+     "evidence": "IMDb: Zoo (2015), Prison Guard, 1 episode. Actors Access: Zoo, \"Guest Star\", CBS. TMDB: Zoo (2015, Prison Guard).",
+     "source_url": "https://www.imdb.com/name/nm2156703/",
+     "fix": ""
+    },
+    {
+     "claim": "Screen credit: Mississippi Grind",
+     "verdict": "supported",
+     "evidence": "IMDb: Mississippi Grind (2015), Baller. Actors Access lists it under Film as a principal role. TMDB: Mississippi Grind (2015, Baller).",
+     "source_url": "https://www.imdb.com/name/nm2156703/",
+     "fix": ""
+    },
+    {
+     "claim": "Screen credit: Glory Road",
+     "verdict": "supported",
+     "evidence": "IMDb: Glory Road (2006), Big Guy, credited as Jamal Rashawn Dennis. Actors Access: Glory Road, \"Principal\", director James Gartner. TV Guide also lists it.",
+     "source_url": "https://www.imdb.com/name/nm2156703/",
+     "fix": ""
+    },
+    {
+     "claim": "He performed stunts on Sinners",
+     "verdict": "supported",
+     "evidence": "IMDb: Sinners (2025), stunt performer. TV Guide lists him as Stunt Performer on Sinners. TMDB: Sinners (2025, Stunts). A Just Acting Up podcast episode (Sept 17, 2025) covers his time on the Sinners set with Ryan Coogler.",
+     "source_url": "https://www.imdb.com/name/nm2156703/",
+     "fix": ""
+    },
+    {
+     "claim": "He performed stunts on Emancipation",
+     "verdict": "supported",
+     "evidence": "IMDb: Emancipation (2022), stunts. TV Guide lists him under Stunts for Emancipation.",
+     "source_url": "https://www.tvguide.com/celebrities/jamal-dennis/credits/3000794019/",
+     "fix": ""
+    },
+    {
+     "claim": "He performed stunts on Grudge Match",
+     "verdict": "supported",
+     "evidence": "IMDb: Grudge Match (2013), stunts. Actors Access Film credit: Grudge Match, \"Boxer (Stunt)\". TV Guide lists him under Stunts.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "He is a member of SAG-AFTRA",
+     "verdict": "supported",
+     "evidence": "Actors Access resume header: \"JAMAL R DENNIS - SAG-AFTRA\". This is his self-maintained resume; there is no independent union verification.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "In Killer of Men he plays Kojo",
+     "verdict": "supported",
+     "evidence": "IMDb credits (captured): Killer of Men (Short, 2026), \"Fighter2 Kojo\". TMDB: Killer Of Men, Kojo. TMDB gives the year as 2025, but the bio does not state a year.",
+     "source_url": "https://www.imdb.com/name/nm2156703/",
+     "fix": ""
+    }
+   ],
+   "rewritten_bio": "Jamal Dennis is a Los Angeles-based actor and stunt performer. He studied at the Royal Academy of Dramatic Art and with Lesly Kahn and Craig Archibald, and holds a black belt in martial arts, with training in Kyokushin, Wushu, Ninjutsu and Shotokan. He played the lead, Lavelle Sanders, in the series Be Someone. His screen credits include The Young and the Restless, S.W.A.T., Marvel's Runaways, Zoo, Mississippi Grind and Glory Road, and he has performed stunts on Sinners, Emancipation and Grudge Match. He is a member of SAG-AFTRA. In Killer of Men he plays Kojo."
+  }
+ },
+ {
+  "agentId": "a554c97c3f4cb39ec",
+  "result": {
+   "actor": "Eric Pargac (IMDb nm1655191), Master Kenner in Killer of Men",
+   "claims": [
+    {
+     "claim": "Los Angeles-based",
+     "verdict": "unsupported",
+     "evidence": "No self-written or press source I found says where he lives now. His own bio (ericpargac.com/bio) and the Artists Rep bio are both silent on residence. The only statement is a search-engine summary built from a RocketReach data-broker listing (\"based in Los Angeles, CA, US\"), and RocketReach returns 403 so I could not check it. A LinkedIn snippet puts his company, Gotch Creative, in the LA area; that is an inference, not a statement about him. The Artists Rep bio also lists a lot of recent Portland work (Magellanica, Nightingale 7, Better Maybe).",
+     "source_url": "http://www.ericpargac.com/bio",
+     "fix": "Drop 'Los Angeles-based' unless the actor confirms it: 'Eric Pargac is an actor and filmmaker who grew up in Texas.'"
+    },
+    {
+     "claim": "Actor",
+     "verdict": "supported",
+     "evidence": "IMDb bio (captured): \"actor, editor, producer and director who grew up in Texas\".",
+     "source_url": "https://www.imdb.com/name/nm1655191/",
+     "fix": ""
+    },
+    {
+     "claim": "Filmmaker",
+     "verdict": "supported",
+     "evidence": "ericpargac.com/bio: \"As a filmmaker, Eric was named as an Official Artist\" of NYTVF.",
+     "source_url": "http://www.ericpargac.com/bio",
+     "fix": ""
+    },
+    {
+     "claim": "Grew up in Texas",
+     "verdict": "supported",
+     "evidence": "IMDb bio (captured, self-written): \"actor, editor, producer and director who grew up in Texas\". His own site's bio doesn't say this; it only mentions an improv troupe he co-founded at Texas A&M.",
+     "source_url": "https://www.imdb.com/name/nm1655191/",
+     "fix": ""
+    },
+    {
+     "claim": "Founding artistic director of Furious Theatre Company in Los Angeles",
+     "verdict": "supported",
+     "evidence": "ericpargac.com/bio: \"a founding artistic director of the critically-acclaimed Furious Theatre Company in Los Angeles\". Artists Rep: co-founder, \"Co-Artistic Director there from 2001-2010\". Wikipedia lists him among the six 2001 founders.",
+     "source_url": "http://www.ericpargac.com/bio",
+     "fix": ""
+    },
+    {
+     "claim": "Starred in ten productions at Furious Theatre Company",
+     "verdict": "supported",
+     "evidence": "IMDb bio (captured): \"At Furious, he starred in 10 productions\". ericpargac.com/bio names 10 Furious productions he performed in.",
+     "source_url": "https://www.imdb.com/name/nm1655191/",
+     "fix": ""
+    },
+    {
+     "claim": "Named Stage Scene LA's 2007 Actor of the Year",
+     "verdict": "overstated",
+     "evidence": "The award source itself, StageSceneLA's 2006-2007 Scenies page, lists \"ERIC PARGAC—An Impending Rupture of the Belly\" under \"Lead Actor of the Year/Drama (Tie)\". So it was a shared award in the Lead Actor/Drama category for the 2006-2007 season, not a sole overall Actor of the Year. His own site and the Artists Rep bio say \"2007 Actor of the Year – Stage Scene LA\", which is the inflated wording.",
+     "source_url": "http://stagescenela.com/2006-2007-scenies/",
+     "fix": "shared Stage Scene LA's 2006-2007 Lead Actor of the Year (Drama) award"
+    },
+    {
+     "claim": "The award was for An Impending Rupture of the Belly, a Furious production",
+     "verdict": "supported",
+     "evidence": "StageSceneLA: \"ERIC PARGAC—An Impending Rupture of the Belly\". Artists Rep says that at Furious he originated \"Clay in An Impending Rupture of the Belly\".",
+     "source_url": "https://artistsrep.org/artists/eric-pargac/",
+     "fix": ""
+    },
+    {
+     "claim": "Performed at Artists Repertory Theatre in Portland",
+     "verdict": "supported",
+     "evidence": "Artists Rep's own artist page lists Magellanica, Magellanica Audio Drama and 1984. ericpargac.com/bio: \"Artists Repertory Theatre in Portland\".",
+     "source_url": "https://artistsrep.org/artists/eric-pargac/",
+     "fix": ""
+    },
+    {
+     "claim": "Performed at Intiman Theatre in Seattle",
+     "verdict": "supported",
+     "evidence": "Artists Rep bio lists regional credit \"Paradise Lost\" at Intiman Theatre in Seattle. ericpargac.com/bio also names Intiman Theatre in Seattle. The 2018 resume (captured) has Paradise Lost at Intiman.",
+     "source_url": "https://artistsrep.org/artists/eric-pargac/",
+     "fix": ""
+    },
+    {
+     "claim": "Performed at the IRT Theatre in New York",
+     "verdict": "supported",
+     "evidence": "ericpargac.com/bio names IRT Theatre in New York among his stage venues. The 2018 resume (captured by the main session) has The Koan of Seymour at IRT Theatre (NY). I could not read the resume PDF through WebFetch.",
+     "source_url": "http://www.ericpargac.com/bio",
+     "fix": ""
+    },
+    {
+     "claim": "Television credit: HBO's Succession",
+     "verdict": "supported",
+     "evidence": "ericpargac.com/bio: \"HBO's Succession and The Late Show with Stephen Colbert\". IMDb (captured): Succession (2018), Dr. Lipe, 1 episode. Resume: Co-Star, HBO. Note it was a single episode.",
+     "source_url": "http://www.ericpargac.com/bio",
+     "fix": ""
+    },
+    {
+     "claim": "Television credit: The Late Show with Stephen Colbert",
+     "verdict": "supported",
+     "evidence": "ericpargac.com/bio: \"HBO's Succession and The Late Show with Stephen Colbert\". Resume (captured): Co-Star, CBS.",
+     "source_url": "http://www.ericpargac.com/bio",
+     "fix": ""
+    },
+    {
+     "claim": "Starred in the web series The Digressions",
+     "verdict": "supported",
+     "evidence": "IMDb bio (captured): \"starred as Theo in all three seasons\" of The Digressions. IMDb credits: Theo, 19 episodes, 2013-2015.",
+     "source_url": "https://www.imdb.com/name/nm1655191/",
+     "fix": ""
+    },
+    {
+     "claim": "Co-directed The Digressions",
+     "verdict": "supported",
+     "evidence": "ericpargac.com/bio: \"web series he co-directed and produced\". IMDb credits list him as co-director.",
+     "source_url": "http://www.ericpargac.com/bio",
+     "fix": ""
+    },
+    {
+     "claim": "Produced The Digressions",
+     "verdict": "supported",
+     "evidence": "ericpargac.com/bio: \"web series he co-directed and produced\". IMDb credits: executive producer. IMDb bio says \"co-produced\".",
+     "source_url": "http://www.ericpargac.com/bio",
+     "fix": ""
+    },
+    {
+     "claim": "The Digressions is a web series",
+     "verdict": "supported",
+     "evidence": "ericpargac.com/bio: \"web series he co-directed and produced\".",
+     "source_url": "http://www.ericpargac.com/bio",
+     "fix": ""
+    },
+    {
+     "claim": "Member of SAG-AFTRA",
+     "verdict": "supported",
+     "evidence": "Artists Rep bio: \"Member of SAG-AFTRA\". The 2018 resume header also reads SAG-AFTRA/AEA.",
+     "source_url": "https://artistsrep.org/artists/eric-pargac/",
+     "fix": ""
+    },
+    {
+     "claim": "Member of Actors' Equity",
+     "verdict": "supported",
+     "evidence": "Artists Rep bio: \"Member of Actors Equity Association\". The 2018 resume header also has AEA. Neither is dated 2026, so current membership should be confirmed with the actor.",
+     "source_url": "https://artistsrep.org/artists/eric-pargac/",
+     "fix": ""
+    },
+    {
+     "claim": "Plays Master Kenner in Killer of Men",
+     "verdict": "supported",
+     "evidence": "IMDb credits (captured): Killer of Men (Short, 2026), Master Kenner. The title page tt37523933 links to nm1655191.",
+     "source_url": "https://www.imdb.com/title/tt37523933/",
+     "fix": ""
+    }
+   ],
+   "rewritten_bio": "Eric Pargac is an actor and filmmaker who grew up in Texas. He was a founding artistic director of Furious Theatre Company in Los Angeles, where he starred in ten productions and shared Stage Scene LA's 2006-2007 Lead Actor of the Year (Drama) award for An Impending Rupture of the Belly. He has also performed at Artists Repertory Theatre in Portland, Intiman Theatre in Seattle and the IRT Theatre in New York. His television credits include HBO's Succession and The Late Show with Stephen Colbert. He starred in, co-directed and produced the web series The Digressions. He is a member of SAG-AFTRA and Actors' Equity. In Killer of Men he plays Master Kenner."
+  }
+ },
+ {
+  "agentId": "a4d92f2a9372f79cc",
+  "result": {
+   "actor": "Sandra McDaniels (IMDb nm5062558), The Elder in Killer of Men (AFI Conservatory, 2026)",
+   "claims": [
+    {
+     "claim": "Sandra McDaniels is an actress",
+     "verdict": "supported",
+     "evidence": "IMDb name page title reads \"Sandra McDaniels | Actress\" (nm5062558). The main session's IMDb capture lists acting credits only.",
+     "source_url": "https://www.imdb.com/name/nm5062558/",
+     "fix": ""
+    },
+    {
+     "claim": "She is based in Los Angeles",
+     "verdict": "supported",
+     "evidence": "Backstage /u/sandramcdaniels (captured by the main session) gives Los Angeles, CA. I re-opened Project Casting independently and it says \"Based in Los Angeles, California, United States\". That page lists no credits, so it confirms location only. Not the same person: a LinkedIn \"Sandra Mcdaniels\" at the City of Houston is someone else.",
+     "source_url": "https://projectcasting.com/professional/sandra-mcdaniels-337806",
+     "fix": ""
+    },
+    {
+     "claim": "She is a member of SAG-AFTRA",
+     "verdict": "supported",
+     "evidence": "Search snippet for the IMDb/Backstage profile: \"Sandra McDaniels is a member of SAG-AFTRA.\" Backstage (captured) also lists SAG-AFTRA. This rests on self-reported profile fields; I found no SAG-AFTRA directory entry to confirm it.",
+     "source_url": "https://www.backstage.com/u/sandramcdaniels/",
+     "fix": ""
+    },
+    {
+     "claim": "Her screen credits include Gingersnap Christmas, in which she plays Gramma Belle",
+     "verdict": "supported",
+     "evidence": "Letterboxd, Plex credits and AllMovie each list \"Sandra McDaniels as Gramma Belle\", as do TMDB and the IMDb capture. Leomark Studios lists her in the cast. One search-engine summary said Chelsea J. Smith plays Gramma Belle. That is wrong: Letterboxd and Plex credit Chelsea J. Smith as Dianne. Backstage spells the role \"Grandma Belle\", but every credit database uses \"Gramma Belle\", so the draft spelling is correct.",
+     "source_url": "https://letterboxd.com/film/gingersnap-christmas/",
+     "fix": ""
+    },
+    {
+     "claim": "Gingersnap Christmas is a film",
+     "verdict": "supported",
+     "evidence": "Leomark Studios (the studio) gives \"Type: Movie\". TMDB, Letterboxd, Plex and AllMovie all class it as a TV Movie (85 to 95 min, released Nov 19, 2024). IMDb has no TV tag, and Letterboxd also lists a theatrical release date. \"Film\" is accurate either way. Do not upgrade it to \"feature film\", because most databases call it a TV movie.",
+     "source_url": "https://www.allmovie.com/movie/gingersnap-christmas-am622904/cast-crew",
+     "fix": ""
+    },
+    {
+     "claim": "Her screen credits include the series Truth Be Told",
+     "verdict": "supported",
+     "evidence": "IMDb character page: \"Truth Be Told (TV Series 2019-2023) - Sandra McDaniels as Homeless Woman\". TMDB Season 2 cast lists her as \"Homeless Woman (1 Episode)\", which fits the 2021 date (Season 2 ran Aug to Oct 2021). It is a one-episode guest role. \"Credits include\" does not overstate that, but do not describe it as a recurring or series-regular role.",
+     "source_url": "https://www.imdb.com/title/tt7821582/characters/nm5062558",
+     "fix": ""
+    },
+    {
+     "claim": "Truth Be Told (tt7821582) is an Apple TV+ series",
+     "verdict": "supported",
+     "evidence": "Wikipedia: series \"created by Nichelle Tramble Spellman for Apple TV+\" (2019-2023). The IMDb search result for tt7821582 matches it: Truth Be Told, TV Series 2019-2023. Caveat: Apple renamed Apple TV+ to \"Apple TV\" in October 2025 (Deadline, MacRumors). Apple's own press page now says \"Watch on Apple TV\". \"Apple TV+\" is still accurate for when the show aired. If you want the current name, \"the Apple TV series\" is an option, but it is not needed.",
+     "source_url": "https://en.wikipedia.org/wiki/Truth_Be_Told_(2019_TV_series)",
+     "fix": ""
+    },
+    {
+     "claim": "Her screen credits include the short film Providence",
+     "verdict": "supported",
+     "evidence": "IMDb character page: \"Providence (Short 2018) - Sandra McDaniels as Maryanne\" (tt9079484, dir. Braden Joe, per the search summary). The IMDb capture agrees: Short, 2018, Maryanne.",
+     "source_url": "https://www.imdb.com/title/tt9079484/characters/nm5062558/",
+     "fix": ""
+    },
+    {
+     "claim": "Her screen credits include the short film 172 Push-Ups",
+     "verdict": "supported",
+     "evidence": "IMDb title: \"172 Push-Ups (Short 2024)\" (tt36828174). An IMDb snippet lists her as \"known for ... 172 Push-Ups (2024)\". Backstage (captured) lists \"172 Pushups (Principal, 2024)\". Mystic Film Festival gives a runtime of 14 min 34 s, which confirms it is a short. Neither Mystic page lists cast, so her credit rests on IMDb and Backstage. The draft's hyphenated spelling matches IMDb and the festival listing.",
+     "source_url": "https://www.imdb.com/title/tt36828174/",
+     "fix": ""
+    },
+    {
+     "claim": "In Killer of Men she plays the Elder",
+     "verdict": "supported",
+     "evidence": "The IMDb full-credits page for tt37523933 (search snippet) and the main session's capture list \"Killer of Men (Short, 2026) Elder\". Naming risk for the press kit: Wikipedia's \"Killer of Men (film)\" is an unrelated 72-minute 2023 feature by Tzvi Friedman. Always pair the title with \"AFI Conservatory, 2026, short\".",
+     "source_url": "https://m.imdb.com/title/tt37523933/fullcredits/",
+     "fix": ""
+    },
+    {
+     "claim": "All credits belong to this Sandra McDaniels (nm5062558), not a different Sandra McDaniel(s)",
+     "verdict": "supported",
+     "evidence": "The similarly named IMDb profiles are other people with no overlapping credits. nm12969202 is an actress known for Elusive (2022). nm12184837 is an actress known for American Heart Association: Life is Why (2018). nm8587652 is a Retro Report documentary producer. nm2650381 is Sandra I. McDaniel, a producer. TMDB person 3238462 (Sandra McDaniels) lists Gingersnap Christmas / Gramma Belle and Truth Be Told / Homeless Woman, the same pair as nm5062558. Backstage gives the same Gingersnap role and the 172 Push-Ups credit.",
+     "source_url": "https://www.themoviedb.org/person/3238462-sandra-mcdaniels",
+     "fix": ""
+    }
+   ],
+   "rewritten_bio": "Sandra McDaniels is a Los Angeles-based actress and a member of SAG-AFTRA. Her screen credits include the film Gingersnap Christmas, in which she plays Gramma Belle, the Apple TV+ series Truth Be Told, and the short films Providence and 172 Push-Ups. In Killer of Men she plays the Elder."
+  }
+ },
+ {
+  "agentId": "a37a665c2b81fb5e4",
+  "result": {
+   "actor": "Erik Orjiako",
+   "claims": [
+    {
+     "claim": "Name: Erik Orjiako (identity; similar-name check)",
+     "verdict": "supported",
+     "evidence": "IMDb nm8803339, Backstage, NetworkISA and TMDB all use the spelling 'Orjiako'. The Second City page heading and URL say 'Erik Ojiako', but the bio text on that same page says 'Erik Orjiako', so the heading is a typo on the page and not a different person. Searches for both spellings found no other performer with this name. The other Ojiako results were unrelated people (a basketball player, an academic).",
+     "source_url": "https://www.imdb.com/name/nm8803339/",
+     "fix": ""
+    },
+    {
+     "claim": "Swedish-born Nigerian American",
+     "verdict": "supported",
+     "evidence": "The self-written Second City bio says: 'Erik Orjiako, a Swedish born Nigerian American actor'. This is self-reported. No independent source confirms it.",
+     "source_url": "https://www.secondcity.com/people/hollywood/erik-ojiako/",
+     "fix": ""
+    },
+    {
+     "claim": "Actor",
+     "verdict": "supported",
+     "evidence": "Backstage lists his role as Actor (SAG-AFTRA). IMDb nm8803339 has acting credits. NetworkISA says 'Screenwriter | Actor'.",
+     "source_url": "https://www.imdb.com/name/nm8803339/",
+     "fix": ""
+    },
+    {
+     "claim": "Writer",
+     "verdict": "supported",
+     "evidence": "NetworkISA profile says 'Screenwriter | Actor' and lists three spec projects (Woke, Inborn, Extra Black). It also says he wrote shows at Second City in Hollywood. None of these are produced writing credits.",
+     "source_url": "https://www.networkisa.org/profile/erik-orjiako",
+     "fix": ""
+    },
+    {
+     "claim": "Based in Los Angeles",
+     "verdict": "supported",
+     "evidence": "Backstage profile location, captured directly: Los Angeles, CA. NetworkISA mentions he made a web series during the COVID-19 lockdown in Los Angeles.",
+     "source_url": "https://www.backstage.com/u/erik-orjiako/",
+     "fix": ""
+    },
+    {
+     "claim": "Studied English and communications at UMass Amherst",
+     "verdict": "supported",
+     "evidence": "Backstage education entry, captured directly: 'Umass Amherst English/Communications'. The bio only says 'studied' and makes no degree claim, which matches the source. No source says whether he finished a degree, so do not change this to 'earned a BA'.",
+     "source_url": "https://www.backstage.com/u/erik-orjiako/",
+     "fix": ""
+    },
+    {
+     "claim": "Earned an MFA in screenwriting at the New York Film Academy",
+     "verdict": "supported",
+     "evidence": "NetworkISA says 'MFA in Screenwriting from the New York Film Academy'. Backstage lists only 'New York Film Acadmey Screenwriting' and does not name the credential. NYFA offers both an MFA and a one-year certificate in screenwriting, so the MFA rests on one self-reported profile. It is accurate as sourced. Confirm with the actor before print.",
+     "source_url": "https://www.networkisa.org/profile/erik-orjiako",
+     "fix": ""
+    },
+    {
+     "claim": "Graduate of Second City Hollywood's improv program",
+     "verdict": "supported",
+     "evidence": "Backstage highlight: 'Graduated Second City Hollywood's improv program'. Backstage education: 'Second City Improv Hollywood Ca 2018'. The Second City bio's mention of Grad Revue fits this, since Second City describes Grad Revue as the stage for students who have finished its improv and sketch training.",
+     "source_url": "https://www.backstage.com/u/erik-orjiako/",
+     "fix": ""
+    },
+    {
+     "claim": "Has written and performed with Second City Hollywood's sketch team",
+     "verdict": "overstated",
+     "evidence": "The Second City bio says 'Ecstatic to be performing with Second City's sketch team and Grad Revue'. That covers performing only and never mentions writing for the sketch team. NetworkISA separately says he 'wrote shows at Second City in Hollywood' but does not tie that to the sketch team. The draft merges the two statements into a claim neither source makes.",
+     "source_url": "https://www.secondcity.com/people/hollywood/erik-ojiako/",
+     "fix": "he has performed with its sketch team and Grad Revue and has written shows there"
+    },
+    {
+     "claim": "Credit: the series Minx",
+     "verdict": "supported",
+     "evidence": "IMDb: Minx (TV Series, 2022), Male Model, 1 episode. TMDB's season 1 cast lists Erik Orjiako as 'Male Model', 1 episode, one of six actors with that credit. TVmaze lists only Griffin Blazi as Male Model (1x01), so TVmaze is incomplete, not contradictory. The credit is real but small: an unnamed one-episode part. The bio does not overstate it and names no network. Do not add 'HBO Max' or 'Starz' or describe it as a recurring role.",
+     "source_url": "https://www.themoviedb.org/tv/118303-minx/season/1/cast",
+     "fix": ""
+    },
+    {
+     "claim": "Credit: the television special Al Davis: Just Win Baby",
+     "verdict": "overstated",
+     "evidence": "IMDb calls it a 'TV Special' (2024) and credits him as Raider #1. The production company, Bridgenext Content Studio, calls it a 'short film' made for Super Bowl LVIII. A search snippet, not independently checked, says it aired during the Super Bowl 58 broadcast on CBS. The primary production source supports only the weaker 'short film' description, and 'television special' could suggest a standalone network special. Name no network.",
+     "source_url": "https://contentstudio.bridgenext.com/our-work/super-bowl-lviii-just-win-baby-al-davis-short-film/",
+     "fix": "the short film Al Davis: Just Win Baby"
+    },
+    {
+     "claim": "Credit: the podcast series The Imperfection",
+     "verdict": "supported",
+     "evidence": "IMDb: The Imperfection (Podcast Series, 2021), Legs (voice), 9 episodes. The IMDb episode-character page tt16436070/characters/nm8803339 confirms it. The show is a real 2021 fiction podcast (Apple Podcasts listing; Tribeca 2021 official selection).",
+     "source_url": "https://www.imdb.com/title/tt14599452/",
+     "fix": ""
+    },
+    {
+     "claim": "Has worked as a script reader",
+     "verdict": "supported",
+     "evidence": "NetworkISA: 'script reader and creative executive'. Self-reported, with no employer named.",
+     "source_url": "https://www.networkisa.org/profile/erik-orjiako",
+     "fix": ""
+    },
+    {
+     "claim": "Has worked as a creative executive",
+     "verdict": "supported",
+     "evidence": "NetworkISA: 'script reader and creative executive'. Self-reported, with no company, dates or level given. Accurate as sourced, but nobody else can verify it. Do not add a company name or seniority.",
+     "source_url": "https://www.networkisa.org/profile/erik-orjiako",
+     "fix": ""
+    },
+    {
+     "claim": "Plays Mace in Killer of Men",
+     "verdict": "supported",
+     "evidence": "IMDb nm8803339, captured directly: Killer of Men (Short, 2026), Mace. The title page tt37523933 links to this profile.",
+     "source_url": "https://www.imdb.com/name/nm8803339/",
+     "fix": ""
+    }
+   ],
+   "rewritten_bio": "Erik Orjiako is a Swedish-born Nigerian American actor and writer based in Los Angeles. He studied English and communications at UMass Amherst and earned an MFA in screenwriting at the New York Film Academy. A graduate of Second City Hollywood's improv program, he has performed with its sketch team and Grad Revue and has written shows there. His credits include the series Minx, the short film Al Davis: Just Win Baby and the podcast series The Imperfection. He has also worked as a script reader and creative executive. In Killer of Men he plays Mace."
+  }
+ },
+ {
+  "agentId": "a0eb17e8cf983d113",
+  "result": {
+   "actor": "Sandra McDaniels (IMDb nm5062558), The Elder in Killer of Men (AFI Conservatory, 2026, dir. Jordan Betine)",
+   "claims": [
+    {
+     "claim": "Sandra McDaniels is Los Angeles-based.",
+     "verdict": "supported",
+     "evidence": "Backstage profile /u/sandramcdaniels (captured by main session) lists location as Los Angeles, CA. This is self-reported. It fits with 172 Push-Ups, which was cast from company members of the LA theatre company Playground LA (Heuer Publishing / Seed&Spark snippets); that link is an inference.",
+     "source_url": "https://www.backstage.com/u/sandramcdaniels/",
+     "fix": ""
+    },
+    {
+     "claim": "She is an actress.",
+     "verdict": "supported",
+     "evidence": "IMDb nm5062558 is headed 'Sandra McDaniels | Actress' and has seven acting credits. TMDB person 3238462 lists her under Acting.",
+     "source_url": "https://www.imdb.com/name/nm5062558/",
+     "fix": ""
+    },
+    {
+     "claim": "She is a member of SAG-AFTRA.",
+     "verdict": "supported",
+     "evidence": "Backstage profile (captured) lists SAG-AFTRA, and the search snippet for that profile also says she is a SAG-AFTRA member. This is self-reported. SAG-AFTRA has no public member directory, so an outside check was not possible. Supported to the standard of the actor's own professional profile.",
+     "source_url": "https://www.backstage.com/u/sandramcdaniels/",
+     "fix": ""
+    },
+    {
+     "claim": "Her screen credits include Gingersnap Christmas.",
+     "verdict": "supported",
+     "evidence": "IMDb nm5062558 (captured) lists Gingersnap Christmas (2024) as Gramma Belle. Backstage lists the same credit (as 'Grandma Belle', 2022 shoot). Leomark Studios, the distributor, lists Gingersnap Christmas (2024) on its Sandra McDaniels actor page. Letterboxd lists Sandra McDaniels as Gramma Belle.",
+     "source_url": "https://www.imdb.com/title/tt19315370/fullcredits/",
+     "fix": ""
+    },
+    {
+     "claim": "Gingersnap Christmas is a film (format descriptor).",
+     "verdict": "supported",
+     "evidence": "IMDb tt19315370 has no Short or TV Movie tag, so IMDb classes it as a movie. TMDB and Letterboxd tag the genre 'TV Movie', but TMDB's only release entry is United States, 19 Nov 2024, type 'Theatrical'. Leomark Studios distributes it on DVD, Blu-ray and digital (Amazon, Apple TV, Plex). No television-network premiere was found. Runtime is listed as 85 min (TMDB/Letterboxd) or 95 (Leomark). The neutral word 'film' is accurate. Do not upgrade it to 'feature film' (Leomark's page does not use that phrase) or to 'TV movie'; the sources conflict on both.",
+     "source_url": "https://www.themoviedb.org/movie/1132337-gingersnap-christmas/releases",
+     "fix": ""
+    },
+    {
+     "claim": "In Gingersnap Christmas she plays Gramma Belle.",
+     "verdict": "supported",
+     "evidence": "IMDb (captured) and Letterboxd both give the character as 'Gramma Belle'. Backstage spells it 'Grandma Belle', a minor spelling variant. The bio's spelling matches the IMDb credit. The plot summaries name Gramma Belle as the lead character's grandmother.",
+     "source_url": "https://letterboxd.com/film/gingersnap-christmas/",
+     "fix": ""
+    },
+    {
+     "claim": "Her screen credits include the series Truth Be Told (scope of the credit as presented).",
+     "verdict": "overstated",
+     "evidence": "The credit is real, but the role is small. IMDb (captured) and TMDB both list Sandra McDaniels as 'Homeless Woman' in 1 episode (2021, season 2). She does not appear in the Wikipedia article, the main cast, or the TMDB season-regular lists. The bio gives her named role for Gingersnap Christmas but lists Truth Be Told bare, next to Gingersnap Christmas. A press-kit reader could take that as a recurring or significant role. Saying it was one episode fixes this. The specific episode could not be confirmed (TMDB S2E6 does not list her).",
+     "source_url": "https://www.imdb.com/title/tt7821582/characters/nm5062558",
+     "fix": "an episode of the Apple TV+ series Truth Be Told"
+    },
+    {
+     "claim": "Truth Be Told (tt7821582) is an Apple TV+ series.",
+     "verdict": "supported",
+     "evidence": "Wikipedia: an American drama created by Nichelle Tramble Spellman for Apple TV+, starring Octavia Spencer, 3 seasons, 28 episodes, 6 Dec 2019 to 24 Mar 2023. Season 2 aired Aug to Oct 2021, which matches her 2021 credit. IMDb tt7821582 is 'Truth Be Told (TV Series 2019-2023)', the same show. Apple's own press site (apple.com/tv-pr/originals/truth-be-told) lists it as an Apple original. Note: Apple renamed the service from Apple TV+ to 'Apple TV' on 13 Oct 2025 (Variety, Deadline). 'Apple TV+' is historically accurate for a 2021 episode, so it can stay. 'Apple TV' is the current name if house style prefers it.",
+     "source_url": "https://en.wikipedia.org/wiki/Truth_Be_Told_(2019_TV_series)",
+     "fix": ""
+    },
+    {
+     "claim": "Her screen credits include the short film Providence.",
+     "verdict": "supported",
+     "evidence": "IMDb (captured): Providence (Short, 2018), as Maryanne. The IMDb character page tt9079484/characters/nm5062558 links the role to this profile. A search snippet from the title page: dir. Braden Joe, Sandra McDaniels as Maryanne and Zana Gankhuyag as Richard, Expedition Film Company, released 10 Dec 2018, estimated budget $2,000. This is a separate title from 'Providence (the film)' tt7949842. The only corroboration is IMDb; Backstage does not list it.",
+     "source_url": "https://www.imdb.com/title/tt9079484/",
+     "fix": ""
+    },
+    {
+     "claim": "Her screen credits include the short film 172 Push-Ups.",
+     "verdict": "supported",
+     "evidence": "IMDb (captured): 172 Push-Ups (Short, 2024). Backstage (captured): '172 Pushups (Principal, 2024)'. Festival pages confirm it is a 2024 US narrative short, 14 min 34 s, dir. Frieda Naphsica de Lackner (Mystic Film Festival; HollyShorts 2024 official selection). The festival pages do not list cast; the credit rests on IMDb and Backstage. Her character name is not given in the captured evidence, and the bio does not name one.",
+     "source_url": "https://www.imdb.com/title/tt36828174/",
+     "fix": ""
+    },
+    {
+     "claim": "In Killer of Men she plays the Elder.",
+     "verdict": "supported",
+     "evidence": "IMDb nm5062558 (captured): Killer of Men (Short, 2026), credited as 'Elder'. The IMDb title tt37523933 links to this profile. The film's site killerofmen.com has no cast list. Search snippets for the IMDb full credits list Sandra McDaniels in the cast alongside Erik Orjiako. IMDb says 'Elder', not 'The Elder'. Lowercase 'the Elder' in running prose is fine.",
+     "source_url": "https://m.imdb.com/title/tt37523933/fullcredits/",
+     "fix": ""
+    },
+    {
+     "claim": "All credits in the bio belong to this Sandra McDaniels (nm5062558), not to a similarly named person.",
+     "verdict": "supported",
+     "evidence": "Other people with similar names have different credits: Sandra McDaniel nm12184837 (American Heart Association: Life is Why, 2018), Sandra McDaniel nm12969202 (Elusive, 2022), Sandra McDaniel nm8587652 and Sandra I. McDaniel nm2650381 (producer/crew), and the DC/DOX Sandra McDaniel (Retro Report news producer). None of them has any credit in the bio. All five credits in the bio are on nm5062558. TMDB person 3238462 carries Gingersnap Christmas and Truth Be Told under the same name. The Backstage profile, which also holds the LA and SAG-AFTRA facts, independently lists Gingersnap Christmas and 172 Push-Ups, so it ties the profile to the IMDb person. Inferred, not proven: Truth Be Told and Providence are corroborated only by IMDb and TMDB (TMDB often imports from IMDb). If the actor can confirm those two directly before print, the last gap closes.",
+     "source_url": "https://www.imdb.com/name/nm5062558/",
+     "fix": ""
+    }
+   ],
+   "rewritten_bio": "Sandra McDaniels is a Los Angeles-based actress and a member of SAG-AFTRA. Her screen credits include the film Gingersnap Christmas, in which she plays Gramma Belle, an episode of the Apple TV+ series Truth Be Told, and the short films Providence and 172 Push-Ups. In Killer of Men she plays the Elder."
+  }
+ },
+ {
+  "agentId": "adb9afeee3a112d17",
+  "result": {
+   "actor": "Jamal Dennis (IMDb nm2156703; credited as Jamal R Dennis on Actors Access, as Jamal Rashawn Dennis on Glory Road)",
+   "claims": [
+    {
+     "claim": "Jamal Dennis is Los Angeles-based",
+     "verdict": "supported",
+     "evidence": "His self-written IMDb bio (captured 2026-09-10) calls him a professional actor based in Los Angeles. The Actors Access resume lists LA representation: Open Range Management (LA) and Element Talent (CA). The IMDb bio also says he spends time in Atlanta and New Orleans, but LA is his stated base.",
+     "source_url": "https://www.imdb.com/name/nm2156703/bio/",
+     "fix": ""
+    },
+    {
+     "claim": "He is an actor and stunt performer",
+     "verdict": "supported",
+     "evidence": "The IMDb header lists Actor and Stunts. The Actors Access Special Skills include 'Stuntman' and 'Stunt fighting'. TV Guide lists 16 acting credits plus stunt performer and stunts credits. The Just Acting Up podcast describes him as an 'actor, stuntman, and writer'.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "He studied at the Royal Academy of Dramatic Art",
+     "verdict": "overstated",
+     "evidence": "The wording matches his self-written IMDb bio ('recently studied at RADA'). But the only detailed source, the Actors Access resume, lists it as 'Royal Academy Of Dramatic Arts - Technique/Scene Study (United Kingdom)'. It sits in a training list alongside workshops and ongoing classes (Second City improv, Mocap Vault, Tim Storms wire-work). No source gives a degree, a full-time course, dates or a course length, and a web search found nothing linking him to RADA. Placed first and unqualified, 'studied at RADA' in a press kit reads as formal conservatoire training, which no source supports. Confirm the actual programme with the actor before running any stronger version.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": "His training includes technique and scene study at the Royal Academy of Dramatic Art"
+    },
+    {
+     "claim": "He studied with Lesly Kahn",
+     "verdict": "supported",
+     "evidence": "The Actors Access training section lists 'Lesly Kahn - Ongoing Scene Study (Hollywood, CA)'. The IMDb bio says he has been studying with Craig Archibald and Lesly Kahn.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "He studied with Craig Archibald",
+     "verdict": "supported",
+     "evidence": "The Actors Access training section lists 'Craig Archibald - Scene Study (Hollywood, CA)'. The IMDb bio says he has been studying with Craig Archibald and Lesly Kahn.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "He holds a black belt in martial arts",
+     "verdict": "supported",
+     "evidence": "His self-written IMDb bio says he is a black belt in martial arts and weapons training. It is self-reported only. The Actors Access resume lists the styles but no belt rank. Neither source says which style the black belt is in, and the draft correctly doesn't name one.",
+     "source_url": "https://www.imdb.com/name/nm2156703/bio/",
+     "fix": ""
+    },
+    {
+     "claim": "He has training in Kyokushin, Wushu, Ninjutsu and Shotokan",
+     "verdict": "supported",
+     "evidence": "The IMDb bio lists the styles as Kyokushin, Wu-Shu, Ninjitsu and Shotokan. The Actors Access Special Skills list 'Kyokushin Karate', 'Kung Fu (WuShu)', 'Ninjitsu' and 'Karate (Shotokan)'. 'Ninjutsu' is the standard spelling of the sources' 'Ninjitsu'.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "He played the lead, Lavelle Sanders, in the series Be Someone",
+     "verdict": "supported",
+     "evidence": "The IMDb credit is Be Someone (TV Series 2023), Lavelle Sanders, 4 episodes. The Actors Access resume lists 'Be Someone | Lead | Tubi'. Tubi's series page (2023, 1 season) bills Jamal Dennis first, ahead of Tisha Campbell, Jennifer Freeman, Krista Kalmus and Khalil Kain. Both the Tubi and Zashko Entertainment loglines centre on 'Ex High School Football Superstar Lavelle Sanders'. The Zashko page also says actor-producer Shayan Khan was working on the miniseries, but calls no one the lead, so it doesn't contradict this.",
+     "source_url": "https://tubitv.com/series/300010181/be-someone",
+     "fix": ""
+    },
+    {
+     "claim": "His screen credits include The Young and the Restless",
+     "verdict": "supported",
+     "evidence": "IMDb: The Young and the Restless (2024), Fireman, 1 episode. Actors Access: 'The Young and the Restless | Principle | CBS'. TV Guide also lists it. It is a one-episode role, but the draft doesn't characterise its size, so there is no overreach.",
+     "source_url": "https://www.imdb.com/name/nm2156703/",
+     "fix": ""
+    },
+    {
+     "claim": "His screen credits include S.W.A.T.",
+     "verdict": "supported",
+     "evidence": "IMDb: S.W.A.T. (2022), Henchman, 1 episode. Actors Access: 'S.W.A.T | Co-star | CBS'. TMDB: S.W.A.T. (2022), Henchman.",
+     "source_url": "https://www.themoviedb.org/person/2348530-jamal-dennis",
+     "fix": ""
+    },
+    {
+     "claim": "His screen credits include Marvel's Runaways",
+     "verdict": "supported",
+     "evidence": "IMDb: Runaways (TV Series 2019), Security Guard, 1 episode. Actors Access: \"Marvel's Runaways | Co-Star (Security Guard) | Hulu/dir Geeta Patel\". TMDB lists it as Marvel's Runaways (2019), Security Guard. Wikipedia confirms 'Marvel's Runaways' is the series' official title (Hulu, 2017-2019). Here 'Marvel' is part of the title, not an attribution overreach.",
+     "source_url": "https://en.wikipedia.org/wiki/Runaways_(TV_series)",
+     "fix": ""
+    },
+    {
+     "claim": "His screen credits include Zoo",
+     "verdict": "supported",
+     "evidence": "IMDb: Zoo (2015), Prison Guard, 1 episode. Actors Access: 'Zoo | Guest Star | CBS'. TMDB: Zoo (2015), Prison Guard.",
+     "source_url": "https://www.themoviedb.org/person/2348530-jamal-dennis",
+     "fix": ""
+    },
+    {
+     "claim": "His screen credits include Mississippi Grind",
+     "verdict": "supported",
+     "evidence": "IMDb: Mississippi Grind (2015), Baller. Actors Access: 'Mississippi Grind | Principal | Ryan Fleck'. TMDB: Mississippi Grind (2015), Baller.",
+     "source_url": "https://www.themoviedb.org/person/2348530-jamal-dennis",
+     "fix": ""
+    },
+    {
+     "claim": "His screen credits include Glory Road",
+     "verdict": "supported",
+     "evidence": "IMDb nm2156703: Glory Road (2006), Big Guy, credited as Jamal Rashawn Dennis. The Actors Access resume (Jamal R Dennis) lists 'Glory Road | Principal | James Gartner', which ties the differently credited name to the same person. TV Guide also lists it. On-screen credit name: Jamal Rashawn Dennis.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "He performed stunts on Sinners",
+     "verdict": "supported",
+     "evidence": "IMDb: Sinners (2025), stunt performer. TMDB's Sinners cast/crew page lists Jamal Dennis under Crew, Stunts. TV Guide lists Sinners under Stunt Performer. The Just Acting Up podcast describes his time on set with Ryan Coogler for Sinners, and his Instagram (@theejamaldennis) has a 'Sinners stunt team' post.",
+     "source_url": "https://www.themoviedb.org/movie/1233413-sinners/cast",
+     "fix": ""
+    },
+    {
+     "claim": "He performed stunts on Emancipation",
+     "verdict": "supported",
+     "evidence": "IMDb: Emancipation (2022), stunts. TV Guide lists Emancipation under Stunts. It is not on the Actors Access resume and wasn't found on TMDB. Support rests on IMDb and TV Guide under the same profile.",
+     "source_url": "https://www.tvguide.com/celebrities/jamal-dennis/credits/3000794019/",
+     "fix": ""
+    },
+    {
+     "claim": "He performed stunts on Grudge Match",
+     "verdict": "supported",
+     "evidence": "IMDb: Grudge Match (2013), stunts. Actors Access: 'Grudge Match | Boxer (Stunt Performer) | Peter Segal'. TV Guide lists Grudge Match under Stunts.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "He is a member of SAG-AFTRA",
+     "verdict": "supported",
+     "evidence": "The Actors Access resume header reads 'Jamal R Dennis - SAG-AFTRA'.",
+     "source_url": "http://resumes.actorsaccess.com/JamalDennis",
+     "fix": ""
+    },
+    {
+     "claim": "In Killer of Men he plays Kojo",
+     "verdict": "supported",
+     "evidence": "IMDb: Killer of Men (Short, 2026), credited role 'Fighter2 Kojo'. The title page tt37523933 links to this profile. TMDB: Killer Of Men (2026), Kojo. The character name should match the film's own end-credit wording.",
+     "source_url": "https://www.themoviedb.org/person/2348530-jamal-dennis",
+     "fix": ""
+    }
+   ],
+   "rewritten_bio": "Jamal Dennis is a Los Angeles-based actor and stunt performer. His training includes technique and scene study at the Royal Academy of Dramatic Art and scene study with Lesly Kahn and Craig Archibald, and he holds a black belt in martial arts, with training in Kyokushin, Wushu, Ninjutsu and Shotokan. He played the lead, Lavelle Sanders, in the series Be Someone. His screen credits include The Young and the Restless, S.W.A.T., Marvel's Runaways, Zoo, Mississippi Grind and Glory Road, and he has performed stunts on Sinners, Emancipation and Grudge Match. He is a member of SAG-AFTRA. In Killer of Men he plays Kojo."
+  }
+ },
+ {
+  "agentId": "ae16de5fc6bb77511",
+  "result": {
+   "actor": "Eric Pargac",
+   "claims": [
+    {
+     "claim": "Los Angeles-based",
+     "verdict": "supported",
+     "evidence": "The Sweibel Arts crew page lists \"Eric Pargac (he/him, Los Angeles)\" and says he moved back to Los Angeles in 2018 to become Director of Marketing and Communications at A Noise Within in Pasadena. His Gotch Creative clients (The Music Center, Caltech) are also in LA. Note that he lived in Astoria, Queens, in the Digressions era (2013-2016), so the LA base dates from 2018. The page is undated.",
+     "source_url": "https://sweibelarts.com/crew/",
+     "fix": ""
+    },
+    {
+     "claim": "Actor and filmmaker",
+     "verdict": "supported",
+     "evidence": "The IMDb self-written bio says \"actor, editor, producer and director\". The Digressions cast page calls him an \"actor/filmmaker/graphic design geek\". IMDb credits include directing, editing, cinematography and producing.",
+     "source_url": "https://thedigressionsseries.wordpress.com/cast-creatives/",
+     "fix": ""
+    },
+    {
+     "claim": "Grew up in Texas",
+     "verdict": "supported",
+     "evidence": "The IMDb self-written bio (captured 2026-09-10) says he \"grew up in Texas\". His 2018 resume lists improv he co-founded and directed at Texas A&M University, which is consistent. The only source is self-reported.",
+     "source_url": "https://www.imdb.com/name/nm1655191/",
+     "fix": ""
+    },
+    {
+     "claim": "A founding artistic director of Furious Theatre Company in Los Angeles",
+     "verdict": "supported",
+     "evidence": "ericpargac.com/bio and the IMDb bio say \"a founding artistic director\". The 2018 resume says \"Founding Artistic Director of Furious Theatre Company\". Artists Rep says \"Co-founder and Co-Artistic Director (2001-2010)\". Wikipedia lists six founders in 2001, including Pargac. The draft's \"a founding artistic director\" correctly signals he was one of several.",
+     "source_url": "https://artistsrep.org/artists/eric-pargac/",
+     "fix": ""
+    },
+    {
+     "claim": "Starred in ten productions at Furious",
+     "verdict": "overstated",
+     "evidence": "The count of ten is backed up: the 2018 resume lists exactly ten Furious productions, and the IMDb bio says \"starred in 10 productions\". The only source for \"starred\" is his own IMDb bio. The resume role list includes supporting parts, such as Shawn Keogh in The Playboy of the Western World, Ruffman in The Fair Maid of the West and Sweets in Mojo, so not all ten were leads.",
+     "source_url": "https://static1.squarespace.com/static/5325c3ede4b057c7f6c548d8/t/5aa969220d9297198fcad0b7/1521051938962/Eric_Pargac_Resume.pdf",
+     "fix": "where he performed in ten productions"
+    },
+    {
+     "claim": "Named Stage Scene LA's 2007 Actor of the Year for An Impending Rupture of the Belly",
+     "verdict": "overstated",
+     "evidence": "StageSceneLA's 2006-2007 Scenies page lists \"ERIC PARGAC - An Impending Rupture of the Belly\" under \"LEAD ACTOR OF THE YEAR/DRAMA (TIE)\", with ten names in that category. The honour is real but shared, and specific to lead actor in drama. As written, the draft reads as a single outright Actor of the Year title. The outlet styles its name StageSceneLA. The play was a Furious production that opened April 2007 (Variety), so attaching it to Furious is correct. His own site also claims a \"2008 Actor of the Year\" for Saturday Night at the Palace. That claim is not in the draft and was not checked.",
+     "source_url": "http://stagescenela.com/2006-2007-scenies/",
+     "fix": "shared StageSceneLA's 2006-2007 Lead Actor of the Year (Drama) award for An Impending Rupture of the Belly"
+    },
+    {
+     "claim": "Performed at Artists Repertory Theatre in Portland",
+     "verdict": "supported",
+     "evidence": "His Artists Rep artist profile lists Magellanica, 1984 and the Magellanica audio drama. He played Dr. Lars Brotten in Magellanica (January-February 2018, dir. Damaso Rodriguez), confirmed by BroadwayWorld and Portland Mercury coverage and the 2018 resume.",
+     "source_url": "https://artistsrep.org/artists/eric-pargac/",
+     "fix": ""
+    },
+    {
+     "claim": "Performed at Intiman Theatre in Seattle",
+     "verdict": "supported",
+     "evidence": "Artists Rep profile: \"Played Julie Gordon in 'Paradise Lost' at the Tony Award-winning Intiman Theatre in Seattle.\" The 2018 resume gives the same role, directed by Damaso Rodriguez. Search results place the production in Intiman's 2010 season. The Seattle Times review returned 403, so the cast list was not checked there.",
+     "source_url": "https://artistsrep.org/artists/eric-pargac/",
+     "fix": ""
+    },
+    {
+     "claim": "Performed at the IRT Theatre in New York",
+     "verdict": "supported",
+     "evidence": "IRT Theater's own page for The Koan of Seymour lists ERIC PARGAC among the performers, running September 2-18, 2016. His resume and site say he played Seymour.",
+     "source_url": "http://irttheater.org/3b-development-series/the-koan-of-seymour/",
+     "fix": ""
+    },
+    {
+     "claim": "Television credit: HBO's Succession",
+     "verdict": "supported",
+     "evidence": "IMDb nm1655191 (captured): Succession (TV Series, 2018), Dr. Lipe, 1 episode. The 2018 resume: \"Succession, Co-Star, HBO, Mark Mylod (dir.)\". The HBO attribution is correct. It is a single-episode co-star role, and the draft does not claim more.",
+     "source_url": "https://www.imdb.com/name/nm1655191/",
+     "fix": ""
+    },
+    {
+     "claim": "Television credit: The Late Show with Stephen Colbert",
+     "verdict": "supported",
+     "evidence": "The 2018 resume says \"The Late Show w/Stephen Colbert, Co-Star, CBS\". ericpargac.com/bio and the Artists Rep profile both list it. It does not appear in the captured IMDb credits. The network is CBS, not HBO. The draft's \"HBO's Succession and The Late Show...\" copies his own bio's phrasing, but a reader could take \"HBO's\" to cover both shows. \"CBS's The Late Show with Stephen Colbert\" would remove the ambiguity (optional).",
+     "source_url": "https://static1.squarespace.com/static/5325c3ede4b057c7f6c548d8/t/5aa969220d9297198fcad0b7/1521051938962/Eric_Pargac_Resume.pdf",
+     "fix": ""
+    },
+    {
+     "claim": "Starred in the web series The Digressions",
+     "verdict": "supported",
+     "evidence": "IMDb: The Digressions (2013-2015), Theo, 19 episodes. The 2018 resume calls it a \"webseries\" and lists him as a series regular. His site says he played Theo in all three seasons. It is a five-character ensemble with two characters on screen per episode, so \"starred in\" fits a principal ensemble lead.",
+     "source_url": "https://www.imdb.com/name/nm1655191/",
+     "fix": ""
+    },
+    {
+     "claim": "Co-directed The Digressions",
+     "verdict": "supported",
+     "evidence": "IMDb lists him as co-director. The series' cast and creatives page lists the directors as Eric Pargac and Andrew Dahl.",
+     "source_url": "https://thedigressionsseries.wordpress.com/cast-creatives/",
+     "fix": ""
+    },
+    {
+     "claim": "Produced The Digressions",
+     "verdict": "overstated",
+     "evidence": "The series page lists four producers: Aubrey Saverino, Andrew Dahl, Eric Pargac and Jordan McArthur. His IMDb bio and ericpargac.com say he \"co-produced\". IMDb credits him as one of the executive producers. The draft puts \"co-\" on directed but not on produced, which implies he was the sole producer.",
+     "source_url": "https://thedigressionsseries.wordpress.com/cast-creatives/",
+     "fix": "co-produced"
+    },
+    {
+     "claim": "Member of SAG-AFTRA",
+     "verdict": "supported",
+     "evidence": "The 2018 resume header says \"SAG-AFTRA/AEA\". His Artists Rep profile lists SAG-AFTRA under professional memberships. Current membership status cannot be checked publicly. Both sources are from 2018-2020.",
+     "source_url": "https://artistsrep.org/artists/eric-pargac/",
+     "fix": ""
+    },
+    {
+     "claim": "Member of Actors' Equity",
+     "verdict": "supported",
+     "evidence": "The 2018 resume header says \"SAG-AFTRA/AEA\". His Artists Rep profile lists Actors Equity Association under professional memberships. Current status is unverifiable, as with SAG-AFTRA.",
+     "source_url": "https://artistsrep.org/artists/eric-pargac/",
+     "fix": ""
+    },
+    {
+     "claim": "Plays Master Kenner in Killer of Men",
+     "verdict": "supported",
+     "evidence": "IMDb nm1655191 (captured 2026-09-10): Killer of Men (Short, 2026), Master Kenner. The IMDb title page tt37523933 links to this profile.",
+     "source_url": "https://www.imdb.com/name/nm1655191/",
+     "fix": ""
+    }
+   ],
+   "rewritten_bio": "Eric Pargac is a Los Angeles-based actor and filmmaker who grew up in Texas. He was a founding artistic director of Furious Theatre Company in Los Angeles, where he performed in ten productions and shared StageSceneLA's 2006-2007 Lead Actor of the Year (Drama) award for An Impending Rupture of the Belly. He has also performed at Artists Repertory Theatre in Portland, Intiman Theatre in Seattle and the IRT Theatre in New York. His television credits include HBO's Succession and The Late Show with Stephen Colbert. He starred in, co-directed and co-produced the web series The Digressions. He is a member of SAG-AFTRA and Actors' Equity. In Killer of Men he plays Master Kenner."
+  }
+ },
+ {
+  "agentId": "a5bd7e30c8efc9b5c",
+  "result": {
+   "actors": [
+    {
+     "actor": "Erik Orjiako",
+     "disagreements": [
+      "Al Davis: Just Win Baby. The sources lens said 'television special' was supported (IMDb tt31499446 calls it a TV Special). The overreach lens said it was overstated. The overreach lens is right. I opened the production company's own page (https://contentstudio.bridgenext.com/our-work/super-bowl-lviii-just-win-baby-al-davis-short-film/). It calls the piece a 'short film' and names no network, airdate or broadcast. The claim that it aired during the Super Bowl LVIII broadcast on CBS appears only in a search-engine summary. No primary page I opened confirms it. 'Short film' is the primary-sourced label, and 'television special' depends on IMDb's genre tag alone. Fix: 'the short film Al Davis: Just Win Baby'.",
+      "Second City sketch team. Both lenses said 'overstated'; they differ only in the wording of the fix. The overreach lens's fix adds 'Grad Revue', which the draft did not contain. That is a new fact, and the brief says to add none. I used the sources lens wording: 'he has performed with its sketch team and written shows there'."
+     ],
+     "unchecked_claims": [],
+     "changes": [
+      "'has written and performed with its sketch team' became 'has performed with its sketch team and written shows there'. The Second City bio supports performing only. NetworkISA supports writing shows at Second City in Hollywood, but not for the sketch team.",
+      "'the television special Al Davis: Just Win Baby' became 'the short film Al Davis: Just Win Baby'. This follows the production company's own description, and no broadcast airing is confirmed.",
+      "Flag, no text change: the MFA, Swedish-born, Nigerian American and creative-executive claims each rest on a single profile he wrote himself. The MFA is also consistent with NYFA's Jan 2017 graduation list naming a 'Chiedozie Orjiako' under MFA Screenwriting, but that identity is inferred. Confirm all four with the actor before print."
+     ],
+     "final_bio": "Erik Orjiako is a Swedish-born Nigerian American actor and writer based in Los Angeles. He studied English and communications at UMass Amherst and earned an MFA in screenwriting at the New York Film Academy. A graduate of Second City Hollywood's improv program, he has performed with its sketch team and written shows there. His credits include the series Minx, the short film Al Davis: Just Win Baby and the podcast series The Imperfection. He has also worked as a script reader and creative executive. In Killer of Men he plays Mace."
+    },
+    {
+     "actor": "Sandra McDaniels",
+     "disagreements": [
+      "Truth Be Told. The sources lens said 'supported'. The overreach lens said 'overstated' because the role is one episode and could be read as recurring next to the named Gingersnap role. The sources lens is right. The draft says only that her credits 'include' the series, which is literally true: IMDb and TMDB both list Homeless Woman, 1 episode, season 2 (2021). Both lenses accepted the same bare wording for other single-episode credits in this kit: Orjiako's Minx, Pargac's Succession, and Dennis's The Young and the Restless, S.W.A.T., Marvel's Runaways and Zoo. Qualifying only this one credit would apply the standard unevenly. If the kit wants to state episode counts, it should do so for every bio, not just this one."
+     ],
+     "unchecked_claims": [],
+     "changes": [
+      "Clarity only, no change to any fact: I reordered the credit list. The draft read '...in which she plays Gramma Belle, the Apple TV+ series Truth Be Told, and...', which can parse as if 'the Apple TV+ series Truth Be Told' describes Gramma Belle. Moving the Gingersnap clause to the end of the list removes that reading. Revert if the original order is wanted for billing reasons.",
+      "Kept 'Apple TV+'. It was the service's name when her 2021 episode aired, and both lenses agree it is accurate. Apple renamed the service 'Apple TV' in October 2025, so switch only if house style requires the current name.",
+      "Flag, no text change: SAG-AFTRA membership is self-reported on Backstage. Truth Be Told and Providence are corroborated only by IMDb and TMDB, and TMDB often imports from IMDb. Confirm with the actor before print."
+     ],
+     "final_bio": "Sandra McDaniels is a Los Angeles-based actress and a member of SAG-AFTRA. Her screen credits include the Apple TV+ series Truth Be Told, the short films Providence and 172 Push-Ups, and the film Gingersnap Christmas, in which she plays Gramma Belle. In Killer of Men she plays the Elder."
+    },
+    {
+     "actor": "Eric Pargac",
+     "disagreements": [
+      "Los Angeles-based. The sources lens said 'unsupported' because it found only a RocketReach data-broker listing. The overreach lens said 'supported'. The overreach lens is right. I opened https://sweibelarts.com/crew/, which reads 'Eric Pargac (he/him, Los Angeles)' and says he 'moved back to Los Angeles in 2018' to work at A Noise Within. The page is undated, so it is supported with a note to confirm he is still there.",
+      "Starred in ten productions at Furious. The sources lens said 'supported', relying on his self-written IMDb bio ('starred in 10 productions'). The overreach lens said 'overstated'. The overreach lens is right. The count of ten is corroborated by his 2018 resume, but the resume's role list includes supporting parts such as Shawn Keogh, Ruffman and Sweets, so 'starred' is not true of all ten. His own site's list of these productions also uses 'performed'. Fix: 'performed in ten productions'.",
+      "Produced The Digressions. The sources lens said 'supported' (ericpargac.com: 'co-directed and produced'). The overreach lens said 'overstated'. The overreach lens is right. The series' own creatives page lists four producers, his IMDb bio says 'co-produced', and next to 'co-directed' the bare 'produced' implies he was the sole producer. Fix: 'co-produced'.",
+      "Award name styling. Both lenses said 'overstated', and the fixes differ only in how the outlet is spelled ('Stage Scene LA' vs 'StageSceneLA'). The outlet styles itself StageSceneLA (stagescenela.com), so I used that."
+     ],
+     "unchecked_claims": [
+      "Venue name 'the IRT Theatre'. Neither lens checked the spelling. The venue's own domain is irttheater.org, and the overreach lens cites 'IRT Theater's own page', so its styling is 'Theater'. I changed it on that evidence without opening the page; confirm against the venue.",
+      "'HBO's' could be read as covering both TV credits. The overreach lens raised this but made no fix, and the sources lens did not address it. The Late Show is a CBS show."
+     ],
+     "changes": [
+      "'was named Stage Scene LA's 2007 Actor of the Year' became 'shared StageSceneLA's 2006-2007 Lead Actor of the Year (Drama) award'. The award source lists him under 'Lead Actor of the Year/Drama (Tie)' for the 2006-2007 season.",
+      "'starred in ten productions' became 'performed in ten productions'.",
+      "'produced' became 'co-produced' for The Digressions.",
+      "'the IRT Theatre' became 'the IRT Theater' to match the venue's own styling (inferred from its domain).",
+      "Reordered the TV credits to 'The Late Show with Stephen Colbert and HBO's Succession' so that 'HBO's' attaches only to Succession. This uses no new fact; naming CBS would have added one.",
+      "Kept 'Los Angeles-based', now supported by the Sweibel Arts crew page.",
+      "Flag, no text change: the SAG-AFTRA and Actors' Equity memberships are sourced from 2018 to 2020 material. Confirm current status with the actor."
+     ],
+     "final_bio": "Eric Pargac is a Los Angeles-based actor and filmmaker who grew up in Texas. He was a founding artistic director of Furious Theatre Company in Los Angeles, where he performed in ten productions and shared StageSceneLA's 2006-2007 Lead Actor of the Year (Drama) award for An Impending Rupture of the Belly. He has also performed at Artists Repertory Theatre in Portland, Intiman Theatre in Seattle and the IRT Theater in New York. His television credits include The Late Show with Stephen Colbert and HBO's Succession. He starred in, co-directed and co-produced the web series The Digressions. He is a member of SAG-AFTRA and Actors' Equity. In Killer of Men he plays Master Kenner."
+    },
+    {
+     "actor": "Jamal Dennis",
+     "disagreements": [
+      "Royal Academy of Dramatic Art. The sources lens said 'supported', relying on his IMDb bio ('recently studied at RADA'). The overreach lens said 'overstated'. The overreach lens is right. The only detailed source, the Actors Access resume, lists 'Royal Academy Of Dramatic Arts - Technique/Scene Study (United Kingdom)' in a training list next to workshops and ongoing classes. No source gives a degree, programme, dates or length. In a press kit, an unqualified 'studied at the Royal Academy of Dramatic Art' reads as conservatoire training, and no source supports that. Fix: 'His training includes technique and scene study at the Royal Academy of Dramatic Art', which is the resume's own description."
+     ],
+     "unchecked_claims": [],
+     "changes": [
+      "'He studied at the Royal Academy of Dramatic Art and with Lesly Kahn and Craig Archibald' became 'His training includes technique and scene study at the Royal Academy of Dramatic Art and scene study with Lesly Kahn and Craig Archibald'. 'Scene study' for Kahn and Archibald is the resume's own label for both, not a new fact.",
+      "Split the training sentence in two and changed 'with training in' to 'has trained in', to avoid saying 'training' twice in a row. No change to any fact.",
+      "Flag, no text change: the black belt is self-reported on IMDb only, with no style named, and SAG-AFTRA rests on his own resume header. Glory Road is credited on screen as Jamal Rashawn Dennis, and IMDb credits his Killer of Men role as 'Fighter2 Kojo'. Match 'Kojo' to the film's end credits. Confirm the RADA programme with the actor before using any stronger wording."
+     ],
+     "final_bio": "Jamal Dennis is a Los Angeles-based actor and stunt performer. His training includes technique and scene study at the Royal Academy of Dramatic Art and scene study with Lesly Kahn and Craig Archibald. He holds a black belt in martial arts and has trained in Kyokushin, Wushu, Ninjutsu and Shotokan. He played the lead, Lavelle Sanders, in the series Be Someone. His screen credits include The Young and the Restless, S.W.A.T., Marvel's Runaways, Zoo, Mississippi Grind and Glory Road, and he has performed stunts on Sinners, Emancipation and Grudge Match. He is a member of SAG-AFTRA. In Killer of Men he plays Kojo."
+    }
+   ]
+  }
+ }
+]

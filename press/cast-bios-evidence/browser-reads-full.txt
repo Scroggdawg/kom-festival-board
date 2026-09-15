@@ -1,0 +1,1750 @@
+##### [2026-09-10T18:36:17] {"actions": [{"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm8803339/bio/"}}, {"name": "get_page_text", "input": {"max_chars": 6000}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm5062558/bio/"}}, {"name": "get_page_text", "input": {"max_chars": 6000}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm2156703/bio/"}}, {"name": "get_page_text", "input": {"max_chars": 6000}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm1655191/bio/"}}, {"name": "get_page_text", "input": {"max_chars": 6000}}]}
+[navigate] {
+  "serverId": "preview-local_aa9111eb-5d7e-4427-8ebc-a8940449aba8",
+  "tabId": "seed",
+  "reused": false,
+  "type": "browser",
+  "navOk": true
+}
+Browser pane opened. Use serverId "preview-local_aa9111eb-5d7e-4427-8ebc-a8940449aba8" with read_page / computer / navigate.
+[get_page_text] Title: 
+URL: https://imdb.com
+Source element: <body>
+---
+
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "imdb.com/name/nm8803339/bio/" (https://imdb.com)
+[navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "imdb.com/name/nm5062558/bio/" (https://imdb.com)
+[get_page_text] Title: 
+URL: https://imdb.com
+Source element: <body>
+---
+
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "imdb.com/name/nm5062558/bio/" (https://imdb.com)
+[navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "imdb.com/name/nm2156703/bio/" (https://imdb.com)
+[get_page_text] Title: 
+URL: https://imdb.com
+Source element: <body>
+---
+
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "imdb.com/name/nm2156703/bio/" (https://imdb.com)
+
+actions[6] (navigate) failed: navigation to https://imdb.com was denied or failed (6 completed, 1 remaining)
+
+##### [2026-09-10T18:39:03] {"actions": [{"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm5062558/bio/"}}, {"name": "computer", "input": {"action": "wait", "duration": 4}}, {"name": "get_page_text", "input": {"max_chars": 6000}}, {"name": "computer", "input": {"action": "screenshot", "scale": 0.5}}]}
+[navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - Biography - IMDb" (https://imdb.com) [computer:wait] waited 4s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - Biography - IMDb" (https://imdb.com) [get_page_text] Title: Sandra McDaniels - Biography - IMDb
+URL: https://imdb.com
+Source element: <main>
+---
+Sponsored 
+Back
+Biography
+Sandra McDaniels
+Biography
+Sandra McDaniels is known for Truth Be Told (2019), Gingersnap Christmas (2024) and Providence (2018).
+Sponsored 
+Contribute to this page
+Suggest an edit or add missing content
+Learn more about contributing
+Edit page
+More from this person
+View agent, publicist, legal and company contact details on IMDbPro
+More to explore
+Photos
+Hollywood Power Couples
+See the gallery
+Sponsored 
+List
+2026 Fall TV and Streaming Watch Guide
+See the watch guide
+Sponsored 
+Photos
+Primetime Creative Arts Emmys: Photos We Love
+Check out the gallery
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - Biography - IMDb" (https://imdb.com) [computer:screenshot] Screenshot size: 400x225 0.5-scale view; coordinate frame: 800x450.
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - Biography - IMDb" (https://imdb.com) 
+
+##### [2026-09-10T18:42:02] {"actions": [{"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm8803339/bio/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "get_page_text", "input": {"max_chars": 5000}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm2156703/bio/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "get_page_text", "input": {"max_chars": 5000}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm1655191/bio/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "get_page_text", "input": {"max_chars": 5000}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/find/?q=Killer%20of%20Men&s=tt"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "get_page_text", "input": {"max_chars": 4000}}]}
+[navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - Biography - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - Biography - IMDb" (https://imdb.com) [get_page_text] Title: Erik Orjiako - Biography - IMDb
+URL: https://imdb.com
+Source element: <main>
+---
+Sponsored 
+Back
+Biography
+Erik Orjiako
+Biography
+Erik Orjiako is known for Minx (2022), Al Davis: Just Win Baby (2024) and The Imperfection (2021).
+Sponsored 
+Contribute to this page
+Suggest an edit or add missing content
+Learn more about contributing
+Edit page
+More from this person
+View agent, publicist, legal and company contact details on IMDbPro
+More to explore
+Photos
+Hollywood Power Couples
+See the gallery
+Sponsored 
+List
+2026 Fall TV and Streaming Watch Guide
+See the watch guide
+User lists
+Related lists from IMDb users
+Create a list
+Baby Got Back!
+Created 1y ago
+685 people
+Junk in the Front
+Created 1y ago
+318 people
+You’ve Got Male!!
+Created 1y ago
+1932 people
+Sexiest Men!
+Created 10mo ago
+114 people
+Sponsored 
+Photos
+Primetime Creative Arts Emmys: Photos We Love
+Check out the gallery
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - Biography - IMDb" (https://imdb.com) [navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Jamal Dennis - Biography - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Jamal Dennis - Biography - IMDb" (https://imdb.com) [get_page_text] Title: Jamal Dennis - Biography - IMDb
+URL: https://imdb.com
+Source element: <main>
+---
+Sponsored 
+Back
+Biography
+Jamal Dennis
+Jump to
+Overview (1)
+Biography (1)
+Trivia (1)
+Overview
+Height
+6′ (1.83 m)
+Biography
+Jamal Dennis is a professional actor based in Los Angeles, California.
+
+This working actor recently studied at RADA, and he has been studying with Craig Archibald and Lesly Kahn. Meanwhile, he also loves to stay busy and immerse himself in the theatre scene and beyond. He has also done some screen work, including the lead role on the show "Be Someone".
+
+In addition to being able to portray a broad range of characters, Jamal brings a lot of action and physicality to his roles, as he is a black belt in martial arts and weapons training. His styles include Kyokushin, Wu-Shu, Ninjitsu, and Shotokan, and he continues to deepen his familiarity with combat and stunts.
+
+To add to his versatility, Jamal has honed his craft with various accents, bringing characters to life in an authentic way in every aspect of his performance. He is always keen on improvising and letting loose when the situation calls for it! When not in LA, Jamal spends time in Atlanta and New Orleans, and he matches his love of acting and performing with a passion for wellness and physical fitness.
+
+If that wasn't enough Jamal is also a loving father and he enjoys spending quality time with his family.
+
+Follow Jamal on Instagram @theejamaldennis to stay tuned for his next project!
+- IMDb mini biography by: JD
+Trivia
+Trained in Wushu by Eric Chen from the National Wushu Training. Trained in wire work by Tim Storms. Also trained in other martial arts such as Karate, Ninjitsu, boxing, Kickboxing, Aikido, Jiu Jitsu, Tae Kwon Do and Tai Chi, among various other sports.
+Sponsored 
+Contribute to this page
+Suggest an edit or add missing content
+Learn more about contributing
+Edit page
+More from this person
+View agent, publicist, legal and company contact details on IMDbPro
+More to explore
+Photos
+Hollywood Power Couples
+See the gallery
+Sponsored 
+List
+Theatrical Releases Coming to Streaming
+See the list
+User lists
+Related lists from IMDb users
+Create a list
+Random List
+Created 2y ago
+10100 people
+V.G.L.G. #3
+Created 7y ago
+3973 people
+Sponsored 
+Photos
+Primetime Creative Arts Emmys: Photos We Love
+Check out the gallery
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Jamal Dennis - Biography - IMDb" (https://imdb.com) [navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Eric Pargac - Biography - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Eric Pargac - Biography - IMDb" (https://imdb.com) [get_page_text] Title: Eric Pargac - Biography - IMDb
+URL: https://imdb.com
+Source element: <main>
+---
+Sponsored 
+Back
+Biography
+Eric Pargac
+Biography
+Eric Pargac is an actor, editor, producer and director who grew up in Texas. He was a founding artistic director of the critically acclaimed Furious Theatre Company in Los Angeles--named one of the Best Theatre Company's of the decade by LA Weekly. At Furious, he starred in 10 productions and received the Pasadena Arts Council's Gold Crown Award and the Debut Award from Back Stage West. He's also done theatre in New York, Portland and Seattle.
+
+Eric starred as Theo in all three seasons of the award-winning web series The Digressions, which he also co-produced and co-directed. He also starred in the web series Lost Angeles. Eric began his career as an improviser, and performed on a house team at ImprovOlympic in Los Angeles.
+
+As a filmmaker, Eric was named as an Official Artist of the New York Television Festival in 2014 and 2015, qualifying as a finalist in the A&E Unscripted Development Pipeline in 2014 and as a semifinalist for History Channel's Unscripted Development Pipeline in 2015.
+- IMDb mini biography by: Eric Pargac
+Sponsored 
+Contribute to this page
+Suggest an edit or add missing content
+Learn more about contributing
+Edit page
+More from this person
+View agent, publicist, legal and company contact details on IMDbPro
+More to explore
+List
+The Biggest Movies and TV Coming in September
+Add these to your Watchlist
+Sponsored 
+List
+2026 Fall TV and Streaming Watch Guide
+See the watch guide
+Sponsored 
+Photos
+Streaming Stars, Then and Now
+See the gallery
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Eric Pargac - Biography - IMDb" (https://imdb.com) [navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Find - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Find - IMDb" (https://imdb.com) [get_page_text] Title: Find - IMDb
+URL: https://imdb.com
+Source element: <main>
+---
+Sponsored 
+Search "killer of men"
+Titles
+Exact matches
+Killer of Men
+20221h 12m
+6.3
+ (75)
+Rate
+Mark as watched
+Killer of Men
+202615mShort
+Rate
+Mark as watched
+A Killer of Men
+201522mShort
+6.4
+ (35)
+Rate
+Mark as watched
+Killer Ice Cream Men and the Untimely Waffle, Zombies and Cat
+2011Short
+Rate
+Mark as watched
+The Parson and the Outlaw
+19571h 11mApproved
+4.5
+ (190)
+Rate
+Mark as watched
+Predator: Killer of Killers
+20251h 25mR78Metascore
+7.4
+ (63K)
+Rate
+Mark as watched
+The Man Who Killed Don Quixote
+20182h 12mNot Rated58Metascore
+6.3
+ (24K)
+Rate
+Mark as watched
+The Man Who Killed Hitler and Then the Bigfoot
+20181h 38mNot Rated51Metascore
+5.7
+ (15K)
+Rate
+Mark as watched
+Audiobook - Killer of Men
+Episode
+Turn Every Moment Into A Story Through Audiobooks
+2010–
+5m
+Podcast Episode
+Rate
+Mark as watched
+The Silent Killer of Men
+Episode
+Untrained Philosophical Discussionists
+2024–
+1h 1m
+Podcast Episode
+Rate
+Mark as watched
+Naniwa kyokaku: dokyo shichinin giri
+19671h 28m
+Rate
+Mark as watched
+Attack of the Killer G-Men
+S1.E20
+Robotboy
+2005–2008
+12m
+TV-G
+TV Episode
+Broken Lullaby
+19321h 16mApproved
+7.6
+ (1.9K)
+Rate
+Mark as watched
+Ken and Barbie Killers: The Lost Murder Tapes
+2021TV-MATV Mini Series
+7.2
+ (1.7K)
+Rate
+Mark as watched
+A Man Could Get Killed
+19661h 37mApproved
+5.8
+ (698)
+Rate
+Mark as watched
+Glass men & killer doubles: a history of delusions
+Episode
+History Extra Podcast
+2007–
+34m
+Podcast Episode
+Rate
+Mark as watched
+Glass men & killer doubles: a history of delusions
+S1.E1430
+History Extra Podcast
+2007–
+Podcast Episode
+Rate
+Mark as watched
+The Mainenance Man 2 the Bayou Killer
+20261h 14mTV-MA
+5.9
+ (11)
+Rate
+Mark as watched
+The Silent Killer Affecting Millions of Men | Sleep Apnea Explained
+Episode
+The Prime Pediatric Podcast
+2020–
+32m
+Podcast Episode
+Rate
+Mark as watched
+Vanity Fair: Killers Kill, Dead Men Die
+20076mVideo
+4.8
+ (406)
+Rate
+Mark as watched
+The Number One Killer Of Women And Men In Western Civilization
+Episode
+The Real Truth About Health Free 17 Day Live Online Conference Podcast
+2021–
+Podcast Episode
+Rate
+Mark as watched
+Episode 19: 'Serial Killer of Older Gay Men Suddenly Snapped'
+Episode
+Full Rigor: Florida True Crimes
+2019–
+32m
+Podcast Episode
+Rate
+Mark as watched
+Killer of Sheep
+19781h 20mNot Rated96Metascore
+7.2
+ (8.8K)
+Rate
+Mark as watched
+He Hunted Them: 'Valley of Headless Men' Serial Killer in Nahanni
+Episode
+Metaphysical
+2023–
+Podcast Episode
+Rate
+Mark as watched
+The Killer Pizza Man
+More popular matches
+Sponsored 
+More results
+Search "killer of men" within...
+All
+People
+Movies
+TV
+TV Episodes
+Music Videos
+Podcasts
+Podcast Episodes
+Video Games
+Companies
+Keywords
+Quotes
+Plot Summaries
+Biographies
+Interests
+Advanced search
+Create a more specific search using a variety of options and filters
+Movies, TV & more
+People
+Collaborations
+Browse
+Genres
+Keywords
+Sign in to enable adult matches
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Find - IMDb" (https://imdb.com)
+
+##### [2026-09-10T18:43:00] {"actions": [{"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "Array.from(document.querySelectorAll('a[href*=\"/title/tt\"]')).filter(a=>/killer of men/i.test(a.textContent)).map(a=>a.textContent.trim()+' | '+a.href.split('?')[0]+' | '+(a.closest('li')?a.closest('li').innerText.replace(/\\n/g,' ').slice(0,80):''))"}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm5062558/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "Array.from(document.querySelectorAll('a[href*=\"/title/tt\"]')).map(a=>a.textContent.trim()+' | '+a.href.split('?')[0]).filter(s=>s.length>12).filter((v,i,arr)=>arr.indexOf(v)===i).slice(0,40)"}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm8803339/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "Array.from(document.querySelectorAll('a[href*=\"/title/tt\"]')).map(a=>a.textContent.trim()+' | '+a.href.split('?')[0]).filter(s=>s.length>12).filter((v,i,arr)=>arr.indexOf(v)===i).slice(0,40)"}}]}
+[javascript_tool:javascript_exec] [
+  "Killer of Men | https://www.imdb.com/title/tt11985484/ | Killer of Men 20221h 12m 6.3  (75) Rate Mark as watched",
+  "Killer of Men | https://www.imdb.com/title/tt37523933/ | Killer of Men 202615mShort Rate Mark as watched",
+  "A Killer of Men | https://www.imdb.com/title/tt2849818/ | A Killer of Men 201522mShort 6.4  (35) Rate Mark as watched",
+  "Audiobook - Killer of Men | https://www.imdb.com/title/tt43375208/ | Audiobook - Killer of Men Episode Turn Every Moment Into A Story Through Audiobo",
+  "The Silent Killer of Men | https://www.imdb.com/title/tt38129629/ | The Silent Killer of Men Episode Untrained Philosophical Discussionists 2024– 1h"
+]
+
+(captured at origin https://imdb.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Find - IMDb" (https://imdb.com) [navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - IMDb" (https://imdb.com) [javascript_tool:javascript_exec] [
+  "Truth Be Told (2019) | https://www.imdb.com/title/tt7821582/",
+  "Gingersnap Christmas (2024) | https://www.imdb.com/title/tt19315370/",
+  "Providence (2018) | https://www.imdb.com/title/tt9079484/",
+  " | https://www.imdb.com/title/tt7821582/",
+  "Truth Be Told | https://www.imdb.com/title/tt7821582/",
+  " | https://www.imdb.com/title/tt19315370/",
+  "Gingersnap Christmas | https://www.imdb.com/title/tt19315370/",
+  " | https://www.imdb.com/title/tt9079484/",
+  "Providence | https://www.imdb.com/title/tt9079484/",
+  " | https://www.imdb.com/title/tt36828174/",
+  "172 Push-Ups | https://www.imdb.com/title/tt36828174/",
+  " | https://www.imdb.com/title/tt37523933/",
+  "Killer of Men | https://www.imdb.com/title/tt37523933/",
+  " | https://www.imdb.com/title/tt8160284/",
+  "Se Cree Joven | https://www.imdb.com/title/tt8160284/",
+  " | https://www.imdb.com/title/tt2137912/",
+  "Bus People | https://www.imdb.com/title/tt2137912/"
+]
+
+(captured at origin https://imdb.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - IMDb" (https://imdb.com) [navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - IMDb" (https://imdb.com) [javascript_tool:javascript_exec] [
+  "Minx (2022) | https://www.imdb.com/title/tt11947418/",
+  "Al Davis: Just Win Baby (2024) | https://www.imdb.com/title/tt31499446/",
+  "The Imperfection (2021) | https://www.imdb.com/title/tt14599452/",
+  " | https://www.imdb.com/title/tt11947418/",
+  "Minx | https://www.imdb.com/title/tt11947418/",
+  " | https://www.imdb.com/title/tt31499446/",
+  "Al Davis: Just Win Baby | https://www.imdb.com/title/tt31499446/",
+  " | https://www.imdb.com/title/tt14599452/",
+  "The Imperfection | https://www.imdb.com/title/tt14599452/",
+  "Walkies | https://www.imdb.com/title/tt37539176/",
+  "Completed | https://pro.imdb.com/title/tt37539176",
+  "The Mutiny | https://www.imdb.com/title/tt37751238/",
+  "Filming | https://pro.imdb.com/title/tt37751238",
+  " | https://www.imdb.com/title/tt37523933/",
+  "Killer of Men | https://www.imdb.com/title/tt37523933/",
+  " | https://www.imdb.com/title/tt12058280/",
+  "The Orjiako Hour | https://www.imdb.com/title/tt12058280/",
+  " | https://www.imdb.com/title/tt10643930/",
+  "Happiness | https://www.imdb.com/title/tt10643930/",
+  " | https://www.imdb.com/title/tt7551618/",
+  "Hey | https://www.imdb.com/title/tt7551618/",
+  " | https://www.imdb.com/title/tt7110954/",
+  "The Candle | https://www.imdb.com/title/tt7110954/",
+  " | https://www.imdb.com/title/tt6566922/",
+  "Eyes of Isaac | https://www.imdb.com/title/tt6566922/"
+]
+
+(captured at origin https://imdb.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - IMDb" (https://imdb.com)
+
+##### [2026-09-10T18:45:04] {"actions": [{"name": "navigate", "input": {"url": "https://www.imdb.com/title/tt37523933/fullcredits/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "(() => { const out=[]; document.querySelectorAll('a[href*=\"/name/nm\"]').forEach(a=>{ const li=a.closest('li'); const t=a.textContent.trim(); if(t) out.push(t+' | '+a.href.split('?')[0].replace('https://www.imdb.com','')+' | '+(li?li.innerText.replace(/\\n/g,' / ').slice(0,90):'')); }); return [...new Set(out)].slice(0,40); })()"}}, {"name": "navigate", "input": {"url": "https://www.backstage.com/u/sandramcdaniels/"}}, {"name": "computer", "input": {"action": "wait", "duration": 4}}, {"name": "get_page_text", "input": {"max_chars": 6000}}, {"name": "navigate", "input": {"url": "https://www.backstage.com/u/erik-orjiako/"}}, {"name": "computer", "input": {"action": "wait", "duration": 4}}, {"name": "get_page_text", "input": {"max_chars": 6000}}]}
+[navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Killer of Men (Short 2026) - Full cast & crew - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Killer of Men (Short 2026) - Full cast & crew - IMDb" (https://imdb.com) [javascript_tool:javascript_exec] [
+  "Jordan Betine | /name/nm17461892/ | Jordan Betine",
+  "Kiera Bratton-Lewis | /name/nm17461890/ | Kiera Bratton-Lewis",
+  "Jamal Dennis | /name/nm2156703/ | Jamal Dennis / Fighter2 Kojo",
+  "Loren Fenton | /name/nm4919684/ | Loren Fenton / Girl",
+  "Chaundre Hall-Broomfield | /name/nm9956424/ | Chaundre Hall-Broomfield / Fred",
+  "Casey Long | /name/nm17171145/ | Casey Long / Kojo's master",
+  "Sandra McDaniels | /name/nm5062558/ | Sandra McDaniels / Elder",
+  "Erik Orjiako | /name/nm8803339/ | Erik Orjiako / Mace",
+  "Eric Pargac | /name/nm1655191/ | Eric Pargac / Master Kenner",
+  "Ruoxiao Li | /name/nm15376948/ | Ruoxiao Li / producer",
+  "Olaoluwa Oluwaseun Ogunseye | /name/nm17461888/ | Olaoluwa Oluwaseun Ogunseye / executive producer",
+  "Yinli Zhang | /name/nm17461891/ | Yinli Zhang / executive producer",
+  "Zeju Zhang | /name/nm17461893/ | Zeju Zhang / executive producer",
+  "Kevin Leysath II | /name/nm14408602/ | Kevin Leysath II",
+  "Luke Scroggins | /name/nm3596666/ | Luke Scroggins",
+  "You Wu | /name/nm17461889/ | You Wu",
+  "Paul Sinacore | /name/nm3217025/ | Paul Sinacore",
+  "Rajeshwari Ragampudi | /name/nm15956329/ | Rajeshwari Ragampudi / production designer",
+  "Kevin Prescott | /name/nm15956120/ | Kevin Prescott / second assistant director",
+  "Zedric Harris | /name/nm2828452/ | Zedric Harris / stunt coordinator"
+]
+
+(captured at origin https://imdb.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Killer of Men (Short 2026) - Full cast & crew - IMDb" (https://imdb.com) [navigate] navigated to https://backstage.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - Professional Profile, Photos on Backstage -" (https://backstage.com) [computer:wait] waited 4s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - Professional Profile, Photos on Backstage -" (https://backstage.com) [get_page_text] Title: Sandra McDaniels - Professional Profile, Photos on Backstage -
+URL: https://backstage.com
+Source element: <body>
+---
+Join
+Find Jobs
+Find Talent
+Resources
+Agents
+Community
+NEW
+NEW
+Grow with UGC
+More
+Download the Backstage iOS App
+Join
+Post a JobSign in
+FIND TALENT
+Search Talent Database
+Post a Job
+Why Backstage?
+SEARCH TALENT DATABASE
+Find Actors & Performers
+Find Models
+Find Content Creators & Influencers
+Find Voiceover Artists
+Find Crew & Creative Staff
+HIRING SOLUTIONS
+Casting Category
+Agency / Production House
+For full service agencies and production companies
+Director / Producer / Filmmaker
+For independent and full time producers and directors
+Brand / Company
+For brands creating their own content
+Casting Director
+For casting offices and casting professionals
+Student / School
+For film and fine arts students
+Backstage Enterprise
+For expert help with curated casting
+Production Type
+Film, Video + TV Production
+Voiceover Production
+Theatre + Performing Arts
+Commercial + Branded Content
+User-Generated-Content
+Modeling
+RESOURCES
+Loading...
+MORE
+Talent Services
+Hiring Solutions
+Articles & Resources
+Forums
+TALENT SERVICES
+Talent Category
+Actors + Performers
+Audition for screen and stage jobs
+Voiceover Artists
+Book remote and in-studio voice gigs
+Creative Freelancers + Crew
+Get hired and grow your network
+Content Creators + Real People
+Find new brand work and reality gigs
+Models
+Book Modeling jobs
+Other Creative Talent
+Find work, no matter your specialty
+Search Popular Jobs
+Acting Jobs
+Voiceover Jobs
+Modeling Jobs
+UGC Jobs
+Video Editor Jobs
+Netflix Auditions
+Movie Auditions
+Commercials
+New York City
+Los Angeles
+See more
+HIRING SOLUTIONS
+Casting Category
+Agency / Production House
+For full service agencies and production companies
+Director / Producer / Filmmaker
+For independent and full time producers and directors
+Brand / Company
+For brands creating their own content
+Casting Director
+For casting offices and casting professionals
+Student / School
+For film and fine arts students
+Backstage Enterprise
+For expert help with curated casting
+Production Type
+Film, Video + TV Production
+Voiceover Production
+Theatre + Performing Arts
+Commercial + Branded Content
+User-Generated-Content
+Modeling
+ARTICLES & RESOURCES
+Categories
+Magazine Home
+Casting News
+Advice
+Features
+Getting Started
+Industry
+Awards
+Articles by Subject
+Issue Archive
+GROW WITH UGC
+Post UGC Jobs
+Find UGC Jobs
+Buy UGC Content
+Hire UGC Creators
+What is UGC?
+
+Sandra McDaniels Providence Clip
+
+View More Media
+Sandra McDaniels
+Los Angeles, CA
+Female
+Appearance
+ATTRIBUTES
+5'9" / 175cm (Height)
+160lbs / 73kg (Weight)
+Slim (Build)
+Blond (Hair)
+Brown (Eyes)
+PLAYING AGE
+45-65 (Age Range)
+ETHNICITIES
+Black / African Descent, Latino / Hispanic
+Credits & Experience
+Film
+MAR 2024
+172 Pushups
+Principal
+Freida De Lackner
+Los Angeles
+FEB 2022
+Gingersnap Christmas
+Grandma Belle
+Julie Pierrepont/
+Skills
+Accents/Dialects
+Culinary Arts
+Voiceover
+Voice Style: Softspoken
+Modeling
+Sports/Fitness: Jogging
+Singing: Contralto
+Show more
+Representation
+NTA Talent Agency
+Emma
+Los Angeles, CA
+Michael Zanuck Agency
+Michael Zanuck
+CA
+Union Membership
+SAG-AFTRA
+License & Passport
+Has a Driver's License
+Has a Passport
+FOR FINDING JOBS
+Actors & Performers
+Voiceover Artists
+Creatives & Production Crew
+Influencers + Content Creators
+Models
+Search Casting Calls
+Popular Auditions
+How it Works
+Advice & Guides
+Backstage Kids
+Forums
+Acting Monologues
+Online Classes
+Create Your Free Talent Profile
+Buy Backstage Magazine
+FOR FINDING TALENT
+Film, Video & TV Production
+Theater & Performing Arts
+Voiceover Production
+Commercial + Branded Content
+Models
+UGC Creators and Influencers
+Vertical Series
+Companies & NGOs
+Talent Database Directory
+Talent Database
+Pay Talent
+How it Works
+Advice for Creators
+Post a Job
+Backstage Enterprise
+COMPANY
+About
+Careers
+Partners
+Sitemap
+Articles Archive
+Group and School Subscriptions
+SUPPORT
+Help
+Contact
+Pricing
+Advertising
+Report Content
+CONNECT
+Facebook
+X
+Instagram
+Tiktok
+YouTube
+Podcast
+CHOOSE LANGUAGE
+English
+Español
+GET THE NEWSLETTER
+Submit
+GET THE Backstage IOS APP
+Cookie Preferences
+© 2026 Backstage. All rights reserved.
+Terms of Service / Privacy Policy
+The most trusted name in casting since 1960.
+Made in Brooklyn, NY at home
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - Professional Profile, Photos on Backstage -" (https://backstage.com) [navigate] navigated to https://backstage.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - Professional Profile, Photos on Backstage - Actor" (https://backstage.com) [computer:wait] waited 4s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - Professional Profile, Photos on Backstage - Actor" (https://backstage.com) [get_page_text] Title: Erik Orjiako - Professional Profile, Photos on Backstage - Actor
+URL: https://backstage.com
+Source element: <body>
+---
+Join
+Find Jobs
+Find Talent
+Resources
+Agents
+Community
+NEW
+NEW
+Grow with UGC
+More
+Download the Backstage iOS App
+Join
+Post a JobSign in
+FIND TALENT
+Search Talent Database
+Post a Job
+Why Backstage?
+SEARCH TALENT DATABASE
+Find Actors & Performers
+Find Models
+Find Content Creators & Influencers
+Find Voiceover Artists
+Find Crew & Creative Staff
+HIRING SOLUTIONS
+Casting Category
+Agency / Production House
+For full service agencies and production companies
+Director / Producer / Filmmaker
+For independent and full time producers and directors
+Brand / Company
+For brands creating their own content
+Casting Director
+For casting offices and casting professionals
+Student / School
+For film and fine arts students
+Backstage Enterprise
+For expert help with curated casting
+Production Type
+Film, Video + TV Production
+Voiceover Production
+Theatre + Performing Arts
+Commercial + Branded Content
+User-Generated-Content
+Modeling
+RESOURCES
+Loading...
+MORE
+Talent Services
+Hiring Solutions
+Articles & Resources
+Forums
+TALENT SERVICES
+Talent Category
+Actors + Performers
+Audition for screen and stage jobs
+Voiceover Artists
+Book remote and in-studio voice gigs
+Creative Freelancers + Crew
+Get hired and grow your network
+Content Creators + Real People
+Find new brand work and reality gigs
+Models
+Book Modeling jobs
+Other Creative Talent
+Find work, no matter your specialty
+Search Popular Jobs
+Acting Jobs
+Voiceover Jobs
+Modeling Jobs
+UGC Jobs
+Video Editor Jobs
+Netflix Auditions
+Movie Auditions
+Commercials
+New York City
+Los Angeles
+See more
+HIRING SOLUTIONS
+Casting Category
+Agency / Production House
+For full service agencies and production companies
+Director / Producer / Filmmaker
+For independent and full time producers and directors
+Brand / Company
+For brands creating their own content
+Casting Director
+For casting offices and casting professionals
+Student / School
+For film and fine arts students
+Backstage Enterprise
+For expert help with curated casting
+Production Type
+Film, Video + TV Production
+Voiceover Production
+Theatre + Performing Arts
+Commercial + Branded Content
+User-Generated-Content
+Modeling
+ARTICLES & RESOURCES
+Categories
+Magazine Home
+Casting News
+Advice
+Features
+Getting Started
+Industry
+Awards
+Articles by Subject
+Issue Archive
+GROW WITH UGC
+Post UGC Jobs
+Find UGC Jobs
+Buy UGC Content
+Hire UGC Creators
+What is UGC?
+
+Eriks Reel (Converted)
+
+View More Media
+Erik Orjiako
+Actor•Los Angeles, CA
+Male
+Appearance
+ATTRIBUTES
+6'2" / 188cm (Height)
+210lbs / 95kg (Weight)
+Athletic / Toned (Build)
+Black (Hair)
+Brown (Eyes)
+PLAYING AGE
+25-35 (Age Range)
+Credits & Experience
+Film
+JUN 2019
+Hitman
+Lead
+Brenden Wedner
+Los Angeles
+DEC 2018
+The Candle
+The Voice of Reason
+Nasser Samar
+Los Angeles
+JUN 2015
+Welcome To The World
+Brock
+Helena Bowen
+Boston
+MAY 2018
+Blackouts
+Black Ron Howard
+CEO Media
+Los Angeles
+JUN 2016
+CODE 8
+Telekinetic -Julian
+Mark Chang
+Los Angeles
+Television
+AUG 2018
+Single Parents
+Intense Volleyball Player
+ABC
+Los Angeles
+OCT 2018
+The Neighborhood
+Barbershop Guy
+CBS
+Los Angeles
+Commercials & Industrials
+MAY 2018
+Old Spice Beard Balm
+Fancy Gentleman
+Old Spice
+Los Angeles
+Modeling
+JUN 2016
+Coke Zero
+Beard Model
+Funny or Die
+Los Angeles
+Voiceover
+APR 2017
+Fitness Princess
+Gym Rat
+Casey Hembell
+Los Angeles
+Performing Arts
+NOV 2016
+Midsummer Nights Dream
+Oberon/Theseus
+Daniel Gidroen
+Boston
+AUG 2016
+Hedda
+Eli Longford
+Carrie Ann Quinn
+Boston
+DEC 2017
+The Americants
+Multiple
+Second City Hollywood
+Los Angeles
+MAY 2018
+Afterbirth Of A Nation
+Multiple
+Second City Hollywood
+Los Angeles
+OCT 2017
+Afros And Asswhoopins
+Malcolm X
+Second City Hollywood
+Los Angeles
+Skills
+Acting Techniques: Improvisation
+Music/Musician: Guitar
+Music/Musician: Ukulele
+Comedy: Standup
+Comedy: Impersonations
+Accents/Dialects: English - London
+Languages: Japanese
+Languages: French
+Accents/Dialects: Southern American
+Show more
+Education & Training
+Umass Amherst
+English/Communications
+2018
+Second City
+Improv
+Hollywood Ca
+2018
+New York Film Acadmey
+Screenwriting
+Highlights
+June 6, 2019
+
+Performed at the Comedy Store
+
+Graduated Second City Hollywood's improv program
+
+Websites/Social Media
+ERIK'S WEBSITE
+HitMan
+Representation
+Wild Models Talent
+Kurt
+Union Membership
+SAG-AFTRA
+License & Passport
+Has a Driver's License
+Has a Passport
+FOR FINDING JOBS
+Actors & Performers
+Voiceover Artists
+Creatives & Production Crew
+Influencers + Content Creators
+Models
+Search Casting Calls
+Popular Auditions
+How it Works
+Advice & Guides
+Backstage Kids
+Forums
+Acting Monologues
+Online Classes
+Create Your Free Talent Profile
+Buy Backstage Magazine
+FOR FINDING TALENT
+Film, Video & TV Production
+Theater & Performing Arts
+Voiceover Production
+Commercial + Branded Content
+Models
+UGC Creators and Influencers
+Vertical Series
+Companies & NGOs
+Talent Database Directory
+Talent Database
+Pay Talent
+How it Works
+Advice for Creators
+Post a Job
+Backstage Enterprise
+COMPANY
+About
+Careers
+Partners
+Sitemap
+Articles Archive
+Group and School Subscriptions
+SUPPORT
+Help
+Contact
+Pricing
+Advertising
+Report Content
+CONNECT
+Facebook
+X
+Instagram
+Tiktok
+YouTube
+Podcast
+CHOOSE LANGUAGE
+English
+Español
+GET THE NEWSLETTER
+Submit
+GET THE Backstage IOS APP
+Cookie Preferences
+© 2026 Backstage. All rights reserved.
+Terms of Service / Privacy Policy
+The most trusted name in casting since 1960.
+Made in Brooklyn, NY at home
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - Professional Profile, Photos on Backstage - Actor" (https://backstage.com)
+
+##### [2026-09-10T18:47:52] {"actions": [{"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm8803339/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "[...new Set(Array.from(document.querySelectorAll('li')).filter(li=>li.querySelector('a[href*=\"/title/tt\"]')&&li.innerText.length<200).map(li=>li.innerText.replace(/\\n+/g,' / ')))].slice(0,40)"}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm5062558/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "[...new Set(Array.from(document.querySelectorAll('li')).filter(li=>li.querySelector('a[href*=\"/title/tt\"]')&&li.innerText.length<200).map(li=>li.innerText.replace(/\\n+/g,' / ')))].slice(0,40)"}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm1655191/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "[...new Set(Array.from(document.querySelectorAll('li')).filter(li=>li.querySelector('a[href*=\"/title/tt\"]')&&li.innerText.length<200).map(li=>li.innerText.replace(/\\n+/g,' / ')))].slice(0,40)"}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm2156703/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "[...new Set(Array.from(document.querySelectorAll('li')).filter(li=>li.querySelector('a[href*=\"/title/tt\"]')&&li.innerText.length<200).map(li=>li.innerText.replace(/\\n+/g,' / ')))].slice(0,50)"}}]}
+[navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - IMDb" (https://imdb.com) [javascript_tool:javascript_exec] [
+  "",
+  "Killer of Men / Short / Mace / 2026",
+  "Al Davis: Just Win Baby / TV Special / Raider #1 / 2024",
+  "Minx / 7.6 / TV Series / Male Model / 2022 / 1 episode",
+  "The Imperfection / 7.4 / Podcast Series / Legs (voice) / 2021 / 9 episodes",
+  "The Orjiako Hour / Video / Erik Orjiako / 2020",
+  "Happiness / Short / Greg / 2019",
+  "Hey / Short / Bobby / 2017",
+  "The Candle / Short / The Bearer of Bad News / 2017",
+  "Eyes of Isaac / Short / Isaac / 2017"
+]
+
+(captured at origin https://imdb.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - IMDb" (https://imdb.com) [navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - IMDb" (https://imdb.com) [javascript_tool:javascript_exec] [
+  "Killer of Men / Short / Elder / 2026",
+  "Gingersnap Christmas / 4.4 / Gramma Belle / 2024",
+  "172 Push-Ups / Short / 2024",
+  "Truth Be Told / 7.1 / TV Series / Homeless Woman / 2021 / 1 episode",
+  "Providence / Short / Maryanne / 2018",
+  "Se Cree Joven / Video / 2018",
+  "Bus People / TV Movie / Research Lab Technician / 2012"
+]
+
+(captured at origin https://imdb.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Sandra McDaniels - IMDb" (https://imdb.com) [navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Eric Pargac - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Eric Pargac - IMDb" (https://imdb.com) [javascript_tool:javascript_exec] [
+  "The Digressions / TV Series / executive producer / 2013–2015 / 30 episodes",
+  "Pure Shock Value / executive producer / 2009",
+  ""
+]
+
+(captured at origin https://imdb.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Eric Pargac - IMDb" (https://imdb.com) [navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Jamal Dennis - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Jamal Dennis - IMDb" (https://imdb.com) [javascript_tool:javascript_exec] [
+  "",
+  "Deadly Fruit / Malcolm / 2026",
+  "Cinnamon / Vampire Goon #1 / 2026",
+  "Killer of Men / Short / Fighter2 Kojo / 2026",
+  "The Dresden Sun / 2.9 / Peredor Guard 4 / 2026",
+  "Played in My Face / 4.8 / 2025",
+  "Dangerous Deceit / 4.6 / Detective Cole / 2025",
+  "The Family Business: New Orleans / 7.1 / TV Series / Officer Shaw / 2025 / 1 episode",
+  "Where Loyalty Lies / Andre / 2024",
+  "Ridin Dirty / Short / Frank Cisco Barnes / 2024",
+  "Last 2 Die / 2024",
+  "The Young and the Restless / 5.4 / TV Series / Fireman / 2024 / 1 episode",
+  "Be Someone / 8.3 / TV Series / Lavelle Sanders / 2023 / 4 episodes",
+  "Roman / Short / Beau / 2022",
+  "A Miracle Before Christmas / 5.6 / Terry / 2022",
+  "Epiphany / Short / 2022"
+]
+
+(captured at origin https://imdb.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Jamal Dennis - IMDb" (https://imdb.com)
+
+##### [2026-09-10T18:49:21] {"actions": [{"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm1655191/fullcredits/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "[location.href, ...new Set(Array.from(document.querySelectorAll('li')).filter(li=>li.querySelector('a[href*=\"/title/tt\"]')&&li.innerText.length<200).map(li=>li.innerText.replace(/\\n+/g,' / ')))].slice(0,60)"}}, {"name": "navigate", "input": {"url": "https://www.imdb.com/name/nm2156703/fullcredits/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "[location.href, ...new Set(Array.from(document.querySelectorAll('li')).filter(li=>li.querySelector('a[href*=\"/title/tt\"]')&&li.innerText.length<200).map(li=>li.innerText.replace(/\\n+/g,' / ')))].slice(0,80)"}}]}
+[navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Eric Pargac - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Eric Pargac - IMDb" (https://imdb.com) [javascript_tool:javascript_exec] [
+  "https://www.imdb.com/name/nm1655191/?showAllCredits=true",
+  "The Digressions / TV Series / executive producer / 2013–2015 / 30 episodes",
+  "Pure Shock Value / executive producer / 2009",
+  "The Digressions / TV Series / co-director / 2013–2015 / 30 episodes",
+  "Killer of Men / Short / Master Kenner / 2026",
+  "Succession / 8.8 / TV Series / Dr. Lipe / 2018 / 1 episode",
+  "The Digressions / TV Series / Theo / 2013–2015 / 19 episodes",
+  "Stunt C*cks / 6.3 / Short / Ken / 2004",
+  "Urban Racquet / Editor / Post-production",
+  "Post-production",
+  "The Digressions / TV Series / Editor / 2013–2015",
+  "Pure Shock Value / Editor / 2009",
+  "The Digressions / TV Series / Cinematographer / 2013–2015",
+  "Pure Shock Value / colorist / 2009",
+  "Catharsis / Short / special thanks / 2026"
+]
+
+(captured at origin https://imdb.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Eric Pargac - IMDb" (https://imdb.com) [navigate] navigated to https://imdb.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Jamal Dennis - IMDb" (https://imdb.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Jamal Dennis - IMDb" (https://imdb.com) [javascript_tool:javascript_exec] [
+  "https://www.imdb.com/name/nm2156703/?showAllCredits=true",
+  "Make Love Not War / Chase Montgomery (as Jamal R. Dennis) / ReleasedTV Series / 2011 / 3 episodes",
+  "Released",
+  "Baddies Revenge / Detective Leonard / Completed / 2026",
+  "Completed",
+  "Til Death...Do You. / Malcolm / Completed",
+  "Stronghold / Pride / CompletedShort",
+  "Emergence 2028 / Carter 'Wrath' Vaughns / Post-production",
+  "Post-production",
+  "Critical Impact / Shadow / Post-production",
+  "Capture the Flag / Dre / CompletedShort",
+  "Deadly Fruit / Malcolm / 2026",
+  "Cinnamon / Vampire Goon #1 / 2026",
+  "Killer of Men / Short / Fighter2 Kojo / 2026",
+  "The Dresden Sun / 2.9 / Peredor Guard 4 / 2026",
+  "Played in My Face / 4.8 / 2025",
+  "Dangerous Deceit / 4.6 / Detective Cole / 2025",
+  "The Family Business: New Orleans / 7.1 / TV Series / Officer Shaw / 2025 / 1 episode",
+  "Where Loyalty Lies / Andre / 2024",
+  "Ridin Dirty / Short / Frank Cisco Barnes / 2024",
+  "Last 2 Die / 2024",
+  "The Young and the Restless / 5.4 / TV Series / Fireman / 2024 / 1 episode",
+  "Be Someone / 8.3 / TV Series / Lavelle Sanders / 2023 / 4 episodes",
+  "Roman / Short / Beau / 2022",
+  "A Miracle Before Christmas / 5.6 / Terry / 2022",
+  "Epiphany / Short / 2022",
+  "S.W.A.T. / 7.2 / TV Series / Henchman / 2022 / 1 episode",
+  "The Bricks / 5.3 / Clarence / 2022",
+  "True to the Game 2 / 4.6 / Surfer #2 / 2020",
+  "The Trophy / Short / The Friend / 2020",
+  "Runaways / 6.8 / TV Series / Security Guard / 2019 / 1 episode",
+  "Laff Mobb's Laff Tracks / 3.5 / TV Series / Orlando's Buddy / 2019 / 1 episode",
+  "City Limits / TV Series / Obie / 2017 / 1 episode",
+  "Dreamsville / TV Series / Lavelle Sanders / 2017 / 8 episodes",
+  "Greenlight / Short / Hunter (as Jamal R. Dennis) / 2015",
+  "Zoo / 6.7 / TV Series / Prison Guard / 2015 / 1 episode",
+  "Mississippi Grind / 6.4 / Baller / 2015",
+  "NCIS: New Orleans / 6.8 / TV Series / Menacing Dude #2 / 2015 / 1 episode",
+  "Hatchet III / 5.6 / Fire Department Official #1 / 2013",
+  "Suit Up / 7.1 / TV Series / Teammate / 2012 / 1 episode",
+  "Just Another Noir / 4.9 / Tim / 2011",
+  "Glory Road / 7.2 / Big Guy (as Jamal Rashawn Dennis) / 2006",
+  "Jeremy's Family Reunion / 2.8 / Video / Butch / 2005",
+  "Critical Impact / stunt performer / Post-production",
+  "Is God Is / 6.5 / stunt performer / 2026",
+  "The Dresden Sun / 2.9 / stunt performer / 2026",
+  "Sinners / 7.5 / stunt performer / 2025",
+  "Your Honor / 7.6 / TV Series / stunts / 2023 / 1 episode",
+  "Roman / Short / stunt coordinator / 2022",
+  "Emancipation / 6.3 / stunts / 2022",
+  "True to the Game 3 / 5.3 / stunt coordinator / 2021",
+  "True to the Game 2 / 4.6 / stunt coordinator / 2020",
+  "Roots / 7.9 / TV Mini Series / stunts / 2016 / 1 episode",
+  "Grudge Match / 6.4 / stunts / 2013",
+  "Suit Up / 7.1 / TV Series / stunt actor / 2012 / 1 episode",
+  "Creature / 3.7 / stand-in / 2011",
+  "Exalted / cast driver / Filming",
+  "Filming",
+  "Exalted / production assistant / Filming",
+  "5150 / 8.2 / TV Short / special thanks / 2021",
+  "Is It Worth It? / 2.7 / Short / special thanks / 2021",
+  "Emergence 2028: Underdogs / Self / Post-production"
+]
+
+(captured at origin https://imdb.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Jamal Dennis - IMDb" (https://imdb.com)
+
+##### [2026-09-10T18:50:19] {"actions": [{"name": "navigate", "input": {"url": "https://www.backstage.com/u/erik-orjiako/"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "Array.from(document.querySelectorAll('a[href]')).filter(a=>!/backstage\\.com|^\\/|javascript:/.test(a.getAttribute('href'))).map(a=>a.textContent.trim().slice(0,40)+' | '+a.href).filter(s=>!/facebook.com\\/backstage|instagram.com\\/backstage|twitter.com\\/backstage|x.com\\/backstage|tiktok|youtube.com\\/(c|user)\\/backstage|apple.com|podcast/i.test(s)).slice(0,20)"}}]}
+[navigate] navigated to https://backstage.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - Professional Profile, Photos on Backstage - Actor" (https://backstage.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - Professional Profile, Photos on Backstage - Actor" (https://backstage.com) [javascript_tool:javascript_exec] [
+  "Customers | https://wni0s6klnf.execute-api.us-east-1.amazonaws.com/ProdStage",
+  " | https://d26oc3sg82pgk3.cloudfront.net/files/media/uploads/casting_call/d96e0ec7-9cf7-4327-b523-1160d5b472b1-bWFpbi1uLW4tMC0wLTAtOTUxLTEyMDA.png",
+  "Eriks Reel (Converted) | https://d26oc3sg82pgk3.cloudfront.net/transcoded/cfd72ae8-b403-4439-83f2-577cb707401d/hls-playlist.m3u8",
+  " | https://d26oc3sg82pgk3.cloudfront.net/files/media/uploads/casting_call/ddb5feff-6e0b-442d-a293-ceb9f9f174be-bWFpbi1uLW4tMC0wLTAtNzkzLTEwMjQ.jpg",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  " | https://www.backstage.com/u/erik-orjiako/",
+  "ERIK'S WEBSITE | https://erikorjiako.wixsite.com/erik"
+]
+
+(captured at origin https://backstage.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Erik Orjiako - Professional Profile, Photos on Backstage - Actor" (https://backstage.com)
+
+##### [2026-09-10T18:50:47] {"actions": [{"name": "navigate", "input": {"url": "https://erikorjiako.wixsite.com/erik"}}, {"name": "computer", "input": {"action": "wait", "duration": 4}}, {"name": "get_page_text", "input": {"max_chars": 5000}}, {"name": "javascript_tool", "input": {"action": "javascript_exec", "text": "[...new Set(Array.from(document.querySelectorAll('a[href]')).map(a=>a.textContent.trim().slice(0,30)+' | '+a.href).filter(s=>/wixsite\\.com\\/erik/.test(s)))].slice(0,20)"}}]}
+[navigate] navigated to https://erikorjiako.wixsite.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "WELCOME | Erik" (https://erikorjiako.com) [computer:wait] waited 4s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "WELCOME | Erik" (https://erikorjiako.com) [get_page_text] Title: WELCOME | Erik
+URL: https://erikorjiako.com
+Source element: <main>
+---
+ERIK ORJIAKO
+Actor, Los Angeles CA
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "WELCOME | Erik" (https://erikorjiako.com) [javascript_tool:javascript_exec] []
+
+(captured at origin https://erikorjiako.com)
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "WELCOME | Erik" (https://erikorjiako.com)
+
+##### [2026-09-10T18:51:01] {"action": "javascript_exec", "text": "[...new Set(Array.from(document.querySelectorAll('a[href]')).map(a=>(a.textContent.trim()||a.getAttribute('aria-label')||'').slice(0,30)+' | '+a.href))].slice(0,30)"}
+[
+  "WELCOME | https://www.erikorjiako.com/",
+  "RESUME | https://www.erikorjiako.com/resume",
+  "PHOTOS | https://www.erikorjiako.com/photos",
+  "MEDIA | https://www.erikorjiako.com/media",
+  "WRITER/DIRECTOR | https://www.erikorjiako.com/writer-director",
+  "CONTACT | https://www.erikorjiako.com/contact",
+  "ERIK ORJIAKO | https://www.erikorjiako.com/",
+  "Actor, Los Angeles CA | https://www.erikorjiako.com/",
+  "Wix.com | http://wix.com/?utm_campaign=vir_created_with",
+  " | http://www.facebook.com/wix",
+  " | http://www.twitter.com/wix",
+  " | http://instagram.com/wix",
+  " | http://vimeo.com/wix",
+  " | http://youtube.com/user/Wix"
+]
+
+(captured at origin https://erikorjiako.com) 
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "WELCOME | Erik" (https://erikorjiako.com)
+
+##### [2026-09-10T18:51:08] {"actions": [{"name": "navigate", "input": {"url": "https://www.erikorjiako.com/writer-director"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "get_page_text", "input": {"max_chars": 4000}}, {"name": "navigate", "input": {"url": "https://www.erikorjiako.com/resume"}}, {"name": "computer", "input": {"action": "wait", "duration": 3}}, {"name": "get_page_text", "input": {"max_chars": 5000}}]}
+[navigate] navigated to https://erikorjiako.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "WRITER/DIRECTOR | Erik" (https://erikorjiako.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "WRITER/DIRECTOR | Erik" (https://erikorjiako.com) [get_page_text] Title: WRITER/DIRECTOR | Erik
+URL: https://erikorjiako.com
+Source element: <main>
+---
+SCREENWRITING
+
+To Inquire about Feature Length Scripts, Television Scripts, or Webseries written by
+Erik Orjiako please Email him at:
+
+Erik.Orjiako@gmail.com
+
+BODY OF WORK
+
+FEATURE SCRIPTS:
+
+AURORA IN TEXAS
+
+GUY WITH A GUN
+
+THE TREATMENT
+
+STARCHILD
+
+BLEACH
+
+HUMANZEE
+
+ 
+
+GOODBYE L.L
+
+ 
+
+EXTRA BLACK
+
+ 
+
+TELEVISION SCRIPTS:
+
+RICK AND MORTY (SPEC)
+
+WORKAHOLICS (SPEC)
+
+LABRATS
+
+​
+
+GAY FOR PAY
+
+​
+
+CARTWRITE
+
+​
+
+ODDYSIES
+
+​
+
+THE ILLEGALS
+
+​
+
+MULTIVERSE
+
+​
+
+DARK ANTHOLOGIES
+
+​
+
+WEBSERIES:
+
+EPISODES 1 - 7 
+CUDDLE BUDDY
+
+EPISODE 1 
+BLACKOUTS
+ 
+
+THEATRE:
+
+AFTER BIRTH OF A NATION
+
+LIFT
+
+GROUND ZERO
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "WRITER/DIRECTOR | Erik" (https://erikorjiako.com) [navigate] navigated to https://erikorjiako.com
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "RESUME | Erik" (https://erikorjiako.com) [computer:wait] waited 3s
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "RESUME | Erik" (https://erikorjiako.com) [get_page_text] Title: RESUME | Erik
+URL: https://erikorjiako.com
+Source element: <main>
+---
+Personal Details
+
+Age Range: 28-40
+Height: 6"3
+Weight: 210
+Jacket: 42R
+Inseam: 34
+Waist: 34
+Shoe: 13
+ 
+
+Eye Color: Dark Brown
+
+Hair Color: Black
+
+​
+
+​
+
+RESUME
+Special Skills
+
+Guitar, Ukelele, and Singing 
+
+Violin, Keyboard
+
+Weapons training and Stage combat
+
+Puppeteering
+
+Accents including Nigerian, British, South African, Australian, various American dialects and others.
+
+French, Japanese, Spanish, Portuguese 
+
+ABOUT ME
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "RESUME | Erik" (https://erikorjiako.com)
