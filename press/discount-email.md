@@ -1,5 +1,7 @@
 # Discount email — template and recipients
 
+**Personalized set, 2026-09-16:** four drafts for Aspen, Cleveland, Palm Springs and SLO, with a send sheet and CONFIRM list, in `press/discount-emails-2026-09-16.md`.
+
 Rule from the call: ask **before** paying; festivals do not refund. Send from the AFI address. To the general contact listed on FilmFreeway. Subject exactly as below.
 
 ---
