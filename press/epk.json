@@ -1,7 +1,7 @@
 {
  "schema": 3,
- "rev": 32,
- "updated": "2026-09-14T12:56:28-05:00",
+ "rev": 33,
+ "updated": "2026-09-16T10:10:29-07:00",
  "updatedBy": "epk.py set",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
@@ -122,7 +122,7 @@
      "id": "p2-synopsis",
      "n": "2.2",
      "label": "Synopsis",
-     "value": "Mace fights because the alternative is the field, and then the ground. On a South Carolina plantation in 1834 his owner stages bouts against other enslaved men and takes the wagers; Mace has never lost, and every win buys him another season.\n\nThen a fight ends in a death, and he follows the body to a burial held in secret in the Yoruba faith he was born to. The rites are for a man he killed. An elder tells him what he would have been across the water, and he sees, for the first time, what he has become.",
+     "value": "Set in the American South in the 1830s, KILLER OF MEN is a Southern Gothic that follows Mace, an enslaved man forced into underground prizefighting for the profit of his enslaver.\n\nAfter killing another fighter in the ring, Mace is granted a moment of rest, but accidentally stumbles upon the burial of the man he killed. The chance encounter pulls Mace into a quiet reckoning with guilt, faith, and the violence that sustains his life, revealing the distance between the slave he has been made and the king he was meant to be.",
      "history": [
       {
        "at": "2026-09-08T22:41:58-07:00",
@@ -138,6 +138,11 @@
        "at": "2026-09-14T12:56:28-05:00",
        "by": "epk.py",
        "value": "Mace fights because the alternative is the field, and then the ground. On a South Carolina plantation in 1834 his owner stages bouts against other enslaved men and takes the wagers; Mace has never lost, and every win buys him another season.\n\nThen a fight ends in a death, and he follows the body to a burial held in secret in the Yoruba faith he was born to. The rites are for a man he killed. An elder tells him what he would have been across the water, and he sees, for the first time, what he has become."
+      },
+      {
+       "at": "2026-09-16T10:10:28-07:00",
+       "by": "epk.py",
+       "value": "Set in the American South in the 1830s, KILLER OF MEN is a Southern Gothic that follows Mace, an enslaved man forced into underground prizefighting for the profit of his enslaver.\n\nAfter killing another fighter in the ring, Mace is granted a moment of rest, but accidentally stumbles upon the burial of the man he killed. The chance encounter pulls Mace into a quiet reckoning with guilt, faith, and the violence that sustains his life, revealing the distance between the slave he has been made and the king he was meant to be."
       }
      ],
      "options": [
