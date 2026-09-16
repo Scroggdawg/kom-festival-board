@@ -1,0 +1,39 @@
+# HARNESS: picking up the EPK lane cold
+
+Read this first after a compaction or in a fresh session. It is the standing pickup for the `epk` lane; the numbered handoffs carry the day-by-day record (latest: highest `handoff-NNN-epk.md`). Updated 2026-09-16.
+
+## Standing rules (Luke's, verbatim where quoted)
+
+- "Never git add -A, git stash, or git reset: another session shares this tree." Commit by explicit path only.
+- "Never commit: tokens, secrets, credential maps, cap-table/deal terms." "Never without Luke's per-action OK: deploy, OTA, EAS, migrate, anything outward."
+- Masters in `press/assets` are never modified. Every fact in `press/epk.json` is written with `venv/bin/python tools/epk.py set N.N "…"` (or `set N.N -` from stdin), never by hand; `tools/epk.py check` after.
+- **Luke's Canva edits win.** When he changes the design, the worksheet is updated to match, never reverted. Pointing out a change is fine. Do not rebuild Canva pages from the contract without his word; the design is ahead of the kit.
+- Clean Bank for anything he reads as a product (readouts, reports, kit text): no flourish, no codas.
+- Every turn ends with a handoff `handoffs/handoff-NNN-epk.md` (test that NNN does not exist first), committed by path, pushed, copied to `$HOME/Google Drive/My Drive/KILLER OF MEN/HANDOFFS/`. Say whether the turn was duck (plan) or goose (execute).
+- The Canva Download click is Luke's, not mine (browser download rule).
+
+## Where things are
+
+- Repo: this directory, branch `main`, remote `Scroggdawg/kom-festival-board`. Two machines commit here (this Mac as `Scroggdawg`, the other as `C`); pull before assuming.
+- Worksheet: `press/epk.json`. Field 2.1 logline (Jordan's FilmFreeway text, rev 25); 2.2 synopsis; 7.1 cast bios (rev 23, the 10 Sep drafts); 11.1 thanks (rev 32, 58 lines mirrored from the design).
+- Kit: `tools/build-epk-kit.py` (pages 1 to 8) and `tools/build-credit-card.py` (9 to 11); contract emitter `tools/build-epk-canva.py` → `canva/ops/epk-canva.json`; checkers `tools/check-canva-contract.py`, `tools/check-canva-export.py`, `tools/canva-readback-diff.py`.
+- Canva design: "EPK _ KoM 2026", id `DAHU6a7HKPs`, 18×24 in, 11 pages. Page ids in `canva/STATE.json`. Edit URL with the app open: `https://www.canva.com/design/DAHU6a7HKPs/edit?ui=eyJFIjp7IkE_IjoiTiIsIlMiOiJBQUhPR0JDTUM0QSIsIlQiOjF9fQ`. The app is `canva/kom-epk-builder` (React, @canva/design), served by the dev server `preview_start` name `canva-app` (it stops between sessions).
+- Drive mirror: `$HOME/Google Drive/My Drive/KILLER OF MEN/05 MARKETING/00 PRESS/` (kit PDFs under `EPK BUILDS`, Canva exports under `EPK BUILDS/CANVA`).
+- Provenance reports (done): `press/cast-bios-evidence.md`, `press/cast-bios-bibliography.md`, `press/cast-bios-proposed-2026-09-15.md` (conservative bios, not applied), `press/synopsis-evidence.md`.
+
+## Procedure: mirror a Canva edit into the worksheet
+
+1. Start the read-back receiver in the background: `venv/bin/python tools/canva-readback-server.py` (listens on localhost:8787, writes `canva/readback/<UTC>.json` and `latest.json`). `pkill -f canva-readback-server` when done.
+2. `preview_start` with name `canva-app` so the app's bundle is served.
+3. In Luke's Chrome (the `mcp__claude-in-chrome__*` tools; load them with one ToolSearch `select:` call): find the design tab. The app panel (KOM EPK Builder) must be open in the editor's side panel. If it says it couldn't load the app's JavaScript bundle, navigate the tab to the edit URL above again. **The app iframe only takes input when its tab is the front tab**; a stray keystroke into a frozen panel reaches the editor (a Backspace once deleted a page; Undo restored it).
+4. Click the app's read-back control. `app.tsx` POSTs every page's elements with text to the receiver.
+5. `venv/bin/python tools/canva-readback-diff.py` prints, per page, the design text against the contract. Take the changed field's text exactly as the design has it (typos included; flag them to Luke, do not fix them).
+6. Write it: `venv/bin/python tools/epk.py set 2.2 -` with the text on stdin (keep paragraph breaks as blank lines). `tools/epk.py check`. Commit `press/epk.json` by path with a message naming the field and the source ("mirrored from the design").
+7. Fallback if Chrome cannot be driven: ask Luke to paste the text from Canva; write it the same way.
+
+## Open items (as of 2026-09-16)
+
+- Field 2.2: Luke edited the synopsis in Canva on 15/16 Sep; mirror it (procedure above). Until then 2.2 holds draft C of `press/synopsis-draft.md`.
+- Cast bios: the conservative proposal awaits Luke's go; if yes, `epk.py set 7.1` with the four paragraphs, rebuild kit and contract, rebuild page 7 in Canva with his word, export.
+- Page 11: "Devaraonda" spelling is Luke's to fix in Canva.
+- Export: Luke downloads (Share › Download › PDF Print · RGB · all pages · crop marks off · flatten off), then `venv/bin/python tools/check-canva-export.py "$HOME/Downloads/EPK _ KoM 2026.pdf"`, copy to the Drive `EPK BUILDS/CANVA`.
