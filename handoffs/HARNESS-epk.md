@@ -1,6 +1,6 @@
 # HARNESS: picking up the EPK lane cold
 
-Read this first after a compaction or in a fresh session. It is the standing pickup for the `epk` lane; the numbered handoffs carry the day-by-day record (latest: highest `handoff-NNN-epk.md`). Updated 2026-09-16.
+Read this first after a compaction or in a fresh session. It is the standing pickup for the `epk` lane; the numbered handoffs carry the day-by-day record (latest: highest `handoff-NNN-epk.md`). Updated 2026-09-16 (after the 2.2 mirror).
 
 ## Standing rules (Luke's, verbatim where quoted)
 
@@ -29,11 +29,11 @@ Read this first after a compaction or in a fresh session. It is the standing pic
 4. Click the app's read-back control. `app.tsx` POSTs every page's elements with text to the receiver.
 5. `venv/bin/python tools/canva-readback-diff.py` prints, per page, the design text against the contract. Take the changed field's text exactly as the design has it (typos included; flag them to Luke, do not fix them).
 6. Write it: `venv/bin/python tools/epk.py set 2.2 -` with the text on stdin (keep paragraph breaks as blank lines). `tools/epk.py check`. Commit `press/epk.json` by path with a message naming the field and the source ("mirrored from the design").
-7. Fallback if Chrome cannot be driven: ask Luke to paste the text from Canva; write it the same way.
+7. **Shortcut that worked on 16 Sep:** the editor renders the displayed page's text in the DOM, so `get_page_text` on the design tab (with the page selected in the editor) returns the exact text without the app. Steps 1 to 5 are only needed for a full-design read with positions. Fallback if Chrome cannot be driven at all: ask Luke to paste the text.
 
 ## Open items (as of 2026-09-16)
 
-- Field 2.2: Luke edited the synopsis in Canva on 15/16 Sep; mirror it (procedure above). Until then 2.2 holds draft C of `press/synopsis-draft.md`.
+- Field 2.2: done 16 Sep, Luke's Canva synopsis mirrored (rev 33 in the worksheet). The seven-inference analysis in `press/synopsis-evidence.md` applies to the old draft C, not to his text.
 - Cast bios: the conservative proposal awaits Luke's go; if yes, `epk.py set 7.1` with the four paragraphs, rebuild kit and contract, rebuild page 7 in Canva with his word, export.
 - Page 11: "Devaraonda" spelling is Luke's to fix in Canva.
 - Export: Luke downloads (Share › Download › PDF Print · RGB · all pages · crop marks off · flatten off), then `venv/bin/python tools/check-canva-export.py "$HOME/Downloads/EPK _ KoM 2026.pdf"`, copy to the Drive `EPK BUILDS/CANVA`.
