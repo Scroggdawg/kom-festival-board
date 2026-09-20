@@ -1,9 +1,9 @@
 {
  "schema": 1,
- "generated": "2026-09-14T12:57:24",
+ "generated": "2026-09-20T10:01:03",
  "source": {
-  "kit_commit": "c45fe26",
-  "epk_rev": 32
+  "kit_commit": "2353aa9",
+  "epk_rev": 34
  },
  "measured_face": "Libre Baskerville 2.005 (OFL; press/assets/derived/fonts/libre-baskerville)",
  "page": {
@@ -123,8 +123,8 @@
     {
      "type": "text",
      "kind": "paragraph",
-     "text": "Mace fights because the alternative is the field, and then the ground. On a South Carolina plantation in 1834 his owner stages bouts against other enslaved men and takes the wagers; Mace has never lost, and every win buys him another season.",
-     "lines": 4,
+     "text": "Set in the American South in the 1830s, KILLER OF MEN is a Southern Gothic that follows Mace, an enslaved man forced into underground prizefighting for the profit of his enslaver.",
+     "lines": 3,
      "font": "Bask",
      "size_pt": 22.0,
      "leading_pt": 34.5,
@@ -139,8 +139,8 @@
     {
      "type": "text",
      "kind": "paragraph",
-     "text": "Then a fight ends in a death, and he follows the body to a burial held in secret in the Yoruba faith he was born to. The rites are for a man he killed. An elder tells him what he would have been across the water, and he sees, for the first time, what he has become.",
-     "lines": 4,
+     "text": "After killing another fighter in the ring, Mace is granted a moment of rest, but accidentally stumbles upon the burial of the man he killed. The chance encounter pulls Mace into a quiet reckoning with guilt, faith, and the violence that sustains his life, revealing the distance between the slave he has been made and the king he was meant to be.",
+     "lines": 5,
      "font": "Bask",
      "size_pt": 22.0,
      "leading_pt": 34.5,
@@ -148,7 +148,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1330.28,
+     "y": 1295.78,
      "w": 820.0,
      "links": []
     }
@@ -2017,7 +2017,7 @@
    "n": 7,
    "name": "07 Cast",
    "background": "#0b0806",
-   "count": 18,
+   "count": 22,
    "elements": [
     {
      "type": "image",
@@ -2098,15 +2098,15 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 470.05,
+     "y": 462.97,
      "w": 545.42,
      "links": []
     },
     {
      "type": "text",
      "kind": "paragraph",
-     "text": "Eric Pargac is a Los Angeles-based actor and filmmaker who grew up in Texas. He was a founding artistic director of Furious Theatre Company in Los Angeles, where he performed in ten productions and shared StageSceneLA's 2006-2007 Lead Actor of the Year (Drama) award for An Impending Rupture of the Belly. He has also performed at Artists Repertory Theatre in Portland, Intiman Theatre in Seattle and the IRT Theater in New York. His television credits include The Late Show with Stephen Colbert and HBO's Succession. He starred in, co-directed and co-produced the web series The Digressions. He is a member of SAG-AFTRA and Actors' Equity. In Killer of Men he plays Master Kenner.",
-     "lines": 10,
+     "text": "Eric Pargac is an actor, editor, producer and director who grew up in Texas. He was a founding artistic director of the critically acclaimed Furious Theatre Company in Los Angeles—named one of the Best Theatre Companies of the decade by LA Weekly. At Furious, he starred in 10 productions and received the Pasadena Arts Council's Gold Crown Award and the Debut Award from Back Stage West. He has also performed in New York (The Koan of Seymour and Daughters of Troy), Portland (Magellanica at Artists Rep) and Seattle (Paradise Lost at Intiman Theatre).",
+     "lines": 8,
      "font": "Bask",
      "size_pt": 15.6,
      "leading_pt": 24.5,
@@ -2114,7 +2114,39 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 513.83,
+     "y": 506.76,
+     "w": 600.0,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "paragraph",
+     "text": "Eric starred as Theo in all three seasons of the award-winning web series The Digressions (which he co-produced and co-directed) and starred in the web series Lost Angeles. He began his career as an improviser and performed on the house team at ImprovOlympic in Los Angeles.",
+     "lines": 4,
+     "font": "Bask",
+     "size_pt": 15.6,
+     "leading_pt": 24.5,
+     "tracking_pt": 0.0,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 717.46,
+     "w": 600.0,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "paragraph",
+     "text": "As a filmmaker, Eric was named an Official Artist of the New York Television Festival in 2014 and 2015, qualifying as a finalist in the A&E Unscripted Development Pipeline in 2014 and as a semifinalist for History Channel's Unscripted Development Pipeline in 2015.",
+     "lines": 4,
+     "font": "Bask",
+     "size_pt": 15.6,
+     "leading_pt": 24.5,
+     "tracking_pt": 0.0,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 830.16,
      "w": 600.0,
      "links": []
     },
@@ -2129,15 +2161,15 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 799.05,
+     "y": 961.3,
      "w": 380.09,
      "links": []
     },
     {
      "type": "text",
      "kind": "paragraph",
-     "text": "Jamal Dennis is a Los Angeles-based actor and stunt performer. His training includes technique and scene study at the Royal Academy of Dramatic Art and scene study with Lesly Kahn and Craig Archibald. He holds a black belt in martial arts and has trained in Kyokushin, Wushu, Ninjutsu and Shotokan. He played the lead, Lavelle Sanders, in the series Be Someone. His screen credits include The Young and the Restless, S.W.A.T., Marvel's Runaways, Zoo, Mississippi Grind and Glory Road, and he has performed stunts on Sinners, Emancipation and Grudge Match. He is a member of SAG-AFTRA. In Killer of Men he plays Kojo.",
-     "lines": 9,
+     "text": "Jamal Dennis is a professional actor based in Los Angeles, California.",
+     "lines": 1,
      "font": "Bask",
      "size_pt": 15.6,
      "leading_pt": 24.5,
@@ -2145,7 +2177,39 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 842.83,
+     "y": 1005.08,
+     "w": 600.0,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "paragraph",
+     "text": "This working actor recently studied at RADA, and he has been studying with Craig Archibald and Lesly Kahn. Meanwhile, he also loves to stay busy and immerse himself in the theatre scene and beyond. He has also done some screen work, including the lead role on the show \"Be Someone\".",
+     "lines": 4,
+     "font": "Bask",
+     "size_pt": 15.6,
+     "leading_pt": 24.5,
+     "tracking_pt": 0.0,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 1044.28,
+     "w": 600.0,
+     "links": []
+    },
+    {
+     "type": "text",
+     "kind": "paragraph",
+     "text": "In addition to being able to portray a broad range of characters, Jamal brings a lot of action and physicality to his roles, as he is a black belt in martial arts and weapons training. His styles include Kyokushin, Wu-Shu, Ninjitsu, and Shotokan, and he continues to deepen his familiarity with combat and stunts.",
+     "lines": 5,
+     "font": "Bask",
+     "size_pt": 15.6,
+     "leading_pt": 24.5,
+     "tracking_pt": 0.0,
+     "color": "#efe6d6",
+     "align": "start",
+     "x": 74.0,
+     "y": 1156.98,
      "w": 600.0,
      "links": []
     },
@@ -2160,7 +2224,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1103.55,
+     "y": 1312.62,
      "w": 496.7,
      "links": []
     },
@@ -2176,7 +2240,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1147.33,
+     "y": 1356.41,
      "w": 600.0,
      "links": []
     },
@@ -2191,7 +2255,7 @@
      "color": "#b9a88c",
      "align": "start",
      "x": 74.0,
-     "y": 1323.18,
+     "y": 1525.18,
      "w": 180.66,
      "links": []
     },
@@ -2206,7 +2270,7 @@
      "color": "#b9a88c",
      "align": "start",
      "x": 74.0,
-     "y": 1357.18,
+     "y": 1559.18,
      "w": 196.88,
      "links": []
     },
@@ -2221,7 +2285,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 284.0,
-     "y": 1355.85,
+     "y": 1557.85,
      "w": 171.97,
      "links": []
     },
@@ -2236,7 +2300,7 @@
      "color": "#b9a88c",
      "align": "start",
      "x": 74.0,
-     "y": 1385.18,
+     "y": 1587.18,
      "w": 81.1,
      "links": []
     },
@@ -2251,7 +2315,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 284.0,
-     "y": 1383.85,
+     "y": 1585.85,
      "w": 394.36,
      "links": []
     },
@@ -2266,7 +2330,7 @@
      "color": "#b9a88c",
      "align": "start",
      "x": 74.0,
-     "y": 1413.18,
+     "y": 1615.18,
      "w": 76.5,
      "links": []
     },
@@ -2281,7 +2345,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 284.0,
-     "y": 1411.85,
+     "y": 1613.85,
      "w": 209.87,
      "links": []
     }
