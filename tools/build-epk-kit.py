@@ -659,19 +659,25 @@ def page_bios(c, d, items, first, offset=0):
 # read as the lead's face, and it is Kojo's. Taste pass 2026-09-11, C01.
 CAST_GHOST = (17, (0.12, 0.5))
 CAST_COL_W = 600.0                              # 75-80 characters at 15.6
+CAST_GAP = 48.0                                 # between one bio and the next lockup
+CAST_GAP_FLOOR = 36.0                           # the gap gives way before the foot margin does
+CAST_FOOT = M + 24.0                            # page 3's footer baseline; the last cast row sits no lower
 
 
 def cast_blocks(text):
     """Field 7.1 as (bios, notes). A block whose first line carries a pipe is a bio: 'role |
-    name', the paragraph, and a 'Prior credits:' line. Every other block is provenance (drafts,
-    what to confirm, sources) and is never printed as copy; while any exists the page carries
-    a PROOF slug. This is pairs()'s rule, a line with no pipe ends the run, at block level."""
+    name', the bio, and a 'Prior credits:' line. A bio of several paragraphs is written one
+    paragraph per line with no blank line between them (a blank line ends the block), and
+    each line is set as its own paragraph (2026-09-20: Eric Pargac's and Jamal Dennis's
+    supplied bios run to three). Every other block is provenance (drafts, what to confirm,
+    sources) and is never printed as copy; while any exists the page carries a PROOF slug.
+    This is pairs()'s rule, a line with no pipe ends the run, at block level."""
     bios, notes = [], []
     for b in [b for b in re.split(r"\n\s*\n", text.strip()) if b.strip()]:
         lines = [l.strip() for l in b.split("\n") if l.strip()]
         if "|" in lines[0] and len(lines) > 1:
             role, _, name = lines[0].partition("|")
-            body = " ".join(l for l in lines[1:] if not l.lower().startswith("prior credits:"))
+            body = "\n\n".join(l for l in lines[1:] if not l.lower().startswith("prior credits:"))
             prior = next((l for l in lines[1:] if l.lower().startswith("prior credits:")), "")
             bios.append((role.strip(), name.strip(), body, prior))
         else:
@@ -710,16 +716,29 @@ def page_cast(c, d):
         ground(c, n, alpha=GHOST_ALPHA, scrim=GHOST_SCRIM, focus=focus)
         y = title(c, "CAST", H - M - 30, align="left", x=x)
         y -= 44
+        with_bio = {b[0].lower() for b in bios}
+        rest = [(r, n) for r, n in billed if r.lower() not in with_bio
+                and not any(k in r.lower() for k in CAST_PAGE_DROP)]
+        # The column is measured before it is drawn, and the gap between bios gives way
+        # before the foot margin does. 2026-09-20: with Eric Pargac's and Jamal Dennis's
+        # three-paragraph bios, the column measured in Libre (the Canva contract's face) ran
+        # the last ALSO BILLED row 3 pt under the 74 pt margin at the full 48 pt gap. The
+        # last row's baseline now rests no lower than page 3's footer baseline (CAST_FOOT).
+        fixed = sum(36 + para_height(b[2], CAST_COL_W, BODY, BODY_LEAD) for b in bios) \
+            + ((8 + 34 + 28 * (len(rest) - 1)) if rest else 0)
+        room = (y - CAST_FOOT) - fixed
+        gap = min(CAST_GAP, max(CAST_GAP_FLOOR, room / len(bios)))
+        if gap * len(bios) > room + 0.01:
+            print(f"page 7: the cast column runs {gap * len(bios) - room:.0f} pt past its foot "
+                  f"line even at the {CAST_GAP_FLOOR:.0f} pt gap; shorten a bio or rule on a "
+                  f"smaller size")
         for role, name, body, prior in bios:
             tracked(c, x, y, f"{role}  |  {name}".upper(), "Bask-SB", SUB, 2.2, CREAM)
             y -= 36
             y = para(c, body, x, y, CAST_COL_W, BODY, BODY_LEAD)
             # the field's 'Prior credits:' line is parsed out and not drawn: DIM is for
             # labels, never a line of running text, and each title is in the paragraph
-            y -= 48
-        with_bio = {b[0].lower() for b in bios}
-        rest = [(r, n) for r, n in billed if r.lower() not in with_bio
-                and not any(k in r.lower() for k in CAST_PAGE_DROP)]
+            y -= gap
         if rest:
             y -= 8
             label(c, x, y, "ALSO BILLED")
