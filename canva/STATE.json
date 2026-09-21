@@ -1,7 +1,7 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-20T10:14:40-07:00",
-  "updated_by": "Fable session, epk lane, 2026-09-20: cast bios for Eric Pargac and Jamal Dennis",
+  "updated": "2026-09-21T12:54:02-07:00",
+  "updated_by": "Fable session, epk lane, 2026-09-21: Erik Orjiako's supplied bio",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
     "typeface": "Build in Libre Baskerville (apps cannot use uploaded fonts). Optional afterwards, Luke's call: split /System/Library/Fonts/Supplemental/Baskerville.ttc into Regular, SemiBold, Bold .ttf with fontTools, upload to Brand > Fonts, swap in the editor. Not required; the kit must be right for KILLER OF MEN, not match Night Feeds.",
@@ -59,16 +59,16 @@
     }
   },
   "ops": {
-    "generated": "2026-09-20T10:01:03",
-    "kit_commit": "2353aa9",
-    "epk_rev": 34,
+    "generated": "2026-09-21T12:50:48",
+    "kit_commit": "7dce731",
+    "epk_rev": 35,
     "measured_face": "Libre Baskerville 2.005 (OFL)",
     "elements": 420,
     "images": 24,
     "paragraphs": 23,
     "links": 20,
-    "check": "tools/check-canva-contract.py: 0 problems (2026-09-20); p07 measures its column and fits the gap between bios to the foot (CAST_GAP 48 to a 36 floor; 41 pt in Libre today), last row on page 3's footer baseline",
-    "note": "rev 34: 7.1 carries Eric Pargac's and Jamal Dennis's supplied three-paragraph bios; the contract also carries 2.2 rev 33 (Luke's Canva synopsis) for the first time. Served on Pages 2026-09-20."
+    "check": "tools/check-canva-contract.py: 0 problems (2026-09-21)",
+    "note": "rev 35: 7.1 carries Erik Orjiako's supplied bio (three slips corrected) beside Eric Pargac's and Jamal Dennis's; Sandra McDaniels's is the last 10 Sep draft. Served on Pages 2026-09-21."
   },
   "pages_built": [
     {
@@ -142,14 +142,23 @@
       "elements_placed": 19,
       "page_id": "PByp6bRzmnfzd0gT",
       "note": "contract generated 2026-09-11T17:15:44 (395 elements): the two Spectator rows are gone from ALSO BILLED (Luke, 2026-09-11)",
-      "edited_in_place": {
-        "at": "2026-09-20T10:14:40-07:00",
-        "how": "the claude.ai Canva connector: read-design with open_transaction, edit-design (replace_text on the two bio boxes, position_element on the 13 elements below), verified on the transaction's render, then finalize commit. No app, no dev server, no browser tab; the page id and every element id are unchanged.",
-        "what": "Eric Pargac's and Jamal Dennis's bios as Luke supplied them on 2026-09-20, word for word, each in its existing text box (Libre Baskerville 20.8 px, line height 1.57051 kept) with a blank line between its three paragraphs; boxes now 568.3 and 376.3 px tall (17 and 11 lines at Canva's 32 px pitch).",
-        "spacing": "one uniform 54.67 px (41 pt) gap from each bio's box to the next lockup (was about 67 px); lockup-to-bio 58.37 px kept; ALSO BILLED 14.84 px further; the last billed row's baseline rests on the 74 pt foot margin (GIRL top 2185.6 px, LOREN FENTON top 2183.83 px).",
-        "differs_from_contract": "the contract sets one element per paragraph (page 7: 22 elements) with a 14.7 pt paragraph gap and the last row on page 3's footer baseline; the design keeps one box per bio (18 elements) because the connector's add_text comes in Canva's default face (fontRef YACgEZ1cb1Q, 16 px, black) and format_text cannot set a face. A rebuild of page 7 from the contract is not needed and would discard this layout.",
-        "proof": "export-design PNG of page 7 after the commit: both bios present, no overlaps, eleven pages"
-      }
+      "edited_in_place": [
+        {
+          "at": "2026-09-20T10:14:40-07:00",
+          "how": "the claude.ai Canva connector: read-design with open_transaction, edit-design (replace_text on the two bio boxes, position_element on the 13 elements below), verified on the transaction's render, then finalize commit. No app, no dev server, no browser tab; the page id and every element id are unchanged.",
+          "what": "Eric Pargac's and Jamal Dennis's bios as Luke supplied them on 2026-09-20, word for word, each in its existing text box (Libre Baskerville 20.8 px, line height 1.57051 kept) with a blank line between its three paragraphs; boxes now 568.3 and 376.3 px tall (18 and 12 lines, blank lines included; a body box of n lines is 32 x (n - 1) + 24.29 px).",
+          "spacing": "one uniform 54.67 px (41 pt) gap from each bio's box to the next lockup (was about 67 px); lockup-to-bio 58.37 px kept; ALSO BILLED 14.84 px further; the last billed row's baseline rests on the 74 pt foot margin (GIRL top 2185.6 px, LOREN FENTON top 2183.83 px).",
+          "differs_from_contract": "the contract sets one element per paragraph (page 7: 22 elements) with a 14.7 pt paragraph gap and the last row on page 3's footer baseline; the design keeps one box per bio (18 elements) because the connector's add_text comes in Canva's default face (fontRef YACgEZ1cb1Q, 16 px, black) and format_text cannot set a face. A rebuild of page 7 from the contract is not needed and would discard this layout.",
+          "proof": "export-design PNG of page 7 after the commit: both bios present, no overlaps, eleven pages"
+        },
+        {
+          "at": "2026-09-21T12:54:02-07:00",
+          "how": "the Canva connector again: read-design with a transaction (page 7 was exactly as saved on 20 Sep), replace_text on Erik Orjiako's bio box, position_element on the six lockups and bios below it, checked on the transaction's render, committed.",
+          "what": "Erik Orjiako's bio as Luke supplied it on 2026-09-21 with three slips corrected (performaces, Malcom X, the semicolon before the play's title); the box is now 216.29 px (7 lines, was 8).",
+          "spacing": "the freed line is shared evenly: one uniform 62.67 px (47 pt) gap from each bio's box to the next lockup (was 54.67); the ALSO BILLED label and its rows did not move, the last row's baseline still on the 74 pt foot margin.",
+          "proof": "press/proofs/canva-page7-2026-09-21.png (export-design PNG after the commit); eleven pages"
+        }
+      ]
     },
     {
       "n": 8,
