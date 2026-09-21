@@ -1,9 +1,9 @@
 {
  "schema": 1,
- "generated": "2026-09-20T10:01:03",
+ "generated": "2026-09-21T12:50:48",
  "source": {
-  "kit_commit": "2353aa9",
-  "epk_rev": 34
+  "kit_commit": "7dce731",
+  "epk_rev": 35
  },
  "measured_face": "Libre Baskerville 2.005 (OFL; press/assets/derived/fonts/libre-baskerville)",
  "page": {
@@ -2074,8 +2074,8 @@
     {
      "type": "text",
      "kind": "paragraph",
-     "text": "Erik Orjiako is a Swedish-born Nigerian American actor and writer based in Los Angeles. He studied English and communications at UMass Amherst and earned an MFA in screenwriting at the New York Film Academy. A graduate of Second City Hollywood's improv program, he has performed with its sketch team and written shows there. His credits include the series Minx, the short film Al Davis: Just Win Baby and the podcast series The Imperfection. He has also worked as a script reader and creative executive. In Killer of Men he plays Mace.",
-     "lines": 8,
+     "text": "Erik Orjiako is a Los Angeles based actor, writer, and comedian whose work blends sharp humor, and dramatic performances with character driven storytelling. A SAG-AFTRA performer and a graduate of The Second City Hollywood, Erik has built a career across film, television, improv, sketch comedy, and independent projects. He is currently touring in Los Angeles in the role of Malcolm X, in an East West Players production of \"When Yuri Met Malcolm.\"",
+     "lines": 7,
      "font": "Bask",
      "size_pt": 15.6,
      "leading_pt": 24.5,
@@ -2098,7 +2098,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 462.97,
+     "y": 444.6,
      "w": 545.42,
      "links": []
     },
@@ -2114,7 +2114,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 506.76,
+     "y": 488.38,
      "w": 600.0,
      "links": []
     },
@@ -2130,7 +2130,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 717.46,
+     "y": 699.08,
      "w": 600.0,
      "links": []
     },
@@ -2146,7 +2146,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 830.16,
+     "y": 811.78,
      "w": 600.0,
      "links": []
     },
@@ -2161,7 +2161,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 961.3,
+     "y": 949.05,
      "w": 380.09,
      "links": []
     },
@@ -2177,7 +2177,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1005.08,
+     "y": 992.83,
      "w": 600.0,
      "links": []
     },
@@ -2193,7 +2193,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1044.28,
+     "y": 1032.03,
      "w": 600.0,
      "links": []
     },
@@ -2209,7 +2209,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1156.98,
+     "y": 1144.73,
      "w": 600.0,
      "links": []
     },
@@ -2224,7 +2224,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1312.62,
+     "y": 1306.5,
      "w": 496.7,
      "links": []
     },
@@ -2240,7 +2240,7 @@
      "color": "#efe6d6",
      "align": "start",
      "x": 74.0,
-     "y": 1356.41,
+     "y": 1350.28,
      "w": 600.0,
      "links": []
     },
