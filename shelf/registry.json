@@ -1,0 +1,1758 @@
+{
+ "_doctrine": "Committed index of the KILLER OF MEN shelf: one sha256 per shelf-relative path. Bytes live on the shelf (My Drive/KILLER OF MEN, $KOM_SHELF), mirrored at shelf/local/<key> when pulled. shelf/sync_shelf.py register/push/pull/verify/status/merge-registry/verify-store; never a bare pull.",
+ "files": {
+  "05 MARKETING/00 PRESS/AFI Docs/CONS25_SecondYearProductionHandbook_FNL.pdf": {
+   "bytes": 412809,
+   "mtime": 1788997786,
+   "sha256": "b32260ee0b7517896f3fd4986e64dc561883b68043100dd09c0bb6fdff43942a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/AFI Docs/PFA - Production Fellows Agreement - signed.pdf": {
+   "bytes": 479250,
+   "mtime": 1789062221,
+   "sha256": "c763a7e61ced937ba365a62b1e55c23ad1c9f956c7ddf11232c03a71d3e58255",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/DSCF4696.JPG": {
+   "bytes": 19261333,
+   "mtime": 1788930196,
+   "sha256": "07df134aafc8f276f57ceedd7fd9772657965c243dda47b51134bbe96c8a6bd5",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/DSCF4718.JPG": {
+   "bytes": 18814746,
+   "mtime": 1788930196,
+   "sha256": "a3fff37beea5105b140050ddbdc81ad14da96e909d2ff642cc8099b425b3d27e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/DSCF4727.JPG": {
+   "bytes": 21903990,
+   "mtime": 1788930196,
+   "sha256": "479f0abbf2b9ebd3676867132e5e025960c9fe9c6fdb8b00fca43775bb124c0d",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/DSCF4802.JPG": {
+   "bytes": 19722142,
+   "mtime": 1788930196,
+   "sha256": "a5a63a96ba456b644215dab71f284f338eb35e971968af650e1e2721d3f191ca",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/IMG_4408.jpg": {
+   "bytes": 44930078,
+   "mtime": 1788930196,
+   "sha256": "4283ca320c4a10e822c247a81ae2088ae2e0cdbf29eee03ee6cebf5ea48dfc3a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/IMG_4467.jpg": {
+   "bytes": 43930779,
+   "mtime": 1788930196,
+   "sha256": "9a90a5570c85096a55120f5f21e04f75e557e630aedcead416b29f920b82f0fc",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/IMG_4514.jpg": {
+   "bytes": 44732548,
+   "mtime": 1788930196,
+   "sha256": "3ed67d0850600fe615b4eef601956f56af4df657b87bc54afe0488da4c7dae53",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/IMG_4616.jpg": {
+   "bytes": 52889348,
+   "mtime": 1788930196,
+   "sha256": "d067858a8ea061c5eaeccfa97127749424eb69bfac35b8194a3bf17f4d314ee0",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Anamorphic_-13.jpg": {
+   "bytes": 4833010,
+   "mtime": 1788930196,
+   "sha256": "856aba5327db9284598f23b9d79fb9da85dc7d0e46175bb93f1d00210facf358",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Anamorphic_BW-1.jpg": {
+   "bytes": 4126602,
+   "mtime": 1788930196,
+   "sha256": "51fae6edacd944382342fe0e337e13959bc07e14e3be661cc4309a30fc70e915",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Anamorphic_BW-19.jpg": {
+   "bytes": 4951817,
+   "mtime": 1788930196,
+   "sha256": "faa03e3c6c9dbaad03e4395a1b6cc8e0f955cda8379211241fe74ec83a118c00",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Anamorphic_BW-2.jpg": {
+   "bytes": 4115090,
+   "mtime": 1788930196,
+   "sha256": "726718823cf4febe6796fc41d8194d3862894051749ddfe777d7c0a7c4818184",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Anamorphic_BW-4.jpg": {
+   "bytes": 4582869,
+   "mtime": 1788930196,
+   "sha256": "4ca7f3821eab6eefc25c1a32078493eb1187f94b5396f8473c65ef750164b9d6",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-101.jpg": {
+   "bytes": 3490268,
+   "mtime": 1788930196,
+   "sha256": "edc7b7181b8dbf36c8d3ca1e7e86136356e6c18d2098420a47fa030a52baaa69",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-103.jpg": {
+   "bytes": 2937984,
+   "mtime": 1788930196,
+   "sha256": "3ec1d136abdb01db1e629486f78b4a788e0f4a557536b12f5edf0c0e917a71cd",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-11.jpg": {
+   "bytes": 5069130,
+   "mtime": 1788930196,
+   "sha256": "ba72561f48e7af376127e44f3de780e1e68a398e5310db704587fe64a05f9994",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-110.jpg": {
+   "bytes": 4788226,
+   "mtime": 1788930196,
+   "sha256": "cc5d9524bb845fb73c7018b3d4fdfe6cf3bb7d14de1296367d44c3816ce5234c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-116.jpg": {
+   "bytes": 4801761,
+   "mtime": 1788930196,
+   "sha256": "976e59a078245ee0ec39ec51484457c7b42ae084dc796c7a963ea6b97880eecc",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-119.jpg": {
+   "bytes": 4274984,
+   "mtime": 1788930196,
+   "sha256": "fb7ed7c7ccce6f672ab31959a182a8a7588e09173638db902d32351364c6bba7",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-129.jpg": {
+   "bytes": 3334906,
+   "mtime": 1788930196,
+   "sha256": "a27da009791eb8ed397a229e5154410eb5d49b3f56afb3e0a2dda7065300a3c7",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-13.jpg": {
+   "bytes": 4806854,
+   "mtime": 1788930196,
+   "sha256": "e044439c8ca9d5a447349e6f97b66f40479230135066559406b309314416244d",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-130.jpg": {
+   "bytes": 5098855,
+   "mtime": 1788930196,
+   "sha256": "1cc19e78741439aadc668bb433d8b992dcbf1432d8ba0f22a531b7c766e872ee",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-132.jpg": {
+   "bytes": 5059977,
+   "mtime": 1788930196,
+   "sha256": "1d04817f48bfdae9fe6d0284ad4e7888a396ff0dcd87709f1c3f6b8bf61148ff",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-142.jpg": {
+   "bytes": 4819219,
+   "mtime": 1788930196,
+   "sha256": "1115d38b0e98143a13de1a27a8c05745099db208827f838bbc53b45c94f6c949",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-149.jpg": {
+   "bytes": 5058470,
+   "mtime": 1788930196,
+   "sha256": "a0cd84fecc97e718203d6a8fbde9f29e58bc0a410dfef40e731d5b57ac20c64a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-150.jpg": {
+   "bytes": 3788255,
+   "mtime": 1788930196,
+   "sha256": "02794f84a04fc4af52d4f8b26c8c5ef55db7663c4c5249a2e286490261672192",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-152.jpg": {
+   "bytes": 4553663,
+   "mtime": 1788930196,
+   "sha256": "d4e5a1a390dcae6ce78c49972cf5d4a40970f9ddab4a77077ef7a918960b4b89",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-161.jpg": {
+   "bytes": 4603891,
+   "mtime": 1788930196,
+   "sha256": "b539660f411dbcf5670a6dae5c104902d64c7b7e6c3923a580a11ecf730c13ad",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-162.jpg": {
+   "bytes": 4108829,
+   "mtime": 1788930196,
+   "sha256": "db5958a9ffe4d03371491383e54cde367f98c9cbed9c18829062691945e913de",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-171.jpg": {
+   "bytes": 4824172,
+   "mtime": 1788930196,
+   "sha256": "a32540a4746bcd8e7d93267d632c0796223ebc2f7548760d5471dd5d9af91223",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-18.jpg": {
+   "bytes": 3729710,
+   "mtime": 1788930196,
+   "sha256": "e8580fdbf33db3a635b8431bac9bc4667c2310b44dcdd6b9a2c1a31e6fbbe273",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-185.jpg": {
+   "bytes": 4100274,
+   "mtime": 1788930196,
+   "sha256": "fab696e546e8b3bbdea14f1e83a79bf3ce948b272fbe2fb66c27ecfb6ac86535",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-186.jpg": {
+   "bytes": 4346117,
+   "mtime": 1788930196,
+   "sha256": "bfb0c9b126c0f1fa2b9467ee896f0e0c9719212767c22cf43ea4f38d3c361ba6",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-190.jpg": {
+   "bytes": 4779555,
+   "mtime": 1788930196,
+   "sha256": "103436c7d026e06c622e8c87bca6a7f23fdd6113679ea3e4028269d4d7f7512d",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-194.jpg": {
+   "bytes": 4562245,
+   "mtime": 1788930196,
+   "sha256": "289972669e335f03c2b745d6d8a24e1574a114365e85a3ff78efd7dd774855d3",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-195.jpg": {
+   "bytes": 3882768,
+   "mtime": 1788930196,
+   "sha256": "88a3bb00249be1394c36b123c40ada8405d4e0e00dea04a3424226e44d786152",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-207.jpg": {
+   "bytes": 4911746,
+   "mtime": 1788930196,
+   "sha256": "97ce9450f7ba1c1a57e67d8c966a07a8c86ceb04d25a256e320a6e00308d5dfe",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-208.jpg": {
+   "bytes": 3176327,
+   "mtime": 1788930196,
+   "sha256": "a47e6c0e8a53d2695aa75c9786bf09a4793c76f7b4ee6d6f4d77f2ea90c67923",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-209.jpg": {
+   "bytes": 4971543,
+   "mtime": 1788930196,
+   "sha256": "c398e355a12af0c97ee94039f07877bc9989d6792c6b74854fb2743ba7e92e8d",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-215.jpg": {
+   "bytes": 4466063,
+   "mtime": 1788930196,
+   "sha256": "0b302d0e04bc4ece41852a62cc353c370a07a1649b297c715265049a9fcd12d2",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-216.jpg": {
+   "bytes": 3617890,
+   "mtime": 1788930196,
+   "sha256": "eda951b79c696cd8c637b83dd335cc488932b863ffc7bfd4dcbad295bf2f2c4a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-217.jpg": {
+   "bytes": 4154259,
+   "mtime": 1788930196,
+   "sha256": "ad768a50e5244a81cab3c741177cfebad6ea079f4ec80f95eb9c989471c9bc2e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-218.jpg": {
+   "bytes": 4169052,
+   "mtime": 1788930196,
+   "sha256": "e50b199cd2235d2499c861ad4a6420cc8ecb3a3bdce878dbeead197bf677027f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-220.jpg": {
+   "bytes": 4170018,
+   "mtime": 1788930196,
+   "sha256": "965ea8371b7b24374a8c1541207111ec183903ee28d71eea85080d18cf6f72c4",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-223.jpg": {
+   "bytes": 4557458,
+   "mtime": 1788930196,
+   "sha256": "a0e176130e15e4c882d3833ff18d03aa1ff58d6a32fce24956c8b229a84a2bda",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-224.jpg": {
+   "bytes": 4766373,
+   "mtime": 1788930196,
+   "sha256": "57e6e1481d0e20f53baa02596894f58b0f08b538ff278feb35c3e0a667db8847",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-229.jpg": {
+   "bytes": 4927565,
+   "mtime": 1788930196,
+   "sha256": "8c081c7c65d461a1855d291cbacd7aa21be65732befe43a9173bae070ad70158",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-230.jpg": {
+   "bytes": 3984618,
+   "mtime": 1788930196,
+   "sha256": "a5c228e2b2e8c5d5bf1a9a5a0638549f9b81606197fdbb741f92c6dc8ca6fee1",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-231.jpg": {
+   "bytes": 4038380,
+   "mtime": 1788930196,
+   "sha256": "f98d33c01f1ac9a6935092b12967a6b64559112edfdeb587aa41d9721ab2c7d1",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-233.jpg": {
+   "bytes": 4837756,
+   "mtime": 1788930196,
+   "sha256": "9f26f380ec499745872b8bd4b7da386193ce73a82576151967441447cd783b4f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-234.jpg": {
+   "bytes": 4319057,
+   "mtime": 1788930196,
+   "sha256": "d8632525f3a4ac2786ff3d8a0aae52cfd11e86035235e894bab12f82f6c8fe4e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-237.jpg": {
+   "bytes": 4380270,
+   "mtime": 1788930196,
+   "sha256": "68231f16c3e60678e286d4fbc1af2b38f7c7bd65b4bfc17a126b4a71ff4c9bfa",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-3.jpg": {
+   "bytes": 4475992,
+   "mtime": 1788930196,
+   "sha256": "46126bc17a2e4dc14e72f50567f09bd9211ec31626a36142bac2fe726f3fa4af",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-40.jpg": {
+   "bytes": 4443893,
+   "mtime": 1788930196,
+   "sha256": "ff0e85c399df7c1907b379e084817bfde902c788f1d59152082bdba3d363dc9c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-43.jpg": {
+   "bytes": 3209228,
+   "mtime": 1788930196,
+   "sha256": "2641e69c6e9ba40f8c71703a125313c05fef334970e781f868e64b3ddca5cc3e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-44.jpg": {
+   "bytes": 4113889,
+   "mtime": 1788930196,
+   "sha256": "fa5daa5e47ff64f5ceefce473240862dfbc0be77411f6f226de7081ff75a59f0",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-45.jpg": {
+   "bytes": 3631800,
+   "mtime": 1788930196,
+   "sha256": "03fc71012fa02d79256a336bd9dd45f0db78c382684679cd56a22c39847d1a0e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-46.jpg": {
+   "bytes": 4411262,
+   "mtime": 1788930196,
+   "sha256": "94b0840c60e1d406ce2931b0ab96431646f2692e1799d3a0877f37618abb4c33",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-52.jpg": {
+   "bytes": 4882801,
+   "mtime": 1788930196,
+   "sha256": "78b8c1624ed19c7226a4c83ea7253e88ccf2c8452da44a756dc176945522200a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-53.jpg": {
+   "bytes": 4442180,
+   "mtime": 1788930196,
+   "sha256": "35969dd533f61de08b7418cf080c30c23f580d112c75fb1bea0df0e9b7a1f2fd",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-59.jpg": {
+   "bytes": 4116605,
+   "mtime": 1788930196,
+   "sha256": "0400d4b52fe71790e40a958f6f7148d2925b6d95d9e5807036b333fd12b3c64c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-62.jpg": {
+   "bytes": 4925796,
+   "mtime": 1788930196,
+   "sha256": "39d1aed29ef1e909bd5e8864a3f419a6c04b0b09a6902742e396c6bebb99ab39",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-63.jpg": {
+   "bytes": 3263622,
+   "mtime": 1788930196,
+   "sha256": "6397823d2ff112ab65abdef48857dcfdbcc04d6d802e6993eeef056b066eb205",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-73.jpg": {
+   "bytes": 4929329,
+   "mtime": 1788930196,
+   "sha256": "3023025bcffbe665f2aff2bdae3eb8fee5f191c51f8d49107cf6946742886698",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-74.jpg": {
+   "bytes": 3424773,
+   "mtime": 1788930196,
+   "sha256": "05c3e2ffd6133bee0c0023875825603d766acbe4eabcd546f66e3661a1b4c664",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-78.jpg": {
+   "bytes": 4232653,
+   "mtime": 1788930196,
+   "sha256": "b5549add91f2e0d585dd762d74d8441c605536c17d2997b31e1062572dea0f3c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-83.jpg": {
+   "bytes": 4200145,
+   "mtime": 1788930196,
+   "sha256": "0e12b85fe806993469f6fa31ffa9b3210a34db2f92b33217e52707a8b7acc26c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-84.jpg": {
+   "bytes": 4665797,
+   "mtime": 1788930196,
+   "sha256": "8f2cbf4f72c40f400602d9a0f44e97d785baa685e3a3574fa056bb4c7afbc23a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-85.jpg": {
+   "bytes": 4090630,
+   "mtime": 1788930196,
+   "sha256": "ee9fc6fa3ee59ff0d181124cc968d0ad67dbdbe1738841d54b2e05e90619914c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-86.jpg": {
+   "bytes": 4844943,
+   "mtime": 1788930196,
+   "sha256": "9c6a9868671fb8220fcc1953d44ea243cde7ce29978dd3efb101f2f0a6524060",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day3_TheFarm-99.jpg": {
+   "bytes": 5009057,
+   "mtime": 1788930196,
+   "sha256": "e60e5f7a0464879c1d9a1d737c663e9403dd121cbad60105287f40130babce9e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-10.jpg": {
+   "bytes": 3785046,
+   "mtime": 1788930196,
+   "sha256": "8aeca44a0e70db28821be6eb1dbd513278c629d016f19fe740bd0a7712014095",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-103.jpg": {
+   "bytes": 3495545,
+   "mtime": 1788930196,
+   "sha256": "615e658651f0382f02b75bea993deb90ecac1dce4bb9a6e4736f04dabfa0bd70",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-106.jpg": {
+   "bytes": 4710170,
+   "mtime": 1788930196,
+   "sha256": "84bdd3d1c18311e192b7fca0c8920ad08c466d8856f0e92905f4999ade551f51",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-108.jpg": {
+   "bytes": 4103955,
+   "mtime": 1788930196,
+   "sha256": "d4c81b1e7974e6c5c018a5507a002583bc137e3a33980be16e10f0bb872d1c1c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-113.jpg": {
+   "bytes": 3777472,
+   "mtime": 1788930196,
+   "sha256": "089939c3781a61aa6408fe83158c1b81be334af2d4aabee6be6075d0990f2a0d",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-12.jpg": {
+   "bytes": 4793362,
+   "mtime": 1788930196,
+   "sha256": "8c68a88130967b46a649466b7b7d1d55a95ac28d2a82d0a6be05b4291c3f1288",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-121.jpg": {
+   "bytes": 4132665,
+   "mtime": 1788930196,
+   "sha256": "708f885db9df83d557a7d7ca7ee4756bf5219987afa8e2eff5e4784e7f9dce77",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-13.jpg": {
+   "bytes": 3945455,
+   "mtime": 1788930196,
+   "sha256": "686337d823ecbb4249fc4eef9e113156548c8787fc25b8ef50a404b81d6e2b47",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-32.jpg": {
+   "bytes": 3948519,
+   "mtime": 1788930196,
+   "sha256": "59c06ebb3563cdc62f1d2c6fe0c2ade50fadcb63c0a7aa46a6770e618d8c5771",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-58.jpg": {
+   "bytes": 4567394,
+   "mtime": 1788930196,
+   "sha256": "51befc749ca9d2539ff4cdb538be69b6f67cda0f987a9a0c7e8a6a6ffd1f1d2c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-72.jpg": {
+   "bytes": 4580404,
+   "mtime": 1788930196,
+   "sha256": "11ed896d6b6e5ce99c67da5eb30d4c60b12b363faad02c5ced84c7f4aa0b881c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-76.jpg": {
+   "bytes": 3395320,
+   "mtime": 1788930196,
+   "sha256": "74cdcc4de4400e0edd09bd315970cd4323ab44c027c5f1a36dd60116a9087539",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-79.jpg": {
+   "bytes": 4415796,
+   "mtime": 1788930196,
+   "sha256": "e4c5fb3899d9b1ecb67a1dfa6761956047719f5774f1829aa934bdb02fb66012",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-81.jpg": {
+   "bytes": 3540887,
+   "mtime": 1788930196,
+   "sha256": "590c8c060934044b6c25b2b152477e4e8bef8dc60c67f8779ad99919721325aa",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-83.jpg": {
+   "bytes": 4520249,
+   "mtime": 1788930196,
+   "sha256": "9f68993790c2767cf887c66dcd8cba6903853d4e03ceb0188bd6367640bf5015",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-88.jpg": {
+   "bytes": 4717926,
+   "mtime": 1788930196,
+   "sha256": "949e2b83a2859ab40bab8c8bc4e9e4e69c79d1731c624c41d313d9cf8208a208",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-91.jpg": {
+   "bytes": 4371706,
+   "mtime": 1788930196,
+   "sha256": "f9a683c062cb1b6b0064b95a26c3ac780308cc307a669597758d4b43b9837d09",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-92.jpg": {
+   "bytes": 4565527,
+   "mtime": 1788930196,
+   "sha256": "45e961a0adf41ae54d695388a6caa74e3c9abdf424779513a76d3869639eeffe",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-93.jpg": {
+   "bytes": 3592313,
+   "mtime": 1788930196,
+   "sha256": "db58d09eccd4df59c157b536ba1eaace5414d467ca61a41436aa6f1a6192ccec",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-96.jpg": {
+   "bytes": 4107175,
+   "mtime": 1788930196,
+   "sha256": "c50676cbf67836aa1be38f470d8b4ab60627dedbb391cb95ea0af6f9c222ca01",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Day4_Soundstage-97.jpg": {
+   "bytes": 4062730,
+   "mtime": 1788930196,
+   "sha256": "9b4febbd78a00612123a3dddc5a216371b949108ace357b4d1aafbe4c42ed9c8",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Stage-1.jpg": {
+   "bytes": 4257034,
+   "mtime": 1788930196,
+   "sha256": "9050227446e1836f40072d3a1dd80734aab48e6e014078e7d6b985dd2840676a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Stage-12.jpg": {
+   "bytes": 4099880,
+   "mtime": 1788930196,
+   "sha256": "0439edcf4fa3114099fce31c6bf26b65cf64f9be357c3848f94cd7eb0dfe25a2",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Stage-4.jpg": {
+   "bytes": 4588183,
+   "mtime": 1788930196,
+   "sha256": "21f46b205d1bfe0773b9a0fac5cae259ece33f07924c1c34fe5704bd2f38cfbd",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Stage-5.jpg": {
+   "bytes": 4574466,
+   "mtime": 1788930196,
+   "sha256": "6baeced6803bbd3f7ab54c203d63985ba875e3f6344ef59bf1fda3b3af8304e8",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Stage-7.jpg": {
+   "bytes": 4517667,
+   "mtime": 1788930196,
+   "sha256": "ce025a4a2356bddfa3d9e3ec2917156df1e4ccef7e8fb2b3320636caa73c60ac",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/KOM_Stage-9.jpg": {
+   "bytes": 4140428,
+   "mtime": 1788930196,
+   "sha256": "2c2e0a99f8e058862722723711860229b801caca4cca0a46ea616fd74222eb4a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/_DSF5055.JPG": {
+   "bytes": 26289538,
+   "mtime": 1788930196,
+   "sha256": "6d38a6fff9dd83a66fb7f7f072e92f690004745b5f9cc1e9ba6377d7c7a9f12f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/_DSF5180.JPG": {
+   "bytes": 26387052,
+   "mtime": 1788930196,
+   "sha256": "dbe971332e03aa5b824fe577dca3b87b5315979863e57e13bf5b0167f3de4c5f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/_DSF6428.jpg": {
+   "bytes": 23874445,
+   "mtime": 1788930196,
+   "sha256": "af36cf55f39d44e15ddeda37afafe66a49068a6b5689296fdfe69a3f6d8e6bc3",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/_DSF6499.jpg": {
+   "bytes": 18309375,
+   "mtime": 1788930196,
+   "sha256": "0a55a58a02334c9f24515147153b434581f884bee7723723db3b23a038dd3e12",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/BTS/_contact-sheet.jpg": {
+   "bytes": 1448534,
+   "mtime": 1788929970,
+   "sha256": "06bb02dc7c538f5414ed01610745e62d3faccec804bbb7b23842bbf3347b1d08",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/CANVA/README.md": {
+   "bytes": 14138,
+   "mtime": 1789098452,
+   "sha256": "aadb966a8e59df84311545a248c9934f16f4684d8e551826604ac62fc0917d97",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/CANVA/STATE.json": {
+   "bytes": 20822,
+   "mtime": 1790020482,
+   "sha256": "cf0130a39a2670107cd84561117a132dee9f3dd9158057b5978a3eda50d1af0a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/CANVA/canva-plan.md": {
+   "bytes": 14554,
+   "mtime": 1789073199,
+   "sha256": "a3bf9a3cfba27efa15c9dd3c99b22bec3d7943b7fc7f1046e28ab5b88cb3db41",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/CANVA/preflight.sh": {
+   "bytes": 3672,
+   "mtime": 1789098452,
+   "sha256": "4f268bffc24326b2896f7ee576d2155f3275647324548eea6a31d429296cb280",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/EPK-breakdown.pdf": {
+   "bytes": 5609,
+   "mtime": 1788941318,
+   "sha256": "d36aebc06a632035bf41302a803826ec5b24bcc3abd5c60a81beb89312ec53df",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_Credits.pdf": {
+   "bytes": 293912,
+   "mtime": 1789056417,
+   "sha256": "094aa962464af4af2c3c056b605c6be61ef9a6bb94b2f1c446ca34f3371a3aeb",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_Credits_1_Cast_transparent.png": {
+   "bytes": 509008,
+   "mtime": 1788998418,
+   "sha256": "00eecd0eb0cd1cb13359955e1735b2032185f3feb52436484effe907209c61e6",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_Credits_2_Crew_transparent.png": {
+   "bytes": 818556,
+   "mtime": 1788998418,
+   "sha256": "ca94e3db7c8183c2735ccf003bf504fd1cc87584bbd1fe47f7b33ae93120a79e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_Credits_3_Thanks_transparent.png": {
+   "bytes": 416508,
+   "mtime": 1788998418,
+   "sha256": "06451ec2f0e93eeff9aa0fe15553afac3a66dbacfac47dc9fe5aa5ae428976e0",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_Credits_large.pdf": {
+   "bytes": 129932,
+   "mtime": 1789056417,
+   "sha256": "c4836a8468141e74c8ae5cc46d2142ce50e18e978ff0b9eb51ec2f271f885063",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_Credits_large_transparent.pdf": {
+   "bytes": 37338,
+   "mtime": 1789056417,
+   "sha256": "a9d7b2de7d3abe7bcd7ef278f82f1d934e11bc7a22ff7be66b80581ae0d738cf",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_Credits_medium.pdf": {
+   "bytes": 127475,
+   "mtime": 1789056417,
+   "sha256": "1acf9d882506492f0bec24646990a477d8563a20bbf0ce55d2ee7ace2fedf0ee",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_Credits_medium_transparent.pdf": {
+   "bytes": 35517,
+   "mtime": 1789056417,
+   "sha256": "9955af68bdedea441eda4b50fc37114de9ba29851903aad5ac5cf9c55a0c9fe1",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_Credits_transparent.pdf": {
+   "bytes": 31210,
+   "mtime": 1789056417,
+   "sha256": "50ae9f100ca5e65664dd018ce510246f8a22e524418a5efadfe6f2f6d29e58c7",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_EPK_0958_20092026_compressed.pdf": {
+   "bytes": 4203067,
+   "mtime": 1789923677,
+   "sha256": "30ae02e3339c33a67686dc679a1b50e3b6577c15518978ca37aed6a3c19dc4e3",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_EPK_1005_14092026_compressed.pdf": {
+   "bytes": 4202633,
+   "mtime": 1789408638,
+   "sha256": "cbf8f4ae33fcf78add875a21151bc06cba6c1c2efc6b35117fce6d3bbdd9f176",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_EPK_1250_21092026_compressed.pdf": {
+   "bytes": 4203028,
+   "mtime": 1790020264,
+   "sha256": "b270b0ab9a373014e8aa78b52ccee2613d6c1557e627daa40029a3feff5a435f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_EPK_1544_10092026_compressed.pdf": {
+   "bytes": 9809315,
+   "mtime": 1789073199,
+   "sha256": "2f52382ea5d50db60ad4c5e435d7ed3099b6fbb47fc7316c1ad964d251b09ccf",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_EPK_1603_11092026_compressed.pdf": {
+   "bytes": 4216546,
+   "mtime": 1789160602,
+   "sha256": "f6b9a9e38a6df0a2c77e6dae4d7dcb18a3197848b539f308f8376cb1d2b4b584",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_EPK_1625_23092026_compressed.pdf": {
+   "bytes": 4203028,
+   "mtime": 1790205956,
+   "sha256": "d5f2dd06c356760f5159766cf1d53e2794e519343ede8eea0ccfe9de456c483b",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/KillerOfMen_EPK_1715_11092026_compressed.pdf": {
+   "bytes": 4216475,
+   "mtime": 1789164938,
+   "sha256": "723d94478ed641548df361ec19ba7171bdc4d4cb138b8bb08fd0982b1aea99f0",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p1.png": {
+   "bytes": 1898289,
+   "mtime": 1789056417,
+   "sha256": "d90cea426b8b70eae05af187b00228d02584e5a0e97197e14d0095f4e34fd7d1",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p10_large.png": {
+   "bytes": 1770691,
+   "mtime": 1789056417,
+   "sha256": "01920b83f600dd5d814c29f72b17b6a4abbb92962ce137df84df5095339a5ac6",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p11_large.png": {
+   "bytes": 1667392,
+   "mtime": 1789056417,
+   "sha256": "d17155d62b283ee3442a810a0c37768281d8069e7ed087f9d49246ae494b41a0",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p12_large.png": {
+   "bytes": 1915013,
+   "mtime": 1789056417,
+   "sha256": "5818af310caedb3d0333bc8a4b8c89aa0f09d9dd614b27d1a603e818d36b7bb5",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p1_large.png": {
+   "bytes": 1664150,
+   "mtime": 1789056417,
+   "sha256": "a6567c15423e803a2041a133afc1b4c2b7df0f80bf81514ccc775b70ea589a1e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p1_medium.png": {
+   "bytes": 1713743,
+   "mtime": 1789056417,
+   "sha256": "2078bfd1092f28a3403629addf7161029f8a8449620a75082e12c9ddd145c778",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p2.png": {
+   "bytes": 2435343,
+   "mtime": 1789056417,
+   "sha256": "86a66e05b90f3d471fc2146700791764d512fdbe6a494d427053af617e5cebb8",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p2_large.png": {
+   "bytes": 1640080,
+   "mtime": 1789056417,
+   "sha256": "ba6389a6f554f20aa395da641e9999ebb04d3ec54b078289296f5ffcce833c11",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p2_medium.png": {
+   "bytes": 1568953,
+   "mtime": 1789056417,
+   "sha256": "95b19ad727dbff00ce903c40dfeec434b3f1c8c392ba77486e0a2af34a49e165",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p3.png": {
+   "bytes": 2251882,
+   "mtime": 1789056417,
+   "sha256": "2bc2247dcd72c11ce29ac9450ba1a5397a88c873e64a61c69ab270a7bde43723",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p3_large.png": {
+   "bytes": 1508487,
+   "mtime": 1789056417,
+   "sha256": "c53b407680ecba62d8e440fbbcef88fd63854cc606f9824573f4d2fd6d806b05",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p3_medium.png": {
+   "bytes": 1667626,
+   "mtime": 1789056417,
+   "sha256": "19ae2d7bfd2c23a7a187789487f0c95675e8bae363952f3920d3cabeb0dad445",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p4_large.png": {
+   "bytes": 1666454,
+   "mtime": 1789056417,
+   "sha256": "6773390dda760b4cde514e179c6d10725f40b9ba3997f94ee6fbfb4aa1d02dd6",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p4_medium.png": {
+   "bytes": 1631781,
+   "mtime": 1789056417,
+   "sha256": "f45c8afa0263fa79bab96eff2fbdede86ef1e21636cdc676ca654db229d2ae79",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p5_large.png": {
+   "bytes": 1656614,
+   "mtime": 1789056417,
+   "sha256": "39c5f59dff852afc922475b22f8ed6e16830de146342d9c058e3f51222bd178d",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p5_medium.png": {
+   "bytes": 1675703,
+   "mtime": 1789056417,
+   "sha256": "9e201018bf722979d50edd5c54427539945b22c0a449dbb241c7e856ed123a4d",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p6_large.png": {
+   "bytes": 1635818,
+   "mtime": 1789056417,
+   "sha256": "7a22de5b31cf7812321cd7086acc9c97316549fe4d17febfef5e671163a46157",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p6_medium.png": {
+   "bytes": 1681704,
+   "mtime": 1789056417,
+   "sha256": "b2e063bd0ca6030d4be43bb61254eb26926297b8121923a086895118e3592e28",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p7_large.png": {
+   "bytes": 1670486,
+   "mtime": 1789056417,
+   "sha256": "c159b81d6f9e6f50bb2ab38afa41e072cd589749a6bfc0690f42d62e13a00651",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p7_medium.png": {
+   "bytes": 1545301,
+   "mtime": 1789056417,
+   "sha256": "f190c97920aa6184b062c2e5d43f882782dc141fb401333072931308877de51c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p8_large.png": {
+   "bytes": 1673364,
+   "mtime": 1789056417,
+   "sha256": "162a623609a334f03aa44caf55fbf115bd256b41a75d89840ae7cd77622ffeb4",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p8_medium.png": {
+   "bytes": 1864094,
+   "mtime": 1789056417,
+   "sha256": "0647fe6aaabf361c513383105c4a660386700a423a696c424b5ef6b3a0c25252",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p9_large.png": {
+   "bytes": 1683053,
+   "mtime": 1789056417,
+   "sha256": "b23aac9a4fc21873bcb588c9a85dc35afc52d6bd367e1c7d1c5ac6cb07d348cf",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK BUILDS/credit-renders/KillerOfMen_Credits_p9_medium.png": {
+   "bytes": 1906978,
+   "mtime": 1789056417,
+   "sha256": "25c9aa5ec829e544850d7011c7572cd2371beaf29e5b5f466fe7b5eea6862bb8",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/EPK Checklist - SEP 09.png": {
+   "bytes": 312220,
+   "mtime": 1788941772,
+   "sha256": "22cf55544699805cd6d041bae458dd5fee27214d8eaa61b6ab9a9ecdd63bcaf0",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/FOR ACTORS   CREW/2513_KOM_1080p_177_H264_ST_LR_VIMEO_12082025.mov": {
+   "bytes": 1087995584,
+   "mtime": 1765306307,
+   "sha256": "4d597e01f183a311f09510fc781398da3d824715346b923cd357025c2a428af1",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/HEADSHOTS/Cinematographer_Luke_Scroggins.jpg": {
+   "bytes": 5260895,
+   "mtime": 1788999486,
+   "sha256": "24fe8b70469b35927b244d1a3870cf44d1b2f5953c1038d49f16c4a7d088aa59",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/HEADSHOTS/Director_Jordan_Betine.jpg": {
+   "bytes": 6108781,
+   "mtime": 1726373867,
+   "sha256": "456e099803283169a6b44c8c015f63f2ba5a0deb8f6116280b3166534b0d16be",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/HEADSHOTS/Editor_You_Wu.jpg": {
+   "bytes": 7335843,
+   "mtime": 1788999430,
+   "sha256": "901c4a18abcf5d0b9e03cde664f485851d21919dc7ce64bfc2d0c35d818b6025",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/HEADSHOTS/Jordan Betine Director headshot.JPG": {
+   "bytes": 4560765,
+   "mtime": 1789254334,
+   "sha256": "994277a7e80e08649354ab3c1ca3296c1607ce6be6bc98ef45e364057e901536",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/HEADSHOTS/KOM Headshots-1.jpg": {
+   "bytes": 6108781,
+   "mtime": 1726373867,
+   "sha256": "456e099803283169a6b44c8c015f63f2ba5a0deb8f6116280b3166534b0d16be",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/HEADSHOTS/Producer_Ruoxiao_Li .jpg": {
+   "bytes": 5336741,
+   "mtime": 1788999575,
+   "sha256": "4ab8b9f79cde285947c960b5ff30d894e0afbfe9b972217770ee4ac81be63e20",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/HEADSHOTS/Production_Designer_Rajarajeshwari_aka_RJ_Ragampudi.jpg": {
+   "bytes": 4729544,
+   "mtime": 1788999461,
+   "sha256": "da49a2ed9eac5b9210c1c20d5041feb283db612d991c34c5e50d12f142e52c9f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/Illustrator Projects/KillerOfMen_Credits.ai": {
+   "bytes": 5000425,
+   "mtime": 1789056459,
+   "sha256": "ed58aa6bf8de1640b236d045dc7f7654fe566170086f249ae7ed9bba654442c9",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/Illustrator Projects/KillerOfMen_Credits_large.ai": {
+   "bytes": 10314611,
+   "mtime": 1789056459,
+   "sha256": "125187ea7ad9396d5d3a7e24c301f8eeb20999a5b362097dabc991a55c16727f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/Illustrator Projects/KillerOfMen_Credits_medium.ai": {
+   "bytes": 8050760,
+   "mtime": 1789056459,
+   "sha256": "42c6ac00962bcd8c0e9b2d3d2ebb93046372e858ea678206d069093754764dab",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/Illustrator Projects/KillerOfMen_EPK.ai": {
+   "bytes": 719005,
+   "mtime": 1790020365,
+   "sha256": "fa6cfcd1228bdd6414333e8993488891eac5923af867184eafa0312f09960cfa",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/Illustrator Projects/KillerOfMen_EPK_1252_21092026_compressed.pdf": {
+   "bytes": 10486355,
+   "mtime": 1790020387,
+   "sha256": "8bb9a3bf141e8ddd478c1f4578b645bc6aa57f46b07773dd671d6c238c271eca",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/Illustrator Projects/REFERENCE_NightFeeds_EPK_1556_compressed.pdf": {
+   "bytes": 4704238,
+   "mtime": 1789000051,
+   "sha256": "0833c77265de12fd714bc2ba1466b99db9d271d0ac71a05bfb393f6ce190b6a0",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/Illustrator Projects/build-epk-ai.py": {
+   "bytes": 24263,
+   "mtime": 1789924536,
+   "sha256": "516d53cb5b31b166c4a6d59a149f02eb1e690c06b73c5df60dad64000397f158",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/Illustrator Projects/build-epk-kit.py": {
+   "bytes": 43031,
+   "mtime": 1790020482,
+   "sha256": "b2a9c78b718d3fec2b4dcb6d92b00e69e3c1798320004dae59184b9f59606e72",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/Illustrator Projects/illustrator-bridge-test.jsx": {
+   "bytes": 2271,
+   "mtime": 1789000321,
+   "sha256": "9fc6a4c1dbc7a88c80f38895c74f98a5ed622d940fc199787e9fd5547227133a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/LAURELS/ABFF/OFFICIAL SELECTION - American Black Film Festival - 2026 (1).png": {
+   "bytes": 113845,
+   "mtime": 1790189070,
+   "sha256": "4eb28edf3aba7c52771857c348fb598cdc23073de556c0475705ac54bcaf50ec",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/LAURELS/ABFF/OFFICIAL SELECTION - American Black Film Festival - 2026.png": {
+   "bytes": 151599,
+   "mtime": 1790189033,
+   "sha256": "ea164984e3cb8fbe5e1424ba981d7b40e7c8e5d9e15de5a76bc260494eea514e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/LAURELS/AFI Fest/FESTConservatoryShowcase_Laurels.png": {
+   "bytes": 4532,
+   "mtime": 1665096748,
+   "sha256": "d708f2d98857cffdea8541d1ad7827721eea78adb203c8a2aa6ebbbfd20047bc",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/LAURELS/AFI Fest/FESTConservatoryShowcase_Laurels_white.png": {
+   "bytes": 4661,
+   "mtime": 1665096760,
+   "sha256": "25ec13ef56487662e70b8aca75dd6137974a17d67b258848d682813906fdd651",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/LAURELS/Marthas Vineyard/OFFICIAL SELECTION - Marthas Vineyard African American Film Festival - 2026 (1).png": {
+   "bytes": 129623,
+   "mtime": 1790189098,
+   "sha256": "8e3a2a9f10fbf65863f76451fff76c74368e65e1f81f4784f17cd2b1e2241a1e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/LAURELS/Marthas Vineyard/OFFICIAL SELECTION - Marthas Vineyard African American Film Festival - 2026.png": {
+   "bytes": 172235,
+   "mtime": 1790189091,
+   "sha256": "2960bbd182487ee71244ec223fd77c17a35e6f4590581c9f99711c3260e798f9",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/LAURELS/SCAD/OFFICIAL SELECTION - SCAD Savannah Film Festival - 2026 (1).png": {
+   "bytes": 92784,
+   "mtime": 1790189244,
+   "sha256": "6ccfdeec3d74e8afcd27d78065fe14158327a342a8bc28a90a6ee70924766a71",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/LAURELS/SCAD/OFFICIAL SELECTION - SCAD Savannah Film Festival - 2026.png": {
+   "bytes": 117669,
+   "mtime": 1790189238,
+   "sha256": "b04b3b3ab5e98094fdc2f19184103191c751dfc8525c2fbd78369bde8d4f60c1",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/LOGOS/AFIC-logo-blk.webp": {
+   "bytes": 21694,
+   "mtime": 1789400863,
+   "sha256": "aaa5e607cb8f27966fdfe1ca7299bfeca16fba174abc483fbc7a3b434e2edf3d",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/LOGOS/AFIC-logo-cream.png": {
+   "bytes": 8656,
+   "mtime": 1789401137,
+   "sha256": "6d2ff6e7ef23eec5f3b481bd921e9dc21895453918af7ca73655d59a5c2594fd",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/POSTER/KillerOfMen_Poster_2160x2700.jpg": {
+   "bytes": 5662909,
+   "mtime": 1788929970,
+   "sha256": "52146092cd136e6caaca30ba39c5bf00b8d9ed240cc20855dcbe496ca26a1919",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/SRT/KillerOfMen_English.scc": {
+   "bytes": 33836,
+   "mtime": 1788929970,
+   "sha256": "dc320fc159aea6f5d7514f26da3fb250f386c11ebec4c89eb787a3e53129103a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/SRT/KillerOfMen_English.srt": {
+   "bytes": 15155,
+   "mtime": 1788929970,
+   "sha256": "82655ab31c62a5f5aa132371f8e631f98d7a4632f7505b788ddf846d1f405c63",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/KOM STILLS/1.1.10_1.1.10.png": {
+   "bytes": 5280930,
+   "mtime": 1766093108,
+   "sha256": "c614bd77c2e70396a33ae8d47b663d795c954e963e2bec7ad7e1eb743c41fb35",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/KOM STILLS/1.1.1_1.1.1.png": {
+   "bytes": 5280930,
+   "mtime": 1766093108,
+   "sha256": "e93b2d89308d276a9cd02516bbaa9ed2448bbfae9d969dd711a9926dfda3bd81",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/KOM STILLS/1.1.2_1.1.2.png": {
+   "bytes": 5280930,
+   "mtime": 1766093108,
+   "sha256": "3a074e9901b46646a888ca59e3601d1cde39cf008bba7f04a36969d948e40fcd",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/KOM STILLS/1.1.3_1.1.3.png": {
+   "bytes": 5280930,
+   "mtime": 1766093108,
+   "sha256": "fec67b6399de1fcf50ce4c35241efaa0fe1fa57b336e578e3ea7fa370f8c484c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/KOM STILLS/1.1.5_1.1.5.png": {
+   "bytes": 5280930,
+   "mtime": 1766093108,
+   "sha256": "371d168db7068ee8ca2dc9dfc0cbb53ddb4fc571eed81889c39c8b26f11a60d6",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/KOM STILLS/1.1.6_1.1.6.png": {
+   "bytes": 5280930,
+   "mtime": 1766093108,
+   "sha256": "279b1c8626f3b3e5fda70b93a7b71522ad6e5830582bc6a41ddd6fc74b066de9",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/KOM STILLS/1.1.7_1.1.7.png": {
+   "bytes": 5280930,
+   "mtime": 1766093108,
+   "sha256": "831778c1f4e0fe7ed8f4fea6291d37a447e9a1f17c0589f9f4d29f198869622f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/KOM STILLS/1.1.8_1.1.8.png": {
+   "bytes": 5280930,
+   "mtime": 1766093108,
+   "sha256": "b02435550be10c2cccc6deac1c021a426617d6919a221c4d5263fc894e47c9a5",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/KOM STILLS/1.1.9_1.1.9.png": {
+   "bytes": 5280930,
+   "mtime": 1766093108,
+   "sha256": "1a377dc697ec4d78e1fa88e9f899cab14e1133cf86367046082ab9c2b09ef67b",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/KOM STILLS/KillerOfMen_Moviestill_JordanBetine.png": {
+   "bytes": 5280930,
+   "mtime": 1766093108,
+   "sha256": "fedc4f0f463eb94f7c7ba77dd911865315cec5e664180aac256e46473480b8b4",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.1.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "44c8d4bcf305d4f68e013ea3e5990385069b1096dfa7ac0e5d65600ce02dc82c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.10.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "15db5a565fbb8182e9393a4e60f1140b14c2fa3a7f82e77b1f72fa18f2bdabd2",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.11.png": {
+   "bytes": 2771517,
+   "mtime": 1789152037,
+   "sha256": "4f3b0c8b1cb02edb1c621b1aace51152ecc9d5c310640a4c21440a612c2bf55c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.12.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "ae5e05fb0b4a3f4c03d3dcff0ed35227b2869560fb8f56480c8fbf8a8824aa60",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.13.png": {
+   "bytes": 3190475,
+   "mtime": 1789021021,
+   "sha256": "314dbf0bc9256dc0a3541790bfb4abde23cfb4e9c54806e2744aff3875be0ced",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.14.png": {
+   "bytes": 3144308,
+   "mtime": 1789020358,
+   "sha256": "7c88564ad555f2777bb951c26f775cfc2ab83ba8d5b6b40d015270cc33b3543e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.15.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "9a81be179a6a2543407a71a1005378b4f6b074fc924f266c76b9943d4cb629ce",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.16.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "09d32cdf5e85c02970af28cf1705dbf0668aaf9ed08e516313e54ae1d6158711",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.17.png": {
+   "bytes": 3032446,
+   "mtime": 1789020308,
+   "sha256": "7b36c6616ced67d2205f71601bdec8072158f522a68b8ef95f7cb7014632debd",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.18.png": {
+   "bytes": 2766948,
+   "mtime": 1789020405,
+   "sha256": "f1ce644e198565cc703468bac33e43d2c1632ea5f9389f09ec9e1845a5f7c979",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.19.png": {
+   "bytes": 2729409,
+   "mtime": 1789020464,
+   "sha256": "6c2e420f158daf4ea821828fb18723d0444533643c0052c52ced833b8e72f315",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.2.png": {
+   "bytes": 2682886,
+   "mtime": 1789020641,
+   "sha256": "4a69549879f9e91fa833eabbcdf3125b29247cb967467660a096b6de26c8a459",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.20.png": {
+   "bytes": 2719187,
+   "mtime": 1789020495,
+   "sha256": "d2359da0f2f48c2a42192af7a500cc72f23d585f555c5a16f87b6ebc93141d09",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.21.png": {
+   "bytes": 2723442,
+   "mtime": 1789021240,
+   "sha256": "502bae3bc077e31bf40f258a6ce3f5425b34b1ad2cf82b701b6b9ae9c848fbfe",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.22.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "a0ac5b9740c8f09803b45d54877afd51c5c69c91e688aa5df2de3c0813b1531f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.23.png": {
+   "bytes": 2644429,
+   "mtime": 1789020953,
+   "sha256": "25d26785282c8a17871581d5291dffa39f435433c8c642f56b8b5a5f1488632a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.24.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "a68059950cd465a48dea94600fcdce25760bc7df88025846cb15920ce3d535d6",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.25.png": {
+   "bytes": 2496660,
+   "mtime": 1789020534,
+   "sha256": "8823a3225ddc09ddeedfbd949de5e45cddafeb3160e8dc2fce87b5ace3905851",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.26.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "8d1f47382b493cffe4672c570b8d902b28af1bb00c77f68e82eda95a835a22ef",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.27.png": {
+   "bytes": 2549657,
+   "mtime": 1789021147,
+   "sha256": "b003fd1f1ae52dd0fb36062fc5e06aeaa5d03cbb4e7c2471dc205b0771f2ac1f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.28.png": {
+   "bytes": 2620068,
+   "mtime": 1789021065,
+   "sha256": "37be9cc05d56a5e17094d4f58318b7fab7210308d204f2ac8bf8b6477a201c71",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.29.png": {
+   "bytes": 2467434,
+   "mtime": 1789021108,
+   "sha256": "0ad198638a9877b3977765a7342c90d770482d924495c80ed2ff616f5bccbaca",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.3.png": {
+   "bytes": 2959517,
+   "mtime": 1789020678,
+   "sha256": "f764e19c9b6ade078da74f822887826947639ff431a3d3c2dbc854bfc3299517",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.30.png": {
+   "bytes": 2551166,
+   "mtime": 1789021172,
+   "sha256": "b40fc21d39dfc75116b3554d474359b8d23b6d85c5b8c9882b2c99883e9a622a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.31.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "512a602dd3592fd25f65bb1cd747c83067f93921d0f063d71f5a13c392eebc44",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.32.png": {
+   "bytes": 2690018,
+   "mtime": 1789020563,
+   "sha256": "fff9d5a522920c203bfdf50a0f19e6d7059b1e530599dc0cb164c91b002473b2",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.33.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "c5ef042d748569eaeaa0f8cb659479f638834737788ef73a6e0fff4cb2904d5e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.34.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "450b09bc6487ec02632ffc1f289b495d7ebc1df4d93fc64b6376cd3ab2215cfb",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.35.png": {
+   "bytes": 2707765,
+   "mtime": 1789020850,
+   "sha256": "c15d3cc4dfff9e392eb4123322efb1deb885aaa560066a66740001e5ef87272f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.36.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "8f2cf116bc4a4f4b6af7b12640b5b95fa552d8515919c87c54fd226b5e8a9416",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.37.png": {
+   "bytes": 2744594,
+   "mtime": 1789020917,
+   "sha256": "1b72bd05b3e67c0be95a5a586658b83fd942cf9ee1227f939a10fc9cf6867980",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.38.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "ab0ac86044b67290fe9b0f40c25cb38402a5f1b5bedf390a5c1e290de98f83e2",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.39.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "71604a4a7a6b28e70f90c084933276496ee05efd743d5a8c7d5b460d3e824b5e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.4.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "d2ff82ea8a2353ba2d1b3629d1d511236b0b880722ab4f42a4a1fa136b7e3088",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.40.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "0749de3427e195a154f764624610e0b4934fa15754b31464bcb0eea22e813fa1",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.41.png": {
+   "bytes": 3172102,
+   "mtime": 1789020807,
+   "sha256": "2bafcb5b1bde1353ede38079e112c51bb141db2150feb8e042a7c78e0d607abf",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.5.png": {
+   "bytes": 3044945,
+   "mtime": 1789020764,
+   "sha256": "d4bc63fb8ae97935f4e77eb1658de24b51a8debe04abb05c362eb33bfd4637ab",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.6.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "468f989981cf437592feb1bfc61feecccfb44046f7ddab5c9bbbb61586a28467",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.7.png": {
+   "bytes": 3135044,
+   "mtime": 1789020606,
+   "sha256": "8b18dfbf9239db5bca74907289bebec10fad14246f7f2dbd732ec71d3ba3673c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.8.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "02110f399bdbde324089ea7e35590af78a4a2df19c5b85fa152af46934662134",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/Still 2026-09-08 210640_1.1.9.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "5d0604cff529e9fcd08b314eb914b6ac19fd35d4d7444efc6e57c99980afbeea",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/STILLS - no black bars/_contact-sheet.jpg": {
+   "bytes": 714684,
+   "mtime": 1788929970,
+   "sha256": "f1b0c49e16fa2e740f728d94627623fbc35c961f5d38d58ce28d226c9984995f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.1.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "44c8d4bcf305d4f68e013ea3e5990385069b1096dfa7ac0e5d65600ce02dc82c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.10.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "15db5a565fbb8182e9393a4e60f1140b14c2fa3a7f82e77b1f72fa18f2bdabd2",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.11.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "48395c49aafd364b986e4472b0527c438b152e3af528115d9a33605aed033629",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.12.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "ae5e05fb0b4a3f4c03d3dcff0ed35227b2869560fb8f56480c8fbf8a8824aa60",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.13.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "97223c915e1205d66f873a1a79a7bc8f02df5068067dd8f53cb19e0097aa7784",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.14.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "a0de39c7f697577497abca220c60ae729e58f15d0431ca67b57e0306459be98a",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.15.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "9a81be179a6a2543407a71a1005378b4f6b074fc924f266c76b9943d4cb629ce",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.16.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "09d32cdf5e85c02970af28cf1705dbf0668aaf9ed08e516313e54ae1d6158711",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.17.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "c0c824af6a064699862e7df870fa520b7adbe34e3ba5e77610211a9c357db97c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.18.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "13349d7475bfa3d3e1639201516084ec69ec86edfdf8638d3a2d766344381874",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.19.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "ae53b593806ebdbd2fa9323987a07676256e42c50f2e3d5633291879dfab853b",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.2.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "36c58ec48d2596a3f09ae5acc53713e82ded142cb4400b90675fb74de905ecaa",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.20.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "efd77c2171e3d0a70928d44d5ccdac0b2093da9ebc3658e6c0ce896937dada8e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.21.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "c5e28cb71608e480cd8c7c3458a00687c8c6e3d8c9dcf67a9cf16b49583b4189",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.22.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "a0ac5b9740c8f09803b45d54877afd51c5c69c91e688aa5df2de3c0813b1531f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.23.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "44aa265eec1a3e0d0f332c1da79e80bcd72fb4e43f21ec5b59df3426031f71d0",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.24.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "a68059950cd465a48dea94600fcdce25760bc7df88025846cb15920ce3d535d6",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.25.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "8d1f47382b493cffe4672c570b8d902b28af1bb00c77f68e82eda95a835a22ef",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.26.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "8d1f47382b493cffe4672c570b8d902b28af1bb00c77f68e82eda95a835a22ef",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.27.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "602c2b237707cd2a10c54ad3089cf3c95a57a71e2adaf5e05179bb66a00e9495",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.28.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "7c8175f346a45201ce2294ca8969f5ac1beaa613c2ddc841d68316c0210fe006",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.29.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "a2edd5b5ed0586f213bb44ca42a2c548029ea1c4a12e49d59b2547e283b91366",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.3.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "89b575075f1f85f3bcb128a40de2f521affa1cff77b4a40360afd9b2a831e8a6",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.30.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "35f51349438a5b338b511f90ffa84939de28656d50cda795305bb6f1b53339c6",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.31.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "512a602dd3592fd25f65bb1cd747c83067f93921d0f063d71f5a13c392eebc44",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.32.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "f0df982eb4989fd1642540f10ab0862836a6e81792c3431818dca55f8e4d32fb",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.33.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "c5ef042d748569eaeaa0f8cb659479f638834737788ef73a6e0fff4cb2904d5e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.34.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "450b09bc6487ec02632ffc1f289b495d7ebc1df4d93fc64b6376cd3ab2215cfb",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.35.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "4328366688fa1ec57e40407d2f49c8c1ef87f4d16a2d7431e804652de69e1d8d",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.36.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "8f2cf116bc4a4f4b6af7b12640b5b95fa552d8515919c87c54fd226b5e8a9416",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.37.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "f459df47f789b6f63a0a9c94e87a838de4ed73b364baa5b8beb3363d74e5150c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.38.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "ab0ac86044b67290fe9b0f40c25cb38402a5f1b5bedf390a5c1e290de98f83e2",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.39.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "71604a4a7a6b28e70f90c084933276496ee05efd743d5a8c7d5b460d3e824b5e",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.4.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "d2ff82ea8a2353ba2d1b3629d1d511236b0b880722ab4f42a4a1fa136b7e3088",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.40.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "0749de3427e195a154f764624610e0b4934fa15754b31464bcb0eea22e813fa1",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.41.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "8f02a3a5d30331dfbf926f3e3d96c745a20831c0e2bfdbd7d269be8a67821996",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.5.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "3354154be1da15bab3823d714c52d6b9a06965f1f40afdebbde4dcdf01e4aa3b",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.6.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "468f989981cf437592feb1bfc61feecccfb44046f7ddab5c9bbbb61586a28467",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.7.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "2b27189a1ed2c24d2ec85c701389a89908b76c571ca0177eac923b1936e28fa8",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.8.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "02110f399bdbde324089ea7e35590af78a4a2df19c5b85fa152af46934662134",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/Still 2026-09-08 210640_1.1.9.png": {
+   "bytes": 6231977,
+   "mtime": 1788929976,
+   "sha256": "5d0604cff529e9fcd08b314eb914b6ac19fd35d4d7444efc6e57c99980afbeea",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/STILLS/_contact-sheet.jpg": {
+   "bytes": 714684,
+   "mtime": 1788929970,
+   "sha256": "f1b0c49e16fa2e740f728d94627623fbc35c961f5d38d58ce28d226c9984995f",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/canva-plan.md": {
+   "bytes": 14554,
+   "mtime": 1789069887,
+   "sha256": "a3bf9a3cfba27efa15c9dd3c99b22bec3d7943b7fc7f1046e28ab5b88cb3db41",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/cast-bios-bibliography.md": {
+   "bytes": 24900,
+   "mtime": 1789448400,
+   "sha256": "ce9dee75ea49c324e0d69a8d444cd584895bd502d8f6e5acff3f60c49e494969",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/cast-bios-evidence.md": {
+   "bytes": 21096,
+   "mtime": 1789447685,
+   "sha256": "e894894d41612714b75e2eb5c57144b530ad92fa10ff9f45c6d6bbf93ceff986",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/cast-bios-proposed-2026-09-15.md": {
+   "bytes": 9770,
+   "mtime": 1789449437,
+   "sha256": "6d2d173a16bc4fc206938b3485a09de302154443cd6e078c3d699f8dcac0d3c9",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/synopsis-evidence.md": {
+   "bytes": 10525,
+   "mtime": 1789481288,
+   "sha256": "60a13067693d29aef46642ba3a125898115baf0c39081275d9ec61bebd6c42ea",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_1014_20092026_compressed.pdf": {
+   "bytes": 10486425,
+   "mtime": 1789924499,
+   "sha256": "9e4f37e997c12f3dffb58cf79d981ebee0cab3d52c2f59305de91c8d5e14a971",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_1112_10092026_compressed.pdf": {
+   "bytes": 9803660,
+   "mtime": 1789056809,
+   "sha256": "97bede21df3a79f3a80015a3be526fea20a86c1f1c47ccc6b8db9a2ef2eb4008",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_1112_10092026_contact-sheet.png": {
+   "bytes": 2384661,
+   "mtime": 1789056809,
+   "sha256": "8fba3406a81da2e5ff380ab359de0fa95a13231eae32019200ab642db756c3c0",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_1234_10092026_compressed.pdf": {
+   "bytes": 9806465,
+   "mtime": 1789061862,
+   "sha256": "2f5e7003cc75a7890b2c83290887314a50611dfd8564570ae77612f4bc8452c3",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_1234_10092026_contact-sheet.png": {
+   "bytes": 2387328,
+   "mtime": 1789061862,
+   "sha256": "6b9e2d4a36452e771a73b8ca16ae4d882fbd410dec935690f3e3bb7d6392dfe2",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_1544_10092026_compressed.pdf": {
+   "bytes": 9809315,
+   "mtime": 1789073199,
+   "sha256": "2f52382ea5d50db60ad4c5e435d7ed3099b6fbb47fc7316c1ad964d251b09ccf",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_1622_23092026_compressed.pdf": {
+   "bytes": 4203678,
+   "mtime": 1790205806,
+   "sha256": "0deded583cf9d6af5096563333ea3875e83a5c30c13e40f523eb383fc3650a4c",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_1922_09092026_compressed.pdf": {
+   "bytes": 4619374,
+   "mtime": 1788999735,
+   "sha256": "874667afa7afd0d279acb22cc24a8f6163344787bd32018d9b7a56f3b8b692ca",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_1922_09092026_contact-sheet.png": {
+   "bytes": 1886529,
+   "mtime": 1789000051,
+   "sha256": "432b25c68c9eef7cf90df51da302a17c76fe868659179a66d014aecba28563fa",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_1954_09092026_compressed.pdf": {
+   "bytes": 75534364,
+   "mtime": 1789001723,
+   "sha256": "1eea97d9319289848031b9e4187d1a6a738d0cabd1661a424853df77ae7225b3",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_2029_09092026_compressed.pdf": {
+   "bytes": 11111264,
+   "mtime": 1789003865,
+   "sha256": "626eaea13a4394faf4daa2ed9bd3a8c816032575a529f6901b5f13f3999e547b",
+   "type": "file"
+  },
+  "05 MARKETING/00 PRESS/z_Old_EPKs/KillerOfMen_EPK_2029_09092026_contact-sheet.png": {
+   "bytes": 2148818,
+   "mtime": 1789003865,
+   "sha256": "17abbccd09808353ef23fa6456fd3eae92d2ac46d55757636a3e183f35d5161c",
+   "type": "file"
+  }
+ },
+ "store_id": "585e402c-d6f9-4974-88de-f4d87c4d0691"
+}

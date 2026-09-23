@@ -1,0 +1,224 @@
+#!/usr/bin/env python3
+"""pre-commit — the git laws that used to be prose, enforced at the index.
+KOM build 1 (2026-09-23), from petrol-brand-bible's bin/githooks/pre-commit
+(2026-09-22) with the Blender rule dropped and the ledger directory set.
+
+Install once per clone (the hook is tracked, the config is not):
+    git config core.hooksPath bin/githooks
+
+It REJECTS, printing `REJECT <path>: <rule>` per offence and exiting 1:
+
+  SIZE       any staged blob over 50 MB (big files live on the Drive shelf;
+             see shelf/README.md and shelf/sync_shelf.py). Files already in
+             history are not re-judged: only what this commit stages.
+  SECRET     .env-named files — `.env`, `.env.*` (only `.env.example`
+             allowed), `<anything>.env`, and CLAUDE-PRIVATE-CONTEXT
+  HANDOFF    a NEW handoffs/handoff-NNN-<lane>.md whose NNN already exists in
+             that ledger directory on origin/main (any lane), or twice in the
+             index. Amending a handoff that is already on origin/main is
+             fine. The hook never fetches: origin/main is as fresh as your
+             last pull. With no origin/main ref the check is skipped and
+             says so. (Numbers shared between lanes before September 8,
+             2026 are history; this rule guards new ones.)
+  HOMEPATH   a NEW line in a staged .py / .sh / .ts / .json file carrying a
+             `/Users/` literal outside a comment or docstring (home folders
+             differ between machines: write $HOME, os.path.expanduser or a
+             repo-relative path). HEURISTIC, documented, not a parser:
+             only added lines are read; a line is skipped when its stripped
+             form starts with `#`, `//`, `*` or `/*`; when the literal sits
+             after a trailing `#` (.py/.sh) or `//` (.ts); and, for .py
+             only, when the line is inside a triple-quoted string of the
+             STAGED file or itself contains a triple quote.
+
+Everything else passes, fast: on a normal commit the hook makes three or
+four git calls and finishes well under a second.
+"""
+import os
+import re
+import subprocess
+import sys
+
+LIMIT = 50 * 1024 * 1024
+HOME_LIT = "/Users/"
+SECRET_RE = re.compile(r"(^|/)\.env(\..*)?$|(^|/)[^/]+\.env$|CLAUDE-PRIVATE-CONTEXT")
+SECRET_OK = re.compile(r"(^|/)\.env\.example$")
+HANDOFF_RE = re.compile(r"^handoff-(\d{3,})-([A-Za-z0-9_-]+)\.md$")
+CODE_EXT = (".py", ".sh", ".ts", ".json")
+HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
+
+
+def git(*args, inp=None):
+    r = subprocess.run(["git", *args], input=inp, capture_output=True, text=True)
+    return r.returncode, r.stdout
+
+
+def staged():
+    """(status, path) for every added/modified/typechanged staged path."""
+    rc, out = git("diff", "--cached", "--name-status", "-z", "--no-renames")
+    if rc != 0:
+        sys.exit("pre-commit: git diff --cached failed; refusing to guess")
+    parts = out.split("\0")
+    rows = []
+    i = 0
+    while i + 1 < len(parts):
+        st, path = parts[i], parts[i + 1]
+        i += 2
+        if st and st[0] in "AMT" and path:
+            rows.append((st[0], path))
+    return rows
+
+
+def blob_sizes(paths):
+    inp = "".join(f":{p}\n" for p in paths)
+    rc, out = git("cat-file", "--batch-check=%(objectsize)", inp=inp)
+    sizes = {}
+    for p, line in zip(paths, out.splitlines()):
+        try:
+            sizes[p] = int(line.split()[-1])
+        except ValueError:
+            sizes[p] = None
+    return sizes
+
+
+def ledger_numbers(dirname, tree):
+    """{NNN: [names]} of handoff files in one ledger directory of a tree."""
+    rc, out = git("ls-tree", "--name-only", tree, "--", dirname + "/" if dirname else ".")
+    if rc != 0:
+        return None
+    nums = {}
+    for line in out.splitlines():
+        m = HANDOFF_RE.match(os.path.basename(line))
+        if m:
+            nums.setdefault(m.group(1), []).append(line)
+    return nums
+
+
+def index_numbers(dirname):
+    rc, out = git("ls-files", "-z", "--", dirname + "/" if dirname else ".")
+    nums = {}
+    for line in out.split("\0"):
+        if not line:
+            continue
+        if os.path.dirname(line) != dirname:
+            continue
+        m = HANDOFF_RE.match(os.path.basename(line))
+        if m:
+            nums.setdefault(m.group(1), []).append(line)
+    return nums
+
+
+def added_lines(path):
+    """[(new_lineno, text)] for lines this commit adds to path."""
+    rc, out = git("diff", "--cached", "-U0", "--no-renames", "--", path)
+    rows, ln = [], None
+    for line in out.splitlines():
+        m = HUNK_RE.match(line)
+        if m:
+            ln = int(m.group(1))
+            continue
+        if ln is None or line.startswith("+++"):
+            continue
+        if line.startswith("+"):
+            rows.append((ln, line[1:]))
+            ln += 1
+    return rows
+
+
+def triple_lines(path):
+    """Line numbers of the STAGED file that sit inside, open or close a
+    triple-quoted string (py only). A toggle scan, not a parser."""
+    rc, out = git("show", f":{path}")
+    inside, active, marks = False, None, set()
+    for n, line in enumerate(out.splitlines(), 1):
+        hit = False
+        for q in ('"""', "'''"):
+            c = line.count(q)
+            if c == 0:
+                continue
+            hit = True
+            if not inside:
+                inside, active = (c % 2 == 1), q
+            elif q == active and c % 2 == 1:
+                inside = False
+        if hit or inside:
+            marks.add(n)
+    return marks
+
+
+def home_literal_hits(path):
+    ext = os.path.splitext(path)[1]
+    hits = []
+    tri = triple_lines(path) if ext == ".py" else set()
+    for n, text in added_lines(path):
+        if HOME_LIT not in text:
+            continue
+        s = text.strip()
+        if s.startswith(("#", "//", "*", "/*")):
+            continue
+        if n in tri:
+            continue
+        pos = text.find(HOME_LIT)
+        if ext in (".py", ".sh") and 0 <= text.find("#") < pos:
+            continue
+        if ext == ".ts" and 0 <= text.find("//") < pos:
+            continue
+        hits.append(n)
+    return hits
+
+
+def main():
+    rows = staged()
+    rejects = []
+    if not rows:
+        print("pre-commit: 0 staged paths to check")
+        return 0
+
+    paths = [p for _, p in rows]
+    sizes = blob_sizes(paths)
+    for st, p in rows:
+        size = sizes.get(p)
+        if size is not None and size > LIMIT:
+            rejects.append((p, f"SIZE {size / (1 << 20):.1f} MB > 50 MB — big files go to the Drive shelf (shelf/sync_shelf.py push)"))
+        if SECRET_RE.search(p) and not SECRET_OK.search(p):
+            rejects.append((p, "SECRET .env-named or private-context file"))
+
+    handoffs = [(st, p) for st, p in rows if HANDOFF_RE.match(os.path.basename(p))]
+    if handoffs:
+        have_origin = git("rev-parse", "--verify", "--quiet", "origin/main")[0] == 0
+        if not have_origin:
+            print("pre-commit: WARN no origin/main ref — handoff-number check against origin skipped")
+        by_dir = {}
+        for st, p in handoffs:
+            by_dir.setdefault(os.path.dirname(p), []).append((st, p))
+        for d, items in by_dir.items():
+            origin = ledger_numbers(d, "origin/main") if have_origin else {}
+            index = index_numbers(d)
+            staged_nums = {}
+            for st, p in items:
+                staged_nums.setdefault(HANDOFF_RE.match(os.path.basename(p)).group(1), []).append(p)
+            for st, p in items:
+                nnn = HANDOFF_RE.match(os.path.basename(p)).group(1)
+                if origin and nnn in origin and p not in origin[nnn]:
+                    rejects.append((p, f"HANDOFF number {nnn} already on origin/main in this ledger: {', '.join(origin[nnn])} — take max+1"))
+                others = [q for q in index.get(nnn, []) if q != p]
+                if others:
+                    rejects.append((p, f"HANDOFF number {nnn} already in the index: {', '.join(others)} — take max+1"))
+                if len(staged_nums[nnn]) > 1:
+                    rejects.append((p, f"HANDOFF number {nnn} staged twice: {', '.join(staged_nums[nnn])}"))
+
+    for st, p in rows:
+        if p.endswith(CODE_EXT):
+            for n in home_literal_hits(p):
+                rejects.append((p, f"HOMEPATH new line {n} carries a '{HOME_LIT}' literal outside a comment/docstring — use $HOME / os.path.expanduser / a repo-relative path"))
+
+    if rejects:
+        for p, rule in rejects:
+            print(f"REJECT {p}: {rule}")
+        print(f"pre-commit: {len(rejects)} rejection(s) across {len(rows)} staged path(s); nothing committed")
+        return 1
+    print(f"pre-commit: {len(rows)} staged path(s) OK")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

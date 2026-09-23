@@ -17,3 +17,7 @@ press/credit-redesign/
 # local Python environments (see tools/requirements.txt)
 venv/
 .venv/
+
+# the shelf tool: the local mirror, its quarantine and locks are never committed (shelf/README.md)
+shelf/local/
+.kom/

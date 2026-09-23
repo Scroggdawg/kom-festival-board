@@ -73,7 +73,20 @@ including the verdicts that sent work back.
 
 The project log, oldest to newest. Each entry records what changed, what was
 verified, what stayed uncertain, and the single next action. Read the highest
-number first.
+number first. `handoffs/LEDGER.md` is the numbering rule and the record of how
+the Drive's second ledger was folded into this one (September 23, 2026).
+
+## Working here: `RUNBOOK.md`, `AGENTS.md`, `shelf/`
+
+Since September 23, 2026 the repo carries its operating setup: `RUNBOOK.md`
+(what lives where, how to arrive on any Mac, either Claude login, a cloud
+session or Codex; the rules every turn follows; the open decisions),
+`AGENTS.md` (the same rules for Codex), the Claude hooks in `.claude/settings.json`
+and `bin/hooks/` (a session-start recap, an end-of-turn reminder to write the
+handoff, add by path, commit and publish), the commit guard `bin/githooks/`,
+`bin/kom-status.py` and `bin/kom-check.sh`. The big files live on the Google
+Drive shelf `My Drive/KILLER OF MEN`, indexed by `shelf/registry.json`;
+`shelf/README.md` explains the tool.
 
 ---
 
