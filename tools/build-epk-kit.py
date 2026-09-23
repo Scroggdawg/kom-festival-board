@@ -442,8 +442,13 @@ def programmer_rows(d):
     kv("Language", field(d, "3.6").strip() + (f"  (.srt available: {srt_langs})" if srt_langs else ""))
     kv("Duration", field(d, "3.8")); kv("Aspect ratio", field(d, "3.9"))
     kv("Frame rate", field(d, "3.10")); kv("Shooting format", field(d, "3.11"))
-    if field(d, "3.12").strip():
-        kv("Exhibition format", field(d, "3.12").strip())
+    # 3.12 prints its first line only, and not while that line is a PARTIAL note: the field
+    # carries what is known and what is still owed (23 Sep), and the programmer page shows a
+    # format only once it is confirmed. When You Wu answers, the first line becomes the row.
+    ex = field(d, "3.12").strip().splitlines()
+    ex = ex[0].strip() if ex else ""
+    if ex and not ex.upper().startswith("PARTIAL"):
+        kv("Exhibition format", ex)
     if field(d, "3.13").strip():
         kv("Sound", field(d, "3.13").strip().replace("Stereo 5.1", "5.1, stereo"))
     rows.append(("head", "THE TEAM"))

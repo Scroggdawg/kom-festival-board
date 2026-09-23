@@ -1,0 +1,468 @@
+KILLER OF MEN — EPK INFO
+All the text of the press kit, in one place.
+
+Generated from press/epk.json rev 40 on 2026-09-23.
+epk.json is the source of truth. Edit there (or on the worksheet page), then regenerate
+this doc with tools/build-epk-info.py — do not treat this document as the master.
+Worksheet: https://scroggdawg.github.io/kom-festival-board/epk.html
+
+45 of 48 fields filled. Everything marked NEEDED is still missing.
+
+
+
+PAGE 1 — POSTER
+
+1.1  Key art (poster / one-sheet file)
+    In the repo: press/assets/POSTER/KillerOfMen_Poster_2160x2700.jpg (2160×2700 JPG, 5.7 MB). Jordan's file, originally 'edit kom fin (1).JPG', downloaded from Drive Sep 8. https://github.com/Scroggdawg/kom-festival-board/blob/main/press/assets/POSTER/KillerOfMen_Poster_2160x2700.jpg
+
+1.2  Billing block
+    AFI CONSERVATORY PRESENTS
+    KILLER OF MEN
+    STARRING ERIK ORJIAKO
+    CASTING BY PAUL SINACORE · ORIGINAL MUSIC BY KEVIN LEYSATH II · EDITED BY YOU WU · PRODUCTION DESIGN BY RAJARAJESHWARI "RJ" RAGAMPUDI
+    CINEMATOGRAPHY BY LUKE SCROGGINS · PRODUCED BY RUOXIAO LI · SCREENPLAY BY JORDAN BETINE & KIERRA BRATTON-LEWIS
+    DIRECTED BY JORDAN BETINE
+    (transcribed from the poster, Sep 8)
+
+1.3  Website URL
+    https://www.killerofmen.com/
+
+
+PAGE 2 — LOGLINE AND SYNOPSIS
+
+2.1  Logline
+    Killer of Men follows Mace, an enslaved man forced into mandingo fights. After killing an opponent, he stumbles upon the burial of the man he killed, igniting a reckoning with guilt, faith, and the violence shaping his life and identity.
+
+2.2  Synopsis
+    Set in the American South in the 1830s, KILLER OF MEN is a Southern Gothic that follows Mace, an enslaved man forced into underground prizefighting for the profit of his enslaver.
+    
+    After killing another fighter in the ring, Mace is granted a moment of rest, but accidentally stumbles upon the burial of the man he killed. The chance encounter pulls Mace into a quiet reckoning with guilt, faith, and the violence that sustains his life, revealing the distance between the slave he has been made and the king he was meant to be.
+
+
+PAGE 3 — SPECS, TEAM, CAST, RIGHTS, LINKS
+
+3.1  Genre
+    Southern gothic, action
+
+3.2  Country
+    United States
+
+3.3  Shooting location
+    California
+
+3.4  Production year
+    2025
+
+3.5  Completion year
+    2026
+
+3.6  Language
+    English
+
+3.7  Subtitle files (SRT languages)
+    English only. SDH-style captions: 214 cues, 91 dialogue, the rest sound descriptions and lyrics; timecode starts at 01:00:00 (hour-one offset). SRT and SCC in press/assets/SRT/ (KillerOfMen_English.srt, KillerOfMen_English.scc), from the Dec 2025 caption pass on Drive. https://github.com/Scroggdawg/kom-festival-board/blob/main/press/assets/SRT
+
+3.8  Duration
+    13 minutes
+
+3.9  Aspect ratio
+    2.39:1
+
+3.10  Frame rate
+    24 fps
+
+3.11  Shooting format (camera and codec)
+    Alexa 35 ARRIRAW
+
+3.12  Exhibition formats (DCP, ProRes)
+    PARTIAL, from files on hand, not yet from You Wu:
+      1080p H.264 screener, stereo, 1.78:1 container with the 2.39:1 picture letterboxed, dated 8 Dec 2025. Read off the file name 2513_KOM_1080p_177_H264_ST_LR_VIMEO_12082025.mov (1.09 GB), Drive 05 MARKETING/00 PRESS/FOR ACTORS CREW/. This is the Vimeo upload master; it is the only exhibition file the press folder holds.
+      A DCP exists (noted 8 Sep). Its date and which cut it carries are unconfirmed, and it is to be regenerated once the completion date in 3.5 is settled.
+    STILL FROM YOU WU: 2K or 4K DCP, ProRes 422 HQ masters (5.1 and stereo), H.265, whether the DCP is the current cut. The delivery list to fill is in press/epk-spec.md. The draft message asking for it is in press/messages-to-send.md.
+
+3.13  Sound configuration
+    Stereo 5.1
+
+3.14  Heads of department (role and name)
+    Director | Jordan Betine
+    Producer | Ruoxiao Li
+    Cinematographer | Luke Scroggins
+    Production designer | Rajarajeshwari "RJ" Ragampudi
+    Editor | You Wu
+    (from the poster billing block)
+
+3.15  Cast, principals (character and actor)
+    Mace | Erik Orjiako
+    Master Kenner | Eric Pargac
+    Kojo | Jamal Dennis
+    Kojo's Master | Casey Long
+    Fred | Chaundre Hall-Broomfield
+    Elder | Sandra McDaniels
+    Girl | Loren Fenton
+    Spectator | Daniel Kassar
+    Spectator | Nikita Korshunov
+    Stunt coordinator | Zedric Harris
+    
+    Billed cast in crawl order, from the End Titles tab. The crawl does not separate principals from supporting, so this is the whole billed list; page 7 takes the top of it.
+    RESOLVED: Kenner's actor is Eric Pargac. The slot had been empty since Sep 8.
+    TWO NAMES CORRECTED PER THE SHEET'S OWN NOTES: 'DANILE KASSAR' carries the note 'Daniel'; 'NIKITA MAKSIMCHIK' carries the note 'Nikita Korshunov per contract'. Both appear again in the extras list marked 'delete', which is consistent with them being billed here instead.
+    LIKELY the fallen opponent, the man whose burial Mace interrupts, is KOJO — the captions carry '[Kojo's Master]' and both roles are billed. That is an inference from the script and captions, not something the crawl states. Confirm before it is written as fact anywhere.
+
+3.16  Rights holder
+    AFI Conservatory
+
+3.17  AFI contact (name and email)
+    Susan Dretzka · sdretzka@afi.com
+
+3.18  Instagram
+    https://www.instagram.com/killerofmenmovie/
+
+3.19  IMDb
+    https://www.imdb.com/title/tt37523933/
+
+3.20  Production email (press contact)
+    killerofmenmovie@gmail.com
+
+
+PAGE 4 — DIRECTOR'S STATEMENT
+
+4.1  Statement
+    Growing up, I was always one of the youngest in my year, but my height made me one of the tallest in the class. I was often one of the biggest in the room. As I got older, I started noticing how my mere presence was often seen as either a point of praise or persecution. My physicality, tied so closely to my skin, made me seem more menacing, more dangerous than the other boys—even those bigger and stronger than I was. It’s never anything overt, but small, incessant microaggressions. Death by a 1000 needles. It’s a plight that’s shaped me throughout my life, leaving me hyper-aware of myself in spaces. This experience, this reality, is tied to the plight of the Black man in America.
+    
+    The concept of Mandingo fighting has always fascinated me. It’s a strange, bastardized idea in media and literature. To me, it represents many things: the commercialization of sports and entertainment, the myth of Black-on-Black crime, the portrayal of savagery in history, and the media. It’s always been used to showcase the “Black brute,” but it has never been shown subjectively from the perspective of those involved. What are their lives like? What do they hold dear? What keeps a man going when he’s put in a situation like that?
+    Setting this film in slavery times, rather than in the present day or during the 1960s, allows me to examine the deep-rooted history of this aggression. Visually, I want the fight scenes to reflect the physical sports Black men often participate in—body slams, boxing, football tackles—to show history repeating itself through various forms of expression.
+    By setting the story in the 1800s, I also had the chance to explore my heritage. With slavery still in full force and new enslaved people being brought in from Africa, I can examine the past in different ways.
+    I want to delve into the spirituality of the enslaved at the time, capturing the mix of cultures, beliefs, and religions that slowly formed what we now know as Black culture.
+    
+    Killer of Men is an expression of pain—absolute brutality and suffering. But it’s also a story of resilience, culture, and spirituality. This story has kept me awake at night, terrified of what I’m putting on the screen.
+    Killer of Men has been a grueling process—one that’s forced me to question a lot of myself as a man and as a storyteller. This is my Oriki, my folktale, my poem. I won’t shy away from telling difficult stories or giving a voice to the voiceless. I will honor my ancestors and my culture in everything I do.
+
+
+PAGE 5 — FILMMAKER BIOS (PAGES 5–6)
+
+5.1  Director bio — Jordan Betine
+    Jordan Betine is a Nigerian-American filmmaker raised between Lagos, Nigeria, and Ashburn, Virginia. He earned his undergraduate degree in film from Howard University. Jordan studied Directing at the American Film Institute, where he directed six short films across genres, including historical drama, social realism, and surrealist comedy. His thesis film, "Killer of Men," is a historical drama set in 1830s South Carolina about an enslaved man who is forced into underground prizefighting. His work explores power, identity, and the African diaspora.
+
+5.2  Producer bio
+    Ruoxiao Li is a storyteller from China. A graduate of the School of the Art Institute of Chicago, she is currently pursuing a degree in Producing at the American Film Institute. She is mentored by Lianne Halfon, whose notable works include Juno and Ghost World.
+
+5.3  Cinematographer bio — Luke Scroggins
+    Luke Scroggins studied theater under David Connelly at the North East School of the Arts in his home town of San Antonio and continued at Otterbein University School of Theatre, earning a BFA in Acting. Television credits include SWITCHED AT BIRTH, GENERAL HOSPITAL and DAYS OF OUR LIVES. After a period coordinating and editing for fashion clients, Scroggins joined the Dark Side and began working in camera. Recently he has moved into the narrative space as Utility on the independent feature FRESH KILLS and the limited series RZR. He made his cinematographer debut on the short films COSMIC BEACH and L'DIRECTOR
+
+5.4  Production designer bio
+    Rajarajeshwari "RJ" Ragampudi, is a recent graduate with a bachelor's degree in Architecture from India. She is recognized in her university for her undergraduate thesis, an in-depth research-based design project through the study of the films of the Indian film director, Satyajit Ray. Her experience as an Architect has helped her gain practical knowledge in spatial design, construction and project management. Along with this, she is also skilled in creative visualization with a stark interest in Film, enabling her to pursue an MFA degree in Production Design. She strives to design sets that are not only authentic to the setting but deeply character-driven, enhancing and punctuating key moments in the story.
+
+5.5  Editor bio
+    You Wu is a working editor with four years of professional experience. He has worked on a range of short films across different genres, contributing as both an editor and in key roles such as DIT and sound designer. Several of the films he edited have been selected for major film festivals, including LA Shorts and the Avignon International Film Festival.
+
+5.6  Headshots
+    FIVE headshots in, full resolution, unmodified. THESE ARE THE MASTERS. Shot 14 September 2024 (Hasselblad X1D II 50C), source Headshots/Edits.
+      KOM Headshots v3-1.jpg   6200 × 7134   You Wu, editor
+      KOM Headshots v3-2.jpg   6200 × 7033   Ruoxiao Li, producer
+      KOM Headshots v3-3.jpg   6200 × 6713   RJ Ragampudi, production designer
+      KOM Headshots v3-4.jpg   6200 × 6372   Luke Scroggins, cinematographer
+      KOM Headshots-1.jpg      6200 × 6667   Jordan Betine, writer-director
+    On the Drive at 05 MARKETING/00 PRESS/HEADSHOTS, each with a named copy there (Editor_You_Wu.jpg, Producer_Ruoxiao_Li .jpg, Production_Designer_Rajarajeshwari_aka_RJ_Ragampudi.jpg, Cinematographer_Luke_Scroggins.jpg, Director_Jordan_Betine.jpg), and in the repo at press/assets/HEADSHOTS — checked byte for byte. Nothing resized or re-encoded. They carry the film's own lighting: hard side key, deep falloff, sepia-black.
+    The Sep 9 note that four was the complete set is superseded: the director's file was on the Drive the whole time under the session's own name, KOM Headshots-1.jpg, dated 14 Sep 2024 like the other four. It is the portrait Luke sent on 2026-09-11 ("use the attached photo"); md5 62cb6ea73071ea5e2fc40020c4306e7c on the Drive and in the repo.
+    https://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/HEADSHOTS
+
+5.7  Instagram and IMDb, per filmmaker
+    Director | Jordan Betine | @jordanbetine | https://www.imdb.com/name/nm17461892/
+    Producer | Ruoxiao Li | @smile_xiao624 | https://www.imdb.com/name/nm15376948/
+    Cinematographer | Luke Scroggins | @Luscroggs | https://www.imdb.com/name/nm3596666/
+    Production designer | Rajarajeshwari "RJ" Ragampudi | @itsrjactually | https://www.imdb.com/name/nm15956329/
+    Editor | You Wu | @ywu.0125 | https://www.imdb.com/name/nm17461889/
+    (From Luke, Sep 10. Instagram handles exactly as typed. IMDb links stored without the ?ref_= tracking suffix his copies carried; the name ids are unchanged.)
+
+
+PAGE 7 — CAST
+
+7.1  Cast bios
+    Mace | Erik Orjiako
+    Erik Orjiako is a Los Angeles based actor, writer, and comedian whose work blends sharp humor, and dramatic performances with character driven storytelling. A SAG-AFTRA performer and a graduate of The Second City Hollywood, Erik has built a career across film, television, improv, sketch comedy, and independent projects. He is currently touring in Los Angeles in the role of Malcolm X, in an East West Players production of "When Yuri Met Malcolm."
+    Prior credits: Minx, Al Davis: Just Win Baby, The Imperfection
+    
+    Master Kenner | Eric Pargac
+    Eric Pargac is an actor, editor, producer and director who grew up in Texas. He was a founding artistic director of the critically acclaimed Furious Theatre Company in Los Angeles—named one of the Best Theatre Companies of the decade by LA Weekly. At Furious, he starred in 10 productions and received the Pasadena Arts Council's Gold Crown Award and the Debut Award from Back Stage West. He has also performed in New York (The Koan of Seymour and Daughters of Troy), Portland (Magellanica at Artists Rep) and Seattle (Paradise Lost at Intiman Theatre).
+    Eric starred as Theo in all three seasons of the award-winning web series The Digressions (which he co-produced and co-directed) and starred in the web series Lost Angeles. He began his career as an improviser and performed on the house team at ImprovOlympic in Los Angeles.
+    As a filmmaker, Eric was named an Official Artist of the New York Television Festival in 2014 and 2015, qualifying as a finalist in the A&E Unscripted Development Pipeline in 2014 and as a semifinalist for History Channel's Unscripted Development Pipeline in 2015.
+    Prior credits: Succession, The Digressions
+    
+    Kojo | Jamal Dennis
+    Jamal Dennis is a professional actor based in Los Angeles, California.
+    This working actor recently studied at RADA, and he has been studying with Craig Archibald and Lesly Kahn. Meanwhile, he also loves to stay busy and immerse himself in the theatre scene and beyond. He has also done some screen work, including the lead role on the show "Be Someone".
+    In addition to being able to portray a broad range of characters, Jamal brings a lot of action and physicality to his roles, as he is a black belt in martial arts and weapons training. His styles include Kyokushin, Wu-Shu, Ninjitsu, and Shotokan, and he continues to deepen his familiarity with combat and stunts.
+    Prior credits: Mississippi Grind, S.W.A.T., The Young and the Restless, Sinners (stunts)
+    
+    Elder | Sandra McDaniels
+    Sandra McDaniels is a Los Angeles-based actress and a member of SAG-AFTRA. Her screen credits include the Apple TV+ series Truth Be Told, the short films Providence and 172 Push-Ups, and the film Gingersnap Christmas, in which she plays Gramma Belle. In Killer of Men she plays the Elder.
+    Prior credits: Truth Be Told, Gingersnap Christmas, Providence
+    
+    ERIK ORJIAKO'S BIO IS AS LUKE SUPPLIED IT ON SEP 21, WITH THREE SLIPS CORRECTED and nothing else touched: "performaces" to "performances", "Malcom X" to "Malcolm X", and the semicolon before the play's title removed ("production of; " to "production of "). The comma after "humor" and the unhyphenated "Los Angeles based" and "character driven" are as he typed them. East West Players' own page for When Yuri Met Malcolm (eastwestplayers.org/wymm, read Sep 21) lists Erik Orjiako among three actors alternating as Malcolm X in its Theatre for Youth Tour 2026-2027. "Currently touring" will date; revisit when the tour ends. It replaces the Sep 10 draft, which stays in this field's history.
+    ERIC PARGAC'S AND JAMAL DENNIS'S BIOS ARE AS LUKE SUPPLIED THEM ON SEP 20, word for word. He did not say who wrote them; the wording matches each actor's self-written IMDb mini biography where the Sep 10 captures quote it (press/cast-bios-evidence.md).
+    SANDRA McDANIELS'S IS STILL THE SEP 10 DRAFT, NOT YET APPROVED, and she has no bio of her own anywhere online; hers is built from her credits only. Ask her, or NTA Talent Agency, for her own. A more conservative version is proposed in press/cast-bios-proposed-2026-09-15.md and is not applied. Hers is now the only bio that ends with the "In Killer of Men she plays" sentence. Order follows the crawl, as in 3.15.
+    TO CONFIRM: IMDb credits Jamal's role as "Fighter2 Kojo"; the end credits say Kojo.
+    Sources, credit tables and the fact-check of the Sep 10 drafts: https://github.com/Scroggdawg/kom-festival-board/blob/main/press/cast-bios.md
+
+7.2  Stills in character
+    Picked 23 Sep 2026 from the 41 frame grabs in press/assets/STILLS/ (A.1), one primary and one alternate per principal. Numbers are the gallery numbers, files are Still 2026-09-08 210640_1.1.N.png.
+      Mace | Erik Orjiako — 1.1.16 (Mace at the cabin, daylight, face to camera). Alternate 1.1.40 (Mace in kente, looking up; the frame page 7 of the kit already uses).
+      Master Kenner | Eric Pargac — 1.1.5 (Kenner and Mace in the barn, the one frame with Kenner's face clear; also the kit's page 2 hero). Alternate 1.1.4 (Kenner seated at the barn door, Mace bowed).
+      Kojo | Jamal Dennis — 1.1.3 (the barn fight, the two men locked). Alternate 1.1.38 (the body in kente, laid out). Both rest on the inference in 3.15 that the fallen opponent is Kojo; confirm with Jordan before a caption names him.
+      Elder | Sandra McDaniels — 1.1.18 (the Elder by firelight, profile). Alternate 1.1.41 (the Elder at the graves, daylight).
+    NOT IDENTIFIED FROM THE FRAMES: Fred (Chaundre Hall-Broomfield), Kojo's Master (Casey Long), Girl (Loren Fenton). Frames 1.1.31 to 1.1.37 (the man with the lantern, the sleeper, the man in white with the lantern, the man with the beads) hold faces that are not matched to a name here. Luke or Jordan to say who is in them before any of those frames is captioned.
+    Superseded: the Sep note that these would be pulled from the BTS set. The frame grabs are the film's own frames and read as stills; the BTS set stays for page 8.
+
+
+PAGE 8 — BEHIND THE SCENES
+
+8.1  BTS photos
+    102 behind-the-scenes photographs in the repo, press/assets/BTS/, camera originals, unmodified, 714 MB. Same files as the shared Drive folder (16JPwgGC791ET9oFbNgmDzLbWXXUmpcgw) — checked file by file.
+    By shoot day, from the files' own capture dates:
+      58  KOM_Day3_TheFarm-*     8 Jul 2025 — the farm and the barn: crew and camera, the fight staging, cast portraits, the unit photo
+      21  KOM_Day4_Soundstage-*  4 Jul 2025 — the soundstage: the burial table, lantern and smoke, cast and crew portraits
+       6  KOM_Stage-*           23 May 2025
+       5  KOM_Anamorphic*       21 May 2025 — anamorphic frames, several black and white
+       8  DSCF* / _DSF*      21–22 May 2025
+       4  IMG_*                 27 Jun 2025
+    Four cameras: Sony A7 IV (the bulk), Fujifilm X100VI, Fujifilm GFX50S II, Canon EOS R5 C. No GPS in any file. Largest is IMG_4616.jpg at 53 MB.
+    The May frames predate the July shoot days and look like camera and lens tests rather than principal photography — worth confirming before any are captioned as set photography.
+    PHOTOGRAPHER ANSWERED: the end credits bill JEDIDIAH WOODS as Still Photographer. Use that as the page 8 credit line. Caveat: the 102 selects come off four cameras including a phone-era Canon and two Fujifilms, so some frames may be other people's; Jedidiah Woods is the credited stills photographer, which is what a press kit needs.
+    Contact sheet: contact-sheet.jpg (a derivative, for choosing).
+    https://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/BTS
+    PICKED FOR PAGE 8 (the ten the kit draws, recorded 23 Sep 2026; three rows of three and the unit photo full width): KOM_Day3_TheFarm-84 (the barn from the field, crew in the grass) · KOM_Day3_TheFarm-59 (the operator at the eyepiece) · KOM_Day3_TheFarm-152 (the fight under the chandelier, camera in) · KOM_Day3_TheFarm-194 (the barn from above, the ring lit) · KOM_Day3_TheFarm-185 (the slate at the fight) · KOM_Day3_TheFarm-220 (Mace under the chandelier, camera left) · KOM_Day4_Soundstage-76 (the burial table in smoke, wide) · KOM_Day4_Soundstage-81 (the lantern and the table) · KOM_Day4_Soundstage-93 (Jordan and crew at the table) · KOM_Day3_TheFarm-237 (the unit photo). Credit line on the page: photographs, Jedidiah Woods. The same ten are copied into the send-ready folder on the Drive, 05 MARKETING/00 PRESS/EPK-2026-09-23/04 BTS/, names unchanged.
+
+
+PAGE 9 — KEY CREDITS AND FULL CAST
+
+9.1  Key credits
+    Writer-director | Jordan Betine
+    Screenplay | Jordan Betine & Kierra Bratton-Lewis
+    Producer | Ruoxiao Li
+    Cinematographer | Luke Scroggins
+    Production designer | Rajarajeshwari "RJ" Ragampudi
+    Editor | You Wu
+    Original music | Kevin Leysath II
+    Casting | Paul Sinacore
+    Executive producers | Yingli Xin · Zeju Zhang · Olaoluwa Oluwaseun Ogunseye · Kay Ann Scroggins
+    Unit production manager | Shirley Sui
+    First assistant director | Eddy Gudakov
+    Second assistant director | Kevin Prescott
+    Colorist | Walter Volpatto
+    Stunt coordinator | Zedric Harris
+    Still photographer | Jedidiah Woods
+    Sound designer | STILL UNKNOWN
+    
+    Executive producers and the rest come from the End Titles tab; the top block matches the poster.
+    SOUND IS NOT ANSWERED. The whole post-sound block on the sheet reads TBD: sound effects editor, sound
+    editor, recordist, foley artist, foley mixer, ADR mixer. Production sound on set was Jacob Eliett, mixer,
+    with Day Wren on boom, but no sound designer or re-recording mixer is named anywhere in the document.
+    The colour house is a placeholder too, listed as 'Picture Shop 1' through 'Picture Shop 7'.
+
+9.2  Full cast
+    Mace | Erik Orjiako
+    Master Kenner | Eric Pargac
+    Kojo | Jamal Dennis
+    Kojo's Master | Casey Long
+    Fred | Chaundre Hall-Broomfield
+    Elder | Sandra McDaniels
+    Girl | Loren Fenton
+    Spectator | Daniel Kassar
+    Spectator | Nikita Korshunov
+    
+    Extras | D'Shae J Beasley · Mel Hampton · Ayodeji Fatigun · Charles Kiema · Tyler Fisher · Nikkia Danielle Matthews · Olaoluwa Oluwaseun Ogunseye · Patience Dooshima Ohabuike · Youlanda Davis · Danny Potter · Ricardo Vargas · Rob Mark Saduski · Gage Phillips · Erik Scilley · Anthony Aroyan
+    
+    Fifteen extras. The sheet's list has seventeen; Nikita Korshunov and Daniel Kassar are both marked 'delete' there because they are billed above as Spectators.
+
+
+PAGE 10 — FULL CREW
+
+10.1  Full crew
+    CAMERA
+    Camera operator | Dominika Podczaska
+    Steadicam | Dae Hyun Kim
+    First assistant camera | Julia Maixer
+    Second assistant camera | Tristian Ibarra Martin
+    DIT | Kate Keying Wu
+    Still photographer | Jedidiah Woods
+    Second unit camera | Reb Richard · Eliot Grigo
+    
+    PRODUCTION
+    Line producer | Colt Kozal
+    Script supervisors | Libby McNeil · Zhiyan Liu
+    Production coordinator | Jack Ruefli
+    2nd second assistant director | Japhet E. Velazquez
+    
+    ELECTRIC
+    Gaffer | Adam Birch
+    Best person electric | Chansoul Tao
+    Electric | Jules Howard · Thomas Lian · Eric He
+    
+    GRIP
+    Key grip | Weiland Kurt
+    Best person grip | Eugene Vise
+    Dolly grip | Alexander Hageman
+    Company grip | Jasper Khadjenouri · Hasan Iqba · Matthew Roveto
+    
+    SOUND
+    Production sound mixer | Jacob Eliett
+    Boom operator | Day Wren
+    
+    ART
+    Art directors | Trey Wright · Fernando Acuna
+    Assistant art directors | James Robert · Cyan Mireille
+    Set dressers | Nicole Kuang · Shirley Wu · Jahnvi Gupta · Naomi Stevens · Chanel Kalinski · Coral Lomeli · Adrian Gonzalez
+    Art PAs | Roman Raynes · Cherice Carr · Chen Jing · Jue "Jade" Lin · Andrew Lee
+    Scenic painter | Mayra C. Saucedo
+    
+    COSTUME, HAIR AND MAKEUP
+    Costume designer | X. Hill
+    Assistant costume designers | Odessa Newman · Jolisa Osborn-Polakoff
+    Department head makeup and SFX makeup | Shawnee Cerkowniak
+    Key makeup artist | Neve Andrews
+    
+    POST
+    Assistant editor | Hazel Yuntong Dai
+    Colorist | Walter Volpatto
+    
+    SAFETY AND SPECIAL EFFECTS
+    Pyrotechnic designer | John Eggett
+    Fire safety advisors | William Moorhead · Kerry Yim · Tim Ruddell
+    Snake wrangler | Aaron Wells
+    On-set medic | Greg Levine
+    
+    SUPPORT
+    Drivers | Zhanyin Xiao · Claudio Del Pino Mercado · Colt Kozal
+    Office production assistants | Evelyn Tang · Hongyu An · Claudio Del Pino Mercado · Tonghan "Andi" Tian
+    Production assistants | Jude Brandford-Sackey · Daminabo Peterside · Tyler Fisher · Nicholas Collins · Joshua Montrel · Kayode Oladeji · Biola Olateru-Olagbegi
+    Catering | Kylie Rothfield
+    
+    Roles the sheet marks 'combine and make plural' have been combined, which is what produced the plural
+    headings above.
+    
+    TWO CREDITS THE SHEET MARKS 'Delete': Thesis Mentor Keola Racela and Editing Advisor Jeff Groth. Both are
+    left out here. The AFI instructions tab says no AFI faculty or staff may receive a thank-you credit on a
+    second-year thesis, which is consistent with the deletion.
+    
+    ELEVEN POSITIONS ARE BLANK ON THE SHEET and so are absent above: location manager, property master,
+    assistant production coordinator, casting assistant, extras casting, key set PA, sustainability
+    coordinator, studio teacher, craft service, animal trainer, first aid, security. Blank may mean the role
+    was unfilled or simply not typed in. Worth one pass before the crawl locks.
+
+
+PAGE 11 — THANKS AND AFI END CARD
+
+11.1  Thanks list
+    THE FILMMAKERS WISH TO THANK
+    
+    Kay Ann Scroggins · Elijah Anglin · Tracey Belizaire · Alex Benton · Phillip Brooks · Ayanna Carrington · Elijah Catalan · Byron Chang
+    Sriram Chintalapati · Padma Chitrapu · Derrick Clarke · Zaire Davis · Raghuram Devaraonda · Kanchan Devaraonda · Roxanne Elliott
+    Kevin Fobes · Cecil Gao · Xuanfang Gao · Jillian Green · Ping Guo · Baozhen Ling · Lina Hu · Abdullah Jeffers · Farzana Khan · Salaar Khan · Akshay Kumar · Yuhong Lai · Chunhui Wu · Qing Liao
+    Dawn & J. Martin · Randy McKinnon · Joshua Montrel · Gage Phillips · Indu Radhakrishnan · Mallik Ragampudi · Preethi Ragampudi · Libby Richman · Isaac Richter · Toluwani Roberts · Camille Ryan · Ibukunoluwa Soyebo · Nellai Subramaniam · Shaila Nellai
+    Sairam Tadigadapa · Corey Taylor · Srini Tipirneni · Osewanne Uwadiale · Santos Velazquez · Anadelis Figueroa · Dongpo Xu · Weiwei Xu · Lin Yi · Kuai Yu · Shiqi Sukia Zhang · Xiaomin Zhang · Xuanning Zhang · Xie Linchen · Pervis Louder
+    
+    In loving memory of George Dewey Stanyard Jr.
+    
+    Fifty-eight lines, MIRRORED FROM THE CANVA DESIGN (read back 2026-09-14 17:51Z, canva/readback/latest.json) after Luke edited the page there; his edits win and the worksheet follows. In the design's order: four columns read top to bottom, left to right.
+    LUKE'S EDITS 2026-09-14: every couple is now two lines of their own (Ping Guo / Baozhen Ling; Mallik Ragampudi / Preethi Ragampudi; Raghuram / Kanchan; Nellai Subramaniam / Shaila Nellai; Yuhong Lai / Chunhui Wu; Santos Velazquez / Anadelis Figueroa); Dawn & J. Martin stays one line. Xie Linchen and Pervis Louder sit at the end of the last column, after Xuanning Zhang.
+    AS TYPED IN THE DESIGN: 'Devaraonda' (both lines). The crawl spells the surname Devarakonda. Not corrected here; flagged to Luke.
+    George Dewey Stanyard Jr. is not in the list: he has the dedication line, drawn on its own after the thanks. The crawl spells the surname Stanyard.
+    Earlier provenance: the film's end-credit crawl (Luke's screenshot, 2026-09-14) had 53 names; the sheet before it had 30 with Padma Chitrapu twice; 'Tracey B' is Tracey Belizaire, 'Dawn and J. Martin' is 'Dawn & J. Martin'.
+
+11.2  Partner logos
+    NEEDED
+
+11.3  AFI boilerplate and fellows
+    AFI FELLOWS, as the sheet lists them
+    Ruoxiao Li, AFI Producing Fellow
+    Rajarajeshwari Ragampudi, AFI Production Design Fellow
+    Luke Scroggins, AFI Cinematography Fellow
+    Jordan Uwhubetine, AFI Directing Fellow
+    You Wu, AFI Editing Fellow
+    
+    BOILERPLATE, verbatim
+    "The characters and events depicted in this motion picture are fictitious. Any similarity to actual
+    persons, living or dead, is purely coincidental."
+    
+    "This motion picture is the property of the American Film Institute and is protected under the copyright
+    laws of the United States and other countries. Unauthorized duplication, distribution or exhibition may
+    result in civil liability and criminal prosecution."
+    
+    "Produced at the AFI Conservatory in partial fulfillment of the requirements for the Master of Fine Arts
+    Degree or Certificate of Completion."
+    
+    "Edited on Avid Media Composer"
+    
+    © copyright MMXXV
+    American Film Institute
+    [AFI Conservatory logo]
+    
+    THE DIRECTOR'S NAME DOES NOT MATCH. The fellows list reads "Jordan Uwhubetine"; the poster, the billing
+    block and every other credit read "Jordan Betine". It may be his legal name against his professional one.
+    Do not print either until Jordan says which. The sheet also spells the discipline "Directring", plainly a
+    typo for Directing, corrected above.
+    
+    THE COPYRIGHT YEAR IS MMXXV, 2025, while 3.5 records completion as 2026. One of the two is wrong, or the
+    copyright is dated to the year of creation rather than completion. Worth settling before submission,
+    because festivals read both.
+    
+    STILL OPEN ON THIS PAGE: vendor logos and the Green Seal are placeholders; the camera-equipment courtesy
+    line is unresolved, marked "delete if from AFI"; and the animal-welfare line carries the question "Did you
+    work with the Humane Society?" — the crawl bills a snake wrangler, so an animal was on set and the
+    American Humane wording needs checking.
+
+
+PAGE A — ASSETS
+
+A.1  Stills
+    41 frame grabs in the repo, press/assets/STILLS/, one Resolve gallery export (210640), PNG 1920×1080 letterboxed, picture in rows 138–941 (2.39:1). Gallery names kept: Still 2026-09-08 210640_1.1.N.png, N = 1–41.
+    Covers the film end to end: shells in cupped hands, the barn fight, Kenner and the barn exteriors, the doorway silhouettes, the oak grove, the burial, Mace at the cabin, the Elder by firelight, the shrine and candle, the lantern on the water, the spirit blur, the priest, the body in kente, the Elder at the graves.
+    1.1.25 and 1.1.26 are the same frame. Contact sheet: contact-sheet.jpg.
+    This export replaced two earlier sets (10 scope + 33 letterboxed) on Sep 8; it covers all but two frames of the December scope set — see press/assets/README.md.
+    https://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/STILLS
+    PICKED 23 Sep 2026 (the kit already draws the first four; the twelve are new):
+      Hero still, page 2: 1.1.5 (Kenner and Mace in the barn, cropped from its left edge so the doorway figure stays in).
+      Behind the director's statement, page 4: 1.1.17 (Mace at the cabin, daylight, ghosted).
+      Page 7 figure: 1.1.40 (Mace in kente, looking up).
+      Behind the credit pages 9 to 11: 1.1.2 (shells in cupped hands), 1.1.27 (the spirit blur), 1.1.25 (the lantern on the water).
+      Stills in character, per actor: see 7.2.
+      The twelve for the Drive and for FilmFreeway, in film order: 1.1.2 shells in cupped hands · 1.1.3 the barn fight · 1.1.5 Kenner and Mace in the barn · 1.1.6 the barn, wide · 1.1.9 the doorway silhouettes · 1.1.14 the burial under the oak · 1.1.16 Mace at the cabin · 1.1.18 the Elder by firelight · 1.1.22 the shrine and candle · 1.1.35 Mace under the chandelier · 1.1.38 the body in kente · 1.1.41 the Elder at the graves. Alternates if a festival wants more: 1.1.13 the oak grove, 1.1.25 the lantern on the water, 1.1.29 the spirit blur, 1.1.40 Mace in kente.
+      These twelve are copied, bytes unchanged, into the send-ready folder on the Drive, 05 MARKETING/00 PRESS/EPK-2026-09-23/03 STILLS/, under programmer-friendly names (KillerOfMen_Still_01_shells.png …); the mapping is in that folder's README.
+
+A.2  Trailer
+    NEEDED
+
+A.3  Laurels
+    Three official-selection laurels are in, one per accepted festival. They arrived on the Drive on 23 Sep 2026 (11:43 to 11:47) in 05 MARKETING/00 PRESS/LAURELS/, each in the two versions the festival's laurel generator gives: black ink on transparent and white ink on transparent, 1735 × 1152 PNG.
+      ABFF/OFFICIAL SELECTION - American Black Film Festival - 2026.png (black) · the same name with (1) (white)
+      Marthas Vineyard/OFFICIAL SELECTION - Marthas Vineyard African American Film Festival - 2026.png (black) · (1) (white)
+      SCAD/OFFICIAL SELECTION - SCAD Savannah Film Festival - 2026.png (black) · (1) (white)
+    Byte-identical copies in the repo at press/assets/LAURELS/ under plain names: ABFF-2026-official-selection-black.png and -white.png, MVAAFF-2026-…, SCAD-2026-…. Checked by md5 on 23 Sep.
+    Also on the Drive, LAURELS/AFI Fest/: FESTConservatoryShowcase_Laurels.png and _white.png, 143 px, dated 2022. That is AFI FEST's generic Conservatory Showcase laurel, and no AFI FEST selection is on record for this film (A.6 lists three festivals). Not used until AFI FEST is confirmed.
+    NOT PLACED YET: the poster, the kit and the FilmFreeway page carry no laurels. A laureled poster and a laureled trailer are what the per-festival delivery folder in press/epk-spec.md asks for; laying them on the key art is Luke's call, and Jordan holds the poster's source file.
+    https://github.com/Scroggdawg/kom-festival-board/tree/main/press/assets/LAURELS
+
+A.4  Drive folders
+    BUILT. Google Drive, synced to Luke's Mac through Drive for Desktop, so the folder is on the Drive and on the machine at the same time — drop a file on either side and it appears on the other.
+    Root: KILLER OF MEN — https://drive.google.com/drive/folders/1OUOykJpMq5o91PkZ54qvMpoVJgKpDPx7
+    Press: 05 MARKETING/00 PRESS — https://drive.google.com/drive/folders/1utGEFQb5gDuUOC9JU7zvuslwRlwbRorx
+      BTS · HEADSHOTS · POSTER · STILLS · TRAILER · SRT · LAURELS · EPK BUILDS · z_Old_EPKs
+      EPK INFO — all the text: https://docs.google.com/document/d/1ae-MPbAq1otTtYA5-SSYYGd13jjvuz1Co2Zi0IrGvSI/edit
+      EPK LINKS — every share URL: https://docs.google.com/document/d/16x38uawE0Iq91JCj3AC7cVV7SnpCO7kNdBJ0Dj8vUKg/edit
+    Alongside: 05 MARKETING/07 FESTIVALS (accepted, cover letters, details, laurels, social, receipts) and DELIVERY.
+    Local path: ~/Google Drive/My Drive/KILLER OF MEN/
+    In it so far: the poster, 41 stills, 102 BTS originals, the English SRT and SCC, both contact sheets, the EPK breakdown PDF. Empty and waiting: HEADSHOTS, TRAILER, LAURELS.
+    EPK INFO is generated from this file by tools/build-epk-info.py — epk.json stays the master; regenerate and repaste after any change rather than editing the doc as the source.
+    Separate and not ours: AFI's own Delivery tree, owned by asigel@afi.com, holds the BTS masters. Its Trailers, FEST, Poster Blu-Ray and Closed Captions folders were checked on Sep 8 and are all empty.
+
+A.5  60-second introduction
+    NEEDED
+
+A.6  Screenings and awards
+    ABFF 2026 · Martha's Vineyard AAFF 2026 · SCAD Savannah 2026
+
+
+HOW TO USE THIS DOCUMENT
+
+Fill a gap by editing the worksheet page, not this doc, then regenerate.
+The numbers (1.1 … A.6) are permanent — quote them when you send material.

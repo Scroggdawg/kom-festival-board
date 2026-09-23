@@ -1,6 +1,6 @@
 # HARNESS: picking up the EPK lane cold
 
-Read this first after a compaction or in a fresh session. It is the standing pickup for the `epk` lane; the numbered handoffs carry the day-by-day record (latest: highest `handoff-NNN-epk.md`). Updated 2026-09-21 (Erik Orjiako's bio). Before that: 2026-09-20 (cast bios; the connector route). Before that: 2026-09-16 (after the 2.2 mirror).
+Read this first after a compaction or in a fresh session. It is the standing pickup for the `epk` lane; the numbered handoffs carry the day-by-day record (latest: highest `handoff-NNN-epk.md`). Updated 2026-09-23 (the send-ready folder; laurels; picks; three generated views). Before that: 2026-09-21 (Erik Orjiako's bio). Before that: 2026-09-20 (cast bios; the connector route). Before that: 2026-09-16 (after the 2.2 mirror).
 
 ## Standing rules (Luke's, verbatim where quoted)
 
@@ -49,3 +49,10 @@ Page rebuilds from the contract still go through the app in a front tab (below).
 - Cast bios: **Erik Orjiako's is in as Luke supplied it on 21 Sep** (worksheet rev 35, kit PDF `1250_21092026`, Canva page 7 edited in place; three slips corrected and listed in the field's note: "performaces", "Malcom X", a stray semicolon; East West Players' own page lists him among three actors alternating as Malcolm X in the 2026-27 Theatre for Youth Tour, so "currently touring" will date). **Eric Pargac's and Jamal Dennis's are in, as Luke supplied them on 20 Sep** (worksheet rev 34, kit PDF `0958_20092026`, contract on Pages, Canva page 7 edited in place and committed; the wording matches each actor's self-written IMDb mini biography where the 10 Sep captures quote it). Sandra McDaniels's is the last 10 Sep draft; the conservative proposal for hers awaits Luke's go, and she still has no bio of her own. Hers is now the only one that ends with the "In Killer of Men she plays" sentence; Luke's call whether it stays. The EPK INFO Doc still shows the 10 Sep drafts for all four (it is also behind on 2.2, 3.1, 5.7 and 11.1).
 - Page 11: "Devaraonda" spelling is Luke's to fix in Canva.
 - Export: Luke downloads (Share › Download › PDF Print · RGB · all pages · crop marks off · flatten off), then `venv/bin/python tools/check-canva-export.py "$HOME/Downloads/EPK _ KoM 2026.pdf"`, copy to the Drive `EPK BUILDS/CANVA`.
+
+## Added 2026-09-23 (press lane, handoff-128)
+
+- Three views are generated from the worksheet now, never hand-written: `tools/build-epk-one-sheet.py` → `press/epk-one-sheet.md`; `tools/build-filmfreeway-page.py --version N` → `press/filmfreeway-page-vN.md` and `.docx`; `tools/build-epk-info.py` → `press/epk-info.txt`. Regenerate all three after any `epk.py set`.
+- Field 3.12 prints its first line only on page 3, and not while that line begins PARTIAL. A field that carries a printable value plus a note puts the value on line one.
+- The send-ready folder is `05 MARKETING/00 PRESS/EPK-2026-09-23/` on the Drive (copies only; `00 READ ME.md` lists every file with its MD5 and what is still owed by whom). A later assembly gets its own dated folder; nothing in an older one is deleted.
+- The worktree has no `venv/`; the kit builder's requirements go in a venv made from `tools/requirements.txt` (Xcode's python has PyMuPDF but not fontTools; Homebrew's 3.14 has neither).
