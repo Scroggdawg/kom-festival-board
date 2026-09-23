@@ -107,6 +107,6 @@ Proof: `bin/hooks/FALSIFY-kom-stop.md` (the recorded run of `bin/hooks/test-kom-
 ## 8. Open decisions (Luke's)
 
 1. **Turn the commit guard on** in the main clone: `git config core.hooksPath bin/githooks` (one line; it applies to every worktree of that clone, other sessions included, so it was not set for them here).
-2. **The twelve BTS JPEGs in git** (`press/assets/BTS/`, 18 to 53 MB each, 400 MB together): leave them, or a later supervised move off history (the shelf already holds them). Leaving them costs nothing but clone time.
+2. **The twelve BTS JPEGs in git** (`press/assets/BTS/`, committed September 8, 361 MB together; the shelf holds the same pictures under `00 PRESS/BTS/`): leave them, or a later supervised move off history. Leaving them costs nothing but clone time. They are `IMG_4616.jpg` 52.9 MB, `IMG_4408.jpg` 44.9, `IMG_4514.jpg` 44.7, `IMG_4467.jpg` 43.9, `_DSF5180.JPG` 26.4, `_DSF5055.JPG` 26.3, `_DSF6428.jpg` 23.9, `DSCF4727.JPG` 21.9, `DSCF4802.JPG` 19.7, `DSCF4696.JPG` 19.3, `DSCF4718.JPG` 18.8, `_DSF6499.jpg` 18.3; the first four are over GitHub's 50 MB warning line, none over its 100 MB refusal.
 3. **The Drive `HANDOFFS/` mirror**: keep copying handoffs there (harmless), or stop (the hooks only read it for the number).
 4. **`EPK-2026-09-23/` and future send-ready folders**: register each one on the shelf when its lane is done (`register --only "05 MARKETING/00 PRESS/EPK-<date>"`), so the registry names what was sent.

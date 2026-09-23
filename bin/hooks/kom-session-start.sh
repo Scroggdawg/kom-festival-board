@@ -179,8 +179,8 @@ fi
 if [ -n "$NEWEST_FILE" ] && [ -f "$ROOT/$LEDGER/$NEWEST_FILE" ]; then
   echo "[kom] recap of $LEDGER/$NEWEST_FILE:"
   awk 'NR==1 {print; next}
-       /RECAP|[Ww]here we left off|[Rr]ecap/ && !started {started=1}
-       started { if ($0 ~ /^[[:space:]]*$/ && n > 1) exit; print; n++; if (n >= 24) { print "  [recap cut at 24 lines: read the file]"; exit } }' \
+       /RECAP|[Ww]here we left off|[Rr]ecap/ && !started {started=1; print; next}
+       started { if ($0 ~ /^## /) exit; if ($0 ~ /^[[:space:]]*$/) next; print; n++; if (n >= 24) { print "  [recap cut at 24 lines: read the file]"; exit } }' \
     "$ROOT/$LEDGER/$NEWEST_FILE" \
     | while IFS= read -r line; do redact "$line"; printf '\n'; done   # a URL in the handoff prints without its credentials
 fi
