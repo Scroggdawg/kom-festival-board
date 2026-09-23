@@ -1,0 +1,1 @@
+Derivatives for the 2026-09-23 readout widget: the twelve press stills at 480 px (letterbox cropped), the poster at 320 px, the three laurels flattened on white at 360 px. Built from press/assets by the press lane; never used in the kit.

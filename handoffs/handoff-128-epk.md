@@ -55,4 +55,5 @@ Send You Wu the message in `press/messages-to-send.md` (six specs, the trailer, 
 - Laurels: https://github.com/Scroggdawg/kom-festival-board/tree/claude/vigorous-mayer-7773b9/press/assets/LAURELS
 - Harness: https://github.com/Scroggdawg/kom-festival-board/blob/claude/vigorous-mayer-7773b9/handoffs/HARNESS-epk.md
 - Prior handoffs: https://github.com/Scroggdawg/kom-festival-board/blob/claude/vigorous-mayer-7773b9/handoffs/handoff-127-epk.md · https://github.com/Scroggdawg/kom-festival-board/blob/claude/vigorous-mayer-7773b9/handoffs/handoff-084-bio.md
+- Readout thumbnails (derivatives, 222 KB, for the widget only): https://github.com/Scroggdawg/kom-festival-board/tree/claude/vigorous-mayer-7773b9/press/assets/derived/readout-2026-09-23
 - This handoff: file:///Users/scroggdawg/Code/kom-festival-board/.claude/worktrees/frosty-moore-f514b1/handoffs/handoff-128-epk.md
