@@ -1,7 +1,7 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-09-21T12:54:02-07:00",
-  "updated_by": "Fable session, epk lane, 2026-09-21: Erik Orjiako's supplied bio",
+  "updated": "2026-10-04",
+  "updated_by": "Opus 5.5, page 6 portraits + bio 5.3",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
     "typeface": "Build in Libre Baskerville (apps cannot use uploaded fonts). Optional afterwards, Luke's call: split /System/Library/Fonts/Supplemental/Baskerville.ttc into Regular, SemiBold, Bold .ttf with fontTools, upload to Brand > Fonts, swap in the editor. Not required; the kit must be right for KILLER OF MEN, not match Night Feeds.",
@@ -120,7 +120,16 @@
       "at": "2026-09-11T21:10:28Z (rebuild from the Libre-measured contract, generated 16:02:44)",
       "elements_attempted": 23,
       "elements_placed": 23,
-      "page_id": "PBsZlZtSqPVJzCwx"
+      "page_id": "PBsZlZtSqPVJzCwx",
+      "edited_in_place": [
+        {
+          "at": "2026-10-04T~20:30-07:00",
+          "how": "the Canva connector: read-design with a transaction on page 6 (master now 12 pages; page_id unchanged), upload-asset-from-url from raw.githubusercontent main, update_fill on both portrait frames, replace_text and format_text on the bio boxes, checked on the transaction's renders, committed on Luke's OK.",
+          "what": "Cinematographer: bio 5.3 (paragraphs 1-2 of the Oct 4 rewrite; Luke cut the third) in LBHYpp78N2Thn7KN; portrait Scroggins_DP_BW.png (asset MAHXGkSpjWU) in LB6yDBkP3jgZhrHF. Writer-director: portrait Betine_Director_seated.jpg (asset MAHXGvpXBg0) in LBHK7dRFlTgXT4d8, Canva centre-fit (imageBox 467x700, top -86). All three bios set to 25 px (were 25.333; format_text takes integers). Cinematographer bio ends y~2189, level with its portrait (2205).",
+          "seen_not_fixed": "each @handle links to IMDb and each IMDB label has no link (all three filmmakers).",
+          "proof": "press/proofs/canva-page6-2026-10-04.png (the transaction's render before commit, 450x600)"
+        }
+      ]
     },
     {
       "n": 6,
