@@ -100,7 +100,15 @@
       "at": "2026-09-11T21:10:23Z (rebuild from the Libre-measured contract, generated 16:02:44)",
       "elements_attempted": 53,
       "elements_placed": 53,
-      "page_id": "PBPG3grYl3fRGhq3"
+      "page_id": "PBPG3grYl3fRGhq3",
+      "edited_in_place": [
+        {
+          "at": "2026-10-04 evening",
+          "how": "Canva connector: format_text link on existing text boxes in one transaction, committed on Luke's request, then the saved design re-read in full and every link listed and matched (26 linked runs, 0 wrong).",
+          "what": "TRAILER -> Drive TRAILER folder 1xE8e38_oiRks_XQme-MffSYJZWdThNuS; HEADSHOTS -> Drive HEADSHOTS folder 1Usfn18LMSoL2RYQ6OAYraTuiU4W8P0UW (both pointed at 00 PRESS root); both email lines -> mailto:",
+          "proof": "handoffs/handoff-137-epk.md (before/after table)"
+        }
+      ]
     },
     {
       "n": 4,
@@ -128,6 +136,12 @@
           "what": "Cinematographer: bio 5.3 (paragraphs 1-2 of the Oct 4 rewrite; Luke cut the third) in LBHYpp78N2Thn7KN; portrait Scroggins_DP_BW.png (asset MAHXGkSpjWU) in LB6yDBkP3jgZhrHF. Writer-director: portrait Betine_Director_seated.jpg (asset MAHXGvpXBg0) in LBHK7dRFlTgXT4d8, Canva centre-fit (imageBox 467x700, top -86). All three bios set to 25 px (were 25.333; format_text takes integers). Cinematographer bio ends y~2189, level with its portrait (2205).",
           "seen_not_fixed": "each @handle links to IMDb and each IMDB label has no link (all three filmmakers).",
           "proof": "press/proofs/canva-page6-2026-10-04.png (the transaction's render before commit, 450x600)"
+        },
+        {
+          "at": "2026-10-04 evening",
+          "how": "Canva connector: format_text link on existing text boxes in one transaction, committed on Luke's request, then the saved design re-read in full and every link listed and matched (26 linked runs, 0 wrong).",
+          "what": "@handles -> each person's Instagram (were IMDb); IMDB labels -> each person's IMDb (were unlinked): Betine nm17461892, Li nm15376948, Scroggins nm3596666",
+          "proof": "handoffs/handoff-137-epk.md (before/after table)"
         }
       ]
     },
@@ -139,7 +153,15 @@
       "at": "2026-09-11T21:10:32Z (rebuild from the Libre-measured contract, generated 16:02:44)",
       "elements_attempted": 14,
       "elements_placed": 14,
-      "page_id": "PBFc7HVtBTrS8lqL"
+      "page_id": "PBFc7HVtBTrS8lqL",
+      "edited_in_place": [
+        {
+          "at": "2026-10-04 evening",
+          "how": "Canva connector: format_text link on existing text boxes in one transaction, committed on Luke's request, then the saved design re-read in full and every link listed and matched (26 linked runs, 0 wrong).",
+          "what": "@handles -> Instagram; IMDB labels -> IMDb: Ragampudi nm15956329, Wu nm17461889",
+          "proof": "handoffs/handoff-137-epk.md (before/after table)"
+        }
+      ]
     },
     {
       "n": 7,
