@@ -1,7 +1,7 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-10-04",
-  "updated_by": "Opus 5.5, page 6 portraits + bio 5.3",
+  "updated": "2026-10-05",
+  "updated_by": "Opus 5.5, BTS page layout C",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
     "typeface": "Build in Libre Baskerville (apps cannot use uploaded fonts). Optional afterwards, Luke's call: split /System/Library/Fonts/Supplemental/Baskerville.ttc into Regular, SemiBold, Bold .ttf with fontTools, upload to Brand > Fonts, swap in the editor. Not required; the kit must be right for KILLER OF MEN, not match Night Feeds.",
@@ -199,7 +199,15 @@
       "at": "2026-09-11T21:10:51Z (rebuild from the Libre-measured contract, generated 16:02:44)",
       "elements_attempted": 11,
       "elements_placed": 11,
-      "page_id": "PBZVssSlCSVM7g2h"
+      "page_id": "PBZVssSlCSVM7g2h",
+      "edited_in_place": [
+        {
+          "at": "2026-10-05",
+          "how": "Canva connector: upload-asset-from-url (raw.githubusercontent main, press/assets/BTS full-res), update_fill and crop_media on the nine grid frames in one transaction, previewed through several rounds with Luke, committed on his OK. Frame ids unchanged.",
+          "what": "Grid, reading order: 1 KOM_Day3_TheFarm-43 (left -64) · 2 Farm-84 · 3 Farm-230 (full bleed 798.094x532, left -58, faces centred) · 4 Farm-116 · 5 Farm-194 · 6 Farm-59 · 7 KOM_Day4_Soundstage-13 (left -172) · 8 Farm-18 (left -89) · 9 Farm-101 (left -100). Slot 10 Farm-237 unchanged. Out: Farm-152, 185, 220, Soundstage-76, -81, -93.",
+          "proof": "press/proofs/canva-page9-bts-2026-10-05.png (transaction render before commit, 450x600)"
+        }
+      ]
     },
     {
       "n": 9,
