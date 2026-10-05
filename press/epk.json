@@ -1,8 +1,8 @@
 {
  "schema": 3,
- "rev": 35,
- "updated": "2026-09-21T12:50:24-07:00",
- "updatedBy": "epk.py set",
+ "rev": 36,
+ "updated": "2026-10-04T15:53:30-07:00",
+ "updatedBy": "bio 5.3 rewritten with Luke (Oct 4); DP headshot added to assets",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
  "numbering": "decimal",
@@ -530,8 +530,13 @@
      "id": "p5-bio-cinematographer",
      "n": "5.3",
      "label": "Cinematographer bio — Luke Scroggins",
-     "value": "Luke Scroggins studied theater under David Connelly at the North East School of the Arts in his home town of San Antonio and continued at Otterbein University School of Theatre, earning a BFA in Acting. Television credits include SWITCHED AT BIRTH, GENERAL HOSPITAL and DAYS OF OUR LIVES. After a period coordinating and editing for fashion clients, Scroggins joined the Dark Side and began working in camera. Recently he has moved into the narrative space as Utility on the independent feature FRESH KILLS and the limited series RZR. He made his cinematographer debut on the short films COSMIC BEACH and L'DIRECTOR",
+     "value": "Luke Scroggins is a cinematographer based in Los Angeles. Originally from San Antonio, Texas, he began his career as a classically trained actor in theatre and television before moving to the camera department and earning his MFA in Cinematography from the American Film Institute.\n\nHis work focuses on narrative film, with an emphasis on period drama. His AFI thesis, KILLER OF MEN, is his second action film; other recent credits — all expected on the 2026 festival circuit — include LEAVE YOUR LIGHT ON, directed by Eli Gonda and produced by Academy Award winner Chris Buck; KEEPING WARM and THE SOUND IT MAKES directed by John Lavelle; and LE DIRECTOR directed by Ze'ev Waismann. He has also shot several commercial campaigns, and came up working in the camera department on the feature FRESH KILLS and the limited series RZR.\n\nA student of classic cinema and a lover of new-wave storytelling, Luke is happiest finding (or inventing) creative solutions in the ever-evolving landscape of contemporary filmmaking. When it comes to deepening a story's connection with its audience, no job is too big or too small.",
      "history": [
+      {
+       "at": "2026-10-04T15:53:30-07:00",
+       "by": "bio rewrite with Luke (interview Sep 21–Oct 4), Opus 4.8",
+       "value": "Luke Scroggins studied theater under David Connelly at the North East School of the Arts in his home town of San Antonio and continued at Otterbein University School of Theatre, earning a BFA in Acting. Television credits include SWITCHED AT BIRTH, GENERAL HOSPITAL and DAYS OF OUR LIVES. After a period coordinating and editing for fashion clients, Scroggins joined the Dark Side and began working in camera. Recently he has moved into the narrative space as Utility on the independent feature FRESH KILLS and the limited series RZR. He made his cinematographer debut on the short films COSMIC BEACH and L'DIRECTOR"
+      },
       {
        "at": "2026-09-08T22:41:58-07:00",
        "by": "killerofmen.com, verbatim",
