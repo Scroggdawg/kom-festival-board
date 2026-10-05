@@ -188,6 +188,12 @@
           "what": "Erik Orjiako's bio as Luke supplied it on 2026-09-21 with three slips corrected (performaces, Malcom X, the semicolon before the play's title); the box is now 216.29 px (7 lines, was 8).",
           "spacing": "the freed line is shared evenly: one uniform 62.67 px (47 pt) gap from each bio's box to the next lockup (was 54.67); the ALSO BILLED label and its rows did not move, the last row's baseline still on the 74 pt foot margin.",
           "proof": "press/proofs/canva-page7-2026-09-21.png (export-design PNG after the commit); eleven pages"
+        },
+        {
+          "at": "2026-10-05",
+          "how": "Canva connector update_fill on the full-page ground frame, committed on Luke's request",
+          "what": "ground stronger, alpha ghost 0.48→0.50: press/assets/derived/credits-bts/cast-1.1.17_a50.jpg (asset MAHXKuctyqk)",
+          "proof": "press/proofs/canva-p8-p11-p12-grounds-2026-10-05.png"
         }
       ]
     },
@@ -229,7 +235,15 @@
       "elements_attempted": 135,
       "elements_placed": 135,
       "page_id": "PBchySx5shgK5QfT",
-      "note": "addPage rejected the 135-element batch (100-element cap) and left the background-only page; placed on the selected page with addElementAtPoint, 135/135 on the first pass at PACE_MS 150 (no rate-limit loss this time). 126 -> 135 elements: CREW falls to the card's 16 pt cascade in Libre, 14 wrapped roles"
+      "note": "addPage rejected the 135-element batch (100-element cap) and left the background-only page; placed on the selected page with addElementAtPoint, 135/135 on the first pass at PACE_MS 150 (no rate-limit loss this time). 126 -> 135 elements: CREW falls to the card's 16 pt cascade in Libre, 14 wrapped roles",
+      "edited_in_place": [
+        {
+          "at": "2026-10-05",
+          "how": "Canva connector update_fill on the full-page ground frame, committed on Luke's request",
+          "what": "ground stronger, alpha 0.26→0.29: press/assets/derived/credits-bts/crew-KOM_Stage-5_a29.jpg (asset MAHXKsl-WOI)",
+          "proof": "press/proofs/canva-p8-p11-p12-grounds-2026-10-05.png"
+        }
+      ]
     },
     {
       "n": 11,
@@ -239,8 +253,17 @@
       "at": "2026-09-14T17:28:09Z (rebuilt alone after page 10, once Luke put the app's tab in front)",
       "elements_attempted": 102,
       "elements_placed": 102,
-      "page_id": "PBtTg5xsJ1DjZPC3",
-      "note": "52 thanks in four columns, the dedication line after them, the AFI wordmark at the foot"
+      "page_id": "PBtTgSxsJ1DjZPC3",
+      "note": "52 thanks in four columns, the dedication line after them, the AFI wordmark at the foot",
+      "page_id_note": "corrected 2026-10-05: was recorded as PBtTg5xsJ1DjZPC3 (5 for S); the Canva connector returns PBtTgSxsJ1DjZPC3",
+      "edited_in_place": [
+        {
+          "at": "2026-10-05",
+          "how": "Canva connector update_fill on the full-page ground frame, committed on Luke's request",
+          "what": "ground stronger, alpha 0.16→0.22: press/assets/derived/credits-bts/thanks-KOM_Day4_Soundstage-58_a22.jpg (asset MAHXKrXjqPU)",
+          "proof": "press/proofs/canva-p8-p11-p12-grounds-2026-10-05.png"
+        }
+      ]
     }
   ],
   "pilot": {
