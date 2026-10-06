@@ -142,6 +142,12 @@
           "how": "Canva connector: format_text link on existing text boxes in one transaction, committed on Luke's request, then the saved design re-read in full and every link listed and matched (26 linked runs, 0 wrong).",
           "what": "@handles -> each person's Instagram (were IMDb); IMDB labels -> each person's IMDb (were unlinked): Betine nm17461892, Li nm15376948, Scroggins nm3596666",
           "proof": "handoffs/handoff-137-epk.md (before/after table)"
+        },
+        {
+          "at": "2026-10-05",
+          "how": "Canva connector update_fill, committed on Luke's word ('keep her original crop' = the first, Canva-fit crop of the new photo)",
+          "what": "Producer portrait LB5YQDm1HBbNQdrJ → HEADSHOTS/Li_Producer_lakeside.jpg (asset MAHXLO9dxBQ), imageBox 466.677×637.102 at left -11.339, top -54.551 (full seated figure)",
+          "proof": "press/proofs/canva-page6-ruoxiao-2026-10-05.png"
         }
       ]
     },
