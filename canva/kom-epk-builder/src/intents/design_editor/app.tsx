@@ -222,8 +222,9 @@ export const App = () => {
   const [fresh, setFresh] = useState<Set<string>>(() => new Set());
   const [libreMatches, setLibreMatches] = useState<StoredFont[]>([]);
   const fontKeys = useMemo(() => Object.keys(doc?.fonts ?? {}), [doc]);
+  // An image-only ops file (e.g. canva/ops/laurel-stills-canva.json) lists no fonts and needs none.
   const fontsFresh =
-    fontKeys.length > 0 && fontKeys.every((k) => fresh.has(k) && !!fonts[k]);
+    !!doc && fontKeys.every((k) => fresh.has(k) && !!fonts[k]);
   const staleKeys = fontKeys.filter((k) => !!fonts[k] && !fresh.has(k));
 
   const storeFont = (key: string, font: StoredFont) => {

@@ -1,0 +1,5775 @@
+{
+ "schema": 1,
+ "generated": "2026-10-11T22:51:00",
+ "source": {
+  "kit_commit": "laurel-stills",
+  "epk_rev": 0
+ },
+ "page": {
+  "width_pt": 1920,
+  "height_pt": 803
+ },
+ "fonts": {},
+ "pages": [
+  {
+   "n": 1,
+   "name": "SCAD \u00b7 1.1.1",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.1.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.1.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.1"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "name": "SCAD \u00b7 1.1.2",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.2.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.2.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.2"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 122.6,
+     "y": 239.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "name": "SCAD \u00b7 1.1.3",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.3.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.3.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.3"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "name": "SCAD \u00b7 1.1.4",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.4.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.4.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.4"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "name": "SCAD \u00b7 1.1.5",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.5.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.5.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.5"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "name": "SCAD \u00b7 1.1.6",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.6.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.6.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.6"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "name": "SCAD \u00b7 1.1.7",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.7.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.7.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.7"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "name": "SCAD \u00b7 1.1.8",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.8.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.8.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.8"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "name": "SCAD \u00b7 1.1.9",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.9.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.9.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.9"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "name": "SCAD \u00b7 1.1.10",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.10.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.10.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.10"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "name": "SCAD \u00b7 1.1.11",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.11.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.11.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.11"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "name": "SCAD \u00b7 1.1.12",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.12.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.12.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.12"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "name": "SCAD \u00b7 1.1.13",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.13.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.13.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.13"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "name": "SCAD \u00b7 1.1.14",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.14.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.14.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.14"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "name": "SCAD \u00b7 1.1.15",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.15.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.15.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.15"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "name": "SCAD \u00b7 1.1.16",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.16.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.16.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.16"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "name": "SCAD \u00b7 1.1.17",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.17.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.17.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.17"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1496.0,
+     "y": 34.8,
+     "w": 368.1,
+     "h": 244.4,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "name": "SCAD \u00b7 1.1.18",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.18.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.18.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.18"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 262.6,
+     "y": 239.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "name": "SCAD \u00b7 1.1.19",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.19.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.19.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.19"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "name": "SCAD \u00b7 1.1.20",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.20.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.20.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.20"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "name": "SCAD \u00b7 1.1.21",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.21.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.21.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.21"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "name": "SCAD \u00b7 1.1.22",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.22.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.22.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.22"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1202.6,
+     "y": -7.7,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "name": "SCAD \u00b7 1.1.23",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.23.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.23.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.23"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1362.6,
+     "y": 69.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "name": "SCAD \u00b7 1.1.24",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.24.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.24.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.24"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 481.5,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "name": "SCAD \u00b7 1.1.25",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.25.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.25.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.25"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1272.6,
+     "y": 69.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "name": "SCAD \u00b7 1.1.27",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.27.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.27.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.27"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 27,
+   "name": "SCAD \u00b7 1.1.28",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.28.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.28.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.28"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "name": "SCAD \u00b7 1.1.29",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.29.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.29.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.29"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 29,
+   "name": "SCAD \u00b7 1.1.30",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.30.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.30.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.30"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 30,
+   "name": "SCAD \u00b7 1.1.31",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.31.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.31.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.31"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 66.6,
+     "y": 261.2,
+     "w": 376.8,
+     "h": 250.2,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 31,
+   "name": "SCAD \u00b7 1.1.32",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.32.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.32.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.32"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 65.3,
+     "y": 268.4,
+     "w": 359.3,
+     "h": 238.6,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 32,
+   "name": "SCAD \u00b7 1.1.33",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.33.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.33.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.33"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1402.6,
+     "y": 124.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 33,
+   "name": "SCAD \u00b7 1.1.34",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.34.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.34.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.34"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 34,
+   "name": "SCAD \u00b7 1.1.35",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.35.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.35.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.35"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": 481.5,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 35,
+   "name": "SCAD \u00b7 1.1.36",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.36.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.36.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.36"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1397.6,
+     "y": 19.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 36,
+   "name": "SCAD \u00b7 1.1.37",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.37.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.37.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.37"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1402.6,
+     "y": 69.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 37,
+   "name": "SCAD \u00b7 1.1.38",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.38.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.38.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.38"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": -8.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 38,
+   "name": "SCAD \u00b7 1.1.39",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.39.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.39.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.39"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 1463.6,
+     "y": 481.5,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 39,
+   "name": "SCAD \u00b7 1.1.40",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.40.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.40.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.40"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-white.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 51.6,
+     "y": 236.3,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 40,
+   "name": "SCAD \u00b7 1.1.41",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.41.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.41.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.41"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/SCAD-2026-official-selection-black.png",
+     "file": "press/assets/derived/laurels/SCAD-2026-official-selection-black.png",
+     "px": [
+      1735,
+      1152
+     ],
+     "x": 137.6,
+     "y": 19.8,
+     "w": 404.8,
+     "h": 268.8,
+     "alt": "SCAD 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 41,
+   "name": "AFI FEST \u00b7 1.1.1",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.1.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.1.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.1"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 42,
+   "name": "AFI FEST \u00b7 1.1.2",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.2.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.2.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.2"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 170.0,
+     "y": 296.6,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 43,
+   "name": "AFI FEST \u00b7 1.1.3",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.3.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.3.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.3"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 44,
+   "name": "AFI FEST \u00b7 1.1.4",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.4.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.4.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.4"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 45,
+   "name": "AFI FEST \u00b7 1.1.5",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.5.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.5.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.5"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 46,
+   "name": "AFI FEST \u00b7 1.1.6",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.6.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.6.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.6"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 47,
+   "name": "AFI FEST \u00b7 1.1.7",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.7.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.7.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.7"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 48,
+   "name": "AFI FEST \u00b7 1.1.8",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.8.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.8.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.8"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 49,
+   "name": "AFI FEST \u00b7 1.1.9",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.9.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.9.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.9"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 50,
+   "name": "AFI FEST \u00b7 1.1.10",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.10.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.10.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.10"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 51,
+   "name": "AFI FEST \u00b7 1.1.11",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.11.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.11.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.11"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 52,
+   "name": "AFI FEST \u00b7 1.1.12",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.12.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.12.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.12"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 53,
+   "name": "AFI FEST \u00b7 1.1.13",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.13.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.13.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.13"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 54,
+   "name": "AFI FEST \u00b7 1.1.14",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.14.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.14.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.14"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 55,
+   "name": "AFI FEST \u00b7 1.1.15",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.15.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.15.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.15"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 56,
+   "name": "AFI FEST \u00b7 1.1.16",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.16.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.16.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.16"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 57,
+   "name": "AFI FEST \u00b7 1.1.17",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.17.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.17.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.17"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1525.0,
+     "y": 76.6,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 58,
+   "name": "AFI FEST \u00b7 1.1.18",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.18.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.18.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.18"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 310.0,
+     "y": 296.6,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 59,
+   "name": "AFI FEST \u00b7 1.1.19",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.19.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.19.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.19"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 60,
+   "name": "AFI FEST \u00b7 1.1.20",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.20.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.20.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.20"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 61,
+   "name": "AFI FEST \u00b7 1.1.21",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.21.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.21.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.21"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 62,
+   "name": "AFI FEST \u00b7 1.1.22",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.22.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.22.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.22"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1263.9,
+     "y": 58.8,
+     "w": 282.3,
+     "h": 197.4,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 63,
+   "name": "AFI FEST \u00b7 1.1.23",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.23.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.23.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.23"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1410.0,
+     "y": 126.6,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 64,
+   "name": "AFI FEST \u00b7 1.1.24",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.24.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.24.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.24"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 526.2,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 65,
+   "name": "AFI FEST \u00b7 1.1.25",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.25.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.25.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.25"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1320.0,
+     "y": 126.6,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 66,
+   "name": "AFI FEST \u00b7 1.1.27",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.27.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.27.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.27"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 67,
+   "name": "AFI FEST \u00b7 1.1.28",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.28.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.28.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.28"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 68,
+   "name": "AFI FEST \u00b7 1.1.29",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.29.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.29.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.29"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 69,
+   "name": "AFI FEST \u00b7 1.1.30",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.30.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.30.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.30"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 293.1,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 70,
+   "name": "AFI FEST \u00b7 1.1.31",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.31.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.31.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.31"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 100.0,
+     "y": 306.6,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 71,
+   "name": "AFI FEST \u00b7 1.1.32",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.32.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.32.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.32"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 90.0,
+     "y": 306.6,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 72,
+   "name": "AFI FEST \u00b7 1.1.33",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.33.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.33.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.33"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1450.0,
+     "y": 181.6,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 73,
+   "name": "AFI FEST \u00b7 1.1.34",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.34.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.34.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.34"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 74,
+   "name": "AFI FEST \u00b7 1.1.35",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.35.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.35.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.35"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 526.2,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 75,
+   "name": "AFI FEST \u00b7 1.1.36",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.36.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.36.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.36"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1445.0,
+     "y": 76.6,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 76,
+   "name": "AFI FEST \u00b7 1.1.37",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.37.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.37.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.37"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1450.0,
+     "y": 126.6,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 77,
+   "name": "AFI FEST \u00b7 1.1.38",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.38.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.38.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.38"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 78,
+   "name": "AFI FEST \u00b7 1.1.39",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.39.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.39.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.39"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 1550.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 79,
+   "name": "AFI FEST \u00b7 1.1.40",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.40.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.40.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.40"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-white-x4.png",
+     "px": [
+      572,
+      400
+     ],
+     "x": 60.0,
+     "y": 60.0,
+     "w": 310.0,
+     "h": 216.8,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 80,
+   "name": "AFI FEST \u00b7 1.1.41",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.41.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.41.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.41"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/AFI-FEST-conservatory-showcase-black-x4.png",
+     "file": "press/assets/derived/laurels/AFI-FEST-conservatory-showcase-black-x4.png",
+     "px": [
+      572,
+      404
+     ],
+     "x": 185.0,
+     "y": 76.6,
+     "w": 310.0,
+     "h": 219.0,
+     "alt": "AFI FEST 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 81,
+   "name": "REEL BLACK MEN \u00b7 1.1.1",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.1.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.1.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.1"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 82,
+   "name": "REEL BLACK MEN \u00b7 1.1.2",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.2.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.2.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.2"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 181.6,
+     "y": 264.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 83,
+   "name": "REEL BLACK MEN \u00b7 1.1.3",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.3.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.3.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.3"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 84,
+   "name": "REEL BLACK MEN \u00b7 1.1.4",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.4.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.4.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.4"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 85,
+   "name": "REEL BLACK MEN \u00b7 1.1.5",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.5.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.5.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.5"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 86,
+   "name": "REEL BLACK MEN \u00b7 1.1.6",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.6.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.6.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.6"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 87,
+   "name": "REEL BLACK MEN \u00b7 1.1.7",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.7.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.7.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.7"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 88,
+   "name": "REEL BLACK MEN \u00b7 1.1.8",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.8.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.8.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.8"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 89,
+   "name": "REEL BLACK MEN \u00b7 1.1.9",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.9.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.9.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.9"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 90,
+   "name": "REEL BLACK MEN \u00b7 1.1.10",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.10.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.10.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.10"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 91,
+   "name": "REEL BLACK MEN \u00b7 1.1.11",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.11.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.11.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.11"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 92,
+   "name": "REEL BLACK MEN \u00b7 1.1.12",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.12.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.12.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.12"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 93,
+   "name": "REEL BLACK MEN \u00b7 1.1.13",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.13.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.13.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.13"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 94,
+   "name": "REEL BLACK MEN \u00b7 1.1.14",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.14.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.14.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.14"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 95,
+   "name": "REEL BLACK MEN \u00b7 1.1.15",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.15.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.15.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.15"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 96,
+   "name": "REEL BLACK MEN \u00b7 1.1.16",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.16.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.16.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.16"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 97,
+   "name": "REEL BLACK MEN \u00b7 1.1.17",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.17.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.17.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.17"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1536.6,
+     "y": 44.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 98,
+   "name": "REEL BLACK MEN \u00b7 1.1.18",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.18.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.18.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.18"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 321.6,
+     "y": 264.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 99,
+   "name": "REEL BLACK MEN \u00b7 1.1.19",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.19.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.19.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.19"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 100,
+   "name": "REEL BLACK MEN \u00b7 1.1.20",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.20.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.20.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.20"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 101,
+   "name": "REEL BLACK MEN \u00b7 1.1.21",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.21.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.21.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.21"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 102,
+   "name": "REEL BLACK MEN \u00b7 1.1.22",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.22.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.22.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.22"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1287.5,
+     "y": 42.6,
+     "w": 233.8,
+     "h": 233.8,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 103,
+   "name": "REEL BLACK MEN \u00b7 1.1.23",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.23.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.23.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.23"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1421.6,
+     "y": 94.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 104,
+   "name": "REEL BLACK MEN \u00b7 1.1.24",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.24.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.24.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.24"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 482.4,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 105,
+   "name": "REEL BLACK MEN \u00b7 1.1.25",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.25.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.25.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.25"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1331.6,
+     "y": 94.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 106,
+   "name": "REEL BLACK MEN \u00b7 1.1.27",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.27.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.27.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.27"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 107,
+   "name": "REEL BLACK MEN \u00b7 1.1.28",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.28.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.28.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.28"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 108,
+   "name": "REEL BLACK MEN \u00b7 1.1.29",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.29.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.29.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.29"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 109,
+   "name": "REEL BLACK MEN \u00b7 1.1.30",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.30.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.30.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.30"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 261.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 110,
+   "name": "REEL BLACK MEN \u00b7 1.1.31",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.31.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.31.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.31"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 111.6,
+     "y": 274.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 111,
+   "name": "REEL BLACK MEN \u00b7 1.1.32",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.32.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.32.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.32"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 101.6,
+     "y": 274.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 112,
+   "name": "REEL BLACK MEN \u00b7 1.1.33",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.33.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.33.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.33"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1461.6,
+     "y": 149.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 113,
+   "name": "REEL BLACK MEN \u00b7 1.1.34",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.34.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.34.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.34"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 114,
+   "name": "REEL BLACK MEN \u00b7 1.1.35",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.35.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.35.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.35"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 482.4,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 115,
+   "name": "REEL BLACK MEN \u00b7 1.1.36",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.36.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.36.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.36"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1456.6,
+     "y": 44.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 116,
+   "name": "REEL BLACK MEN \u00b7 1.1.37",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.37.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.37.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.37"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1461.6,
+     "y": 94.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 117,
+   "name": "REEL BLACK MEN \u00b7 1.1.38",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.38.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.38.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.38"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 1579.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 118,
+   "name": "REEL BLACK MEN \u00b7 1.1.39",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.39.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.39.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.39"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 482.4,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 119,
+   "name": "REEL BLACK MEN \u00b7 1.1.40",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.40.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.40.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.40"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-white.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 54.1,
+     "y": 40.3,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 120,
+   "name": "REEL BLACK MEN \u00b7 1.1.41",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.41.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.41.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.41"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/RBM-2026-official-selection-black.png",
+     "file": "press/assets/derived/laurels/RBM-2026-official-selection-black.png",
+     "px": [
+      1200,
+      1200
+     ],
+     "x": 196.6,
+     "y": 44.8,
+     "w": 285.4,
+     "h": 285.4,
+     "alt": "REEL BLACK MEN 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 121,
+   "name": "B.E.S.T. \u00b7 1.1.1",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.1.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.1.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.1"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 253.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 122,
+   "name": "B.E.S.T. \u00b7 1.1.2",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.2.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.2.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.2"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "px": [
+      2192,
+      2614
+     ],
+     "x": 145.4,
+     "y": 190.8,
+     "w": 359.2,
+     "h": 428.4,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 123,
+   "name": "B.E.S.T. \u00b7 1.1.3",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.3.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.3.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.3"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 124,
+   "name": "B.E.S.T. \u00b7 1.1.4",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.4.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.4.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.4"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 253.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 125,
+   "name": "B.E.S.T. \u00b7 1.1.5",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.5.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.5.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.5"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 126,
+   "name": "B.E.S.T. \u00b7 1.1.6",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.6.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.6.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.6"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 127,
+   "name": "B.E.S.T. \u00b7 1.1.7",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.7.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.7.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.7"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 128,
+   "name": "B.E.S.T. \u00b7 1.1.8",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.8.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.8.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.8"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 253.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 129,
+   "name": "B.E.S.T. \u00b7 1.1.9",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.9.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.9.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.9"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 253.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 130,
+   "name": "B.E.S.T. \u00b7 1.1.10",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.10.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.10.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.10"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 253.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 131,
+   "name": "B.E.S.T. \u00b7 1.1.11",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.11.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.11.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.11"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 253.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 132,
+   "name": "B.E.S.T. \u00b7 1.1.12",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.12.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.12.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.12"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 253.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 133,
+   "name": "B.E.S.T. \u00b7 1.1.13",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.13.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.13.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.13"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 253.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 134,
+   "name": "B.E.S.T. \u00b7 1.1.14",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.14.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.14.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.14"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 135,
+   "name": "B.E.S.T. \u00b7 1.1.15",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.15.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.15.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.15"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 136,
+   "name": "B.E.S.T. \u00b7 1.1.16",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.16.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.16.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.16"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 253.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 137,
+   "name": "B.E.S.T. \u00b7 1.1.17",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.17.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.17.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.17"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "px": [
+      2192,
+      2614
+     ],
+     "x": 1577.9,
+     "y": 63.2,
+     "w": 204.3,
+     "h": 243.6,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 138,
+   "name": "B.E.S.T. \u00b7 1.1.18",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.18.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.18.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.18"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "px": [
+      2192,
+      2614
+     ],
+     "x": 279.8,
+     "y": 184.2,
+     "w": 370.4,
+     "h": 441.7,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 139,
+   "name": "B.E.S.T. \u00b7 1.1.19",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.19.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.19.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.19"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 140,
+   "name": "B.E.S.T. \u00b7 1.1.20",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.20.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.20.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.20"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 141,
+   "name": "B.E.S.T. \u00b7 1.1.21",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.21.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.21.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.21"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 253.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 142,
+   "name": "B.E.S.T. \u00b7 1.1.22",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.22.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.22.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.22"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1080.5,
+     "y": 36.5,
+     "w": 648.0,
+     "h": 242.2,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 143,
+   "name": "B.E.S.T. \u00b7 1.1.23",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.23.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.23.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.23"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "px": [
+      2192,
+      2614
+     ],
+     "x": 1427.6,
+     "y": 71.2,
+     "w": 274.7,
+     "h": 327.6,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 144,
+   "name": "B.E.S.T. \u00b7 1.1.24",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.24.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.24.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.24"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 474.9,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 145,
+   "name": "B.E.S.T. \u00b7 1.1.25",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.25.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.25.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.25"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1118.7,
+     "y": 102.1,
+     "w": 711.5,
+     "h": 265.9,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 146,
+   "name": "B.E.S.T. \u00b7 1.1.27",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.27.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.27.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.27"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 147,
+   "name": "B.E.S.T. \u00b7 1.1.28",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.28.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.28.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.28"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 148,
+   "name": "B.E.S.T. \u00b7 1.1.29",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.29.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.29.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.29"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 149,
+   "name": "B.E.S.T. \u00b7 1.1.30",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.30.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.30.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.30"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 150,
+   "name": "B.E.S.T. \u00b7 1.1.31",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.31.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.31.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.31"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "px": [
+      2192,
+      2614
+     ],
+     "x": 74.4,
+     "y": 199.6,
+     "w": 361.2,
+     "h": 430.7,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 151,
+   "name": "B.E.S.T. \u00b7 1.1.32",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.32.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.32.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.32"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "px": [
+      2192,
+      2614
+     ],
+     "x": 72.8,
+     "y": 209.6,
+     "w": 344.4,
+     "h": 410.7,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 152,
+   "name": "B.E.S.T. \u00b7 1.1.33",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.33.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.33.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.33"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "px": [
+      2192,
+      2614
+     ],
+     "x": 1443.0,
+     "y": 96.8,
+     "w": 324.0,
+     "h": 386.4,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 153,
+   "name": "B.E.S.T. \u00b7 1.1.34",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.34.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.34.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.34"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 474.9,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 154,
+   "name": "B.E.S.T. \u00b7 1.1.35",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.35.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.35.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.35"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 474.9,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 155,
+   "name": "B.E.S.T. \u00b7 1.1.36",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.36.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.36.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.36"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "px": [
+      2192,
+      2614
+     ],
+     "x": 1497.9,
+     "y": 63.2,
+     "w": 204.3,
+     "h": 243.6,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 156,
+   "name": "B.E.S.T. \u00b7 1.1.37",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.37.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.37.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.37"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold_stacked.png",
+     "px": [
+      2192,
+      2614
+     ],
+     "x": 1467.6,
+     "y": 71.2,
+     "w": 274.7,
+     "h": 327.6,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 157,
+   "name": "B.E.S.T. \u00b7 1.1.38",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.38.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.38.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.38"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 158,
+   "name": "B.E.S.T. \u00b7 1.1.39",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.39.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.39.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.39"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 1095.2,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 159,
+   "name": "B.E.S.T. \u00b7 1.1.40",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.40.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.40.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.40"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_gold.png",
+     "px": [
+      4356,
+      1628
+     ],
+     "x": 32.8,
+     "y": 32.8,
+     "w": 790.8,
+     "h": 295.5,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  },
+  {
+   "n": 160,
+   "name": "B.E.S.T. \u00b7 1.1.41",
+   "background": "#0b0806",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-laurel-stills/still-1.1.41.jpg",
+     "file": "press/assets/derived/canva-laurel-stills/still-1.1.41.jpg",
+     "px": [
+      1920,
+      803
+     ],
+     "x": 0,
+     "y": 0,
+     "w": 1920,
+     "h": 803,
+     "alt": "Killer of Men still 1.1.41"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/BEST-2026-winner_black_stacked.png",
+     "file": "press/assets/derived/laurels/BEST-2026-winner_black_stacked.png",
+     "px": [
+      2192,
+      2614
+     ],
+     "x": 237.9,
+     "y": 63.2,
+     "w": 204.3,
+     "h": 243.6,
+     "alt": "B.E.S.T. 2026 laurel"
+    }
+   ]
+  }
+ ]
+}
