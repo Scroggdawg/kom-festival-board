@@ -93,7 +93,7 @@
           "by": "Claude in Luke's Chrome, Position panel values (px, 1728x2304 page)",
           "layout": {
             "title": {
-              "text": "A W A R D S   A N D   S E L E C T I O N S",
+              "text": "A W A R D S   &   S E L E C T I O N S",
               "box": [
                 0,
                 249,
@@ -161,6 +161,11 @@
             "removed": "the gold-on-black B.E.S.T. official-selection square (266x266 at 1338,1620)"
           },
           "proof": "press/proofs/canva-page2-awards-and-selections-2026-10-11.png"
+        },
+        {
+          "at": "2026-10-11, later",
+          "by": "Claude in Luke's Chrome",
+          "change": "title text: AND -> &"
         }
       ]
     },
