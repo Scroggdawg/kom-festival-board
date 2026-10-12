@@ -43,9 +43,22 @@ The claude.ai Canva connector reaches the design from a session with no browser,
 
 Page rebuilds from the contract still go through the app in a front tab (below). The design tab opened by a session starts hidden, and the app's panel takes no input there.
 
-## Open items (as of 2026-09-20)
+## Procedure: place or move images on a built Canva page by hand (Chrome, found 2026-10-11)
+
+When the connector is not in the session, Luke's Chrome (`mcp__claude-in-chrome__*`) can edit the design directly. What worked and what bit:
+
+1. Open the edit URL in a new tab of the session's own tab group (`navigate` with no tabId creates it); click the page thumbnail. The page is 1728×2304 px in the Position panel's units.
+2. Select an element, toolbar **Position** (for images with a colour swatch it hides under the toolbar's `•••`, then "Position"; the floating `•••` next to the trash is a different menu). The panel's Advanced fields sit at full-frame (140,543) W, (252,543) H, (140,620) X, (252,620) Y; triple-click, type, Return.
+3. **Turn the Ratio lock on (363,543) before typing a width.** With it off, W and H edits crop the picture inside its frame instead of scaling it; five laurels had to be deleted and re-added on 11 Oct because of this. With it on, set W only and H follows.
+4. To pick an element the canvas click misses (the feathered still, the thin rule), use the panel's **Layers** tab (335,133): rows are z-order, top = front; click the row, then **Arrange** (172,133). The panel stays open across selections; opening Uploads replaces it.
+5. Uploads: `find` the `input type=file`, then `file_upload` with paths inside the repo (Drive paths are refused); click the thumbnail to add the image at page centre.
+6. Never click the toolbar by guessed coordinates when a text or colour element is selected: one such click opened Animate and applied a Whip Slide to a laurel (removed with "Remove animation"). Use `find` for the button and click its ref.
+7. `get_page_text` reads the displayed page's text; a zoom of the page region is the proof. Record the numbers in `canva/STATE.json` under the page's `edited_in_place`.
+
+## Open items (as of 2026-10-11)
 
 - Field 2.2: done 16 Sep, Luke's Canva synopsis mirrored (rev 33 in the worksheet). The seven-inference analysis in `press/synopsis-evidence.md` applies to the old draft C, not to his text.
 - Cast bios: **Erik Orjiako's is in as Luke supplied it on 21 Sep** (worksheet rev 35, kit PDF `1250_21092026`, Canva page 7 edited in place; three slips corrected and listed in the field's note: "performaces", "Malcom X", a stray semicolon; East West Players' own page lists him among three actors alternating as Malcolm X in the 2026-27 Theatre for Youth Tour, so "currently touring" will date). **Eric Pargac's and Jamal Dennis's are in, as Luke supplied them on 20 Sep** (worksheet rev 34, kit PDF `0958_20092026`, contract on Pages, Canva page 7 edited in place and committed; the wording matches each actor's self-written IMDb mini biography where the 10 Sep captures quote it). Sandra McDaniels's is the last 10 Sep draft; the conservative proposal for hers awaits Luke's go, and she still has no bio of her own. Hers is now the only one that ends with the "In Killer of Men she plays" sentence; Luke's call whether it stays. The EPK INFO Doc still shows the 10 Sep drafts for all four (it is also behind on 2.2, 3.1, 5.7 and 11.1).
 - Page 11: "Devaraonda" spelling is Luke's to fix in Canva.
 - Export: Luke downloads (Share › Download › PDF Print · RGB · all pages · crop marks off · flatten off), then `venv/bin/python tools/check-canva-export.py "$HOME/Downloads/EPK _ KoM 2026.pdf"`, copy to the Drive `EPK BUILDS/CANVA`.
+- Page 2 (Awards and Selections, id PBqsKPqPf7fXJThf): rebuilt by hand 11 Oct; the design is ahead of every export (the PDFs from handoff-154/155 predate it) and of the kit, contract and worksheet, which have no laurel page. AFI Fest laurel is a 143 px source: ask AFI for a vector. 

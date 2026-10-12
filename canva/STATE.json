@@ -1,7 +1,7 @@
 {
   "purpose": "Progress of the KILLER OF MEN press-kit build in Canva. Any account resumes from this file. Update it in the same turn a step completes; never leave it behind the truth.",
-  "updated": "2026-10-05",
-  "updated_by": "Opus 5.5, BTS page layout C",
+  "updated": "2026-10-11",
+  "updated_by": "epk lane, handoff-161",
   "decisions": {
     "plan_tier": "Canva Pro (Luke upgraded 2026-09-10)",
     "typeface": "Build in Libre Baskerville (apps cannot use uploaded fonts). Optional afterwards, Luke's call: split /System/Library/Fonts/Supplemental/Baskerville.ttc into Regular, SemiBold, Bold .ttf with fontTools, upload to Brand > Fonts, swap in the editor. Not required; the kit must be right for KILLER OF MEN, not match Night Feeds.",
@@ -80,6 +80,89 @@
       "elements_attempted": 1,
       "elements_placed": 1,
       "page_id": "PB1snrB0C5yrf0Vm"
+    },
+    {
+      "n": 2,
+      "name": "02 Awards and Selections",
+      "page_id": "PBqsKPqPf7fXJThf",
+      "status": "hand-built (handoff-128), edited by hand in Chrome 2026-10-11",
+      "note": "Every page after this one is one further down the design than its n here (logline is 3, thanks is 12).",
+      "edited_in_place": [
+        {
+          "at": "2026-10-11",
+          "by": "Claude in Luke's Chrome, Position panel values (px, 1728x2304 page)",
+          "layout": {
+            "title": {
+              "text": "A W A R D S   A N D   S E L E C T I O N S",
+              "box": [
+                0,
+                249,
+                1728,
+                63
+              ],
+              "font": "Libre Baskerville 40"
+            },
+            "rule": [
+              706.7,
+              339,
+              314.7,
+              0.9
+            ],
+            "still_1.1.13_feather22": [
+              0,
+              429,
+              1728,
+              860
+            ],
+            "label_KILLER_OF_MEN": [
+              0,
+              1314,
+              1728,
+              24
+            ],
+            "row_official_selections": {
+              "ABFF": [
+                67,
+                1379,
+                296,
+                196.5
+              ],
+              "MVAAFF": [
+                411,
+                1379,
+                296,
+                196.5
+              ],
+              "SCAD": [
+                755,
+                1379,
+                296,
+                196.5
+              ],
+              "AFI_FEST_x4": [
+                1099,
+                1379,
+                282,
+                197.2
+              ],
+              "RBM_white": [
+                1429,
+                1363,
+                232,
+                232
+              ]
+            },
+            "BEST_2026_winner_gold": [
+              344,
+              1666,
+              1040,
+              388.3
+            ],
+            "removed": "the gold-on-black B.E.S.T. official-selection square (266x266 at 1338,1620)"
+          },
+          "proof": "press/proofs/canva-page2-awards-and-selections-2026-10-11.png"
+        }
+      ]
     },
     {
       "n": 2,
