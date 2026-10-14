@@ -12,3 +12,6 @@
 
 ## Files
 - Prior handoff: https://github.com/Scroggdawg/kom-festival-board/blob/main/handoffs/handoff-164-epk.md · This handoff: https://github.com/Scroggdawg/kom-festival-board/blob/main/handoffs/handoff-165-epk.md
+
+## Update, same day
+- Luke downloaded it. Renamed to `KillerOfMen_Poster-and-Credits_14102026.pdf` (3.9 MB, 4 pages, 18×24 in, order checked: poster, credits, crew, thanks); in ~/Downloads and Drive `00 PRESS/EPK BUILDS/CANVA/`.
