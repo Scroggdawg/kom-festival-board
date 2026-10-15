@@ -80,3 +80,31 @@ def block(img, fontfile, cx, cy, cap=34, track=.32, color=RED, rule="plain", rul
             x = left if align == "left" else left + w - lw
             for c in locator: d.text((x, ly - ltop), c, font=lf, fill=loc_color or rc); x += lf.getlength(c) + .28 * lf.size
     return img
+
+# --- large titles (2026-10-15, single-figure frame) ------------------------------------------
+def grad_burn(img, top=True, frac=.55, strength=.55):
+    """Grade-style darkening from one edge, the way a colourist would bring a band down for type."""
+    W, H = img.size; m = Image.new("L", (1, H))
+    for y in range(H):
+        t = (1 - y / (H * frac)) if top else (1 - (H - y) / (H * frac))
+        m.putpixel((0, y), int(255 * strength * max(0, min(1, t)) ** 1.6))
+    return Image.composite(Image.new("RGB", img.size, (0, 0, 0)), img, m.resize((W, H)))
+
+def big(img, lines, fontfile, cap, x, y, align="center", track=.12, color=(206, 40, 32), lead=1.32, weight=None,
+        rule=None, rule_color=None, burn_box=None, burn_strength=.55, sizes=None, opacity=1.0):
+    """lines: list of strings; sizes: per-line cap heights (else cap). x is the anchor (centre, left or right edge); y is the top of the first line's caps."""
+    if burn_box: img = burn(img, burn_box, burn_strength, blur=140)
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0)); d = ImageDraw.Draw(layer)
+    col = color + (int(255 * opacity),); yy = y; widths = []
+    for i, text in enumerate(lines):
+        c = (sizes or [cap] * len(lines))[i]; f = setfont(fontfile, c, weight); ch, top = cap_height(f); tr = track * f.size
+        w = tracked_width(f, text, tr); widths.append(w)
+        x0 = {"center": x - w / 2, "left": x, "right": x - w}[align]
+        xx = x0
+        for chr_ in text: d.text((xx, yy - top), chr_, font=f, fill=col); xx += f.getlength(chr_) + tr
+        last_ch = ch; last_c = c; yy += c * lead
+    if rule:
+        rw = max(widths) * rule; ry = yy - last_c * lead + last_ch * 1.75
+        rx = {"center": x - rw / 2, "left": x, "right": x - rw}[align]
+        d.rectangle([rx, ry, rx + rw, ry + max(3, int(last_ch / 22))], fill=(rule_color or color) + (int(255 * opacity),))
+    out = img.convert("RGBA"); out.alpha_composite(layer); return out.convert("RGB")
