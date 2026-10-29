@@ -1,7 +1,7 @@
 {
  "schema": 3,
- "rev": 40,
- "updated": "2026-10-05T17:22:42-07:00",
+ "rev": 42,
+ "updated": "2026-10-29T18:48:27-04:00",
  "updatedBy": "epk.py set",
  "title": "Killer of Men — EPK",
  "source": "press/epk-spec.md",
@@ -67,13 +67,8 @@
      "id": "p2-logline",
      "n": "2.1",
      "label": "Logline",
-     "value": "Killer of Men follows Mace, an enslaved man forced into mandingo fights. After killing an opponent, he stumbles upon the burial of the man he killed, igniting a reckoning with guilt, faith, and the violence shaping his life and identity.",
+     "value": "After killing another enslaved man in a forced prizefight, Mace encounters a woman who recognizes the identity slavery has tried to erase, setting off a quiet reckoning with violence, guilt and his ancestral past.",
      "history": [
-      {
-       "at": "2026-09-08T14:08:05-07:00",
-       "by": "festival lane — superseded by the two-version lock",
-       "value": ""
-      },
       {
        "at": "2026-09-08T14:08:05-07:00",
        "by": "festival lane — Luke locked two versions Sep 8",
@@ -98,6 +93,11 @@
        "at": "2026-09-11T15:51:46-05:00",
        "by": "epk.py",
        "value": "Killer of Men follows Mace, an enslaved man forced into mandingo fights. After killing an opponent, he stumbles upon the burial of the man he killed, igniting a reckoning with guilt, faith, and the violence shaping his life and identity."
+      },
+      {
+       "at": "2026-10-29T18:48:27-04:00",
+       "by": "epk.py",
+       "value": "After killing another enslaved man in a forced prizefight, Mace encounters a woman who recognizes the identity slavery has tried to erase, setting off a quiet reckoning with violence, guilt and his ancestral past."
       }
      ],
      "options": [
@@ -122,7 +122,7 @@
      "id": "p2-synopsis",
      "n": "2.2",
      "label": "Synopsis",
-     "value": "Set in the American South in the 1830s, KILLER OF MEN is a Southern Gothic that follows Mace, an enslaved man forced into underground prizefighting for the profit of his enslaver.\n\nAfter killing another fighter in the ring, Mace is granted a moment of rest, but accidentally stumbles upon the burial of the man he killed. The chance encounter pulls Mace into a quiet reckoning with guilt, faith, and the violence that sustains his life, revealing the distance between the slave he has been made and the king he was meant to be.",
+     "value": "In the 1830s American South, Mace is an enslaved prizefighter whose strength profits the man who owns him. After killing another fighter, he comes upon the man's burial and meets an Elder whose connection to ancestral spirituality begins to reconnect him to history, faith and self. Killer of Men is a Southern Gothic about the distance between the weapon he's been made into and the man he might have been.",
      "history": [
       {
        "at": "2026-09-08T22:41:58-07:00",
@@ -143,6 +143,11 @@
        "at": "2026-09-16T10:10:28-07:00",
        "by": "epk.py",
        "value": "Set in the American South in the 1830s, KILLER OF MEN is a Southern Gothic that follows Mace, an enslaved man forced into underground prizefighting for the profit of his enslaver.\n\nAfter killing another fighter in the ring, Mace is granted a moment of rest, but accidentally stumbles upon the burial of the man he killed. The chance encounter pulls Mace into a quiet reckoning with guilt, faith, and the violence that sustains his life, revealing the distance between the slave he has been made and the king he was meant to be."
+      },
+      {
+       "at": "2026-10-29T18:48:27-04:00",
+       "by": "epk.py",
+       "value": "In the 1830s American South, Mace is an enslaved prizefighter whose strength profits the man who owns him. After killing another fighter, he comes upon the man's burial and meets an Elder whose connection to ancestral spirituality begins to reconnect him to history, faith and self. Killer of Men is a Southern Gothic about the distance between the weapon he's been made into and the man he might have been."
       }
      ],
      "options": [

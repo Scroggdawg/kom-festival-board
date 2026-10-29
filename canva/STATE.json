@@ -178,7 +178,14 @@
       "elements_attempted": 7,
       "elements_placed": 7,
       "page_id": "PB3mndGH40zlgFy2",
-      "note": "hero derivative p02-e01.jpg carries the bottom fade (HERO_FADE 0.16, the director's note 2026-09-14)"
+      "note": "hero derivative p02-e01.jpg carries the bottom fade (HERO_FADE 0.16, the director's note 2026-09-14)",
+      "edited_in_place": [
+        {
+          "at": "2026-10-29",
+          "by": "Claude in Luke's Chrome",
+          "change": "logline and synopsis replaced with Luke's new text (worksheet 2.1 rev 41, 2.2 rev 42); synopsis is one paragraph in the existing box; Canva curled the apostrophes in man's and he's"
+        }
+      ]
     },
     {
       "n": 3,
