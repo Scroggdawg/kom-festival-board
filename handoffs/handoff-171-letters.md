@@ -1,6 +1,7 @@
 # handoff-171-letters — Cover letters lane opened; Garden State draft v1
 
 ## Recap (newest first)
+- Garden State v3: Luke's six notes applied. The Elder is now "born in Africa", which comes from Luke and is not in the EPK text. The Heather line was rewritten; the recusal is left for her own email to the programmers. Lighting line rewritten, Best Cinematography added, attendance warmer. 224 words including sign-off, up from 182, because of the additions.
 - Garden State v2 is 22% shorter than v1 (body 218 to 169 words). The attendance line is in: Luke confirmed the team would come. The NJ tie is a verified history line, that New Jersey was the last Northern state to end slavery. Three alternates are tabled in the letter file: an actor-founded festival (Robert Pastorelli), FRESH KILLS if any of it was shot in NJ, and any team member with NJ roots. None of those turned up in the repo or online. The Heather line is kept but still awaits Luke's call.
 - I drafted the Garden State Film Festival cover letter, v1. It follows the Freeway Fixr framework and Heather's 22 Oct call notes, and is signed as cinematographer coordinating the festival run. It has two gaps for Luke: a personal New Jersey tie (no tie is on record anywhere in the repo) and attendance. It also has one judgment call: whether to name Heather as the person who recommended the festival.
 - The letters live in `press/cover-letters/`. That folder is local only (`.git/info/exclude`): the repo is public and the letters name our consultant.
