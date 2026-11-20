@@ -35,3 +35,8 @@
   - Designs: Portrait https://www.canva.com/design/DAHbbMdbsT4/edit (12 pages), Landscape https://www.canva.com/design/DAHbbIX5v74/edit (6 pages). On every page the frame and the laurel are separate, movable elements.
   - Portrait A puts the laurel on her neckline; A works best as landscape.
 - Next: Luke reviews and adjusts in Canva, then exports PNG at 1080 wide (his click).
+- **Luke's round of edits in the portrait design (voice note, 2026-11-19):**
+  - Pages 1, 2, 5 (A, B, E) now show the full 2.39:1 frame (1080 wide, centred, black above and below). Each white laurel sits inside the picture at 108 px tall.
+  - Pages 4, 6, 8 (D, F, H): the laurel is now the official black file, at Luke's own positions (4: 652.6,239.4; 6: 108,1064.3; 8: 364.2,1070; each 351.7×230). Read from Canva's Position panel; his crops on those pages are untouched.
+  - Method: patch ops `canva/ops/cta-2027-luke-edits.json` + the app's "Place page N on the current page". Canva's Replace can't reach app-uploaded assets: they don't show in Uploads search.
+  - Pages 3, 7, 9–12 untouched. Grid: `press/social/cta-2027/canva-portrait-after-luke-edits.jpg`.
