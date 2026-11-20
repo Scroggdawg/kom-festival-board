@@ -1,0 +1,231 @@
+{
+ "schema": 1,
+ "generated": "2026-11-19T19:54:58",
+ "source": {
+  "kit_commit": "cta-2027",
+  "epk_rev": 0
+ },
+ "page": {
+  "width_pt": 1080,
+  "height_pt": 566
+ },
+ "fonts": {},
+ "pages": [
+  {
+   "n": 1,
+   "name": "CTA \u00b7 A elder looking up",
+   "background": "#000000",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-cta-2027/A.jpg",
+     "file": "press/assets/derived/canva-cta-2027/A.jpg",
+     "px": [
+      1916,
+      802
+     ],
+     "x": -272.5,
+     "y": 0.0,
+     "w": 1352.5,
+     "h": 566.1,
+     "alt": "Killer of Men, A elder looking up"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "file": "press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "px": [
+      1980,
+      1295
+     ],
+     "x": 23,
+     "y": 23,
+     "w": 165,
+     "h": 108,
+     "alt": "College Television Awards 2027 nominee laurel"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "name": "CTA \u00b7 B Mace firelight",
+   "background": "#000000",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-cta-2027/B.jpg",
+     "file": "press/assets/derived/canva-cta-2027/B.jpg",
+     "px": [
+      1920,
+      800
+     ],
+     "x": 0.0,
+     "y": 0.0,
+     "w": 1357.1,
+     "h": 565.4,
+     "alt": "Killer of Men, B Mace firelight"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "file": "press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "px": [
+      1980,
+      1295
+     ],
+     "x": 892,
+     "y": 23,
+     "w": 165,
+     "h": 108,
+     "alt": "College Television Awards 2027 nominee laurel"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "name": "CTA \u00b7 C elder firelight",
+   "background": "#000000",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-cta-2027/C.jpg",
+     "file": "press/assets/derived/canva-cta-2027/C.jpg",
+     "px": [
+      1920,
+      800
+     ],
+     "x": -141.4,
+     "y": 0.0,
+     "w": 1357.1,
+     "h": 565.4,
+     "alt": "Killer of Men, C elder firelight"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "file": "press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "px": [
+      1980,
+      1295
+     ],
+     "x": 23,
+     "y": 23,
+     "w": 165,
+     "h": 108,
+     "alt": "College Television Awards 2027 nominee laurel"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "name": "CTA \u00b7 D Mace at the cabin",
+   "background": "#000000",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-cta-2027/D.jpg",
+     "file": "press/assets/derived/canva-cta-2027/D.jpg",
+     "px": [
+      1920,
+      800
+     ],
+     "x": 0.0,
+     "y": 0.0,
+     "w": 1357.1,
+     "h": 565.4,
+     "alt": "Killer of Men, D Mace at the cabin"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "file": "press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "px": [
+      1980,
+      1295
+     ],
+     "x": 23,
+     "y": 23,
+     "w": 165,
+     "h": 108,
+     "alt": "College Television Awards 2027 nominee laurel"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "name": "CTA \u00b7 E the burial",
+   "background": "#000000",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-cta-2027/E.jpg",
+     "file": "press/assets/derived/canva-cta-2027/E.jpg",
+     "px": [
+      1920,
+      800
+     ],
+     "x": -136.4,
+     "y": 0.0,
+     "w": 1357.1,
+     "h": 565.4,
+     "alt": "Killer of Men, E the burial"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "file": "press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "px": [
+      1980,
+      1295
+     ],
+     "x": 23,
+     "y": 23,
+     "w": 165,
+     "h": 108,
+     "alt": "College Television Awards 2027 nominee laurel"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "name": "CTA \u00b7 F elder under the oak",
+   "background": "#000000",
+   "count": 2,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/canva-cta-2027/F.jpg",
+     "file": "press/assets/derived/canva-cta-2027/F.jpg",
+     "px": [
+      1920,
+      800
+     ],
+     "x": -272.8,
+     "y": 0.0,
+     "w": 1357.1,
+     "h": 565.4,
+     "alt": "Killer of Men, F elder under the oak"
+    },
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "file": "press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "px": [
+      1980,
+      1295
+     ],
+     "x": 23,
+     "y": 23,
+     "w": 165,
+     "h": 108,
+     "alt": "College Television Awards 2027 nominee laurel"
+    }
+   ]
+  }
+ ]
+}
