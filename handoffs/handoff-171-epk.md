@@ -24,3 +24,4 @@
 
 ## Addendum, same day
 - Luke pasted the Foundation's email: **Scripted Series** (graduate). Public list: https://www.televisionacademy.com/features/news/awards-news/46th-cta-nominees. Also nominated in the category: AFTERLIFE and Fly Again (both USC). Captions filled in; the announcement is public.
+- Luke: the posts come from @killerofmenmovie, not him; captions stay generic, naming no crew and no cinematography; never name the co-writer anywhere (memory filed). All five captions rewritten; the only tag is @televisionacademyfoundation.

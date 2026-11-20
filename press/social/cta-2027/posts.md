@@ -6,7 +6,7 @@ Category: **Scripted Series** (for graduate students), per the Foundation's emai
 ## Before posting
 - **Announcement:** public. The Foundation's list is live, and the toolkit and email both encourage posting.
 - **Stage portraits (G–K)** are Jedidiah Woods' staged costume portraits, filed under BTS. They show the film's cast in costume and fit "production stills" in spirit, but the toolkit forbids "other images". If unsure, lead with the film frames (A–F).
-- **Handles to confirm:** Jedidiah Woods (unknown), AFI (left out until checked). Cast handles are not on file.
+- **No crew in captions.** Luke's ruling: the film account stays general, naming no crew, departments or cinematography.
 
 ## Images
 | ID | Image | Format | Laurel |
@@ -28,19 +28,17 @@ Laurel on slide 1 only; the other carousel slides are the same frames without it
 
 ---
 
-## 1. Announcement, film account
-**From:** @killerofmenmovie · **Carousel:** D, B, C, E (no laurel), Z
+## 1. Announcement
+**Carousel:** D, B, C, E (laurel on D only), Z
 
 > KILLER OF MEN is a nominee at the 46th College Television Awards, in the Scripted Series category.
 >
-> Thank you to the @televisionacademyfoundation for recognizing our work, and to the cast and crew who made this film.
->
-> Written and directed by @jordanbetine · Produced by @smile_xiao624 · Cinematography @luscroggs · Production design @itsrjactually · Edited by @ywu.0125
+> Thank you to the @televisionacademyfoundation for recognizing our work.
 >
 > #CollegeTVAwards #KillerOfMen #AFIConservatory #ShortFilm
 
-## 2. Logline-led, film account
-**From:** @killerofmenmovie · **Single image:** A (or F)
+## 2. Logline-led
+**Single image:** A (or F)
 
 > In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own.
 >
@@ -48,32 +46,24 @@ Laurel on slide 1 only; the other carousel slides are the same frames without it
 >
 > #KillerOfMen #ShortFilm #PeriodDrama #AFIConservatory
 
-## 3. The image, film account
-**From:** @killerofmenmovie · **Carousel:** B, C, D, F (laurel on B only)
+## 3. Frames only
+**Carousel:** B, C, D, F (laurel on B only)
 
-> Lit by fire and by what came through the oaks.
+> Official nominee, 46th College Television Awards. Scripted Series.
 >
-> KILLER OF MEN is nominated for the #CollegeTVAwards in Scripted Series. Thank you to the @televisionacademyfoundation, and to the camera, electric and grip teams behind every one of these frames.
+> Thank you, @televisionacademyfoundation.
 >
-> Cinematography by @luscroggs · Directed by @jordanbetine
->
-> #KillerOfMen #Cinematography #AFIConservatory #ShortFilm
+> #CollegeTVAwards #KillerOfMen #ShortFilm #AFIConservatory
 
-*Check before use:* the opening line describes these frames. Change it if it isn't how you'd describe the lighting.
+## 4. The stage portraits
+**Carousel:** I, G, J, H, K (laurel on I only) · *see the caution above*
 
-## 4. The stage portraits, film account
-**From:** @killerofmenmovie · **Carousel:** I, G, J, H, K (laurel on I only) · *see the caution above*
-
-> The ancestors, photographed on set by [@jedidiah handle].
->
 > KILLER OF MEN is a nominee at the 46th College Television Awards. Thank you to the @televisionacademyfoundation.
 >
 > #CollegeTVAwards #KillerOfMen #ShortFilm #AFIConservatory
 
-*Check before use:* "The ancestors" is my reading of the kente costumes. Change it if these portraits are something else.
-
 ## 5. Short, closest to the toolkit sample
-**From:** @killerofmenmovie · **Single image:** E, or Z alone
+**Single image:** E, or Z alone
 
 > Honored that KILLER OF MEN has been nominated for the #CollegeTVAwards! @televisionacademyfoundation
 >
@@ -82,8 +72,8 @@ Laurel on slide 1 only; the other carousel slides are the same frames without it
 ---
 
 ## Posting from @killerofmenmovie
-- All five are written in the film's voice: "we" means the production, and no caption uses "I" or "my".
-- Use Instagram's **Collab** invite for @jordanbetine and @smile_xiao624, the two listed nominees, so the post also shows on their grids and the likes and comments are shared. Tag the other department heads in the caption or on the image.
+- All five post from @killerofmenmovie, in the film's voice. They name no individuals or crew; the Foundation's tag is the only @.
+- Optional: send a **Collab** invite to @jordanbetine and @smile_xiao624, the two listed nominees, so the post also appears on their grids. Nothing is added to the caption.
 
 ## Wording check (all five)
 - Uses "College Television Awards" / "46th College Television Awards" / #CollegeTVAwards only. No "College Emmys", "College TV Emmys" or "annual".
