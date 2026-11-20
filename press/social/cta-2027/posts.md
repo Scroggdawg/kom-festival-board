@@ -1,10 +1,10 @@
 # Instagram candidates: 46th College Television Awards nomination
 
 Rules: `press/social/cta-2027-rules.md`. Images: `candidates/` (rebuild with `tools/cta-laurel-posts.py`).
-`[CATEGORY]` = the nominated category, still to fill in. The logline lines are the locked first two sentences of logline A/B (`press/filmfreeway-page-v6.md`).
+Category: **Scripted Series** (for graduate students), per the Foundation's email and the public list (televisionacademy.com/features/news/awards-news/46th-cta-nominees). The logline lines are the locked first two sentences of logline A/B (`press/filmfreeway-page-v6.md`).
 
 ## Before posting
-- **Announcement.** On 2026-11-19 no public 46th nominee list could be found (last year's went out 19 Nov 2025). Confirm the nomination is public before posting.
+- **Announcement:** public. The Foundation's list is live, and the toolkit and email both encourage posting.
 - **Stage portraits (G–K)** are Jedidiah Woods' staged costume portraits, filed under BTS. They show the film's cast in costume and fit "production stills" in spirit, but the toolkit forbids "other images". If unsure, lead with the film frames (A–F).
 - **Handles to confirm:** Jedidiah Woods (unknown), AFI (left out until checked). Cast handles are not on file.
 
@@ -31,7 +31,7 @@ Laurel on slide 1 only; the other carousel slides are the same frames without it
 ## 1. Announcement, film account
 **From:** @killerofmenmovie · **Carousel:** D, B, C, E (no laurel), Z
 
-> KILLER OF MEN is a nominee at the 46th College Television Awards, in [CATEGORY].
+> KILLER OF MEN is a nominee at the 46th College Television Awards, in the Scripted Series category.
 >
 > Thank you to the @televisionacademyfoundation for recognizing our work, and to the cast and crew who made this film.
 >
@@ -44,14 +44,14 @@ Laurel on slide 1 only; the other carousel slides are the same frames without it
 
 > In 1834 South Carolina, an enslaved man is forced to fight to the death for spectacle, and survival. But every victory means killing one of his own.
 >
-> KILLER OF MEN is nominated for the #CollegeTVAwards in [CATEGORY]. Thank you, @televisionacademyfoundation.
+> KILLER OF MEN is nominated for the #CollegeTVAwards in Scripted Series. Thank you, @televisionacademyfoundation.
 >
 > #KillerOfMen #ShortFilm #PeriodDrama #AFIConservatory
 
 ## 3. Cinematographer, personal account
 **From:** @luscroggs · **Carousel:** B, C, D, F (laurel on B only)
 
-> Honored that KILLER OF MEN, my AFI thesis with @jordanbetine, has been nominated for the #CollegeTVAwards in [CATEGORY].
+> Honored that KILLER OF MEN, my AFI thesis with @jordanbetine, has been nominated for the #CollegeTVAwards in Scripted Series.
 >
 > We lit most of this film by fire and by what came through the oaks. Thank you to my camera, electric and grip teams for every night of it, and to the @televisionacademyfoundation.
 >

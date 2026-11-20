@@ -21,3 +21,6 @@
 - Posts: https://github.com/Scroggdawg/kom-festival-board/blob/main/press/social/cta-2027/posts.md
 - Rules: https://github.com/Scroggdawg/kom-festival-board/blob/main/press/social/cta-2027-rules.md
 - Prior: https://github.com/Scroggdawg/kom-festival-board/blob/main/handoffs/handoff-170-epk.md · This: https://github.com/Scroggdawg/kom-festival-board/blob/main/handoffs/handoff-171-epk.md
+
+## Addendum, same day
+- Luke pasted the Foundation's email: **Scripted Series** (graduate). Public list: https://www.televisionacademy.com/features/news/awards-news/46th-cta-nominees. Also nominated in the category: AFTERLIFE and Fly Again (both USC). Captions filled in; the announcement is public.
