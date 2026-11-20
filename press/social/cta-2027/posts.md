@@ -48,16 +48,18 @@ Laurel on slide 1 only; the other carousel slides are the same frames without it
 >
 > #KillerOfMen #ShortFilm #PeriodDrama #AFIConservatory
 
-## 3. Cinematographer, personal account
-**From:** @luscroggs · **Carousel:** B, C, D, F (laurel on B only)
+## 3. The image, film account
+**From:** @killerofmenmovie · **Carousel:** B, C, D, F (laurel on B only)
 
-> Honored that KILLER OF MEN, my AFI thesis with @jordanbetine, has been nominated for the #CollegeTVAwards in Scripted Series.
+> Lit by fire and by what came through the oaks.
 >
-> We lit most of this film by fire and by what came through the oaks. Thank you to my camera, electric and grip teams for every night of it, and to the @televisionacademyfoundation.
+> KILLER OF MEN is nominated for the #CollegeTVAwards in Scripted Series. Thank you to the @televisionacademyfoundation, and to the camera, electric and grip teams behind every one of these frames.
 >
-> #Cinematography #KillerOfMen #AFIConservatory #CollegeTVAwards
+> Cinematography by @luscroggs · Directed by @jordanbetine
+>
+> #KillerOfMen #Cinematography #AFIConservatory #ShortFilm
 
-*Check before use:* "by fire and through the oaks" describes these frames. Change it if it doesn't match how you'd describe the lighting.
+*Check before use:* the opening line describes these frames. Change it if it isn't how you'd describe the lighting.
 
 ## 4. The stage portraits, film account
 **From:** @killerofmenmovie · **Carousel:** I, G, J, H, K (laurel on I only) · *see the caution above*
@@ -71,13 +73,17 @@ Laurel on slide 1 only; the other carousel slides are the same frames without it
 *Check before use:* "The ancestors" is my reading of the kente costumes. Change it if these portraits are something else.
 
 ## 5. Short, closest to the toolkit sample
-**From:** any account · **Single image:** E, or Z alone
+**From:** @killerofmenmovie · **Single image:** E, or Z alone
 
 > Honored that KILLER OF MEN has been nominated for the #CollegeTVAwards! @televisionacademyfoundation
 >
 > #KillerOfMen
 
 ---
+
+## Posting from @killerofmenmovie
+- All five are written in the film's voice: "we" means the production, and no caption uses "I" or "my".
+- Use Instagram's **Collab** invite for @jordanbetine and @smile_xiao624, the two listed nominees, so the post also shows on their grids and the likes and comments are shared. Tag the other department heads in the caption or on the image.
 
 ## Wording check (all five)
 - Uses "College Television Awards" / "46th College Television Awards" / #CollegeTVAwards only. No "College Emmys", "College TV Emmys" or "annual".
