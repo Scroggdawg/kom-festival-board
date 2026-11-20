@@ -44,7 +44,7 @@
     },
     "fonts": {
       "done": true,
-      "Bask": "Libre Baskerville · ref YACgEUFdPdA:0 · weights normal,bold (picked per session; refs are short-lived)",
+      "Bask": "Libre Baskerville \u00b7 ref YACgEUFdPdA:0 \u00b7 weights normal,bold (picked per session; refs are short-lived)",
       "Bask-SB": "no semibold in Libre Baskerville; the contract's fallback_weight bold applies",
       "Bask-B": "Libre Baskerville bold",
       "uploaded_baskerville_visible_to_app": "not tested (no upload made)"
@@ -241,7 +241,7 @@
         {
           "at": "2026-10-05",
           "how": "Canva connector update_fill, committed on Luke's word ('keep her original crop' = the first, Canva-fit crop of the new photo)",
-          "what": "Producer portrait LB5YQDm1HBbNQdrJ → HEADSHOTS/Li_Producer_lakeside.jpg (asset MAHXLO9dxBQ), imageBox 466.677×637.102 at left -11.339, top -54.551 (full seated figure)",
+          "what": "Producer portrait LB5YQDm1HBbNQdrJ \u2192 HEADSHOTS/Li_Producer_lakeside.jpg (asset MAHXLO9dxBQ), imageBox 466.677\u00d7637.102 at left -11.339, top -54.551 (full seated figure)",
           "proof": "press/proofs/canva-page6-ruoxiao-2026-10-05.png"
         }
       ]
@@ -293,7 +293,7 @@
         {
           "at": "2026-10-05",
           "how": "Canva connector update_fill on the full-page ground frame, committed on Luke's request",
-          "what": "ground stronger, alpha ghost 0.48→0.50: press/assets/derived/credits-bts/cast-1.1.17_a50.jpg (asset MAHXKuctyqk)",
+          "what": "ground stronger, alpha ghost 0.48\u21920.50: press/assets/derived/credits-bts/cast-1.1.17_a50.jpg (asset MAHXKuctyqk)",
           "proof": "press/proofs/canva-p8-p11-p12-grounds-2026-10-05.png"
         }
       ]
@@ -311,7 +311,7 @@
         {
           "at": "2026-10-05",
           "how": "Canva connector: upload-asset-from-url (raw.githubusercontent main, press/assets/BTS full-res), update_fill and crop_media on the nine grid frames in one transaction, previewed through several rounds with Luke, committed on his OK. Frame ids unchanged.",
-          "what": "Grid, reading order: 1 KOM_Day3_TheFarm-43 (left -64) · 2 Farm-84 · 3 Farm-230 (full bleed 798.094x532, left -58, faces centred) · 4 Farm-116 · 5 Farm-194 · 6 Farm-59 · 7 KOM_Day4_Soundstage-13 (left -172) · 8 Farm-18 (left -89) · 9 Farm-101 (left -100). Slot 10 Farm-237 unchanged. Out: Farm-152, 185, 220, Soundstage-76, -81, -93.",
+          "what": "Grid, reading order: 1 KOM_Day3_TheFarm-43 (left -64) \u00b7 2 Farm-84 \u00b7 3 Farm-230 (full bleed 798.094x532, left -58, faces centred) \u00b7 4 Farm-116 \u00b7 5 Farm-194 \u00b7 6 Farm-59 \u00b7 7 KOM_Day4_Soundstage-13 (left -172) \u00b7 8 Farm-18 (left -89) \u00b7 9 Farm-101 (left -100). Slot 10 Farm-237 unchanged. Out: Farm-152, 185, 220, Soundstage-76, -81, -93.",
           "proof": "press/proofs/canva-page9-bts-2026-10-05.png (transaction render before commit, 450x600)"
         }
       ]
@@ -341,7 +341,7 @@
         {
           "at": "2026-10-05",
           "how": "Canva connector update_fill on the full-page ground frame, committed on Luke's request",
-          "what": "ground stronger, alpha 0.26→0.29: press/assets/derived/credits-bts/crew-KOM_Stage-5_a29.jpg (asset MAHXKsl-WOI)",
+          "what": "ground stronger, alpha 0.26\u21920.29: press/assets/derived/credits-bts/crew-KOM_Stage-5_a29.jpg (asset MAHXKsl-WOI)",
           "proof": "press/proofs/canva-p8-p11-p12-grounds-2026-10-05.png"
         }
       ]
@@ -361,7 +361,7 @@
         {
           "at": "2026-10-05",
           "how": "Canva connector update_fill on the full-page ground frame, committed on Luke's request",
-          "what": "ground stronger, alpha 0.16→0.22: press/assets/derived/credits-bts/thanks-KOM_Day4_Soundstage-58_a22.jpg (asset MAHXKrXjqPU)",
+          "what": "ground stronger, alpha 0.16\u21920.22: press/assets/derived/credits-bts/thanks-KOM_Day4_Soundstage-58_a22.jpg (asset MAHXKrXjqPU)",
           "proof": "press/proofs/canva-p8-p11-p12-grounds-2026-10-05.png"
         }
       ]
@@ -457,5 +457,31 @@
     "found": "2026-09-20",
     "what": "The claude.ai Canva connector (tools read-design / edit-design / export-design) reaches this design from a Claude session with no browser. edit-design works in a transaction: replace_text keeps an element's face, size, leading and colour; position_element and resize_element move and size; delete_element removes; commit is permanent, cancel discards. add_text arrives in Canva's default face and format_text has no font-family setting, so new copy must go into an existing element. The transaction returns a render after each edit and export-design gives a full-size PNG or PDF of the saved design.",
     "use_for": "word changes and re-spacing on a built page without a page rebuild (Luke's other edits on the page survive). Page rebuilds from the contract still need the app in a front tab."
+  },
+  "other_designs": {
+    "cta_2027_nominee": {
+      "portrait": {
+        "url": "https://www.canva.com/design/DAHbbMdbsT4/edit",
+        "title": "KoM CTA Nominee 2027 - Portrait",
+        "page_px": [
+          1080,
+          1350
+        ],
+        "pages": "12: A-K + Z laurel alone",
+        "ops": "canva/ops/cta-2027-canva.json"
+      },
+      "landscape": {
+        "url": "https://www.canva.com/design/DAHbbIX5v74/edit",
+        "title": "KoM CTA Nominee 2027 - Landscape",
+        "page_px": [
+          1080,
+          566
+        ],
+        "pages": "6: A-F",
+        "ops": "canva/ops/cta-2027-landscape-canva.json"
+      },
+      "built": "2026-11-19, from tools/cta-compose.py layout via tools/build-cta-canva.py",
+      "lessons": "Opening the grid view while Build all runs stops the run; wait for the page count, then Build all again resumes (skips recorded). Build page N inserts after the current page; drag it into place in the grid. Chrome asks once to let canva.com reach localhost (Local Network Access); Luke allows it."
+    }
   }
 }
