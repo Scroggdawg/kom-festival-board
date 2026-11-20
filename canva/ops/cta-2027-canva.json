@@ -1,9 +1,9 @@
 {
  "schema": 1,
- "generated": "2026-11-19T19:54:58",
+ "generated": "2026-11-19T20:22:19-portrait",
  "source": {
-  "kit_commit": "cta-2027",
-  "epk_rev": 0
+  "kit_commit": "cta-2027-composed",
+  "epk_rev": 1
  },
  "page": {
   "width_pt": 1080,
@@ -25,10 +25,10 @@
       1916,
       802
      ],
-     "x": -1533.2,
-     "y": 0.0,
-     "w": 3228.2,
-     "h": 1351.3,
+     "x": -1563.4,
+     "y": -0.0,
+     "w": 3225.2,
+     "h": 1350.0,
      "alt": "Killer of Men, A elder looking up"
     },
     {
@@ -39,9 +39,9 @@
       1980,
       1295
      ],
-     "x": 56,
-     "y": 1064,
-     "w": 352,
+     "x": 313.2,
+     "y": 1073.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }
@@ -61,8 +61,8 @@
       1920,
       800
      ],
-     "x": -843.8,
-     "y": 0.0,
+     "x": -1208.1,
+     "y": -0.0,
      "w": 3240.0,
      "h": 1350.0,
      "alt": "Killer of Men, B Mace firelight"
@@ -75,9 +75,9 @@
       1980,
       1295
      ],
-     "x": 672,
-     "y": 56,
-     "w": 352,
+     "x": 683.2,
+     "y": 43.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }
@@ -97,8 +97,8 @@
       1920,
       800
      ],
-     "x": -945.0,
-     "y": 0.0,
+     "x": -1281.3,
+     "y": -0.0,
      "w": 3240.0,
      "h": 1350.0,
      "alt": "Killer of Men, C elder firelight"
@@ -111,9 +111,9 @@
       1980,
       1295
      ],
-     "x": 56,
-     "y": 1064,
-     "w": 352,
+     "x": 413.2,
+     "y": 43.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }
@@ -133,8 +133,8 @@
       1920,
       800
      ],
-     "x": -337.5,
-     "y": 0.0,
+     "x": -512.5,
+     "y": -0.0,
      "w": 3240.0,
      "h": 1350.0,
      "alt": "Killer of Men, D Mace at the cabin"
@@ -147,9 +147,9 @@
       1980,
       1295
      ],
-     "x": 56,
-     "y": 56,
-     "w": 352,
+     "x": 43.2,
+     "y": 483.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }
@@ -169,8 +169,8 @@
       1920,
       800
      ],
-     "x": -1350.0,
-     "y": 0.0,
+     "x": -1391.2,
+     "y": -0.0,
      "w": 3240.0,
      "h": 1350.0,
      "alt": "Killer of Men, E the burial"
@@ -183,9 +183,9 @@
       1980,
       1295
      ],
-     "x": 56,
-     "y": 1064,
-     "w": 352,
+     "x": 103.2,
+     "y": 43.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }
@@ -205,8 +205,8 @@
       1920,
       800
      ],
-     "x": -641.2,
-     "y": 0.0,
+     "x": -951.9,
+     "y": -0.0,
      "w": 3240.0,
      "h": 1350.0,
      "alt": "Killer of Men, F elder under the oak"
@@ -219,9 +219,9 @@
       1980,
       1295
      ],
-     "x": 56,
-     "y": 56,
-     "w": 352,
+     "x": 683.2,
+     "y": 933.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }
@@ -241,8 +241,8 @@
       2160,
       3240
      ],
-     "x": 0.0,
-     "y": -69.3,
+     "x": -0.0,
+     "y": -83.8,
      "w": 1080.0,
      "h": 1620.0,
      "alt": "Killer of Men, G two men in smoke"
@@ -255,9 +255,9 @@
       1980,
       1295
      ],
-     "x": 56,
-     "y": 56,
-     "w": 352,
+     "x": 43.2,
+     "y": 43.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }
@@ -277,8 +277,8 @@
       2160,
       3240
      ],
-     "x": 0.0,
-     "y": -92.5,
+     "x": -0.0,
+     "y": -251.4,
      "w": 1080.0,
      "h": 1620.0,
      "alt": "Killer of Men, H black-and-white motion"
@@ -291,9 +291,9 @@
       1980,
       1295
      ],
-     "x": 56,
-     "y": 56,
-     "w": 352,
+     "x": 43.2,
+     "y": 43.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }
@@ -313,8 +313,8 @@
       2160,
       3240
      ],
-     "x": 0.0,
-     "y": 0.0,
+     "x": -0.0,
+     "y": -37.2,
      "w": 1080.0,
      "h": 1620.0,
      "alt": "Killer of Men, I kente in motion"
@@ -327,9 +327,9 @@
       1980,
       1295
      ],
-     "x": 56,
-     "y": 56,
-     "w": 352,
+     "x": 43.2,
+     "y": 43.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }
@@ -349,10 +349,10 @@
       4050,
       2700
      ],
-     "x": -547.5,
-     "y": 0.0,
-     "w": 2025.0,
-     "h": 1350.1,
+     "x": -512.4,
+     "y": -0.0,
+     "w": 2024.8,
+     "h": 1350.0,
      "alt": "Killer of Men, J kente portrait"
     },
     {
@@ -363,9 +363,9 @@
       1980,
       1295
      ],
-     "x": 672,
-     "y": 56,
-     "w": 352,
+     "x": 683.2,
+     "y": 43.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }
@@ -385,10 +385,10 @@
       4050,
       2700
      ],
-     "x": -472.4,
-     "y": 0.0,
-     "w": 2024.8,
-     "h": 1349.9,
+     "x": -256.3,
+     "y": -0.0,
+     "w": 2025.0,
+     "h": 1350.0,
      "alt": "Killer of Men, K fight in motion"
     },
     {
@@ -399,9 +399,9 @@
       1980,
       1295
      ],
-     "x": 364.0,
-     "y": 56,
-     "w": 352,
+     "x": 633.2,
+     "y": 43.2,
+     "w": 351.7,
      "h": 230,
      "alt": "College Television Awards 2027 nominee laurel"
     }

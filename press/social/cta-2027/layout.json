@@ -1,0 +1,516 @@
+{
+ "portrait": {
+  "A": {
+   "crop": [
+    928.8,
+    0.0,
+    1570.4,
+    802.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 313.2,
+    "y": 1073.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.656,
+     0.2
+    ],
+    "subject_cut": 0.015,
+    "zoom": 1.0,
+    "ground_mean": 0.269,
+    "ground_std": 0.041,
+    "ground_p5_p95": [
+     0.192,
+     0.325
+    ],
+    "laurel_height_share": 0.17
+   }
+  },
+  "B": {
+   "crop": [
+    715.9,
+    140.0,
+    1355.9,
+    940.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 683.2,
+    "y": 43.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.334,
+     0.344
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.041,
+    "ground_std": 0.01,
+    "ground_p5_p95": [
+     0.027,
+     0.059
+    ],
+    "laurel_height_share": 0.17
+   }
+  },
+  "C": {
+   "crop": [
+    759.3,
+    140.0,
+    1399.3,
+    940.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 413.2,
+    "y": 43.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.345,
+     0.475
+    ],
+    "subject_cut": 0.001,
+    "zoom": 1.0,
+    "ground_mean": 0.025,
+    "ground_std": 0.008,
+    "ground_p5_p95": [
+     0.012,
+     0.035
+    ],
+    "laurel_height_share": 0.17
+   }
+  },
+  "D": {
+   "crop": [
+    303.7,
+    140.0,
+    943.7,
+    940.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 43.2,
+    "y": 483.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.307,
+     0.269
+    ],
+    "subject_cut": 0.012,
+    "zoom": 1.0,
+    "ground_mean": 0.104,
+    "ground_std": 0.036,
+    "ground_p5_p95": [
+     0.067,
+     0.161
+    ],
+    "laurel_height_share": 0.17
+   }
+  },
+  "E": {
+   "crop": [
+    824.4,
+    140.0,
+    1464.4,
+    940.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 103.2,
+    "y": 43.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.493,
+     0.325
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.175,
+    "ground_std": 0.072,
+    "ground_p5_p95": [
+     0.09,
+     0.31
+    ],
+    "laurel_height_share": 0.17
+   }
+  },
+  "F": {
+   "crop": [
+    564.1,
+    140.0,
+    1204.1,
+    940.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 683.2,
+    "y": 933.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.431,
+     0.238
+    ],
+    "subject_cut": 0.009,
+    "zoom": 1.0,
+    "ground_mean": 0.253,
+    "ground_std": 0.081,
+    "ground_p5_p95": [
+     0.165,
+     0.443
+    ],
+    "laurel_height_share": 0.17
+   }
+  },
+  "G": {
+   "crop": [
+    0.0,
+    362.5,
+    4672.0,
+    6202.5
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 43.2,
+    "y": 43.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.589,
+     0.161
+    ],
+    "subject_cut": 0.123,
+    "zoom": 1.0,
+    "ground_mean": 0.176,
+    "ground_std": 0.027,
+    "ground_p5_p95": [
+     0.133,
+     0.22
+    ],
+    "laurel_height_share": 0.17
+   }
+  },
+  "H": {
+   "crop": [
+    0.0,
+    1087.4,
+    4672.0,
+    6927.4
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 43.2,
+    "y": 43.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.514,
+     0.105
+    ],
+    "subject_cut": 0.014,
+    "zoom": 1.0,
+    "ground_mean": 0.169,
+    "ground_std": 0.02,
+    "ground_p5_p95": [
+     0.137,
+     0.2
+    ],
+    "laurel_height_share": 0.17
+   }
+  },
+  "I": {
+   "crop": [
+    0.0,
+    161.1,
+    4672.0,
+    6001.1
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 43.2,
+    "y": 43.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.76,
+     0.229
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.091,
+    "ground_std": 0.007,
+    "ground_p5_p95": [
+     0.078,
+     0.102
+    ],
+    "laurel_height_share": 0.17
+   }
+  },
+  "J": {
+   "crop": [
+    1685.0,
+    0.0,
+    5236.2,
+    4439.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 683.2,
+    "y": 43.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.567,
+     0.248
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.084,
+    "ground_std": 0.007,
+    "ground_p5_p95": [
+     0.075,
+     0.094
+    ],
+    "laurel_height_share": 0.17
+   }
+  },
+  "K": {
+   "crop": [
+    886.9,
+    0.0,
+    4624.5,
+    4672.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 633.2,
+    "y": 43.2,
+    "w": 351.7,
+    "h": 230
+   },
+   "check": {
+    "eyes_at": [
+     0.539,
+     0.385
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.083,
+    "ground_std": 0.006,
+    "ground_p5_p95": [
+     0.075,
+     0.094
+    ],
+    "laurel_height_share": 0.17
+   }
+  }
+ },
+ "landscape": {
+  "A": {
+   "crop": [
+    326.8,
+    0.0,
+    1857.2,
+    802.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 223.2,
+    "y": 43.2,
+    "w": 165.1,
+    "h": 108
+   },
+   "check": {
+    "eyes_at": [
+     0.669,
+     0.2
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.184,
+    "ground_std": 0.057,
+    "ground_p5_p95": [
+     0.11,
+     0.294
+    ],
+    "laurel_height_share": 0.191
+   }
+  },
+  "B": {
+   "crop": [
+    393.5,
+    140.0,
+    1920.0,
+    940.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 43.2,
+    "y": 43.2,
+    "w": 165.1,
+    "h": 108
+   },
+   "check": {
+    "eyes_at": [
+     0.351,
+     0.344
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.021,
+    "ground_std": 0.007,
+    "ground_p5_p95": [
+     0.008,
+     0.035
+    ],
+    "laurel_height_share": 0.191
+   }
+  },
+  "C": {
+   "crop": [
+    0.0,
+    140.0,
+    1526.5,
+    940.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 43.2,
+    "y": 43.2,
+    "w": 165.1,
+    "h": 108
+   },
+   "check": {
+    "eyes_at": [
+     0.642,
+     0.475
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.027,
+    "ground_std": 0.01,
+    "ground_p5_p95": [
+     0.012,
+     0.047
+    ],
+    "laurel_height_share": 0.191
+   }
+  },
+  "D": {
+   "crop": [
+    0.0,
+    140.0,
+    1526.5,
+    940.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 43.2,
+    "y": 103.2,
+    "w": 165.1,
+    "h": 108
+   },
+   "check": {
+    "eyes_at": [
+     0.328,
+     0.269
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.082,
+    "ground_std": 0.016,
+    "ground_p5_p95": [
+     0.059,
+     0.114
+    ],
+    "laurel_height_share": 0.191
+   }
+  },
+  "E": {
+   "crop": [
+    120.1,
+    140.0,
+    1646.6,
+    940.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 43.2,
+    "y": 53.2,
+    "w": 165.1,
+    "h": 108
+   },
+   "check": {
+    "eyes_at": [
+     0.668,
+     0.325
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.181,
+    "ground_std": 0.076,
+    "ground_p5_p95": [
+     0.082,
+     0.318
+    ],
+    "laurel_height_share": 0.191
+   }
+  },
+  "F": {
+   "crop": [
+    333.5,
+    140.0,
+    1860.0,
+    940.0
+   ],
+   "laurel": {
+    "colour": "white",
+    "x": 703.2,
+    "y": 413.2,
+    "w": 165.1,
+    "h": 108
+   },
+   "check": {
+    "eyes_at": [
+     0.332,
+     0.238
+    ],
+    "subject_cut": 0.0,
+    "zoom": 1.0,
+    "ground_mean": 0.176,
+    "ground_std": 0.049,
+    "ground_p5_p95": [
+     0.098,
+     0.255
+    ],
+    "laurel_height_share": 0.191
+   }
+  }
+ }
+}

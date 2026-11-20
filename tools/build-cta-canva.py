@@ -97,5 +97,52 @@ def build(frames, PW, PH, LH, out, card):
     print(f"{len(pages)} pages -> {out}")
 
 
-build(FRAMES, PW, PH, LH, "canva/ops/cta-2027-canva.json", True)
-build(LANDSCAPE, 1080, 566, 108, "canva/ops/cta-2027-landscape-canva.json", False)
+# Crops and laurel spots come from the composition pass (tools/cta-compose.py -> layout.json).
+LAYOUT = json.load(open("press/social/cta-2027/layout.json"))
+for c in ("white", "black"):
+    dst = f"press/assets/derived/laurels/CTA-2027-nominee-{c}.png"
+    if not os.path.exists(dst):
+        Image.open(f"press/laurels/cta-2027/Found_CTA27_Laurel-Nominee_{c.title()}.png").save(dst, optimize=True)
+
+
+def build_from_layout(shape, PW, PH, out, card):
+    frames = {f[0].split()[0]: f for f in FRAMES}
+    pages = []
+    for k, spec in LAYOUT[shape].items():
+        name, src, rows, _, _ = frames[k]
+        im = Image.open(src).convert("RGB")
+        top = 0
+        if rows:
+            top = rows[0]
+            im = im.crop((0, rows[0], im.width, rows[1]))
+        x0, y0, x1, y1 = spec["crop"]
+        s = PW / (x1 - x0)
+        k2 = min(1.0, 2 * s)
+        hosted = im.resize((round(im.width * k2), round(im.height * k2)), Image.LANCZOS) if k2 < 1 else im
+        f = f"{OUT}/{k}.jpg"
+        if not os.path.exists(f) or Image.open(f).size != hosted.size:
+            hosted.save(f, quality=90, subsampling=0)
+        L = spec["laurel"]
+        lp = f"press/assets/derived/laurels/CTA-2027-nominee-{L['colour']}.png"
+        pages.append({"n": len(pages) + 1, "name": f"CTA · {name}", "background": "#000000", "count": 2, "elements": [
+            {"type": "image", "url": BASE + f, "file": f, "px": list(hosted.size),
+             "x": round(-x0 * s, 1), "y": round(-(y0 - top) * s, 1),
+             "w": round(im.width * s, 1), "h": round(im.height * s, 1), "alt": f"Killer of Men, {name}"},
+            {"type": "image", "url": BASE + lp, "file": lp, "px": [lw0, lh0],
+             "x": L["x"], "y": L["y"], "w": L["w"], "h": L["h"], "alt": "College Television Awards 2027 nominee laurel"},
+        ]})
+        print(f"{shape:9s} {k}  laurel {L['colour']} {L['w']:.0f}x{L['h']} ({L['h']/PH:.3f} of page, max 0.200)")
+    if card:
+        pages.append({"n": len(pages) + 1, "name": "CTA · Z laurel alone", "background": "#000000", "count": 1, "elements": [
+            {"type": "image", "url": BASE + LAUREL, "file": LAUREL, "px": [lw0, lh0],
+             "x": (PW - 760) / 2, "y": round((PH - 760 * lh0 / lw0) / 2, 1), "w": 760, "h": round(760 * lh0 / lw0, 1),
+             "alt": "College Television Awards 2027 nominee laurel"}]})
+    doc = {"schema": 1, "generated": datetime.datetime.now().isoformat(timespec="seconds") + f"-{shape}",
+           "source": {"kit_commit": "cta-2027-composed", "epk_rev": 1},
+           "page": {"width_pt": PW, "height_pt": PH}, "fonts": {}, "pages": pages}
+    json.dump(doc, open(out, "w"), indent=1)
+    print(f"{len(pages)} pages -> {out}")
+
+
+build_from_layout("portrait", 1080, 1350, "canva/ops/cta-2027-canva.json", True)
+build_from_layout("landscape", 1080, 566, "canva/ops/cta-2027-landscape-canva.json", False)
