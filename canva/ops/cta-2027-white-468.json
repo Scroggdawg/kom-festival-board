@@ -1,0 +1,81 @@
+{
+ "schema": 1,
+ "generated": "2026-11-19T21:23:00-white-468",
+ "source": {
+  "kit_commit": "cta-2027-white-468",
+  "epk_rev": 5
+ },
+ "page": {
+  "width_pt": 1080,
+  "height_pt": 1350
+ },
+ "fonts": {},
+ "pages": [
+  {
+   "n": 4,
+   "name": "page 4 white laurel",
+   "background": "#000000",
+   "count": 1,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "file": "press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "px": [
+      1980,
+      1295
+     ],
+     "x": 652.6,
+     "y": 239.4,
+     "w": 351.7,
+     "h": 230,
+     "alt": "CTA 2027 nominee laurel"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "name": "page 6 white laurel",
+   "background": "#000000",
+   "count": 1,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "file": "press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "px": [
+      1980,
+      1295
+     ],
+     "x": 108,
+     "y": 1064.3,
+     "w": 351.7,
+     "h": 230,
+     "alt": "CTA 2027 nominee laurel"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "name": "page 8 white laurel",
+   "background": "#000000",
+   "count": 1,
+   "elements": [
+    {
+     "type": "image",
+     "url": "https://scroggdawg.github.io/kom-festival-board/press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "file": "press/assets/derived/laurels/CTA-2027-nominee-white.png",
+     "px": [
+      1980,
+      1295
+     ],
+     "x": 364.2,
+     "y": 1070,
+     "w": 351.7,
+     "h": 230,
+     "alt": "CTA 2027 nominee laurel"
+    }
+   ]
+  }
+ ]
+}
