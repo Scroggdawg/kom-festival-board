@@ -28,6 +28,16 @@ Laurel on slide 1 only; the other carousel slides are the same frames without it
 
 ---
 
+## Chosen caption (Luke, 2026-11-19)
+
+> Honored that KILLER OF MEN has been nominated for the 46th College Television Awards in the Scripted Series category. Thank you, @televisionacademyfoundation.
+>
+> #CollegeTVAwards #KillerOfMen #ShortFilm #AFIConservatory
+
+Works with any of the images below. The earlier options follow for reference.
+
+---
+
 ## 1. Announcement
 **Carousel:** D, B, C, E (laurel on D only), Z
 
